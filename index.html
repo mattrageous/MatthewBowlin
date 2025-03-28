@@ -44,6 +44,10 @@
       font-size: 0.9em;
       opacity: 0.6;
     }
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -51,7 +55,10 @@
     <h1>Matthew Bowlin</h1>
     <p>Developer. Technologist. Creator.</p>
   </div>
-  <footer>&copy; <span id="year"></span> MatthewBowlin.com</footer>
+  <footer>
+    &copy; <span id="year"></span> MatthewBowlin.com · 
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
