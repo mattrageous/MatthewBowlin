@@ -38,6 +38,31 @@
       0% { opacity: 0; transform: translateY(10px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+    .button-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about-button {
+      position: absolute;
+      bottom: 80px;
+    }
+    .button {
+      padding: 12px 20px;
+      font-size: 1.1em;
+      background-color: #1abc9c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
+      transform: scale(1.05);
+    }
     footer {
       position: absolute;
       bottom: 15px;
@@ -48,50 +73,27 @@
       color: #ffffff;
       text-decoration: underline;
     }
-    .signup-link {
-      margin-top: 20px;
-      font-size: 1.1em;
-    }
-    .signup-link a {
-      color: #1abc9c;
-      text-decoration: none;
-      border-bottom: 1px solid #1abc9c;
-      transition: opacity 0.3s;
-    }
-    .signup-link a:hover {
-      opacity: 0.8;
-    }
-    .about-link {
-      margin-top: 15px;
-      font-size: 1em;
-    }
-    .about-link a {
-      color: #1abc9c;
-      text-decoration: none;
-      transition: opacity 0.3s;
-    }
-    .about-link a:hover {
-      opacity: 0.8;
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
   <div class="fade-in">
     <h1>Matthew Bowlin</h1>
     <p>Developer. Technologist. Creator.</p>
-    <p class="signup-link">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
-        🚀 Sign Up to Beta Test Asteroid Hopper
+
+    <div class="button-group">
+      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
+        🚀 Sign Up for Asteroid Hopper
       </a>
-    </p>
-    <p class="about-link">
-      <a href="asteroid-hopper.html">🚀 Learn More About Asteroid Hopper →</a>
-    </p>
-    <p class="about-link">
-      <a href="about.html">More About Me →</a>
-    </p>
+      <a class="button" href="asteroid-hopper.html">
+        🚀 Learn More About Asteroid Hopper
+      </a>
+    </div>
+
+    <div class="about-button">
+      <a class="button" href="about.html">👤 More About Me</a>
+    </div>
   </div>
+
   <footer>
     &copy; <span id="year"></span> MatthewBowlin.com · 
     <a href="privacy-policy.html">Privacy Policy</a>
