@@ -17,7 +17,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
       min-height: 100vh;
       padding: 40px 20px 60px;
       text-align: center;
@@ -32,7 +31,14 @@
       font-size: 1.2em;
       opacity: 0.9;
       max-width: 800px;
-      margin-bottom: 1.5em;
+      margin: 0 auto 1.5em;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
     iframe {
       width: 100%;
@@ -40,10 +46,9 @@
       height: 750px;
       border: none;
       border-radius: 12px;
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
     }
     a.signup {
-      display: inline-block;
       font-size: 1.1em;
       padding: 12px 24px;
       color: #fff;
@@ -51,7 +56,6 @@
       text-decoration: none;
       border-radius: 8px;
       transition: background 0.3s ease;
-      margin-bottom: 20px;
     }
     a.signup:hover {
       background-color: #16a085;
@@ -67,6 +71,7 @@
       margin-top: auto;
       font-size: 0.9em;
       opacity: 0.6;
+      text-align: center;
     }
     footer a {
       color: #ffffff;
@@ -75,7 +80,7 @@
   </style>
 </head>
 <body>
-  <div class="fade-in">
+  <div class="fade-in content">
     <h1>Asteroid Hopper 🚀</h1>
     <p>
       <em>Asteroid Hopper</em> is a family-friendly mobile game where you leap from asteroid to asteroid, collecting energy, dodging danger, and climbing your way to the stars! Designed for all ages and packed with vibrant visuals, it's easy to learn but tough to master.
