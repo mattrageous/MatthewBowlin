@@ -39,6 +39,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      padding-bottom: 60px;
     }
     iframe {
       width: 100%;
@@ -55,10 +56,15 @@
       background-color: #1abc9c;
       text-decoration: none;
       border-radius: 8px;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
+      margin-bottom: 60px;
+      box-shadow: 0 0 10px rgba(26, 188, 156, 0.6); /* subtle glow */
     }
+    
     a.signup:hover {
-      background-color: #16a085;
+      background-color: #1abc9c;
+      box-shadow: 0 0 25px rgba(26, 188, 156, 1), 0 0 60px rgba(26, 188, 156, 0.7);
+      transform: scale(1.05);
     }
     .fade-in {
       animation: fadeIn 1.5s ease-in forwards;
