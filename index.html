@@ -40,31 +40,38 @@
       0% { opacity: 0; transform: translateY(10px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
     .button-group {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
+
+    .center-button {
+      margin-top: 20px;
+    }
+
     .button {
-      padding: 12px 20px;
+      padding: 14px 28px;
       font-size: 1.1em;
       background-color: #1abc9c;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 16px;
       box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
       transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
+
     .button:hover {
       box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
       transform: scale(1.05);
     }
-    .about-button {
-      position: absolute;
-      bottom: 80px;
-    }
+
     footer {
       position: absolute;
       bottom: 15px;
@@ -91,8 +98,8 @@
       </a>
     </div>
 
-    <div class="about-button">
-      <a class="button" href="about.html">Meet Matthew</a>
+    <div class="center-button">
+      <a class="button" href="about.html">👤 Meet Matthew</a>
     </div>
   </div>
 
