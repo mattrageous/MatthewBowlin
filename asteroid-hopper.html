@@ -5,26 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asteroid Hopper – Matthew Bowlin</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #ffffff;
-      padding: 40px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px 60px;
       text-align: center;
     }
     h1 {
-      font-size: 2.8em;
+      font-size: 3em;
       margin-bottom: 0.3em;
+      letter-spacing: 1px;
       color: #1abc9c;
     }
     p {
       font-size: 1.2em;
-      margin-bottom: 1.5em;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
       opacity: 0.9;
+      max-width: 800px;
+      margin-bottom: 1.5em;
     }
     iframe {
       width: 100%;
@@ -43,12 +51,20 @@
       text-decoration: none;
       border-radius: 8px;
       transition: background 0.3s ease;
+      margin-bottom: 20px;
     }
     a.signup:hover {
       background-color: #16a085;
     }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
     footer {
-      margin-top: 40px;
+      margin-top: auto;
       font-size: 0.9em;
       opacity: 0.6;
     }
@@ -59,17 +75,18 @@
   </style>
 </head>
 <body>
-  <h1>Asteroid Hopper 🚀</h1>
-  <p>
-    *Asteroid Hopper* is a family-friendly mobile game where you leap from asteroid to asteroid, collecting energy, dodging danger, and climbing your way to the stars! Designed for all ages and packed with vibrant visuals, it's easy to learn but tough to master. Sign up now to become a beta tester and get early access!
-  </p>
+  <div class="fade-in">
+    <h1>Asteroid Hopper 🚀</h1>
+    <p>
+      <em>Asteroid Hopper</em> is a family-friendly mobile game where you leap from asteroid to asteroid, collecting energy, dodging danger, and climbing your way to the stars! Designed for all ages and packed with vibrant visuals, it's easy to learn but tough to master.
+    </p>
 
-  <iframe src="https://www.youtube.com/embed/6H8Dq-I-iVc" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/6H8Dq-I-iVc" allowfullscreen></iframe>
 
-  <br />
-  <a class="signup" href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
-    Sign Up to Beta Test
-  </a>
+    <a class="signup" href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
+      🚀 Sign Up to Beta Test
+    </a>
+  </div>
 
   <footer>
     &copy; <span id="year"></span> MatthewBowlin.com · 
