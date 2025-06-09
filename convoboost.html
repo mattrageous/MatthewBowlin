@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ConvoBoost - Smarter Conversations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    h1 {
+      font-size: 3em;
+      margin: 20px 0 10px 0;
+      letter-spacing: 1px;
+    }
+    p.tagline {
+      font-size: 1.2em;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .app-image {
+      width: 200px;
+      height: 200px;
+      margin: 20px 0;
+    }
+    .content {
+      max-width: 800px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    .button {
+      padding: 14px 28px;
+      font-size: 1.1em;
+      background-color: #1abc9c;
+      color: white;
+      text-decoration: none;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .button:hover {
+      box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
+      transform: scale(1.05);
+    }
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="fade-in">
+    <h1>ConvoBoost</h1>
+    <p class="tagline">AI Wingman for Smarter Conversations</p>
+    <img src="ConvoBoost.png" alt="ConvoBoost Logo" class="app-image"/>
+
+    <div class="content">
+      <p>
+        ConvoBoost helps you craft better messages on dating apps, social media, and beyond. Whether you want to break the ice, spark a connection, or just sound more engaging, ConvoBoost is your AI-powered sidekick.
+      </p>
+      <p>
+        With smart tone selection and conversation modes, you’ll always have the right words ready to go. Plus, new features are being added all the time!
+      </p>
+      <p>
+        Join our beta program and be the first to test new capabilities and help shape the future of ConvoBoost.
+      </p>
+    </div>
+
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
+      Join the Beta Program
+    </a>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> MatthewBowlin.com · 
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
