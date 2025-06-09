@@ -1,89 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Matthew Bowlin</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-      letter-spacing: 1px;
-    }
-    p.tagline {
-      font-size: 1.2em;
-      opacity: 0.85;
-      margin-bottom: 30px;
-    }
-    .fade-in {
-      animation: fadeIn 1.5s ease-in forwards;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    letter-spacing: 1px;
+  }
+  p.tagline {
+    font-size: 1.2em;
+    opacity: 0.85;
+    margin-bottom: 30px;
+  }
+  .fade-in {
+    animation: fadeIn 1.5s ease-in forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px; /* controls vertical spacing between sections */
+    max-width: 800px;
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
 
-    .button-group {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
+  .button-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .center-button {
-      margin-top: 20px;
-    }
+  .button {
+    padding: 14px 28px;
+    font-size: 1.1em;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    .button {
-      padding: 14px 28px;
-      font-size: 1.1em;
-      background-color: #1abc9c;
-      color: white;
-      text-decoration: none;
-      border-radius: 16px;
-      box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
+  .button:hover {
+    box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
+    transform: scale(1.05);
+  }
 
-    .button:hover {
-      box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
-      transform: scale(1.05);
-    }
+  .content-text {
+    max-width: 700px;
+    font-size: 1.05em;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
 
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.9em;
-      opacity: 0.6;
-    }
-    footer a {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-  </style>
-</head>
+  footer {
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.9em;
+    opacity: 0.6;
+  }
+  footer a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+</style>
+
 <body>
   <div class="fade-in">
     <h1>Matthew Bowlin</h1>
@@ -96,23 +97,26 @@
       <a class="button" href="https://play.google.com/store/apps/details?id=com.bowlin.inc.asteroidhopper&hl=en_US" target="_blank">
         Download Asteroid Hopper
       </a>
-    <a class="button" href="convoboost.html">
+      <a class="button" href="convoboost.html">
         Learn More About ConvoBoost
       </a>
     </div>
 
-    <div style="margin-top: 20px; max-width: 700px; font-size: 1.05em; line-height: 1.6; opacity: 0.9;">
+    <div class="content-text">
       <p>
         Join our beta to shape the future of smarter conversations... and be first to try new features coming soon.
       </p>
     </div>
 
-    <div class="center-button">
-      <a class="button" href="about.html">Meet Matthew</a>
-    </div>
+    <a class="button" href="about.html">Meet Matthew</a>
   </div>
 
   <footer>
     &copy; <span id="year"></span> MatthewBowlin.com · 
     <a href="privacy-policy.html">Privacy Policy</a>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
