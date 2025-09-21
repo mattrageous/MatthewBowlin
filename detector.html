@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Origin + Unicode Detector</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    #results, #aiResults {
+      margin-bottom: 1em;
+      font-size: 1.2em;
+      white-space: pre-wrap;
+    }
+    textarea {
+      width: 90%;
+      max-width: 800px;
+      height: 300px;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: monospace;
+      resize: vertical;
+      background-color: #1e2a38;
+      color: #ffffff;
+      border: 1px solid #ccc;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #1abc9c;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .button:hover {
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hidden Unicode + AI Origin Detector</h1>
+  <div id="results">Paste something and click Detect...</div>
+  <div id="aiResults"></div>
+  <input type="password" id="code" placeholder="Enter secret code (optional)" style="margin-bottom: 10px; padding: 10px; font-size: 1em; border-radius: 8px; border: 1px solid #ccc; background-color: #1e2a38; color: #fff; width: 90%; max-width: 800px;">
+
+$1
+  <button class="button" onclick="runDetection()">Detect</button>
+
+  <script>
+    // Obfuscated Unicode detector (kept as-is)
+    (function(_0x119f71,_0x5d2727){const _0x20220c=_0x4387,_0x3e8b05=_0x119f71();while(!![]){try{const _0x5a2a08=parseInt(_0x20220c(0x8c))/0x1+parseInt(_0x20220c(0x80))/0x2*(parseInt(_0x20220c(0x78))/0x3)+parseInt(_0x20220c(0x87))/0x4*(parseInt(_0x20220c(0x84))/0x5)+parseInt(_0x20220c(0x75))/0x6*(-parseInt(_0x20220c(0x88))/0x7)+-parseInt(_0x20220c(0x7f))/0x8+-parseInt(_0x20220c(0x86))/0x9*(parseInt(_0x20220c(0x8f))/0xa)+parseInt(_0x20220c(0x8e))/0xb*(parseInt(_0x20220c(0x8d))/0xc);if(_0x5a2a08===_0x5d2727)break;else _0x3e8b05['push'](_0x3e8b05['shift']());}catch(_0x39754b){_0x3e8b05['push'](_0x3e8b05['shift']());}}}(_0x29c3,0x1992d));
+    function detectInvisibleUnicode(_0x91152f){const _0x3bd932=_0x4387,_0x3f2ece=[{'char':'​','label':_0x3bd932(0x77)},{'char':'‌','label':_0x3bd932(0x83)},{'char':'‍','label':_0x3bd932(0x90)},{'char':'⁠','label':_0x3bd932(0x76)},{'char':'\ufeff','label':_0x3bd932(0x8b)},{'char':'‮','label':_0x3bd932(0x7d)},{'char':'\u00a0','label':'Non-breaking Space (U+00A0)'}],_0x2c20b4=[];return _0x3f2ece[_0x3bd932(0x7b)](({char:_0x30bf37,label:_0x5bb25c})=>{const _0x53e2cb=_0x3bd932,_0x8c31dc=(_0x91152f[_0x53e2cb(0x81)](new RegExp(_0x30bf37,'g'))||[])['length'];_0x8c31dc>0x0&&_0x2c20b4[_0x53e2cb(0x7c)](_0x53e2cb(0x73)+_0x8c31dc+' instance(s) of '+_0x5bb25c);}),_0x2c20b4[_0x3bd932(0x89)]?_0x2c20b4:[_0x3bd932(0x7e)];}
+    function _0x4387(_0x213196,_0x25abc1){const _0x29c384=_0x29c3();return _0x4387=function(_0x438751,_0x2ac32d){_0x438751=_0x438751-0x73;let _0x12606e=_0x29c384[_0x438751];return _0x12606e;},_0x4387(_0x213196,_0x25abc1);}
+    function _0x29c3(){const _0x5d5dd0=['432HqbcYg','8qGJXGw','15911YLMzOg','length','⟨ZWNJ⟩','Zero Width No-Break Space (U+FEFF)','34834XSvdCM','201204ybUrMm','66ggmYzF','1270eGJVLv','Zero-Width Joiner (U+200D)','⚠️ Found ','⟨ZWNBS⟩','252Iikyfo','Word Joiner (U+2060)','Zero-Width Space (U+200B)','3zoiBVd','replace','⟨ZWSP⟩','forEach','push','Right-to-Left Override (U+202E)','✅ No hidden Unicode characters found','20248QJnpzs','77208zmIjvJ','match','⟨WJ⟩','Zero-Width Non-Joiner (U+200C)','87005MSmwuD','⟨RTL⟩'];_0x29c3=function(){return _0x5d5dd0;};return _0x29c3();}
+
+    function detectAIStyle(text) {
+      let score = 0;
+      const clues = [];
+      if (/linear-gradient\([^)]*#.*\)/i.test(text)) {
+        score += 2;
+        clues.push("🌈 Uses linear-gradient with aesthetic hex codes");
+      }
+      if (/\bbox-sizing: border-box\b/i.test(text)) {
+        score += 1;
+        clues.push("📦 Includes CSS reset (box-sizing: border-box)");
+      }
+      if (/font-family: 'Segoe UI'|Verdana/i.test(text)) {
+        score += 1;
+        clues.push("🖋️ Uses AI-preferred modern font stack");
+      }
+      if (/@keyframes fadeIn/i.test(text)) {
+        score += 2;
+        clues.push("🎞️ Uses fadeIn animation (AI signature)");
+      }
+      if (/button|tagline|fade-in|content-text/i.test(text)) {
+        score += 1;
+        clues.push("🧠 Semantic class names (button, tagline, etc.)");
+      }
+      return {
+        score,
+        clues,
+        verdict: score >= 4 ? "🤖 Likely AI-generated (OpenAI or Claude style)" : score >= 2 ? "🤔 Possibly AI-assisted" : "🧑‍💻 Likely human-written"
+      };
+    }
+
+    function runDetection() {
+      const code = "letmein42"; // Hardcoded override
+      const today = new Date().toISOString().split("T")[0];
+      const key = `usage-${today}`;
+      let count = parseInt(localStorage.getItem(key) || "0");
+
+      if (count >= 2 && document.getElementById("code")?.value?.trim() !== code) {
+        alert("🚫 You've hit your 2 daily uses. Come back tomorrow or enter a secret code.");
+        return;
+      }
+
+      localStorage.setItem(key, count + 1);
+
+      const input = document.getElementById("input").value;
+      const unicodeResults = detectInvisibleUnicode(input);
+      document.getElementById("results").innerText = unicodeResults.join("
+");
+
+      const aiCheck = detectAIStyle(input);
+      document.getElementById("aiResults").innerText = `${aiCheck.verdict}
+
+Details:
+${aiCheck.clues.join("
+")}`;
+    }\n\nDetails:\n${aiCheck.clues.join("\n")}`;
+    }
+  </script>
+</body>
+</html>
