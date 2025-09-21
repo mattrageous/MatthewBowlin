@@ -249,13 +249,16 @@
       
       // Check limit based on user type
       if (currentCount >= usageLimit) {
-        if (isSpecialUser && userInfo.name !== 'Admin') {
-          alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
-        } else if (!isSpecialUser) {
+        if (isSpecialUser) {
+          // 👤 Secret code entered → bypass popup, still increment + log
+          console.log(`Bypassing popup for ${userInfo.name}, usageLimit=${usageLimit}`);
+        } else {
+          // 🚫 Regular users hit limit → show popup + stop
           alert("🚫 You've hit your 3 daily uses. Come back tomorrow or enter a secret code.");
+          return;
         }
-        return;
       }
+
       
       // Disable button during processing
       const detectBtn = document.getElementById("detectButton");
