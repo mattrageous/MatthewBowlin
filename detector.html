@@ -160,55 +160,27 @@
       return 'fp_' + Math.abs(hash).toString(16);
     }
 
-    // IP-based usage tracking using Google Sheets
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycby0A0aAqgro_UQF2jEvSoChlA5EtQoyUDAe6z522-w-eYW3m9rjv6R3DGq1PghUwT3J/exec';
+
     async function getIPUsage() {
-      if (!userIP) {
-        // Fallback to localStorage if no fingerprint available
-        const today = new Date().toISOString().split("T")[0];
-        const localKey = `usage-${today}`;
-        return parseInt(localStorage.getItem(localKey) || "0");
-      }
-
+      if (!userIP) return 0;
       try {
-        // Google Sheets Web App URL
-        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxzQ6vdNsaWTr-yKjxeSyHfyg4dZRqirOjwM0naHOJaahElz5WY-9NpPN2CspNnBqE/exec';
-        
-        const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`, {
-          method: 'GET'
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          return data.count || 0;
-        } else {
-          throw new Error('Failed to fetch usage data');
-        }
+        const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`);
+        if (!response.ok) throw new Error("Failed to fetch usage data");
+        const data = await response.json();
+        return data.count || 0;
       } catch (error) {
-        console.error('Error getting usage data:', error);
-        // Fallback to localStorage
-        const today = new Date().toISOString().split("T")[0];
-        const localKey = `usage-${today}`;
-        return parseInt(localStorage.getItem(localKey) || "0");
+        console.error("Error in getIPUsage:", error);
+        return 0;
       }
     }
 
-    async function updateIPUsage(newCount) {
-      if (!userIP) {
-        // Fallback to localStorage
-        const today = new Date().toISOString().split("T")[0];
-        const localKey = `usage-${today}`;
-        localStorage.setItem(localKey, newCount.toString());
-        return;
-      }
-
+    async function postIPUsage(newCount) {
+      if (!userIP) return;
       try {
-        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxzQ6vdNsaWTr-yKjxeSyHfyg4dZRqirOjwM0naHOJaahElz5WY-9NpPN2CspNnBqE/exec';
-        
         const response = await fetch(webAppUrl, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             action: 'update',
             ip: userIP,
@@ -217,25 +189,28 @@
             country: userCountry
           })
         });
-
-        if (!response.ok) {
-          throw new Error('Failed to update usage data');
-        }
-
+        if (!response.ok) throw new Error("Failed to update usage data");
+        return await response.json();
       } catch (error) {
-        console.error('Error updating usage data:', error);
-        // Fallback to localStorage
-        const today = new Date().toISOString().split("T")[0];
-        const localKey = `usage-${today}`;
-        localStorage.setItem(localKey, newCount.toString());
+        console.error("Error in postIPUsage:", error);
       }
+    }
+
+    async function updateUsageDisplay() {
+      const count = await getIPUsage();
+      const remaining = Math.max(0, 3 - count);
+      document.getElementById("remainingUses").innerText = remaining;
+      console.log(`Usage for ${userIP}: count=${count}, remaining=${remaining}`);
     }
 
     async function runDetection() {
       const input = document.getElementById("input").value;
       const codeInput = document.getElementById("code").value.trim();
       
-      let count = await getIPUsage();
+      if (!input.trim()) {
+        alert("⚠️ Please enter some text to analyze!");
+        return;
+      }
       
       // Obfuscated secret codes (base64 encoded)
       const secretCodes = {
@@ -248,13 +223,10 @@
       const encodedInput = btoa(codeInput);
       const userInfo = secretCodes[encodedInput];
       const isSpecialUser = !!userInfo;
-
-      // Don't run if no input
-      if (!input.trim()) {
-        alert("⚠️ Please enter some text to analyze!");
-        return;
-      }
-
+      
+      // Get current usage before running detection
+      let currentCount = await getIPUsage();
+      
       // Determine usage limit based on user
       let usageLimit = 3; // Default for regular users
       if (isSpecialUser) {
@@ -269,9 +241,9 @@
           }
         }
       }
-
+      
       // Check limit based on user type
-      if (count >= usageLimit) {
+      if (currentCount >= usageLimit) {
         if (isSpecialUser && userInfo.name !== 'Admin') {
           alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
         } else if (!isSpecialUser) {
@@ -279,31 +251,30 @@
         }
         return;
       }
-
+      
       // Disable button during processing
       const detectBtn = document.getElementById("detectButton");
       detectBtn.disabled = true;
       detectBtn.classList.add("disabled");
       detectBtn.innerText = "Processing...";
-
+      
       // Increment counter for all users (except admin with unlimited)
       if (!isSpecialUser || userInfo.name !== 'Admin') {
-        await updateIPUsage(count + 1);
+        await postIPUsage(currentCount + 1);
         updateUsageDisplay();
       }
-
+      
+      // Run detection logic
       const unicodeResults = detectInvisibleUnicode(input);
       document.getElementById("results").innerText = unicodeResults.join("\n");
-
+      
       try {
         const aiCheck = detectAIStyle(input);
-        console.log("AI Check result:", aiCheck);
         document.getElementById("aiResults").innerText = `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
       } catch (error) {
-        console.error("Error in detectAIStyle:", error);
         document.getElementById("aiResults").innerText = `❌ Error in AI detection: ${error.message}`;
       }
-
+      
       // Re-enable button
       detectBtn.disabled = false;
       detectBtn.classList.remove("disabled");
