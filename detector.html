@@ -87,7 +87,6 @@
   <input type="password" id="code" placeholder="Enter secret code (optional)">
   <textarea id="input" placeholder="Paste your code, message, or text here..."></textarea>
   <button class="button" id="detectButton">Detect</button>
-  <button class="button" id="resetButton" style="background-color: #e74c3c; margin-left: 10px;">Reset Counter (Local Only)</button>
 
   <script>
     let userIP = null;
@@ -95,33 +94,83 @@
 
     document.getElementById("detectButton").addEventListener("click", runDetection);
 
-    // Get user's IP and location on page load
+    // Get user's IP and location on page load with multiple fallbacks
     async function getUserInfo() {
-      try {
-        const response = await fetch('https://ipapi.co/json/');
-        const data = await response.json();
-        userIP = data.ip;
-        userCountry = data.country_name || 'Unknown';
-        document.getElementById("ipInfo").innerText = `IP: ${userIP} • Location: ${userCountry}`;
-        updateUsageDisplay();
-      } catch (error) {
-        console.error('Error getting IP:', error);
-        document.getElementById("ipInfo").innerText = "IP detection failed - using local storage only";
-        userIP = 'unknown';
-        updateUsageDisplay();
+      const ipServices = [
+        'https://api.ipify.org?format=json',
+        'https://ipapi.co/json/',
+        'https://ipinfo.io/json',
+        'https://api.ip.sb/geoip'
+      ];
+
+      for (const service of ipServices) {
+        try {
+          const response = await fetch(service, { timeout: 5000 });
+          if (!response.ok) continue;
+          
+          const data = await response.json();
+          
+          // Different services have different field names
+          userIP = data.ip || data.query || data.address;
+          userCountry = data.country_name || data.country || data.region || 'Unknown';
+          
+          if (userIP) {
+            document.getElementById("ipInfo").innerText = `IP: ${userIP} • Location: ${userCountry}`;
+            updateUsageDisplay();
+            return;
+          }
+        } catch (error) {
+          console.log(`Failed to get IP from ${service}:`, error);
+          continue;
+        }
       }
+
+      // If all services fail, generate a browser fingerprint as fallback
+      console.log('All IP services failed, using browser fingerprint');
+      userIP = generateBrowserFingerprint();
+      userCountry = 'Unknown';
+      document.getElementById("ipInfo").innerText = `Using browser fingerprint • Offline mode`;
+      updateUsageDisplay();
+    }
+
+    // Generate a unique browser fingerprint as backup
+    function generateBrowserFingerprint() {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      ctx.textBaseline = 'top';
+      ctx.font = '14px Arial';
+      ctx.fillText('Browser fingerprint', 2, 2);
+      
+      const fingerprint = [
+        navigator.userAgent,
+        navigator.language,
+        screen.width + 'x' + screen.height,
+        new Date().getTimezoneOffset(),
+        canvas.toDataURL()
+      ].join('|');
+      
+      // Create a simple hash
+      let hash = 0;
+      for (let i = 0; i < fingerprint.length; i++) {
+        const char = fingerprint.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32bit integer
+      }
+      
+      return 'fp_' + Math.abs(hash).toString(16);
     }
 
     // IP-based usage tracking using Google Sheets
     async function getIPUsage() {
-      if (!userIP || userIP === 'unknown') {
-        // Fallback to localStorage if IP detection failed
+      if (!userIP) {
+        // Fallback to localStorage if no fingerprint available
         const today = new Date().toISOString().split("T")[0];
         const localKey = `usage-${today}`;
         return parseInt(localStorage.getItem(localKey) || "0");
       }
 
       try {
+        // Google Sheets Web App URL
         const webAppUrl = 'https://script.google.com/macros/s/AKfycbxx3HQo-ygHKgZkt-9bztCjJWrxC299Q_19CCUNi72Iaqe_hYyCWonAN6RhItjB9lSa/exec';
         
         const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`, {
@@ -135,7 +184,7 @@
           throw new Error('Failed to fetch usage data');
         }
       } catch (error) {
-        console.error('Error getting IP usage:', error);
+        console.error('Error getting usage data:', error);
         // Fallback to localStorage
         const today = new Date().toISOString().split("T")[0];
         const localKey = `usage-${today}`;
@@ -144,7 +193,7 @@
     }
 
     async function updateIPUsage(newCount) {
-      if (!userIP || userIP === 'unknown') {
+      if (!userIP) {
         // Fallback to localStorage
         const today = new Date().toISOString().split("T")[0];
         const localKey = `usage-${today}`;
@@ -174,7 +223,7 @@
         }
 
       } catch (error) {
-        console.error('Error updating IP usage:', error);
+        console.error('Error updating usage data:', error);
         // Fallback to localStorage
         const today = new Date().toISOString().split("T")[0];
         const localKey = `usage-${today}`;
@@ -679,7 +728,7 @@
       const count = await getIPUsage();
       const remaining = Math.max(0, 3 - count);
       document.getElementById("remainingUses").innerText = remaining;
-      console.log(`Debug: IP=${userIP}, Count=${count}, Remaining=${remaining}`);
+      console.log(`Debug: ID=${userIP}, Count=${count}, Remaining=${remaining}`);
     }
 
     // Initialize everything when page loads
