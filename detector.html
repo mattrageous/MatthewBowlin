@@ -160,7 +160,7 @@
       return 'fp_' + Math.abs(hash).toString(16);
     }
 
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbwrnB0a8LuuHFS1HbUVgVaJfK_81eZoZOAziTHaC0EUO2ddGQUzrVRnGlp68tl1ZjE/exec';
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbyebefwvoOqIsVCiOuC-L2TrNAmPF4WI-YRfX3FYFsmRk_Bz33eLtfCOAfYPPfvmHeS/exec';
 
     async function getIPUsage() {
       if (!userIP) return 0;
@@ -175,20 +175,20 @@
       }
     }
 
+    // FIXED: Use GET request with URL parameters instead of POST to avoid CORS preflight
     async function postIPUsage(newCount) {
       if (!userIP) return;
       try {
-        const response = await fetch(webAppUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            action: 'update',
-            ip: userIP,
-            date: new Date().toISOString().split("T")[0],
-            count: newCount,
-            country: userCountry
-          })
+        // Use GET request with parameters instead of POST to avoid CORS preflight
+        const params = new URLSearchParams({
+          action: 'update',
+          ip: userIP,
+          date: new Date().toISOString().split("T")[0],
+          count: newCount,
+          country: userCountry || 'Unknown'
         });
+        
+        const response = await fetch(`${webAppUrl}?${params.toString()}`);
         if (!response.ok) throw new Error("Failed to update usage data");
         return await response.json();
       } catch (error) {
