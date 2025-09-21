@@ -39,6 +39,7 @@
   <script>
     let userIP = null;
     const webAppUrl = 'https://script.google.com/macros/s/AKfycbymWMr_BrIAOyjw7qbSy45vnapDkzfAUrpPFIH-PzShiiBS3nbU32fJuXYMtET0-pWd/exec'; 
+    let greetedUser = false;
 
     async function getUserInfo() {
       try {
@@ -55,8 +56,13 @@
     async function updateUsage() {
       const code = document.getElementById("code").value.trim();
       const params = new URLSearchParams({ action: 'get', ip: userIP, date: today(), code });
-      const data = await (await fetch(`${webAppUrl}?${params}`)).json();
-      document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
+      try {
+        const data = await (await fetch(`${webAppUrl}?${params}`)).json();
+        document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
+      } catch (err) {
+        console.error("updateUsage error:", err);
+        document.getElementById("remainingUses").innerText = "Error";
+      }
     }
 
     async function runDetection() {
@@ -67,14 +73,31 @@
       const btn = document.getElementById("detectButton");
       btn.disabled = true; btn.innerText = "Processing...";
 
-      const params = new URLSearchParams({
-        action: 'update', ip: userIP, date: today(), count: 1, code, input
-      });
-      const data = await (await fetch(`${webAppUrl}?${params}`)).json();
+      try {
+        const params = new URLSearchParams({
+          action: 'update', ip: userIP, date: today(), code, input
+        });
+        const data = await (await fetch(`${webAppUrl}?${params}`)).json();
+        console.log("Backend response:", data);
 
-      document.getElementById("results").innerText = (data.unicodeResults || []).join("\n");
-      document.getElementById("aiResults").innerText = `${data.verdict}\n\n${(data.clues || []).join("\n")}`;
-      document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
+        document.getElementById("results").innerText = (data.unicodeResults || []).join("\n");
+        document.getElementById("aiResults").innerText = `${data.verdict}\n\n${(data.clues || []).join("\n")}`;
+        document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
+
+        // Optional: greet special users (only once)
+        if (!greetedUser && data.usageLimit > 3) {
+          greetedUser = true;
+          if (data.usageLimit === Infinity) {
+            alert("🔓 Admin access granted! Unlimited usage activated.");
+          } else {
+            alert(`👋 Hello ${code || "Friend"}! You have ${data.usageLimit} daily uses.`);
+          }
+        }
+
+      } catch (err) {
+        console.error("runDetection error:", err);
+        alert("❌ Detection failed: " + err.message);
+      }
 
       btn.disabled = false; btn.innerText = "Detect";
     }
@@ -88,3 +111,4 @@
   </script>
 </body>
 </html>
+
