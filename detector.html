@@ -13,10 +13,16 @@
       align-items: center; padding: 40px 20px;
       min-height: 100vh;
     }
-    textarea, input {
+    input {
       width: 90%; max-width: 800px; margin: 10px 0;
       padding: 12px; border-radius: 6px; border: 1px solid #444;
       background: #1e2a38; color: #fff; font-family: monospace;
+    }
+    textarea {
+      width: 90%; max-width: 800px; height: 300px;
+      padding: 16px; border-radius: 8px; border: 1px solid #ccc;
+      font-size: 1em; font-family: monospace;
+      resize: vertical; background-color: #1e2a38; color: #ffffff;
     }
     button {
       padding: 10px 20px; border: none; border-radius: 8px;
@@ -84,7 +90,6 @@
         document.getElementById("aiResults").innerText = `${data.verdict}\n\n${(data.clues || []).join("\n")}`;
         document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
 
-        // Optional: greet special users (only once)
         if (!greetedUser && data.usageLimit > 3) {
           greetedUser = true;
           if (data.usageLimit === Infinity) {
@@ -93,7 +98,6 @@
             alert(`👋 Hello ${code || "Friend"}! You have ${data.usageLimit} daily uses.`);
           }
         }
-
       } catch (err) {
         console.error("runDetection error:", err);
         alert("❌ Detection failed: " + err.message);
@@ -111,4 +115,3 @@
   </script>
 </body>
 </html>
-
