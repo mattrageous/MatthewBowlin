@@ -7,662 +7,84 @@
   <style>
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      display: flex; flex-direction: column;
+      align-items: center; padding: 40px 20px;
       min-height: 100vh;
     }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 1em;
+    textarea, input {
+      width: 90%; max-width: 800px; margin: 10px 0;
+      padding: 12px; border-radius: 6px; border: 1px solid #444;
+      background: #1e2a38; color: #fff; font-family: monospace;
     }
-    #results, #aiResults {
-      margin-bottom: 1em;
-      font-size: 1.2em;
-      white-space: pre-wrap;
+    button {
+      padding: 10px 20px; border: none; border-radius: 8px;
+      background: #1abc9c; color: #fff; cursor: pointer;
     }
-    #usageCounter {
-      margin-bottom: 1em;
-      font-size: 1em;
-      color: #1abc9c;
-    }
-    #ipInfo {
-      margin-bottom: 1em;
-      font-size: 0.9em;
-      color: #95a5a6;
-    }
-    textarea {
-      width: 90%;
-      max-width: 800px;
-      height: 300px;
-      padding: 16px;
-      border-radius: 8px;
-      font-size: 1em;
-      font-family: monospace;
-      resize: vertical;
-      background-color: #1e2a38;
-      color: #ffffff;
-      border: 1px solid #ccc;
-    }
-    .button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #1abc9c;
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    .button:hover {
-      background-color: #16a085;
-    }
-    #code {
-      margin-bottom: 10px;
-      padding: 10px;
-      font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      background-color: #1e2a38;
-      color: #fff;
-      width: 90%;
-      max-width: 800px;
-    }
-    .disabled {
-      background-color: #7f8c8d !important;
-      cursor: not-allowed !important;
-    }
+    button:disabled { background: #777; cursor: not-allowed; }
+    #results, #aiResults { white-space: pre-wrap; margin-top: 1em; font-size: 1.1em; }
   </style>
 </head>
 <body>
-  <h1>Hidden Unicode + AI Origin Detector</h1>
+  <h1>AI Origin + Unicode Detector</h1>
   <div id="ipInfo">Getting IP info...</div>
-  <div id="usageCounter">Daily uses remaining: <span id="remainingUses">Loading...</span></div>
-  <div id="results">Paste something and click Detect...</div>
-  <div id="aiResults"></div>
+  <div>Daily uses remaining: <span id="remainingUses">...</span></div>
   <input type="password" id="code" placeholder="Enter secret code (optional)">
-  <textarea id="input" placeholder="Paste your code, message, or text here..."></textarea>
-  <button class="button" id="detectButton">Detect</button>
+  <textarea id="input" placeholder="Paste text or code here..."></textarea>
+  <button id="detectButton">Detect</button>
+  <div id="results"></div>
+  <div id="aiResults"></div>
 
   <script>
     let userIP = null;
-    let userCountry = null;
-    let greetedUser = false;
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbz4v-daX4VPLr7GdvFIbgd3o7kSOyYXXk29eRICx-oxDWSQT7-HBstdV7Y83ZFPMr0O/exec'; // Replace with your Apps Script URL
 
-    document.getElementById("detectButton").addEventListener("click", runDetection);
-
-    // Get user's IP and location on page load with multiple fallbacks
     async function getUserInfo() {
-      const ipServices = [
-        'https://api.ipify.org?format=json',
-        'https://ipapi.co/json/',
-        'https://ipinfo.io/json',
-        'https://api.ip.sb/geoip'
-      ];
-
-      for (const service of ipServices) {
-        try {
-          const response = await fetch(service, { timeout: 5000 });
-          if (!response.ok) continue;
-          
-          const data = await response.json();
-          
-          // Different services have different field names
-          userIP = data.ip || data.query || data.address;
-          userCountry = data.country_name || data.country || data.region || 'Unknown';
-          
-          if (userIP) {
-            document.getElementById("ipInfo").innerText = `IP: ${userIP} • Location: ${userCountry}`;
-            updateUsageDisplay();
-            return;
-          }
-        } catch (error) {
-          console.log(`Failed to get IP from ${service}:`, error);
-          continue;
-        }
-      }
-
-      // If all services fail, generate a browser fingerprint as fallback
-      console.log('All IP services failed, using browser fingerprint');
-      userIP = generateBrowserFingerprint();
-      userCountry = 'Unknown';
-      document.getElementById("ipInfo").innerText = `Using browser fingerprint • Offline mode`;
-      updateUsageDisplay();
-    }
-
-    // Generate a unique browser fingerprint as backup
-    function generateBrowserFingerprint() {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      ctx.textBaseline = 'top';
-      ctx.font = '14px Arial';
-      ctx.fillText('Browser fingerprint', 2, 2);
-      
-      const fingerprint = [
-        navigator.userAgent,
-        navigator.language,
-        screen.width + 'x' + screen.height,
-        new Date().getTimezoneOffset(),
-        canvas.toDataURL()
-      ].join('|');
-      
-      // Create a simple hash
-      let hash = 0;
-      for (let i = 0; i < fingerprint.length; i++) {
-        const char = fingerprint.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash; // Convert to 32bit integer
-      }
-      
-      return 'fp_' + Math.abs(hash).toString(16);
-    }
-
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbzewrHVd_nA_3oKBoSJfHi9ir6UBNQCkMa9OIBc9cM6ybfpdvwxVMqRyPEfcVnUlxo/exec';
-
-    async function getIPUsage() {
-      if (!userIP) return 0;
       try {
-        const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`);
-        if (!response.ok) throw new Error("Failed to fetch usage data");
-        const data = await response.json();
-        console.log('getIPUsage response:', data);
-        return data.count || 0;
-      } catch (error) {
-        console.error("Error in getIPUsage:", error);
-        return 0;
+        const res = await fetch('https://api.ipify.org?format=json');
+        userIP = (await res.json()).ip;
+        document.getElementById("ipInfo").innerText = `IP: ${userIP}`;
+      } catch {
+        userIP = "fp_" + Math.random().toString(36).slice(2);
+        document.getElementById("ipInfo").innerText = "Offline mode (fingerprint only)";
       }
+      updateUsage();
     }
 
-    // FIXED: Use GET request with URL parameters instead of POST to avoid CORS preflight
-    async function postIPUsage(newCount) {
-      if (!userIP) return;
-      try {
-        // Use GET request with parameters instead of POST to avoid CORS preflight
-        const params = new URLSearchParams({
-          action: 'update',
-          ip: userIP,
-          date: new Date().toISOString().split("T")[0],
-          count: newCount,
-          country: userCountry || 'Unknown'
-        });
-        
-        console.log('Sending update request:', params.toString());
-        const response = await fetch(`${webAppUrl}?${params.toString()}`);
-        if (!response.ok) throw new Error("Failed to update usage data");
-        const result = await response.json();
-        console.log('postIPUsage response:', result);
-        return result;
-      } catch (error) {
-        console.error("Error in postIPUsage:", error);
-      }
+    async function updateUsage() {
+      const code = document.getElementById("code").value.trim();
+      const params = new URLSearchParams({ action: 'get', ip: userIP, date: today(), code });
+      const data = await (await fetch(`${webAppUrl}?${params}`)).json();
+      document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
     }
-
-    async function updateUsageDisplay() {
-      const count = await getIPUsage();
-    
-      // Default usage limit
-      let usageLimit = 3;
-    
-      // If user entered a secret code, override
-      const codeInput = document.getElementById("code").value.trim();
-      const encodedInput = btoa(codeInput);
-    
-      const secretCodes = {
-        'bGV0bWVpbjQy': { name: 'Admin', limit: Infinity }, // letmein42 - unlimited
-        'R2FpbDE=': { name: 'Gail', limit: 5 },             // Gail1 - 5 uses
-        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }        // Andrew1 - 5 uses
-      };
-    
-      if (secretCodes[encodedInput]) {
-        usageLimit = secretCodes[encodedInput].limit;
-      }
-    
-      // Handle Infinity case (Admin code)
-      let remaining;
-      if (usageLimit === Infinity) {
-        remaining = "∞"; // Show infinity symbol
-      } else {
-        remaining = Math.max(0, usageLimit - count);
-      }
-    
-      document.getElementById("remainingUses").innerText = remaining;
-      console.log(`Usage display updated - ID: ${userIP}, Count: ${count}, Remaining: ${remaining}`);
-    }
-
 
     async function runDetection() {
-      const input = document.getElementById("input").value;
-      const codeInput = document.getElementById("code").value.trim();
-    
-      if (!input.trim()) {
-        alert("⚠️ Please enter some text to analyze!");
-        return;
-      }
-    
-      // Secret codes
-      const secretCodes = {
-        'bGV0bWVpbjQy': { name: 'Admin', limit: Infinity }, // letmein42
-        'R2FpbDE=': { name: 'Gail', limit: 5 },             // Gail1
-        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }        // Andrew1
-      };
-    
-      const encodedInput = btoa(codeInput);
-      const userInfo = secretCodes[encodedInput];
-      const isSpecialUser = !!userInfo;
-    
-      // Current usage
-      let currentCount = await getIPUsage();
-      console.log(`Current count before increment: ${currentCount}`);
-    
-      // Usage limit
-      let usageLimit = 3;
-      if (isSpecialUser) {
-        usageLimit = userInfo.limit;
-    
-        // Show greeting only once
-        if (!greetedUser) {
-          greetedUser = true;
-          if (userInfo.name === 'Admin') {
-            alert("🔓 Admin access granted! Unlimited usage activated.");
-          } else {
-            alert(`👋 Hello ${userInfo.name}! You have ${userInfo.limit} daily uses.`);
-          }
-        }
-      }
-    
-      // Stop users at their limit (except Admin)
-      if (currentCount >= usageLimit) {
-        if (isSpecialUser && userInfo.name === 'Admin') {
-          console.log("Admin unlimited bypass");
-        } else {
-          alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
-          return;
-        }
-      }
-    
-      // Disable button during processing
-      const detectBtn = document.getElementById("detectButton");
-      detectBtn.disabled = true;
-      detectBtn.classList.add("disabled");
-      detectBtn.innerText = "Processing...";
-    
-      // Increment and update usage (Admin tracked too)
-      const newCount = currentCount + 1;
-      console.log(`Incrementing count from ${currentCount} to ${newCount}`);
-      const updateResult = await postIPUsage(newCount);
-      console.log('Update result:', updateResult);
-    
-      // Refresh counter display
-      setTimeout(() => updateUsageDisplay(), 1000);
-    
-      // Run detection logic
-      const unicodeResults = detectInvisibleUnicode(input);
-      document.getElementById("results").innerText = unicodeResults.join("\n");
-    
-      try {
-        const aiCheck = detectAIStyle(input);
-        document.getElementById("aiResults").innerText =
-          `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
-      } catch (error) {
-        document.getElementById("aiResults").innerText =
-          `❌ Error in AI detection: ${error.message}`;
-      }
-    
-      // Re-enable button
-      detectBtn.disabled = false;
-      detectBtn.classList.remove("disabled");
-      detectBtn.innerText = "Detect";
-    }
+      const input = document.getElementById("input").value.trim();
+      const code = document.getElementById("code").value.trim();
+      if (!input) return alert("⚠️ Please enter some text!");
 
+      const btn = document.getElementById("detectButton");
+      btn.disabled = true; btn.innerText = "Processing...";
 
-    function detectInvisibleUnicode(text) {
-      const invisibleChars = [
-        { char: "\u200B", label: "Zero-Width Space (U+200B)" },
-        { char: "\u200C", label: "Zero-Width Non-Joiner (U+200C)" },
-        { char: "\u200D", label: "Zero-Width Joiner (U+200D)" },
-        { char: "\u2060", label: "Word Joiner (U+2060)" },
-        { char: "\uFEFF", label: "Zero Width No-Break Space (U+FEFF)" },
-        { char: "\u202E", label: "Right-to-Left Override (U+202E)" },
-        { char: "\u00A0", label: "Non-breaking Space (U+00A0)" }
-      ];
-
-      const suspiciousEmojis = [
-        // AI Self-Reference & Tech
-        { emoji: "🤖", label: "Robot emoji (AI self-reference)" },
-        { emoji: "🧠", label: "Brain emoji (AI intelligence branding)" },
-        { emoji: "⚡", label: "Lightning emoji (fast processing)" },
-        { emoji: "🔧", label: "Wrench emoji (technical fixes)" },
-        { emoji: "⚙️", label: "Gear emoji (mechanical processing)" },
-        { emoji: "💻", label: "Laptop emoji (computing)" },
-        { emoji: "🖥️", label: "Desktop computer emoji" },
-        { emoji: "💾", label: "Floppy disk (data storage)" },
-        { emoji: "💿", label: "CD emoji (data storage)" },
-        { emoji: "💽", label: "Disk emoji (data storage)" },
-        { emoji: "🔌", label: "Plug emoji (connectivity)" },
-        { emoji: "📡", label: "Satellite emoji (data transmission)" },
-        
-        // AI Communication Patterns
-        { emoji: "✅", label: "Green check emoji (AI confirmation style)" },
-        { emoji: "⚠️", label: "Warning emoji (AI alert style)" },
-        { emoji: "🚨", label: "Red siren emoji (urgent AI notifications)" },
-        { emoji: "🚫", label: "Prohibited emoji (AI blocking/denial)" },
-        { emoji: "❌", label: "Cross mark (AI rejection/error)" },
-        { emoji: "🛑", label: "Stop sign emoji (AI warnings)" },
-        { emoji: "🤔", label: "Thinking face emoji (AI pondering)" },
-        { emoji: "🤨", label: "Raised eyebrow emoji (AI suspicion)" },
-        { emoji: "💡", label: "Lightbulb emoji (AI insights)" },
-        { emoji: "📝", label: "Memo emoji (AI documentation style)" },
-        { emoji: "💭", label: "Thought bubble (AI processing)" },
-        { emoji: "🔍", label: "Magnifying glass (AI investigation)" },
-        { emoji: "🔎", label: "Right-pointing magnifying glass" },
-        
-        // AI Aesthetic Choices
-        { emoji: "🌈", label: "Rainbow emoji (decorative gradients)" },
-        { emoji: "✨", label: "Sparkles emoji (AI embellishment)" },
-        { emoji: "🎨", label: "Palette emoji (design elements)" },
-        { emoji: "📦", label: "Package emoji (modular AI thinking)" },
-        { emoji: "🖋️", label: "Pen emoji (writing style indicators)" },
-        { emoji: "🎞️", label: "Film emoji (animation descriptions)" },
-        { emoji: "🌟", label: "Star emoji (highlighting points)" },
-        { emoji: "🚀", label: "Rocket emoji (progress/advancement)" },
-        
-        // Professional/Verdict Style
-        { emoji: "🧑‍💻", label: "Technologist emoji (AI verdicts)" },
-        { emoji: "👨‍⚖️", label: "Judge emoji (AI conclusions)" },
-        { emoji: "👩‍⚖️", label: "Female judge emoji (AI conclusions)" },
-        { emoji: "📊", label: "Chart emoji (data analysis)" },
-        { emoji: "📈", label: "Trending up chart" },
-        { emoji: "📉", label: "Trending down chart" },
-        { emoji: "🎯", label: "Target emoji (precision)" },
-        { emoji: "🏆", label: "Trophy emoji (achievements)" },
-        
-        // Rarely Used by Humans
-        { emoji: "🔀", label: "Shuffle emoji (randomization)" },
-        { emoji: "⚖️", label: "Scales emoji (weighing options)" },
-        { emoji: "🧬", label: "DNA emoji (complex analysis)" },
-        { emoji: "📐", label: "Triangular ruler (precision)" },
-        { emoji: "📏", label: "Straight ruler (measurement)" },
-        { emoji: "♾️", label: "Infinity emoji (mathematical concepts)" },
-        { emoji: "🔺", label: "Red triangle up (directional)" },
-        { emoji: "🔻", label: "Red triangle down (directional)" },
-        { emoji: "⭕", label: "Red circle (emphasis)" },
-        { emoji: "🔬", label: "Microscope (analysis)" },
-        { emoji: "⚛️", label: "Atom symbol (algorithms/science)" },
-        { emoji: "🧮", label: "Abacus (calculations)" },
-        
-        // Mathematical Operations
-        { emoji: "➕", label: "Plus sign (mathematical)" },
-        { emoji: "➖", label: "Minus sign (mathematical)" },
-        { emoji: "✖️", label: "Multiplication sign" },
-        { emoji: "➗", label: "Division sign" },
-        
-        // Process/Status Indicators
-        { emoji: "🔄", label: "Counterclockwise arrows (processing)" },
-        { emoji: "🔃", label: "Clockwise vertical arrows (updating)" },
-        { emoji: "⏳", label: "Hourglass (working on something)" },
-        { emoji: "⌛", label: "Hourglass done (completed)" },
-        { emoji: "🔗", label: "Link symbol (connections)" },
-        { emoji: "📋", label: "Clipboard (lists/organization)" },
-        { emoji: "🛠️", label: "Hammer and wrench (tools/fixing)" },
-        
-        // Additional AI-Style Emojis
-        { emoji: "🎪", label: "Circus tent (playful AI responses)" },
-        { emoji: "🌍", label: "Earth globe (global/world topics)" },
-        { emoji: "📱", label: "Mobile phone (apps/mobile)" },
-        { emoji: "🎵", label: "Musical note (music-related AI)" },
-        { emoji: "📸", label: "Camera (images/visual content)" },
-        { emoji: "😅", label: "Grinning with sweat (AI embarrassment)" },
-        { emoji: "😌", label: "Relieved face (AI satisfaction)" },
-        { emoji: "🙃", label: "Upside-down face (playful AI)" },
-        { emoji: "😄", label: "Grinning face (AI enthusiasm)" },
-        { emoji: "👍", label: "Thumbs up (AI acknowledgment)" },
-        { emoji: "❓", label: "Question mark (AI queries)" },
-        { emoji: "❗", label: "Exclamation mark (AI emphasis)" }
-      ];
-
-      const findings = [];
-
-      invisibleChars.forEach(({ char, label }) => {
-        const count = (text.match(new RegExp(char.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g")) || []).length;
-        if (count > 0) {
-          findings.push(`⚠️ Found ${count} instance(s) of ${label}`);
-        }
+      const params = new URLSearchParams({
+        action: 'update', ip: userIP, date: today(), count: 1, code, input
       });
+      const data = await (await fetch(`${webAppUrl}?${params}`)).json();
 
-      suspiciousEmojis.forEach(({ emoji, label }) => {
-        const count = (text.match(new RegExp(emoji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g")) || []).length;
-        if (count > 0) {
-          findings.push(`🤨 Found ${count} instance(s) of suspicious emoji: ${label}`);
-        }
-      });
+      document.getElementById("results").innerText = (data.unicodeResults || []).join("\n");
+      document.getElementById("aiResults").innerText = `${data.verdict}\n\n${(data.clues || []).join("\n")}`;
+      document.getElementById("remainingUses").innerText = data.remaining ?? "N/A";
 
-      return findings.length ? findings : ["✅ No hidden Unicode characters or suspicious emojis found"];
+      btn.disabled = false; btn.innerText = "Detect";
     }
 
-    function detectAIStyle(text) {
-      let score = 0;
-      const clues = [];
-      
-      try {
-        // Basic test
-        clues.push("🧪 AI detection function is running");
-        
-        // AI-Specific Programming Patterns
-        
-        // MARK comments (extremely AI-characteristic)
-        const markComments = (text.match(/\/\/ MARK: -/g) || []).length;
-        if (markComments > 0) {
-          score += 3;
-          clues.push(`📍 MARK comments (${markComments} instances) - highly AI characteristic`);
-        }
-        
-        // Excessive organization comments
-        const organizationComments = (text.match(/\/\/ MARK:|enum \w+Config|final class \w+Manager/g) || []).length;
-        if (organizationComments > 2) {
-          score += 2;
-          clues.push(`🗂️ Over-organized code structure (${organizationComments} instances)`);
-        }
-        
-        // AI's favorite Swift patterns
-        if (text.includes("@StateObject") && text.includes("@ObservedObject")) {
-          score += 2;
-          clues.push("📱 SwiftUI state management pattern combo");
-        }
-        
-        if (text.includes("static let") && text.includes("static func")) {
-          score += 1;
-          clues.push("⚡ Heavy static usage (AI prefers static)");
-        }
-        
-        // Enum with static values (AI loves this pattern)
-        if (text.includes("enum") && text.includes("static let")) {
-          score += 2;
-          clues.push("🔧 Enum + static configuration pattern");
-        }
-        
-        // AI Resume/Professional Document Patterns
-        
-        // AI's favorite resume buzzwords
-        const resumeBuzzwords = (text.match(/dedicated|passionate|expert|proficient|exceptional|comprehensive|seamless|spearheading|cross-functional|innovative|strategic|optimize|streamline|enhance|leverage|align|foster|extensive|proactive|continuous/gi) || []).length;
-        if (resumeBuzzwords > 8) {
-          score += 3;
-          clues.push(`💼 AI resume buzzword overload (${resumeBuzzwords} instances)`);
-        }
-        
-        // AI bullet point patterns
-        const bulletStartPatterns = (text.match(/^[\s]*•[\s]*(Recognized|Skilled|Proactive|Creator|Experienced|Responsible|Leading|Providing|Developing|Ensuring)/gm) || []).length;
-        if (bulletStartPatterns > 3) {
-          score += 2;
-          clues.push(`📝 AI bullet point formula (${bulletStartPatterns} formulaic starts)`);
-        }
-        
-        // AI's favorite professional phrases
-        const aiProfessionalPhrases = (text.match(/passion for|aligning.*with|business needs|cross-functional teams|seamless.*integrations?|continuous improvement|staying up-to-date|emerging technologies|process improvement|expert-level guidance|comprehensive training/gi) || []).length;
-        if (aiProfessionalPhrases > 4) {
-          score += 3;
-          clues.push(`🤖 AI professional phrase patterns (${aiProfessionalPhrases} instances)`);
-        }
-        
-        // AI resume structure patterns
-        if (text.includes("SUMMARY") && text.includes("EXPERIENCE") && text.includes("EDUCATION")) {
-          score += 1;
-          clues.push("📋 Standard AI resume structure");
-        }
-        
-        // AI loves these specific combinations
-        if (text.includes("troubleshooting") && text.includes("performance tuning")) {
-          score += 2;
-          clues.push("🔧 AI's favorite IT skill combo");
-        }
-        
-        // AI redundancy patterns
-        const redundantSkills = text.includes("Siebel") && (text.match(/Siebel/g) || []).length > 8;
-        if (redundantSkills) {
-          score += 2;
-          clues.push("🔄 Excessive keyword repetition (SEO stuffing)");
-        }
-        
-        // AI's formal language overuse
-        const formalLanguage = (text.match(/\b(utilizing|facilitating|implementing|administering|coordinating|collaborating|architecting|spearheading)\b/gi) || []).length;
-        if (formalLanguage > 5) {
-          score += 2;
-          clues.push(`🎩 Overly formal business language (${formalLanguage} instances)`);
-        }
-        
-        // AI loves present participle overuse
-        const ingWords = (text.match(/\b\w+ing\b/g) || []).length;
-        if (ingWords > 15) {
-          score += 1;
-          clues.push(`⚡ Excessive -ing words (${ingWords} instances)`);
-        }
-        
-        // AI's date format preference
-        if (text.includes("–") && text.includes("Current")) {
-          score += 1;
-          clues.push("📅 AI date formatting pattern");
-        }
-        
-        // Generic variable names (AI favorites)
-        const genericVars = (text.match(/\b(width|height|size|radius|position|velocity|speed|count|rate|factor)\b/g) || []).length;
-        if (genericVars > 10) {
-          score += 2;
-          clues.push(`🏷️ Generic variable names (${genericVars} instances)`);
-        }
-        
-        // Mathematical precision (AI loves exact values)
-        const preciseNumbers = (text.match(/0\.\d{2,}/g) || []).length;
-        if (preciseNumbers > 5) {
-          score += 1;
-          clues.push(`🔢 Precise decimal values (${preciseNumbers} instances)`);
-        }
-        
-        // AI's favorite guard statements
-        const guardStatements = (text.match(/guard.*else.*return/g) || []).length;
-        if (guardStatements > 2) {
-          score += 1;
-          clues.push(`🛡️ Multiple guard statements (${guardStatements} instances)`);
-        }
-        
-        // Computed properties (AI overuses these)
-        const computedProps = (text.match(/var \w+: \w+ \{[^}]*\}/g) || []).length;
-        if (computedProps > 3) {
-          score += 1;
-          clues.push(`💻 Multiple computed properties (${computedProps} instances)`);
-        }
-        
-        // AI's color patterns
-        if (text.includes("Color(red:") || text.includes("Color(hue:")) {
-          score += 1;
-          clues.push("🎨 Programmatic color generation");
-        }
-        
-        // Canvas usage (AI loves Canvas for games)
-        if (text.includes("Canvas {") && text.includes("ctx.fill")) {
-          score += 2;
-          clues.push("🖼️ SwiftUI Canvas usage (AI game pattern)");
-        }
-        
-        // AI's timer pattern
-        if (text.includes("Timer.publish") && text.includes("autoconnect")) {
-          score += 2;
-          clues.push("⏰ AI's favorite timer pattern");
-        }
-        
-        // Perfect spacing/alignment obsession
-        if (text.includes("Spacer()") && text.includes(".padding(")) {
-          score += 1;
-          clues.push("📐 Spacing/padding perfectionism");
-        }
-        
-        // Previous simple checks
-        if (text.includes("gradient")) {
-          score += 1;
-          clues.push("🌈 Contains gradient styling");
-        }
-        
-        if (text.includes("button")) {
-          score += 1;
-          clues.push("🔘 Contains button elements");
-        }
-        
-        // Test emoji detection
-        if (text.includes("🚫")) {
-          score += 2;
-          clues.push("🚫 Contains prohibited emoji (AI pattern)");
-        }
-        
-        if (text.includes("✅")) {
-          score += 2;
-          clues.push("✅ Contains check mark emoji (AI pattern)");
-        }
-        
-        // Simple phrase detection
-        if (text.toLowerCase().includes("daily uses")) {
-          score += 2;
-          clues.push("📅 Contains 'daily uses' phrase (AI limit language)");
-        }
-        
-        if (text.toLowerCase().includes("come back tomorrow")) {
-          score += 2;
-          clues.push("⏰ Contains 'come back tomorrow' (AI scheduling language)");
-        }
-        
-        // File organization patterns
-        const structCount = (text.match(/struct \w+:/g) || []).length;
-        const classCount = (text.match(/final class \w+:/g) || []).length;
-        const enumCount = (text.match(/enum \w+/g) || []).length;
-        
-        if (structCount + classCount + enumCount > 8) {
-          score += 2;
-          clues.push(`🏗️ Over-structured code (${structCount + classCount + enumCount} types)`);
-        }
-        
-        // AI loves extension organization
-        if (text.includes("extension") && markComments > 0) {
-          score += 1;
-          clues.push("📂 Extension + MARK organization");
-        }
-        
-        console.log(`Debug: Score=${score}, Clues=${clues.length}`);
-        
-      } catch (error) {
-        console.error("Error in detectAIStyle:", error);
-        clues.push(`❌ Error: ${error.message}`);
-      }
-      
-      return {
-        score,
-        clues,
-        verdict: score >= 10 ? "🤖 Extremely likely AI-generated" : score >= 6 ? "🤖 Highly likely AI-generated" : score >= 4 ? "🤔 Probably AI-assisted" : score >= 2 ? "🧑‍🤖 Possibly AI-influenced" : "🧑‍💻 Likely human-written"
-      };
+    function today() {
+      return new Date().toISOString().split("T")[0];
     }
 
-    // Initialize everything when page loads
-    document.addEventListener('DOMContentLoaded', getUserInfo);
+    document.getElementById("detectButton").addEventListener("click", runDetection);
+    document.addEventListener("DOMContentLoaded", getUserInfo);
   </script>
 </body>
 </html>
