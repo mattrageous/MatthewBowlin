@@ -108,8 +108,7 @@
           const response = await fetch(service, { timeout: 5000 });
           if (!response.ok) continue;
           
-          const text = await response.text();
-          const data = JSON.parse(text);
+          const data = await response.json();
           
           // Different services have different field names
           userIP = data.ip || data.query || data.address;
@@ -161,15 +160,14 @@
       return 'fp_' + Math.abs(hash).toString(16);
     }
 
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycbyo6gpT7X3virClwinSXumvM2FBwBbgmfu-EDFBZu66a0RoMO2UPU2qCJjx2yzZ5-9T/exec';
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycby5f3qosrXT1nva2SKnfK6cyEZCIN-W-0Fe6pCD9JP7o2jBlyoVX7ljbogcDFGjf863/exec';
 
     async function getIPUsage() {
       if (!userIP) return 0;
       try {
         const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`);
         if (!response.ok) throw new Error("Failed to fetch usage data");
-        const text = await response.text();
-        const data = JSON.parse(text);
+        const data = await response.json();
         return data.count || 0;
       } catch (error) {
         console.error("Error in getIPUsage:", error);
@@ -192,14 +190,11 @@
           })
         });
         if (!response.ok) throw new Error("Failed to update usage data");
-        const text = await response.text();
-        const data = JSON.parse(text);
-        return data;
+        return await response.json();
       } catch (error) {
         console.error("Error in postIPUsage:", error);
       }
     }
-
 
     async function updateUsageDisplay() {
       const count = await getIPUsage();
