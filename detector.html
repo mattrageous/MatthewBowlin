@@ -168,6 +168,7 @@
         const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`);
         if (!response.ok) throw new Error("Failed to fetch usage data");
         const data = await response.json();
+        console.log('getIPUsage response:', data);
         return data.count || 0;
       } catch (error) {
         console.error("Error in getIPUsage:", error);
@@ -188,9 +189,12 @@
           country: userCountry || 'Unknown'
         });
         
+        console.log('Sending update request:', params.toString());
         const response = await fetch(`${webAppUrl}?${params.toString()}`);
         if (!response.ok) throw new Error("Failed to update usage data");
-        return await response.json();
+        const result = await response.json();
+        console.log('postIPUsage response:', result);
+        return result;
       } catch (error) {
         console.error("Error in postIPUsage:", error);
       }
@@ -200,7 +204,7 @@
       const count = await getIPUsage();
       const remaining = Math.max(0, 3 - count);
       document.getElementById("remainingUses").innerText = remaining;
-      console.log(`Usage for ${userIP}: count=${count}, remaining=${remaining}`);
+      console.log(`Usage display updated - ID: ${userIP}, Count: ${count}, Remaining: ${remaining}`);
     }
 
     async function runDetection() {
@@ -226,6 +230,7 @@
       
       // Get current usage before running detection
       let currentCount = await getIPUsage();
+      console.log(`Current count before increment: ${currentCount}`);
       
       // Determine usage limit based on user
       let usageLimit = 3; // Default for regular users
@@ -260,8 +265,16 @@
       
       // Increment counter for all users (except admin with unlimited)
       if (!isSpecialUser || userInfo.name !== 'Admin') {
-        await postIPUsage(currentCount + 1);
-        updateUsageDisplay();
+        const newCount = currentCount + 1;
+        console.log(`Incrementing count from ${currentCount} to ${newCount}`);
+        
+        const updateResult = await postIPUsage(newCount);
+        console.log('Update result:', updateResult);
+        
+        // Wait a moment for the database to update, then refresh display
+        setTimeout(() => {
+          updateUsageDisplay();
+        }, 1000);
       }
       
       // Run detection logic
@@ -621,13 +634,6 @@
         clues,
         verdict: score >= 10 ? "🤖 Extremely likely AI-generated" : score >= 6 ? "🤖 Highly likely AI-generated" : score >= 4 ? "🤔 Probably AI-assisted" : score >= 2 ? "🧑‍🤖 Possibly AI-influenced" : "🧑‍💻 Likely human-written"
       };
-    }
-
-    async function updateUsageDisplay() {
-      const count = await getIPUsage();
-      const remaining = Math.max(0, 3 - count);
-      document.getElementById("remainingUses").innerText = remaining;
-      console.log(`Debug: ID=${userIP}, Count=${count}, Remaining=${remaining}`);
     }
 
     // Initialize everything when page loads
