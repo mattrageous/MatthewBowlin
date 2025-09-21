@@ -202,10 +202,36 @@
 
     async function updateUsageDisplay() {
       const count = await getIPUsage();
-      const remaining = Math.max(0, 3 - count);
+    
+      // Default usage limit
+      let usageLimit = 3;
+    
+      // If user entered a secret code, override
+      const codeInput = document.getElementById("code").value.trim();
+      const encodedInput = btoa(codeInput);
+    
+      const secretCodes = {
+        'bGV0bWVpbjQy': { name: 'Admin', limit: Infinity }, // letmein42 - unlimited
+        'R2FpbDE=': { name: 'Gail', limit: 5 },             // Gail1 - 5 uses
+        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }        // Andrew1 - 5 uses
+      };
+    
+      if (secretCodes[encodedInput]) {
+        usageLimit = secretCodes[encodedInput].limit;
+      }
+    
+      // Handle Infinity case (Admin code)
+      let remaining;
+      if (usageLimit === Infinity) {
+        remaining = "∞"; // Show infinity symbol
+      } else {
+        remaining = Math.max(0, usageLimit - count);
+      }
+    
       document.getElementById("remainingUses").innerText = remaining;
       console.log(`Usage display updated - ID: ${userIP}, Count: ${count}, Remaining: ${remaining}`);
     }
+
 
     async function runDetection() {
       const input = document.getElementById("input").value;
@@ -218,9 +244,9 @@
       
       // Obfuscated secret codes (base64 encoded)
       const secretCodes = {
-        'bGV0bWVpbjQy': { name: 'Admin', limit: 999 }, // letmein42 - unlimited
-        'R2FpbDE=': { name: 'Gail', limit: 5 },        // Gail1 - 5 uses
-        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }   // Andrew1 - 5 uses
+        'bGV0bWVpbjQy': { name: 'Admin', limit: Infinity }, // letmein42 - unlimited
+        'R2FpbDE=': { name: 'Gail', limit: 5 },             // Gail1 - 5 uses
+        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }        // Andrew1 - 5 uses
       };
       
       // Check if code matches any secret
@@ -236,13 +262,13 @@
       let usageLimit = 3; // Default for regular users
       if (isSpecialUser) {
         usageLimit = userInfo.limit;
-        
-        // Show personalized greeting for secret codes
+      
+        // Show personalized greeting once
         if (codeInput) {
           if (userInfo.name === 'Admin') {
-            alert("🔓 Admin access granted! Unlimited usage activated.");
+            console.log("🔓 Admin access granted! Unlimited usage activated.");
           } else {
-            alert(`👋 Hello ${userInfo.name}! Welcome back. You have ${userInfo.limit} daily uses.`);
+            console.log(`👋 Hello ${userInfo.name}! You have ${userInfo.limit} daily uses.`);
           }
         }
       }
@@ -258,7 +284,6 @@
           return;
         }
       }
-
       
       // Disable button during processing
       const detectBtn = document.getElementById("detectButton");
@@ -266,19 +291,18 @@
       detectBtn.classList.add("disabled");
       detectBtn.innerText = "Processing...";
       
-      // Increment counter for all users (except admin with unlimited)
-      if (!isSpecialUser || userInfo.name !== 'Admin') {
-        const newCount = currentCount + 1;
-        console.log(`Incrementing count from ${currentCount} to ${newCount}`);
-        
-        const updateResult = await postIPUsage(newCount);
-        console.log('Update result:', updateResult);
-        
-        // Wait a moment for the database to update, then refresh display
-        setTimeout(() => {
-          updateUsageDisplay();
-        }, 1000);
-      }
+      // ✅ Increment counter for *everyone* (Admin included, if you want tracking)
+      const newCount = currentCount + 1;
+      console.log(`Incrementing count from ${currentCount} to ${newCount}`);
+      
+      const updateResult = await postIPUsage(newCount);
+      console.log('Update result:', updateResult);
+      
+      // Wait a moment for the database to update, then refresh display
+      setTimeout(() => {
+        updateUsageDisplay();
+      }, 1000);
+
       
       // Run detection logic
       const unicodeResults = detectInvisibleUnicode(input);
