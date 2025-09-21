@@ -91,6 +91,7 @@
   <script>
     let userIP = null;
     let userCountry = null;
+    let greetedUser = false;
 
     document.getElementById("detectButton").addEventListener("click", runDetection);
 
@@ -236,90 +237,87 @@
     async function runDetection() {
       const input = document.getElementById("input").value;
       const codeInput = document.getElementById("code").value.trim();
-      
+    
       if (!input.trim()) {
         alert("⚠️ Please enter some text to analyze!");
         return;
       }
-      
-      // Obfuscated secret codes (base64 encoded)
+    
+      // Secret codes
       const secretCodes = {
-        'bGV0bWVpbjQy': { name: 'Admin', limit: Infinity }, // letmein42 - unlimited
-        'R2FpbDE=': { name: 'Gail', limit: 5 },             // Gail1 - 5 uses
-        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }        // Andrew1 - 5 uses
+        'bGV0bWVpbjQy': { name: 'Admin', limit: Infinity }, // letmein42
+        'R2FpbDE=': { name: 'Gail', limit: 5 },             // Gail1
+        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }        // Andrew1
       };
-      
-      // Check if code matches any secret
+    
       const encodedInput = btoa(codeInput);
       const userInfo = secretCodes[encodedInput];
       const isSpecialUser = !!userInfo;
-      
-      // Get current usage before running detection
+    
+      // Current usage
       let currentCount = await getIPUsage();
       console.log(`Current count before increment: ${currentCount}`);
-      
-      // Determine usage limit based on user
-      let usageLimit = 3; // Default for regular users
+    
+      // Usage limit
+      let usageLimit = 3;
       if (isSpecialUser) {
         usageLimit = userInfo.limit;
-      
-        // Show personalized greeting once
-        if (codeInput) {
+    
+        // Show greeting only once
+        if (!greetedUser) {
+          greetedUser = true;
           if (userInfo.name === 'Admin') {
-            console.log("🔓 Admin access granted! Unlimited usage activated.");
+            alert("🔓 Admin access granted! Unlimited usage activated.");
           } else {
-            console.log(`👋 Hello ${userInfo.name}! You have ${userInfo.limit} daily uses.`);
+            alert(`👋 Hello ${userInfo.name}! You have ${userInfo.limit} daily uses.`);
           }
         }
       }
-      
-      // Check limit based on user type
+    
+      // Stop users at their limit (except Admin)
       if (currentCount >= usageLimit) {
-        if (isSpecialUser) {
-          // 👤 Secret code entered → bypass popup, still increment + log
-          console.log(`Bypassing popup for ${userInfo.name}, usageLimit=${usageLimit}`);
+        if (isSpecialUser && userInfo.name === 'Admin') {
+          console.log("Admin unlimited bypass");
         } else {
-          // 🚫 Regular users hit limit → show popup + stop
-          alert("🚫 You've hit your 3 daily uses. Come back tomorrow or enter a secret code.");
+          alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
           return;
         }
       }
-      
+    
       // Disable button during processing
       const detectBtn = document.getElementById("detectButton");
       detectBtn.disabled = true;
       detectBtn.classList.add("disabled");
       detectBtn.innerText = "Processing...";
-      
-      // ✅ Increment counter for *everyone* (Admin included, if you want tracking)
+    
+      // Increment and update usage (Admin tracked too)
       const newCount = currentCount + 1;
       console.log(`Incrementing count from ${currentCount} to ${newCount}`);
-      
       const updateResult = await postIPUsage(newCount);
       console.log('Update result:', updateResult);
-      
-      // Wait a moment for the database to update, then refresh display
-      setTimeout(() => {
-        updateUsageDisplay();
-      }, 1000);
-
-      
+    
+      // Refresh counter display
+      setTimeout(() => updateUsageDisplay(), 1000);
+    
       // Run detection logic
       const unicodeResults = detectInvisibleUnicode(input);
       document.getElementById("results").innerText = unicodeResults.join("\n");
-      
+    
       try {
         const aiCheck = detectAIStyle(input);
-        document.getElementById("aiResults").innerText = `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
+        document.getElementById("aiResults").innerText =
+          `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
       } catch (error) {
-        document.getElementById("aiResults").innerText = `❌ Error in AI detection: ${error.message}`;
+        document.getElementById("aiResults").innerText =
+          `❌ Error in AI detection: ${error.message}`;
       }
-      
+    
       // Re-enable button
       detectBtn.disabled = false;
       detectBtn.classList.remove("disabled");
       detectBtn.innerText = "Detect";
     }
+
 
     function detectInvisibleUnicode(text) {
       const invisibleChars = [
