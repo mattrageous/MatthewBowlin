@@ -160,7 +160,7 @@
       return 'fp_' + Math.abs(hash).toString(16);
     }
 
-    const webAppUrl = 'https://script.google.com/macros/s/AKfycby0A0aAqgro_UQF2jEvSoChlA5EtQoyUDAe6z522-w-eYW3m9rjv6R3DGq1PghUwT3J/exec';
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycby5f3qosrXT1nva2SKnfK6cyEZCIN-W-0Fe6pCD9JP7o2jBlyoVX7ljbogcDFGjf863/exec';
 
     async function getIPUsage() {
       if (!userIP) return 0;
@@ -621,78 +621,6 @@
         clues,
         verdict: score >= 10 ? "🤖 Extremely likely AI-generated" : score >= 6 ? "🤖 Highly likely AI-generated" : score >= 4 ? "🤔 Probably AI-assisted" : score >= 2 ? "🧑‍🤖 Possibly AI-influenced" : "🧑‍💻 Likely human-written"
       };
-    }
-
-    function runDetection() {
-      const input = document.getElementById("input").value;
-      const codeInput = document.getElementById("code").value.trim();
-      const today = new Date().toISOString().split("T")[0];
-      const key = `usage-${today}`;
-      let count = parseInt(localStorage.getItem(key) || "0");
-      
-      // Obfuscated secret codes (base64 encoded)
-      const secretCodes = {
-        'bGV0bWVpbjQy': { name: 'Admin', limit: 999 }, // letmein42 - unlimited
-        'R2FpbDE=': { name: 'Gail', limit: 5 },        // Gail1 - 5 uses
-        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }   // Andrew1 - 5 uses
-      };
-      
-      // Check if code matches any secret
-      const encodedInput = btoa(codeInput);
-      const userInfo = secretCodes[encodedInput];
-      const isSpecialUser = !!userInfo;
-
-      // Update usage counter display
-      updateUsageDisplay();
-
-      // Don't run if no input
-      if (!input.trim()) {
-        alert("⚠️ Please enter some text to analyze!");
-        return;
-      }
-
-      // Determine usage limit based on user
-      let usageLimit = 3; // Default for regular users
-      if (isSpecialUser) {
-        usageLimit = userInfo.limit;
-        
-        // Show personalized greeting for secret codes
-        if (codeInput) {
-          if (userInfo.name === 'Admin') {
-            alert("🔓 Admin access granted! Unlimited usage activated.");
-          } else {
-            alert(`👋 Hello ${userInfo.name}! Welcome back. You have ${userInfo.limit} daily uses.`);
-          }
-        }
-      }
-
-      // Check limit based on user type
-      if (count >= usageLimit) {
-        if (isSpecialUser && userInfo.name !== 'Admin') {
-          alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
-        } else if (!isSpecialUser) {
-          alert("🚫 You've hit your 3 daily uses. Come back tomorrow or enter a secret code.");
-        }
-        return;
-      }
-
-      // Increment counter for all users (except admin with unlimited)
-      if (!isSpecialUser || userInfo.name !== 'Admin') {
-        localStorage.setItem(key, count + 1);
-        updateUsageDisplay();
-      }
-
-      const unicodeResults = detectInvisibleUnicode(input);
-      document.getElementById("results").innerText = unicodeResults.join("\n");
-
-      try {
-        const aiCheck = detectAIStyle(input);
-        console.log("AI Check result:", aiCheck);
-        document.getElementById("aiResults").innerText = `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
-      } catch (error) {
-        console.error("Error in detectAIStyle:", error);
-        document.getElementById("aiResults").innerText = `❌ Error in AI detection: ${error.message}`;
-      }
     }
 
     async function updateUsageDisplay() {
