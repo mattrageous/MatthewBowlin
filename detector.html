@@ -25,6 +25,16 @@
       font-size: 1.2em;
       white-space: pre-wrap;
     }
+    #usageCounter {
+      margin-bottom: 1em;
+      font-size: 1em;
+      color: #1abc9c;
+    }
+    #ipInfo {
+      margin-bottom: 1em;
+      font-size: 0.9em;
+      color: #95a5a6;
+    }
     textarea {
       width: 90%;
       max-width: 800px;
@@ -51,79 +61,630 @@
     .button:hover {
       background-color: #16a085;
     }
+    #code {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #1e2a38;
+      color: #fff;
+      width: 90%;
+      max-width: 800px;
+    }
+    .disabled {
+      background-color: #7f8c8d !important;
+      cursor: not-allowed !important;
+    }
   </style>
 </head>
 <body>
   <h1>Hidden Unicode + AI Origin Detector</h1>
+  <div id="ipInfo">Getting IP info...</div>
+  <div id="usageCounter">Daily uses remaining: <span id="remainingUses">Loading...</span></div>
   <div id="results">Paste something and click Detect...</div>
+  <div id="aiResults"></div>
+  <input type="password" id="code" placeholder="Enter secret code (optional)">
   <textarea id="input" placeholder="Paste your code, message, or text here..."></textarea>
-  <input type="password" id="code" placeholder="Enter secret code (optional)" style="margin-bottom: 10px; padding: 10px; font-size: 1em; border-radius: 8px; border: 1px solid #ccc; background-color: #1e2a38; color: #fff; width: 90%; max-width: 800px;">
-
-<button class="button" onclick="runDetection()">Detect</button>
+  <button class="button" id="detectButton">Detect</button>
+  <button class="button" id="resetButton" style="background-color: #e74c3c; margin-left: 10px;">Reset Counter (Local Only)</button>
 
   <script>
-    // Obfuscated Unicode detector (kept as-is)
-    (function(_0x119f71,_0x5d2727){const _0x20220c=_0x4387,_0x3e8b05=_0x119f71();while(!![]){try{const _0x5a2a08=parseInt(_0x20220c(0x8c))/0x1+parseInt(_0x20220c(0x80))/0x2*(parseInt(_0x20220c(0x78))/0x3)+parseInt(_0x20220c(0x87))/0x4*(parseInt(_0x20220c(0x84))/0x5)+parseInt(_0x20220c(0x75))/0x6*(-parseInt(_0x20220c(0x88))/0x7)+-parseInt(_0x20220c(0x7f))/0x8+-parseInt(_0x20220c(0x86))/0x9*(parseInt(_0x20220c(0x8f))/0xa)+parseInt(_0x20220c(0x8e))/0xb*(parseInt(_0x20220c(0x8d))/0xc);if(_0x5a2a08===_0x5d2727)break;else _0x3e8b05['push'](_0x3e8b05['shift']());}catch(_0x39754b){_0x3e8b05['push'](_0x3e8b05['shift']());}}}(_0x29c3,0x1992d));
-    function detectInvisibleUnicode(_0x91152f){const _0x3bd932=_0x4387,_0x3f2ece=[{'char':'​','label':_0x3bd932(0x77)},{'char':'‌','label':_0x3bd932(0x83)},{'char':'‍','label':_0x3bd932(0x90)},{'char':'⁠','label':_0x3bd932(0x76)},{'char':'\ufeff','label':_0x3bd932(0x8b)},{'char':'‮','label':_0x3bd932(0x7d)},{'char':'\u00a0','label':'Non-breaking Space (U+00A0)'}],_0x2c20b4=[];return _0x3f2ece[_0x3bd932(0x7b)](({char:_0x30bf37,label:_0x5bb25c})=>{const _0x53e2cb=_0x3bd932,_0x8c31dc=(_0x91152f[_0x53e2cb(0x81)](new RegExp(_0x30bf37,'g'))||[])['length'];_0x8c31dc>0x0&&_0x2c20b4[_0x53e2cb(0x7c)](_0x53e2cb(0x73)+_0x8c31dc+' instance(s) of '+_0x5bb25c);}),_0x2c20b4[_0x3bd932(0x89)]?_0x2c20b4:[_0x3bd932(0x7e)];}
-    function _0x4387(_0x213196,_0x25abc1){const _0x29c384=_0x29c3();return _0x4387=function(_0x438751,_0x2ac32d){_0x438751=_0x438751-0x73;let _0x12606e=_0x29c384[_0x438751];return _0x12606e;},_0x4387(_0x213196,_0x25abc1);}
-    function _0x29c3(){const _0x5d5dd0=['432HqbcYg','8qGJXGw','15911YLMzOg','length','⟨ZWNJ⟩','Zero Width No-Break Space (U+FEFF)','34834XSvdCM','201204ybUrMm','66ggmYzF','1270eGJVLv','Zero-Width Joiner (U+200D)','⚠️ Found ','⟨ZWNBS⟩','252Iikyfo','Word Joiner (U+2060)','Zero-Width Space (U+200B)','3zoiBVd','replace','⟨ZWSP⟩','forEach','push','Right-to-Left Override (U+202E)','✅ No hidden Unicode characters found','20248QJnpzs','77208zmIjvJ','match','⟨WJ⟩','Zero-Width Non-Joiner (U+200C)','87005MSmwuD','⟨RTL⟩'];_0x29c3=function(){return _0x5d5dd0;};return _0x29c3();}
+    let userIP = null;
+    let userCountry = null;
+
+    document.getElementById("detectButton").addEventListener("click", runDetection);
+
+    // Get user's IP and location on page load
+    async function getUserInfo() {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        userIP = data.ip;
+        userCountry = data.country_name || 'Unknown';
+        document.getElementById("ipInfo").innerText = `IP: ${userIP} • Location: ${userCountry}`;
+        updateUsageDisplay();
+      } catch (error) {
+        console.error('Error getting IP:', error);
+        document.getElementById("ipInfo").innerText = "IP detection failed - using local storage only";
+        userIP = 'unknown';
+        updateUsageDisplay();
+      }
+    }
+
+    // IP-based usage tracking using Google Sheets
+    async function getIPUsage() {
+      if (!userIP || userIP === 'unknown') {
+        // Fallback to localStorage if IP detection failed
+        const today = new Date().toISOString().split("T")[0];
+        const localKey = `usage-${today}`;
+        return parseInt(localStorage.getItem(localKey) || "0");
+      }
+
+      try {
+        // Google Sheets Web App URL - you'll need to deploy this as a web app
+        const webAppUrl = 'https://script.google.com/macros/s/YOUR_WEB_APP_ID/exec';
+        
+        const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`, {
+          method: 'GET'
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          return data.count || 0;
+        } else {
+          throw new Error('Failed to fetch usage data');
+        }
+      } catch (error) {
+        console.error('Error getting IP usage:', error);
+        // Fallback to localStorage
+        const today = new Date().toISOString().split("T")[0];
+        const localKey = `usage-${today}`;
+        return parseInt(localStorage.getItem(localKey) || "0");
+      }
+    }
+
+    async function updateIPUsage(newCount) {
+      if (!userIP || userIP === 'unknown') {
+        // Fallback to localStorage
+        const today = new Date().toISOString().split("T")[0];
+        const localKey = `usage-${today}`;
+        localStorage.setItem(localKey, newCount.toString());
+        return;
+      }
+
+      try {
+        const webAppUrl = 'https://script.google.com/macros/s/YOUR_WEB_APP_ID/exec';
+        
+        const response = await fetch(webAppUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            action: 'update',
+            ip: userIP,
+            date: new Date().toISOString().split("T")[0],
+            count: newCount,
+            country: userCountry
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to update usage data');
+        }
+
+      } catch (error) {
+        console.error('Error updating IP usage:', error);
+        // Fallback to localStorage
+        const today = new Date().toISOString().split("T")[0];
+        const localKey = `usage-${today}`;
+        localStorage.setItem(localKey, newCount.toString());
+      }
+    }
+
+    async function runDetection() {
+      const input = document.getElementById("input").value;
+      const codeInput = document.getElementById("code").value.trim();
+      
+      let count = await getIPUsage();
+      
+      // Obfuscated secret codes (base64 encoded)
+      const secretCodes = {
+        'bGV0bWVpbjQy': { name: 'Admin', limit: 999 }, // letmein42 - unlimited
+        'R2FpbDE=': { name: 'Gail', limit: 5 },        // Gail1 - 5 uses
+        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }   // Andrew1 - 5 uses
+      };
+      
+      // Check if code matches any secret
+      const encodedInput = btoa(codeInput);
+      const userInfo = secretCodes[encodedInput];
+      const isSpecialUser = !!userInfo;
+
+      // Don't run if no input
+      if (!input.trim()) {
+        alert("⚠️ Please enter some text to analyze!");
+        return;
+      }
+
+      // Determine usage limit based on user
+      let usageLimit = 3; // Default for regular users
+      if (isSpecialUser) {
+        usageLimit = userInfo.limit;
+        
+        // Show personalized greeting for secret codes
+        if (codeInput) {
+          if (userInfo.name === 'Admin') {
+            alert("🔓 Admin access granted! Unlimited usage activated.");
+          } else {
+            alert(`👋 Hello ${userInfo.name}! Welcome back. You have ${userInfo.limit} daily uses.`);
+          }
+        }
+      }
+
+      // Check limit based on user type
+      if (count >= usageLimit) {
+        if (isSpecialUser && userInfo.name !== 'Admin') {
+          alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
+        } else if (!isSpecialUser) {
+          alert("🚫 You've hit your 3 daily uses. Come back tomorrow or enter a secret code.");
+        }
+        return;
+      }
+
+      // Disable button during processing
+      const detectBtn = document.getElementById("detectButton");
+      detectBtn.disabled = true;
+      detectBtn.classList.add("disabled");
+      detectBtn.innerText = "Processing...";
+
+      // Increment counter for all users (except admin with unlimited)
+      if (!isSpecialUser || userInfo.name !== 'Admin') {
+        await updateIPUsage(count + 1);
+        updateUsageDisplay();
+      }
+
+      const unicodeResults = detectInvisibleUnicode(input);
+      document.getElementById("results").innerText = unicodeResults.join("\n");
+
+      try {
+        const aiCheck = detectAIStyle(input);
+        console.log("AI Check result:", aiCheck);
+        document.getElementById("aiResults").innerText = `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
+      } catch (error) {
+        console.error("Error in detectAIStyle:", error);
+        document.getElementById("aiResults").innerText = `❌ Error in AI detection: ${error.message}`;
+      }
+
+      // Re-enable button
+      detectBtn.disabled = false;
+      detectBtn.classList.remove("disabled");
+      detectBtn.innerText = "Detect";
+    }
+
+    function detectInvisibleUnicode(text) {
+      const invisibleChars = [
+        { char: "\u200B", label: "Zero-Width Space (U+200B)" },
+        { char: "\u200C", label: "Zero-Width Non-Joiner (U+200C)" },
+        { char: "\u200D", label: "Zero-Width Joiner (U+200D)" },
+        { char: "\u2060", label: "Word Joiner (U+2060)" },
+        { char: "\uFEFF", label: "Zero Width No-Break Space (U+FEFF)" },
+        { char: "\u202E", label: "Right-to-Left Override (U+202E)" },
+        { char: "\u00A0", label: "Non-breaking Space (U+00A0)" }
+      ];
+
+      const suspiciousEmojis = [
+        // AI Self-Reference & Tech
+        { emoji: "🤖", label: "Robot emoji (AI self-reference)" },
+        { emoji: "🧠", label: "Brain emoji (AI intelligence branding)" },
+        { emoji: "⚡", label: "Lightning emoji (fast processing)" },
+        { emoji: "🔧", label: "Wrench emoji (technical fixes)" },
+        { emoji: "⚙️", label: "Gear emoji (mechanical processing)" },
+        { emoji: "💻", label: "Laptop emoji (computing)" },
+        { emoji: "🖥️", label: "Desktop computer emoji" },
+        { emoji: "💾", label: "Floppy disk (data storage)" },
+        { emoji: "💿", label: "CD emoji (data storage)" },
+        { emoji: "💽", label: "Disk emoji (data storage)" },
+        { emoji: "🔌", label: "Plug emoji (connectivity)" },
+        { emoji: "📡", label: "Satellite emoji (data transmission)" },
+        
+        // AI Communication Patterns
+        { emoji: "✅", label: "Green check emoji (AI confirmation style)" },
+        { emoji: "⚠️", label: "Warning emoji (AI alert style)" },
+        { emoji: "🚨", label: "Red siren emoji (urgent AI notifications)" },
+        { emoji: "🚫", label: "Prohibited emoji (AI blocking/denial)" },
+        { emoji: "❌", label: "Cross mark (AI rejection/error)" },
+        { emoji: "🛑", label: "Stop sign emoji (AI warnings)" },
+        { emoji: "🤔", label: "Thinking face emoji (AI pondering)" },
+        { emoji: "🤨", label: "Raised eyebrow emoji (AI suspicion)" },
+        { emoji: "💡", label: "Lightbulb emoji (AI insights)" },
+        { emoji: "📝", label: "Memo emoji (AI documentation style)" },
+        { emoji: "💭", label: "Thought bubble (AI processing)" },
+        { emoji: "🔍", label: "Magnifying glass (AI investigation)" },
+        { emoji: "🔎", label: "Right-pointing magnifying glass" },
+        
+        // AI Aesthetic Choices
+        { emoji: "🌈", label: "Rainbow emoji (decorative gradients)" },
+        { emoji: "✨", label: "Sparkles emoji (AI embellishment)" },
+        { emoji: "🎨", label: "Palette emoji (design elements)" },
+        { emoji: "📦", label: "Package emoji (modular AI thinking)" },
+        { emoji: "🖋️", label: "Pen emoji (writing style indicators)" },
+        { emoji: "🎞️", label: "Film emoji (animation descriptions)" },
+        { emoji: "🌟", label: "Star emoji (highlighting points)" },
+        { emoji: "🚀", label: "Rocket emoji (progress/advancement)" },
+        
+        // Professional/Verdict Style
+        { emoji: "🧑‍💻", label: "Technologist emoji (AI verdicts)" },
+        { emoji: "👨‍⚖️", label: "Judge emoji (AI conclusions)" },
+        { emoji: "👩‍⚖️", label: "Female judge emoji (AI conclusions)" },
+        { emoji: "📊", label: "Chart emoji (data analysis)" },
+        { emoji: "📈", label: "Trending up chart" },
+        { emoji: "📉", label: "Trending down chart" },
+        { emoji: "🎯", label: "Target emoji (precision)" },
+        { emoji: "🏆", label: "Trophy emoji (achievements)" },
+        
+        // Rarely Used by Humans
+        { emoji: "🔀", label: "Shuffle emoji (randomization)" },
+        { emoji: "⚖️", label: "Scales emoji (weighing options)" },
+        { emoji: "🧬", label: "DNA emoji (complex analysis)" },
+        { emoji: "📐", label: "Triangular ruler (precision)" },
+        { emoji: "📏", label: "Straight ruler (measurement)" },
+        { emoji: "♾️", label: "Infinity emoji (mathematical concepts)" },
+        { emoji: "🔺", label: "Red triangle up (directional)" },
+        { emoji: "🔻", label: "Red triangle down (directional)" },
+        { emoji: "⭕", label: "Red circle (emphasis)" },
+        { emoji: "🔬", label: "Microscope (analysis)" },
+        { emoji: "⚛️", label: "Atom symbol (algorithms/science)" },
+        { emoji: "🧮", label: "Abacus (calculations)" },
+        
+        // Mathematical Operations
+        { emoji: "➕", label: "Plus sign (mathematical)" },
+        { emoji: "➖", label: "Minus sign (mathematical)" },
+        { emoji: "✖️", label: "Multiplication sign" },
+        { emoji: "➗", label: "Division sign" },
+        
+        // Process/Status Indicators
+        { emoji: "🔄", label: "Counterclockwise arrows (processing)" },
+        { emoji: "🔃", label: "Clockwise vertical arrows (updating)" },
+        { emoji: "⏳", label: "Hourglass (working on something)" },
+        { emoji: "⌛", label: "Hourglass done (completed)" },
+        { emoji: "🔗", label: "Link symbol (connections)" },
+        { emoji: "📋", label: "Clipboard (lists/organization)" },
+        { emoji: "🛠️", label: "Hammer and wrench (tools/fixing)" },
+        
+        // Additional AI-Style Emojis
+        { emoji: "🎪", label: "Circus tent (playful AI responses)" },
+        { emoji: "🌍", label: "Earth globe (global/world topics)" },
+        { emoji: "📱", label: "Mobile phone (apps/mobile)" },
+        { emoji: "🎵", label: "Musical note (music-related AI)" },
+        { emoji: "📸", label: "Camera (images/visual content)" },
+        { emoji: "😅", label: "Grinning with sweat (AI embarrassment)" },
+        { emoji: "😌", label: "Relieved face (AI satisfaction)" },
+        { emoji: "🙃", label: "Upside-down face (playful AI)" },
+        { emoji: "😄", label: "Grinning face (AI enthusiasm)" },
+        { emoji: "👍", label: "Thumbs up (AI acknowledgment)" },
+        { emoji: "❓", label: "Question mark (AI queries)" },
+        { emoji: "❗", label: "Exclamation mark (AI emphasis)" }
+      ];
+
+      const findings = [];
+
+      invisibleChars.forEach(({ char, label }) => {
+        const count = (text.match(new RegExp(char.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g")) || []).length;
+        if (count > 0) {
+          findings.push(`⚠️ Found ${count} instance(s) of ${label}`);
+        }
+      });
+
+      suspiciousEmojis.forEach(({ emoji, label }) => {
+        const count = (text.match(new RegExp(emoji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "g")) || []).length;
+        if (count > 0) {
+          findings.push(`🤨 Found ${count} instance(s) of suspicious emoji: ${label}`);
+        }
+      });
+
+      return findings.length ? findings : ["✅ No hidden Unicode characters or suspicious emojis found"];
+    }
 
     function detectAIStyle(text) {
       let score = 0;
       const clues = [];
-      if (/linear-gradient\([^)]*#.*\)/i.test(text)) {
-        score += 2;
-        clues.push("🌈 Uses linear-gradient with aesthetic hex codes");
+      
+      try {
+        // Basic test
+        clues.push("🧪 AI detection function is running");
+        
+        // AI-Specific Programming Patterns
+        
+        // MARK comments (extremely AI-characteristic)
+        const markComments = (text.match(/\/\/ MARK: -/g) || []).length;
+        if (markComments > 0) {
+          score += 3;
+          clues.push(`📍 MARK comments (${markComments} instances) - highly AI characteristic`);
+        }
+        
+        // Excessive organization comments
+        const organizationComments = (text.match(/\/\/ MARK:|enum \w+Config|final class \w+Manager/g) || []).length;
+        if (organizationComments > 2) {
+          score += 2;
+          clues.push(`🗂️ Over-organized code structure (${organizationComments} instances)`);
+        }
+        
+        // AI's favorite Swift patterns
+        if (text.includes("@StateObject") && text.includes("@ObservedObject")) {
+          score += 2;
+          clues.push("📱 SwiftUI state management pattern combo");
+        }
+        
+        if (text.includes("static let") && text.includes("static func")) {
+          score += 1;
+          clues.push("⚡ Heavy static usage (AI prefers static)");
+        }
+        
+        // Enum with static values (AI loves this pattern)
+        if (text.includes("enum") && text.includes("static let")) {
+          score += 2;
+          clues.push("🔧 Enum + static configuration pattern");
+        }
+        
+        // AI Resume/Professional Document Patterns
+        
+        // AI's favorite resume buzzwords
+        const resumeBuzzwords = (text.match(/dedicated|passionate|expert|proficient|exceptional|comprehensive|seamless|spearheading|cross-functional|innovative|strategic|optimize|streamline|enhance|leverage|align|foster|extensive|proactive|continuous/gi) || []).length;
+        if (resumeBuzzwords > 8) {
+          score += 3;
+          clues.push(`💼 AI resume buzzword overload (${resumeBuzzwords} instances)`);
+        }
+        
+        // AI bullet point patterns
+        const bulletStartPatterns = (text.match(/^[\s]*•[\s]*(Recognized|Skilled|Proactive|Creator|Experienced|Responsible|Leading|Providing|Developing|Ensuring)/gm) || []).length;
+        if (bulletStartPatterns > 3) {
+          score += 2;
+          clues.push(`📝 AI bullet point formula (${bulletStartPatterns} formulaic starts)`);
+        }
+        
+        // AI's favorite professional phrases
+        const aiProfessionalPhrases = (text.match(/passion for|aligning.*with|business needs|cross-functional teams|seamless.*integrations?|continuous improvement|staying up-to-date|emerging technologies|process improvement|expert-level guidance|comprehensive training/gi) || []).length;
+        if (aiProfessionalPhrases > 4) {
+          score += 3;
+          clues.push(`🤖 AI professional phrase patterns (${aiProfessionalPhrases} instances)`);
+        }
+        
+        // AI resume structure patterns
+        if (text.includes("SUMMARY") && text.includes("EXPERIENCE") && text.includes("EDUCATION")) {
+          score += 1;
+          clues.push("📋 Standard AI resume structure");
+        }
+        
+        // AI loves these specific combinations
+        if (text.includes("troubleshooting") && text.includes("performance tuning")) {
+          score += 2;
+          clues.push("🔧 AI's favorite IT skill combo");
+        }
+        
+        // AI redundancy patterns
+        const redundantSkills = text.includes("Siebel") && (text.match(/Siebel/g) || []).length > 8;
+        if (redundantSkills) {
+          score += 2;
+          clues.push("🔄 Excessive keyword repetition (SEO stuffing)");
+        }
+        
+        // AI's formal language overuse
+        const formalLanguage = (text.match(/\b(utilizing|facilitating|implementing|administering|coordinating|collaborating|architecting|spearheading)\b/gi) || []).length;
+        if (formalLanguage > 5) {
+          score += 2;
+          clues.push(`🎩 Overly formal business language (${formalLanguage} instances)`);
+        }
+        
+        // AI loves present participle overuse
+        const ingWords = (text.match(/\b\w+ing\b/g) || []).length;
+        if (ingWords > 15) {
+          score += 1;
+          clues.push(`⚡ Excessive -ing words (${ingWords} instances)`);
+        }
+        
+        // AI's date format preference
+        if (text.includes("–") && text.includes("Current")) {
+          score += 1;
+          clues.push("📅 AI date formatting pattern");
+        }
+        
+        // Generic variable names (AI favorites)
+        const genericVars = (text.match(/\b(width|height|size|radius|position|velocity|speed|count|rate|factor)\b/g) || []).length;
+        if (genericVars > 10) {
+          score += 2;
+          clues.push(`🏷️ Generic variable names (${genericVars} instances)`);
+        }
+        
+        // Mathematical precision (AI loves exact values)
+        const preciseNumbers = (text.match(/0\.\d{2,}/g) || []).length;
+        if (preciseNumbers > 5) {
+          score += 1;
+          clues.push(`🔢 Precise decimal values (${preciseNumbers} instances)`);
+        }
+        
+        // AI's favorite guard statements
+        const guardStatements = (text.match(/guard.*else.*return/g) || []).length;
+        if (guardStatements > 2) {
+          score += 1;
+          clues.push(`🛡️ Multiple guard statements (${guardStatements} instances)`);
+        }
+        
+        // Computed properties (AI overuses these)
+        const computedProps = (text.match(/var \w+: \w+ \{[^}]*\}/g) || []).length;
+        if (computedProps > 3) {
+          score += 1;
+          clues.push(`💻 Multiple computed properties (${computedProps} instances)`);
+        }
+        
+        // AI's color patterns
+        if (text.includes("Color(red:") || text.includes("Color(hue:")) {
+          score += 1;
+          clues.push("🎨 Programmatic color generation");
+        }
+        
+        // Canvas usage (AI loves Canvas for games)
+        if (text.includes("Canvas {") && text.includes("ctx.fill")) {
+          score += 2;
+          clues.push("🖼️ SwiftUI Canvas usage (AI game pattern)");
+        }
+        
+        // AI's timer pattern
+        if (text.includes("Timer.publish") && text.includes("autoconnect")) {
+          score += 2;
+          clues.push("⏰ AI's favorite timer pattern");
+        }
+        
+        // Perfect spacing/alignment obsession
+        if (text.includes("Spacer()") && text.includes(".padding(")) {
+          score += 1;
+          clues.push("📐 Spacing/padding perfectionism");
+        }
+        
+        // Previous simple checks
+        if (text.includes("gradient")) {
+          score += 1;
+          clues.push("🌈 Contains gradient styling");
+        }
+        
+        if (text.includes("button")) {
+          score += 1;
+          clues.push("🔘 Contains button elements");
+        }
+        
+        // Test emoji detection
+        if (text.includes("🚫")) {
+          score += 2;
+          clues.push("🚫 Contains prohibited emoji (AI pattern)");
+        }
+        
+        if (text.includes("✅")) {
+          score += 2;
+          clues.push("✅ Contains check mark emoji (AI pattern)");
+        }
+        
+        // Simple phrase detection
+        if (text.toLowerCase().includes("daily uses")) {
+          score += 2;
+          clues.push("📅 Contains 'daily uses' phrase (AI limit language)");
+        }
+        
+        if (text.toLowerCase().includes("come back tomorrow")) {
+          score += 2;
+          clues.push("⏰ Contains 'come back tomorrow' (AI scheduling language)");
+        }
+        
+        // File organization patterns
+        const structCount = (text.match(/struct \w+:/g) || []).length;
+        const classCount = (text.match(/final class \w+:/g) || []).length;
+        const enumCount = (text.match(/enum \w+/g) || []).length;
+        
+        if (structCount + classCount + enumCount > 8) {
+          score += 2;
+          clues.push(`🏗️ Over-structured code (${structCount + classCount + enumCount} types)`);
+        }
+        
+        // AI loves extension organization
+        if (text.includes("extension") && markComments > 0) {
+          score += 1;
+          clues.push("📂 Extension + MARK organization");
+        }
+        
+        console.log(`Debug: Score=${score}, Clues=${clues.length}`);
+        
+      } catch (error) {
+        console.error("Error in detectAIStyle:", error);
+        clues.push(`❌ Error: ${error.message}`);
       }
-      if (/\bbox-sizing: border-box\b/i.test(text)) {
-        score += 1;
-        clues.push("📦 Includes CSS reset (box-sizing: border-box)");
-      }
-      if (/font-family: 'Segoe UI'|Verdana/i.test(text)) {
-        score += 1;
-        clues.push("🖋️ Uses AI-preferred modern font stack");
-      }
-      if (/@keyframes fadeIn/i.test(text)) {
-        score += 2;
-        clues.push("🎞️ Uses fadeIn animation (AI signature)");
-      }
-      if (/button|tagline|fade-in|content-text/i.test(text)) {
-        score += 1;
-        clues.push("🧠 Semantic class names (button, tagline, etc.)");
-      }
+      
       return {
         score,
         clues,
-        verdict: score >= 4 ? "🤖 Likely AI-generated (OpenAI or Claude style)" : score >= 2 ? "🤔 Possibly AI-assisted" : "🧑‍💻 Likely human-written"
+        verdict: score >= 10 ? "🤖 Extremely likely AI-generated" : score >= 6 ? "🤖 Highly likely AI-generated" : score >= 4 ? "🤔 Probably AI-assisted" : score >= 2 ? "🧑‍🤖 Possibly AI-influenced" : "🧑‍💻 Likely human-written"
       };
     }
 
     function runDetection() {
-      const code = "letmein42"; // Hardcoded override
+      const input = document.getElementById("input").value;
+      const codeInput = document.getElementById("code").value.trim();
       const today = new Date().toISOString().split("T")[0];
       const key = `usage-${today}`;
       let count = parseInt(localStorage.getItem(key) || "0");
+      
+      // Obfuscated secret codes (base64 encoded)
+      const secretCodes = {
+        'bGV0bWVpbjQy': { name: 'Admin', limit: 999 }, // letmein42 - unlimited
+        'R2FpbDE=': { name: 'Gail', limit: 5 },        // Gail1 - 5 uses
+        'QW5kcmV3MQ==': { name: 'Andrew', limit: 5 }   // Andrew1 - 5 uses
+      };
+      
+      // Check if code matches any secret
+      const encodedInput = btoa(codeInput);
+      const userInfo = secretCodes[encodedInput];
+      const isSpecialUser = !!userInfo;
 
-      if (count >= 2 && document.getElementById("code")?.value?.trim() !== code) {
-        alert("🚫 You've hit your 2 daily uses. Come back tomorrow or enter a secret code.");
+      // Update usage counter display
+      updateUsageDisplay();
+
+      // Don't run if no input
+      if (!input.trim()) {
+        alert("⚠️ Please enter some text to analyze!");
         return;
       }
 
-      localStorage.setItem(key, count + 1);
+      // Determine usage limit based on user
+      let usageLimit = 3; // Default for regular users
+      if (isSpecialUser) {
+        usageLimit = userInfo.limit;
+        
+        // Show personalized greeting for secret codes
+        if (codeInput) {
+          if (userInfo.name === 'Admin') {
+            alert("🔓 Admin access granted! Unlimited usage activated.");
+          } else {
+            alert(`👋 Hello ${userInfo.name}! Welcome back. You have ${userInfo.limit} daily uses.`);
+          }
+        }
+      }
 
-      const input = document.getElementById("input").value;
+      // Check limit based on user type
+      if (count >= usageLimit) {
+        if (isSpecialUser && userInfo.name !== 'Admin') {
+          alert(`🚫 You've hit your ${usageLimit} daily uses. Come back tomorrow!`);
+        } else if (!isSpecialUser) {
+          alert("🚫 You've hit your 3 daily uses. Come back tomorrow or enter a secret code.");
+        }
+        return;
+      }
+
+      // Increment counter for all users (except admin with unlimited)
+      if (!isSpecialUser || userInfo.name !== 'Admin') {
+        localStorage.setItem(key, count + 1);
+        updateUsageDisplay();
+      }
+
       const unicodeResults = detectInvisibleUnicode(input);
-      document.getElementById("results").innerText = unicodeResults.join("
-");
+      document.getElementById("results").innerText = unicodeResults.join("\n");
 
-      const aiCheck = detectAIStyle(input);
-      document.getElementById("aiResults").innerText = `${aiCheck.verdict}
-
-Details:
-${aiCheck.clues.join("
-")}`;
-    }\n\nDetails:\n${aiCheck.clues.join("\n")}`;
+      try {
+        const aiCheck = detectAIStyle(input);
+        console.log("AI Check result:", aiCheck);
+        document.getElementById("aiResults").innerText = `${aiCheck.verdict}\n\nDetails:\n${aiCheck.clues.join("\n")}`;
+      } catch (error) {
+        console.error("Error in detectAIStyle:", error);
+        document.getElementById("aiResults").innerText = `❌ Error in AI detection: ${error.message}`;
+      }
     }
+
+    async function updateUsageDisplay() {
+      const count = await getIPUsage();
+      const remaining = Math.max(0, 3 - count);
+      document.getElementById("remainingUses").innerText = remaining;
+      console.log(`Debug: IP=${userIP}, Count=${count}, Remaining=${remaining}`);
+    }
+
+    // Initialize everything when page loads
+    document.addEventListener('DOMContentLoaded', getUserInfo);
   </script>
 </body>
 </html>
