@@ -123,7 +123,7 @@
 
       try {
         // Google Sheets Web App URL - you'll need to deploy this as a web app
-        const webAppUrl = 'https://script.google.com/macros/s/YOUR_WEB_APP_ID/exec';
+        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxx3HQo-ygHKgZkt-9bztCjJWrxC299Q_19CCUNi72Iaqe_hYyCWonAN6RhItjB9lSa/exec';
         
         const response = await fetch(`${webAppUrl}?action=get&ip=${encodeURIComponent(userIP)}&date=${new Date().toISOString().split("T")[0]}`, {
           method: 'GET'
