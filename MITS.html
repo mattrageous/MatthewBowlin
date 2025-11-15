@@ -515,25 +515,6 @@
       margin-bottom: 1rem;
     }
 
-    .linkedin-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #0077b5;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .linkedin-link:hover {
-      background: #005885;
-      transform: translateY(-1px);
-    }
-
     /* Results Summary */
     .results-summary {
       text-align: center;
@@ -860,8 +841,7 @@
       "id": 1,
       "question": "Question text here",
       "options": ["Option A", "Option B", "Option C", "Option D"],
-      "answer": "Option B",
-      "linkedin_link": "https://www.linkedin.com/learning/course-link"
+      "answer": "Option B"
     }
   ]
 }</pre>
@@ -901,9 +881,6 @@
       <div class="explanation" id="explanation">
         <h4 class="explanation-title">💡 Explanation</h4>
         <p class="explanation-text" id="explanationText"></p>
-        <a href="#" class="linkedin-link" id="linkedinLink" target="_blank">
-          📘 Learn More on LinkedIn Learning
-        </a>
       </div>
     </div>
 
@@ -974,8 +951,7 @@ const fallbackQuestions = [
     question: "Which phase of the SDLC identifies the scope and objectives of a project?",
     options: ["Design", "Planning", "Implementation", "Maintenance"],
     answer: "Planning",
-    correct: 1,
-    linkedin_link: "https://www.linkedin.com/learning/learning-sdlc"
+    correct: 1
   }
 ];
 
@@ -997,7 +973,6 @@ let prevBtn;
 let nextBtn;
 let explanation;
 let explanationText;
-let linkedinLink;
 let resultsSummary;
 let quizContainer;
 
@@ -1019,7 +994,6 @@ function rebindQuizElements() {
   nextBtn = document.getElementById("nextBtn");
   explanation = document.getElementById("explanation");
   explanationText = document.getElementById("explanationText");
-  linkedinLink = document.getElementById("linkedinLink");
   resultsSummary = document.getElementById("resultsSummary");
   quizContainer = document.getElementById("quizContainer");
 }
@@ -1090,8 +1064,7 @@ function parseJSONToQuestions(jsonData, partName) {
       options: q.options,
       correct: correctIndex >= 0 ? correctIndex : 0,
       answer: q.answer,
-      explanation: q.explanation || `The correct answer is "${q.answer}".`,
-      linkedinUrl: q.linkedin_link || "https://www.linkedin.com/learning"
+      explanation: q.explanation || `The correct answer is "${q.answer}".`
     };
   });
 }
@@ -1278,7 +1251,6 @@ function initializeQuiz() {
       
       // Show explanation
       explanationText.textContent = question.explanation;
-      linkedinLink.href = question.linkedinUrl;
       explanation.classList.add('show');
       submitBtn.style.display = 'none';
       
