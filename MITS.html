@@ -1094,6 +1094,34 @@ function parseJSONToQuestions(jsonData, partName) {
   // Reset
   document.getElementById('resetBtn').addEventListener('click', resetQuiz);
 }
+function updatePartStats() {
+  const statsContainer = document.getElementById("partStatistics");
+  if (!statsContainer) return;
+
+  // Clear previous content
+  statsContainer.innerHTML = "";
+
+  // If no questions loaded yet, do nothing
+  if (!questionsDB || questionsDB.length === 0) return;
+
+  // Count questions by part
+  const counts = {};
+  questionsDB.forEach(q => {
+    if (!counts[q.part]) counts[q.part] = 0;
+    counts[q.part]++;
+  });
+
+  // Render stats
+  Object.entries(counts).forEach(([part, count]) => {
+    const div = document.createElement("div");
+    div.className = "stat-item";
+    div.innerHTML = `
+      <span class="stat-value">${count}</span>
+      <span class="stat-label">${part.toUpperCase()}</span>
+    `;
+    statsContainer.appendChild(div);
+  });
+}
 
 
 /* --------------------------------------------- */
