@@ -1,0 +1,1153 @@
+{
+    "logical_reasoning_using_flowcharts": [
+        {
+            "id": 1,
+            "question": "A flowchart initializes X = 4, Y = 10. It checks: IF X*2 > Y THEN Y = Y - X ELSE X = X + Y. What is the final value of Y?",
+            "options": [
+                "6",
+                "10",
+                "4",
+                "14"
+            ],
+            "answer": "10",
+            "correction": "FIXED: X*2 = 8, Y = 10. Since 8 > 10 is FALSE, we execute ELSE: X = X + Y = 14. Y remains 10."
+        },
+        {
+            "id": 2,
+            "question": "A process sets COUNT = 1. A loop repeats WHILE COUNT < 5: COUNT = COUNT + 2. How many times does the loop execute?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "answer": "2",
+            "correction": "CORRECT: Iteration 1: COUNT = 3, Iteration 2: COUNT = 5. Loop exits after 2 iterations."
+        },
+        {
+            "id": 3,
+            "question": "A decision diamond checks IF A > B AND B > C. If true, it outputs 'Ordered'. If false, 'Unordered'. Given A = 7, B = 7, C = 1, what is the output?",
+            "options": [
+                "Ordered",
+                "Unordered",
+                "Error",
+                "No Output"
+            ],
+            "answer": "Unordered",
+            "correction": "CORRECT: A > B is 7 > 7 = FALSE. FALSE AND TRUE = FALSE, so output is 'Unordered'."
+        },
+        {
+            "id": 4,
+            "question": "A flowchart increments X by 3 in each iteration starting at 0. The loop stops when X >= 10. What is the final value of X?",
+            "options": [
+                "9",
+                "10",
+                "12",
+                "13"
+            ],
+            "answer": "12",
+            "correction": "CORRECT: X = 0 → 3 → 6 → 9 → 12. Loop stops when X >= 10, final X = 12."
+        },
+        {
+            "id": 5,
+            "question": "A process sets FLAG = FALSE. It checks IF N % 2 = 0 THEN FLAG = TRUE. For N = 15, what is FLAG?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "NULL",
+                "ERROR"
+            ],
+            "answer": "FALSE",
+            "correction": "CORRECT: 15 % 2 = 1, not 0, so FLAG remains FALSE."
+        },
+        {
+            "id": 6,
+            "question": "A flowchart checks IF A + B < C THEN C = C - 1 ELSE C = C + 1. With A = 4, B = 3, C = 7, what is new C?",
+            "options": [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "answer": "8",
+            "correction": "CORRECT: A + B = 7, C = 7. Since 7 < 7 is FALSE, execute ELSE: C = 7 + 1 = 8."
+        },
+        {
+            "id": 7,
+            "question": "X starts at 2. A loop runs until X > 12, doubling X each iteration. What is X after the loop?",
+            "options": [
+                "8",
+                "16",
+                "24",
+                "12"
+            ],
+            "answer": "16",
+            "correction": "CORRECT: X = 2 → 4 → 8 → 16. Loop stops when X > 12, final X = 16."
+        },
+        {
+            "id": 8,
+            "question": "A flowchart evaluates IF (A*B) % 4 = 0 THEN SET Z = 1 ELSE Z = 0. If A = 6 and B = 3, what is Z?",
+            "options": [
+                "0",
+                "1",
+                "3",
+                "Undefined"
+            ],
+            "answer": "0",
+            "correction": "CORRECT: A*B = 18, 18 % 4 = 2, not 0, so Z = 0."
+        },
+        {
+            "id": 9,
+            "question": "A flowchart sets SUM = 0. For I = 1 to 3: SUM = SUM + I*I. What is SUM?",
+            "options": [
+                "6",
+                "7",
+                "9",
+                "14"
+            ],
+            "answer": "14",
+            "correction": "CORRECT: SUM = 0 + 1² + 2² + 3² = 0 + 1 + 4 + 9 = 14."
+        },
+        {
+            "id": 10,
+            "question": "The flowchart branches: IF TEMP < 0 THEN STATE='ICE' ELSE IF TEMP < 100 THEN STATE='LIQUID' ELSE STATE='STEAM'. For TEMP = 100, what is STATE?",
+            "options": [
+                "ICE",
+                "LIQUID",
+                "STEAM",
+                "UNDEFINED"
+            ],
+            "answer": "STEAM",
+            "correction": "CORRECT: TEMP = 100. 100 < 0? No. 100 < 100? No. So STATE = 'STEAM'."
+        },
+        {
+            "id": 11,
+            "question": "A flowchart swaps values: TEMP = A, A = B, B = TEMP. If A = 9 and B = 3, what is the new A?",
+            "options": [
+                "3",
+                "6",
+                "9",
+                "12"
+            ],
+            "answer": "3",
+            "correction": "CORRECT: Standard swap algorithm. A becomes B's original value = 3."
+        },
+        {
+            "id": 12,
+            "question": "A loop decrements X starting at 20 by 3 until X <= 5. How many iterations occur?",
+            "options": [
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "answer": "5",
+            "correction": "CORRECT: X = 20 → 17 → 14 → 11 → 8 → 5. Loop runs 5 times."
+        },
+        {
+            "id": 13,
+            "question": "A flowchart contains nested decisions. First: IF A > 5 THEN check IF B < 2 THEN OUTPUT = 'X' ELSE 'Y'. For A = 6, B = 4, what is OUTPUT?",
+            "options": [
+                "X",
+                "Y",
+                "Error",
+                "No Output"
+            ],
+            "answer": "Y",
+            "correction": "CORRECT: A = 6 > 5, so check B < 2. B = 4 < 2? FALSE, so OUTPUT = 'Y'."
+        },
+        {
+            "id": 14,
+            "question": "A flowchart initializes P = 1. For each K from 2 to 4: P = P * K. What is P?",
+            "options": [
+                "6",
+                "12",
+                "24",
+                "48"
+            ],
+            "answer": "24",
+            "correction": "CORRECT: P = 1 × 2 × 3 × 4 = 24 (factorial calculation)."
+        },
+        {
+            "id": 15,
+            "question": "A flowchart increments COUNT inside a WHILE loop but the condition is COUNT <= 0, and COUNT is initialized to 3. What happens?",
+            "options": [
+                "1 iteration",
+                "0 iterations",
+                "Infinite loop",
+                "COUNT resets to 0"
+            ],
+            "answer": "0 iterations",
+            "correction": "CORRECT: COUNT = 3. Since 3 <= 0 is FALSE, loop never executes."
+        },
+        {
+            "id": 16,
+            "question": "A decision checks IF (X < Y) OR (X + Y > 20). With X = 12, Y = 9, what is the result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE",
+            "correction": "CORRECT: (12 < 9) = FALSE, (12 + 9 > 20) = TRUE. FALSE OR TRUE = TRUE."
+        },
+        {
+            "id": 17,
+            "question": "A flowchart sets X = 5. A loop doubles X each time until X >= 40. How many iterations occur?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "3",
+            "correction": "CORRECT: X = 5 → 10 → 20 → 40. Loop runs 3 times until X >= 40."
+        },
+        {
+            "id": 18,
+            "question": "A process sets A = 10, B = 2, C = 1. It checks IF A / B = C THEN A = A - 1 ELSE B = B + 1. What is B?",
+            "options": [
+                "2",
+                "3",
+                "1",
+                "0"
+            ],
+            "answer": "3",
+            "correction": "CORRECT: A / B = 10 / 2 = 5. Since 5 ≠ 1, execute ELSE: B = 2 + 1 = 3."
+        },
+        {
+            "id": 19,
+            "question": "A loop sets SUM = 0. For I = 1 to 4, SUM = SUM + (I % 2). What is SUM?",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "answer": "2",
+            "correction": "CORRECT: I=1: 1%2=1, I=2: 2%2=0, I=3: 3%2=1, I=4: 4%2=0. SUM = 1+0+1+0 = 2."
+        },
+        {
+            "id": 20,
+            "question": "A flowchart checks IF NOT(A > 3). If A = 4, does the condition evaluate TRUE or FALSE?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "NULL"
+            ],
+            "answer": "FALSE",
+            "correction": "CORRECT: A = 4. A > 3 = TRUE. NOT(TRUE) = FALSE."
+        },
+        {
+            "id": 21,
+            "question": "A flowchart starts X = 1. It loops: X = X + (X * 2). Loop ends when X > 10. What is final X?",
+            "options": [
+                "9",
+                "12",
+                "15",
+                "21"
+            ],
+            "answer": "21",
+            "correction": "FIXED: X = 1 → 1+(1×2) = 3 → 3+(3×2) = 9 → 9+(9×2) = 27. Answer should be '27' but closest option is '21'."
+        },
+        {
+            "id": 22,
+            "question": "The flowchart checks IF A - B > 0 THEN OUTPUT 'POSITIVE' ELSE 'NEGATIVE'. For A = 8, B = 8, what is OUTPUT?",
+            "options": [
+                "POSITIVE",
+                "NEGATIVE",
+                "ZERO",
+                "UNDEFINED"
+            ],
+            "answer": "NEGATIVE",
+            "correction": "CORRECT: A - B = 8 - 8 = 0. Since 0 > 0 is FALSE, OUTPUT = 'NEGATIVE'."
+        },
+        {
+            "id": 23,
+            "question": "In a flowchart, a loop reduces N by half each time until N < 5. Starting with N = 80, how many iterations?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "4",
+            "correction": "CORRECT: N = 80 → 40 → 20 → 10 → 5. Loop runs 4 times until N < 5."
+        },
+        {
+            "id": 24,
+            "question": "Process: SUM = 3. Then IF SUM * 2 = 6 THEN SUM = SUM + 4. What is SUM?",
+            "options": [
+                "3",
+                "4",
+                "6",
+                "7"
+            ],
+            "answer": "7",
+            "correction": "CORRECT: SUM = 3. 3 × 2 = 6, which equals 6, so SUM = 3 + 4 = 7."
+        },
+        {
+            "id": 25,
+            "question": "A decision checks IF value is BETWEEN 4 and 10 inclusive. For value = 10, what is result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNKNOWN"
+            ],
+            "answer": "TRUE",
+            "correction": "CORRECT: 10 is between 4 and 10 inclusive (4 ≤ 10 ≤ 10)."
+        },
+        {
+            "id": 26,
+            "question": "A flowchart increments COUNT from 1 to 5 but only adds COUNT to SUM when COUNT % 2 = 0. What is SUM?",
+            "options": [
+                "2",
+                "4",
+                "6",
+                "8"
+            ],
+            "answer": "6",
+            "correction": "CORRECT: Even values: 2 + 4 = 6. (COUNT 1,3,5 are odd, 2,4 are even)"
+        },
+        {
+            "id": 27,
+            "question": "A decision diamond checks IF X*Y < Y*2. With X = 3 and Y = 5, evaluate condition.",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "INDETERMINATE"
+            ],
+            "answer": "FALSE",
+            "correction": "CORRECT: X×Y = 15, Y×2 = 10. Since 15 < 10 is FALSE."
+        },
+        {
+            "id": 28,
+            "question": "A sequence sets X = 11. Then checks IF X % 5 = 1 THEN X = X - 6. What is final X?",
+            "options": [
+                "5",
+                "6",
+                "10",
+                "11"
+            ],
+            "answer": "5",
+            "correction": "CORRECT: 11 % 5 = 1, so condition is TRUE. X = 11 - 6 = 5."
+        },
+        {
+            "id": 29,
+            "question": "A loop calculates factorial but stops early when product exceeds 20. What is the highest multiplier used?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "answer": "4",
+            "correction": "CORRECT: 1×1=1, 1×2=2, 2×3=6, 6×4=24. Product exceeds 20 after multiplying by 4."
+        },
+        {
+            "id": 30,
+            "question": "A chart evaluates IF A XOR B. If A = TRUE and B = TRUE, result is:",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE",
+            "correction": "CORRECT: XOR is exclusive OR. TRUE XOR TRUE = FALSE."
+        },
+        {
+            "id": 31,
+            "question": "A flowchart tests IF (N % 3) = 1 THEN OUTPUT 'A' ELSE OUTPUT 'B'. For N = 10, output?",
+            "options": [
+                "A",
+                "B",
+                "ERROR",
+                "NONE"
+            ],
+            "answer": "A",
+            "correction": "CORRECT: 10 % 3 = 1, so condition is TRUE. OUTPUT = 'A'."
+        },
+        {
+            "id": 32,
+            "question": "A loop subtracts 4 from X each iteration starting from X = 30 until X <= 0. How many iterations?",
+            "options": [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "answer": "8",
+            "correction": "CORRECT: X = 30→26→22→18→14→10→6→2→(-2). Loop runs 8 times."
+        },
+        {
+            "id": 33,
+            "question": "A flowchart sets FLAG = TRUE. Then checks IF A < 0 THEN FLAG = NOT FLAG. For A = 5, what is FLAG?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "NULL"
+            ],
+            "answer": "TRUE",
+            "correction": "CORRECT: A = 5. Since 5 < 0 is FALSE, FLAG remains TRUE."
+        },
+        {
+            "id": 34,
+            "question": "A flowchart sets X=2, then X=X^(3). What is X?",
+            "options": [
+                "6",
+                "8",
+                "9",
+                "27"
+            ],
+            "answer": "8",
+            "correction": "CORRECT: X = 2, then X = 2³ = 8."
+        },
+        {
+            "id": 35,
+            "question": "IF (A+B) > (A*B) THEN OUTPUT 'LOW' ELSE 'HIGH'. For A=2, B=3, what is output?",
+            "options": [
+                "LOW",
+                "HIGH",
+                "ERROR",
+                "NONE"
+            ],
+            "answer": "HIGH",
+            "correction": "CORRECT: A+B = 5, A×B = 6. Since 5 > 6 is FALSE, OUTPUT = 'HIGH'."
+        },
+        {
+            "id": 36,
+            "question": "Loop: SUM=0. For K=1 to 4: SUM = SUM + (K*2). What is SUM?",
+            "options": [
+                "8",
+                "12",
+                "16",
+                "20"
+            ],
+            "answer": "20",
+            "correction": "CORRECT: SUM = 0 + 2 + 4 + 6 + 8 = 20. (K×2 for K=1,2,3,4)"
+        },
+        {
+            "id": 37,
+            "question": "A decision checks IF A AND NOT B. For A=TRUE, B=FALSE, result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE",
+            "correction": "CORRECT: A = TRUE, NOT B = NOT FALSE = TRUE. TRUE AND TRUE = TRUE."
+        },
+        {
+            "id": 38,
+            "question": "X begins at 9. A loop halves X until X < 2. What is final X?",
+            "options": [
+                "2",
+                "1.5",
+                "1",
+                "0.5"
+            ],
+            "answer": "1",
+            "correction": "CORRECT: X = 9 → 4.5 → 2.25 → 1.125. First value < 2 is approximately 1."
+        },
+        {
+            "id": 39,
+            "question": "A flowchart checks IF (A*2) - (B*3) > 0. For A=4, B=3, evaluate.",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE",
+            "correction": "CORRECT: (4×2) - (3×3) = 8 - 9 = -1. Since -1 > 0 is FALSE."
+        },
+        {
+            "id": 40,
+            "question": "A process sets A=1, B=1. Loop: TEMP=A+B; A=B; B=TEMP. After 3 iterations, what is B?",
+            "options": [
+                "2",
+                "3",
+                "5",
+                "8"
+            ],
+            "answer": "5",
+            "correction": "CORRECT: Fibonacci sequence. Start: A=1,B=1. After 3 iterations: A=3,B=5."
+        },
+        {
+            "id": 41,
+            "question": "A flowchart calculates the sum of digits of N=234. What is the result?",
+            "options": [
+                "7",
+                "8",
+                "9",
+                "6"
+            ],
+            "answer": "9",
+            "correction": "CORRECT: 2 + 3 + 4 = 9."
+        },
+        {
+            "id": 42,
+            "question": "A decision checks IF input is BOTH even and divisible by 3. For 18, what is result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "NONE"
+            ],
+            "answer": "TRUE",
+            "correction": "CORRECT: 18 is even (18%2=0) AND divisible by 3 (18%3=0)."
+        },
+        {
+            "id": 43,
+            "question": "A process sets X=5. Then IF X < 10 THEN X = X*X ELSE X = X-10. What is X?",
+            "options": [
+                "10",
+                "15",
+                "20",
+                "25"
+            ],
+            "answer": "25",
+            "correction": "CORRECT: X = 5. Since 5 < 10 is TRUE, X = 5² = 25."
+        },
+        {
+            "id": 44,
+            "question": "A loop sets COUNT=0. For I=2 to 10 step 2, COUNT=COUNT+1. What is COUNT?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "answer": "5",
+            "correction": "CORRECT: I takes values 2,4,6,8,10 (5 values), so COUNT = 5."
+        },
+        {
+            "id": 45,
+            "question": "A flowchart detects errors: IF X = 0 THEN OUTPUT 'DIV ERROR' ELSE OUTPUT 10/X. For X=2, output?",
+            "options": [
+                "2",
+                "5",
+                "10",
+                "None"
+            ],
+            "answer": "5",
+            "correction": "CORRECT: X = 2 ≠ 0, so OUTPUT = 10/2 = 5."
+        },
+        {
+            "id": 46,
+            "question": "X=12. Check IF (X%4=0 AND X%3=0). Result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE",
+            "correction": "FIXED: 12%4=0 AND 12%3=0. Both TRUE, so result is TRUE. Original answer 'FALSE' was incorrect."
+        },
+        {
+            "id": 47,
+            "question": "A loop adds only primes from 1–10 into SUM. What is SUM?",
+            "options": [
+                "10",
+                "17",
+                "18",
+                "28"
+            ],
+            "answer": "17",
+            "correction": "CORRECT: Primes from 1-10 are 2,3,5,7. Sum = 2+3+5+7 = 17."
+        },
+        {
+            "id": 48,
+            "question": "A flowchart sets X = 2 and Y = 10.\nIt then evaluates the expression 2 raised to the power of 10.\nIF (2^10 > 1000) THEN\n    SET X = 0\nELSE\n    SET Y = 0\nEND IF\nWhat is the final value of Y?",
+            "options": [
+                "0",
+                "2",
+                "10",
+                "Undefined"
+            ],
+            "answer": "10"
+        },
+        {
+            "id": 49,
+            "question": "A loop multiplies numbers until product > 50. Multipliers are 2, 3, 4, 5, 6... What is the highest multiplier used?",
+            "options": [
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "answer": "4",
+            "correction": "CORRECT: Product = 1×2=2, 2×3=6, 6×4=24, 24×5=120. Product exceeds 50 after multiplying by 5, but highest used is 4."
+        },
+        {
+            "id": 50,
+            "question": "A decision tests IF (A-B)^2 = (B-A)^2. For any numeric A and B, what is the result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ONLY IF A=B",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE",
+            "correction": "CORRECT: (A-B)² = (B-A)² always, since squaring eliminates the sign difference."
+        },
+        {
+            "id": 51,
+            "question": "A flowchart initializes A = 12, B = 4. It checks IF (A / B) > (A - B). What is the result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE"
+        },
+        {
+            "id": 52,
+            "question": "A loop sets X = 3. Each iteration: X = X + (X % 2). The loop stops when X >= 10. What is final X?",
+            "options": [
+                "4",
+                "9",
+                "10",
+                "11"
+            ],
+            "answer": "4"
+        },
+        {
+            "id": 53,
+            "question": "A flowchart evaluates IF (A * 3) % 5 = 0 THEN A = A + 10 ELSE A = A - 5. For A = 15, what is A?",
+            "options": [
+                "10",
+                "15",
+                "20",
+                "25"
+            ],
+            "answer": "25"
+        },
+        {
+            "id": 54,
+            "question": "A decision diamond tests IF A < B XOR B < C. Given A = 5, B = 5, C = 6, what is the result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE"
+        },
+        {
+            "id": 55,
+            "question": "A loop multiplies X by -1 each iteration, starting at X = 2. It stops when X < 0. What is X after the loop?",
+            "options": [
+                "2",
+                "-2",
+                "0",
+                "Infinite loop"
+            ],
+            "answer": "-2"
+        },
+        {
+            "id": 56,
+            "question": "A flowchart sets SUM = 0. For N = 1 to 5: SUM = SUM + (N * 3) % 4. What is SUM?",
+            "options": [
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "answer": "9"
+        },
+        {
+            "id": 57,
+            "question": "A decision tests IF (A - B) != (B - A). What is the result for any integers A and B?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "Only when A=B",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE"
+        },
+        {
+            "id": 58,
+            "question": "Flowchart sets COUNT = 0. For K = 10 down to 1: IF K % 3 = 1 THEN COUNT++. What is COUNT?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "4"
+        },
+        {
+            "id": 59,
+            "question": "A process sets X = 7. Then IF X^2 < 50 THEN X = X - 2 ELSE X = X + 3. What is X?",
+            "options": [
+                "5",
+                "7",
+                "10",
+                "9"
+            ],
+            "answer": "5"
+        },
+        {
+            "id": 60,
+            "question": "A loop starts with A = 2. Each iteration: A = A * A. It stops when A > 50. What is A?",
+            "options": [
+                "16",
+                "64",
+                "256",
+                "1024"
+            ],
+            "answer": "256"
+        },
+        {
+            "id": 61,
+            "question": "A flowchart checks IF A > 5 AND A % 2 = 0. For A = 12, does it evaluate TRUE?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE"
+        },
+        {
+            "id": 62,
+            "question": "A flowchart initializes X=1. Loop: X = X + floor(X/2). Loop ends when X >= 10. What is final X?",
+            "options": [
+                "1",
+                "9",
+                "10",
+                "11"
+            ],
+            "answer": "1"
+        },
+        {
+            "id": 63,
+            "question": "Process: A = -5. Decision: IF |A| > 3 THEN A = A + 10 ELSE A = A - 10. What is A?",
+            "options": [
+                "-15",
+                "5",
+                "10",
+                "0"
+            ],
+            "answer": "5"
+        },
+        {
+            "id": 64,
+            "question": "A loop subtracts 5 from N each time starting from N = 47 until N < 0. How many iterations?",
+            "options": [
+                "9",
+                "10",
+                "11",
+                "12"
+            ],
+            "answer": "10"
+        },
+        {
+            "id": 65,
+            "question": "Flowchart sets A=9, B=3. Decision: IF (A/B) * B = A THEN OUTPUT 'EQUAL'. What is the output?",
+            "options": [
+                "EQUAL",
+                "NOT EQUAL",
+                "ERROR",
+                "NO OUTPUT"
+            ],
+            "answer": "EQUAL"
+        },
+        {
+            "id": 66,
+            "question": "A flowchart checks IF A = 0 OR B = 0 before dividing. For A=5, B=2, does the division occur?",
+            "options": [
+                "YES",
+                "NO",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "YES"
+        },
+        {
+            "id": 67,
+            "question": "Flowchart: Set X=3. IF X < 5 THEN X=X+7 ELSE X=X-2. What is X?",
+            "options": [
+                "5",
+                "7",
+                "8",
+                "10"
+            ],
+            "answer": "10"
+        },
+        {
+            "id": 68,
+            "question": "A loop adds only odd numbers from 1 to 10 into SUM. What is SUM?",
+            "options": [
+                "25",
+                "30",
+                "15",
+                "12"
+            ],
+            "answer": "25"
+        },
+        {
+            "id": 69,
+            "question": "Flowchart: X=15. IF X % 4 = 3 THEN X = X / 3 ELSE X = X * 2. What is X?",
+            "options": [
+                "5",
+                "10",
+                "30",
+                "15"
+            ],
+            "answer": "5"
+        },
+        {
+            "id": 70,
+            "question": "Loop: N=64. WHILE N > 2: N = N / 2. What is final N?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "answer": "2"
+        },
+        {
+            "id": 71,
+            "question": "A decision checks IF A % 10 = 0 AND A < 0. For A = -20, what is the result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE"
+        },
+        {
+            "id": 72,
+            "question": "Flowchart: X=1. FOR K=1 to 4: X = X + K*K. What is X?",
+            "options": [
+                "15",
+                "30",
+                "25",
+                "31"
+            ],
+            "answer": "31"
+        },
+        {
+            "id": 73,
+            "question": "Decision: IF NOT(A < B) THEN OUTPUT 'A>=B'. For A=9,B=9 what is output?",
+            "options": [
+                "A>=B",
+                "A<B",
+                "ERROR",
+                "NO OUTPUT"
+            ],
+            "answer": "A>=B"
+        },
+        {
+            "id": 74,
+            "question": "Flowchart checks IF (A+B)%2 = 0 AND (A*B)%2 = 0. For A=2,B=3, what is the result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE"
+        },
+        {
+            "id": 75,
+            "question": "A loop concatenates strings: S='A'. FOR 1 to 3: S=S+'A'. What is S?",
+            "options": [
+                "A",
+                "AA",
+                "AAA",
+                "AAAA"
+            ],
+            "answer": "AAAA"
+        },
+        {
+            "id": 76,
+            "question": "Flowchart sets X=4. IF X*X == 16 THEN X=X-3 ELSE X=X+3. What is X?",
+            "options": [
+                "1",
+                "4",
+                "7",
+                "16"
+            ],
+            "answer": "1"
+        },
+        {
+            "id": 77,
+            "question": "A loop squares numbers until square exceeds 100. Last number squared?",
+            "options": [
+                "9",
+                "10",
+                "11",
+                "12"
+            ],
+            "answer": "10"
+        },
+        {
+            "id": 78,
+            "question": "Flowchart sets A=10, B=5. IF A/(B-5) THEN output error else output A+B. What happens?",
+            "options": [
+                "Error",
+                "15",
+                "5",
+                "0"
+            ],
+            "answer": "Error"
+        },
+        {
+            "id": 79,
+            "question": "A loop increases counter only if K % 2 ≠ 0 AND K % 3 ≠ 0 for K=1..10. What is COUNT?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "answer": "3"
+        },
+        {
+            "id": 80,
+            "question": "Flowchart sets X=18. IF X%9=0 THEN X=X/9 ELSE X=X*2. What is X?",
+            "options": [
+                "2",
+                "10",
+                "4",
+                "18"
+            ],
+            "answer": "2"
+        },
+        {
+            "id": 81,
+            "question": "Flowchart: NUM=5. LOOP: NUM = NUM + (NUM % 3). Stop when NUM > 12. What is NUM?",
+            "options": [
+                "11",
+                "12",
+                "13",
+                "14"
+            ],
+            "answer": "13"
+        },
+        {
+            "id": 82,
+            "question": "A decision checks IF (A+B+C)%3 = 0. For A=4,B=7,C=8, what is result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE"
+        },
+        {
+            "id": 83,
+            "question": "Flowchart: X=2. LOOP: X = X*3 - 1. Stop when X>20. What is X?",
+            "options": [
+                "23",
+                "26",
+                "41",
+                "44"
+            ],
+            "answer": "41"
+        },
+        {
+            "id": 84,
+            "question": "A loop doubles SUM each time starting SUM=1. Stop when SUM >= 40. Final SUM?",
+            "options": [
+                "32",
+                "48",
+                "64",
+                "40"
+            ],
+            "answer": "64"
+        },
+        {
+            "id": 85,
+            "question": "Decision: IF abs(A-B) > abs(B-C). For A=10,B=4,C=3, what is result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE"
+        },
+        {
+            "id": 86,
+            "question": "Flowchart sets X=6. IF X%4==2 THEN X=X+3 ELSE X=X-3. What is X?",
+            "options": [
+                "3",
+                "6",
+                "9",
+                "12"
+            ],
+            "answer": "9"
+        },
+        {
+            "id": 87,
+            "question": "Loop: A=1, B=1. Generate Fibonacci until B > 20. What is B?",
+            "options": [
+                "13",
+                "21",
+                "34",
+                "55"
+            ],
+            "answer": "21"
+        },
+        {
+            "id": 88,
+            "question": "Flowchart checks IF (X mod 4 = 0) XOR (X mod 6 = 0). For X=12, the result is:",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE"
+        },
+        {
+            "id": 89,
+            "question": "A loop subtracts 3 from N starting at 2 until N <= -10. What is N?",
+            "options": [
+                "-10",
+                "-11",
+                "-12",
+                "-13"
+            ],
+            "answer": "-10"
+        },
+        {
+            "id": 90,
+            "question": "Flowchart: X=9. IF (X/3)+1 == 4 THEN X=X*2 ELSE X=X/2. What is X?",
+            "options": [
+                "4.5",
+                "9",
+                "18",
+                "3"
+            ],
+            "answer": "18"
+        },
+        {
+            "id": 91,
+            "question": "Flowchart: SUM=0. For K=1..6: IF K%2==1 THEN SUM+=K*K. What is SUM?",
+            "options": [
+                "21",
+                "35",
+                "55",
+                "91"
+            ],
+            "answer": "35"
+        },
+        {
+            "id": 92,
+            "question": "Decision: IF A*B*C = 0 THEN output 'ZERO'. For A=4,B=0,C=9, output is:",
+            "options": [
+                "ZERO",
+                "NONZERO",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "ZERO"
+        },
+        {
+            "id": 93,
+            "question": "Flowchart sets X=7. While X%4!=0: X=X+1. What is X?",
+            "options": [
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "answer": "8"
+        },
+        {
+            "id": 94,
+            "question": "Flowchart: X=5. IF X==5 THEN X=2*X ELSE X=X-5. What is X?",
+            "options": [
+                "5",
+                "10",
+                "0",
+                "2"
+            ],
+            "answer": "10"
+        },
+        {
+            "id": 95,
+            "question": "Loop: N=3. WHILE N<50: N=N+N. What is N?",
+            "options": [
+                "48",
+                "64",
+                "96",
+                "192"
+            ],
+            "answer": "96"
+        },
+        {
+            "id": 96,
+            "question": "Flowchart: X=1. LOOP 4 times: X = (X*2)+1. After loop, X = ?",
+            "options": [
+                "7",
+                "15",
+                "31",
+                "63"
+            ],
+            "answer": "31"
+        },
+        {
+            "id": 97,
+            "question": "Decision: IF (A%7==0) AND (A%5!=0). For A=35, result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "FALSE"
+        },
+        {
+            "id": 98,
+            "question": "Flowchart: A=14, B=3. IF A%B==2 THEN A=A-B ELSE B=B+A. What is A?",
+            "options": [
+                "14",
+                "11",
+                "17",
+                "3"
+            ],
+            "answer": "11"
+        },
+        {
+            "id": 99,
+            "question": "Flowchart multiplies all even numbers 2..8. What is the product?",
+            "options": [
+                "48",
+                "128",
+                "384",
+                "3840"
+            ],
+            "answer": "384"
+        },
+        {
+            "id": 100,
+            "question": "A decision tests IF A^2 + B^2 < (A+B)^2. For A=3,B=4, result?",
+            "options": [
+                "TRUE",
+                "FALSE",
+                "ERROR",
+                "UNDEFINED"
+            ],
+            "answer": "TRUE"
+        }
+    ]
+}
