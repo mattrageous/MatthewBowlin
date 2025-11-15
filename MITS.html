@@ -928,505 +928,239 @@
     </div>
   </div>
 
-  <script>
-    let originalQuizHTML = "";
-    // JSON Files Configuration
-    // Array of JSON file URLs for the 7 parts
-    const BASE_URL = "https://raw.githubusercontent.com/mattrageous/MatthewBowlin/main/";
+<script>
+/* --------------------------------------------- */
+/* 1. Store original quiz HTML                   */
+/* --------------------------------------------- */
+let originalQuizHTML = "";
 
-    const JSON_CONFIG = {
-      part1: BASE_URL + "part1.json",
-      part2: BASE_URL + "part2.json",
-      part3: BASE_URL + "part3.json",
-      part4: BASE_URL + "part4.json",
-      part5: BASE_URL + "part5.json",
-      part6: BASE_URL + "part6.json",
-      part7: BASE_URL + "part7.json"
-    };
-    
-    // Questions database - will be populated from JSON files
-    let questionsDB = [];
-    let allParts = {};
-    let currentExam = 'all'; // Default to all parts
-    
-    // Default fallback questions in case JSON files are unavailable
-    const fallbackQuestions = [
-      {
-        id: 1,
-        part: 'part1',
-        category: 'sdlc',
-        question: 'Which phase of the SDLC identifies the scope and objectives of a project?',
-        options: ['Design', 'Planning', 'Implementation', 'Maintenance'],
-        answer: 'Planning',
-        correct: 1,
-        linkedin_link: 'https://www.linkedin.com/learning/learning-sdlc'
-      }
-    ];
+/* --------------------------------------------- */
+/* 2. JSON Configuration                          */
+/* --------------------------------------------- */
+const BASE_URL = "https://raw.githubusercontent.com/mattrageous/MatthewBowlin/main/";
 
-    // Initialize quiz state
-    let currentQuestionIndex = 0;
-    let currentFilter = 'all';
-    let userAnswers = {};
-    let filteredQuestions = [];
-    let quizCompleted = false;
-    let isLoadingQuestions = false;
+const JSON_CONFIG = {
+  part1: BASE_URL + "part1.json",
+  part2: BASE_URL + "part2.json",
+  part3: BASE_URL + "part3.json",
+  part4: BASE_URL + "part4.json",
+  part5: BASE_URL + "part5.json",
+  part6: BASE_URL + "part6.json",
+  part7: BASE_URL + "part7.json"
+};
 
-    // Function to load questions from JSON files
-    async function loadQuestionsFromJSON() {
+/* --------------------------------------------- */
+/* 3. Quiz State                                 */
+/* --------------------------------------------- */
+let questionsDB = [];
+let allParts = {};
+let currentExam = "all";
+
+let currentQuestionIndex = 0;
+let currentFilter = "all";
+let userAnswers = {};
+let filteredQuestions = [];
+let quizCompleted = false;
+let isLoadingQuestions = false;
+
+/* --------------------------------------------- */
+/* 4. Fallback Questions                         */
+/* --------------------------------------------- */
+const fallbackQuestions = [
+  {
+    id: 1,
+    part: "part1",
+    category: "sdlc",
+    question: "Which phase of the SDLC identifies the scope and objectives of a project?",
+    options: ["Design", "Planning", "Implementation", "Maintenance"],
+    answer: "Planning",
+    correct: 1,
+    linkedin_link: "https://www.linkedin.com/learning/learning-sdlc"
+  }
+];
+
+/* --------------------------------------------- */
+/* 5. DOM element variables (declared only)      */
+/* (bound later via rebindQuizElements())        */
+/* --------------------------------------------- */
+let questionText;
+let optionsContainer;
+let questionNumber;
+let categoryTag;
+let currentQuestionSpan;
+let totalQuestionsSpan;
+let correctAnswersSpan;
+let scorePercentageSpan;
+let progressFill;
+let submitBtn;
+let prevBtn;
+let nextBtn;
+let explanation;
+let explanationText;
+let linkedinLink;
+let resultsSummary;
+let quizContainer;
+
+/* --------------------------------------------- */
+/* 6. Rebind DOM elements after restoring HTML   */
+/* --------------------------------------------- */
+function rebindQuizElements() {
+  questionText = document.getElementById("questionText");
+  optionsContainer = document.getElementById("optionsContainer");
+  questionNumber = document.getElementById("questionNumber");
+  categoryTag = document.getElementById("categoryTag");
+  currentQuestionSpan = document.getElementById("currentQuestion");
+  totalQuestionsSpan = document.getElementById("totalQuestions");
+  correctAnswersSpan = document.getElementById("correctAnswers");
+  scorePercentageSpan = document.getElementById("scorePercentage");
+  progressFill = document.getElementById("progressFill");
+  submitBtn = document.getElementById("submitBtn");
+  prevBtn = document.getElementById("prevBtn");
+  nextBtn = document.getElementById("nextBtn");
+  explanation = document.getElementById("explanation");
+  explanationText = document.getElementById("explanationText");
+  linkedinLink = document.getElementById("linkedinLink");
+  resultsSummary = document.getElementById("resultsSummary");
+  quizContainer = document.getElementById("quizContainer");
+}
+
+/* --------------------------------------------- */
+/* 7. JSON Loader                                */
+/* --------------------------------------------- */
+async function loadQuestionsFromJSON() {
+  try {
+    isLoadingQuestions = true;
+    showLoadingState();
+
+    const loadPromises = Object.entries(JSON_CONFIG).map(async ([partKey, url]) => {
       try {
-        isLoadingQuestions = true;
-        showLoadingState();
-        
-        // Load all available JSON files
-        const loadPromises = Object.entries(JSON_CONFIG).map(async ([partKey, url]) => {
-          try {
-            const response = await fetch(url);
-            if (response.ok) {
-              const data = await response.json();
-              return { part: partKey, data: data };
-            } else {
-              console.warn(`Failed to load ${partKey}: ${response.status}`);
-              return null;
-            }
-          } catch (error) {
-            console.warn(`Error loading ${partKey}:`, error);
-            return null;
-          }
-        });
-        
-        const results = await Promise.all(loadPromises);
-        
-        // Process loaded data
-        questionsDB = [];
-        results.forEach(result => {
-          if (result && result.data) {
-            const questions = parseJSONToQuestions(result.data, result.part);
-            questionsDB = questionsDB.concat(questions);
-            allParts[result.part] = questions;
-          }
-        });
-        
-        if (questionsDB.length > 0) {
-          console.log(`Loaded ${questionsDB.length} questions from JSON files`);
+        const response = await fetch(url);
+        if (response.ok) {
+          const data = await response.json();
+          return { part: partKey, data };
         } else {
-          throw new Error('No questions found in JSON files');
+          console.warn(`Failed to load ${partKey}: ${response.status}`);
+          return null;
         }
-        
-      } catch (error) {
-        console.warn('Failed to load from JSON files, using fallback questions:', error);
-        questionsDB = fallbackQuestions;
-        showOfflineNotice();
-      } finally {
-        isLoadingQuestions = false;
-        hideLoadingState();
-        initializeQuizAfterLoad();
+      } catch (e) {
+        console.warn(`Error loading ${partKey}:`, e);
+        return null;
       }
-    }
+    });
 
-    // Function to parse JSON data into questions format
-    function parseJSONToQuestions(jsonData, partName) {
-      const questions = [];
-      
-      // Handle the structure from your JSON format
-      const questionsArray = jsonData.systems_analysis_and_design_questions || jsonData.questions || jsonData;
-      
-      if (Array.isArray(questionsArray)) {
-        questionsArray.forEach((q, index) => {
-          // Find the correct answer index
-          let correctIndex = 0;
-          if (q.options && q.answer) {
-            correctIndex = q.options.findIndex(option => option === q.answer);
-            if (correctIndex === -1) correctIndex = 0;
-          }
-          
-          // Determine category from question content or use default
-          const category = determineCategory(q.question) || 'general';
-          
-          const question = {
-            id: q.id || (questions.length + 1),
-            part: partName,
-            category: category,
-            question: q.question || '',
-            options: q.options || [],
-            correct: correctIndex,
-            answer: q.answer || '',
-            explanation: q.explanation || generateExplanation(q.answer, q.question),
-            linkedinUrl: q.linkedin_link || 'https://www.linkedin.com/learning'
-          };
-          
-          if (question.question && question.options.length >= 2) {
-            questions.push(question);
-          }
-        });
+    const results = await Promise.all(loadPromises);
+    questionsDB = [];
+    allParts = {};
+
+    results.forEach(result => {
+      if (result && result.data) {
+        const parsed = parseJSONToQuestions(result.data, result.part);
+        allParts[result.part] = parsed;
+        questionsDB = questionsDB.concat(parsed);
       }
-      
-      return questions;
-    }
+    });
 
-    // Function to determine category based on question content
-    function determineCategory(questionText) {
-      const categoryKeywords = {
-        'sdlc': ['SDLC', 'phase', 'planning', 'analysis', 'design', 'implementation', 'testing', 'maintenance', 'waterfall', 'agile', 'spiral'],
-        'requirements': ['requirement', 'functional', 'non-functional', 'elicit', 'stakeholder', 'use case', 'user story', 'business rule'],
-        'architecture': ['architecture', 'client-server', 'web-based', 'tier', 'API', 'cloud', 'load balancer', 'virtualization'],
-        'controls': ['testing', 'unit test', 'integration', 'regression', 'load test', 'quality assurance', 'control', 'peer review'],
-        'documentation': ['DFD', 'ERD', 'flowchart', 'diagram', 'data dictionary', 'context diagram', 'process model']
-      };
-      
-      const lowerQuestion = questionText.toLowerCase();
-      
-      for (const [category, keywords] of Object.entries(categoryKeywords)) {
-        if (keywords.some(keyword => lowerQuestion.includes(keyword.toLowerCase()))) {
-          return category;
-        }
-      }
-      
-      return 'general';
-    }
+    if (questionsDB.length === 0) throw new Error("No questions loaded");
 
-    // Generate a basic explanation if none provided
-    function generateExplanation(answer, question) {
-      return `The correct answer is "${answer}". This is a fundamental concept in systems analysis and design.`;
-    }
-
-    // Show loading state
-    function showLoadingState() {
-      const quizContainer = document.getElementById('quizContainer');
-      if (quizContainer) {
-        quizContainer.innerHTML = `
-          <div class="loading-container">
-            <div class="loading-spinner"></div>
-            <h3 class="loading-title">Loading Questions...</h3>
-            <p class="loading-subtitle">Fetching questions from JSON files</p>
-          </div>
-        `;
-      }
-    }
-
-    // Hide loading state
-    function hideLoadingState() {
-      // Loading state will be replaced when quiz initializes
-    }
-
-    // Show offline notice
-    function showOfflineNotice() {
-      const container = document.querySelector('.container');
-      if (container) {
-        const notice = document.createElement('div');
-        notice.innerHTML = `
-          <div style="background: rgba(179, 135, 90, 0.2); border: 2px solid var(--error); border-radius: 12px; padding: 15px; margin-bottom: 20px; text-align: center;">
-            <strong>📁 Using Offline Questions</strong><br>
-            <small>Couldn't connect to JSON files. Using built-in question set.</small>
-          </div>
-        `;
-        container.insertBefore(notice.firstElementChild, container.children[1]);
-      }
-    }
-
-    // Initialize quiz after questions are loaded
-    function initializeQuizAfterLoad() {
-    const quizContainer = document.getElementById('quizContainer');
-    quizContainer.innerHTML = originalQuizHTML;
-  
-    rebindQuizElements();
-    setupEventListeners();
-    updateFilteredQuestions();
-    displayQuestion();
-    updateProgress();
-    updatePartStats();
+  } catch (e) {
+    console.warn("Using fallback due to error:", e);
+    questionsDB = fallbackQuestions;
+    showOfflineNotice();
+  } finally {
+    isLoadingQuestions = false;
+    hideLoadingState();
+    initializeQuizAfterLoad();
   }
+}
 
+/* --------------------------------------------- */
+/* 8. Parse JSON                                 */
+/* --------------------------------------------- */
+function parseJSONToQuestions(jsonData, partName) {
+  const arr = jsonData.systems_analysis_and_design_questions || jsonData.questions || jsonData;
+  if (!Array.isArray(arr)) return [];
 
-    // DOM elements
-    const questionText = document.getElementById('questionText');
-    const optionsContainer = document.getElementById('optionsContainer');
-    const questionNumber = document.getElementById('questionNumber');
-    const categoryTag = document.getElementById('categoryTag');
-    const currentQuestionSpan = document.getElementById('currentQuestion');
-    const totalQuestionsSpan = document.getElementById('totalQuestions');
-    const correctAnswersSpan = document.getElementById('correctAnswers');
-    const scorePercentageSpan = document.getElementById('scorePercentage');
-    const progressFill = document.getElementById('progressFill');
-    const submitBtn = document.getElementById('submitBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const explanation = document.getElementById('explanation');
-    const explanationText = document.getElementById('explanationText');
-    const linkedinLink = document.getElementById('linkedinLink');
-    const resultsSummary = document.getElementById('resultsSummary');
-    const quizContainer = document.getElementById('quizContainer');
-  
-    function rebindQuizElements() {
-    questionText = document.getElementById('questionText');
-    optionsContainer = document.getElementById('optionsContainer');
-    questionNumber = document.getElementById('questionNumber');
-    categoryTag = document.getElementById('categoryTag');
-    currentQuestionSpan = document.getElementById('currentQuestion');
-    totalQuestionsSpan = document.getElementById('totalQuestions');
-    correctAnswersSpan = document.getElementById('correctAnswers');
-    scorePercentageSpan = document.getElementById('scorePercentage');
-    progressFill = document.getElementById('progressFill');
-    submitBtn = document.getElementById('submitBtn');
-    prevBtn = document.getElementById('prevBtn');
-    nextBtn = document.getElementById('nextBtn');
-    explanation = document.getElementById('explanation');
-    explanationText = document.getElementById('explanationText');
-    linkedinLink = document.getElementById('linkedinLink');
-    resultsSummary = document.getElementById('resultsSummary');
-    quizContainer = document.getElementById('quizContainer');
+  return arr.map((q, index) => {
+    const correctIndex = q.options?.indexOf(q.answer) ?? 0;
+    return {
+      id: q.id || index + 1,
+      part: partName,
+      category: determineCategory(q.question),
+      question: q.question,
+      options: q.options,
+      correct: correctIndex >= 0 ? correctIndex : 0,
+      answer: q.answer,
+      explanation: q.explanation || `The correct answer is "${q.answer}".`,
+      linkedinUrl: q.linkedin_link || "https://www.linkedin.com/learning"
+    };
+  });
+}
+
+/* --------------------------------------------- */
+/* 9. Restore HTML + Bind + Start Quiz           */
+/* --------------------------------------------- */
+function initializeQuizAfterLoad() {
+  const container = document.getElementById("quizContainer");
+  container.innerHTML = originalQuizHTML;
+
+  rebindQuizElements();
+  setupEventListeners();
+  updateFilteredQuestions();
+  displayQuestion();
+  updateProgress();
+  updatePartStats();
+}
+
+/* --------------------------------------------- */
+/* 10. Loading UI                                */
+/* --------------------------------------------- */
+function showLoadingState() {
+  const qc = document.getElementById("quizContainer");
+  qc.innerHTML = `
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+      <h3>Loading Questions...</h3>
+      <p>Fetching questions from JSON files</p>
+    </div>
+  `;
+}
+
+function hideLoadingState() {
+  /* replaced automatically */
+}
+
+/* --------------------------------------------- */
+/* 11. Category Detection                         */
+/* --------------------------------------------- */
+function determineCategory(text) {
+  const map = {
+    sdlc: ["phase", "planning", "design", "maintenance", "agile", "waterfall"],
+    requirements: ["requirement", "stakeholder", "business rule"],
+    architecture: ["api", "tier", "client", "server", "cloud"],
+    controls: ["test", "qa", "unit", "integration", "regression"],
+    documentation: ["diagram", "dfd", "erd", "flowchart"]
+  };
+
+  const lower = text?.toLowerCase() || "";
+  for (const [cat, words] of Object.entries(map))
+    if (words.some(w => lower.includes(w))) return cat;
+
+  return "general";
+}
+
+/* --------------------------------------------- */
+/* 12. Initialize Quiz                           */
+/* --------------------------------------------- */
+function initializeQuiz() {
+  const savedUrls = localStorage.getItem("jsonUrls");
+  if (savedUrls) {
+    const urls = JSON.parse(savedUrls);
+    Object.keys(urls).forEach(key => {
+      if (urls[key]) JSON_CONFIG[key] = urls[key];
+    });
   }
-
-
-    // Initialize the quiz
-    function initializeQuiz() {
-      loadQuestionsFromJSON();
-    }
-
-    function setupEventListeners() {
-      // Filter buttons
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-          e.target.classList.add('active');
-          currentFilter = e.target.dataset.category;
-          updateFilteredQuestions();
-          currentQuestionIndex = 0;
-          displayQuestion();
-          updateProgress();
-        });
-      });
-
-      // Navigation buttons
-      submitBtn.addEventListener('click', submitAnswer);
-      prevBtn.addEventListener('click', () => navigateQuestion(-1));
-      nextBtn.addEventListener('click', () => navigateQuestion(1));
-      
-      // Control buttons
-      document.getElementById('randomBtn').addEventListener('click', showRandomQuestion);
-      document.getElementById('resetBtn').addEventListener('click', resetQuiz);
-      document.getElementById('restartBtn').addEventListener('click', resetQuiz);
-      document.getElementById('reviewBtn').addEventListener('click', () => {
-        resultsSummary.classList.remove('show');
-        quizContainer.style.display = 'block';
-      });
-      
-      // Admin panel toggle
-      document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
-    }
-
-    // Admin panel functions
-    function toggleAdminPanel() {
-      const adminPanel = document.getElementById('adminPanel');
-      const quizContainer = document.getElementById('quizContainer');
-      const resultsContainer = document.getElementById('resultsSummary');
-      
-      if (adminPanel.style.display === 'none' || adminPanel.style.display === '') {
-        adminPanel.style.display = 'block';
-        quizContainer.style.display = 'none';
-        resultsContainer.style.display = 'none';
-        
-        // Load current JSON URLs if stored
-        const savedUrls = localStorage.getItem('jsonUrls');
-        if (savedUrls) {
-          const urls = JSON.parse(savedUrls);
-          for (let i = 1; i <= 7; i++) {
-            const input = document.getElementById(`part${i}Url`);
-            if (input) {
-              input.value = urls[`part${i}`] || '';
-            }
-          }
-        }
-        updatePartStats();
-      } else {
-        adminPanel.style.display = 'none';
-        quizContainer.style.display = 'block';
-      }
-    }
-
-    function updateJSONUrls() {
-      const urls = {};
-      
-      for (let i = 1; i <= 7; i++) {
-        const input = document.getElementById(`part${i}Url`);
-        if (input) {
-          urls[`part${i}`] = input.value.trim();
-        }
-      }
-      
-      // Check that at least Part 1 is provided
-      if (!urls.part1) {
-        showStatus('❌ Please provide at least Part 1 JSON URL', 'error');
-        return;
-      }
-      
-      localStorage.setItem('jsonUrls', JSON.stringify(urls));
-      
-      // Update global config
-      Object.keys(urls).forEach(key => {
-        if (urls[key]) {
-          JSON_CONFIG[key] = urls[key];
-        }
-      });
-      
-      showStatus('✅ JSON URLs updated successfully!', 'success');
-      
-      // Auto-reload questions
-      setTimeout(() => {
-        loadQuestionsFromJSON();
-      }, 1000);
-    }
-
-    async function testJSONConnection() {
-      const urls = {};
-      for (let i = 1; i <= 7; i++) {
-        const input = document.getElementById(`part${i}Url`);
-        if (input && input.value.trim()) {
-          urls[`part${i}`] = input.value.trim();
-        }
-      }
-      
-      if (Object.keys(urls).length === 0) {
-        showStatus('❌ Please configure at least one JSON URL first', 'error');
-        return;
-      }
-      
-      showStatus('🔄 Testing JSON connections...', 'info');
-      
-      let successCount = 0;
-      let totalTests = 0;
-      const results = [];
-      
-      for (const [key, url] of Object.entries(urls)) {
-        totalTests++;
-        try {
-          const response = await fetch(url);
-          if (response.ok) {
-            const data = await response.json();
-            const questions = data.systems_analysis_and_design_questions || data.questions || data;
-            const questionCount = Array.isArray(questions) ? questions.length : 0;
-            successCount++;
-            results.push(`✅ ${key}: ${questionCount} questions`);
-          } else {
-            results.push(`❌ ${key}: ${response.status} ${response.statusText}`);
-          }
-        } catch (error) {
-          results.push(`❌ ${key}: ${error.message}`);
-        }
-      }
-      
-      const statusMessage = `Connection Results (${successCount}/${totalTests}):\n${results.join('\n')}`;
-      
-      if (successCount === totalTests && totalTests > 0) {
-        showStatus(statusMessage, 'success');
-      } else if (successCount > 0) {
-        showStatus(statusMessage, 'error');
-      } else {
-        showStatus('❌ All connections failed. Check your URLs and try again.', 'error');
-      }
-    }
-
-    function reloadQuestions() {
-      showStatus('🔄 Reloading questions from JSON files...', 'info');
-      loadQuestionsFromJSON();
-    }
-
-    function downloadJSONTemplate() {
-      // Create the template based on the provided JSON structure
-      const template = {
-        "systems_analysis_and_design_questions": [
-          {
-            "id": 1,
-            "question": "Which phase of the SDLC identifies the scope and objectives of a project?",
-            "options": ["Design", "Planning", "Implementation", "Maintenance"],
-            "answer": "Planning",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-sdlc"
-          },
-          {
-            "id": 2,
-            "question": "Which SDLC phase focuses on determining what the system should do?",
-            "options": ["Requirements", "Testing", "Planning", "Deployment"],
-            "answer": "Requirements",
-            "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-requirements"
-          }
-        ]
-      };
-      
-      const jsonContent = JSON.stringify(template, null, 2);
-      const blob = new Blob([jsonContent], { type: 'application/json' });
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'questions_template.json';
-      a.click();
-      window.URL.revokeObjectURL(url);
-      
-      showStatus('📁 JSON template downloaded! Use this structure for your question files.', 'success');
-    }
-
-    function updatePartStats() {
-      const statsContainer = document.getElementById('partStatistics');
-      if (!statsContainer) return;
-      
-      statsContainer.innerHTML = '';
-      
-      for (let i = 1; i <= 7; i++) {
-        const partKey = `part${i}`;
-        const partQuestions = allParts[partKey] || [];
-        
-        const statDiv = document.createElement('div');
-        statDiv.style.textAlign = 'center';
-        statDiv.style.padding = '10px';
-        statDiv.style.background = 'var(--bg1)';
-        statDiv.style.borderRadius = '8px';
-        
-        statDiv.innerHTML = `
-          <div style="color: var(--accent); font-weight: bold; font-size: 1.2rem;">${partQuestions.length}</div>
-          <div style="color: var(--text); font-size: 0.9rem;">Part ${i}</div>
-        `;
-        
-        statsContainer.appendChild(statDiv);
-      }
-    }
-
-    function showStatus(message, type) {
-      const statusDiv = document.getElementById('connectionStatus');
-      statusDiv.style.display = 'block';
-      statusDiv.textContent = message;
-      
-      // Reset classes
-      statusDiv.className = 'status-message';
-      
-      // Add appropriate styling based on type
-      if (type === 'success') {
-        statusDiv.classList.add('status-success');
-      } else if (type === 'error') {
-        statusDiv.classList.add('status-error');
-      } else {
-        statusDiv.classList.add('status-info');
-      }
-      
-      // Auto-hide after 5 seconds for success/info messages
-      if (type !== 'error') {
-        setTimeout(() => {
-          statusDiv.style.display = 'none';
-        }, 5000);
-      }
-    }
-
-    // Load saved JSON URLs on initialization
-    function initializeQuiz() {
-      const savedUrls = localStorage.getItem('jsonUrls');
-      if (savedUrls) {
-        const urls = JSON.parse(savedUrls);
-        Object.keys(urls).forEach(key => {
-          if (urls[key]) {
-            JSON_CONFIG[key] = urls[key];
-          }
-        });
-      }
-      
-      loadQuestionsFromJSON();
-    }
+  loadQuestionsFromJSON();
+}
 
     function updateFilteredQuestions() {
       if (currentFilter === 'all') {
@@ -1641,13 +1375,11 @@
       return categoryName + partLabel;
     }
 
-    // Start the quiz when page loads
-    document.addEventListener('DOMContentLoaded', () => {
-    const quizContainer = document.getElementById('quizContainer');
-    originalQuizHTML = quizContainer.innerHTML;
-    initializeQuiz();
-  });
-
-  </script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("quizContainer");
+  originalQuizHTML = container.innerHTML;
+  initializeQuiz();
+});
+</script>
 </body>
 </html>
