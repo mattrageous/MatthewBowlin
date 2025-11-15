@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NYS Systems Analysis & Design Study Guide – Matthew Bowlin</title>
+  <meta name="description" content="Official New York State themed study guide with comprehensive multiple choice questions for Systems Analysis and Design certification exam preparation." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* NYS Official Colors */
+      --primary: #002d72;        /* NYS Dark Blue */
+      --secondary: #0077c8;      /* NYS Light Blue */
+      --accent: #ffd100;         /* NYS Yellow */
+      --success: #197352;        /* NYS Green */
+      --warning: #f59e0b;        /* Warning Orange */
+      --error: #ef4444;          /* Error Red */
+      
+      /* Modern Neutrals */
+      --background: #0a0b14;     /* Deep Dark */
+      --surface: #1a1b26;       /* Card Background */
+      --surface-light: #24263a; /* Elevated Surface */
+      --text: #f7fafc;          /* Primary Text */
+      --text-muted: #a0aec0;    /* Muted Text */
+      --text-dark: #4a5568;     /* Dark Text */
+      --border: #2d3748;        /* Border Color */
+      --border-light: #4a5568;  /* Light Border */
+      
+      /* Glass Effects */
+      --glass: rgba(26, 27, 38, 0.8);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --blur: blur(20px);
+      
+      /* Shadows */
+      --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --shadow-glow: 0 0 20px rgba(255, 209, 0, 0.15);
+      
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #f59e0b 100%);
+      --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      
+      /* Animation */
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--background);
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(0, 45, 114, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 119, 200, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(25, 115, 82, 0.2) 0%, transparent 50%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Header Styles */
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-accent);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      box-shadow: var(--shadow-glow);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent) 0%, #ffffff 50%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Card Component */
+    .card {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gradient-glass);
+      opacity: 0.8;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(255, 209, 0, 0.2);
+    }
+
+    /* Progress Section */
+    .progress-section {
+      margin-bottom: 2rem;
+    }
+
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .progress-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .progress-percentage {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: var(--surface-light);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--gradient-accent);
+      border-radius: 4px;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem 0.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+    /* Filter Controls */
+    .filter-section {
+      margin-bottom: 2rem;
+    }
+
+    .filter-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent);
+      background: rgba(255, 209, 0, 0.1);
+      color: var(--text);
+    }
+
+    .filter-btn.active {
+      background: var(--gradient-accent);
+      color: var(--background);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+
+    .filter-divider {
+      width: 1px;
+      height: 2rem;
+      background: var(--border);
+      margin: 0 0.5rem;
+    }
+
+    /* Quiz Container */
+    .quiz-container {
+      margin-bottom: 2rem;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .question-number {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .category-badge {
+      background: var(--gradient-primary);
+      color: var(--text);
+      padding: 0.375rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .question-text {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: var(--text);
+    }
+
+    /* Options */
+    .options {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .option {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .option::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%);
+      transition: left 0.5s ease;
+    }
+
+    .option:hover::before {
+      left: 100%;
+    }
+
+    .option:hover {
+      border-color: var(--accent);
+      background: rgba(255, 209, 0, 0.05);
+      transform: translateY(-1px);
+    }
+
+    .option.selected {
+      border-color: var(--accent);
+      background: rgba(255, 209, 0, 0.1);
+    }
+
+    .option.correct {
+      border-color: var(--success);
+      background: rgba(25, 115, 82, 0.1);
+    }
+
+    .option.incorrect {
+      border-color: var(--error);
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .option-letter {
+      width: 2rem;
+      height: 2rem;
+      background: var(--gradient-accent);
+      color: var(--background);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    .option.correct .option-letter {
+      background: var(--success);
+      color: white;
+    }
+
+    .option.incorrect .option-letter {
+      background: var(--error);
+      color: white;
+    }
+
+    /* Button Component */
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+      transition: left 0.5s ease;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary {
+      background: var(--gradient-accent);
+      color: var(--background);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 209, 0, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: rgba(255, 209, 0, 0.05);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Explanation */
+    .explanation {
+      background: var(--surface-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      display: none;
+    }
+
+    .explanation.show {
+      display: block;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .explanation-title {
+      color: var(--accent);
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .explanation-text {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #0077b5;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .linkedin-link:hover {
+      background: #005885;
+      transform: translateY(-1px);
+    }
+
+    /* Results Summary */
+    .results-summary {
+      text-align: center;
+      display: none;
+    }
+
+    .results-summary.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .results-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .score-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 2rem;
+      position: relative;
+      background: conic-gradient(var(--accent) 0deg, var(--surface-light) 0deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .score-circle::before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: var(--surface);
+      border-radius: 50%;
+    }
+
+    .score-text {
+      position: relative;
+      z-index: 1;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    /* Admin Panel */
+    .admin-panel {
+      display: none;
+    }
+
+    .admin-title {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .config-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .input-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .input-field {
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      transition: var(--transition);
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255, 209, 0, 0.1);
+    }
+
+    .code-block {
+      background: var(--surface-light);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+
+    .code-block pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Navigation */
+    .navigation {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    /* Status Messages */
+    .status-message {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .status-success {
+      background: rgba(25, 115, 82, 0.1);
+      border: 1px solid var(--success);
+      color: var(--success);
+    }
+
+    .status-error {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid var(--error);
+      color: var(--error);
+    }
+
+    .status-info {
+      background: rgba(255, 209, 0, 0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      .question-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .filter-controls {
+        justify-content: center;
+      }
+
+      .config-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Loading Animation */
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--border);
+      border-top: 3px solid var(--accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-container {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .loading-title {
+      color: var(--accent);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .loading-subtitle {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">🗽</div>
+      <h1 class="title">NYS Systems Analysis & Design Study Guide</h1>
+      <p class="subtitle">Master your certification exam with comprehensive multiple-choice questions designed with official New York State standards and modern learning techniques.</p>
+    </header>
+
+    <!-- Progress Section -->
+    <div class="card progress-section">
+      <div class="progress-header">
+        <div class="progress-title">Your Progress</div>
+        <div class="progress-percentage" id="progressPercentage">0%</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-value" id="currentQuestion">1</span>
+          <span class="stat-label">Current</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="totalQuestions">100</span>
+          <span class="stat-label">Total</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="correctAnswers">0</span>
+          <span class="stat-label">Correct</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="scorePercentage">0%</span>
+          <span class="stat-label">Score</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="card filter-section">
+      <div class="filter-controls">
+        <button class="filter-btn active" data-category="all">All Questions</button>
+        <button class="filter-btn" data-category="part1">Part 1</button>
+        <button class="filter-btn" data-category="part2">Part 2</button>
+        <button class="filter-btn" data-category="part3">Part 3</button>
+        <button class="filter-btn" data-category="part4">Part 4</button>
+        <button class="filter-btn" data-category="part5">Part 5</button>
+        <button class="filter-btn" data-category="part6">Part 6</button>
+        <button class="filter-btn" data-category="part7">Part 7</button>
+        <div class="filter-divider"></div>
+        <button class="filter-btn" data-category="sdlc">SDLC</button>
+        <button class="filter-btn" data-category="requirements">Requirements</button>
+        <button class="filter-btn" data-category="architecture">Architecture</button>
+        <button class="filter-btn" data-category="controls">Testing & QA</button>
+        <button class="filter-btn" data-category="documentation">Documentation</button>
+      </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel">
+      <div class="card">
+        <h3 class="admin-title">⚙️ Administration Panel - JSON Integration</h3>
+        
+        <div style="margin-bottom: 2rem;">
+          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📁 JSON File Configuration</h4>
+          <div class="config-grid">
+            <div class="input-group">
+              <label class="input-label">Part 1 - Systems Analysis & Design:</label>
+              <input type="text" id="part1Url" class="input-field" placeholder="./data/part1_systems_analysis_design.json">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Part 2 - Advanced Topics:</label>
+              <input type="text" id="part2Url" class="input-field" placeholder="./data/part2_questions.json">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Part 3:</label>
+              <input type="text" id="part3Url" class="input-field" placeholder="./data/part3_questions.json">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Part 4:</label>
+              <input type="text" id="part4Url" class="input-field" placeholder="./data/part4_questions.json">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Part 5:</label>
+              <input type="text" id="part5Url" class="input-field" placeholder="./data/part5_questions.json">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Part 6:</label>
+              <input type="text" id="part6Url" class="input-field" placeholder="./data/part6_questions.json">
+            </div>
+            <div class="input-group">
+              <label class="input-label">Part 7:</label>
+              <input type="text" id="part7Url" class="input-field" placeholder="./data/part7_questions.json">
+            </div>
+          </div>
+        </div>
+        
+        <div class="controls" style="margin-bottom: 2rem;">
+          <button class="btn btn-primary" onclick="updateJSONUrls()">💾 Update URLs</button>
+          <button class="btn btn-secondary" onclick="testJSONConnection()">🔗 Test Connections</button>
+          <button class="btn btn-secondary" onclick="reloadQuestions()">🔄 Reload Questions</button>
+          <button class="btn btn-secondary" onclick="downloadJSONTemplate()">📋 Download Template</button>
+        </div>
+        
+        <div id="connectionStatus" class="status-message"></div>
+        
+        <div class="card" style="background: var(--surface-light); margin-bottom: 2rem;">
+          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📝 JSON File Structure</h4>
+          <div class="code-block">
+            <pre>{
+  "systems_analysis_and_design_questions": [
+    {
+      "id": 1,
+      "question": "Question text here",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answer": "Option B",
+      "linkedin_link": "https://www.linkedin.com/learning/course-link"
+    }
+  ]
+}</pre>
+          </div>
+        </div>
+        
+        <div class="card" style="background: var(--surface-light);">
+          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📊 Part Statistics</h4>
+          <div id="partStatistics" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;">
+            <!-- Will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz Container -->
+    <div class="card quiz-container" id="quizContainer">
+      <div class="question-header">
+        <span class="question-number" id="questionNumber">Question 1 of 100</span>
+        <span class="category-badge" id="categoryTag">SDLC Phases</span>
+      </div>
+      
+      <div class="question-text" id="questionText">
+        Loading question...
+      </div>
+      
+      <div class="options" id="optionsContainer">
+        <!-- Options will be populated by JavaScript -->
+      </div>
+      
+      <div class="controls">
+        <button class="btn btn-secondary" id="prevBtn" disabled>← Previous</button>
+        <button class="btn btn-primary" id="submitBtn">Submit Answer</button>
+        <button class="btn btn-secondary" id="nextBtn" disabled>Next →</button>
+      </div>
+      
+      <div class="explanation" id="explanation">
+        <h4 class="explanation-title">💡 Explanation</h4>
+        <p class="explanation-text" id="explanationText"></p>
+        <a href="#" class="linkedin-link" id="linkedinLink" target="_blank">
+          📘 Learn More on LinkedIn Learning
+        </a>
+      </div>
+    </div>
+
+    <!-- Results Summary -->
+    <div class="card results-summary" id="resultsSummary">
+      <h2 class="results-title">🎉 Quiz Complete!</h2>
+      <div class="score-circle" id="scoreCircle">
+        <span class="score-text" id="finalScore">0%</span>
+      </div>
+      <p id="scoreMessage"></p>
+      <div class="controls">
+        <button class="btn btn-primary" id="restartBtn">🔄 Restart Quiz</button>
+        <button class="btn btn-secondary" id="reviewBtn">📝 Review Answers</button>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <button class="btn btn-secondary" id="randomBtn">🎲 Random Question</button>
+      <button class="btn btn-secondary" id="resetBtn">🔄 Reset Progress</button>
+      <button class="btn btn-secondary" id="adminToggle">⚙️ Admin Panel</button>
+    </div>
+  </div>
+
+  <script>
+    // JSON Files Configuration
+    // Array of JSON file URLs for the 7 parts
+    const JSON_CONFIG = {
+      part1: 'https://raw.githubusercontent.com/mattrageous/MatthewBowlin/refs/heads/main/part1.JSON',
+      part2: './data/part2_questions.json',
+      part3: './data/part3_questions.json',
+      part4: './data/part4_questions.json',
+      part5: './data/part5_questions.json',
+      part6: './data/part6_questions.json',
+      part7: './data/part7_questions.json'
+    };
+    
+    // Questions database - will be populated from JSON files
+    let questionsDB = [];
+    let allParts = {};
+    let currentExam = 'all'; // Default to all parts
+    
+    // Default fallback questions in case JSON files are unavailable
+    const fallbackQuestions = [
+      {
+        id: 1,
+        part: 'part1',
+        category: 'sdlc',
+        question: 'Which phase of the SDLC identifies the scope and objectives of a project?',
+        options: ['Design', 'Planning', 'Implementation', 'Maintenance'],
+        answer: 'Planning',
+        correct: 1,
+        linkedin_link: 'https://www.linkedin.com/learning/learning-sdlc'
+      }
+    ];
+
+    // Initialize quiz state
+    let currentQuestionIndex = 0;
+    let currentFilter = 'all';
+    let userAnswers = {};
+    let filteredQuestions = [];
+    let quizCompleted = false;
+    let isLoadingQuestions = false;
+
+    // Function to load questions from JSON files
+    async function loadQuestionsFromJSON() {
+      try {
+        isLoadingQuestions = true;
+        showLoadingState();
+        
+        // Load all available JSON files
+        const loadPromises = Object.entries(JSON_CONFIG).map(async ([partKey, url]) => {
+          try {
+            const response = await fetch(url);
+            if (response.ok) {
+              const data = await response.json();
+              return { part: partKey, data: data };
+            } else {
+              console.warn(`Failed to load ${partKey}: ${response.status}`);
+              return null;
+            }
+          } catch (error) {
+            console.warn(`Error loading ${partKey}:`, error);
+            return null;
+          }
+        });
+        
+        const results = await Promise.all(loadPromises);
+        
+        // Process loaded data
+        questionsDB = [];
+        results.forEach(result => {
+          if (result && result.data) {
+            const questions = parseJSONToQuestions(result.data, result.part);
+            questionsDB = questionsDB.concat(questions);
+            allParts[result.part] = questions;
+          }
+        });
+        
+        if (questionsDB.length > 0) {
+          console.log(`Loaded ${questionsDB.length} questions from JSON files`);
+        } else {
+          throw new Error('No questions found in JSON files');
+        }
+        
+      } catch (error) {
+        console.warn('Failed to load from JSON files, using fallback questions:', error);
+        questionsDB = fallbackQuestions;
+        showOfflineNotice();
+      } finally {
+        isLoadingQuestions = false;
+        hideLoadingState();
+        initializeQuizAfterLoad();
+      }
+    }
+
+    // Function to parse JSON data into questions format
+    function parseJSONToQuestions(jsonData, partName) {
+      const questions = [];
+      
+      // Handle the structure from your JSON format
+      const questionsArray = jsonData.systems_analysis_and_design_questions || jsonData.questions || jsonData;
+      
+      if (Array.isArray(questionsArray)) {
+        questionsArray.forEach((q, index) => {
+          // Find the correct answer index
+          let correctIndex = 0;
+          if (q.options && q.answer) {
+            correctIndex = q.options.findIndex(option => option === q.answer);
+            if (correctIndex === -1) correctIndex = 0;
+          }
+          
+          // Determine category from question content or use default
+          const category = determineCategory(q.question) || 'general';
+          
+          const question = {
+            id: q.id || (questions.length + 1),
+            part: partName,
+            category: category,
+            question: q.question || '',
+            options: q.options || [],
+            correct: correctIndex,
+            answer: q.answer || '',
+            explanation: q.explanation || generateExplanation(q.answer, q.question),
+            linkedinUrl: q.linkedin_link || 'https://www.linkedin.com/learning'
+          };
+          
+          if (question.question && question.options.length >= 2) {
+            questions.push(question);
+          }
+        });
+      }
+      
+      return questions;
+    }
+
+    // Function to determine category based on question content
+    function determineCategory(questionText) {
+      const categoryKeywords = {
+        'sdlc': ['SDLC', 'phase', 'planning', 'analysis', 'design', 'implementation', 'testing', 'maintenance', 'waterfall', 'agile', 'spiral'],
+        'requirements': ['requirement', 'functional', 'non-functional', 'elicit', 'stakeholder', 'use case', 'user story', 'business rule'],
+        'architecture': ['architecture', 'client-server', 'web-based', 'tier', 'API', 'cloud', 'load balancer', 'virtualization'],
+        'controls': ['testing', 'unit test', 'integration', 'regression', 'load test', 'quality assurance', 'control', 'peer review'],
+        'documentation': ['DFD', 'ERD', 'flowchart', 'diagram', 'data dictionary', 'context diagram', 'process model']
+      };
+      
+      const lowerQuestion = questionText.toLowerCase();
+      
+      for (const [category, keywords] of Object.entries(categoryKeywords)) {
+        if (keywords.some(keyword => lowerQuestion.includes(keyword.toLowerCase()))) {
+          return category;
+        }
+      }
+      
+      return 'general';
+    }
+
+    // Generate a basic explanation if none provided
+    function generateExplanation(answer, question) {
+      return `The correct answer is "${answer}". This is a fundamental concept in systems analysis and design.`;
+    }
+
+    // Show loading state
+    function showLoadingState() {
+      const quizContainer = document.getElementById('quizContainer');
+      if (quizContainer) {
+        quizContainer.innerHTML = `
+          <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <h3 class="loading-title">Loading Questions...</h3>
+            <p class="loading-subtitle">Fetching questions from JSON files</p>
+          </div>
+        `;
+      }
+    }
+
+    // Hide loading state
+    function hideLoadingState() {
+      // Loading state will be replaced when quiz initializes
+    }
+
+    // Show offline notice
+    function showOfflineNotice() {
+      const container = document.querySelector('.container');
+      if (container) {
+        const notice = document.createElement('div');
+        notice.innerHTML = `
+          <div style="background: rgba(179, 135, 90, 0.2); border: 2px solid var(--error); border-radius: 12px; padding: 15px; margin-bottom: 20px; text-align: center;">
+            <strong>📁 Using Offline Questions</strong><br>
+            <small>Couldn't connect to JSON files. Using built-in question set.</small>
+          </div>
+        `;
+        container.insertBefore(notice.firstElementChild, container.children[1]);
+      }
+    }
+
+    // Initialize quiz after questions are loaded
+    function initializeQuizAfterLoad() {
+      setupEventListeners();
+      updateFilteredQuestions();
+      displayQuestion();
+      updateProgress();
+      updatePartStats();
+    }
+
+    // DOM elements
+    const questionText = document.getElementById('questionText');
+    const optionsContainer = document.getElementById('optionsContainer');
+    const questionNumber = document.getElementById('questionNumber');
+    const categoryTag = document.getElementById('categoryTag');
+    const currentQuestionSpan = document.getElementById('currentQuestion');
+    const totalQuestionsSpan = document.getElementById('totalQuestions');
+    const correctAnswersSpan = document.getElementById('correctAnswers');
+    const scorePercentageSpan = document.getElementById('scorePercentage');
+    const progressFill = document.getElementById('progressFill');
+    const submitBtn = document.getElementById('submitBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const explanation = document.getElementById('explanation');
+    const explanationText = document.getElementById('explanationText');
+    const linkedinLink = document.getElementById('linkedinLink');
+    const resultsSummary = document.getElementById('resultsSummary');
+    const quizContainer = document.getElementById('quizContainer');
+
+    // Initialize the quiz
+    function initializeQuiz() {
+      loadQuestionsFromExcel();
+    }
+
+    function setupEventListeners() {
+      // Filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          currentFilter = e.target.dataset.category;
+          updateFilteredQuestions();
+          currentQuestionIndex = 0;
+          displayQuestion();
+          updateProgress();
+        });
+      });
+
+      // Navigation buttons
+      submitBtn.addEventListener('click', submitAnswer);
+      prevBtn.addEventListener('click', () => navigateQuestion(-1));
+      nextBtn.addEventListener('click', () => navigateQuestion(1));
+      
+      // Control buttons
+      document.getElementById('randomBtn').addEventListener('click', showRandomQuestion);
+      document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+      document.getElementById('restartBtn').addEventListener('click', resetQuiz);
+      document.getElementById('reviewBtn').addEventListener('click', () => {
+        resultsSummary.classList.remove('show');
+        quizContainer.style.display = 'block';
+      });
+      
+      // Admin panel toggle
+      document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
+    }
+
+    // Admin panel functions
+    function toggleAdminPanel() {
+      const adminPanel = document.getElementById('adminPanel');
+      const quizContainer = document.getElementById('quizContainer');
+      const resultsContainer = document.getElementById('resultsSummary');
+      
+      if (adminPanel.style.display === 'none' || adminPanel.style.display === '') {
+        adminPanel.style.display = 'block';
+        quizContainer.style.display = 'none';
+        resultsContainer.style.display = 'none';
+        
+        // Load current JSON URLs if stored
+        const savedUrls = localStorage.getItem('jsonUrls');
+        if (savedUrls) {
+          const urls = JSON.parse(savedUrls);
+          for (let i = 1; i <= 7; i++) {
+            const input = document.getElementById(`part${i}Url`);
+            if (input) {
+              input.value = urls[`part${i}`] || '';
+            }
+          }
+        }
+        updatePartStats();
+      } else {
+        adminPanel.style.display = 'none';
+        quizContainer.style.display = 'block';
+      }
+    }
+
+    function updateJSONUrls() {
+      const urls = {};
+      
+      for (let i = 1; i <= 7; i++) {
+        const input = document.getElementById(`part${i}Url`);
+        if (input) {
+          urls[`part${i}`] = input.value.trim();
+        }
+      }
+      
+      // Check that at least Part 1 is provided
+      if (!urls.part1) {
+        showStatus('❌ Please provide at least Part 1 JSON URL', 'error');
+        return;
+      }
+      
+      localStorage.setItem('jsonUrls', JSON.stringify(urls));
+      
+      // Update global config
+      Object.keys(urls).forEach(key => {
+        if (urls[key]) {
+          JSON_CONFIG[key] = urls[key];
+        }
+      });
+      
+      showStatus('✅ JSON URLs updated successfully!', 'success');
+      
+      // Auto-reload questions
+      setTimeout(() => {
+        loadQuestionsFromJSON();
+      }, 1000);
+    }
+
+    async function testJSONConnection() {
+      const urls = {};
+      for (let i = 1; i <= 7; i++) {
+        const input = document.getElementById(`part${i}Url`);
+        if (input && input.value.trim()) {
+          urls[`part${i}`] = input.value.trim();
+        }
+      }
+      
+      if (Object.keys(urls).length === 0) {
+        showStatus('❌ Please configure at least one JSON URL first', 'error');
+        return;
+      }
+      
+      showStatus('🔄 Testing JSON connections...', 'info');
+      
+      let successCount = 0;
+      let totalTests = 0;
+      const results = [];
+      
+      for (const [key, url] of Object.entries(urls)) {
+        totalTests++;
+        try {
+          const response = await fetch(url);
+          if (response.ok) {
+            const data = await response.json();
+            const questions = data.systems_analysis_and_design_questions || data.questions || data;
+            const questionCount = Array.isArray(questions) ? questions.length : 0;
+            successCount++;
+            results.push(`✅ ${key}: ${questionCount} questions`);
+          } else {
+            results.push(`❌ ${key}: ${response.status} ${response.statusText}`);
+          }
+        } catch (error) {
+          results.push(`❌ ${key}: ${error.message}`);
+        }
+      }
+      
+      const statusMessage = `Connection Results (${successCount}/${totalTests}):\n${results.join('\n')}`;
+      
+      if (successCount === totalTests && totalTests > 0) {
+        showStatus(statusMessage, 'success');
+      } else if (successCount > 0) {
+        showStatus(statusMessage, 'error');
+      } else {
+        showStatus('❌ All connections failed. Check your URLs and try again.', 'error');
+      }
+    }
+
+    function reloadQuestions() {
+      showStatus('🔄 Reloading questions from JSON files...', 'info');
+      loadQuestionsFromJSON();
+    }
+
+    function downloadJSONTemplate() {
+      // Create the template based on the provided JSON structure
+      const template = {
+        "systems_analysis_and_design_questions": [
+          {
+            "id": 1,
+            "question": "Which phase of the SDLC identifies the scope and objectives of a project?",
+            "options": ["Design", "Planning", "Implementation", "Maintenance"],
+            "answer": "Planning",
+            "linkedin_link": "https://www.linkedin.com/learning/learning-sdlc"
+          },
+          {
+            "id": 2,
+            "question": "Which SDLC phase focuses on determining what the system should do?",
+            "options": ["Requirements", "Testing", "Planning", "Deployment"],
+            "answer": "Requirements",
+            "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-requirements"
+          }
+        ]
+      };
+      
+      const jsonContent = JSON.stringify(template, null, 2);
+      const blob = new Blob([jsonContent], { type: 'application/json' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'questions_template.json';
+      a.click();
+      window.URL.revokeObjectURL(url);
+      
+      showStatus('📁 JSON template downloaded! Use this structure for your question files.', 'success');
+    }
+
+    function updatePartStats() {
+      const statsContainer = document.getElementById('partStatistics');
+      if (!statsContainer) return;
+      
+      statsContainer.innerHTML = '';
+      
+      for (let i = 1; i <= 7; i++) {
+        const partKey = `part${i}`;
+        const partQuestions = allParts[partKey] || [];
+        
+        const statDiv = document.createElement('div');
+        statDiv.style.textAlign = 'center';
+        statDiv.style.padding = '10px';
+        statDiv.style.background = 'var(--bg1)';
+        statDiv.style.borderRadius = '8px';
+        
+        statDiv.innerHTML = `
+          <div style="color: var(--accent); font-weight: bold; font-size: 1.2rem;">${partQuestions.length}</div>
+          <div style="color: var(--text); font-size: 0.9rem;">Part ${i}</div>
+        `;
+        
+        statsContainer.appendChild(statDiv);
+      }
+    }
+
+    function showStatus(message, type) {
+      const statusDiv = document.getElementById('connectionStatus');
+      statusDiv.style.display = 'block';
+      statusDiv.textContent = message;
+      
+      // Reset classes
+      statusDiv.className = 'status-message';
+      
+      // Add appropriate styling based on type
+      if (type === 'success') {
+        statusDiv.classList.add('status-success');
+      } else if (type === 'error') {
+        statusDiv.classList.add('status-error');
+      } else {
+        statusDiv.classList.add('status-info');
+      }
+      
+      // Auto-hide after 5 seconds for success/info messages
+      if (type !== 'error') {
+        setTimeout(() => {
+          statusDiv.style.display = 'none';
+        }, 5000);
+      }
+    }
+
+    // Load saved JSON URLs on initialization
+    function initializeQuiz() {
+      const savedUrls = localStorage.getItem('jsonUrls');
+      if (savedUrls) {
+        const urls = JSON.parse(savedUrls);
+        Object.keys(urls).forEach(key => {
+          if (urls[key]) {
+            JSON_CONFIG[key] = urls[key];
+          }
+        });
+      }
+      
+      loadQuestionsFromJSON();
+    }
+
+    function updateFilteredQuestions() {
+      if (currentFilter === 'all') {
+        filteredQuestions = [...questionsDB];
+      } else if (currentFilter.startsWith('part')) {
+        filteredQuestions = questionsDB.filter(q => q.part === currentFilter);
+      } else {
+        filteredQuestions = questionsDB.filter(q => q.category === currentFilter);
+      }
+      totalQuestionsSpan.textContent = filteredQuestions.length;
+    }
+
+    function displayQuestion() {
+      const question = filteredQuestions[currentQuestionIndex];
+      if (!question) return;
+
+      questionText.textContent = question.question;
+      questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${filteredQuestions.length}`;
+      categoryTag.textContent = getCategoryName(question.category, question.part);
+      currentQuestionSpan.textContent = currentQuestionIndex + 1;
+
+      // Clear previous options
+      optionsContainer.innerHTML = '';
+      
+      // Create option elements
+      question.options.forEach((option, index) => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'option';
+        optionDiv.innerHTML = `
+          <div class="option-letter">${String.fromCharCode(65 + index)}</div>
+          <div>${option}</div>
+        `;
+        
+        optionDiv.addEventListener('click', () => selectOption(index));
+        optionsContainer.appendChild(optionDiv);
+      });
+
+      // Update button states
+      updateNavigationButtons();
+      
+      // Show previous answer if exists
+      if (userAnswers[question.id] !== undefined) {
+        showAnswerState(question.id);
+      } else {
+        explanation.classList.remove('show');
+        submitBtn.style.display = 'inline-block';
+      }
+    }
+
+    function selectOption(selectedIndex) {
+      const options = document.querySelectorAll('.option');
+      options.forEach((option, index) => {
+        option.classList.toggle('selected', index === selectedIndex);
+      });
+      
+      submitBtn.disabled = false;
+    }
+
+    function submitAnswer() {
+      const question = filteredQuestions[currentQuestionIndex];
+      const selectedOption = document.querySelector('.option.selected');
+      
+      if (!selectedOption) return;
+      
+      const selectedIndex = Array.from(document.querySelectorAll('.option')).indexOf(selectedOption);
+      userAnswers[question.id] = selectedIndex;
+      
+      showAnswerState(question.id);
+      updateProgress();
+    }
+
+    function showAnswerState(questionId) {
+      const question = filteredQuestions.find(q => q.id === questionId);
+      const userAnswer = userAnswers[questionId];
+      const options = document.querySelectorAll('.option');
+      
+      options.forEach((option, index) => {
+        option.classList.remove('selected', 'correct', 'incorrect');
+        if (index === question.correct) {
+          option.classList.add('correct');
+        } else if (index === userAnswer && userAnswer !== question.correct) {
+          option.classList.add('incorrect');
+        }
+        if (index === userAnswer) {
+          option.classList.add('selected');
+        }
+      });
+      
+      // Show explanation
+      explanationText.textContent = question.explanation;
+      linkedinLink.href = question.linkedinUrl;
+      explanation.classList.add('show');
+      submitBtn.style.display = 'none';
+      
+      // Enable next button
+      nextBtn.disabled = false;
+    }
+
+    function navigateQuestion(direction) {
+      const newIndex = currentQuestionIndex + direction;
+      if (newIndex >= 0 && newIndex < filteredQuestions.length) {
+        currentQuestionIndex = newIndex;
+        displayQuestion();
+      }
+    }
+
+    function updateNavigationButtons() {
+      prevBtn.disabled = currentQuestionIndex === 0;
+      nextBtn.disabled = currentQuestionIndex === filteredQuestions.length - 1;
+      
+      if (currentQuestionIndex === filteredQuestions.length - 1 && 
+          Object.keys(userAnswers).length === filteredQuestions.length) {
+        showResults();
+      }
+    }
+
+    function updateProgress() {
+      const answeredCount = filteredQuestions.filter(q => userAnswers[q.id] !== undefined).length;
+      const correctCount = filteredQuestions.filter(q => 
+        userAnswers[q.id] !== undefined && userAnswers[q.id] === q.correct
+      ).length;
+      
+      const progressPercentage = (answeredCount / filteredQuestions.length) * 100;
+      const scorePercentage = answeredCount > 0 ? (correctCount / answeredCount) * 100 : 0;
+      
+      progressFill.style.width = `${progressPercentage}%`;
+      correctAnswersSpan.textContent = correctCount;
+      scorePercentageSpan.textContent = `${Math.round(scorePercentage)}%`;
+      
+      // Update progress percentage display
+      const progressPercentageSpan = document.getElementById('progressPercentage');
+      if (progressPercentageSpan) {
+        progressPercentageSpan.textContent = `${Math.round(progressPercentage)}%`;
+      }
+    }
+
+    function showRandomQuestion() {
+      const randomIndex = Math.floor(Math.random() * filteredQuestions.length);
+      currentQuestionIndex = randomIndex;
+      displayQuestion();
+    }
+
+    function resetQuiz() {
+      userAnswers = {};
+      currentQuestionIndex = 0;
+      quizCompleted = false;
+      resultsSummary.classList.remove('show');
+      quizContainer.style.display = 'block';
+      displayQuestion();
+      updateProgress();
+    }
+
+    function showResults() {
+      const totalQuestions = filteredQuestions.length;
+      const answeredQuestions = filteredQuestions.filter(q => userAnswers[q.id] !== undefined).length;
+      const correctAnswers = filteredQuestions.filter(q => 
+        userAnswers[q.id] !== undefined && userAnswers[q.id] === q.correct
+      ).length;
+      
+      if (answeredQuestions === totalQuestions) {
+        const finalScore = Math.round((correctAnswers / totalQuestions) * 100);
+        
+        document.getElementById('finalScore').textContent = `${finalScore}%`;
+        
+        let message = '';
+        if (finalScore >= 90) {
+          message = '🎉 Excellent! You\'re well prepared for the exam!';
+        } else if (finalScore >= 80) {
+          message = '👍 Good job! Review the areas you missed and you\'ll be ready!';
+        } else if (finalScore >= 70) {
+          message = '📚 Not bad! Focus on studying the topics you struggled with.';
+        } else {
+          message = '💪 Keep studying! Review the explanations and try again.';
+        }
+        
+        document.getElementById('scoreMessage').textContent = message;
+        
+        // Update score circle
+        const scoreCircle = document.getElementById('scoreCircle');
+        const degrees = (finalScore / 100) * 360;
+        scoreCircle.style.background = `conic-gradient(var(--accent) ${degrees}deg, var(--bg2) ${degrees}deg)`;
+        
+        quizContainer.style.display = 'none';
+        resultsSummary.classList.add('show');
+        quizCompleted = true;
+      }
+    }
+
+    function getCategoryName(category, part) {
+      const categoryNames = {
+        'sdlc': 'SDLC Phases',
+        'requirements': 'Requirements',
+        'architecture': 'Architecture', 
+        'controls': 'Testing & QA',
+        'documentation': 'Documentation',
+        'general': 'General'
+      };
+      
+      const partNames = {
+        'part1': 'Part 1',
+        'part2': 'Part 2',
+        'part3': 'Part 3',
+        'part4': 'Part 4',
+        'part5': 'Part 5',
+        'part6': 'Part 6',
+        'part7': 'Part 7'
+      };
+      
+      const categoryName = categoryNames[category] || 'General';
+      const partLabel = part && partNames[part] ? ` - ${partNames[part]}` : '';
+      
+      return categoryName + partLabel;
+    }
+
+    // Start the quiz when page loads
+    document.addEventListener('DOMContentLoaded', initializeQuiz);
+  </script>
+</body>
+</html>
