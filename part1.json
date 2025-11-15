@@ -9,8 +9,7 @@
         "The solution will exceed the budget",
         "The system cannot integrate with legacy platforms"
       ],
-      "answer": "Users will resist or fail to adopt the system",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-sdlc"
+      "answer": "Users will resist or fail to adopt the system"
     },
     {
       "id": 2,
@@ -21,8 +20,7 @@
         "Lack of documentation",
         "Poor code integration"
       ],
-      "answer": "Stakeholder involvement fatigue",
-      "linkedin_link": "https://www.linkedin.com/learning/agile-foundations"
+      "answer": "Stakeholder involvement fatigue"
     },
     {
       "id": 3,
@@ -33,8 +31,7 @@
         "Integration testing failure",
         "Stress testing failure"
       ],
-      "answer": "Integration testing failure",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Integration testing failure"
     },
     {
       "id": 4,
@@ -45,8 +42,7 @@
         "Work breakdown structure",
         "Test plan"
       ],
-      "answer": "Risk register",
-      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations"
+      "answer": "Risk register"
     },
     {
       "id": 5,
@@ -57,10 +53,8 @@
         "Analyze the impact of modifying the rule",
         "Reject the requirement outright"
       ],
-      "answer": "Analyze the impact of modifying the rule",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+      "answer": "Analyze the impact of modifying the rule"
     },
-    
     {
       "id": 6,
       "question": "Which technique best resolves conflicting workflows across multiple decentralized offices?",
@@ -70,8 +64,7 @@
         "Joint Application Development (JAD)",
         "Document analysis"
       ],
-      "answer": "Joint Application Development (JAD)",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-elicitation"
+      "answer": "Joint Application Development (JAD)"
     },
     {
       "id": 7,
@@ -82,8 +75,7 @@
         "Constraint",
         "Service-level threshold"
       ],
-      "answer": "Non-functional performance requirement",
-      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+      "answer": "Non-functional performance requirement"
     },
     {
       "id": 8,
@@ -94,10 +86,8 @@
         "External interface requirement",
         "UI requirement"
       ],
-      "answer": "External interface requirement",
-      "linkedin_link": "https://www.linkedin.com/learning/writing-requirements-documents"
+      "answer": "External interface requirement"
     },
-
     {
       "id": 9,
       "question": "A system requires real-time validation with minimal latency and 24/7 scalability. Which architecture is most appropriate?",
@@ -107,8 +97,7 @@
         "Two-tier client/server",
         "Thick-client desktop"
       ],
-      "answer": "Event-driven microservices",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+      "answer": "Event-driven microservices"
     },
     {
       "id": 10,
@@ -119,8 +108,7 @@
         "Faster UI development",
         "Simpler database normalization"
       ],
-      "answer": "Greater separation of concerns and scalability",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Greater separation of concerns and scalability"
     },
     {
       "id": 11,
@@ -131,8 +119,7 @@
         "Horizontal scaling reduces single points of failure",
         "Vertical scaling violates state policy"
       ],
-      "answer": "Horizontal scaling reduces single points of failure",
-      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+      "answer": "Horizontal scaling reduces single points of failure"
     },
     {
       "id": 12,
@@ -143,10 +130,8 @@
         "Database read/write contention",
         "JSON serialization speed"
       ],
-      "answer": "Database read/write contention",
-      "linkedin_link": "https://www.linkedin.com/learning/database-performance-tuning"
+      "answer": "Database read/write contention"
     },
-
     {
       "id": 13,
       "question": "A defect appears only when two modules run simultaneously. What testing is required?",
@@ -156,8 +141,7 @@
         "Unit testing",
         "Functional testing"
       ],
-      "answer": "Concurrency testing",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Concurrency testing"
     },
     {
       "id": 14,
@@ -168,8 +152,7 @@
         "Update deployment schedule",
         "Add a caching layer"
       ],
-      "answer": "Perform root-cause analysis",
-      "linkedin_link": "https://www.linkedin.com/learning/agile-testing"
+      "answer": "Perform root-cause analysis"
     },
     {
       "id": 15,
@@ -180,10 +163,8 @@
         "Architecture diagram",
         "Functional test suite"
       ],
-      "answer": "Requirements traceability matrix",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+      "answer": "Requirements traceability matrix"
     },
-
     {
       "id": 16,
       "question": "During QA review, inconsistent naming conventions are found across code modules. This indicates failure in:",
@@ -193,10 +174,8 @@
         "Compliance with coding standards",
         "UAT"
       ],
-      "answer": "Compliance with coding standards",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-code-review"
+      "answer": "Compliance with coding standards"
     },
-
     {
       "id": 17,
       "question": "In DFDs, showing a data store without processes violates which rule?",
@@ -206,8 +185,7 @@
         "Black hole rule",
         "Data conservation rule"
       ],
-      "answer": "Data conservation rule",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+      "answer": "Data conservation rule"
     },
     {
       "id": 18,
@@ -218,8 +196,7 @@
         "A recursive relationship",
         "A surrogate key"
       ],
-      "answer": "A partial key",
-      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-data-modeling"
+      "answer": "A partial key"
     },
     {
       "id": 19,
@@ -230,8 +207,7 @@
         "Balancing error",
         "Boundary rule violation"
       ],
-      "answer": "Balancing error",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-essential-modeling"
+      "answer": "Balancing error"
     },
     {
       "id": 20,
@@ -242,10 +218,8 @@
         "Convert both to external entities",
         "Move them to separate diagrams"
       ],
-      "answer": "Add a shared data store",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+      "answer": "Add a shared data store"
     },
-
     {
       "id": 21,
       "question": "A project suffers repeated scope creep due to changing agency laws. What SDLC tool most effectively mitigates this?",
@@ -255,8 +229,7 @@
         "Work breakdown structure",
         "Issue log"
       ],
-      "answer": "Change control process",
-      "linkedin_link": "https://www.linkedin.com/learning/change-management-foundations"
+      "answer": "Change control process"
     },
     {
       "id": 22,
@@ -267,8 +240,7 @@
         "V-model",
         "Big Bang"
       ],
-      "answer": "Spiral",
-      "linkedin_link": "https://www.linkedin.com/learning/agile-foundations"
+      "answer": "Spiral"
     },
     {
       "id": 23,
@@ -279,21 +251,18 @@
         "Database indexing",
         "Deployment schedule"
       ],
-      "answer": "API versioning strategy",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+      "answer": "API versioning strategy"
     },
     {
       "id": 24,
-      "question":
-        "A migration from a monolithic system to microservices reveals significant latency between services. What should be implemented first?",
+      "question": "A migration from a monolithic system to microservices reveals significant latency between services. What should be implemented first?",
       "options": [
         "Distributed caching",
         "Load balancer",
         "Circuit breakers",
         "Reverse proxy"
       ],
-      "answer": "Distributed caching",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Distributed caching"
     },
     {
       "id": 25,
@@ -304,10 +273,8 @@
         "API must return response under 1s",
         "Database must maintain ACID compliance"
       ],
-      "answer": "UI must be intuitive",
-      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+      "answer": "UI must be intuitive"
     },
-
     {
       "id": 26,
       "question": "An analyst uncovers contradictory requirements from two departments. Best first step?",
@@ -317,8 +284,7 @@
         "Reject both requirements",
         "Adopt the requirement from the highest-ranking department"
       ],
-      "answer": "Facilitate a requirements reconciliation meeting",
-      "linkedin_link": "https://www.linkedin.com/learning/requirements-elicitation-for-business-analysts"
+      "answer": "Facilitate a requirements reconciliation meeting"
     },
     {
       "id": 27,
@@ -329,8 +295,7 @@
         "Improves UI consistency",
         "Helps schedule deployments"
       ],
-      "answer": "Ensures every requirement is tied to test cases",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+      "answer": "Ensures every requirement is tied to test cases"
     },
     {
       "id": 28,
@@ -341,8 +306,7 @@
         "Peer-to-peer",
         "Event streaming"
       ],
-      "answer": "Layered (n-tier)",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Layered (n-tier)"
     },
     {
       "id": 29,
@@ -353,8 +317,7 @@
         "Normalize tables further",
         "Increase CPU cores"
       ],
-      "answer": "Add caching",
-      "linkedin_link": "https://www.linkedin.com/learning/database-performance-tuning"
+      "answer": "Add caching"
     },
     {
       "id": 30,
@@ -365,10 +328,8 @@
         "Big Bang",
         "Prototype"
       ],
-      "answer": "V-model",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "V-model"
     },
-
     {
       "id": 31,
       "question": "A system is deployed but shows inconsistent behavior only after unexpected data patterns are entered. This indicates a failure in:",
@@ -378,20 +339,18 @@
         "Unit testing",
         "Performance testing"
       ],
-      "answer": "Boundary value testing",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Boundary value testing"
     },
     {
       "id": 32,
-      "question": "A QA lead wants to validate that new code changes didn’t break unrelated modules. Which approach is best?",
+      "question": "A QA lead wants to validate that new code changes didn't break unrelated modules. Which approach is best?",
       "options": [
         "Regression testing",
         "Functional testing",
         "Smoke testing",
         "Unit testing"
       ],
-      "answer": "Regression testing",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Regression testing"
     },
     {
       "id": 33,
@@ -402,8 +361,7 @@
         "Binary serialization",
         "CSV"
       ],
-      "answer": "Binary serialization",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+      "answer": "Binary serialization"
     },
     {
       "id": 34,
@@ -414,23 +372,19 @@
         "Unit testing",
         "UAT"
       ],
-      "answer": "Stress testing",
-      "linkedin_link": "https://www.linkedin.com/learning/agile-testing"
+      "answer": "Stress testing"
     },
     {
       "id": 35,
-      "question":
-        "Which testing artifact ensures every test case maps directly to a specific requirement?",
+      "question": "Which testing artifact ensures every test case maps directly to a specific requirement?",
       "options": [
         "UAT Script",
         "Traceability Matrix",
         "Test Data Workbook",
         "Bug Report"
       ],
-      "answer": "Traceability Matrix",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Traceability Matrix"
     },
-
     {
       "id": 36,
       "question": "A system needs additional security due to new compliance laws. Which control is most effective?",
@@ -440,10 +394,8 @@
         "Logging verbosity",
         "Load balancing"
       ],
-      "answer": "Encryption at rest",
-      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+      "answer": "Encryption at rest"
     },
-
     {
       "id": 37,
       "question": "A DFD shows a process producing more outputs than inputs without external data sources. This violates:",
@@ -453,8 +405,7 @@
         "Conservation rule",
         "Balancing rule"
       ],
-      "answer": "Black hole rule",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+      "answer": "Black hole rule"
     },
     {
       "id": 38,
@@ -465,8 +416,7 @@
         "A surrogate key dependency",
         "A one-to-many join table"
       ],
-      "answer": "An entity referencing itself",
-      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-data-modeling"
+      "answer": "An entity referencing itself"
     },
     {
       "id": 39,
@@ -477,8 +427,7 @@
         "Valid decomposition",
         "Boundary rule exception"
       ],
-      "answer": "Balancing error",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-essential-modeling"
+      "answer": "Balancing error"
     },
     {
       "id": 40,
@@ -489,10 +438,8 @@
         "Requirements document",
         "Test cases"
       ],
-      "answer": "Requirements document",
-      "linkedin_link": "https://www.linkedin.com/learning/writing-requirements-documents"
+      "answer": "Requirements document"
     },
-
     {
       "id": 41,
       "question": "Which SDLC tool best ensures that all risks have documented mitigation steps?",
@@ -502,8 +449,7 @@
         "Scope statement",
         "Architecture diagram"
       ],
-      "answer": "Risk register",
-      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations"
+      "answer": "Risk register"
     },
     {
       "id": 42,
@@ -514,8 +460,7 @@
         "Requirements sign-off",
         "Stakeholder review"
       ],
-      "answer": "Deployment pipeline",
-      "linkedin_link": "https://www.linkedin.com/learning/devops-foundations"
+      "answer": "Deployment pipeline"
     },
     {
       "id": 43,
@@ -526,8 +471,7 @@
         "Constraint",
         "External interface requirement"
       ],
-      "answer": "Non-functional: Security",
-      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+      "answer": "Non-functional: Security"
     },
     {
       "id": 44,
@@ -538,8 +482,7 @@
         "Simplifies UI rendering",
         "Increases testing speed"
       ],
-      "answer": "Centralizes authentication and routing",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+      "answer": "Centralizes authentication and routing"
     },
     {
       "id": 45,
@@ -550,10 +493,8 @@
         "Batch processing",
         "Shared schema standard"
       ],
-      "answer": "ETL transformation layer",
-      "linkedin_link": "https://www.linkedin.com/learning/data-engineering-foundations"
+      "answer": "ETL transformation layer"
     },
-
     {
       "id": 46,
       "question": "A project requires strict validation of data quality before loading into a new database. Which tool is best?",
@@ -563,8 +504,7 @@
         "Load balancer",
         "XML schema validator"
       ],
-      "answer": "Data profiling",
-      "linkedin_link": "https://www.linkedin.com/learning/data-cleaning"
+      "answer": "Data profiling"
     },
     {
       "id": 47,
@@ -575,8 +515,7 @@
         "It appears in multiple workflows",
         "It describes user behavior"
       ],
-      "answer": "It uses clear and measurable criteria",
-      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+      "answer": "It uses clear and measurable criteria"
     },
     {
       "id": 48,
@@ -587,8 +526,7 @@
         "Thick-client desktop",
         "Monolithic mainframe"
       ],
-      "answer": "Active-active clustering",
-      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+      "answer": "Active-active clustering"
     },
     {
       "id": 49,
@@ -599,8 +537,7 @@
         "Design",
         "Planning"
       ],
-      "answer": "Maintenance",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-sdlc"
+      "answer": "Maintenance"
     },
     {
       "id": 50,
@@ -611,8 +548,7 @@
         "ERD",
         "Site map"
       ],
-      "answer": "Swimlane process model",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-business-process-modeling"
+      "answer": "Swimlane process model"
     },
     {
       "id": 51,
@@ -623,8 +559,7 @@
         "Feasibility study",
         "Deployment guide"
       ],
-      "answer": "Communication plan",
-      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations-communication"
+      "answer": "Communication plan"
     },
     {
       "id": 52,
@@ -635,8 +570,7 @@
         "Spiral",
         "Prototype"
       ],
-      "answer": "Spiral",
-      "linkedin_link": "https://www.linkedin.com/learning/agile-foundations"
+      "answer": "Spiral"
     },
     {
       "id": 53,
@@ -647,8 +581,7 @@
         "UI accessibility",
         "Object-oriented modeling"
       ],
-      "answer": "API throttling and rate limiting",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+      "answer": "API throttling and rate limiting"
     },
     {
       "id": 54,
@@ -659,8 +592,7 @@
         "Peer review",
         "Regression analysis"
       ],
-      "answer": "Prototyping",
-      "linkedin_link": "https://www.linkedin.com/learning/ux-foundations-prototyping"
+      "answer": "Prototyping"
     },
     {
       "id": 55,
@@ -671,10 +603,8 @@
         "Big Bang",
         "V-model"
       ],
-      "answer": "Incremental model",
-      "linkedin_link": "https://www.linkedin.com/learning/agile-project-management-with-jira-cloud"
+      "answer": "Incremental model"
     },
-
     {
       "id": 56,
       "question": "A system with a high volume of real-time data requires maximum read scalability. Which architecture is most appropriate?",
@@ -684,8 +614,7 @@
         "Two-tier client/server",
         "Thick-client cache"
       ],
-      "answer": "CQRS (Command Query Responsibility Segregation)",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "CQRS (Command Query Responsibility Segregation)"
     },
     {
       "id": 57,
@@ -696,8 +625,7 @@
         "API interface contracts",
         "Database schema constraints"
       ],
-      "answer": "Reporting features",
-      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+      "answer": "Reporting features"
     },
     {
       "id": 58,
@@ -708,8 +636,7 @@
         "Rewrite all APIs",
         "Increase memory"
       ],
-      "answer": "Implement asynchronous messaging queues",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Implement asynchronous messaging queues"
     },
     {
       "id": 59,
@@ -720,8 +647,7 @@
         "Traceability matrix",
         "Architecture decision record"
       ],
-      "answer": "Traceability matrix",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+      "answer": "Traceability matrix"
     },
     {
       "id": 60,
@@ -732,10 +658,8 @@
         "Missing indexes",
         "Too many foreign keys"
       ],
-      "answer": "Lack of documentation",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-5"
+      "answer": "Lack of documentation"
     },
-
     {
       "id": 61,
       "question": "An error occurs only during high concurrency. Which test best isolates the issue?",
@@ -745,8 +669,7 @@
         "Regression testing",
         "Smoke testing"
       ],
-      "answer": "Concurrency testing",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Concurrency testing"
     },
     {
       "id": 62,
@@ -757,8 +680,7 @@
         "Event streaming with retention",
         "Encrypted Syslog"
       ],
-      "answer": "Append-only database",
-      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+      "answer": "Append-only database"
     },
     {
       "id": 63,
@@ -769,8 +691,7 @@
         "Enforce foreign keys",
         "Enhance UI flexibility"
       ],
-      "answer": "Reduce redundancy and anomalies",
-      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-core-concepts"
+      "answer": "Reduce redundancy and anomalies"
     },
     {
       "id": 64,
@@ -781,8 +702,7 @@
         "State machine diagram",
         "Swimlane diagram"
       ],
-      "answer": "State machine diagram",
-      "linkedin_link": "https://www.linkedin.com/learning/uml-essential-training-2"
+      "answer": "State machine diagram"
     },
     {
       "id": 65,
@@ -793,10 +713,8 @@
         "Balancing rule",
         "Boundary rule"
       ],
-      "answer": "Black hole rule",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+      "answer": "Black hole rule"
     },
-
     {
       "id": 66,
       "question": "A system's response time varies significantly depending on input size. What type of testing identifies the cause?",
@@ -806,8 +724,7 @@
         "Smoke testing",
         "UAT"
       ],
-      "answer": "Performance profiling",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Performance profiling"
     },
     {
       "id": 67,
@@ -818,8 +735,7 @@
         "Slow deployments",
         "Duplicate APIs"
       ],
-      "answer": "Tight coupling between services",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Tight coupling between services"
     },
     {
       "id": 68,
@@ -830,8 +746,7 @@
         "UI design standards",
         "Testing requirements"
       ],
-      "answer": "Functional workflow requirements",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+      "answer": "Functional workflow requirements"
     },
     {
       "id": 69,
@@ -842,8 +757,7 @@
         "A surrogate key",
         "A recursive link"
       ],
-      "answer": "A bridge (intersection) table",
-      "linkedin_link": "https://www.linkedin.com/learning/database-modeling-and-design"
+      "answer": "A bridge (intersection) table"
     },
     {
       "id": 70,
@@ -854,10 +768,8 @@
         "Stakeholder interviews",
         "System prototyping"
       ],
-      "answer": "Shadowing and observation",
-      "linkedin_link": "https://www.linkedin.com/learning/requirements-elicitation-for-business-analysts"
+      "answer": "Shadowing and observation"
     },
-
     {
       "id": 71,
       "question": "Mission-critical systems must update state atomically. Which ACID property ensures this?",
@@ -867,8 +779,7 @@
         "Atomicity",
         "Consistency"
       ],
-      "answer": "Atomicity",
-      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-core-concepts"
+      "answer": "Atomicity"
     },
     {
       "id": 72,
@@ -879,8 +790,7 @@
         "UAT",
         "Logging"
       ],
-      "answer": "Versioning strategy",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+      "answer": "Versioning strategy"
     },
     {
       "id": 73,
@@ -891,8 +801,7 @@
         "Adding code documentation",
         "Changing SDLC model"
       ],
-      "answer": "Refactoring to shared services",
-      "linkedin_link": "https://www.linkedin.com/learning/clean-code"
+      "answer": "Refactoring to shared services"
     },
     {
       "id": 74,
@@ -903,8 +812,7 @@
         "Normalize the database",
         "Switch to XML"
       ],
-      "answer": "Replace loops with a hash-based lookup",
-      "linkedin_link": "https://www.linkedin.com/learning/algorithms-for-software-engineers"
+      "answer": "Replace loops with a hash-based lookup"
     },
     {
       "id": 75,
@@ -915,10 +823,8 @@
         "DFD",
         "Test plans"
       ],
-      "answer": "Architecture decision records (ADRs)",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+      "answer": "Architecture decision records (ADRs)"
     },
-
     {
       "id": 76,
       "question": "A state agency requires audit trails with non-repudiation. Best solution?",
@@ -928,8 +834,7 @@
         "Database triggers",
         "Replication"
       ],
-      "answer": "Digital signatures",
-      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+      "answer": "Digital signatures"
     },
     {
       "id": 77,
@@ -940,8 +845,7 @@
         "Batch processing",
         "Lazy loading"
       ],
-      "answer": "Vertical scaling",
-      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+      "answer": "Vertical scaling"
     },
     {
       "id": 78,
@@ -952,8 +856,7 @@
         "Remove data stores",
         "Add external entities"
       ],
-      "answer": "Split into multiple diagrams",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+      "answer": "Split into multiple diagrams"
     },
     {
       "id": 79,
@@ -964,8 +867,7 @@
         "Microservices",
         "Client-server"
       ],
-      "answer": "Microservices",
-      "linkedin_link": "https://www.linkedin.com/learning/microservices-foundations"
+      "answer": "Microservices"
     },
     {
       "id": 80,
@@ -976,10 +878,8 @@
         "Prototype",
         "Spiral"
       ],
-      "answer": "V-model",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "V-model"
     },
-
     {
       "id": 81,
       "question": "Which artifact records assumptions that justify a particular system architecture?",
@@ -989,8 +889,7 @@
         "DFD",
         "Risk register"
       ],
-      "answer": "Architecture decision records",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+      "answer": "Architecture decision records"
     },
     {
       "id": 82,
@@ -1001,8 +900,7 @@
         "Scheduled ETL jobs",
         "REST API calls"
       ],
-      "answer": "Event streaming",
-      "linkedin_link": "https://www.linkedin.com/learning/data-engineering-foundations"
+      "answer": "Event streaming"
     },
     {
       "id": 83,
@@ -1013,8 +911,7 @@
         "Adding indexes",
         "Collecting UI metrics"
       ],
-      "answer": "Profiling data patterns",
-      "linkedin_link": "https://www.linkedin.com/learning/data-cleaning"
+      "answer": "Profiling data patterns"
     },
     {
       "id": 84,
@@ -1025,8 +922,7 @@
         "Load testing",
         "Stress testing"
       ],
-      "answer": "Accessibility testing",
-      "linkedin_link": "https://www.linkedin.com/learning/web-accessibility"
+      "answer": "Accessibility testing"
     },
     {
       "id": 85,
@@ -1037,10 +933,8 @@
         "Increase RAM",
         "Enable verbose logging"
       ],
-      "answer": "Batch requests",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Batch requests"
     },
-
     {
       "id": 86,
       "question": "A requirement reads: 'System must be easy to use.' What is the problem?",
@@ -1050,8 +944,7 @@
         "It requires refactoring",
         "It is a functional defect"
       ],
-      "answer": "It is not testable",
-      "linkedin_link": "https://www.linkedin.com/learning/writing-requirements-documents"
+      "answer": "It is not testable"
     },
     {
       "id": 87,
@@ -1062,8 +955,7 @@
         "Sequence diagram",
         "State diagram"
       ],
-      "answer": "Context diagram",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-essential-modeling"
+      "answer": "Context diagram"
     },
     {
       "id": 88,
@@ -1074,8 +966,7 @@
         "Synchronous replication",
         "Nightly snapshot"
       ],
-      "answer": "Synchronous replication",
-      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+      "answer": "Synchronous replication"
     },
     {
       "id": 89,
@@ -1086,8 +977,7 @@
         "Basic auth",
         "Local LDAP only"
       ],
-      "answer": "Centralized SSO with SAML/OAuth",
-      "linkedin_link": "https://www.linkedin.com/learning/learning-azure-active-directory"
+      "answer": "Centralized SSO with SAML/OAuth"
     },
     {
       "id": 90,
@@ -1098,10 +988,8 @@
         "UI response consistency",
         "Bug count per release"
       ],
-      "answer": "Requests per second under load",
-      "linkedin_link": "https://www.linkedin.com/learning/performance-testing-foundations"
+      "answer": "Requests per second under load"
     },
-
     {
       "id": 91,
       "question": "A DFD shows multiple processes accessing a data store directly. What should be introduced?",
@@ -1111,8 +999,7 @@
         "More entities",
         "A flowchart"
       ],
-      "answer": "A data access layer",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "A data access layer"
     },
     {
       "id": 92,
@@ -1123,8 +1010,7 @@
         "Local thick clients",
         "Two-tier architecture"
       ],
-      "answer": "Blue-green deployment",
-      "linkedin_link": "https://www.linkedin.com/learning/devops-foundations"
+      "answer": "Blue-green deployment"
     },
     {
       "id": 93,
@@ -1135,8 +1021,7 @@
         "Constraint",
         "Business rule"
       ],
-      "answer": "Non-functional: Performance",
-      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+      "answer": "Non-functional: Performance"
     },
     {
       "id": 94,
@@ -1147,8 +1032,7 @@
         "Regression test",
         "Smoke test"
       ],
-      "answer": "Concurrency test",
-      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+      "answer": "Concurrency test"
     },
     {
       "id": 95,
@@ -1159,10 +1043,8 @@
         "Sequence diagram",
         "Swimlane diagram"
       ],
-      "answer": "Sequence diagram",
-      "linkedin_link": "https://www.linkedin.com/learning/uml-essential-training-2"
+      "answer": "Sequence diagram"
     },
-
     {
       "id": 96,
       "question": "A project has unclear decision-making authority. What document defines roles and responsibilities?",
@@ -1172,8 +1054,7 @@
         "Project charter",
         "Communication plan"
       ],
-      "answer": "RACI matrix",
-      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations"
+      "answer": "RACI matrix"
     },
     {
       "id": 97,
@@ -1184,8 +1065,7 @@
         "Faster UAT execution",
         "Reduced storage requirements"
       ],
-      "answer": "Loose coupling between components",
-      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+      "answer": "Loose coupling between components"
     },
     {
       "id": 98,
@@ -1196,8 +1076,7 @@
         "Move to the cloud",
         "Add an API layer"
       ],
-      "answer": "Perform data cleansing and profiling",
-      "linkedin_link": "https://www.linkedin.com/learning/data-cleaning"
+      "answer": "Perform data cleansing and profiling"
     },
     {
       "id": 99,
@@ -1208,8 +1087,7 @@
         "Planning",
         "Analysis"
       ],
-      "answer": "UAT",
-      "linkedin_link": "https://www.linkedin.com/learning/user-acceptance-testing"
+      "answer": "UAT"
     },
     {
       "id": 100,
@@ -1220,8 +1098,7 @@
         "ERD",
         "PERT chart"
       ],
-      "answer": "Swimlane diagram",
-      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-business-process-modeling"
+      "answer": "Swimlane diagram"
     }
   ]
 }
