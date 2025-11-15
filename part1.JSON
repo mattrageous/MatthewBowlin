@@ -1,0 +1,1227 @@
+{
+  "systems_analysis_and_design_advanced": [
+    {
+      "id": 1,
+      "question": "During the Planning phase, a project scores high in technical feasibility but low in operational feasibility. What is the most likely risk?",
+      "options": [
+        "The system cannot be deployed due to hardware limitations",
+        "Users will resist or fail to adopt the system",
+        "The solution will exceed the budget",
+        "The system cannot integrate with legacy platforms"
+      ],
+      "answer": "Users will resist or fail to adopt the system",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-sdlc"
+    },
+    {
+      "id": 2,
+      "question": "Switching from waterfall to an iterative SDLC increases which risk?",
+      "options": [
+        "Incomplete requirements delaying coding",
+        "Stakeholder involvement fatigue",
+        "Lack of documentation",
+        "Poor code integration"
+      ],
+      "answer": "Stakeholder involvement fatigue",
+      "linkedin_link": "https://www.linkedin.com/learning/agile-foundations"
+    },
+    {
+      "id": 3,
+      "question": "Multiple modules pass unit tests but fail when combined. What does this indicate?",
+      "options": [
+        "Unit testing failure",
+        "Regression testing failure",
+        "Integration testing failure",
+        "Stress testing failure"
+      ],
+      "answer": "Integration testing failure",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 4,
+      "question": "Updating legacy batch jobs will delay deployment by months. Which SDLC artifact must be updated first?",
+      "options": [
+        "RACI matrix",
+        "Risk register",
+        "Work breakdown structure",
+        "Test plan"
+      ],
+      "answer": "Risk register",
+      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations"
+    },
+    {
+      "id": 5,
+      "question": "A stakeholder requests a feature that contradicts an existing business rule. What should you do first?",
+      "options": [
+        "Escalate to the project sponsor",
+        "Update the requirements document",
+        "Analyze the impact of modifying the rule",
+        "Reject the requirement outright"
+      ],
+      "answer": "Analyze the impact of modifying the rule",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+    },
+    
+    {
+      "id": 6,
+      "question": "Which technique best resolves conflicting workflows across multiple decentralized offices?",
+      "options": [
+        "One-on-one interviews",
+        "Brainstorming sessions",
+        "Joint Application Development (JAD)",
+        "Document analysis"
+      ],
+      "answer": "Joint Application Development (JAD)",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-elicitation"
+    },
+    {
+      "id": 7,
+      "question": "The requirement: 'System must respond within 2 seconds 95% of the time during peak load' describes:",
+      "options": [
+        "Functional requirement",
+        "Non-functional performance requirement",
+        "Constraint",
+        "Service-level threshold"
+      ],
+      "answer": "Non-functional performance requirement",
+      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+    },
+    {
+      "id": 8,
+      "question": "A requirement states: 'System must validate license status using the DMV API.' This is a:",
+      "options": [
+        "Business rule",
+        "Non-functional requirement",
+        "External interface requirement",
+        "UI requirement"
+      ],
+      "answer": "External interface requirement",
+      "linkedin_link": "https://www.linkedin.com/learning/writing-requirements-documents"
+    },
+
+    {
+      "id": 9,
+      "question": "A system requires real-time validation with minimal latency and 24/7 scalability. Which architecture is most appropriate?",
+      "options": [
+        "Batch processing",
+        "Event-driven microservices",
+        "Two-tier client/server",
+        "Thick-client desktop"
+      ],
+      "answer": "Event-driven microservices",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+    },
+    {
+      "id": 10,
+      "question": "What is the strongest advantage of a four-tier architecture?",
+      "options": [
+        "Reduced code complexity",
+        "Greater separation of concerns and scalability",
+        "Faster UI development",
+        "Simpler database normalization"
+      ],
+      "answer": "Greater separation of concerns and scalability",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 11,
+      "question": "Why is horizontal scaling preferred over vertical scaling for government systems?",
+      "options": [
+        "Horizontal scaling is always cheaper",
+        "Horizontal scaling provides linear cost increases",
+        "Horizontal scaling reduces single points of failure",
+        "Vertical scaling violates state policy"
+      ],
+      "answer": "Horizontal scaling reduces single points of failure",
+      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+    },
+    {
+      "id": 12,
+      "question": "A REST API system must support 500,000 external calls daily. What is typically the most critical bottleneck?",
+      "options": [
+        "UI rendering",
+        "TLS certificate rotation",
+        "Database read/write contention",
+        "JSON serialization speed"
+      ],
+      "answer": "Database read/write contention",
+      "linkedin_link": "https://www.linkedin.com/learning/database-performance-tuning"
+    },
+
+    {
+      "id": 13,
+      "question": "A defect appears only when two modules run simultaneously. What testing is required?",
+      "options": [
+        "Regression testing",
+        "Concurrency testing",
+        "Unit testing",
+        "Functional testing"
+      ],
+      "answer": "Concurrency testing",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 14,
+      "question": "A system fails during a stress test at 150% load. What should be done first?",
+      "options": [
+        "Increase server memory",
+        "Perform root-cause analysis",
+        "Update deployment schedule",
+        "Add a caching layer"
+      ],
+      "answer": "Perform root-cause analysis",
+      "linkedin_link": "https://www.linkedin.com/learning/agile-testing"
+    },
+    {
+      "id": 15,
+      "question": "Which provides the greatest confidence that all requirements were implemented?",
+      "options": [
+        "User Acceptance Testing report",
+        "Requirements traceability matrix",
+        "Architecture diagram",
+        "Functional test suite"
+      ],
+      "answer": "Requirements traceability matrix",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+    },
+
+    {
+      "id": 16,
+      "question": "During QA review, inconsistent naming conventions are found across code modules. This indicates failure in:",
+      "options": [
+        "Functional testing",
+        "Peer review",
+        "Compliance with coding standards",
+        "UAT"
+      ],
+      "answer": "Compliance with coding standards",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-code-review"
+    },
+
+    {
+      "id": 17,
+      "question": "In DFDs, showing a data store without processes violates which rule?",
+      "options": [
+        "Balancing rule",
+        "Decomposition rule",
+        "Black hole rule",
+        "Data conservation rule"
+      ],
+      "answer": "Data conservation rule",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+    },
+    {
+      "id": 18,
+      "question": "A weak entity in an ERD must have:",
+      "options": [
+        "A derived attribute",
+        "A partial key",
+        "A recursive relationship",
+        "A surrogate key"
+      ],
+      "answer": "A partial key",
+      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-data-modeling"
+    },
+    {
+      "id": 19,
+      "question": "A level-0 DFD contains more data flows than the context diagram. This indicates:",
+      "options": [
+        "Valid decomposition",
+        "Over-normalization",
+        "Balancing error",
+        "Boundary rule violation"
+      ],
+      "answer": "Balancing error",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-essential-modeling"
+    },
+    {
+      "id": 20,
+      "question": "Two processes in a DFD exchange data directly without a data store. The best correction is to:",
+      "options": [
+        "Add a shared data store",
+        "Remove one process",
+        "Convert both to external entities",
+        "Move them to separate diagrams"
+      ],
+      "answer": "Add a shared data store",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+    },
+
+    {
+      "id": 21,
+      "question": "A project suffers repeated scope creep due to changing agency laws. What SDLC tool most effectively mitigates this?",
+      "options": [
+        "Risk management plan",
+        "Change control process",
+        "Work breakdown structure",
+        "Issue log"
+      ],
+      "answer": "Change control process",
+      "linkedin_link": "https://www.linkedin.com/learning/change-management-foundations"
+    },
+    {
+      "id": 22,
+      "question": "Which SDLC approach best supports systems where requirements evolve monthly?",
+      "options": [
+        "Waterfall",
+        "Spiral",
+        "V-model",
+        "Big Bang"
+      ],
+      "answer": "Spiral",
+      "linkedin_link": "https://www.linkedin.com/learning/agile-foundations"
+    },
+    {
+      "id": 23,
+      "question": "A government portal must integrate with 12 external agencies. The MOST critical architectural concern is:",
+      "options": [
+        "UI theme consistency",
+        "API versioning strategy",
+        "Database indexing",
+        "Deployment schedule"
+      ],
+      "answer": "API versioning strategy",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+    },
+    {
+      "id": 24,
+      "question":
+        "A migration from a monolithic system to microservices reveals significant latency between services. What should be implemented first?",
+      "options": [
+        "Distributed caching",
+        "Load balancer",
+        "Circuit breakers",
+        "Reverse proxy"
+      ],
+      "answer": "Distributed caching",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 25,
+      "question": "Which requirement is the most difficult to validate objectively?",
+      "options": [
+        "System must support 5,000 concurrent users",
+        "UI must be intuitive",
+        "API must return response under 1s",
+        "Database must maintain ACID compliance"
+      ],
+      "answer": "UI must be intuitive",
+      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+    },
+
+    {
+      "id": 26,
+      "question": "An analyst uncovers contradictory requirements from two departments. Best first step?",
+      "options": [
+        "Select the requirement that supports agency goals",
+        "Facilitate a requirements reconciliation meeting",
+        "Reject both requirements",
+        "Adopt the requirement from the highest-ranking department"
+      ],
+      "answer": "Facilitate a requirements reconciliation meeting",
+      "linkedin_link": "https://www.linkedin.com/learning/requirements-elicitation-for-business-analysts"
+    },
+    {
+      "id": 27,
+      "question": "What is the primary advantage of using a traceability matrix?",
+      "options": [
+        "Identifies redundant code",
+        "Ensures every requirement is tied to test cases",
+        "Improves UI consistency",
+        "Helps schedule deployments"
+      ],
+      "answer": "Ensures every requirement is tied to test cases",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+    },
+    {
+      "id": 28,
+      "question": "Which architectural pattern best isolates business logic from UI and data layers?",
+      "options": [
+        "Monolithic",
+        "Layered (n-tier)",
+        "Peer-to-peer",
+        "Event streaming"
+      ],
+      "answer": "Layered (n-tier)",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 29,
+      "question": "A performance test reveals that 80% of delays occur due to repeated database lookups. What should be implemented first?",
+      "options": [
+        "Optimize joins",
+        "Add caching",
+        "Normalize tables further",
+        "Increase CPU cores"
+      ],
+      "answer": "Add caching",
+      "linkedin_link": "https://www.linkedin.com/learning/database-performance-tuning"
+    },
+    {
+      "id": 30,
+      "question": "A project requires high security, strong audit trails, and minimal downtime. Which SDLC model is most appropriate?",
+      "options": [
+        "Agile",
+        "V-model",
+        "Big Bang",
+        "Prototype"
+      ],
+      "answer": "V-model",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+
+    {
+      "id": 31,
+      "question": "A system is deployed but shows inconsistent behavior only after unexpected data patterns are entered. This indicates a failure in:",
+      "options": [
+        "Boundary value testing",
+        "Load testing",
+        "Unit testing",
+        "Performance testing"
+      ],
+      "answer": "Boundary value testing",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 32,
+      "question": "A QA lead wants to validate that new code changes didn’t break unrelated modules. Which approach is best?",
+      "options": [
+        "Regression testing",
+        "Functional testing",
+        "Smoke testing",
+        "Unit testing"
+      ],
+      "answer": "Regression testing",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 33,
+      "question": "A system shows poor performance due to serialization overhead. Which format is most efficient?",
+      "options": [
+        "JSON",
+        "XML",
+        "Binary serialization",
+        "CSV"
+      ],
+      "answer": "Binary serialization",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+    },
+    {
+      "id": 34,
+      "question": "A new release introduces intermittent failures under peak traffic. What testing method would best capture this?",
+      "options": [
+        "Smoke testing",
+        "Stress testing",
+        "Unit testing",
+        "UAT"
+      ],
+      "answer": "Stress testing",
+      "linkedin_link": "https://www.linkedin.com/learning/agile-testing"
+    },
+    {
+      "id": 35,
+      "question":
+        "Which testing artifact ensures every test case maps directly to a specific requirement?",
+      "options": [
+        "UAT Script",
+        "Traceability Matrix",
+        "Test Data Workbook",
+        "Bug Report"
+      ],
+      "answer": "Traceability Matrix",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+
+    {
+      "id": 36,
+      "question": "A system needs additional security due to new compliance laws. Which control is most effective?",
+      "options": [
+        "Input validation",
+        "Encryption at rest",
+        "Logging verbosity",
+        "Load balancing"
+      ],
+      "answer": "Encryption at rest",
+      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+    },
+
+    {
+      "id": 37,
+      "question": "A DFD shows a process producing more outputs than inputs without external data sources. This violates:",
+      "options": [
+        "Sink rule",
+        "Black hole rule",
+        "Conservation rule",
+        "Balancing rule"
+      ],
+      "answer": "Black hole rule",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+    },
+    {
+      "id": 38,
+      "question": "An ERD contains a recursive relationship. What does this model?",
+      "options": [
+        "An entity referencing itself",
+        "A weak entity",
+        "A surrogate key dependency",
+        "A one-to-many join table"
+      ],
+      "answer": "An entity referencing itself",
+      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-data-modeling"
+    },
+    {
+      "id": 39,
+      "question": "A context diagram shows five data flows, but the level-0 DFD shows seven. What is this?",
+      "options": [
+        "Logical refinement",
+        "Balancing error",
+        "Valid decomposition",
+        "Boundary rule exception"
+      ],
+      "answer": "Balancing error",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-essential-modeling"
+    },
+    {
+      "id": 40,
+      "question": "A data dictionary indicates optional attributes that are required in the UI. What must be updated?",
+      "options": [
+        "DFD diagrams",
+        "ERD",
+        "Requirements document",
+        "Test cases"
+      ],
+      "answer": "Requirements document",
+      "linkedin_link": "https://www.linkedin.com/learning/writing-requirements-documents"
+    },
+
+    {
+      "id": 41,
+      "question": "Which SDLC tool best ensures that all risks have documented mitigation steps?",
+      "options": [
+        "Issue log",
+        "Risk register",
+        "Scope statement",
+        "Architecture diagram"
+      ],
+      "answer": "Risk register",
+      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations"
+    },
+    {
+      "id": 42,
+      "question": "A software build introduces discrepancies between test and production environments. A failure occurred in:",
+      "options": [
+        "Version control",
+        "Deployment pipeline",
+        "Requirements sign-off",
+        "Stakeholder review"
+      ],
+      "answer": "Deployment pipeline",
+      "linkedin_link": "https://www.linkedin.com/learning/devops-foundations"
+    },
+    {
+      "id": 43,
+      "question": "A state agency must implement FIPS-compliant encryption. This requirement is classified as:",
+      "options": [
+        "Functional",
+        "Non-functional: Security",
+        "Constraint",
+        "External interface requirement"
+      ],
+      "answer": "Non-functional: Security",
+      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+    },
+    {
+      "id": 44,
+      "question": "An API gateway is added to a multi-service architecture. What benefit is achieved?",
+      "options": [
+        "Reduces database indexing",
+        "Centralizes authentication and routing",
+        "Simplifies UI rendering",
+        "Increases testing speed"
+      ],
+      "answer": "Centralizes authentication and routing",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+    },
+    {
+      "id": 45,
+      "question": "Two systems must exchange data but follow different schemas. Best solution?",
+      "options": [
+        "ETL transformation layer",
+        "Database replication",
+        "Batch processing",
+        "Shared schema standard"
+      ],
+      "answer": "ETL transformation layer",
+      "linkedin_link": "https://www.linkedin.com/learning/data-engineering-foundations"
+    },
+
+    {
+      "id": 46,
+      "question": "A project requires strict validation of data quality before loading into a new database. Which tool is best?",
+      "options": [
+        "Unit tests",
+        "Data profiling",
+        "Load balancer",
+        "XML schema validator"
+      ],
+      "answer": "Data profiling",
+      "linkedin_link": "https://www.linkedin.com/learning/data-cleaning"
+    },
+    {
+      "id": 47,
+      "question": "What is the strongest indicator that a requirement is testable?",
+      "options": [
+        "It uses clear and measurable criteria",
+        "Stakeholders approve it",
+        "It appears in multiple workflows",
+        "It describes user behavior"
+      ],
+      "answer": "It uses clear and measurable criteria",
+      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+    },
+    {
+      "id": 48,
+      "question": "A system must remain available during database upgrades. Which architecture supports this?",
+      "options": [
+        "Active-passive failover",
+        "Active-active clustering",
+        "Thick-client desktop",
+        "Monolithic mainframe"
+      ],
+      "answer": "Active-active clustering",
+      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+    },
+    {
+      "id": 49,
+      "question": "A requirement changes six months after go-live. Which SDLC phase does this most impact?",
+      "options": [
+        "Testing",
+        "Maintenance",
+        "Design",
+        "Planning"
+      ],
+      "answer": "Maintenance",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-sdlc"
+    },
+    {
+      "id": 50,
+      "question": "Which visualization best supports workflow optimization efforts?",
+      "options": [
+        "Context diagram",
+        "Swimlane process model",
+        "ERD",
+        "Site map"
+      ],
+      "answer": "Swimlane process model",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-business-process-modeling"
+    },
+    {
+      "id": 51,
+      "question": "A project shows repeated slippage due to late requirement clarifications. Which SDLC artifact should be strengthened to prevent this?",
+      "options": [
+        "Traceability matrix",
+        "Communication plan",
+        "Feasibility study",
+        "Deployment guide"
+      ],
+      "answer": "Communication plan",
+      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations-communication"
+    },
+    {
+      "id": 52,
+      "question": "Which SDLC model provides the strongest risk mitigation for high-cost government systems?",
+      "options": [
+        "Waterfall",
+        "Incremental",
+        "Spiral",
+        "Prototype"
+      ],
+      "answer": "Spiral",
+      "linkedin_link": "https://www.linkedin.com/learning/agile-foundations"
+    },
+    {
+      "id": 53,
+      "question": "A system must process requests from multiple agencies with different SLAs. What is the most critical design consideration?",
+      "options": [
+        "Data normalization",
+        "API throttling and rate limiting",
+        "UI accessibility",
+        "Object-oriented modeling"
+      ],
+      "answer": "API throttling and rate limiting",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+    },
+    {
+      "id": 54,
+      "question": "A requirements document specifies vague user expectations. What technique is most effective for resolving ambiguity?",
+      "options": [
+        "User surveys",
+        "Prototyping",
+        "Peer review",
+        "Regression analysis"
+      ],
+      "answer": "Prototyping",
+      "linkedin_link": "https://www.linkedin.com/learning/ux-foundations-prototyping"
+    },
+    {
+      "id": 55,
+      "question": "A project requires multiple releases where each increment must be tested independently. Which SDLC approach is best?",
+      "options": [
+        "Waterfall",
+        "Incremental model",
+        "Big Bang",
+        "V-model"
+      ],
+      "answer": "Incremental model",
+      "linkedin_link": "https://www.linkedin.com/learning/agile-project-management-with-jira-cloud"
+    },
+
+    {
+      "id": 56,
+      "question": "A system with a high volume of real-time data requires maximum read scalability. Which architecture is most appropriate?",
+      "options": [
+        "Master-slave replication",
+        "CQRS (Command Query Responsibility Segregation)",
+        "Two-tier client/server",
+        "Thick-client cache"
+      ],
+      "answer": "CQRS (Command Query Responsibility Segregation)",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 57,
+      "question": "Which requirement is MOST vulnerable to scope creep?",
+      "options": [
+        "Data validation rules",
+        "Reporting features",
+        "API interface contracts",
+        "Database schema constraints"
+      ],
+      "answer": "Reporting features",
+      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+    },
+    {
+      "id": 58,
+      "question": "A system uses synchronous API calls and suffers from timeout failures under load. What design change is most effective?",
+      "options": [
+        "Enable vertical scaling",
+        "Implement asynchronous messaging queues",
+        "Rewrite all APIs",
+        "Increase memory"
+      ],
+      "answer": "Implement asynchronous messaging queues",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 59,
+      "question": "Which artifact proves that each business rule is implemented and testable?",
+      "options": [
+        "Requirements status sheet",
+        "Test case repository",
+        "Traceability matrix",
+        "Architecture decision record"
+      ],
+      "answer": "Traceability matrix",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+    },
+    {
+      "id": 60,
+      "question": "A new system must integrate with a legacy COBOL database. What is the biggest risk?",
+      "options": [
+        "Lack of documentation",
+        "UI incompatibility",
+        "Missing indexes",
+        "Too many foreign keys"
+      ],
+      "answer": "Lack of documentation",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-5"
+    },
+
+    {
+      "id": 61,
+      "question": "An error occurs only during high concurrency. Which test best isolates the issue?",
+      "options": [
+        "Functional testing",
+        "Concurrency testing",
+        "Regression testing",
+        "Smoke testing"
+      ],
+      "answer": "Concurrency testing",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 62,
+      "question": "A high-security application must ensure every transaction is logged immutably. Best solution?",
+      "options": [
+        "Flat file log",
+        "Append-only database",
+        "Event streaming with retention",
+        "Encrypted Syslog"
+      ],
+      "answer": "Append-only database",
+      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+    },
+    {
+      "id": 63,
+      "question": "The primary purpose of normalization in database design is to:",
+      "options": [
+        "Improve performance",
+        "Reduce redundancy and anomalies",
+        "Enforce foreign keys",
+        "Enhance UI flexibility"
+      ],
+      "answer": "Reduce redundancy and anomalies",
+      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-core-concepts"
+    },
+    {
+      "id": 64,
+      "question": "A project requires modeling of complex state transitions. Which diagram is most useful?",
+      "options": [
+        "DFD",
+        "ERD",
+        "State machine diagram",
+        "Swimlane diagram"
+      ],
+      "answer": "State machine diagram",
+      "linkedin_link": "https://www.linkedin.com/learning/uml-essential-training-2"
+    },
+    {
+      "id": 65,
+      "question": "A process in a DFD has no outputs. This violates:",
+      "options": [
+        "Black hole rule",
+        "Miracle rule",
+        "Balancing rule",
+        "Boundary rule"
+      ],
+      "answer": "Black hole rule",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+    },
+
+    {
+      "id": 66,
+      "question": "A system's response time varies significantly depending on input size. What type of testing identifies the cause?",
+      "options": [
+        "Load testing",
+        "Performance profiling",
+        "Smoke testing",
+        "UAT"
+      ],
+      "answer": "Performance profiling",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 67,
+      "question": "A project uses microservices with shared databases. What is the biggest architectural risk?",
+      "options": [
+        "Tight coupling between services",
+        "Excessive caching",
+        "Slow deployments",
+        "Duplicate APIs"
+      ],
+      "answer": "Tight coupling between services",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 68,
+      "question": "Which type of requirement typically requires the most cross-agency negotiation?",
+      "options": [
+        "Security requirements",
+        "Functional workflow requirements",
+        "UI design standards",
+        "Testing requirements"
+      ],
+      "answer": "Functional workflow requirements",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations"
+    },
+    {
+      "id": 69,
+      "question": "An ERD shows a many-to-many relationship. What must be added?",
+      "options": [
+        "A lookup table",
+        "A bridge (intersection) table",
+        "A surrogate key",
+        "A recursive link"
+      ],
+      "answer": "A bridge (intersection) table",
+      "linkedin_link": "https://www.linkedin.com/learning/database-modeling-and-design"
+    },
+    {
+      "id": 70,
+      "question": "Which method best validates that proposed workflows match real-world user behavior?",
+      "options": [
+        "Use case modeling",
+        "Shadowing and observation",
+        "Stakeholder interviews",
+        "System prototyping"
+      ],
+      "answer": "Shadowing and observation",
+      "linkedin_link": "https://www.linkedin.com/learning/requirements-elicitation-for-business-analysts"
+    },
+
+    {
+      "id": 71,
+      "question": "Mission-critical systems must update state atomically. Which ACID property ensures this?",
+      "options": [
+        "Isolation",
+        "Durability",
+        "Atomicity",
+        "Consistency"
+      ],
+      "answer": "Atomicity",
+      "linkedin_link": "https://www.linkedin.com/learning/database-foundations-core-concepts"
+    },
+    {
+      "id": 72,
+      "question": "An API change breaks multiple external integrations. This indicates failure in:",
+      "options": [
+        "Schema validation",
+        "Versioning strategy",
+        "UAT",
+        "Logging"
+      ],
+      "answer": "Versioning strategy",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-web-apis"
+    },
+    {
+      "id": 73,
+      "question": "A project team wants to reduce duplicate logic across modules. Best approach?",
+      "options": [
+        "Normalization",
+        "Refactoring to shared services",
+        "Adding code documentation",
+        "Changing SDLC model"
+      ],
+      "answer": "Refactoring to shared services",
+      "linkedin_link": "https://www.linkedin.com/learning/clean-code"
+    },
+    {
+      "id": 74,
+      "question": "A system duplicate-checks large datasets using nested loops. What optimization is most effective?",
+      "options": [
+        "Add more RAM",
+        "Replace loops with a hash-based lookup",
+        "Normalize the database",
+        "Switch to XML"
+      ],
+      "answer": "Replace loops with a hash-based lookup",
+      "linkedin_link": "https://www.linkedin.com/learning/algorithms-for-software-engineers"
+    },
+    {
+      "id": 75,
+      "question": "Which documentation artifact is most useful for onboarding new developers?",
+      "options": [
+        "ERD",
+        "Architecture decision records (ADRs)",
+        "DFD",
+        "Test plans"
+      ],
+      "answer": "Architecture decision records (ADRs)",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+    },
+
+    {
+      "id": 76,
+      "question": "A state agency requires audit trails with non-repudiation. Best solution?",
+      "options": [
+        "Plain text logs",
+        "Digital signatures",
+        "Database triggers",
+        "Replication"
+      ],
+      "answer": "Digital signatures",
+      "linkedin_link": "https://www.linkedin.com/learning/cybersecurity-foundations"
+    },
+    {
+      "id": 77,
+      "question": "A CPU-bound process slows system throughput. Best scaling approach?",
+      "options": [
+        "Horizontal scaling",
+        "Vertical scaling",
+        "Batch processing",
+        "Lazy loading"
+      ],
+      "answer": "Vertical scaling",
+      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+    },
+    {
+      "id": 78,
+      "question": "A DFD shows numerous crossing lines and complex routing. What should be done?",
+      "options": [
+        "Add labels",
+        "Split into multiple diagrams",
+        "Remove data stores",
+        "Add external entities"
+      ],
+      "answer": "Split into multiple diagrams",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-data-flow-diagrams"
+    },
+    {
+      "id": 79,
+      "question": "Which system architecture best supports independent deployments?",
+      "options": [
+        "Monolithic",
+        "Layered architecture",
+        "Microservices",
+        "Client-server"
+      ],
+      "answer": "Microservices",
+      "linkedin_link": "https://www.linkedin.com/learning/microservices-foundations"
+    },
+    {
+      "id": 80,
+      "question": "A team wants predictable release cycles with strong test discipline. Which model is best?",
+      "options": [
+        "V-model",
+        "Agile",
+        "Prototype",
+        "Spiral"
+      ],
+      "answer": "V-model",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+
+    {
+      "id": 81,
+      "question": "Which artifact records assumptions that justify a particular system architecture?",
+      "options": [
+        "Traceability matrix",
+        "Architecture decision records",
+        "DFD",
+        "Risk register"
+      ],
+      "answer": "Architecture decision records",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-foundations"
+    },
+    {
+      "id": 82,
+      "question": "A system must synchronize data between multiple databases. Which method is most consistent?",
+      "options": [
+        "Event streaming",
+        "Manual sync scripts",
+        "Scheduled ETL jobs",
+        "REST API calls"
+      ],
+      "answer": "Event streaming",
+      "linkedin_link": "https://www.linkedin.com/learning/data-engineering-foundations"
+    },
+    {
+      "id": 83,
+      "question": "A system needs to detect anomalies in incoming data streams. First step?",
+      "options": [
+        "Normalizing the schema",
+        "Profiling data patterns",
+        "Adding indexes",
+        "Collecting UI metrics"
+      ],
+      "answer": "Profiling data patterns",
+      "linkedin_link": "https://www.linkedin.com/learning/data-cleaning"
+    },
+    {
+      "id": 84,
+      "question": "Which testing type ensures compliance with ADA accessibility standards?",
+      "options": [
+        "UAT",
+        "Accessibility testing",
+        "Load testing",
+        "Stress testing"
+      ],
+      "answer": "Accessibility testing",
+      "linkedin_link": "https://www.linkedin.com/learning/web-accessibility"
+    },
+    {
+      "id": 85,
+      "question": "A system shows performance degradation in distributed calls. First optimization?",
+      "options": [
+        "Batch requests",
+        "Add load balancer",
+        "Increase RAM",
+        "Enable verbose logging"
+      ],
+      "answer": "Batch requests",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+
+    {
+      "id": 86,
+      "question": "A requirement reads: 'System must be easy to use.' What is the problem?",
+      "options": [
+        "It is not testable",
+        "It violates security principles",
+        "It requires refactoring",
+        "It is a functional defect"
+      ],
+      "answer": "It is not testable",
+      "linkedin_link": "https://www.linkedin.com/learning/writing-requirements-documents"
+    },
+    {
+      "id": 87,
+      "question": "Which diagram best shows how users interact with high-level system processes?",
+      "options": [
+        "Context diagram",
+        "ERD",
+        "Sequence diagram",
+        "State diagram"
+      ],
+      "answer": "Context diagram",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-essential-modeling"
+    },
+    {
+      "id": 88,
+      "question": "A system requires immediate failover with no data loss. Best setup?",
+      "options": [
+        "Cold backup",
+        "Asynchronous replication",
+        "Synchronous replication",
+        "Nightly snapshot"
+      ],
+      "answer": "Synchronous replication",
+      "linkedin_link": "https://www.linkedin.com/learning/cloud-computing-foundations"
+    },
+    {
+      "id": 89,
+      "question": "A multi-state agency portal must support different authentication providers. What should be used?",
+      "options": [
+        "Custom login forms",
+        "Centralized SSO with SAML/OAuth",
+        "Basic auth",
+        "Local LDAP only"
+      ],
+      "answer": "Centralized SSO with SAML/OAuth",
+      "linkedin_link": "https://www.linkedin.com/learning/learning-azure-active-directory"
+    },
+    {
+      "id": 90,
+      "question": "Which metric best measures system scalability?",
+      "options": [
+        "Time to deploy",
+        "Requests per second under load",
+        "UI response consistency",
+        "Bug count per release"
+      ],
+      "answer": "Requests per second under load",
+      "linkedin_link": "https://www.linkedin.com/learning/performance-testing-foundations"
+    },
+
+    {
+      "id": 91,
+      "question": "A DFD shows multiple processes accessing a data store directly. What should be introduced?",
+      "options": [
+        "A data access layer",
+        "A new context diagram",
+        "More entities",
+        "A flowchart"
+      ],
+      "answer": "A data access layer",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 92,
+      "question": "Which system architecture best supports zero-downtime deployments?",
+      "options": [
+        "Blue-green deployment",
+        "Mainframe batch jobs",
+        "Local thick clients",
+        "Two-tier architecture"
+      ],
+      "answer": "Blue-green deployment",
+      "linkedin_link": "https://www.linkedin.com/learning/devops-foundations"
+    },
+    {
+      "id": 93,
+      "question": "Which requirement type is most likely impacted by network latency?",
+      "options": [
+        "Functional",
+        "Non-functional: Performance",
+        "Constraint",
+        "Business rule"
+      ],
+      "answer": "Non-functional: Performance",
+      "linkedin_link": "https://www.linkedin.com/learning/software-requirements-foundations"
+    },
+    {
+      "id": 94,
+      "question": "Users report inconsistent behavior when submitting forms rapidly. What test exposes this issue?",
+      "options": [
+        "Stress test",
+        "Concurrency test",
+        "Regression test",
+        "Smoke test"
+      ],
+      "answer": "Concurrency test",
+      "linkedin_link": "https://www.linkedin.com/learning/software-testing-foundations"
+    },
+    {
+      "id": 95,
+      "question": "Which modeling method best captures interactions between system components over time?",
+      "options": [
+        "ERD",
+        "DFD",
+        "Sequence diagram",
+        "Swimlane diagram"
+      ],
+      "answer": "Sequence diagram",
+      "linkedin_link": "https://www.linkedin.com/learning/uml-essential-training-2"
+    },
+
+    {
+      "id": 96,
+      "question": "A project has unclear decision-making authority. What document defines roles and responsibilities?",
+      "options": [
+        "Risk register",
+        "RACI matrix",
+        "Project charter",
+        "Communication plan"
+      ],
+      "answer": "RACI matrix",
+      "linkedin_link": "https://www.linkedin.com/learning/project-management-foundations"
+    },
+    {
+      "id": 97,
+      "question": "What is the PRIMARY benefit of using a service bus in distributed architecture?",
+      "options": [
+        "UI layout simplification",
+        "Loose coupling between components",
+        "Faster UAT execution",
+        "Reduced storage requirements"
+      ],
+      "answer": "Loose coupling between components",
+      "linkedin_link": "https://www.linkedin.com/learning/software-architecture-patterns"
+    },
+    {
+      "id": 98,
+      "question": "A legacy system stores mixed-format text data with errors. What is the first step to modernize it?",
+      "options": [
+        "Encrypt the data",
+        "Perform data cleansing and profiling",
+        "Move to the cloud",
+        "Add an API layer"
+      ],
+      "answer": "Perform data cleansing and profiling",
+      "linkedin_link": "https://www.linkedin.com/learning/data-cleaning"
+    },
+    {
+      "id": 99,
+      "question": "Which SDLC phase validates that the system meets business objectives?",
+      "options": [
+        "Testing",
+        "UAT",
+        "Planning",
+        "Analysis"
+      ],
+      "answer": "UAT",
+      "linkedin_link": "https://www.linkedin.com/learning/user-acceptance-testing"
+    },
+    {
+      "id": 100,
+      "question": "Which documentation artifact best represents cross-departmental workflows?",
+      "options": [
+        "Context diagram",
+        "Swimlane diagram",
+        "ERD",
+        "PERT chart"
+      ],
+      "answer": "Swimlane diagram",
+      "linkedin_link": "https://www.linkedin.com/learning/business-analysis-foundations-business-process-modeling"
+    }
+  ]
+}
