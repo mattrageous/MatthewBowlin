@@ -37,8 +37,7 @@
                 "Region C",
                 "Region D"
             ],
-            "answer": "Region C",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Region C"
         },
         {
             "id": 2,
@@ -77,8 +76,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "B"
         },
         {
             "id": 3,
@@ -117,8 +115,7 @@
                 "Green",
                 "Yellow"
             ],
-            "answer": "Red",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "Red"
         },
         {
             "id": 4,
@@ -152,8 +149,7 @@
                 "March",
                 "April"
             ],
-            "answer": "April",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "April"
         },
         {
             "id": 5,
@@ -192,8 +188,7 @@
                 "V3",
                 "V4"
             ],
-            "answer": "V1",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "V1"
         },
         {
             "id": 6,
@@ -247,8 +242,7 @@
                 "Team C",
                 "All equal"
             ],
-            "answer": "Team A",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "Team A"
         },
         {
             "id": 7,
@@ -287,8 +281,7 @@
                 "Operations",
                 "Security"
             ],
-            "answer": "Security",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "Security"
         },
         {
             "id": 8,
@@ -322,8 +315,7 @@
                 "Q3",
                 "Q4"
             ],
-            "answer": "Q4",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Q4"
         },
         {
             "id": 9,
@@ -357,8 +349,7 @@
                 "IT",
                 "HR"
             ],
-            "answer": "IT",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "IT"
         },
         {
             "id": 10,
@@ -402,8 +393,7 @@
                 "Chen",
                 "Dawson"
             ],
-            "answer": "Smith",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Smith"
         },
         {
             "id": 11,
@@ -447,8 +437,7 @@
                 "Unit Z",
                 "Unit W"
             ],
-            "answer": "Unit Y",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Unit Y"
         },
         {
             "id": 12,
@@ -487,8 +476,7 @@
                 "Hardware",
                 "Software"
             ],
-            "answer": "Access",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "Access"
         },
         {
             "id": 13,
@@ -544,8 +532,7 @@
                 "East",
                 "West"
             ],
-            "answer": "South",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "South"
         },
         {
             "id": 14,
@@ -584,8 +571,7 @@
                 "Database",
                 "HR Portal"
             ],
-            "answer": "VPN",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "VPN"
         },
         {
             "id": 15,
@@ -624,8 +610,7 @@
                 "Gamma",
                 "Delta"
             ],
-            "answer": "Alpha",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "Alpha"
         },
         {
             "id": 16,
@@ -687,8 +672,7 @@
                 "Access",
                 "All categories"
             ],
-            "answer": "Hardware",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "Hardware"
         },
         {
             "id": 17,
@@ -737,8 +721,7 @@
                 "Q3",
                 "Q4"
             ],
-            "answer": "Q3",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Q3"
         },
         {
             "id": 18,
@@ -777,8 +760,7 @@
                 "Buffalo",
                 "Rochester"
             ],
-            "answer": "Albany",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "Albany"
         },
         {
             "id": 19,
@@ -812,8 +794,7 @@
                 "45–59",
                 "60+"
             ],
-            "answer": "30–44",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "30–44"
         },
         {
             "id": 20,
@@ -862,8 +843,7 @@
                 "Gamma",
                 "Delta"
             ],
-            "answer": "Alpha",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "Alpha"
         },
         {
             "id": 21,
@@ -907,8 +887,7 @@
                 "C",
                 "D"
             ],
-            "answer": "D",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "D"
         },
         {
             "id": 22,
@@ -950,8 +929,7 @@
                 "April",
                 "May"
             ],
-            "answer": "April",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "April"
         },
         {
             "id": 23,
@@ -1013,8 +991,7 @@
                 "C",
                 "All equal"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "B"
         },
         {
             "id": 24,
@@ -1063,8 +1040,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "B"
         },
         {
             "id": 25,
@@ -1103,8 +1079,7 @@
                 "Billing",
                 "Reports"
             ],
-            "answer": "Billing",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Billing"
         },
         {
             "id": 26,
@@ -1143,8 +1118,7 @@
                 "East",
                 "West"
             ],
-            "answer": "West",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "West"
         },
         {
             "id": 27,
@@ -1193,8 +1167,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "C"
         },
         {
             "id": 28,
@@ -1238,8 +1211,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "B"
         },
         {
             "id": 29,
@@ -1277,8 +1249,7 @@
                 "2023",
                 "2024"
             ],
-            "answer": "2023",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "2023"
         },
         {
             "id": 30,
@@ -1322,8 +1293,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "C"
         },
         {
             "id": 31,
@@ -1362,8 +1332,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "C"
         },
         {
             "id": 32,
@@ -1407,8 +1376,7 @@
                 "Z",
                 "W"
             ],
-            "answer": "Z",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "Z"
         },
         {
             "id": 33,
@@ -1452,8 +1420,7 @@
                 "Search",
                 "Reports"
             ],
-            "answer": "Login",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "Login"
         },
         {
             "id": 34,
@@ -1502,8 +1469,7 @@
                 "East",
                 "West"
             ],
-            "answer": "North",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "North"
         },
         {
             "id": 35,
@@ -1542,8 +1508,7 @@
                 "C",
                 "D"
             ],
-            "answer": "A",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "A"
         },
         {
             "id": 36,
@@ -1582,8 +1547,7 @@
                 "C",
                 "D"
             ],
-            "answer": "D",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "D"
         },
         {
             "id": 37,
@@ -1637,8 +1601,7 @@
                 "Center 3",
                 "Center 4"
             ],
-            "answer": "Center 3",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "Center 3"
         },
         {
             "id": 38,
@@ -1687,8 +1650,7 @@
                 "C",
                 "D"
             ],
-            "answer": "D",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "D"
         },
         {
             "id": 39,
@@ -1727,8 +1689,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "B"
         },
         {
             "id": 40,
@@ -1767,8 +1728,7 @@
                 "Chen",
                 "Dawson"
             ],
-            "answer": "Smith",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "Smith"
         },
         {
             "id": 41,
@@ -1817,8 +1777,7 @@
                 "C",
                 "D"
             ],
-            "answer": "A",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "A"
         },
         {
             "id": 42,
@@ -1862,8 +1821,7 @@
                 "East",
                 "West"
             ],
-            "answer": "East",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "East"
         },
         {
             "id": 43,
@@ -1902,8 +1860,7 @@
                 "C",
                 "D"
             ],
-            "answer": "D",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "D"
         },
         {
             "id": 44,
@@ -1941,8 +1898,7 @@
                 "11 AM",
                 "12 PM"
             ],
-            "answer": "11 AM",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "11 AM"
         },
         {
             "id": 45,
@@ -1981,8 +1937,7 @@
                 "C",
                 "D"
             ],
-            "answer": "D",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "D"
         },
         {
             "id": 46,
@@ -2024,8 +1979,7 @@
                 "Q4",
                 "No significant difference"
             ],
-            "answer": "Q4",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "Q4"
         },
         {
             "id": 47,
@@ -2074,8 +2028,7 @@
                 "C",
                 "D"
             ],
-            "answer": "A",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "A"
         },
         {
             "id": 48,
@@ -2119,8 +2072,7 @@
                 "Networking",
                 "Security"
             ],
-            "answer": "Hardware",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "Hardware"
         },
         {
             "id": 49,
@@ -2159,8 +2111,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "B"
         },
         {
             "id": 50,
@@ -2209,8 +2160,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "C"
         },
         {
             "id": 51,
@@ -2259,8 +2209,7 @@
                 "C",
                 "D"
             ],
-            "answer": "A",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "A"
         },
         {
             "id": 52,
@@ -2299,8 +2248,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "C"
         },
         {
             "id": 53,
@@ -2344,8 +2292,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "B"
         },
         {
             "id": 54,
@@ -2384,8 +2331,7 @@
                 "Evening",
                 "Overnight"
             ],
-            "answer": "Evening",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "Evening"
         },
         {
             "id": 55,
@@ -2424,8 +2370,7 @@
                 "East",
                 "West"
             ],
-            "answer": "West",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "West"
         },
         {
             "id": 56,
@@ -2459,8 +2404,7 @@
                 "Legal",
                 "Finance"
             ],
-            "answer": "IT",
-            "linkedin_link": "https://www.linkedin.com/learning/data-literacy-exploring-and-describing-data"
+            "answer": "IT"
         },
         {
             "id": 57,
@@ -2498,8 +2442,7 @@
                 "10 AM",
                 "11 AM"
             ],
-            "answer": "11 AM",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "11 AM"
         },
         {
             "id": 58,
@@ -2538,8 +2481,7 @@
                 "Chen",
                 "Dawson"
             ],
-            "answer": "Dawson",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-data-analytics-1-foundations"
+            "answer": "Dawson"
         },
         {
             "id": 59,
@@ -2578,8 +2520,7 @@
                 "C",
                 "D"
             ],
-            "answer": "B",
-            "linkedin_link": "https://www.linkedin.com/learning/learning-to-interpret-existing-data"
+            "answer": "B"
         },
         {
             "id": 60,
@@ -2628,8 +2569,7 @@
                 "C",
                 "D"
             ],
-            "answer": "D",
-            "linkedin_link": "https://www.linkedin.com/learning/data-driven-decisions-in-business-operations"
+            "answer": "D"
         }
     ]
 }
