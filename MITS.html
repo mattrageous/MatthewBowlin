@@ -800,12 +800,6 @@
         <button class="filter-btn" data-category="part5">Part 5</button>
         <button class="filter-btn" data-category="part6">Part 6</button>
         <button class="filter-btn" data-category="part7">Part 7</button>
-        <div class="filter-divider"></div>
-        <button class="filter-btn" data-category="sdlc">SDLC</button>
-        <button class="filter-btn" data-category="requirements">Requirements</button>
-        <button class="filter-btn" data-category="architecture">Architecture</button>
-        <button class="filter-btn" data-category="controls">Testing & QA</button>
-        <button class="filter-btn" data-category="documentation">Documentation</button>
       </div>
     </div>
 
@@ -937,14 +931,16 @@
   <script>
     // JSON Files Configuration
     // Array of JSON file URLs for the 7 parts
+    const BASE_URL = "https://raw.githubusercontent.com/mattrageous/MatthewBowlin/main/";
+
     const JSON_CONFIG = {
-      part1: 'https://raw.githubusercontent.com/mattrageous/MatthewBowlin/refs/heads/main/part1.json',
-      part2: null, // Not ready yet
-      part3: null, // Not ready yet
-      part4: null, // Not ready yet
-      part5: null, // Not ready yet
-      part6: null, // Not ready yet
-      part7: null  // Not ready yet
+      part1: BASE_URL + "part1.json",
+      part2: BASE_URL + "part2.json",
+      part3: BASE_URL + "part3.json",
+      part4: BASE_URL + "part4.json",
+      part5: BASE_URL + "part5.json",
+      part6: BASE_URL + "part6.json",
+      part7: BASE_URL + "part7.json"
     };
     
     // Questions database - will be populated from JSON files
