@@ -929,6 +929,7 @@
   </div>
 
   <script>
+    let originalQuizHTML = "";
     // JSON Files Configuration
     // Array of JSON file URLs for the 7 parts
     const BASE_URL = "https://raw.githubusercontent.com/mattrageous/MatthewBowlin/main/";
@@ -1124,12 +1125,17 @@
 
     // Initialize quiz after questions are loaded
     function initializeQuizAfterLoad() {
-      setupEventListeners();
-      updateFilteredQuestions();
-      displayQuestion();
-      updateProgress();
-      updatePartStats();
-    }
+    const quizContainer = document.getElementById('quizContainer');
+    quizContainer.innerHTML = originalQuizHTML;
+  
+    rebindQuizElements();
+    setupEventListeners();
+    updateFilteredQuestions();
+    displayQuestion();
+    updateProgress();
+    updatePartStats();
+  }
+
 
     // DOM elements
     const questionText = document.getElementById('questionText');
@@ -1149,10 +1155,31 @@
     const linkedinLink = document.getElementById('linkedinLink');
     const resultsSummary = document.getElementById('resultsSummary');
     const quizContainer = document.getElementById('quizContainer');
+  
+    function rebindQuizElements() {
+    questionText = document.getElementById('questionText');
+    optionsContainer = document.getElementById('optionsContainer');
+    questionNumber = document.getElementById('questionNumber');
+    categoryTag = document.getElementById('categoryTag');
+    currentQuestionSpan = document.getElementById('currentQuestion');
+    totalQuestionsSpan = document.getElementById('totalQuestions');
+    correctAnswersSpan = document.getElementById('correctAnswers');
+    scorePercentageSpan = document.getElementById('scorePercentage');
+    progressFill = document.getElementById('progressFill');
+    submitBtn = document.getElementById('submitBtn');
+    prevBtn = document.getElementById('prevBtn');
+    nextBtn = document.getElementById('nextBtn');
+    explanation = document.getElementById('explanation');
+    explanationText = document.getElementById('explanationText');
+    linkedinLink = document.getElementById('linkedinLink');
+    resultsSummary = document.getElementById('resultsSummary');
+    quizContainer = document.getElementById('quizContainer');
+  }
+
 
     // Initialize the quiz
     function initializeQuiz() {
-      loadQuestionsFromExcel();
+      loadQuestionsFromJSON();
     }
 
     function setupEventListeners() {
@@ -1615,7 +1642,12 @@
     }
 
     // Start the quiz when page loads
-    document.addEventListener('DOMContentLoaded', initializeQuiz);
+    document.addEventListener('DOMContentLoaded', () => {
+    const quizContainer = document.getElementById('quizContainer');
+    originalQuizHTML = quizContainer.innerHTML;
+    initializeQuiz();
+  });
+
   </script>
 </body>
 </html>
