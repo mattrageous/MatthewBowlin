@@ -1051,7 +1051,7 @@ async function loadQuestionsFromJSON() {
 /* 8. Parse JSON                                 */
 /* --------------------------------------------- */
 function parseJSONToQuestions(jsonData, partName) {
-  const arr = jsonData.systems_analysis_and_design_questions || jsonData.questions || jsonData.interpreting_tabular_material_advanced || jsonData;
+  const arr = jsonData.systems_analysis_and_design_questions || jsonData.questions || jsonData.interpreting_tabular_material_advanced || jsonData.logical_reasoning_using_flowcharts || jsonData;
   if (!Array.isArray(arr)) return [];
 
   return arr.map((q, index) => {
