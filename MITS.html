@@ -1096,6 +1096,33 @@ function parseJSONToQuestions(jsonData, partName) {
   });
 }
 
+  function setupEventListeners() {
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.category;
+      currentQuestionIndex = 0;
+      updateFilteredQuestions();
+      displayQuestion();
+      updateProgress();
+    });
+  });
+
+  // Navigation
+  prevBtn.addEventListener('click', () => navigateQuestion(-1));
+  nextBtn.addEventListener('click', () => navigateQuestion(1));
+  submitBtn.addEventListener('click', submitAnswer);
+
+  // Random
+  document.getElementById('randomBtn').addEventListener('click', showRandomQuestion);
+
+  // Reset
+  document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+}
+
+
 /* --------------------------------------------- */
 /* 9. Restore HTML + Bind + Start Quiz           */
 /* --------------------------------------------- */
