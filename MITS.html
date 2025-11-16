@@ -204,6 +204,31 @@
       font-weight: 500;
     }
 
+    /* Passage Styles */
+    .passage-container {
+      background: var(--surface-light);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--accent);
+    }
+
+    .passage-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .passage-text {
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 1rem;
+      white-space: pre-wrap;
+    }
+
     /* Progress Section */
     .progress-section {
       margin-bottom: 2rem;
@@ -889,7 +914,10 @@
         <div id="connectionStatus" class="status-message"></div>
         
         <div class="card" style="background: var(--surface-light); margin-bottom: 2rem;">
-          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📝 JSON File Structure</h4>
+          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📝 JSON File Structures</h4>
+          <div style="margin-bottom: 1rem;">
+            <strong style="color: var(--text);">Standard Question Format:</strong>
+          </div>
           <div class="code-block">
             <pre>{
   "systems_analysis_and_design_questions": [
@@ -903,6 +931,28 @@
       "options": ["Option A", "Option B", "Option C", "Option D"],
       "answer": "Option B",
       "explanation": "Detailed explanation here"
+    }
+  ]
+}</pre>
+          </div>
+          <div style="margin: 1rem 0;">
+            <strong style="color: var(--text);">Passage-Based Format:</strong>
+          </div>
+          <div class="code-block">
+            <pre>{
+  "preparing_reports_and_official_documents": [
+    {
+      "id": 1,
+      "passageType": "A",
+      "passage": "Text of passage here...",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "Question about the passage",
+          "options": ["A", "B", "C", "D"],
+          "answer": "Correct option text"
+        }
+      ]
     }
   ]
 }</pre>
@@ -923,6 +973,15 @@
       <div class="question-header">
         <span class="question-number" id="questionNumber">Question 1 of 100</span>
         <span class="category-badge" id="categoryTag">SDLC Phases</span>
+      </div>
+      
+      <!-- Passage Container (shown when needed) -->
+      <div class="passage-container" id="passageContainer" style="display: none;">
+        <div class="passage-header">
+          <span>📄</span>
+          <span>Read the passage below and answer the questions that follow:</span>
+        </div>
+        <div class="passage-text" id="passageText"></div>
       </div>
       
       <div class="question-text" id="questionText">
@@ -1036,6 +1095,8 @@ let explanation;
 let explanationText;
 let resultsSummary;
 let quizContainer;
+let passageContainer;
+let passageText;
 
 /* --------------------------------------------- */
 /* 6. Rebind DOM elements after restoring HTML   */
@@ -1057,6 +1118,8 @@ function rebindQuizElements() {
   explanationText = document.getElementById("explanationText");
   resultsSummary = document.getElementById("resultsSummary");
   quizContainer = document.getElementById("quizContainer");
+  passageContainer = document.getElementById("passageContainer");
+  passageText = document.getElementById("passageText");
 }
 
 /* --------------------------------------------- */
@@ -1163,9 +1226,15 @@ async function loadQuestionsFromJSON() {
 }
 
 /* --------------------------------------------- */
-/* 10. Parse JSON                                */
+/* 10. Parse JSON - Enhanced for Passages        */
 /* --------------------------------------------- */
 function parseJSONToQuestions(jsonData, partName) {
+  // Handle passage-based format (like preparing_reports_and_official_documents)
+  if (jsonData.preparing_reports_and_official_documents) {
+    return parsePassageBasedQuestions(jsonData.preparing_reports_and_official_documents, partName);
+  }
+  
+  // Handle standard question formats
   const arr = jsonData.systems_analysis_and_design_questions || 
     jsonData.questions || 
     jsonData.interpreting_tabular_material_advanced || 
@@ -1174,6 +1243,7 @@ function parseJSONToQuestions(jsonData, partName) {
     jsonData.analyzing_and_evaluating_information ||
     jsonData.preparing_reports_and_official_documents ||
     jsonData;
+    
   if (!Array.isArray(arr)) return [];
 
   return arr.map((q, index) => {
@@ -1183,33 +1253,74 @@ function parseJSONToQuestions(jsonData, partName) {
       part: partName,
       category: determineCategory(q.question),
       question: q.question,
-      table: q.table, // Include table data
+      table: q.table,
       options: q.options,
       correct: correctIndex >= 0 ? correctIndex : 0,
       answer: q.answer,
-      explanation: q.explanation || `The correct answer is "${q.answer}".`
+      explanation: q.explanation || `The correct answer is "${q.answer}".`,
+      isPassageBased: false
     };
   });
 }
 
 /* --------------------------------------------- */
-/* 11. ENHANCED DISPLAY QUESTION FUNCTION        */
+/* 11. Parse Passage-Based Questions             */
+/* --------------------------------------------- */
+function parsePassageBasedQuestions(passageData, partName) {
+  const questions = [];
+  let questionId = 1;
+
+  passageData.forEach((passageItem, passageIndex) => {
+    const passage = passageItem.passage;
+    const passageType = passageItem.passageType;
+    const passageQuestions = passageItem.questions || [];
+
+    passageQuestions.forEach((q, qIndex) => {
+      const correctIndex = q.options?.indexOf(q.answer) ?? 0;
+      questions.push({
+        id: questionId++,
+        passageId: passageItem.id,
+        passageType: passageType,
+        part: partName,
+        category: "passage",
+        passage: passage,
+        question: q.question,
+        options: q.options,
+        correct: correctIndex >= 0 ? correctIndex : 0,
+        answer: q.answer,
+        explanation: q.explanation || `The correct answer is "${q.answer}".`,
+        isPassageBased: true,
+        questionInPassage: q.qid
+      });
+    });
+  });
+
+  return questions;
+}
+
+/* --------------------------------------------- */
+/* 12. ENHANCED DISPLAY QUESTION FUNCTION        */
 /* --------------------------------------------- */
 function displayQuestion() {
   const question = filteredQuestions[currentQuestionIndex];
   if (!question) return;
 
-  // Handle question text and table separately
+  // Handle passage display for passage-based questions
+  if (question.isPassageBased && question.passage) {
+    passageContainer.style.display = 'block';
+    passageText.textContent = question.passage;
+  } else {
+    passageContainer.style.display = 'none';
+  }
+
+  // Handle question text and table display
   let questionContent = question.question;
   
-  // If there's a structured table, extract the question text and render table separately
   if (question.table && Array.isArray(question.table)) {
     // Remove table content from question text if it exists
-    // Split on double newline and take everything before potential table data
     const parts = questionContent.split('\n\n');
     let cleanQuestionText = parts[0];
     
-    // If the question text mentions "table below", keep that context
     if (parts.length > 1 && !parts[0].toLowerCase().includes('table')) {
       cleanQuestionText = questionContent.split(/\n\n[A-Z\s|]+\n/)[0];
     }
@@ -1220,12 +1331,11 @@ function displayQuestion() {
       ${renderTable(question.table)}
     `;
   } else {
-    // Fallback to original text display
     questionText.textContent = questionContent;
   }
 
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${filteredQuestions.length}`;
-  categoryTag.textContent = getCategoryName(question.category, question.part);
+  categoryTag.textContent = getCategoryName(question.category, question.part, question.isPassageBased);
   currentQuestionSpan.textContent = currentQuestionIndex + 1;
 
   // Clear previous options
@@ -1256,7 +1366,7 @@ function displayQuestion() {
   }
 }
 
-  function setupEventListeners() {
+function setupEventListeners() {
   // Filter buttons
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1292,7 +1402,6 @@ function updatePartStats() {
   // Clear previous content
   statsContainer.innerHTML = "";
 
-  // If no questions loaded yet, do nothing
   if (!questionsDB || questionsDB.length === 0) return;
 
   // Count questions by part
@@ -1315,7 +1424,7 @@ function updatePartStats() {
 }
 
 /* --------------------------------------------- */
-/* 12. Restore HTML + Bind + Start Quiz           */
+/* 13. Restore HTML + Bind + Start Quiz           */
 /* --------------------------------------------- */
 function initializeQuizAfterLoad() {
   const container = document.getElementById("quizContainer");
@@ -1330,7 +1439,7 @@ function initializeQuizAfterLoad() {
 }
 
 /* --------------------------------------------- */
-/* 13. Loading UI                                */
+/* 14. Loading UI                                */
 /* --------------------------------------------- */
 function showLoadingState() {
   const qc = document.getElementById("quizContainer");
@@ -1352,7 +1461,7 @@ function showOfflineNotice() {
 }
 
 /* --------------------------------------------- */
-/* 14. Category Detection                         */
+/* 15. Category Detection                         */
 /* --------------------------------------------- */
 function determineCategory(text) {
   const map = {
@@ -1371,7 +1480,7 @@ function determineCategory(text) {
 }
 
 /* --------------------------------------------- */
-/* 15. Initialize Quiz                           */
+/* 16. Initialize Quiz                           */
 /* --------------------------------------------- */
 function initializeQuiz() {
   const savedUrls = localStorage.getItem("jsonUrls");
@@ -1533,13 +1642,18 @@ function initializeQuiz() {
       }
     }
 
-    function getCategoryName(category, part) {
+    function getCategoryName(category, part, isPassageBased = false) {
+      if (isPassageBased) {
+        return `Passage Reading - ${part.toUpperCase()}`;
+      }
+      
       const categoryNames = {
         'sdlc': 'SDLC Phases',
         'requirements': 'Requirements',
         'architecture': 'Architecture', 
         'controls': 'Testing & QA',
         'documentation': 'Documentation',
+        'passage': 'Passage Reading',
         'general': 'General'
       };
       
