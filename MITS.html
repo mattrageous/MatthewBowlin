@@ -401,6 +401,20 @@
       color: var(--text);
     }
 
+    /* Shuffle Indicator */
+    .shuffle-indicator {
+      background: rgba(255, 209, 0, 0.1);
+      border: 1px solid rgba(255, 209, 0, 0.3);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--accent);
+    }
+
     /* Options */
     .options {
       display: grid;
@@ -862,6 +876,8 @@
         <button class="filter-btn" data-category="part5">Part 5</button>
         <button class="filter-btn" data-category="part6">Part 6</button>
         <button class="filter-btn" data-category="part7">Part 7</button>
+        <div class="filter-divider"></div>
+        <button class="filter-btn" id="shuffleToggle" data-shuffle="true">🎲 Shuffle: ON</button>
       </div>
     </div>
 
@@ -975,6 +991,12 @@
         <span class="category-badge" id="categoryTag">SDLC Phases</span>
       </div>
       
+      <!-- Shuffle Indicator -->
+      <div class="shuffle-indicator" id="shuffleIndicator">
+        <span>🎲</span>
+        <span>Answer options have been shuffled for this question</span>
+      </div>
+      
       <!-- Passage Container (shown when needed) -->
       <div class="passage-container" id="passageContainer" style="display: none;">
         <div class="passage-header">
@@ -1057,8 +1079,10 @@ let currentQuestionIndex = 0;
 let currentFilter = "all";
 let userAnswers = {};
 let filteredQuestions = [];
+let questionShuffleMap = {}; // Store shuffle mappings for each question
 let quizCompleted = false;
 let isLoadingQuestions = false;
+let shuffleEnabled = true; // Global shuffle setting
 
 /* --------------------------------------------- */
 /* 4. Fallback Questions                         */
@@ -1097,6 +1121,7 @@ let resultsSummary;
 let quizContainer;
 let passageContainer;
 let passageText;
+let shuffleIndicator;
 
 /* --------------------------------------------- */
 /* 6. Rebind DOM elements after restoring HTML   */
@@ -1120,10 +1145,64 @@ function rebindQuizElements() {
   quizContainer = document.getElementById("quizContainer");
   passageContainer = document.getElementById("passageContainer");
   passageText = document.getElementById("passageText");
+  shuffleIndicator = document.getElementById("shuffleIndicator");
 }
 
 /* --------------------------------------------- */
-/* 7. TABLE RENDERING FUNCTION                   */
+/* 7. SHUFFLE UTILITIES                          */
+/* --------------------------------------------- */
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Create or get shuffle mapping for a question
+function getShuffleMapping(questionId, originalOptions) {
+  if (!shuffleEnabled) {
+    // Return identity mapping if shuffling is disabled
+    return originalOptions.map((_, index) => index);
+  }
+
+  if (!questionShuffleMap[questionId]) {
+    // Create array of indices [0, 1, 2, 3] and shuffle them
+    const indices = originalOptions.map((_, index) => index);
+    questionShuffleMap[questionId] = shuffleArray(indices);
+  }
+  return questionShuffleMap[questionId];
+}
+
+// Apply shuffle mapping to options
+function getShuffledOptions(question) {
+  const shuffleMapping = getShuffleMapping(question.id, question.options);
+  return shuffleMapping.map(index => question.options[index]);
+}
+
+// Convert user's selected index back to original index
+function getOriginalIndex(questionId, shuffledIndex) {
+  if (!shuffleEnabled) {
+    return shuffledIndex;
+  }
+  const shuffleMapping = questionShuffleMap[questionId];
+  return shuffleMapping[shuffledIndex];
+}
+
+// Convert original correct index to shuffled index for display
+function getShuffledCorrectIndex(questionId, originalCorrectIndex) {
+  if (!shuffleEnabled) {
+    return originalCorrectIndex;
+  }
+  const shuffleMapping = questionShuffleMap[questionId];
+  return shuffleMapping.indexOf(originalCorrectIndex);
+}
+
+/* --------------------------------------------- */
+/* 8. TABLE RENDERING FUNCTION                   */
 /* --------------------------------------------- */
 function renderTable(tableData) {
   if (!Array.isArray(tableData) || tableData.length === 0) {
@@ -1164,7 +1243,7 @@ function renderTable(tableData) {
 }
 
 /* --------------------------------------------- */
-/* 8. HTML ESCAPE FUNCTION                       */
+/* 9. HTML ESCAPE FUNCTION                       */
 /* --------------------------------------------- */
 function escapeHtml(unsafe) {
   return unsafe
@@ -1177,7 +1256,7 @@ function escapeHtml(unsafe) {
 }
 
 /* --------------------------------------------- */
-/* 9. JSON Loader                                */
+/* 10. JSON Loader                               */
 /* --------------------------------------------- */
 async function loadQuestionsFromJSON() {
   try {
@@ -1226,7 +1305,7 @@ async function loadQuestionsFromJSON() {
 }
 
 /* --------------------------------------------- */
-/* 10. Parse JSON - Enhanced for Passages        */
+/* 11. Parse JSON - Enhanced for Passages        */
 /* --------------------------------------------- */
 function parseJSONToQuestions(jsonData, partName) {
   // Handle passage-based format (like preparing_reports_and_official_documents)
@@ -1264,7 +1343,7 @@ function parseJSONToQuestions(jsonData, partName) {
 }
 
 /* --------------------------------------------- */
-/* 11. Parse Passage-Based Questions             */
+/* 12. Parse Passage-Based Questions             */
 /* --------------------------------------------- */
 function parsePassageBasedQuestions(passageData, partName) {
   const questions = [];
@@ -1299,7 +1378,7 @@ function parsePassageBasedQuestions(passageData, partName) {
 }
 
 /* --------------------------------------------- */
-/* 12. ENHANCED DISPLAY QUESTION FUNCTION        */
+/* 13. ENHANCED DISPLAY QUESTION FUNCTION        */
 /* --------------------------------------------- */
 function displayQuestion() {
   const question = filteredQuestions[currentQuestionIndex];
@@ -1311,6 +1390,13 @@ function displayQuestion() {
     passageText.textContent = question.passage;
   } else {
     passageContainer.style.display = 'none';
+  }
+
+  // Show/hide shuffle indicator
+  if (shuffleEnabled) {
+    shuffleIndicator.style.display = 'flex';
+  } else {
+    shuffleIndicator.style.display = 'none';
   }
 
   // Handle question text and table display
@@ -1341,8 +1427,11 @@ function displayQuestion() {
   // Clear previous options
   optionsContainer.innerHTML = '';
   
-  // Create option elements
-  question.options.forEach((option, index) => {
+  // Get shuffled options
+  const shuffledOptions = getShuffledOptions(question);
+  
+  // Create option elements with shuffled options
+  shuffledOptions.forEach((option, index) => {
     const optionDiv = document.createElement('div');
     optionDiv.className = 'option';
     optionDiv.innerHTML = `
@@ -1370,7 +1459,16 @@ function setupEventListeners() {
   // Filter buttons
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      // Handle shuffle toggle
+      if (btn.id === 'shuffleToggle') {
+        toggleShuffle();
+        return;
+      }
+
+      // Handle category filtering
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        if (b.id !== 'shuffleToggle') b.classList.remove('active');
+      });
       btn.classList.add('active');
       currentFilter = btn.dataset.category;
       currentQuestionIndex = 0;
@@ -1393,6 +1491,27 @@ function setupEventListeners() {
 
   // Admin toggle
   document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
+}
+
+function toggleShuffle() {
+  shuffleEnabled = !shuffleEnabled;
+  const shuffleBtn = document.getElementById('shuffleToggle');
+  
+  if (shuffleEnabled) {
+    shuffleBtn.textContent = '🎲 Shuffle: ON';
+    shuffleBtn.classList.add('active');
+    // Clear existing shuffle mappings to generate new ones
+    questionShuffleMap = {};
+  } else {
+    shuffleBtn.textContent = '🔒 Shuffle: OFF';
+    shuffleBtn.classList.remove('active');
+  }
+  
+  // Redisplay current question with new shuffle setting
+  displayQuestion();
+  
+  // Save preference
+  localStorage.setItem('shuffleEnabled', shuffleEnabled.toString());
 }
 
 function updatePartStats() {
@@ -1424,7 +1543,7 @@ function updatePartStats() {
 }
 
 /* --------------------------------------------- */
-/* 13. Restore HTML + Bind + Start Quiz           */
+/* 14. Restore HTML + Bind + Start Quiz          */
 /* --------------------------------------------- */
 function initializeQuizAfterLoad() {
   const container = document.getElementById("quizContainer");
@@ -1432,6 +1551,23 @@ function initializeQuizAfterLoad() {
 
   rebindQuizElements();
   setupEventListeners();
+  
+  // Restore shuffle preference
+  const savedShuffle = localStorage.getItem('shuffleEnabled');
+  if (savedShuffle !== null) {
+    shuffleEnabled = savedShuffle === 'true';
+  }
+  
+  // Update shuffle button display
+  const shuffleBtn = document.getElementById('shuffleToggle');
+  if (shuffleEnabled) {
+    shuffleBtn.textContent = '🎲 Shuffle: ON';
+    shuffleBtn.classList.add('active');
+  } else {
+    shuffleBtn.textContent = '🔒 Shuffle: OFF';
+    shuffleBtn.classList.remove('active');
+  }
+  
   updateFilteredQuestions();
   displayQuestion();
   updateProgress();
@@ -1439,7 +1575,7 @@ function initializeQuizAfterLoad() {
 }
 
 /* --------------------------------------------- */
-/* 14. Loading UI                                */
+/* 15. Loading UI                                */
 /* --------------------------------------------- */
 function showLoadingState() {
   const qc = document.getElementById("quizContainer");
@@ -1461,7 +1597,7 @@ function showOfflineNotice() {
 }
 
 /* --------------------------------------------- */
-/* 15. Category Detection                         */
+/* 16. Category Detection                         */
 /* --------------------------------------------- */
 function determineCategory(text) {
   const map = {
@@ -1480,7 +1616,7 @@ function determineCategory(text) {
 }
 
 /* --------------------------------------------- */
-/* 16. Initialize Quiz                           */
+/* 17. Initialize Quiz                           */
 /* --------------------------------------------- */
 function initializeQuiz() {
   const savedUrls = localStorage.getItem("jsonUrls");
@@ -1519,8 +1655,11 @@ function initializeQuiz() {
       
       if (!selectedOption) return;
       
-      const selectedIndex = Array.from(document.querySelectorAll('.option')).indexOf(selectedOption);
-      userAnswers[question.id] = selectedIndex;
+      const selectedShuffledIndex = Array.from(document.querySelectorAll('.option')).indexOf(selectedOption);
+      // Convert shuffled index back to original index
+      const selectedOriginalIndex = getOriginalIndex(question.id, selectedShuffledIndex);
+      
+      userAnswers[question.id] = selectedOriginalIndex;
       
       showAnswerState(question.id);
       updateProgress();
@@ -1528,17 +1667,23 @@ function initializeQuiz() {
 
     function showAnswerState(questionId) {
       const question = filteredQuestions.find(q => q.id === questionId);
-      const userAnswer = userAnswers[questionId];
+      const userAnswerOriginal = userAnswers[questionId];
       const options = document.querySelectorAll('.option');
+      
+      // Get the correct answer in shuffled position
+      const shuffledCorrectIndex = getShuffledCorrectIndex(questionId, question.correct);
+      // Get the user's answer in shuffled position
+      const userShuffledIndex = questionShuffleMap[questionId] ? 
+        questionShuffleMap[questionId].indexOf(userAnswerOriginal) : userAnswerOriginal;
       
       options.forEach((option, index) => {
         option.classList.remove('selected', 'correct', 'incorrect');
-        if (index === question.correct) {
+        if (index === shuffledCorrectIndex) {
           option.classList.add('correct');
-        } else if (index === userAnswer && userAnswer !== question.correct) {
+        } else if (index === userShuffledIndex && userAnswerOriginal !== question.correct) {
           option.classList.add('incorrect');
         }
-        if (index === userAnswer) {
+        if (index === userShuffledIndex) {
           option.classList.add('selected');
         }
       });
@@ -1598,6 +1743,7 @@ function initializeQuiz() {
 
     function resetQuiz() {
       userAnswers = {};
+      questionShuffleMap = {}; // Clear shuffle mappings for fresh start
       currentQuestionIndex = 0;
       quizCompleted = false;
       resultsSummary.classList.remove('show');
