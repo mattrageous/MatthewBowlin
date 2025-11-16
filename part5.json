@@ -1,0 +1,1104 @@
+{
+    "analyzing_and_evaluating_information": [
+        {
+            "id": 1,
+            "question": "A report states that complaints increased from 400 to 520 in one year. Which conclusion is most accurate?",
+            "options": [
+                "Complaints increased by 20%",
+                "Complaints increased by 30%",
+                "Complaints doubled",
+                "The severity of complaints increased"
+            ],
+            "answer": "Complaints increased by 30%"
+        },
+        {
+            "id": 2,
+            "question": "A memo notes that Department A completed 90% of tasks, while Department B completed 75%. Which is the most reasonable conclusion?",
+            "options": [
+                "Department A is more efficient than Department B",
+                "Department B has fewer employees",
+                "Department A had easier tasks",
+                "Both departments performed equally"
+            ],
+            "answer": "Department A is more efficient than Department B"
+        },
+        {
+            "id": 3,
+            "question": "A chart shows that processing times decreased consistently each quarter. What does this trend strongly suggest?",
+            "options": [
+                "Performance is declining",
+                "Process improvements were effective",
+                "Staffing decreased",
+                "Errors increased"
+            ],
+            "answer": "Process improvements were effective"
+        },
+        {
+            "id": 4,
+            "question": "A dataset shows Employee X completed 40 cases, Employee Y completed 35, and Employee Z completed 60. Which employee had the highest workload?",
+            "options": [
+                "X",
+                "Y",
+                "Z",
+                "X and Y"
+            ],
+            "answer": "Z"
+        },
+        {
+            "id": 5,
+            "question": "A policy change led to a 15% reduction in overdue cases. What is the best conclusion?",
+            "options": [
+                "The policy was effective",
+                "Staffing levels increased",
+                "Case complexity decreased",
+                "The change caused more errors"
+            ],
+            "answer": "The policy was effective"
+        },
+        {
+            "id": 6,
+            "question": "If an email states that the system will be offline from 2 PM–4 PM daily for maintenance, what is the most accurate conclusion?",
+            "options": [
+                "The system is available 24 hours a day",
+                "The system is unavailable during scheduled maintenance hours",
+                "The system is offline every day",
+                "Users may access it at any time"
+            ],
+            "answer": "The system is unavailable during scheduled maintenance hours"
+        },
+        {
+            "id": 7,
+            "question": "A chart shows that Unit A resolves cases 25% faster than Unit B. Which is the most reasonable explanation?",
+            "options": [
+                "Unit A uses more efficient processes",
+                "Unit B has better staff",
+                "Unit B handles easier cases",
+                "Unit A skips important steps"
+            ],
+            "answer": "Unit A uses more efficient processes"
+        },
+        {
+            "id": 8,
+            "question": "A survey shows 70% of staff prefer a hybrid schedule, 20% prefer fully remote, and 10% prefer in-office. Which conclusion is most supported?",
+            "options": [
+                "Most staff prefer in-office work",
+                "Staff overwhelmingly prefer some form of remote work",
+                "Remote work reduces performance",
+                "In-office work is more popular"
+            ],
+            "answer": "Staff overwhelmingly prefer some form of remote work"
+        },
+        {
+            "id": 9,
+            "question": "A table indicates that error rates dropped from 12% to 4%. Which conclusion is most accurate?",
+            "options": [
+                "Error rates improved by two-thirds",
+                "Error rates doubled",
+                "Error rates remained stable",
+                "The number of employees increased"
+            ],
+            "answer": "Error rates improved by two-thirds"
+        },
+        {
+            "id": 10,
+            "question": "A report shows that wait times increased despite adding two new staff. Which conclusion is most likely?",
+            "options": [
+                "The new staff were not properly trained",
+                "Demand for services increased",
+                "The new staff reduced productivity",
+                "Nothing changed in the department"
+            ],
+            "answer": "Demand for services increased"
+        },
+        {
+            "id": 11,
+            "question": "A letter states: “Due to system updates, responses may be delayed.” What is the best interpretation?",
+            "options": [
+                "Responses will be immediate",
+                "Processing times may slow temporarily",
+                "The system is permanently shut down",
+                "Staff are unavailable"
+            ],
+            "answer": "Processing times may slow temporarily"
+        },
+        {
+            "id": 12,
+            "question": "A list shows five project proposals. Only Proposal 3 meets all required criteria. What is the most logical conclusion?",
+            "options": [
+                "Proposal 3 should be selected",
+                "All proposals should be rejected",
+                "Proposals are unnecessary",
+                "Proposals 1–5 are equal"
+            ],
+            "answer": "Proposal 3 should be selected"
+        },
+        {
+            "id": 13,
+            "question": "If a chart shows a sharp rise in service requests during winter months, what pattern does this indicate?",
+            "options": [
+                "Random variation",
+                "Seasonal trend",
+                "Declining service demand",
+                "Error in the dataset"
+            ],
+            "answer": "Seasonal trend"
+        },
+        {
+            "id": 14,
+            "question": "A meeting summary states that staff retention improved after new benefits were offered. Which conclusion is supported?",
+            "options": [
+                "Benefits helped reduce turnover",
+                "Training improved retention",
+                "Workloads decreased",
+                "Policies were stricter"
+            ],
+            "answer": "Benefits helped reduce turnover"
+        },
+        {
+            "id": 15,
+            "question": "A bar graph shows Case Type A increased while Case Type B decreased. What is the most reasonable conclusion?",
+            "options": [
+                "Demand shifted toward Case Type A",
+                "Case Type A is less important",
+                "Case Type B became more common",
+                "Overall cases declined"
+            ],
+            "answer": "Demand shifted toward Case Type A"
+        },
+        {
+            "id": 16,
+            "question": "A memo notes that the number of clients increased and the number of staff also increased during the same period. Which conclusion is most accurate based on the information provided?",
+            "options": [
+                "Both client and staff numbers increased",
+                "Workload decreased",
+                "Workload increased disproportionately",
+                "Staff reductions caused performance changes"
+            ],
+            "answer": "Both client and staff numbers increased"
+        },
+        {
+            "id": 17,
+            "question": "A table shows that 60% of clients resolved issues on first contact, up from 45%. What does this improvement suggest?",
+            "options": [
+                "Higher first-contact resolution rates",
+                "More repeat calls",
+                "Lower staff performance",
+                "System failures"
+            ],
+            "answer": "Higher first-contact resolution rates"
+        },
+        {
+            "id": 18,
+            "question": "A timeline shows that processing delays began immediately after a system upgrade. Which conclusion is most supported?",
+            "options": [
+                "The upgrade caused the delays",
+                "Staff performance worsened independently",
+                "Client behavior changed",
+                "Processing systems improved"
+            ],
+            "answer": "The upgrade caused the delays"
+        },
+        {
+            "id": 19,
+            "question": "A document shows that Team A reduced backlog by 50% while Team B reduced by 10%. What is the most valid conclusion?",
+            "options": [
+                "Team A made greater progress",
+                "Team B is better staffed",
+                "Team B had easier cases",
+                "Both teams performed equally"
+            ],
+            "answer": "Team A made greater progress"
+        },
+        {
+            "id": 20,
+            "question": "A memo describes a sudden drop in service quality following staff reductions. What is the likely cause?",
+            "options": [
+                "Insufficient staffing",
+                "Improved morale",
+                "Increased training",
+                "Reduced client demand"
+            ],
+            "answer": "Insufficient staffing"
+        },
+        {
+            "id": 21,
+            "question": "A line graph shows productivity rising while overtime hours fall. Which conclusion is most reasonable?",
+            "options": [
+                "Workers became more efficient",
+                "Overtime was underreported",
+                "Productivity metrics are inaccurate",
+                "Staff worked slower"
+            ],
+            "answer": "Workers became more efficient"
+        },
+        {
+            "id": 22,
+            "question": "A written directive increases documentation requirements. Shortly after, processing times increase. Most likely reason?",
+            "options": [
+                "Documentation takes additional time",
+                "Staff became less skilled",
+                "Client cases decreased",
+                "Systems became faster"
+            ],
+            "answer": "Documentation takes additional time"
+        },
+        {
+            "id": 23,
+            "question": "A dataset shows that accuracy increased while speed decreased. What tradeoff is indicated?",
+            "options": [
+                "More time spent ensured better accuracy",
+                "Less training was provided",
+                "All staff became slower",
+                "Errors increased"
+            ],
+            "answer": "More time spent ensured better accuracy"
+        },
+        {
+            "id": 24,
+            "question": "Two departments report identical average processing times, but Department A also has lower error rates. Best conclusion?",
+            "options": [
+                "Department A performs better overall",
+                "Department B is more accurate",
+                "Both departments perform equally",
+                "Department B has more staff"
+            ],
+            "answer": "Department A performs better overall"
+        },
+        {
+            "id": 25,
+            "question": "A graph shows a steep decline in user satisfaction after policy restrictions. What is the most likely explanation?",
+            "options": [
+                "Users reacted negatively to the restrictions",
+                "The graph is inaccurate",
+                "Users prefer strict rules",
+                "Satisfaction increased"
+            ],
+            "answer": "Users reacted negatively to the restrictions"
+        },
+        {
+            "id": 26,
+            "question": "If Report A contains inconsistent totals across tables, what is the most likely issue?",
+            "options": [
+                "Data integrity problems",
+                "High accuracy",
+                "Effective formatting",
+                "Correct formulas"
+            ],
+            "answer": "Data integrity problems"
+        },
+        {
+            "id": 27,
+            "question": "A report concludes that customer complaints decreased after launching a new help portal. What supports this conclusion?",
+            "options": [
+                "A drop in complaint numbers after implementation",
+                "Employee surveys",
+                "System logs unrelated to complaints",
+                "Website traffic increase"
+            ],
+            "answer": "A drop in complaint numbers after implementation"
+        },
+        {
+            "id": 28,
+            "question": "A chart shows that revenue increases when advertising increases. Which relationship is suggested?",
+            "options": [
+                "Positive correlation",
+                "Negative correlation",
+                "No correlation",
+                "Random variation"
+            ],
+            "answer": "Positive correlation"
+        },
+        {
+            "id": 29,
+            "question": "A timeline shows project delays occurred only after leadership changes. What is the likely cause?",
+            "options": [
+                "Leadership transition effects",
+                "Improved productivity",
+                "Increased funding",
+                "Fewer tasks assigned"
+            ],
+            "answer": "Leadership transition effects"
+        },
+        {
+            "id": 30,
+            "question": "A graph indicates that error rates spike at the end of each month. What is the most reasonable explanation?",
+            "options": [
+                "End-of-month workload pressures",
+                "Staff are more skilled at month-end",
+                "Systems fail monthly",
+                "Reports are inaccurate"
+            ],
+            "answer": "End-of-month workload pressures"
+        },
+        {
+            "id": 31,
+            "question": "A dataset shows a sudden outlier significantly different from all other values. What should be assessed first?",
+            "options": [
+                "Whether the outlier is due to error",
+                "If all data is irrelevant",
+                "If employees need retraining",
+                "If systems should be retired"
+            ],
+            "answer": "Whether the outlier is due to error"
+        },
+        {
+            "id": 32,
+            "question": "A memo states processing times increased by 10%, although staffing remained constant. Most likely reason?",
+            "options": [
+                "Increased workload",
+                "Improved morale",
+                "Reduced client demand",
+                "Fewer system issues"
+            ],
+            "answer": "Increased workload"
+        },
+        {
+            "id": 33,
+            "question": "An evaluation report says a new software tool reduced manual entry errors by 40%. What does this support?",
+            "options": [
+                "Automation improved accuracy",
+                "Staff performance declined",
+                "The tool is ineffective",
+                "No measurable change occurred"
+            ],
+            "answer": "Automation improved accuracy"
+        },
+        {
+            "id": 34,
+            "question": "A dataset shows that customer inquiries doubled, but the percentage of inquiries successfully resolved (the resolution rate) remained constant. What does this imply?",
+            "options": [
+                "Staff kept up with higher demand",
+                "Backlog increased sharply",
+                "Resolution rate fell",
+                "Staff performance dropped"
+            ],
+            "answer": "Staff kept up with higher demand"
+        },
+        {
+            "id": 35,
+            "question": "A table shows Budget A increased while Budget B decreased. What conclusion is most accurate?",
+            "options": [
+                "Funds were reallocated",
+                "Spending doubled overall",
+                "Budgets are unrelated",
+                "Everything increased"
+            ],
+            "answer": "Funds were reallocated"
+        },
+        {
+            "id": 36,
+            "question": "A chart shows that training hours increased while error rates decreased. Which conclusion is best supported?",
+            "options": [
+                "Training was effective",
+                "Training reduced efficiency",
+                "Training increased errors",
+                "Employees ignored training"
+            ],
+            "answer": "Training was effective"
+        },
+        {
+            "id": 37,
+            "question": "A report states that two indicators move in opposite directions over time. What relationship is indicated?",
+            "options": [
+                "Negative correlation",
+                "Positive correlation",
+                "No correlation",
+                "Causal relationship"
+            ],
+            "answer": "Negative correlation"
+        },
+        {
+            "id": 38,
+            "question": "A schedule indicates staff shortages on Fridays and the lowest productivity occurs on Fridays. What is the strongest conclusion?",
+            "options": [
+                "Staffing shortages reduce productivity",
+                "Friday tasks are easier",
+                "Systems only fail on Fridays",
+                "Employees prefer Fridays"
+            ],
+            "answer": "Staffing shortages reduce productivity"
+        },
+        {
+            "id": 39,
+            "question": "A chart shows clients wait longer during early mornings. What is the likely cause?",
+            "options": [
+                "Morning demand surge",
+                "System failure",
+                "Understaffing at night",
+                "Reduced afternoon demand"
+            ],
+            "answer": "Morning demand surge"
+        },
+        {
+            "id": 40,
+            "question": "A monthly report shows errors spike whenever a certain employee is absent. Most likely explanation?",
+            "options": [
+                "The employee plays a key role in quality control",
+                "Staff work harder when the employee is present",
+                "Systems malfunction with absences",
+                "The data is fabricated"
+            ],
+            "answer": "The employee plays a key role in quality control"
+        },
+        {
+            "id": 41,
+            "question": "A provided diagram shows that approval delays occur only at Step 4. Which conclusion is most accurate?",
+            "options": [
+                "Step 4 is the bottleneck",
+                "All steps are equally slow",
+                "The process has no delays",
+                "Data is inconclusive"
+            ],
+            "answer": "Step 4 is the bottleneck"
+        },
+        {
+            "id": 42,
+            "question": "If Report B shows inconsistencies with Report A, what is the first action?",
+            "options": [
+                "Verify source data for both reports",
+                "Replace Report A entirely",
+                "Ignore Report B",
+                "Assume Report A is correct"
+            ],
+            "answer": "Verify source data for both reports"
+        },
+        {
+            "id": 43,
+            "question": "A trend line moves steadily upward across all quarters. What is the most reasonable conclusion?",
+            "options": [
+                "Consistent long-term growth",
+                "Sharp decline",
+                "Seasonal variation only",
+                "Random fluctuation"
+            ],
+            "answer": "Consistent long-term growth"
+        },
+        {
+            "id": 44,
+            "question": "If employees report that a new form increases workload, what is the most probable conclusion?",
+            "options": [
+                "The form requires more effort to complete",
+                "Employees misunderstand the form",
+                "Workload decreased",
+                "The form is unnecessary"
+            ],
+            "answer": "The form requires more effort to complete"
+        },
+        {
+            "id": 45,
+            "question": "A report states that 80% of staff completed mandatory training. What does this imply?",
+            "options": [
+                "Most staff are compliant",
+                "Training was skipped",
+                "Training was ineffective",
+                "No staff participated"
+            ],
+            "answer": "Most staff are compliant"
+        },
+        {
+            "id": 46,
+            "question": "A graph shows that peak service demand occurs between noon and 2 PM. What should management assess?",
+            "options": [
+                "Midday staffing levels",
+                "Early morning shutdowns",
+                "Nighttime operations only",
+                "Weekend closures"
+            ],
+            "answer": "Midday staffing levels"
+        },
+        {
+            "id": 47,
+            "question": "A summary indicates that Project C had the highest cost but lowest impact. What is the strongest conclusion?",
+            "options": [
+                "Project C was inefficient",
+                "Project C was the most effective",
+                "Project C saved the most resources",
+                "Project C was unnecessary"
+            ],
+            "answer": "Project C was inefficient"
+        },
+        {
+            "id": 48,
+            "question": "A chart shows a sudden drop in calls after adding a self-service tool. Most reasonable conclusion?",
+            "options": [
+                "Self-service reduced calls",
+                "Phone system crashed",
+                "Clients stopped needing help",
+                "Staff were unavailable"
+            ],
+            "answer": "Self-service reduced calls"
+        },
+        {
+            "id": 49,
+            "question": "A dataset shows a steady decline in errors following one training session but no further decline thereafter. Most likely conclusion?",
+            "options": [
+                "Training improved performance up to a point",
+                "Training was ineffective",
+                "Errors increased after training",
+                "Training caused errors"
+            ],
+            "answer": "Training improved performance up to a point"
+        },
+        {
+            "id": 50,
+            "question": "A written summary notes that decision-making improved after leadership clarified priorities. What is the best conclusion?",
+            "options": [
+                "Clear priorities improved decision-making",
+                "Priorities were unnecessary",
+                "Priorities slowed decisions",
+                "Leadership became less involved"
+            ],
+            "answer": "Clear priorities improved decision-making"
+        },
+        {
+            "id": 51,
+            "question": "A report states that call volume decreased by 18% after adding a virtual assistant feature. Which conclusion is most supported?",
+            "options": [
+                "The virtual assistant reduced call volume",
+                "Call center staffing decreased",
+                "Clients stopped calling altogether",
+                "The phone system malfunctioned"
+            ],
+            "answer": "The virtual assistant reduced call volume"
+        },
+        {
+            "id": 52,
+            "question": "A table shows that employee overtime rose from 120 hours to 200 hours in one quarter. What is the most reasonable explanation?",
+            "options": [
+                "Workload increased significantly",
+                "Employees volunteered for more hours",
+                "Staff performance declined",
+                "Employees took more vacation time"
+            ],
+            "answer": "Workload increased significantly"
+        },
+        {
+            "id": 53,
+            "question": "A chart shows that average processing time decreased while accuracy improved. What does this suggest?",
+            "options": [
+                "Processes became more efficient",
+                "Staff were rushed",
+                "Errors increased",
+                "Work quality declined"
+            ],
+            "answer": "Processes became more efficient"
+        },
+        {
+            "id": 54,
+            "question": "A written summary shows that 3 of 7 policy proposals met required criteria. What conclusion is most accurate?",
+            "options": [
+                "Only three proposals were viable",
+                "All proposals were acceptable",
+                "No proposals met requirements",
+                "Policies are unnecessary"
+            ],
+            "answer": "Only three proposals were viable"
+        },
+        {
+            "id": 55,
+            "question": "A graph shows a sharp increase in website traffic but no change in service requests. What is the most likely explanation?",
+            "options": [
+                "Users visited the site but did not require assistance",
+                "The site malfunctioned",
+                "Service requests decreased",
+                "Traffic data is invalid"
+            ],
+            "answer": "Users visited the site but did not require assistance"
+        },
+        {
+            "id": 56,
+            "question": "A report shows that each team member completed between 20 and 25 cases last week. Which conclusion is most accurate?",
+            "options": [
+                "Workload distribution was consistent",
+                "One employee underperformed",
+                "One employee outperformed",
+                "Case volume varied greatly"
+            ],
+            "answer": "Workload distribution was consistent"
+        },
+        {
+            "id": 57,
+            "question": "A memo states that client complaints dropped after extended office hours were introduced. What is the strongest conclusion?",
+            "options": [
+                "Extended hours improved client satisfaction",
+                "Client needs decreased",
+                "Staffing improved",
+                "Office hours caused more complaints"
+            ],
+            "answer": "Extended hours improved client satisfaction"
+        },
+        {
+            "id": 58,
+            "question": "A dataset shows a 50% increase in resolved cases and a 30% increase in new cases over the same period. Assuming the starting numbers of new and resolved cases were equal, what does this imply about backlog?",
+            "options": [
+                "Resolution capacity exceeded demand growth, reducing backlog",
+                "Demand increased faster than resolution capacity, increasing backlog",
+                "Backlog stayed exactly the same",
+                "Backlog increased sharply despite improvements"
+            ],
+            "answer": "Resolution capacity exceeded demand growth, reducing backlog"
+        },
+        {
+            "id": 59,
+            "question": "A review indicates that Project A cost less but achieved the same outcomes as Project B. Which conclusion is best?",
+            "options": [
+                "Project A was more cost-effective",
+                "Project B was more efficient",
+                "Both projects failed",
+                "Project A was unnecessary"
+            ],
+            "answer": "Project A was more cost-effective"
+        },
+        {
+            "id": 60,
+            "question": "If a table shows consistent year-to-year increases in population, what does this represent?",
+            "options": [
+                "A long-term upward trend",
+                "Random variation",
+                "Population decline",
+                "Seasonal fluctuations"
+            ],
+            "answer": "A long-term upward trend"
+        },
+        {
+            "id": 61,
+            "question": "A memo states that average response time decreased after implementing automation. What conclusion is most reasonable?",
+            "options": [
+                "Automation improved response time",
+                "Fewer requests were received",
+                "Employees worked slower",
+                "Response accuracy declined"
+            ],
+            "answer": "Automation improved response time"
+        },
+        {
+            "id": 62,
+            "question": "A chart shows that holidays correlate with lower productivity. What is the strongest conclusion?",
+            "options": [
+                "Reduced staffing during holidays lowers productivity",
+                "Workloads increase during holidays",
+                "Errors decrease during holidays",
+                "Holidays improve productivity"
+            ],
+            "answer": "Reduced staffing during holidays lowers productivity"
+        },
+        {
+            "id": 63,
+            "question": "A report shows that Region X processed twice as many applications as Region Y with the same number of employees. What is most accurate?",
+            "options": [
+                "Region X was more productive",
+                "Region Y had simpler cases",
+                "Region Y was busier",
+                "Both regions performed equally"
+            ],
+            "answer": "Region X was more productive"
+        },
+        {
+            "id": 64,
+            "question": "A trend analysis shows fluctuations but no overall upward or downward pattern. What does this indicate?",
+            "options": [
+                "No long-term trend",
+                "A clear upward trend",
+                "Performance decline",
+                "Improving accuracy"
+            ],
+            "answer": "No long-term trend"
+        },
+        {
+            "id": 65,
+            "question": "A dataset reveals that clients who use the online form have faster resolution times than those who call. What conclusion is most likely?",
+            "options": [
+                "Online submissions are processed more efficiently",
+                "Phone staff are undertrained",
+                "Online errors are more frequent",
+                "Clients prefer phone calls"
+            ],
+            "answer": "Online submissions are processed more efficiently"
+        },
+        {
+            "id": 66,
+            "question": "After introducing mandatory training, errors decreased by 25%. What conclusion is supported?",
+            "options": [
+                "Training improved employee accuracy",
+                "Errors increased",
+                "Training was ineffective",
+                "Fewer employees worked"
+            ],
+            "answer": "Training improved employee accuracy"
+        },
+        {
+            "id": 67,
+            "question": "A chart shows that the majority of complaints come from one specific region. What is the most reasonable next step?",
+            "options": [
+                "Investigate issues in that region",
+                "Discontinue service to that region",
+                "Hire more staff nationwide",
+                "Ignore the pattern"
+            ],
+            "answer": "Investigate issues in that region"
+        },
+        {
+            "id": 68,
+            "question": "A comparison chart shows Policy B increased efficiency but also increased processing costs. What conclusion is most accurate?",
+            "options": [
+                "Policy B improved efficiency at a higher cost",
+                "Policy B was ineffective",
+                "Policy B reduced costs significantly",
+                "Costs and efficiency moved in opposite directions"
+            ],
+            "answer": "Policy B improved efficiency at a higher cost"
+        },
+        {
+            "id": 69,
+            "question": "A table shows the number of processed applications stayed constant, but staffing decreased. What conclusion is most likely?",
+            "options": [
+                "Staff productivity increased",
+                "Demand dropped",
+                "Processing slowed heavily",
+                "Accuracy declined"
+            ],
+            "answer": "Staff productivity increased"
+        },
+        {
+            "id": 70,
+            "question": "A chart indicates service complaints spiked immediately after a fee increase. What conclusion is most reasonable?",
+            "options": [
+                "Clients reacted negatively to the higher fees",
+                "Service quality improved",
+                "Complaints decreased",
+                "Fee changes had no effect"
+            ],
+            "answer": "Clients reacted negatively to the higher fees"
+        },
+        {
+            "id": 71,
+            "question": "A summary shows that half of all inquiries were resolved on first contact. What does this imply?",
+            "options": [
+                "50% of inquiries required follow-up",
+                "All inquiries required escalation",
+                "Most issues could not be resolved",
+                "Resolution was impossible"
+            ],
+            "answer": "50% of inquiries required follow-up"
+        },
+        {
+            "id": 72,
+            "question": "A report shows that productivity metrics (cases completed per staff member) and quality metrics (error rates and accuracy) have remained stable for the past year, but customer satisfaction scores have significantly dropped in the same period. Which conclusion is most strongly supported by this information?",
+            "options": [
+                "Customer expectations or needs have changed",
+                "Staff productivity has declined",
+                "Service accuracy has deteriorated",
+                "The reporting of satisfaction data is invalid"
+            ],
+            "answer": "Customer expectations or needs have changed"
+        },
+        {
+            "id": 73,
+            "question": "A graph shows that as staffing decreases, backlog increases. What relationship is indicated?",
+            "options": [
+                "Inverse relationship",
+                "Direct relationship",
+                "Random variation",
+                "No relationship"
+            ],
+            "answer": "Inverse relationship"
+        },
+        {
+            "id": 74,
+            "question": "A table shows Project A took twice as long as Project B, even with more staff assigned. What does this suggest?",
+            "options": [
+                "Project A was less efficient",
+                "Project B was poorly managed",
+                "Project B lacked resources",
+                "Both projects performed equally"
+            ],
+            "answer": "Project A was less efficient"
+        },
+        {
+            "id": 75,
+            "question": "A review shows that 80% of system errors occur during peak usage hours. What conclusion is strongest?",
+            "options": [
+                "High traffic increases error frequency",
+                "Errors are unrelated to usage",
+                "System crashes occur randomly",
+                "Users cause system failures"
+            ],
+            "answer": "High traffic increases error frequency"
+        },
+        {
+            "id": 76,
+            "question": "A summary shows that one unit completes 40% of agency workload with only 20% of its staff. What is the most likely conclusion?",
+            "options": [
+                "The unit is highly efficient",
+                "The unit is underperforming",
+                "The unit has too much staff",
+                "Workload is evenly distributed"
+            ],
+            "answer": "The unit is highly efficient"
+        },
+        {
+            "id": 77,
+            "question": "A graph shows stable performance metrics except for one sudden drop in a single month. What should be investigated first?",
+            "options": [
+                "Causes of the outlier month",
+                "Long-term performance decline",
+                "Employee resignations",
+                "Changes in client demographics"
+            ],
+            "answer": "Causes of the outlier month"
+        },
+        {
+            "id": 78,
+            "question": "A dataset reveals an increase in service requests but no increase in staff. What is the most likely outcome?",
+            "options": [
+                "Longer processing times",
+                "Shorter processing times",
+                "Less client demand",
+                "Increased accuracy"
+            ],
+            "answer": "Longer processing times"
+        },
+        {
+            "id": 79,
+            "question": "A review shows that training completion rates vary widely among units. What conclusion is most accurate?",
+            "options": [
+                "Some units are more compliant than others",
+                "All units perform equally",
+                "Training is unnecessary",
+                "Training is 100% complete agency-wide"
+            ],
+            "answer": "Some units are more compliant than others"
+        },
+        {
+            "id": 80,
+            "question": "A chart shows a positive correlation between staff experience and processing accuracy. What does this imply?",
+            "options": [
+                "More experienced staff are more accurate",
+                "Experience reduces accuracy",
+                "Accuracy is random",
+                "Training is unnecessary"
+            ],
+            "answer": "More experienced staff are more accurate"
+        },
+        {
+            "id": 81,
+            "question": "A memo states requests peak every Monday morning. What should management consider?",
+            "options": [
+                "Increasing Monday staffing",
+                "Reducing weekend hours",
+                "Closing Mondays",
+                "Hiring seasonal workers"
+            ],
+            "answer": "Increasing Monday staffing"
+        },
+        {
+            "id": 82,
+            "question": "A report indicates that follow-up inquiries decreased after creating a FAQ page. What conclusion is most reasonable?",
+            "options": [
+                "Clients found answers online",
+                "Staff answered fewer calls",
+                "FAQ increased confusion",
+                "Errors increased"
+            ],
+            "answer": "Clients found answers online"
+        },
+        {
+            "id": 83,
+            "question": "Customer feedback shows frequent complaints about long wait times, but response-time data shows wait times are within standards. What is the likely issue?",
+            "options": [
+                "Customers perceive waits as too long",
+                "Data is incorrect",
+                "Wait times increased significantly",
+                "Employees work too slowly"
+            ],
+            "answer": "Customers perceive waits as too long"
+        },
+        {
+            "id": 84,
+            "question": "A chart shows that as training hours increase, productivity also increases. What relationship is suggested?",
+            "options": [
+                "Positive correlation",
+                "Negative correlation",
+                "No relationship",
+                "Inverse correlation"
+            ],
+            "answer": "Positive correlation"
+        },
+        {
+            "id": 85,
+            "question": "A dataset shows that half of service requests originate from one district. What is the safest conclusion?",
+            "options": [
+                "The district has higher demand",
+                "All districts are equally busy",
+                "The district has lower demand",
+                "Demand is decreasing"
+            ],
+            "answer": "The district has higher demand"
+        },
+        {
+            "id": 86,
+            "question": "A monthly report indicates that cases resolved per staff member increased while total staff decreased. What does this imply?",
+            "options": [
+                "Staff productivity improved",
+                "Workload decreased",
+                "Cases decreased",
+                "Backlog grew"
+            ],
+            "answer": "Staff productivity improved"
+        },
+        {
+            "id": 87,
+            "question": "After implementing new guidelines, the number of incomplete submissions dropped significantly. What is the strongest conclusion?",
+            "options": [
+                "Guidelines improved submission quality",
+                "Guidelines caused confusion",
+                "Submissions stopped entirely",
+                "Staff ignored guidelines"
+            ],
+            "answer": "Guidelines improved submission quality"
+        },
+        {
+            "id": 88,
+            "question": "A chart shows that response times vary widely between employees. What is the most likely explanation?",
+            "options": [
+                "Differences in employee performance",
+                "Data is incorrect",
+                "All employees perform equally",
+                "Response time standards changed"
+            ],
+            "answer": "Differences in employee performance"
+        },
+        {
+            "id": 89,
+            "question": "A report shows that increased outreach led to higher engagement. What conclusion is most accurate?",
+            "options": [
+                "Outreach improved engagement",
+                "Engagement decreased",
+                "Outreach had no effect",
+                "Staffing increased"
+            ],
+            "answer": "Outreach improved engagement"
+        },
+        {
+            "id": 90,
+            "question": "A graph shows that longer form lengths correlate with higher abandonment rates. What conclusion is strongest?",
+            "options": [
+                "Users are less likely to complete longer forms",
+                "Users prefer lengthy forms",
+                "Form length has no impact",
+                "Abandonment is unrelated"
+            ],
+            "answer": "Users are less likely to complete longer forms"
+        },
+        {
+            "id": 91,
+            "question": "A unit resolves fewer cases than others despite having more staff. What is the best conclusion?",
+            "options": [
+                "The unit is less efficient",
+                "The unit has higher productivity",
+                "Demand is the same everywhere",
+                "Workload is evenly distributed"
+            ],
+            "answer": "The unit is less efficient"
+        },
+        {
+            "id": 92,
+            "question": "A dataset shows that complaints occur mainly during certain hours. What should management examine first?",
+            "options": [
+                "Staffing levels during those hours",
+                "Employee satisfaction surveys",
+                "Yearly financial reports",
+                "Long-term hiring plan"
+            ],
+            "answer": "Staffing levels during those hours"
+        },
+        {
+            "id": 93,
+            "question": "A summary shows that urgent cases increased, but resolution time for urgent cases improved. What conclusion is most accurate?",
+            "options": [
+                "Efficiency in handling urgent cases improved",
+                "Urgent cases decreased",
+                "Urgent case quality worsened",
+                "Resolution time became slower"
+            ],
+            "answer": "Efficiency in handling urgent cases improved"
+        },
+        {
+            "id": 94,
+            "question": "A bar graph shows that satisfaction scores increased for all service categories except one. What should be investigated?",
+            "options": [
+                "The category with declining scores",
+                "The categories with increasing scores",
+                "All categories equally",
+                "Client demographics only"
+            ],
+            "answer": "The category with declining scores"
+        },
+        {
+            "id": 95,
+            "question": "A summary notes that the system error rate remained stable despite a large influx of new users. What conclusion is strongest?",
+            "options": [
+                "The system handled increased demand well",
+                "The system failed frequently",
+                "Error rates increased dramatically",
+                "Demand decreased"
+            ],
+            "answer": "The system handled increased demand well"
+        },
+        {
+            "id": 96,
+            "question": "A table indicates that travel costs decreased while remote meetings increased. What conclusion is supported?",
+            "options": [
+                "Remote meetings reduced travel expenses",
+                "Travel increased significantly",
+                "Remote meetings were ineffective",
+                "Travel was unrelated to meetings"
+            ],
+            "answer": "Remote meetings reduced travel expenses"
+        },
+        {
+            "id": 97,
+            "question": "A dataset shows that error rates fell sharply immediately after a software patch. What is the best conclusion?",
+            "options": [
+                "The patch corrected key issues",
+                "Errors became more common",
+                "The patch caused failures",
+                "No impact occurred"
+            ],
+            "answer": "The patch corrected key issues"
+        },
+        {
+            "id": 98,
+            "question": "A chart reveals that tasks completed per day vary greatly between weekdays and weekends. What does this likely indicate?",
+            "options": [
+                "Differences in staffing or demand",
+                "No difference in workload",
+                "Consistent productivity",
+                "Random inconsistency"
+            ],
+            "answer": "Differences in staffing or demand"
+        },
+        {
+            "id": 99,
+            "question": "A report shows that satisfaction is high even though processing times are long. What is the most likely explanation?",
+            "options": [
+                "Clients value quality over speed",
+                "Clients are dissatisfied",
+                "Processing times are short",
+                "Quality decreased"
+            ],
+            "answer": "Clients value quality over speed"
+        },
+        {
+            "id": 100,
+            "question": "A summary notes that the use of automated reminders reduced the number of missed appointments. What conclusion is most supported?",
+            "options": [
+                "Automated reminders increased attendance",
+                "Attendance decreased",
+                "Reminders were ineffective",
+                "Staff were less involved"
+            ],
+            "answer": "Automated reminders increased attendance"
+        }
+    ]
+}
