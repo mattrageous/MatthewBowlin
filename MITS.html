@@ -869,13 +869,13 @@
     <div class="card filter-section">
       <div class="filter-controls">
         <button class="filter-btn active" data-category="all">All Questions</button>
-        <button class="filter-btn" data-category="part1">Part 1</button>
-        <button class="filter-btn" data-category="part2">Part 2</button>
-        <button class="filter-btn" data-category="part3">Part 3</button>
-        <button class="filter-btn" data-category="part4">Part 4</button>
-        <button class="filter-btn" data-category="part5">Part 5</button>
-        <button class="filter-btn" data-category="part6">Part 6</button>
-        <button class="filter-btn" data-category="part7">Part 7</button>
+        <button class="filter-btn" data-category="part1">Part 1 – Systems Analysis & Design</button>
+        <button class="filter-btn" data-category="part2">Part 2 – Tabular Interpretation</button>
+        <button class="filter-btn" data-category="part3">Part 3 – Flowchart Logic</button>
+        <button class="filter-btn" data-category="part4">Part 4 – Administrative Principles</button>
+        <button class="filter-btn" data-category="part5">Part 5 – Analyzing & Evaluating Information</button>
+        <button class="filter-btn" data-category="part6">Part 6 – Reports & Official Documents</button>
+        <button class="filter-btn" data-category="part7">Part 7 – Administrative Supervision (MITS-2)</button>
         <div class="filter-divider"></div>
         <button class="filter-btn" id="shuffleToggle" data-shuffle="true">🎲 Shuffle: ON</button>
       </div>
@@ -1321,6 +1321,7 @@ function parseJSONToQuestions(jsonData, partName) {
     jsonData.understanding_and_applying_administrative_principles || 
     jsonData.analyzing_and_evaluating_information ||
     jsonData.preparing_reports_and_official_documents ||
+    jsonData.administrative_supervision ||
     jsonData;
     
   if (!Array.isArray(arr)) return [];
