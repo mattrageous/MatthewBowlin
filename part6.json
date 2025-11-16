@@ -207,11 +207,11 @@
         {
             "id": 5,
             "passageType": "A",
-            "passage": "The department’s quarterly audit revealed inconsistencies in how overtime requests were documented across units. Some forms were completed without required supervisor signatures, while others lacked supporting justification. To address these issues, the department will implement standardized submission procedures and provide additional training on compliance requirements.",
+            "passage": "The department's quarterly audit revealed inconsistencies in how overtime requests were documented across units. Some forms were completed without required supervisor signatures, while others lacked supporting justification. To address these issues, the department will implement standardized submission procedures and provide additional training on compliance requirements.",
             "questions": [
                 {
                     "qid": 1,
-                    "question": "What is the paragraph’s main message?",
+                    "question": "What is the paragraph's main message?",
                     "options": [
                         "Overtime forms were inconsistent and will be standardized.",
                         "Supervisors are refusing to sign overtime forms.",
@@ -225,7 +225,7 @@
                     "question": "Which revision improves clarity?",
                     "options": [
                         "Some forms were completed without required supervisor signatures, while others lacked supporting justification.",
-                        "Some forms didn’t have signatures but others were also not complete.",
+                        "Some forms didn't have signatures but others were also not complete.",
                         "Forms were not done the right way.",
                         "Forms were incomplete and messed up."
                     ],
@@ -319,12 +319,12 @@
                     "qid": 6,
                     "question": "Which concluding sentence is most appropriate?",
                     "options": [
-                        "Further evaluation will determine the Bureau’s long-term staffing needs.",
+                        "Further evaluation will determine the Bureau's long-term staffing needs.",
                         "Callers should expect delays.",
                         "All problems will be resolved soon.",
                         "Complaints will likely continue."
                     ],
-                    "answer": "Further evaluation will determine the Bureau’s long-term staffing needs."
+                    "answer": "Further evaluation will determine the Bureau's long-term staffing needs."
                 }
             ]
         },
@@ -628,6 +628,637 @@
                         "Vague and uncertain"
                     ],
                     "answer": "Formal and instructional"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "passageType": "A",
+            "passage": "The Data Integrity Unit completed a quarterly review of internal databases to identify discrepancies between reported metrics and system-generated values. While most entries aligned accurately, several records showed mismatched case numbers resulting from outdated reporting templates. The Unit plans to update its internal guidance to prevent similar inconsistencies during future submissions.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the main purpose of the paragraph?",
+                    "options": [
+                        "To report discrepancies found during a database review and describe planned corrective actions",
+                        "To explain why staff no longer use reporting templates",
+                        "To announce the elimination of database reviews",
+                        "To request disciplinary action for reporting errors"
+                    ],
+                    "answer": "To report discrepancies found during a database review and describe planned corrective actions"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence is least essential to the main message of the paragraph?",
+                    "options": [
+                        "Most entries aligned accurately.",
+                        "Several records showed mismatched case numbers.",
+                        "Discrepancies resulted from outdated reporting templates.",
+                        "The Unit plans to update its internal guidance."
+                    ],
+                    "answer": "Most entries aligned accurately."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision improves conciseness?",
+                    "options": [
+                        "Several records showed mismatched case numbers resulting from outdated reporting templates.",
+                        "There were records that had mismatched numbers due to old templates.",
+                        "Some records did not match because of older templates.",
+                        "Many entries were incorrect because of outdated templates."
+                    ],
+                    "answer": "Several records showed mismatched case numbers resulting from outdated reporting templates."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which phrase maintains the most appropriate tone?",
+                    "options": [
+                        "Entries were messed up.",
+                        "Entries had weird differences.",
+                        "Entries showed minor inconsistencies.",
+                        "Entries were kind of off."
+                    ],
+                    "answer": "Entries showed minor inconsistencies."
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "passageType": "A",
+            "passage": "The Outreach Team conducted a statewide survey to assess public awareness of agency services. Feedback indicated that although many residents recognized the agency name, fewer understood the scope of available programs. The Team plans to develop a targeted communication strategy to improve overall awareness.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the key finding of the survey?",
+                    "options": [
+                        "Residents widely recognized the agency's name but lacked understanding of its services.",
+                        "Residents were fully aware of all agency services.",
+                        "Residents refused to complete the survey.",
+                        "Residents disliked agency programs."
+                    ],
+                    "answer": "Residents widely recognized the agency's name but lacked understanding of its services."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence best supports the need for a communication strategy?",
+                    "options": [
+                        "Feedback indicated limited understanding of available programs.",
+                        "Many residents recognized the agency name.",
+                        "The Team conducted a statewide survey.",
+                        "The survey took two months to complete."
+                    ],
+                    "answer": "Feedback indicated limited understanding of available programs."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision maintains clarity and formality?",
+                    "options": [
+                        "Feedback indicated that although many residents recognized the agency name, fewer understood the available programs.",
+                        "Lots of people knew us, but not what we do.",
+                        "People kind of recognized us but didn't get our programs.",
+                        "Residents knew the agency but were confused."
+                    ],
+                    "answer": "Feedback indicated that although many residents recognized the agency name, fewer understood the available programs."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence is least essential to the paragraph?",
+                    "options": [
+                        "Feedback indicated recognition but limited understanding.",
+                        "Residents recognized the agency name.",
+                        "The Outreach Team conducted a survey.",
+                        "The Team will develop a communication strategy."
+                    ],
+                    "answer": "The Outreach Team conducted a survey."
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "passageType": "A",
+            "passage": "The Payroll Office introduced a revised procedure for submitting timesheets to reduce submission errors. Early results show fewer discrepancies, but some employees expressed confusion about new electronic fields. Additional guidance materials will be distributed to ensure staff complete submissions accurately moving forward.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What issue does the paragraph primarily address?",
+                    "options": [
+                        "Confusion regarding new electronic fields in the revised timesheet procedure",
+                        "Payroll fraud",
+                        "Staff refusal to submit timesheets",
+                        "Technical outages in payroll software"
+                    ],
+                    "answer": "Confusion regarding new electronic fields in the revised timesheet procedure"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which revision improves clarity?",
+                    "options": [
+                        "Early results show fewer discrepancies, but some employees expressed confusion about new electronic fields.",
+                        "The new system is good but kind of confusing.",
+                        "Some people didn't understand things.",
+                        "The procedure is confusing and stuff."
+                    ],
+                    "answer": "Early results show fewer discrepancies, but some employees expressed confusion about new electronic fields."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which sentence best concludes the paragraph?",
+                    "options": [
+                        "Further training will support consistent and accurate submissions.",
+                        "Payroll will no longer accept electronic submissions.",
+                        "All timesheets must be handwritten.",
+                        "The office plans to eliminate timesheets entirely."
+                    ],
+                    "answer": "Further training will support consistent and accurate submissions."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which detail is least essential to the main message?",
+                    "options": [
+                        "Early results show fewer discrepancies.",
+                        "Some employees expressed confusion.",
+                        "Guidance materials will be distributed.",
+                        "The Payroll Office introduced a revised procedure."
+                    ],
+                    "answer": "Early results show fewer discrepancies."
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "passageType": "A",
+            "passage": "The Procurement Unit evaluated vendor proposals for the upcoming technology refresh initiative. While several proposals demonstrated strong technical capabilities, only two vendors offered comprehensive maintenance coverage within the agency's budget. Final selection will occur after the Unit completes cost-benefit analyses.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "Which sentence reflects the main idea?",
+                    "options": [
+                        "Only two vendors offered both technical capability and affordable maintenance coverage.",
+                        "The agency rejected all vendors.",
+                        "The Procurement Unit plans to increase the budget.",
+                        "Several vendors refused to submit proposals."
+                    ],
+                    "answer": "Only two vendors offered both technical capability and affordable maintenance coverage."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence is least essential to the paragraph's main message?",
+                    "options": [
+                        "Final selection will occur after cost-benefit analyses.",
+                        "Two vendors fit budget and coverage needs.",
+                        "Several proposals demonstrated strong capabilities.",
+                        "The Unit evaluated vendor proposals."
+                    ],
+                    "answer": "Several proposals demonstrated strong capabilities."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which phrase best maintains formality?",
+                    "options": [
+                        "Two vendors were pretty solid.",
+                        "Two vendors provided suitable maintenance options.",
+                        "Two vendors looked good.",
+                        "Two vendors seemed okay."
+                    ],
+                    "answer": "Two vendors provided suitable maintenance options."
+                },
+                {
+                    "qid": 4,
+                    "question": "What does the last sentence primarily accomplish?",
+                    "options": [
+                        "It outlines the next step in the evaluation process.",
+                        "It dismisses the vendor proposals.",
+                        "It announces vendor selection.",
+                        "It criticizes the vendors."
+                    ],
+                    "answer": "It outlines the next step in the evaluation process."
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "passageType": "A",
+            "passage": "The Operations Bureau piloted a new workflow system designed to centralize task assignments. Supervisors noted increased visibility into staff workloads, though some reported slow system response times during high-volume periods. A technical review is scheduled to assess system performance before broader deployment.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the passage's main topic?",
+                    "options": [
+                        "Pilot testing of a centralized workflow system",
+                        "Reduction of staffing levels",
+                        "Budget approval for new equipment",
+                        "Termination of workflow monitoring"
+                    ],
+                    "answer": "Pilot testing of a centralized workflow system"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence is least essential to the main message of the paragraph?",
+                    "options": [
+                        "The Operations Bureau piloted a new workflow system designed to centralize task assignments.",
+                        "Supervisors noted increased visibility into staff workloads.",
+                        "Some reported slow system response times during high-volume periods.",
+                        "A technical review is scheduled to assess system performance before broader deployment."
+                    ],
+                    "answer": "A technical review is scheduled to assess system performance before broader deployment."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision improves clarity?",
+                    "options": [
+                        "Supervisors noted increased visibility into staff workloads, though some reported slow system response times during high-volume periods.",
+                        "The system was slow sometimes.",
+                        "Supervisors kind of liked the system but not always.",
+                        "It was slow when used a lot."
+                    ],
+                    "answer": "Supervisors noted increased visibility into staff workloads, though some reported slow system response times during high-volume periods."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence best concludes the paragraph?",
+                    "options": [
+                        "The review will determine readiness for agency-wide adoption.",
+                        "The system will be shut down.",
+                        "Supervisors will no longer use the system.",
+                        "Workflows will no longer be monitored."
+                    ],
+                    "answer": "The review will determine readiness for agency-wide adoption."
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "passageType": "B",
+            "passage": "Paragraph 1: The Benefits Office received a substantial number of inquiries regarding the new parental leave policy. Staff reported that many employees were confused about eligibility criteria, particularly surrounding part-time positions.\n\nParagraph 2: To address these concerns, the Office will publish a detailed FAQ and offer live virtual sessions for employees to ask questions. These resources aim to ensure consistent understanding across the agency.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the overall purpose of the passage?",
+                    "options": [
+                        "To explain confusion regarding leave eligibility and outline actions to clarify policy",
+                        "To announce elimination of parental leave",
+                        "To recommend disciplinary action for staff",
+                        "To discourage employees from asking questions"
+                    ],
+                    "answer": "To explain confusion regarding leave eligibility and outline actions to clarify policy"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which statement is supported by Paragraph 1?",
+                    "options": [
+                        "Employees were unclear about eligibility for parental leave.",
+                        "Employees refused to read policy documents.",
+                        "Part-time positions were eliminated.",
+                        "Inquiries decreased significantly."
+                    ],
+                    "answer": "Employees were unclear about eligibility for parental leave."
+                },
+                {
+                    "qid": 3,
+                    "question": "What does Paragraph 2 primarily accomplish?",
+                    "options": [
+                        "It describes planned steps to improve policy comprehension.",
+                        "It lists new eligibility criteria.",
+                        "It proposes ending leave benefits.",
+                        "It details unrelated office updates."
+                    ],
+                    "answer": "It describes planned steps to improve policy comprehension."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which transition best connects the two paragraphs?",
+                    "options": [
+                        "To address this",
+                        "Meanwhile",
+                        "In contrast",
+                        "Unexpectedly"
+                    ],
+                    "answer": "To address this"
+                },
+                {
+                    "qid": 5,
+                    "question": "Which sentence is least essential to the main idea?",
+                    "options": [
+                        "The Benefits Office received a substantial number of inquiries.",
+                        "Many employees were confused about eligibility criteria.",
+                        "The Office will publish a detailed FAQ and offer virtual sessions.",
+                        "These resources aim to ensure consistent understanding across the agency."
+                    ],
+                    "answer": "These resources aim to ensure consistent understanding across the agency."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which tone best fits the passage?",
+                    "options": [
+                        "Neutral and explanatory",
+                        "Casual and humorous",
+                        "Critical and informal",
+                        "Emotional and subjective"
+                    ],
+                    "answer": "Neutral and explanatory"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "passageType": "B",
+            "passage": "Paragraph 1: The Training Bureau launched a new leadership development program targeting mid-level managers. Early feedback noted strong interest, with enrollment exceeding expectations.\n\nParagraph 2: However, some participants indicated that the online modules lacked sufficient real-world examples. The Bureau plans to revise content in the next cycle to include applied scenarios and case studies.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the main idea of the two paragraphs?",
+                    "options": [
+                        "The new program generated high interest but requires improvements to its online content.",
+                        "The program was canceled due to lack of interest.",
+                        "Managers refused to participate.",
+                        "Enrollment numbers were inaccurate."
+                    ],
+                    "answer": "The new program generated high interest but requires improvements to its online content."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which statement is supported by Paragraph 1?",
+                    "options": [
+                        "Enrollment exceeded expectations.",
+                        "The program had no participants.",
+                        "Managers rejected the program.",
+                        "Online modules were too advanced."
+                    ],
+                    "answer": "Enrollment exceeded expectations."
+                },
+                {
+                    "qid": 3,
+                    "question": "What does Paragraph 2 add to the passage?",
+                    "options": [
+                        "Provides constructive feedback and describes planned revisions",
+                        "Explains program cancellation",
+                        "Lists new budget cuts",
+                        "Introduces unrelated training requirements"
+                    ],
+                    "answer": "Provides constructive feedback and describes planned revisions"
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence best strengthens Paragraph 2?",
+                    "options": [
+                        "Several participants requested more practical examples to apply concepts.",
+                        "Managers liked the colors used in slides.",
+                        "Participants asked for shorter modules.",
+                        "Participants suggested removing leadership content."
+                    ],
+                    "answer": "Several participants requested more practical examples to apply concepts."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which phrase maintains formal tone?",
+                    "options": [
+                        "The modules were kind of boring.",
+                        "The modules lacked applied examples.",
+                        "The modules were lame.",
+                        "The modules were pretty weak."
+                    ],
+                    "answer": "The modules lacked applied examples."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which concluding sentence is most appropriate?",
+                    "options": [
+                        "Revisions will enhance the program's practical value.",
+                        "Program enrollment will likely decline.",
+                        "The program will end next month.",
+                        "Participants should ignore confusing content."
+                    ],
+                    "answer": "Revisions will enhance the program's practical value."
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "passageType": "B",
+            "passage": "Paragraph 1: The Communications Division reviewed its social media analytics and found that posts featuring program success stories generated significantly higher engagement than general informational announcements.\n\nParagraph 2: To capitalize on this trend, the Division plans to increase the frequency of narrative-based content while still maintaining required informational postings. A revised content calendar will be released next quarter.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the purpose of the two paragraphs?",
+                    "options": [
+                        "To present social media engagement findings and outline planned adjustments to content strategy",
+                        "To criticize social media platforms",
+                        "To request budget increases",
+                        "To discontinue public outreach"
+                    ],
+                    "answer": "To present social media engagement findings and outline planned adjustments to content strategy"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which detail is supported by Paragraph 1?",
+                    "options": [
+                        "Success stories produced higher engagement.",
+                        "Informational posts were preferred.",
+                        "Engagement remained unchanged.",
+                        "Analytics were unavailable."
+                    ],
+                    "answer": "Success stories produced higher engagement."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which sentence best completes Paragraph 2?",
+                    "options": [
+                        "The content calendar will help ensure balanced and consistent posting.",
+                        "The Division plans to shut down its social media accounts.",
+                        "All informational posts will be removed.",
+                        "The Division will hire new staff."
+                    ],
+                    "answer": "The content calendar will help ensure balanced and consistent posting."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which transition best links the paragraphs?",
+                    "options": [
+                        "To respond to this",
+                        "Meanwhile",
+                        "However",
+                        "Unexpectedly"
+                    ],
+                    "answer": "To respond to this"
+                },
+                {
+                    "qid": 5,
+                    "question": "Which sentence is least essential to the passage?",
+                    "options": [
+                        "A revised content calendar will be released next quarter.",
+                        "Posts featuring program success stories generated significantly higher engagement.",
+                        "The Division plans to increase narrative-based posts.",
+                        "The Communications Division reviewed its social media analytics."
+                    ],
+                    "answer": "A revised content calendar will be released next quarter."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which phrase maintains the correct tone?",
+                    "options": [
+                        "The numbers were crazy good.",
+                        "Success stories generated significantly higher engagement.",
+                        "People totally loved success stories.",
+                        "The posts were awesome."
+                    ],
+                    "answer": "Success stories generated significantly higher engagement."
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "passageType": "C",
+            "passage": "TO: All Program Directors\nFROM: Office of Strategic Planning\nSUBJECT: Annual Performance Metrics Reporting\n\nThe Office of Strategic Planning is updating its annual performance metrics reporting process to ensure greater consistency and accuracy across program areas. These modifications follow recent audits that identified gaps in reporting quality and documentation.\n\nBeginning in August, all programs will be required to submit quarterly progress summaries in addition to the annual report. These summaries must include measurable indicators, narrative explanations of progress, and any relevant barriers affecting implementation.\n\nTraining webinars will be offered throughout July to support programs in adapting to the new requirements. Additional resources, including template reports and sample indicators, will be posted on the internal portal.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the main purpose of the memorandum?",
+                    "options": [
+                        "To announce updates to the performance metrics reporting process",
+                        "To eliminate metrics reporting",
+                        "To request additional staffing",
+                        "To introduce new fiscal procedures"
+                    ],
+                    "answer": "To announce updates to the performance metrics reporting process"
+                },
+                {
+                    "qid": 2,
+                    "question": "What is the function of the second paragraph?",
+                    "options": [
+                        "To outline new reporting requirements for programs",
+                        "To summarize past performance results",
+                        "To criticize program directors",
+                        "To request immediate submissions"
+                    ],
+                    "answer": "To outline new reporting requirements for programs"
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision improves clarity?",
+                    "options": [
+                        "Beginning in August, all programs will be required to submit quarterly progress summaries.",
+                        "Programs start summaries in August.",
+                        "Programs will soon do summaries.",
+                        "In August, something will be required."
+                    ],
+                    "answer": "Beginning in August, all programs will be required to submit quarterly progress summaries."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence best completes the final paragraph?",
+                    "options": [
+                        "Questions may be directed to the Office of Strategic Planning.",
+                        "Programs must cancel all existing initiatives.",
+                        "Reports are no longer required.",
+                        "Training is unavailable."
+                    ],
+                    "answer": "Questions may be directed to the Office of Strategic Planning."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which statement is supported by the memo?",
+                    "options": [
+                        "Quarterly summaries will supplement annual reports.",
+                        "Programs will no longer provide metrics.",
+                        "Templates will not be provided.",
+                        "Training will be optional and unstructured."
+                    ],
+                    "answer": "Quarterly summaries will supplement annual reports."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which tone best describes the memorandum?",
+                    "options": [
+                        "Formal and directive",
+                        "Casual and conversational",
+                        "Emotional and uncertain",
+                        "Critical and punitive"
+                    ],
+                    "answer": "Formal and directive"
+                },
+                {
+                    "qid": 7,
+                    "question": "Which additional sentence fits best in Paragraph 1?",
+                    "options": [
+                        "The audit highlighted inconsistent documentation practices across multiple units.",
+                        "Directors expressed disappointment.",
+                        "The Office will renovate its facilities.",
+                        "Performance reviews will be discontinued."
+                    ],
+                    "answer": "The audit highlighted inconsistent documentation practices across multiple units."
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "passageType": "C",
+            "passage": "TO: All Regional Supervisors\nFROM: Human Resources Division\nSUBJECT: Updates to Employee Onboarding Procedures\n\nThe Human Resources Division is implementing updates to the onboarding process to ensure new employees receive consistent and comprehensive orientation. These updates incorporate feedback collected from recent hires who expressed concerns about unclear expectations during their initial weeks.\n\nUnder the revised process, supervisors must schedule structured check-in meetings during a new employee's first month. These meetings should address training progress, workplace integration, and any immediate questions the employee may have.\n\nTo support the updated approach, the Division will release new onboarding guides, provide mandatory supervisor workshops, and introduce standardized documentation forms.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the main purpose of the memo?",
+                    "options": [
+                        "To announce updates to employee onboarding procedures",
+                        "To eliminate onboarding requirements",
+                        "To request additional supervisors",
+                        "To reduce orientation activities"
+                    ],
+                    "answer": "To announce updates to employee onboarding procedures"
+                },
+                {
+                    "qid": 2,
+                    "question": "What role does the second paragraph play?",
+                    "options": [
+                        "It outlines specific supervisor responsibilities during onboarding.",
+                        "It introduces unrelated disciplinary procedures.",
+                        "It critiques employee performance.",
+                        "It summarizes agency-wide hiring trends."
+                    ],
+                    "answer": "It outlines specific supervisor responsibilities during onboarding."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision best improves clarity?",
+                    "options": [
+                        "Under the revised process, supervisors must schedule structured check-in meetings during the first month.",
+                        "Supervisors will do check-ins.",
+                        "Supervisors will meet with people.",
+                        "Supervisors must do something early on."
+                    ],
+                    "answer": "Under the revised process, supervisors must schedule structured check-in meetings during the first month."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which concluding sentence is most appropriate?",
+                    "options": [
+                        "Questions may be directed to the Human Resources Division.",
+                        "Supervisors will not receive training.",
+                        "New employees will handle onboarding independently.",
+                        "Orientation activities will cease next year."
+                    ],
+                    "answer": "Questions may be directed to the Human Resources Division."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which statement is supported by the memo?",
+                    "options": [
+                        "Supervisors must conduct structured check-in meetings.",
+                        "New employees will not receive orientation materials.",
+                        "Employee feedback was not considered.",
+                        "Documentation forms will be optional."
+                    ],
+                    "answer": "Supervisors must conduct structured check-in meetings."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which tone best describes the memo?",
+                    "options": [
+                        "Professional and directive",
+                        "Informal and humorous",
+                        "Critical and emotional",
+                        "Vague and speculative"
+                    ],
+                    "answer": "Professional and directive"
                 }
             ]
         }
