@@ -1169,8 +1169,9 @@ function parseJSONToQuestions(jsonData, partName) {
   const arr = jsonData.systems_analysis_and_design_questions || 
     jsonData.questions || 
     jsonData.interpreting_tabular_material_advanced || 
-    jsonData.logical_reasoning_using_flowcharts|| 
+    jsonData.logical_reasoning_using_flowcharts || 
     jsonData.understanding_and_applying_administrative_principles || 
+    jsonData.analyzing_and_evaluating_information ||
     jsonData;
   if (!Array.isArray(arr)) return [];
 
