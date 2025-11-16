@@ -1,0 +1,635 @@
+{
+    "preparing_reports_and_official_documents": [
+        {
+            "id": 1,
+            "passageType": "A",
+            "passage": "During the past quarter, the department implemented a new scheduling system intended to reduce client wait times. Initial data indicate modest improvements; however, several staff members reported difficulty navigating the revised interface. Additionally, minor technical errors resulted in inconsistent appointment confirmations. Further training and system refinements are planned for the next phase of implementation.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "Which sentence best identifies the main idea of the paragraph?",
+                    "options": [
+                        "The department experienced numerous system failures during the past quarter.",
+                        "The new scheduling system improved wait times but requires further staff training and refinement.",
+                        "Client wait times increased significantly due to the new scheduling system.",
+                        "Staff members opposed the new scheduling system entirely."
+                    ],
+                    "answer": "The new scheduling system improved wait times but requires further staff training and refinement."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence is least essential to the main message of the paragraph?",
+                    "options": [
+                        "Initial data indicate modest improvements.",
+                        "Several staff members reported difficulty navigating the interface.",
+                        "Minor technical errors resulted in inconsistent confirmations.",
+                        "Further training and system refinements are planned for the next phase."
+                    ],
+                    "answer": "Further training and system refinements are planned for the next phase."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision best improves clarity?",
+                    "options": [
+                        "Initial data indicate modest improvements, however many staff struggled, and there were errors.",
+                        "Although initial data indicate modest improvements, staff reported interface challenges and technical errors.",
+                        "Initial data indicate improvements and some issues.",
+                        "The system has problems but is okay."
+                    ],
+                    "answer": "Although initial data indicate modest improvements, staff reported interface challenges and technical errors."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which transition best connects the third and fourth sentences?",
+                    "options": [
+                        "Similarly",
+                        "However",
+                        "For example",
+                        "In contrast"
+                    ],
+                    "answer": "However"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "passageType": "A",
+            "passage": "The Facilities Unit completed the annual building safety inspections ahead of schedule this year. Most findings were minor, including small plumbing issues and worn safety signage. One significant concern involved outdated emergency lighting on the second floor. Replacement fixtures have already been ordered and are expected to arrive within two weeks.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the primary purpose of this paragraph?",
+                    "options": [
+                        "To criticize facility staff",
+                        "To summarize inspection results and planned corrective action",
+                        "To report major structural failures",
+                        "To request additional staff"
+                    ],
+                    "answer": "To summarize inspection results and planned corrective action"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which revision best improves conciseness?",
+                    "options": [
+                        "Most findings were minor in nature and included small plumbing issues and worn safety signage.",
+                        "Most findings were minor, including plumbing issues and worn signage.",
+                        "There were minor findings about plumbing and signage that were minor.",
+                        "There were small issues related to safety and plumbing."
+                    ],
+                    "answer": "Most findings were minor, including plumbing issues and worn signage."
+                },
+                {
+                    "qid": 3,
+                    "question": "The last sentence primarily serves to:",
+                    "options": [
+                        "Suggest the issue will not be addressed",
+                        "Explain corrective steps being taken",
+                        "Provide unrelated background information",
+                        "Discuss budgeting concerns"
+                    ],
+                    "answer": "Explain corrective steps being taken"
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence displays the appropriate formal tone?",
+                    "options": [
+                        "The lighting situation was pretty bad.",
+                        "Emergency lighting on the second floor was outdated and required replacement.",
+                        "The lights were old and not great.",
+                        "The lighting was basically broken."
+                    ],
+                    "answer": "Emergency lighting on the second floor was outdated and required replacement."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "passageType": "A",
+            "passage": "The Training Division expanded its remote-learning catalog to include eight new modules related to cybersecurity awareness. Participation increased by 22 percent compared to last year, with strong engagement observed from regional offices. Some employees noted difficulty accessing the platform during peak hours. The Division is reviewing system capacity and plans to introduce performance enhancements.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "Which statement best expresses the paragraph's main idea?",
+                    "options": [
+                        "Employees had difficulty accessing training.",
+                        "Remote-learning offerings expanded, increasing participation but causing system strain.",
+                        "Cybersecurity training is unnecessary.",
+                        "Regional offices do not engage in training."
+                    ],
+                    "answer": "Remote-learning offerings expanded, increasing participation but causing system strain."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which revision best improves flow between sentences three and four?",
+                    "options": [
+                        "Nevertheless",
+                        "For this reason",
+                        "In contrast",
+                        "Similarly"
+                    ],
+                    "answer": "For this reason"
+                },
+                {
+                    "qid": 3,
+                    "question": "Which sentence should be added to improve completeness?",
+                    "options": [
+                        "Cybersecurity breaches have increased statewide.",
+                        "The Division will also evaluate training effectiveness.",
+                        "Employees enjoy remote learning.",
+                        "No additional training is planned."
+                    ],
+                    "answer": "The Division will also evaluate training effectiveness."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which version of sentence 3 is most concise?",
+                    "options": [
+                        "Some employees noted difficulty accessing the platform during peak hours.",
+                        "Employees sometimes had a bit of trouble getting on the platform during high-use times.",
+                        "A few staff kind of struggled with the platform at certain times.",
+                        "The platform was being difficult sometimes when staff were trying to use it."
+                    ],
+                    "answer": "Some employees noted difficulty accessing the platform during peak hours."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "passageType": "A",
+            "passage": "To ensure consistent communication standards, the Communications Office introduced updated email templates for external correspondence. These templates include standardized salutations, formatting guidelines, and required disclaimer language. Several units have already adopted the new templates, reporting improved clarity and reduced editing time. Additional training sessions will be offered throughout the next quarter.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the main purpose of the paragraph?",
+                    "options": [
+                        "To describe new email templates and their benefits",
+                        "To request additional staff in Communications",
+                        "To highlight problems with communication",
+                        "To announce a reduction in training"
+                    ],
+                    "answer": "To describe new email templates and their benefits"
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence would improve the paragraph if added?",
+                    "options": [
+                        "Employees were confused by previous formatting inconsistencies.",
+                        "The email templates are unpopular.",
+                        "Staff dislike formal communication standards.",
+                        "No units plan to adopt the templates."
+                    ],
+                    "answer": "Employees were confused by previous formatting inconsistencies."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which phrase best maintains government tone?",
+                    "options": [
+                        "The templates helped a bunch.",
+                        "The templates significantly improved clarity.",
+                        "The templates were kind of useful.",
+                        "The templates were cool."
+                    ],
+                    "answer": "The templates significantly improved clarity."
+                },
+                {
+                    "qid": 4,
+                    "question": "What is the function of the final sentence?",
+                    "options": [
+                        "It describes next steps for implementation.",
+                        "It criticizes the new templates.",
+                        "It introduces unrelated recommendations.",
+                        "It provides historical context."
+                    ],
+                    "answer": "It describes next steps for implementation."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "passageType": "A",
+            "passage": "The department’s quarterly audit revealed inconsistencies in how overtime requests were documented across units. Some forms were completed without required supervisor signatures, while others lacked supporting justification. To address these issues, the department will implement standardized submission procedures and provide additional training on compliance requirements.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the paragraph’s main message?",
+                    "options": [
+                        "Overtime forms were inconsistent and will be standardized.",
+                        "Supervisors are refusing to sign overtime forms.",
+                        "Overtime should be eliminated.",
+                        "The audit found no issues."
+                    ],
+                    "answer": "Overtime forms were inconsistent and will be standardized."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which revision improves clarity?",
+                    "options": [
+                        "Some forms were completed without required supervisor signatures, while others lacked supporting justification.",
+                        "Some forms didn’t have signatures but others were also not complete.",
+                        "Forms were not done the right way.",
+                        "Forms were incomplete and messed up."
+                    ],
+                    "answer": "Some forms were completed without required supervisor signatures, while others lacked supporting justification."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which sentence best serves as a concluding statement?",
+                    "options": [
+                        "Compliance will be closely monitored throughout the next quarter.",
+                        "Overtime will no longer be approved.",
+                        "Staff should stop submitting requests.",
+                        "Only certain units need to comply."
+                    ],
+                    "answer": "Compliance will be closely monitored throughout the next quarter."
+                },
+                {
+                    "qid": 4,
+                    "question": "What problem does the passage primarily identify?",
+                    "options": [
+                        "Incomplete documentation of overtime requests",
+                        "Employee dissatisfaction with overtime",
+                        "Budget cuts",
+                        "Supervisor misconduct"
+                    ],
+                    "answer": "Incomplete documentation of overtime requests"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "passageType": "B",
+            "passage": "Paragraph 1: The Customer Service Bureau observed a notable increase in call volume over the past six months. Staff reported difficulty responding to inquiries efficiently as peak periods became more frequent. To support the increased workload, temporary staff were reassigned from other units.\n\nParagraph 2: Despite these adjustments, wait times continued to rise, resulting in a surge of customer complaints. The Bureau is now evaluating long-term staffing strategies, including potential new hires and expanded training programs.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the central idea of the two-paragraph passage?",
+                    "options": [
+                        "Temporary staffing fully resolved wait-time issues.",
+                        "Increased call volume strained existing resources despite temporary staffing adjustments.",
+                        "Wait times improved due to additional staff.",
+                        "Customer complaints decreased significantly."
+                    ],
+                    "answer": "Increased call volume strained existing resources despite temporary staffing adjustments."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence would improve cohesion if added to the beginning of Paragraph 2?",
+                    "options": [
+                        "However, these measures were not sufficient to address the increased demand.",
+                        "Additionally, staff enjoyed working with temporary employees.",
+                        "Call volume decreased for a short period.",
+                        "The Bureau canceled several training sessions."
+                    ],
+                    "answer": "However, these measures were not sufficient to address the increased demand."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which phrase best maintains a formal tone?",
+                    "options": [
+                        "Customers were seriously annoyed.",
+                        "Customer complaints increased substantially.",
+                        "People got mad quickly.",
+                        "Callers freaked out."
+                    ],
+                    "answer": "Customer complaints increased substantially."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which statement is best supported by Paragraph 1?",
+                    "options": [
+                        "Staff struggled to keep up with rising call volume.",
+                        "Call volume decreased significantly.",
+                        "Temporary staff reduced workflow efficiency.",
+                        "Staffing remained unchanged."
+                    ],
+                    "answer": "Staff struggled to keep up with rising call volume."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which revision improves clarity in Paragraph 1?",
+                    "options": [
+                        "Staff reported difficulty responding to inquiries efficiently as peak periods became more frequent.",
+                        "Staff struggled with calls.",
+                        "Peak periods became a problem.",
+                        "Staff had some trouble."
+                    ],
+                    "answer": "Staff reported difficulty responding to inquiries efficiently as peak periods became more frequent."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which concluding sentence is most appropriate?",
+                    "options": [
+                        "Further evaluation will determine the Bureau’s long-term staffing needs.",
+                        "Callers should expect delays.",
+                        "All problems will be resolved soon.",
+                        "Complaints will likely continue."
+                    ],
+                    "answer": "Further evaluation will determine the Bureau’s long-term staffing needs."
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "passageType": "B",
+            "passage": "Paragraph 1: The IT Unit began deploying upgraded hardware to regional offices to improve system reliability. Installation teams reported that the process moved efficiently, with most locations experiencing minimal service interruption.\n\nParagraph 2: A few sites, however, reported delays due to outdated wiring that required replacement before installation could proceed. The Unit plans to conduct a broader infrastructure assessment to prevent similar disruptions in future hardware upgrades.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the main theme across both paragraphs?",
+                    "options": [
+                        "Hardware upgrades caused extensive outages.",
+                        "Upgrades progressed well overall but encountered wiring issues at some sites.",
+                        "The IT Unit postponed all upgrades.",
+                        "Regional offices refused new equipment."
+                    ],
+                    "answer": "Upgrades progressed well overall but encountered wiring issues at some sites."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence best strengthens Paragraph 2?",
+                    "options": [
+                        "These wiring issues had not been documented previously.",
+                        "Staff were excited about the new computers.",
+                        "The Unit had planned a celebration for finishing upgrades.",
+                        "No further upgrades will occur."
+                    ],
+                    "answer": "These wiring issues had not been documented previously."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which sentence should be removed to improve focus?",
+                    "options": [
+                        "Installation teams reported the process moved efficiently.",
+                        "Some sites experienced delays due to wiring problems.",
+                        "The Unit plans a broader infrastructure assessment.",
+                        "None—the paragraph is fully cohesive."
+                    ],
+                    "answer": "None—the paragraph is fully cohesive."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which transition best connects the two paragraphs?",
+                    "options": [
+                        "However",
+                        "In addition",
+                        "Meanwhile",
+                        "Therefore"
+                    ],
+                    "answer": "However"
+                },
+                {
+                    "qid": 5,
+                    "question": "Which phrase maintains the most appropriate tone?",
+                    "options": [
+                        "Some sites were kind of a mess wiring-wise.",
+                        "Some sites required wiring replacement before installation could continue.",
+                        "The wiring situation was pretty bad.",
+                        "Certain sites were a total disaster."
+                    ],
+                    "answer": "Some sites required wiring replacement before installation could continue."
+                },
+                {
+                    "qid": 6,
+                    "question": "What does the final sentence of Paragraph 2 primarily accomplish?",
+                    "options": [
+                        "It outlines a preventative step.",
+                        "It criticizes regional offices.",
+                        "It announces budget reductions.",
+                        "It introduces a new unrelated topic."
+                    ],
+                    "answer": "It outlines a preventative step."
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "passageType": "B",
+            "passage": "Paragraph 1: The Records Management Team conducted its annual review of archived case files to identify items eligible for disposal under the retention schedule. Most files met criteria for disposal; however, several required follow-up due to missing documentation.\n\nParagraph 2: The team also discovered inconsistencies in how units categorized files prior to submission. These inconsistencies will require additional staff training to ensure proper classification before records are archived.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the best summary of the two paragraphs?",
+                    "options": [
+                        "Most archived files were destroyed immediately.",
+                        "The annual review identified disposal candidates and revealed classification inconsistencies.",
+                        "All units complied fully with archival standards.",
+                        "Retention schedules are outdated."
+                    ],
+                    "answer": "The annual review identified disposal candidates and revealed classification inconsistencies."
+                },
+                {
+                    "qid": 2,
+                    "question": "Which sentence best strengthens Paragraph 2?",
+                    "options": [
+                        "Staff training has not been updated in several years.",
+                        "Employees enjoy working with archival systems.",
+                        "New office furniture was delivered last month.",
+                        "Annual reviews will be discontinued."
+                    ],
+                    "answer": "Staff training has not been updated in several years."
+                },
+                {
+                    "qid": 3,
+                    "question": "Which statement is supported by Paragraph 1?",
+                    "options": [
+                        "Some files lacked required documentation.",
+                        "All files were properly documented.",
+                        "Units destroyed files incorrectly.",
+                        "Retention schedules changed significantly."
+                    ],
+                    "answer": "Some files lacked required documentation."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which revision improves the clarity of Paragraph 2?",
+                    "options": [
+                        "The team discovered inconsistencies in how units categorized files prior to submission.",
+                        "Units categorized files differently.",
+                        "There were some issues with files.",
+                        "File categories were messed up."
+                    ],
+                    "answer": "The team discovered inconsistencies in how units categorized files prior to submission."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which concluding sentence is most appropriate?",
+                    "options": [
+                        "The team will monitor classification compliance more closely.",
+                        "Units will no longer archive records.",
+                        "The retention schedule will be eliminated.",
+                        "Paper records will not be used anymore."
+                    ],
+                    "answer": "The team will monitor classification compliance more closely."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which transition best connects the two paragraphs?",
+                    "options": [
+                        "Additionally",
+                        "Meanwhile",
+                        "Unexpectedly",
+                        "In contrast"
+                    ],
+                    "answer": "Additionally"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "passageType": "C",
+            "passage": "TO: All Division Supervisors\nFROM: Office of Administrative Services\nSUBJECT: Implementation of Updated Inventory Procedures\n\nThe Office of Administrative Services is implementing updated inventory procedures effective May 1. These changes are intended to improve accuracy in asset tracking, reduce duplicate purchases, and ensure compliance with statewide fiscal guidelines.\n\nUnder the new procedures, all divisions must reconcile equipment lists monthly instead of quarterly. Supervisors will also be responsible for verifying that staff follow the revised checkout process when assigning equipment. Failure to comply may result in delayed procurement approvals.\n\nTraining sessions will be held throughout April to ensure all staff understand the updated requirements. Additional reference materials will be posted on the internal portal. Supervisors are encouraged to report any concerns during the transition period.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the primary purpose of this memorandum?",
+                    "options": [
+                        "To announce updated inventory procedures and outline implementation expectations",
+                        "To request additional equipment purchases",
+                        "To reduce the number of supervisors in each division",
+                        "To discontinue monthly reconciliation"
+                    ],
+                    "answer": "To announce updated inventory procedures and outline implementation expectations"
+                },
+                {
+                    "qid": 2,
+                    "question": "What is the function of the second paragraph?",
+                    "options": [
+                        "To explain consequences and responsibilities under the new procedures",
+                        "To summarize unrelated fiscal data",
+                        "To criticize current inventory practices",
+                        "To announce budget reductions"
+                    ],
+                    "answer": "To explain consequences and responsibilities under the new procedures"
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision improves conciseness?",
+                    "options": [
+                        "Supervisors will also be responsible for verifying that staff follow the revised checkout process when assigning equipment.",
+                        "Supervisors must verify staff follow the revised checkout process when assigning equipment.",
+                        "Supervisors need to make sure the checkout process is followed.",
+                        "Supervisors will kind of check the process."
+                    ],
+                    "answer": "Supervisors must verify staff follow the revised checkout process when assigning equipment."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence should be added to the closing paragraph?",
+                    "options": [
+                        "Supervisors may contact the Office with questions regarding training materials.",
+                        "Training sessions will not be recorded.",
+                        "No additional support will be offered.",
+                        "Portable devices are exempt from inventory."
+                    ],
+                    "answer": "Supervisors may contact the Office with questions regarding training materials."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which statement is best supported by the memo?",
+                    "options": [
+                        "Monthly reconciliations are replacing quarterly ones.",
+                        "Inventory tracking is being eliminated.",
+                        "Supervisors are no longer responsible for compliance.",
+                        "Procedures will not be updated further."
+                    ],
+                    "answer": "Monthly reconciliations are replacing quarterly ones."
+                },
+                {
+                    "qid": 6,
+                    "question": "What is the tone of the memorandum?",
+                    "options": [
+                        "Directive and informative",
+                        "Casual and conversational",
+                        "Critical and confrontational",
+                        "Uncertain and speculative"
+                    ],
+                    "answer": "Directive and informative"
+                },
+                {
+                    "qid": 7,
+                    "question": "Which sentence is most appropriate if added to the first paragraph?",
+                    "options": [
+                        "These improvements were recommended following a recent audit.",
+                        "Supervisors disliked the changes.",
+                        "The office lacks adequate staffing.",
+                        "Equipment is rarely used."
+                    ],
+                    "answer": "These improvements were recommended following a recent audit."
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "passageType": "C",
+            "passage": "TO: All Regional Directors\nFROM: Personnel Management Office\nSUBJECT: Performance Evaluation Process Update\n\nThe Personnel Management Office is revising the annual performance evaluation process to ensure greater consistency across regions. These revisions are based on feedback collected during last year's review cycle and are intended to improve clarity, fairness, and alignment with agency-wide objectives.\n\nBeginning July 1, all supervisors must use the updated evaluation form, which includes a streamlined rating structure and expanded space for narrative feedback. Supervisors are also required to meet individually with each employee to discuss performance expectations for the coming year.\n\nTo support implementation, the Office will provide training webinars in June and publish detailed guidance on the intranet. Directors are encouraged to communicate regional concerns so adjustments can be considered before the next evaluation cycle.",
+            "questions": [
+                {
+                    "qid": 1,
+                    "question": "What is the memo's main purpose?",
+                    "options": [
+                        "To announce revisions to the annual performance evaluation process",
+                        "To eliminate performance evaluations",
+                        "To request budget increases",
+                        "To change job titles across regions"
+                    ],
+                    "answer": "To announce revisions to the annual performance evaluation process"
+                },
+                {
+                    "qid": 2,
+                    "question": "What is the role of the second paragraph?",
+                    "options": [
+                        "To outline specific changes supervisors must implement",
+                        "To criticize regional directors",
+                        "To discuss unrelated staffing issues",
+                        "To compare regional performance data"
+                    ],
+                    "answer": "To outline specific changes supervisors must implement"
+                },
+                {
+                    "qid": 3,
+                    "question": "Which revision improves clarity?",
+                    "options": [
+                        "Beginning July 1, all supervisors must use the updated evaluation form.",
+                        "Supervisors start using the new form July 1.",
+                        "Supervisors will use the new form soon.",
+                        "On July 1, something will change about the form."
+                    ],
+                    "answer": "Beginning July 1, all supervisors must use the updated evaluation form."
+                },
+                {
+                    "qid": 4,
+                    "question": "Which sentence best completes the closing paragraph?",
+                    "options": [
+                        "Questions may be directed to the Personnel Management Office.",
+                        "Supervisors must redo all prior evaluations.",
+                        "Only some regions will participate.",
+                        "Evaluations will no longer occur annually."
+                    ],
+                    "answer": "Questions may be directed to the Personnel Management Office."
+                },
+                {
+                    "qid": 5,
+                    "question": "Which statement is supported by the memo?",
+                    "options": [
+                        "The updated evaluation form includes a streamlined rating structure.",
+                        "Supervisors are no longer required to meet with employees.",
+                        "Performance evaluations will be conducted quarterly.",
+                        "Training webinars will be optional."
+                    ],
+                    "answer": "The updated evaluation form includes a streamlined rating structure."
+                },
+                {
+                    "qid": 6,
+                    "question": "Which tone best describes the memo?",
+                    "options": [
+                        "Formal and instructional",
+                        "Informal and conversational",
+                        "Critical and punitive",
+                        "Vague and uncertain"
+                    ],
+                    "answer": "Formal and instructional"
+                }
+            ]
+        }
+    ]
+}
