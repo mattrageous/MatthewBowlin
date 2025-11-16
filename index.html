@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Bowlin - Developer. Technologist. Creator.</title>
 </head>
-
 <style>
   * {
     margin: 0;
@@ -47,14 +46,12 @@
     0% { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0); }
   }
-
   .button-group {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .button {
     padding: 14px 28px;
     font-size: 1.1em;
@@ -68,19 +65,39 @@
     align-items: center;
     gap: 8px;
   }
-
   .button:hover {
     box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
     transform: scale(1.05);
   }
-
   .content-text {
     max-width: 700px;
     font-size: 1.05em;
     line-height: 1.6;
     opacity: 0.9;
   }
-
+  .study-guide-section {
+    margin-top: 40px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    max-width: 850px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  }
+  .study-guide-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .study-guide-section p {
+    font-size: 1.1em;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+  .study-guide-section .button {
+    margin-top: 20px;
+    display: inline-block;
+  }
   footer {
     position: absolute;
     bottom: 15px;
@@ -92,12 +109,10 @@
     text-decoration: underline;
   }
 </style>
-
 <body>
   <div class="fade-in">
     <h1>Matthew Bowlin</h1>
     <p class="tagline">Developer. Technologist. Creator.</p>
-
     <div class="button-group">
       <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
         Become a Tester
@@ -109,21 +124,30 @@
         Try MysticPalm
       </a>
     </div>
-
     <div class="content-text">
       <p>
         Join our beta to shape the future of smarter conversations... and be first to try new features coming soon.
       </p>
     </div>
-
     <a class="button" href="about.html">Meet Matthew</a>
+    
+    <div class="study-guide-section">
+      <h2>MITS 1 & 2 Exam Prep</h2>
+      <p>
+        Study with a full exam preparation suite featuring 
+        <strong>662 questions</strong>, practice scenarios, 
+        tabular reasoning drills, systems analysis modules, and more.
+        Updated and structured for the NYS Manager Information Technology Services exam.
+      </p>
+      <a class="button" href="MITS.html">
+        Start the Study System
+      </a>
+    </div>
   </div>
-
   <footer>
     &copy; <span id="year"></span> MatthewBowlin.com · 
     <a href="privacy-policy.html">Privacy Policy</a>
   </footer>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
