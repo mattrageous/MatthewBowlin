@@ -656,71 +656,6 @@
       color: var(--accent);
     }
 
-    /* Admin Panel */
-    .admin-panel {
-      display: none;
-    }
-
-    .admin-title {
-      color: var(--accent);
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .config-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .input-label {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .input-field {
-      padding: 0.75rem;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text);
-      border-radius: 0.5rem;
-      font-size: 0.875rem;
-      transition: var(--transition);
-    }
-
-    .input-field:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(255, 209, 0, 0.1);
-    }
-
-    .code-block {
-      background: var(--surface-light);
-      border-radius: 0.5rem;
-      padding: 1rem;
-      margin: 1rem 0;
-      overflow-x: auto;
-    }
-
-    .code-block pre {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
     /* Navigation */
     .navigation {
       display: flex;
@@ -780,10 +715,6 @@
 
       .filter-controls {
         justify-content: center;
-      }
-
-      .config-grid {
-        grid-template-columns: 1fr;
       }
 
       .question-table {
@@ -884,109 +815,6 @@
       </div>
     </div>
 
-    <!-- Admin Panel -->
-    <div class="admin-panel" id="adminPanel">
-      <div class="card">
-        <h3 class="admin-title">⚙️ Administration Panel - JSON Integration</h3>
-        
-        <div style="margin-bottom: 2rem;">
-          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📁 JSON File Configuration</h4>
-          <div class="config-grid">
-            <div class="input-group">
-              <label class="input-label">Part 1 - Systems Analysis & Design:</label>
-              <input type="text" id="part1Url" class="input-field" placeholder="./data/part1_systems_analysis_design.json">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Part 2 - Advanced Topics:</label>
-              <input type="text" id="part2Url" class="input-field" placeholder="./data/part2_questions.json">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Part 3:</label>
-              <input type="text" id="part3Url" class="input-field" placeholder="./data/part3_questions.json">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Part 4:</label>
-              <input type="text" id="part4Url" class="input-field" placeholder="./data/part4_questions.json">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Part 5:</label>
-              <input type="text" id="part5Url" class="input-field" placeholder="./data/part5_questions.json">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Part 6:</label>
-              <input type="text" id="part6Url" class="input-field" placeholder="./data/part6_questions.json">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Part 7:</label>
-              <input type="text" id="part7Url" class="input-field" placeholder="./data/part7_questions.json">
-            </div>
-          </div>
-        </div>
-        
-        <div class="controls" style="margin-bottom: 2rem;">
-          <button class="btn btn-primary" onclick="updateJSONUrls()">💾 Update URLs</button>
-          <button class="btn btn-secondary" onclick="testJSONConnection()">🔗 Test Connections</button>
-          <button class="btn btn-secondary" onclick="reloadQuestions()">🔄 Reload Questions</button>
-          <button class="btn btn-secondary" onclick="downloadJSONTemplate()">📋 Download Template</button>
-        </div>
-        
-        <div id="connectionStatus" class="status-message"></div>
-        
-        <div class="card" style="background: var(--surface-light); margin-bottom: 2rem;">
-          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📝 JSON File Structures</h4>
-          <div style="margin-bottom: 1rem;">
-            <strong style="color: var(--text);">Standard Question Format:</strong>
-          </div>
-          <div class="code-block">
-            <pre>{
-  "systems_analysis_and_design_questions": [
-    {
-      "id": 1,
-      "question": "Question text here",
-      "table": [
-        ["Header1", "Header2"],
-        ["Row1Col1", "Row1Col2"]
-      ],
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "answer": "Option B",
-      "explanation": "Detailed explanation here"
-    }
-  ]
-}</pre>
-          </div>
-          <div style="margin: 1rem 0;">
-            <strong style="color: var(--text);">Passage-Based Format:</strong>
-          </div>
-          <div class="code-block">
-            <pre>{
-  "preparing_reports_and_official_documents": [
-    {
-      "id": 1,
-      "passageType": "A",
-      "passage": "Text of passage here...",
-      "questions": [
-        {
-          "qid": 1,
-          "question": "Question about the passage",
-          "options": ["A", "B", "C", "D"],
-          "answer": "Correct option text"
-        }
-      ]
-    }
-  ]
-}</pre>
-          </div>
-        </div>
-        
-        <div class="card" style="background: var(--surface-light);">
-          <h4 style="color: var(--accent); margin-bottom: 1rem; font-weight: 600;">📊 Part Statistics</h4>
-          <div id="partStatistics" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;">
-            <!-- Will be populated by JavaScript -->
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Quiz Container -->
     <div class="card quiz-container" id="quizContainer">
       <div class="question-header">
@@ -1046,7 +874,7 @@
     <div class="navigation">
       <button class="btn btn-secondary" id="randomBtn">🎲 Random Question</button>
       <button class="btn btn-secondary" id="resetBtn">🔄 Reset Progress</button>
-      <button class="btn btn-secondary" id="adminToggle">⚙️ Admin Panel</button>
+      <a href="https://matthewbowlin.com" class="btn btn-secondary">🏠 Back to Homepage</a>
     </div>
   </div>
 
@@ -1492,9 +1320,6 @@ function setupEventListeners() {
 
   // Reset
   document.getElementById('resetBtn').addEventListener('click', resetQuiz);
-
-  // Admin toggle
-  document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
 }
 
 function toggleShuffle() {
@@ -1516,34 +1341,6 @@ function toggleShuffle() {
   
   // Save preference
   localStorage.setItem('shuffleEnabled', shuffleEnabled.toString());
-}
-
-function updatePartStats() {
-  const statsContainer = document.getElementById("partStatistics");
-  if (!statsContainer) return;
-
-  // Clear previous content
-  statsContainer.innerHTML = "";
-
-  if (!questionsDB || questionsDB.length === 0) return;
-
-  // Count questions by part
-  const counts = {};
-  questionsDB.forEach(q => {
-    if (!counts[q.part]) counts[q.part] = 0;
-    counts[q.part]++;
-  });
-
-  // Render stats
-  Object.entries(counts).forEach(([part, count]) => {
-    const div = document.createElement("div");
-    div.className = "stat-item";
-    div.innerHTML = `
-      <span class="stat-value">${count}</span>
-      <span class="stat-label">${part.toUpperCase()}</span>
-    `;
-    statsContainer.appendChild(div);
-  });
 }
 
 /* --------------------------------------------- */
@@ -1575,7 +1372,6 @@ function initializeQuizAfterLoad() {
   updateFilteredQuestions();
   displayQuestion();
   updateProgress();
-  updatePartStats();
 }
 
 /* --------------------------------------------- */
@@ -1623,13 +1419,6 @@ function determineCategory(text) {
 /* 17. Initialize Quiz                           */
 /* --------------------------------------------- */
 function initializeQuiz() {
-  const savedUrls = localStorage.getItem("jsonUrls");
-  if (savedUrls) {
-    const urls = JSON.parse(savedUrls);
-    Object.keys(urls).forEach(key => {
-      if (urls[key]) JSON_CONFIG[key] = urls[key];
-    });
-  }
   loadQuestionsFromJSON();
 }
 
@@ -1821,32 +1610,6 @@ function initializeQuiz() {
       const partLabel = part && partNames[part] ? ` - ${partNames[part]}` : '';
       
       return categoryName + partLabel;
-    }
-
-    function toggleAdminPanel() {
-      const adminPanel = document.getElementById('adminPanel');
-      if (adminPanel.style.display === 'none' || !adminPanel.style.display) {
-        adminPanel.style.display = 'block';
-      } else {
-        adminPanel.style.display = 'none';
-      }
-    }
-
-    // Admin Functions (placeholder implementations)
-    function updateJSONUrls() {
-      console.log('Update JSON URLs functionality would go here');
-    }
-
-    function testJSONConnection() {
-      console.log('Test JSON connection functionality would go here');
-    }
-
-    function reloadQuestions() {
-      loadQuestionsFromJSON();
-    }
-
-    function downloadJSONTemplate() {
-      console.log('Download JSON template functionality would go here');
     }
 
     document.addEventListener("DOMContentLoaded", () => {
