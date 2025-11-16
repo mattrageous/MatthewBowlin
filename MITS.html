@@ -157,6 +157,53 @@
       border-color: rgba(255, 209, 0, 0.2);
     }
 
+    /* Table Styles */
+    .question-table {
+      margin: 1.5rem 0;
+      border-collapse: collapse;
+      width: 100%;
+      background: var(--surface-light);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .question-table th {
+      background: var(--gradient-primary);
+      color: var(--text);
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .question-table td {
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .question-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .question-table tbody tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .question-table tbody tr:hover {
+      background: rgba(255, 209, 0, 0.05);
+    }
+
+    /* Numeric cells */
+    .question-table td:not(:first-child) {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+    }
+
     /* Progress Section */
     .progress-section {
       margin-bottom: 2rem;
@@ -696,6 +743,15 @@
       .config-grid {
         grid-template-columns: 1fr;
       }
+
+      .question-table {
+        font-size: 0.875rem;
+      }
+
+      .question-table th,
+      .question-table td {
+        padding: 0.5rem;
+      }
     }
 
     /* Loading Animation */
@@ -840,8 +896,13 @@
     {
       "id": 1,
       "question": "Question text here",
+      "table": [
+        ["Header1", "Header2"],
+        ["Row1Col1", "Row1Col2"]
+      ],
       "options": ["Option A", "Option B", "Option C", "Option D"],
-      "answer": "Option B"
+      "answer": "Option B",
+      "explanation": "Detailed explanation here"
     }
   ]
 }</pre>
@@ -999,7 +1060,61 @@ function rebindQuizElements() {
 }
 
 /* --------------------------------------------- */
-/* 7. JSON Loader                                */
+/* 7. TABLE RENDERING FUNCTION                   */
+/* --------------------------------------------- */
+function renderTable(tableData) {
+  if (!Array.isArray(tableData) || tableData.length === 0) {
+    return '';
+  }
+
+  const headers = tableData[0];
+  const rows = tableData.slice(1);
+
+  let tableHTML = '<table class="question-table">';
+  
+  // Render headers
+  tableHTML += '<thead><tr>';
+  headers.forEach(header => {
+    tableHTML += `<th>${escapeHtml(header)}</th>`;
+  });
+  tableHTML += '</tr></thead>';
+  
+  // Render body rows
+  tableHTML += '<tbody>';
+  rows.forEach(row => {
+    tableHTML += '<tr>';
+    row.forEach((cell, index) => {
+      // Format numbers with commas if it's a numeric value
+      let formattedCell = cell;
+      if (typeof cell === 'number' && index > 0) {
+        formattedCell = cell.toLocaleString();
+      } else if (typeof cell === 'string' && /^\d+$/.test(cell) && index > 0) {
+        formattedCell = parseInt(cell).toLocaleString();
+      }
+      tableHTML += `<td>${escapeHtml(formattedCell)}</td>`;
+    });
+    tableHTML += '</tr>';
+  });
+  tableHTML += '</tbody></table>';
+  
+  return tableHTML;
+}
+
+/* --------------------------------------------- */
+/* 8. HTML ESCAPE FUNCTION                       */
+/* --------------------------------------------- */
+function escapeHtml(unsafe) {
+  return unsafe
+    .toString()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+/* --------------------------------------------- */
+/* 9. JSON Loader                                */
 /* --------------------------------------------- */
 async function loadQuestionsFromJSON() {
   try {
@@ -1048,7 +1163,7 @@ async function loadQuestionsFromJSON() {
 }
 
 /* --------------------------------------------- */
-/* 8. Parse JSON                                 */
+/* 10. Parse JSON                                */
 /* --------------------------------------------- */
 function parseJSONToQuestions(jsonData, partName) {
   const arr = jsonData.systems_analysis_and_design_questions || 
@@ -1066,12 +1181,77 @@ function parseJSONToQuestions(jsonData, partName) {
       part: partName,
       category: determineCategory(q.question),
       question: q.question,
+      table: q.table, // Include table data
       options: q.options,
       correct: correctIndex >= 0 ? correctIndex : 0,
       answer: q.answer,
       explanation: q.explanation || `The correct answer is "${q.answer}".`
     };
   });
+}
+
+/* --------------------------------------------- */
+/* 11. ENHANCED DISPLAY QUESTION FUNCTION        */
+/* --------------------------------------------- */
+function displayQuestion() {
+  const question = filteredQuestions[currentQuestionIndex];
+  if (!question) return;
+
+  // Handle question text and table separately
+  let questionContent = question.question;
+  
+  // If there's a structured table, extract the question text and render table separately
+  if (question.table && Array.isArray(question.table)) {
+    // Remove table content from question text if it exists
+    // Split on double newline and take everything before potential table data
+    const parts = questionContent.split('\n\n');
+    let cleanQuestionText = parts[0];
+    
+    // If the question text mentions "table below", keep that context
+    if (parts.length > 1 && !parts[0].toLowerCase().includes('table')) {
+      cleanQuestionText = questionContent.split(/\n\n[A-Z\s|]+\n/)[0];
+    }
+    
+    // Create the question HTML with table
+    questionText.innerHTML = `
+      <div style="margin-bottom: 1.5rem;">${escapeHtml(cleanQuestionText)}</div>
+      ${renderTable(question.table)}
+    `;
+  } else {
+    // Fallback to original text display
+    questionText.textContent = questionContent;
+  }
+
+  questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${filteredQuestions.length}`;
+  categoryTag.textContent = getCategoryName(question.category, question.part);
+  currentQuestionSpan.textContent = currentQuestionIndex + 1;
+
+  // Clear previous options
+  optionsContainer.innerHTML = '';
+  
+  // Create option elements
+  question.options.forEach((option, index) => {
+    const optionDiv = document.createElement('div');
+    optionDiv.className = 'option';
+    optionDiv.innerHTML = `
+      <div class="option-letter">${String.fromCharCode(65 + index)}</div>
+      <div>${escapeHtml(option)}</div>
+    `;
+    
+    optionDiv.addEventListener('click', () => selectOption(index));
+    optionsContainer.appendChild(optionDiv);
+  });
+
+  // Update button states
+  updateNavigationButtons();
+  
+  // Show previous answer if exists
+  if (userAnswers[question.id] !== undefined) {
+    showAnswerState(question.id);
+  } else {
+    explanation.classList.remove('show');
+    submitBtn.style.display = 'inline-block';
+  }
 }
 
   function setupEventListeners() {
@@ -1098,7 +1278,11 @@ function parseJSONToQuestions(jsonData, partName) {
 
   // Reset
   document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+
+  // Admin toggle
+  document.getElementById('adminToggle').addEventListener('click', toggleAdminPanel);
 }
+
 function updatePartStats() {
   const statsContainer = document.getElementById("partStatistics");
   if (!statsContainer) return;
@@ -1128,9 +1312,8 @@ function updatePartStats() {
   });
 }
 
-
 /* --------------------------------------------- */
-/* 9. Restore HTML + Bind + Start Quiz           */
+/* 12. Restore HTML + Bind + Start Quiz           */
 /* --------------------------------------------- */
 function initializeQuizAfterLoad() {
   const container = document.getElementById("quizContainer");
@@ -1145,15 +1328,15 @@ function initializeQuizAfterLoad() {
 }
 
 /* --------------------------------------------- */
-/* 10. Loading UI                                */
+/* 13. Loading UI                                */
 /* --------------------------------------------- */
 function showLoadingState() {
   const qc = document.getElementById("quizContainer");
   qc.innerHTML = `
     <div class="loading-container">
       <div class="loading-spinner"></div>
-      <h3>Loading Questions...</h3>
-      <p>Fetching questions from JSON files</p>
+      <h3 class="loading-title">Loading Questions...</h3>
+      <p class="loading-subtitle">Fetching questions from JSON files</p>
     </div>
   `;
 }
@@ -1162,8 +1345,12 @@ function hideLoadingState() {
   /* replaced automatically */
 }
 
+function showOfflineNotice() {
+  console.log("Using fallback questions - check network connection");
+}
+
 /* --------------------------------------------- */
-/* 11. Category Detection                         */
+/* 14. Category Detection                         */
 /* --------------------------------------------- */
 function determineCategory(text) {
   const map = {
@@ -1182,7 +1369,7 @@ function determineCategory(text) {
 }
 
 /* --------------------------------------------- */
-/* 12. Initialize Quiz                           */
+/* 15. Initialize Quiz                           */
 /* --------------------------------------------- */
 function initializeQuiz() {
   const savedUrls = localStorage.getItem("jsonUrls");
@@ -1204,43 +1391,6 @@ function initializeQuiz() {
         filteredQuestions = questionsDB.filter(q => q.category === currentFilter);
       }
       totalQuestionsSpan.textContent = filteredQuestions.length;
-    }
-
-    function displayQuestion() {
-      const question = filteredQuestions[currentQuestionIndex];
-      if (!question) return;
-
-      questionText.textContent = question.question;
-      questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${filteredQuestions.length}`;
-      categoryTag.textContent = getCategoryName(question.category, question.part);
-      currentQuestionSpan.textContent = currentQuestionIndex + 1;
-
-      // Clear previous options
-      optionsContainer.innerHTML = '';
-      
-      // Create option elements
-      question.options.forEach((option, index) => {
-        const optionDiv = document.createElement('div');
-        optionDiv.className = 'option';
-        optionDiv.innerHTML = `
-          <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-          <div>${option}</div>
-        `;
-        
-        optionDiv.addEventListener('click', () => selectOption(index));
-        optionsContainer.appendChild(optionDiv);
-      });
-
-      // Update button states
-      updateNavigationButtons();
-      
-      // Show previous answer if exists
-      if (userAnswers[question.id] !== undefined) {
-        showAnswerState(question.id);
-      } else {
-        explanation.classList.remove('show');
-        submitBtn.style.display = 'inline-block';
-      }
     }
 
     function selectOption(selectedIndex) {
@@ -1373,7 +1523,7 @@ function initializeQuiz() {
         // Update score circle
         const scoreCircle = document.getElementById('scoreCircle');
         const degrees = (finalScore / 100) * 360;
-        scoreCircle.style.background = `conic-gradient(var(--accent) ${degrees}deg, var(--bg2) ${degrees}deg)`;
+        scoreCircle.style.background = `conic-gradient(var(--accent) ${degrees}deg, var(--surface-light) ${degrees}deg)`;
         
         quizContainer.style.display = 'none';
         resultsSummary.classList.add('show');
@@ -1407,11 +1557,37 @@ function initializeQuiz() {
       return categoryName + partLabel;
     }
 
+    function toggleAdminPanel() {
+      const adminPanel = document.getElementById('adminPanel');
+      if (adminPanel.style.display === 'none' || !adminPanel.style.display) {
+        adminPanel.style.display = 'block';
+      } else {
+        adminPanel.style.display = 'none';
+      }
+    }
+
+    // Admin Functions (placeholder implementations)
+    function updateJSONUrls() {
+      console.log('Update JSON URLs functionality would go here');
+    }
+
+    function testJSONConnection() {
+      console.log('Test JSON connection functionality would go here');
+    }
+
+    function reloadQuestions() {
+      loadQuestionsFromJSON();
+    }
+
+    function downloadJSONTemplate() {
+      console.log('Download JSON template functionality would go here');
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("quizContainer");
-  originalQuizHTML = container.innerHTML;
-  initializeQuiz();
-});
+      const container = document.getElementById("quizContainer");
+      originalQuizHTML = container.innerHTML;
+      initializeQuiz();
+    });
 </script>
 </body>
 </html>
