@@ -46,7 +46,9 @@
       /* Gradients */
       --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
       --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #f59e0b 100%);
-      --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%);
+      --gradient-accent-transparent: linear-gradient(135deg, rgba(255, 209, 0, 0.20) 0%, rgba(245, 158, 11, 0.20) 100%);
+
       
       /* Animation */
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,17 +93,18 @@
 
     .logo {
       width: 80px;
-      height: 80px;
-      background: var(--gradient-accent);
+      height: 90px;
+      background: var(--gradient-accent-transparent); /* new variable */
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 1.5rem;
-      font-size: 2rem;
+      font-size: 5rem;
       box-shadow: var(--shadow-glow);
       animation: float 3s ease-in-out infinite;
     }
+
 
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
