@@ -1,1104 +1,1104 @@
 {
-    "understanding_and_applying_administrative_principles": [
-        {
-            "id": 1,
-            "question": "A manager creates specific, measurable departmental objectives for the next quarter. Which administrative function is being performed?",
-            "options": [
-                "Organizing",
-                "Controlling",
-                "Planning",
-                "Directing"
-            ],
-            "answer": "Planning"
-        },
-        {
-            "id": 2,
-            "question": "A supervisor redistributes tasks among staff to align workload with skill sets. This reflects which principle?",
-            "options": [
-                "Delegation",
-                "Organizing",
-                "Accountability",
-                "Controlling"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 3,
-            "question": "Ensuring staff follow established procedures and standards is primarily part of which function?",
-            "options": [
-                "Directing",
-                "Controlling",
-                "Planning",
-                "Motivating"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 4,
-            "question": "A leader motivates employees by clarifying goals and providing feedback. This is an example of:",
-            "options": [
-                "Planning",
-                "Directing",
-                "Organizing",
-                "Budgeting"
-            ],
-            "answer": "Directing"
-        },
-        {
-            "id": 5,
-            "question": "Which of the following is the final step in the classical decision-making model?",
-            "options": [
-                "Identify alternatives",
-                "Evaluate results",
-                "Implement the decision",
-                "Define the problem"
-            ],
-            "answer": "Evaluate results"
-        },
-        {
-            "id": 6,
-            "question": "A policy that outlines how to respond to cybersecurity incidents is an example of:",
-            "options": [
-                "Strategic planning",
-                "Policy formation",
-                "Operational planning",
-                "Delegation"
-            ],
-            "answer": "Policy formation"
-        },
-        {
-            "id": 7,
-            "question": "When a manager transfers authority to an employee but remains answerable for results, this represents:",
-            "options": [
-                "Accountability",
-                "Delegation",
-                "Empowerment",
-                "Coordination"
-            ],
-            "answer": "Delegation"
-        },
-        {
-            "id": 8,
-            "question": "A manager compares planned outcomes to actual results. This is an example of:",
-            "options": [
-                "Controlling",
-                "Directing",
-                "Organizing",
-                "Planning"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 9,
-            "question": "Encouraging employees to participate in discussions and decision-making aligns with which leadership style?",
-            "options": [
-                "Autocratic",
-                "Democratic",
-                "Laissez-faire",
-                "Bureaucratic"
-            ],
-            "answer": "Democratic"
-        },
-        {
-            "id": 10,
-            "question": "A manager evaluates future workforce needs and develops training programs. This relates to:",
-            "options": [
-                "Policy development",
-                "Personnel development",
-                "Organizational control",
-                "Tactical planning"
-            ],
-            "answer": "Personnel development"
-        },
-        {
-            "id": 11,
-            "question": "The primary purpose of planning is to:",
-            "options": [
-                "Assign tasks",
-                "Establish goals and determine how to achieve them",
-                "Motivate staff",
-                "Monitor performance"
-            ],
-            "answer": "Establish goals and determine how to achieve them"
-        },
-        {
-            "id": 12,
-            "question": "Which principle is most associated with creating a hierarchical structure of authority and responsibility?",
-            "options": [
-                "Organizing",
-                "Directing",
-                "Controlling",
-                "Planning"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 13,
-            "question": "Direct leadership communication is most effective when it is:",
-            "options": [
-                "Formal and rigid",
-                "Clear and timely",
-                "One-directional only",
-                "Highly technical"
-            ],
-            "answer": "Clear and timely"
-        },
-        {
-            "id": 14,
-            "question": "A manager monitors KPIs to determine whether performance targets are being met. This aligns with:",
-            "options": [
-                "Strategic planning",
-                "Directing",
-                "Controlling",
-                "Organizing"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 15,
-            "question": "When employees resist a new workflow due to uncertainty, what is the most effective strategy?",
-            "options": [
-                "Impose strict deadlines",
-                "Increase top-down communication only",
-                "Provide training and explain benefits",
-                "Avoid making changes"
-            ],
-            "answer": "Provide training and explain benefits"
-        },
-        {
-            "id": 16,
-            "question": "Setting timelines, milestones, and deliverables for a new initiative is part of:",
-            "options": [
-                "Controlling",
-                "Organizing",
-                "Planning",
-                "Directing"
-            ],
-            "answer": "Planning"
-        },
-        {
-            "id": 17,
-            "question": "Which of the following best demonstrates accountability?",
-            "options": [
-                "Explaining decisions to leadership",
-                "Delegating tasks",
-                "Increasing team size",
-                "Documenting meetings"
-            ],
-            "answer": "Explaining decisions to leadership"
-        },
-        {
-            "id": 18,
-            "question": "A policy that requires three levels of approval for procurement is an example of:",
-            "options": [
-                "Directing",
-                "Organizing workflow",
-                "Policy formation",
-                "Personnel development"
-            ],
-            "answer": "Policy formation"
-        },
-        {
-            "id": 19,
-            "question": "The purpose of span of control is to determine:",
-            "options": [
-                "Budget flexibility",
-                "Number of employees a manager can effectively supervise",
-                "Levels of delegation",
-                "Types of policies needed"
-            ],
-            "answer": "Number of employees a manager can effectively supervise"
-        },
-        {
-            "id": 20,
-            "question": "A manager conducts a gap analysis to identify needed improvements. This supports which function?",
-            "options": [
-                "Controlling",
-                "Directing",
-                "Planning",
-                "Organizing"
-            ],
-            "answer": "Planning"
-        },
-        {
-            "id": 21,
-            "question": "The most important characteristic of effective delegation is:",
-            "options": [
-                "Permanent transfer of responsibility",
-                "Clear assignment of authority",
-                "Allowing employees to decide goals",
-                "Withdrawing oversight"
-            ],
-            "answer": "Clear assignment of authority"
-        },
-        {
-            "id": 22,
-            "question": "A team is reorganized to reduce duplication of effort. This reflects:",
-            "options": [
-                "Directing",
-                "Organizing",
-                "Controlling",
-                "Discipline management"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 23,
-            "question": "A leader who focuses on inspiration, vision, and change demonstrates which leadership style?",
-            "options": [
-                "Transactional",
-                "Transformational",
-                "Autocratic",
-                "Passive"
-            ],
-            "answer": "Transformational"
-        },
-        {
-            "id": 24,
-            "question": "When creating a new policy, the first step should be:",
-            "options": [
-                "Write the final version",
-                "Identify the problem the policy must address",
-                "Send a draft for review",
-                "Implement immediately"
-            ],
-            "answer": "Identify the problem the policy must address"
-        },
-        {
-            "id": 25,
-            "question": "The most effective way to ensure staff follow procedures is to:",
-            "options": [
-                "Rely solely on written manuals",
-                "Provide training and ensure understanding",
-                "Allow staff to interpret as they wish",
-                "Use reminders only"
-            ],
-            "answer": "Provide training and ensure understanding"
-        },
-        {
-            "id": 26,
-            "question": "A manager evaluates alternative solutions using cost–benefit analysis. This is part of:",
-            "options": [
-                "Directing",
-                "Decision-making",
-                "Organizing",
-                "Delegation"
-            ],
-            "answer": "Decision-making"
-        },
-        {
-            "id": 27,
-            "question": "An employee receives authority to decide vendor selections within a budget range. This reflects:",
-            "options": [
-                "Planning",
-                "Delegation",
-                "Controlling",
-                "Leadership"
-            ],
-            "answer": "Delegation"
-        },
-        {
-            "id": 28,
-            "question": "A leader who makes decisions independently with little input from staff is using which style?",
-            "options": [
-                "Autocratic",
-                "Democratic",
-                "Laissez-faire",
-                "Consensus"
-            ],
-            "answer": "Autocratic"
-        },
-        {
-            "id": 29,
-            "question": "The controlling function relies heavily on:",
-            "options": [
-                "Supervision and coaching",
-                "Monitoring and evaluation",
-                "Brainstorming and creativity",
-                "Hiring decisions"
-            ],
-            "answer": "Monitoring and evaluation"
-        },
-        {
-            "id": 30,
-            "question": "A supervisor creates standard operating procedures (SOPs). This is part of:",
-            "options": [
-                "Leadership",
-                "Organizing",
-                "Delegation",
-                "Training"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 31,
-            "question": "What is the primary purpose of organizational charts?",
-            "options": [
-                "To document employee evaluations",
-                "To show structure, authority, and reporting relationships",
-                "To assign pay grades",
-                "To manage budgets"
-            ],
-            "answer": "To show structure, authority, and reporting relationships"
-        },
-        {
-            "id": 32,
-            "question": "A manager notices declining productivity and initiates an investigation to find root causes. This reflects:",
-            "options": [
-                "Directing",
-                "Controlling",
-                "Planning",
-                "Communication"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 33,
-            "question": "Which leadership trait is most critical during organizational change?",
-            "options": [
-                "Silence",
-                "Vision",
-                "Favoritism",
-                "Rigidness"
-            ],
-            "answer": "Vision"
-        },
-        {
-            "id": 34,
-            "question": "To ensure accountability, a delegated task must include:",
-            "options": [
-                "Unlimited autonomy",
-                "Clear expectations and deadlines",
-                "No follow-up",
-                "Only verbal instructions"
-            ],
-            "answer": "Clear expectations and deadlines"
-        },
-        {
-            "id": 35,
-            "question": "Long-term, organization-wide direction is set through:",
-            "options": [
-                "Operational planning",
-                "Strategic planning",
-                "Task instructions",
-                "Performance reviews"
-            ],
-            "answer": "Strategic planning"
-        },
-        {
-            "id": 36,
-            "question": "Coaching employees and giving performance feedback belong to which function?",
-            "options": [
-                "Directing",
-                "Organizing",
-                "Controlling",
-                "Planning"
-            ],
-            "answer": "Directing"
-        },
-        {
-            "id": 37,
-            "question": "A manager reviews quarterly metrics and adjusts processes to improve outcomes. This is:",
-            "options": [
-                "Planning",
-                "Controlling",
-                "Directing",
-                "Delegation"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 38,
-            "question": "A key benefit of delegation is:",
-            "options": [
-                "Reduced accountability",
-                "Improved efficiency and staff development",
-                "Eliminating the manager’s responsibility",
-                "Avoiding decision-making"
-            ],
-            "answer": "Improved efficiency and staff development"
-        },
-        {
-            "id": 39,
-            "question": "Which of the following best describes the directing function?",
-            "options": [
-                "Monitoring progress",
-                "Guiding and motivating employees",
-                "Organizing physical resources",
-                "Setting goals"
-            ],
-            "answer": "Guiding and motivating employees"
-        },
-        {
-            "id": 40,
-            "question": "Resistance to change is most often caused by:",
-            "options": [
-                "Clarity",
-                "Fear or uncertainty",
-                "Excessive communication",
-                "Overtraining"
-            ],
-            "answer": "Fear or uncertainty"
-        },
-        {
-            "id": 41,
-            "question": "The principle of unity of command states that:",
-            "options": [
-                "Employees should report to only one supervisor",
-                "Teams must vote on decisions",
-                "Tasks must be rotated daily",
-                "Departments must merge functions"
-            ],
-            "answer": "Employees should report to only one supervisor"
-        },
-        {
-            "id": 42,
-            "question": "Which leadership behavior increases employee commitment?",
-            "options": [
-                "Ignoring concerns",
-                "Providing recognition and support",
-                "Delegating without guidance",
-                "Eliminating communication"
-            ],
-            "answer": "Providing recognition and support"
-        },
-        {
-            "id": 43,
-            "question": "A manager forecasts staffing needs for the next fiscal year. This involves:",
-            "options": [
-                "Planning",
-                "Controlling",
-                "Directing",
-                "Organizing"
-            ],
-            "answer": "Planning"
-        },
-        {
-            "id": 44,
-            "question": "Communicating expectations clearly to staff is part of which function?",
-            "options": [
-                "Directing",
-                "Planning",
-                "Controlling",
-                "Organizing"
-            ],
-            "answer": "Directing"
-        },
-        {
-            "id": 45,
-            "question": "Evaluating alternative outcomes before selecting a solution belongs to:",
-            "options": [
-                "Decision-making",
-                "Delegation",
-                "Controlling",
-                "Organizing"
-            ],
-            "answer": "Decision-making"
-        },
-        {
-            "id": 46,
-            "question": "Which of the following is NOT a characteristic of effective policies?",
-            "options": [
-                "Clarity",
-                "Consistency",
-                "Ambiguity",
-                "Relevance"
-            ],
-            "answer": "Ambiguity"
-        },
-        {
-            "id": 47,
-            "question": "A manager reviews whether team roles align with project goals. This aligns with:",
-            "options": [
-                "Organizing",
-                "Directing",
-                "Controlling",
-                "Planning"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 48,
-            "question": "A supervisor provides ongoing coaching to help employees improve performance. This reflects:",
-            "options": [
-                "Planning",
-                "Directing",
-                "Organizing",
-                "Policy formation"
-            ],
-            "answer": "Directing"
-        },
-        {
-            "id": 49,
-            "question": "The most effective time to evaluate the success of a new policy implementation is:",
-            "options": [
-                "Before rollout",
-                "Immediately after rollout",
-                "After measurable outcomes are produced",
-                "Only during annual audits"
-            ],
-            "answer": "After measurable outcomes are produced"
-        },
-        {
-            "id": 50,
-            "question": "Monitoring compliance with regulations and internal standards is part of:",
-            "options": [
-                "Directing",
-                "Organizing",
-                "Planning",
-                "Controlling"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 51,
-            "question": "A manager identifies the need to streamline a process but postpones action until more data is collected. This represents which step of decision-making?",
-            "options": [
-                "Implementation",
-                "Problem definition",
-                "Evaluation of alternatives",
-                "Delaying tactics"
-            ],
-            "answer": "Problem definition"
-        },
-        {
-            "id": 52,
-            "question": "A supervisor provides clear instructions, sets deadlines, and observes progress daily. This demonstrates which leadership style?",
-            "options": [
-                "Laissez-faire",
-                "Autocratic",
-                "Transformational",
-                "Participative"
-            ],
-            "answer": "Autocratic"
-        },
-        {
-            "id": 53,
-            "question": "Creating a chain of command ensures:",
-            "options": [
-                "Redundancy in authority",
-                "Clear reporting relationships",
-                "Unlimited autonomy for employees",
-                "Eliminating middle management"
-            ],
-            "answer": "Clear reporting relationships"
-        },
-        {
-            "id": 54,
-            "question": "A manager divides a large project into smaller tasks and assigns them to specific teams. This reflects:",
-            "options": [
-                "Directing",
-                "Organizing",
-                "Controlling",
-                "Networking"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 55,
-            "question": "Strategic planning primarily focuses on:",
-            "options": [
-                "Daily operations",
-                "Long-term organizational direction",
-                "Employee grievances",
-                "Task distribution"
-            ],
-            "answer": "Long-term organizational direction"
-        },
-        {
-            "id": 56,
-            "question": "A leader encourages open discussion and builds consensus before making decisions. This is characteristic of:",
-            "options": [
-                "Autocratic leadership",
-                "Democratic leadership",
-                "Authoritarian leadership",
-                "Transactional leadership"
-            ],
-            "answer": "Democratic leadership"
-        },
-        {
-            "id": 57,
-            "question": "A key element of effective delegation is:",
-            "options": [
-                "Reducing oversight",
-                "Matching tasks to employee capabilities",
-                "Removing accountability from the manager",
-                "Allowing unlimited flexibility"
-            ],
-            "answer": "Matching tasks to employee capabilities"
-        },
-        {
-            "id": 58,
-            "question": "A supervisor develops detailed contingency plans for potential risks. This is part of:",
-            "options": [
-                "Directing",
-                "Planning",
-                "Motivating",
-                "Controlling"
-            ],
-            "answer": "Planning"
-        },
-        {
-            "id": 59,
-            "question": "A newly developed policy requires all internal communications to follow a standardized format. This is an example of:",
-            "options": [
-                "Organizing workflow",
-                "Policy formation",
-                "Delegation",
-                "Directing"
-            ],
-            "answer": "Policy formation"
-        },
-        {
-            "id": 60,
-            "question": "A manager ensures resources are available, aligns objectives, and allocates responsibilities. This reflects:",
-            "options": [
-                "Controlling",
-                "Planning",
-                "Organizing",
-                "Directing"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 61,
-            "question": "A supervisor sets performance expectations and guides employees to meet goals. This is part of:",
-            "options": [
-                "Directing",
-                "Planning",
-                "Controlling",
-                "Budgeting"
-            ],
-            "answer": "Directing"
-        },
-        {
-            "id": 62,
-            "question": "The most important factor in effective communication is:",
-            "options": [
-                "Using technical language",
-                "Ensuring clarity and understanding",
-                "Speed of delivery",
-                "Number of people involved"
-            ],
-            "answer": "Ensuring clarity and understanding"
-        },
-        {
-            "id": 63,
-            "question": "A manager determines the root cause of recurring errors in monthly reports. This relates to:",
-            "options": [
-                "Leadership",
-                "Controlling",
-                "Policy development",
-                "Directing"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 64,
-            "question": "A leader who emphasizes rewards and penalties is using which style?",
-            "options": [
-                "Transactional",
-                "Transformational",
-                "Autocratic",
-                "Servant"
-            ],
-            "answer": "Transactional"
-        },
-        {
-            "id": 65,
-            "question": "Developing staff to take on greater responsibilities supports which principle?",
-            "options": [
-                "Organizational authority",
-                "Personnel development",
-                "Budgetary planning",
-                "Policy formation"
-            ],
-            "answer": "Personnel development"
-        },
-        {
-            "id": 66,
-            "question": "A manager meets with employees to gather feedback before making changes. This demonstrates:",
-            "options": [
-                "Democratic leadership",
-                "Autocratic control",
-                "Ineffective delegation",
-                "Micromanagement"
-            ],
-            "answer": "Democratic leadership"
-        },
-        {
-            "id": 67,
-            "question": "A key objective of controlling is to:",
-            "options": [
-                "Create new policies",
-                "Measure performance against standards",
-                "Assign new tasks",
-                "Reduce communication"
-            ],
-            "answer": "Measure performance against standards"
-        },
-        {
-            "id": 68,
-            "question": "Which of the following is an example of a tactical decision?",
-            "options": [
-                "Setting department goals for the next 5 years",
-                "Adjusting project timelines for the quarter",
-                "Creating the agency mission statement",
-                "Revising statewide regulations"
-            ],
-            "answer": "Adjusting project timelines for the quarter"
-        },
-        {
-            "id": 69,
-            "question": "A leader restructures a team to respond more quickly to client needs. This aligns with:",
-            "options": [
-                "Organizing",
-                "Controlling",
-                "Personnel development",
-                "Policy enforcement"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 70,
-            "question": "Assigning authority without ensuring the employee understands expectations can lead to failure in:",
-            "options": [
-                "Planning",
-                "Delegation",
-                "Directing",
-                "Policy development"
-            ],
-            "answer": "Delegation"
-        },
-        {
-            "id": 71,
-            "question": "A manager encourages employees to propose innovative solutions. This reflects:",
-            "options": [
-                "Transformational leadership",
-                "Autocratic control",
-                "Laissez-faire leadership",
-                "Transactional leadership"
-            ],
-            "answer": "Transformational leadership"
-        },
-        {
-            "id": 72,
-            "question": "The first step in the controlling process is to:",
-            "options": [
-                "Take corrective action",
-                "Measure actual performance",
-                "Establish performance standards",
-                "Communicate results"
-            ],
-            "answer": "Establish performance standards"
-        },
-        {
-            "id": 73,
-            "question": "A supervisor reviews staffing needs based on anticipated workload changes. This is part of:",
-            "options": [
-                "Planning",
-                "Directing",
-                "Controlling",
-                "Organizing"
-            ],
-            "answer": "Planning"
-        },
-        {
-            "id": 74,
-            "question": "Which principle ensures employees know exactly who they report to?",
-            "options": [
-                "Unity of direction",
-                "Span of control",
-                "Unity of command",
-                "Delegation"
-            ],
-            "answer": "Unity of command"
-        },
-        {
-            "id": 75,
-            "question": "A manager selects the best solution after analyzing multiple alternatives. This is which step of decision-making?",
-            "options": [
-                "Identifying the problem",
-                "Choosing an alternative",
-                "Implementing the decision",
-                "Evaluating the outcome"
-            ],
-            "answer": "Choosing an alternative"
-        },
-        {
-            "id": 76,
-            "question": "Introducing new software and training staff on its use is an example of:",
-            "options": [
-                "Organizing",
-                "Managing change",
-                "Directing",
-                "Delegation"
-            ],
-            "answer": "Managing change"
-        },
-        {
-            "id": 77,
-            "question": "A supervisor clearly defines a task, expectations, authority limits, and deadlines. This reflects:",
-            "options": [
-                "Effective delegation",
-                "Autocratic leadership",
-                "Controlling",
-                "Redundant communication"
-            ],
-            "answer": "Effective delegation"
-        },
-        {
-            "id": 78,
-            "question": "The purpose of policies is to:",
-            "options": [
-                "Provide flexible guidelines only",
-                "Ensure consistency in decision-making and actions",
-                "Eliminate supervisory roles",
-                "Restrict communication"
-            ],
-            "answer": "Ensure consistency in decision-making and actions"
-        },
-        {
-            "id": 79,
-            "question": "A manager clarifies responsibilities and assigns tasks to employees. This aligns with:",
-            "options": [
-                "Planning",
-                "Organizing",
-                "Controlling",
-                "Budgeting"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 80,
-            "question": "A leader who listens actively and encourages two-way communication demonstrates:",
-            "options": [
-                "Passive leadership",
-                "Effective communication",
-                "Autocratic behavior",
-                "Ineffective supervision"
-            ],
-            "answer": "Effective communication"
-        },
-        {
-            "id": 81,
-            "question": "The primary purpose of directing is to:",
-            "options": [
-                "Plan projects",
-                "Monitor performance",
-                "Guide and motivate staff",
-                "Assign financial resources"
-            ],
-            "answer": "Guide and motivate staff"
-        },
-        {
-            "id": 82,
-            "question": "Providing employees access to training workshops is an example of:",
-            "options": [
-                "Policy implementation",
-                "Personnel development",
-                "Strategic planning",
-                "Directing"
-            ],
-            "answer": "Personnel development"
-        },
-        {
-            "id": 83,
-            "question": "A manager compares actual departmental results against planned targets. This is part of:",
-            "options": [
-                "Directing",
-                "Controlling",
-                "Organizing",
-                "Policy formation"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 84,
-            "question": "Assigning responsibility without providing appropriate authority results in:",
-            "options": [
-                "Empowerment",
-                "Role conflict",
-                "Effective control",
-                "Team building"
-            ],
-            "answer": "Role conflict"
-        },
-        {
-            "id": 85,
-            "question": "A leader who focuses on maintaining stability and ensuring compliance demonstrates:",
-            "options": [
-                "Transformational leadership",
-                "Transactional leadership",
-                "Democratic leadership",
-                "Servant leadership"
-            ],
-            "answer": "Transactional leadership"
-        },
-        {
-            "id": 86,
-            "question": "When a manager reorganizes processes to improve efficiency, this reflects:",
-            "options": [
-                "Planning",
-                "Organizing",
-                "Controlling",
-                "Directing"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 87,
-            "question": "A manager identifies operational weaknesses and develops corrective strategies. This reflects:",
-            "options": [
-                "Directing",
-                "Controlling",
-                "Delegation",
-                "Policy formation"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 88,
-            "question": "To encourage innovation, a leader should:",
-            "options": [
-                "Discourage risk-taking",
-                "Punish failed attempts",
-                "Create an environment safe for new ideas",
-                "Minimize communication"
-            ],
-            "answer": "Create an environment safe for new ideas"
-        },
-        {
-            "id": 89,
-            "question": "A manager holds staff meetings to share updates and align goals. This reflects:",
-            "options": [
-                "Delegation",
-                "Strategic communication",
-                "Controlling",
-                "Budgeting"
-            ],
-            "answer": "Strategic communication"
-        },
-        {
-            "id": 90,
-            "question": "Evaluating training effectiveness belongs to which function?",
-            "options": [
-                "Planning",
-                "Personnel development",
-                "Controlling",
-                "Organizing"
-            ],
-            "answer": "Personnel development"
-        },
-        {
-            "id": 91,
-            "question": "A leader explains the reasons behind a difficult decision to maintain transparency. This promotes:",
-            "options": [
-                "Employee confusion",
-                "Accountability and trust",
-                "Micromanagement",
-                "Unnecessary conflict"
-            ],
-            "answer": "Accountability and trust"
-        },
-        {
-            "id": 92,
-            "question": "An organization consolidates two departments to eliminate redundancy. This reflects:",
-            "options": [
-                "Controlling",
-                "Organizing",
-                "Directing",
-                "Personnel development"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 93,
-            "question": "Regularly reviewing compliance with internal controls is part of:",
-            "options": [
-                "Directing",
-                "Policy development",
-                "Controlling",
-                "Organizing"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 94,
-            "question": "Setting a clear long-term vision for the agency is part of:",
-            "options": [
-                "Controlling",
-                "Strategic leadership",
-                "Organizing",
-                "Delegation"
-            ],
-            "answer": "Strategic leadership"
-        },
-        {
-            "id": 95,
-            "question": "The purpose of job specialization in an organization is to:",
-            "options": [
-                "Increase redundancy",
-                "Improve expertise and efficiency",
-                "Confuse reporting structures",
-                "Limit employee development"
-            ],
-            "answer": "Improve expertise and efficiency"
-        },
-        {
-            "id": 96,
-            "question": "Assigning tasks, resources, and procedures is part of which function?",
-            "options": [
-                "Organizing",
-                "Directing",
-                "Policy formation",
-                "Controlling"
-            ],
-            "answer": "Organizing"
-        },
-        {
-            "id": 97,
-            "question": "A supervisor conducts individual performance check-ins. This reflects:",
-            "options": [
-                "Controlling",
-                "Planning",
-                "Organizing",
-                "Change management"
-            ],
-            "answer": "Controlling"
-        },
-        {
-            "id": 98,
-            "question": "To reduce resistance during change, management should:",
-            "options": [
-                "Provide clear communication and opportunities for input",
-                "Announce changes without warning",
-                "Reduce staff involvement",
-                "Delay explaining the change"
-            ],
-            "answer": "Provide clear communication and opportunities for input"
-        },
-        {
-            "id": 99,
-            "question": "A leader prioritizes employee well-being and ethical responsibility. This aligns with:",
-            "options": [
-                "Servant leadership",
-                "Transactional leadership",
-                "Autocratic leadership",
-                "Passive supervision"
-            ],
-            "answer": "Servant leadership"
-        },
-        {
-            "id": 100,
-            "question": "When evaluating alternatives, a manager selects the option with the highest expected benefit. This reflects:",
-            "options": [
-                "Heuristics",
-                "Cost-benefit decision-making",
-                "Autocratic control",
-                "Organizational planning"
-            ],
-            "answer": "Cost-benefit decision-making"
-        }
-    ]
+  "understanding_and_applying_administrative_principles": [
+    {
+      "id": 4000,
+      "question": "A manager creates specific, measurable departmental objectives for the next quarter. Which administrative function is being performed?",
+      "options": [
+        "Organizing",
+        "Controlling",
+        "Planning",
+        "Directing"
+      ],
+      "answer": "Planning"
+    },
+    {
+      "id": 4001,
+      "question": "A supervisor redistributes tasks among staff to align workload with skill sets. This reflects which principle?",
+      "options": [
+        "Delegation",
+        "Organizing",
+        "Accountability",
+        "Controlling"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4002,
+      "question": "Ensuring staff follow established procedures and standards is primarily part of which function?",
+      "options": [
+        "Directing",
+        "Controlling",
+        "Planning",
+        "Motivating"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4003,
+      "question": "A leader motivates employees by clarifying goals and providing feedback. This is an example of:",
+      "options": [
+        "Planning",
+        "Directing",
+        "Organizing",
+        "Budgeting"
+      ],
+      "answer": "Directing"
+    },
+    {
+      "id": 4004,
+      "question": "Which of the following is the final step in the classical decision-making model?",
+      "options": [
+        "Identify alternatives",
+        "Evaluate results",
+        "Implement the decision",
+        "Define the problem"
+      ],
+      "answer": "Evaluate results"
+    },
+    {
+      "id": 4005,
+      "question": "A policy that outlines how to respond to cybersecurity incidents is an example of:",
+      "options": [
+        "Strategic planning",
+        "Policy formation",
+        "Operational planning",
+        "Delegation"
+      ],
+      "answer": "Policy formation"
+    },
+    {
+      "id": 4006,
+      "question": "When a manager transfers authority to an employee but remains answerable for results, this represents:",
+      "options": [
+        "Accountability",
+        "Delegation",
+        "Empowerment",
+        "Coordination"
+      ],
+      "answer": "Delegation"
+    },
+    {
+      "id": 4007,
+      "question": "A manager compares planned outcomes to actual results. This is an example of:",
+      "options": [
+        "Controlling",
+        "Directing",
+        "Organizing",
+        "Planning"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4008,
+      "question": "Encouraging employees to participate in discussions and decision-making aligns with which leadership style?",
+      "options": [
+        "Autocratic",
+        "Democratic",
+        "Laissez-faire",
+        "Bureaucratic"
+      ],
+      "answer": "Democratic"
+    },
+    {
+      "id": 4009,
+      "question": "A manager evaluates future workforce needs and develops training programs. This relates to:",
+      "options": [
+        "Policy development",
+        "Personnel development",
+        "Organizational control",
+        "Tactical planning"
+      ],
+      "answer": "Personnel development"
+    },
+    {
+      "id": 4010,
+      "question": "The primary purpose of planning is to:",
+      "options": [
+        "Assign tasks",
+        "Establish goals and determine how to achieve them",
+        "Motivate staff",
+        "Monitor performance"
+      ],
+      "answer": "Establish goals and determine how to achieve them"
+    },
+    {
+      "id": 4011,
+      "question": "Which principle is most associated with creating a hierarchical structure of authority and responsibility?",
+      "options": [
+        "Organizing",
+        "Directing",
+        "Controlling",
+        "Planning"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4012,
+      "question": "Direct leadership communication is most effective when it is:",
+      "options": [
+        "Formal and rigid",
+        "Clear and timely",
+        "One-directional only",
+        "Highly technical"
+      ],
+      "answer": "Clear and timely"
+    },
+    {
+      "id": 4013,
+      "question": "A manager monitors KPIs to determine whether performance targets are being met. This aligns with:",
+      "options": [
+        "Strategic planning",
+        "Directing",
+        "Controlling",
+        "Organizing"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4014,
+      "question": "When employees resist a new workflow due to uncertainty, what is the most effective strategy?",
+      "options": [
+        "Impose strict deadlines",
+        "Increase top-down communication only",
+        "Provide training and explain benefits",
+        "Avoid making changes"
+      ],
+      "answer": "Provide training and explain benefits"
+    },
+    {
+      "id": 4015,
+      "question": "Setting timelines, milestones, and deliverables for a new initiative is part of:",
+      "options": [
+        "Controlling",
+        "Organizing",
+        "Planning",
+        "Directing"
+      ],
+      "answer": "Planning"
+    },
+    {
+      "id": 4016,
+      "question": "Which of the following best demonstrates accountability?",
+      "options": [
+        "Explaining decisions to leadership",
+        "Delegating tasks",
+        "Increasing team size",
+        "Documenting meetings"
+      ],
+      "answer": "Explaining decisions to leadership"
+    },
+    {
+      "id": 4017,
+      "question": "A policy that requires three levels of approval for procurement is an example of:",
+      "options": [
+        "Directing",
+        "Organizing workflow",
+        "Policy formation",
+        "Personnel development"
+      ],
+      "answer": "Policy formation"
+    },
+    {
+      "id": 4018,
+      "question": "The purpose of span of control is to determine:",
+      "options": [
+        "Budget flexibility",
+        "Number of employees a manager can effectively supervise",
+        "Levels of delegation",
+        "Types of policies needed"
+      ],
+      "answer": "Number of employees a manager can effectively supervise"
+    },
+    {
+      "id": 4019,
+      "question": "A manager conducts a gap analysis to identify needed improvements. This supports which function?",
+      "options": [
+        "Controlling",
+        "Directing",
+        "Planning",
+        "Organizing"
+      ],
+      "answer": "Planning"
+    },
+    {
+      "id": 4020,
+      "question": "The most important characteristic of effective delegation is:",
+      "options": [
+        "Permanent transfer of responsibility",
+        "Clear assignment of authority",
+        "Allowing employees to decide goals",
+        "Withdrawing oversight"
+      ],
+      "answer": "Clear assignment of authority"
+    },
+    {
+      "id": 4021,
+      "question": "A team is reorganized to reduce duplication of effort. This reflects:",
+      "options": [
+        "Directing",
+        "Organizing",
+        "Controlling",
+        "Discipline management"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4022,
+      "question": "A leader who focuses on inspiration, vision, and change demonstrates which leadership style?",
+      "options": [
+        "Transactional",
+        "Transformational",
+        "Autocratic",
+        "Passive"
+      ],
+      "answer": "Transformational"
+    },
+    {
+      "id": 4023,
+      "question": "When creating a new policy, the first step should be:",
+      "options": [
+        "Write the final version",
+        "Identify the problem the policy must address",
+        "Send a draft for review",
+        "Implement immediately"
+      ],
+      "answer": "Identify the problem the policy must address"
+    },
+    {
+      "id": 4024,
+      "question": "The most effective way to ensure staff follow procedures is to:",
+      "options": [
+        "Rely solely on written manuals",
+        "Provide training and ensure understanding",
+        "Allow staff to interpret as they wish",
+        "Use reminders only"
+      ],
+      "answer": "Provide training and ensure understanding"
+    },
+    {
+      "id": 4025,
+      "question": "A manager evaluates alternative solutions using cost\u2013benefit analysis. This is part of:",
+      "options": [
+        "Directing",
+        "Decision-making",
+        "Organizing",
+        "Delegation"
+      ],
+      "answer": "Decision-making"
+    },
+    {
+      "id": 4026,
+      "question": "An employee receives authority to decide vendor selections within a budget range. This reflects:",
+      "options": [
+        "Planning",
+        "Delegation",
+        "Controlling",
+        "Leadership"
+      ],
+      "answer": "Delegation"
+    },
+    {
+      "id": 4027,
+      "question": "A leader who makes decisions independently with little input from staff is using which style?",
+      "options": [
+        "Autocratic",
+        "Democratic",
+        "Laissez-faire",
+        "Consensus"
+      ],
+      "answer": "Autocratic"
+    },
+    {
+      "id": 4028,
+      "question": "The controlling function relies heavily on:",
+      "options": [
+        "Supervision and coaching",
+        "Monitoring and evaluation",
+        "Brainstorming and creativity",
+        "Hiring decisions"
+      ],
+      "answer": "Monitoring and evaluation"
+    },
+    {
+      "id": 4029,
+      "question": "A supervisor creates standard operating procedures (SOPs). This is part of:",
+      "options": [
+        "Leadership",
+        "Organizing",
+        "Delegation",
+        "Training"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4030,
+      "question": "What is the primary purpose of organizational charts?",
+      "options": [
+        "To document employee evaluations",
+        "To show structure, authority, and reporting relationships",
+        "To assign pay grades",
+        "To manage budgets"
+      ],
+      "answer": "To show structure, authority, and reporting relationships"
+    },
+    {
+      "id": 4031,
+      "question": "A manager notices declining productivity and initiates an investigation to find root causes. This reflects:",
+      "options": [
+        "Directing",
+        "Controlling",
+        "Planning",
+        "Communication"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4032,
+      "question": "Which leadership trait is most critical during organizational change?",
+      "options": [
+        "Silence",
+        "Vision",
+        "Favoritism",
+        "Rigidness"
+      ],
+      "answer": "Vision"
+    },
+    {
+      "id": 4033,
+      "question": "To ensure accountability, a delegated task must include:",
+      "options": [
+        "Unlimited autonomy",
+        "Clear expectations and deadlines",
+        "No follow-up",
+        "Only verbal instructions"
+      ],
+      "answer": "Clear expectations and deadlines"
+    },
+    {
+      "id": 4034,
+      "question": "Long-term, organization-wide direction is set through:",
+      "options": [
+        "Operational planning",
+        "Strategic planning",
+        "Task instructions",
+        "Performance reviews"
+      ],
+      "answer": "Strategic planning"
+    },
+    {
+      "id": 4035,
+      "question": "Coaching employees and giving performance feedback belong to which function?",
+      "options": [
+        "Directing",
+        "Organizing",
+        "Controlling",
+        "Planning"
+      ],
+      "answer": "Directing"
+    },
+    {
+      "id": 4036,
+      "question": "A manager reviews quarterly metrics and adjusts processes to improve outcomes. This is:",
+      "options": [
+        "Planning",
+        "Controlling",
+        "Directing",
+        "Delegation"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4037,
+      "question": "A key benefit of delegation is:",
+      "options": [
+        "Reduced accountability",
+        "Improved efficiency and staff development",
+        "Eliminating the manager\u2019s responsibility",
+        "Avoiding decision-making"
+      ],
+      "answer": "Improved efficiency and staff development"
+    },
+    {
+      "id": 4038,
+      "question": "Which of the following best describes the directing function?",
+      "options": [
+        "Monitoring progress",
+        "Guiding and motivating employees",
+        "Organizing physical resources",
+        "Setting goals"
+      ],
+      "answer": "Guiding and motivating employees"
+    },
+    {
+      "id": 4039,
+      "question": "Resistance to change is most often caused by:",
+      "options": [
+        "Clarity",
+        "Fear or uncertainty",
+        "Excessive communication",
+        "Overtraining"
+      ],
+      "answer": "Fear or uncertainty"
+    },
+    {
+      "id": 4040,
+      "question": "The principle of unity of command states that:",
+      "options": [
+        "Employees should report to only one supervisor",
+        "Teams must vote on decisions",
+        "Tasks must be rotated daily",
+        "Departments must merge functions"
+      ],
+      "answer": "Employees should report to only one supervisor"
+    },
+    {
+      "id": 4041,
+      "question": "Which leadership behavior increases employee commitment?",
+      "options": [
+        "Ignoring concerns",
+        "Providing recognition and support",
+        "Delegating without guidance",
+        "Eliminating communication"
+      ],
+      "answer": "Providing recognition and support"
+    },
+    {
+      "id": 4042,
+      "question": "A manager forecasts staffing needs for the next fiscal year. This involves:",
+      "options": [
+        "Planning",
+        "Controlling",
+        "Directing",
+        "Organizing"
+      ],
+      "answer": "Planning"
+    },
+    {
+      "id": 4043,
+      "question": "Communicating expectations clearly to staff is part of which function?",
+      "options": [
+        "Directing",
+        "Planning",
+        "Controlling",
+        "Organizing"
+      ],
+      "answer": "Directing"
+    },
+    {
+      "id": 4044,
+      "question": "Evaluating alternative outcomes before selecting a solution belongs to:",
+      "options": [
+        "Decision-making",
+        "Delegation",
+        "Controlling",
+        "Organizing"
+      ],
+      "answer": "Decision-making"
+    },
+    {
+      "id": 4045,
+      "question": "Which of the following is NOT a characteristic of effective policies?",
+      "options": [
+        "Clarity",
+        "Consistency",
+        "Ambiguity",
+        "Relevance"
+      ],
+      "answer": "Ambiguity"
+    },
+    {
+      "id": 4046,
+      "question": "A manager reviews whether team roles align with project goals. This aligns with:",
+      "options": [
+        "Organizing",
+        "Directing",
+        "Controlling",
+        "Planning"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4047,
+      "question": "A supervisor provides ongoing coaching to help employees improve performance. This reflects:",
+      "options": [
+        "Planning",
+        "Directing",
+        "Organizing",
+        "Policy formation"
+      ],
+      "answer": "Directing"
+    },
+    {
+      "id": 4048,
+      "question": "The most effective time to evaluate the success of a new policy implementation is:",
+      "options": [
+        "Before rollout",
+        "Immediately after rollout",
+        "After measurable outcomes are produced",
+        "Only during annual audits"
+      ],
+      "answer": "After measurable outcomes are produced"
+    },
+    {
+      "id": 4049,
+      "question": "Monitoring compliance with regulations and internal standards is part of:",
+      "options": [
+        "Directing",
+        "Organizing",
+        "Planning",
+        "Controlling"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4050,
+      "question": "A manager identifies the need to streamline a process but postpones action until more data is collected. This represents which step of decision-making?",
+      "options": [
+        "Implementation",
+        "Problem definition",
+        "Evaluation of alternatives",
+        "Delaying tactics"
+      ],
+      "answer": "Problem definition"
+    },
+    {
+      "id": 4051,
+      "question": "A supervisor provides clear instructions, sets deadlines, and observes progress daily. This demonstrates which leadership style?",
+      "options": [
+        "Laissez-faire",
+        "Autocratic",
+        "Transformational",
+        "Participative"
+      ],
+      "answer": "Autocratic"
+    },
+    {
+      "id": 4052,
+      "question": "Creating a chain of command ensures:",
+      "options": [
+        "Redundancy in authority",
+        "Clear reporting relationships",
+        "Unlimited autonomy for employees",
+        "Eliminating middle management"
+      ],
+      "answer": "Clear reporting relationships"
+    },
+    {
+      "id": 4053,
+      "question": "A manager divides a large project into smaller tasks and assigns them to specific teams. This reflects:",
+      "options": [
+        "Directing",
+        "Organizing",
+        "Controlling",
+        "Networking"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4054,
+      "question": "Strategic planning primarily focuses on:",
+      "options": [
+        "Daily operations",
+        "Long-term organizational direction",
+        "Employee grievances",
+        "Task distribution"
+      ],
+      "answer": "Long-term organizational direction"
+    },
+    {
+      "id": 4055,
+      "question": "A leader encourages open discussion and builds consensus before making decisions. This is characteristic of:",
+      "options": [
+        "Autocratic leadership",
+        "Democratic leadership",
+        "Authoritarian leadership",
+        "Transactional leadership"
+      ],
+      "answer": "Democratic leadership"
+    },
+    {
+      "id": 4056,
+      "question": "A key element of effective delegation is:",
+      "options": [
+        "Reducing oversight",
+        "Matching tasks to employee capabilities",
+        "Removing accountability from the manager",
+        "Allowing unlimited flexibility"
+      ],
+      "answer": "Matching tasks to employee capabilities"
+    },
+    {
+      "id": 4057,
+      "question": "A supervisor develops detailed contingency plans for potential risks. This is part of:",
+      "options": [
+        "Directing",
+        "Planning",
+        "Motivating",
+        "Controlling"
+      ],
+      "answer": "Planning"
+    },
+    {
+      "id": 4058,
+      "question": "A newly developed policy requires all internal communications to follow a standardized format. This is an example of:",
+      "options": [
+        "Organizing workflow",
+        "Policy formation",
+        "Delegation",
+        "Directing"
+      ],
+      "answer": "Policy formation"
+    },
+    {
+      "id": 4059,
+      "question": "A manager ensures resources are available, aligns objectives, and allocates responsibilities. This reflects:",
+      "options": [
+        "Controlling",
+        "Planning",
+        "Organizing",
+        "Directing"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4060,
+      "question": "A supervisor sets performance expectations and guides employees to meet goals. This is part of:",
+      "options": [
+        "Directing",
+        "Planning",
+        "Controlling",
+        "Budgeting"
+      ],
+      "answer": "Directing"
+    },
+    {
+      "id": 4061,
+      "question": "The most important factor in effective communication is:",
+      "options": [
+        "Using technical language",
+        "Ensuring clarity and understanding",
+        "Speed of delivery",
+        "Number of people involved"
+      ],
+      "answer": "Ensuring clarity and understanding"
+    },
+    {
+      "id": 4062,
+      "question": "A manager determines the root cause of recurring errors in monthly reports. This relates to:",
+      "options": [
+        "Leadership",
+        "Controlling",
+        "Policy development",
+        "Directing"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4063,
+      "question": "A leader who emphasizes rewards and penalties is using which style?",
+      "options": [
+        "Transactional",
+        "Transformational",
+        "Autocratic",
+        "Servant"
+      ],
+      "answer": "Transactional"
+    },
+    {
+      "id": 4064,
+      "question": "Developing staff to take on greater responsibilities supports which principle?",
+      "options": [
+        "Organizational authority",
+        "Personnel development",
+        "Budgetary planning",
+        "Policy formation"
+      ],
+      "answer": "Personnel development"
+    },
+    {
+      "id": 4065,
+      "question": "A manager meets with employees to gather feedback before making changes. This demonstrates:",
+      "options": [
+        "Democratic leadership",
+        "Autocratic control",
+        "Ineffective delegation",
+        "Micromanagement"
+      ],
+      "answer": "Democratic leadership"
+    },
+    {
+      "id": 4066,
+      "question": "A key objective of controlling is to:",
+      "options": [
+        "Create new policies",
+        "Measure performance against standards",
+        "Assign new tasks",
+        "Reduce communication"
+      ],
+      "answer": "Measure performance against standards"
+    },
+    {
+      "id": 4067,
+      "question": "Which of the following is an example of a tactical decision?",
+      "options": [
+        "Setting department goals for the next 5 years",
+        "Adjusting project timelines for the quarter",
+        "Creating the agency mission statement",
+        "Revising statewide regulations"
+      ],
+      "answer": "Adjusting project timelines for the quarter"
+    },
+    {
+      "id": 4068,
+      "question": "A leader restructures a team to respond more quickly to client needs. This aligns with:",
+      "options": [
+        "Organizing",
+        "Controlling",
+        "Personnel development",
+        "Policy enforcement"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4069,
+      "question": "Assigning authority without ensuring the employee understands expectations can lead to failure in:",
+      "options": [
+        "Planning",
+        "Delegation",
+        "Directing",
+        "Policy development"
+      ],
+      "answer": "Delegation"
+    },
+    {
+      "id": 4070,
+      "question": "A manager encourages employees to propose innovative solutions. This reflects:",
+      "options": [
+        "Transformational leadership",
+        "Autocratic control",
+        "Laissez-faire leadership",
+        "Transactional leadership"
+      ],
+      "answer": "Transformational leadership"
+    },
+    {
+      "id": 4071,
+      "question": "The first step in the controlling process is to:",
+      "options": [
+        "Take corrective action",
+        "Measure actual performance",
+        "Establish performance standards",
+        "Communicate results"
+      ],
+      "answer": "Establish performance standards"
+    },
+    {
+      "id": 4072,
+      "question": "A supervisor reviews staffing needs based on anticipated workload changes. This is part of:",
+      "options": [
+        "Planning",
+        "Directing",
+        "Controlling",
+        "Organizing"
+      ],
+      "answer": "Planning"
+    },
+    {
+      "id": 4073,
+      "question": "Which principle ensures employees know exactly who they report to?",
+      "options": [
+        "Unity of direction",
+        "Span of control",
+        "Unity of command",
+        "Delegation"
+      ],
+      "answer": "Unity of command"
+    },
+    {
+      "id": 4074,
+      "question": "A manager selects the best solution after analyzing multiple alternatives. This is which step of decision-making?",
+      "options": [
+        "Identifying the problem",
+        "Choosing an alternative",
+        "Implementing the decision",
+        "Evaluating the outcome"
+      ],
+      "answer": "Choosing an alternative"
+    },
+    {
+      "id": 4075,
+      "question": "Introducing new software and training staff on its use is an example of:",
+      "options": [
+        "Organizing",
+        "Managing change",
+        "Directing",
+        "Delegation"
+      ],
+      "answer": "Managing change"
+    },
+    {
+      "id": 4076,
+      "question": "A supervisor clearly defines a task, expectations, authority limits, and deadlines. This reflects:",
+      "options": [
+        "Effective delegation",
+        "Autocratic leadership",
+        "Controlling",
+        "Redundant communication"
+      ],
+      "answer": "Effective delegation"
+    },
+    {
+      "id": 4077,
+      "question": "The purpose of policies is to:",
+      "options": [
+        "Provide flexible guidelines only",
+        "Ensure consistency in decision-making and actions",
+        "Eliminate supervisory roles",
+        "Restrict communication"
+      ],
+      "answer": "Ensure consistency in decision-making and actions"
+    },
+    {
+      "id": 4078,
+      "question": "A manager clarifies responsibilities and assigns tasks to employees. This aligns with:",
+      "options": [
+        "Planning",
+        "Organizing",
+        "Controlling",
+        "Budgeting"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4079,
+      "question": "A leader who listens actively and encourages two-way communication demonstrates:",
+      "options": [
+        "Passive leadership",
+        "Effective communication",
+        "Autocratic behavior",
+        "Ineffective supervision"
+      ],
+      "answer": "Effective communication"
+    },
+    {
+      "id": 4080,
+      "question": "The primary purpose of directing is to:",
+      "options": [
+        "Plan projects",
+        "Monitor performance",
+        "Guide and motivate staff",
+        "Assign financial resources"
+      ],
+      "answer": "Guide and motivate staff"
+    },
+    {
+      "id": 4081,
+      "question": "Providing employees access to training workshops is an example of:",
+      "options": [
+        "Policy implementation",
+        "Personnel development",
+        "Strategic planning",
+        "Directing"
+      ],
+      "answer": "Personnel development"
+    },
+    {
+      "id": 4082,
+      "question": "A manager compares actual departmental results against planned targets. This is part of:",
+      "options": [
+        "Directing",
+        "Controlling",
+        "Organizing",
+        "Policy formation"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4083,
+      "question": "Assigning responsibility without providing appropriate authority results in:",
+      "options": [
+        "Empowerment",
+        "Role conflict",
+        "Effective control",
+        "Team building"
+      ],
+      "answer": "Role conflict"
+    },
+    {
+      "id": 4084,
+      "question": "A leader who focuses on maintaining stability and ensuring compliance demonstrates:",
+      "options": [
+        "Transformational leadership",
+        "Transactional leadership",
+        "Democratic leadership",
+        "Servant leadership"
+      ],
+      "answer": "Transactional leadership"
+    },
+    {
+      "id": 4085,
+      "question": "When a manager reorganizes processes to improve efficiency, this reflects:",
+      "options": [
+        "Planning",
+        "Organizing",
+        "Controlling",
+        "Directing"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4086,
+      "question": "A manager identifies operational weaknesses and develops corrective strategies. This reflects:",
+      "options": [
+        "Directing",
+        "Controlling",
+        "Delegation",
+        "Policy formation"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4087,
+      "question": "To encourage innovation, a leader should:",
+      "options": [
+        "Discourage risk-taking",
+        "Punish failed attempts",
+        "Create an environment safe for new ideas",
+        "Minimize communication"
+      ],
+      "answer": "Create an environment safe for new ideas"
+    },
+    {
+      "id": 4088,
+      "question": "A manager holds staff meetings to share updates and align goals. This reflects:",
+      "options": [
+        "Delegation",
+        "Strategic communication",
+        "Controlling",
+        "Budgeting"
+      ],
+      "answer": "Strategic communication"
+    },
+    {
+      "id": 4089,
+      "question": "Evaluating training effectiveness belongs to which function?",
+      "options": [
+        "Planning",
+        "Personnel development",
+        "Controlling",
+        "Organizing"
+      ],
+      "answer": "Personnel development"
+    },
+    {
+      "id": 4090,
+      "question": "A leader explains the reasons behind a difficult decision to maintain transparency. This promotes:",
+      "options": [
+        "Employee confusion",
+        "Accountability and trust",
+        "Micromanagement",
+        "Unnecessary conflict"
+      ],
+      "answer": "Accountability and trust"
+    },
+    {
+      "id": 4091,
+      "question": "An organization consolidates two departments to eliminate redundancy. This reflects:",
+      "options": [
+        "Controlling",
+        "Organizing",
+        "Directing",
+        "Personnel development"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4092,
+      "question": "Regularly reviewing compliance with internal controls is part of:",
+      "options": [
+        "Directing",
+        "Policy development",
+        "Controlling",
+        "Organizing"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4093,
+      "question": "Setting a clear long-term vision for the agency is part of:",
+      "options": [
+        "Controlling",
+        "Strategic leadership",
+        "Organizing",
+        "Delegation"
+      ],
+      "answer": "Strategic leadership"
+    },
+    {
+      "id": 4094,
+      "question": "The purpose of job specialization in an organization is to:",
+      "options": [
+        "Increase redundancy",
+        "Improve expertise and efficiency",
+        "Confuse reporting structures",
+        "Limit employee development"
+      ],
+      "answer": "Improve expertise and efficiency"
+    },
+    {
+      "id": 4095,
+      "question": "Assigning tasks, resources, and procedures is part of which function?",
+      "options": [
+        "Organizing",
+        "Directing",
+        "Policy formation",
+        "Controlling"
+      ],
+      "answer": "Organizing"
+    },
+    {
+      "id": 4096,
+      "question": "A supervisor conducts individual performance check-ins. This reflects:",
+      "options": [
+        "Controlling",
+        "Planning",
+        "Organizing",
+        "Change management"
+      ],
+      "answer": "Controlling"
+    },
+    {
+      "id": 4097,
+      "question": "To reduce resistance during change, management should:",
+      "options": [
+        "Provide clear communication and opportunities for input",
+        "Announce changes without warning",
+        "Reduce staff involvement",
+        "Delay explaining the change"
+      ],
+      "answer": "Provide clear communication and opportunities for input"
+    },
+    {
+      "id": 4098,
+      "question": "A leader prioritizes employee well-being and ethical responsibility. This aligns with:",
+      "options": [
+        "Servant leadership",
+        "Transactional leadership",
+        "Autocratic leadership",
+        "Passive supervision"
+      ],
+      "answer": "Servant leadership"
+    },
+    {
+      "id": 4099,
+      "question": "When evaluating alternatives, a manager selects the option with the highest expected benefit. This reflects:",
+      "options": [
+        "Heuristics",
+        "Cost-benefit decision-making",
+        "Autocratic control",
+        "Organizational planning"
+      ],
+      "answer": "Cost-benefit decision-making"
+    }
+  ]
 }

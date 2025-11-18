@@ -1,7 +1,7 @@
 {
   "systems_analysis_and_design_questions": [
     {
-      "id": 1,
+      "id": 1000,
       "question": "During the Planning phase, a project scores high in technical feasibility but low in operational feasibility. What is the most likely risk?",
       "options": [
         "The system cannot be deployed due to hardware limitations",
@@ -12,7 +12,7 @@
       "answer": "Users will resist or fail to adopt the system"
     },
     {
-      "id": 2,
+      "id": 1001,
       "question": "Switching from waterfall to an iterative SDLC increases which risk?",
       "options": [
         "Incomplete requirements delaying coding",
@@ -23,7 +23,7 @@
       "answer": "Stakeholder involvement fatigue"
     },
     {
-      "id": 3,
+      "id": 1002,
       "question": "Multiple modules pass unit tests but fail when combined. What does this indicate?",
       "options": [
         "Unit testing failure",
@@ -34,7 +34,7 @@
       "answer": "Integration testing failure"
     },
     {
-      "id": 4,
+      "id": 1003,
       "question": "Updating legacy batch jobs will delay deployment by months. Which SDLC artifact must be updated first?",
       "options": [
         "RACI matrix",
@@ -45,7 +45,7 @@
       "answer": "Risk register"
     },
     {
-      "id": 5,
+      "id": 1004,
       "question": "A stakeholder requests a feature that contradicts an existing business rule. What should you do first?",
       "options": [
         "Escalate to the project sponsor",
@@ -56,7 +56,7 @@
       "answer": "Analyze the impact of modifying the rule"
     },
     {
-      "id": 6,
+      "id": 1005,
       "question": "Which technique best resolves conflicting workflows across multiple decentralized offices?",
       "options": [
         "One-on-one interviews",
@@ -67,7 +67,7 @@
       "answer": "Joint Application Development (JAD)"
     },
     {
-      "id": 7,
+      "id": 1006,
       "question": "The requirement: 'System must respond within 2 seconds 95% of the time during peak load' describes:",
       "options": [
         "Functional requirement",
@@ -78,7 +78,7 @@
       "answer": "Non-functional performance requirement"
     },
     {
-      "id": 8,
+      "id": 1007,
       "question": "A requirement states: 'System must validate license status using the DMV API.' This is a:",
       "options": [
         "Business rule",
@@ -89,7 +89,7 @@
       "answer": "External interface requirement"
     },
     {
-      "id": 9,
+      "id": 1008,
       "question": "A system requires real-time validation with minimal latency and 24/7 scalability. Which architecture is most appropriate?",
       "options": [
         "Batch processing",
@@ -100,7 +100,7 @@
       "answer": "Event-driven microservices"
     },
     {
-      "id": 10,
+      "id": 1009,
       "question": "What is the strongest advantage of a four-tier architecture?",
       "options": [
         "Reduced code complexity",
@@ -111,7 +111,7 @@
       "answer": "Greater separation of concerns and scalability"
     },
     {
-      "id": 11,
+      "id": 1010,
       "question": "Why is horizontal scaling preferred over vertical scaling for government systems?",
       "options": [
         "Horizontal scaling is always cheaper",
@@ -122,7 +122,7 @@
       "answer": "Horizontal scaling reduces single points of failure"
     },
     {
-      "id": 12,
+      "id": 1011,
       "question": "A REST API system must support 500,000 external calls daily. What is typically the most critical bottleneck?",
       "options": [
         "UI rendering",
@@ -133,7 +133,7 @@
       "answer": "Database read/write contention"
     },
     {
-      "id": 13,
+      "id": 1012,
       "question": "A defect appears only when two modules run simultaneously. What testing is required?",
       "options": [
         "Regression testing",
@@ -144,7 +144,7 @@
       "answer": "Concurrency testing"
     },
     {
-      "id": 14,
+      "id": 1013,
       "question": "A system fails during a stress test at 150% load. What should be done first?",
       "options": [
         "Increase server memory",
@@ -155,7 +155,7 @@
       "answer": "Perform root-cause analysis"
     },
     {
-      "id": 15,
+      "id": 1014,
       "question": "Which provides the greatest confidence that all requirements were implemented?",
       "options": [
         "User Acceptance Testing report",
@@ -166,7 +166,7 @@
       "answer": "Requirements traceability matrix"
     },
     {
-      "id": 16,
+      "id": 1015,
       "question": "During QA review, inconsistent naming conventions are found across code modules. This indicates failure in:",
       "options": [
         "Functional testing",
@@ -177,7 +177,7 @@
       "answer": "Compliance with coding standards"
     },
     {
-      "id": 17,
+      "id": 1016,
       "question": "In DFDs, showing a data store without processes violates which rule?",
       "options": [
         "Balancing rule",
@@ -188,7 +188,7 @@
       "answer": "Data conservation rule"
     },
     {
-      "id": 18,
+      "id": 1017,
       "question": "A weak entity in an ERD must have:",
       "options": [
         "A derived attribute",
@@ -199,7 +199,7 @@
       "answer": "A partial key"
     },
     {
-      "id": 19,
+      "id": 1018,
       "question": "A level-0 DFD contains more data flows than the context diagram. This indicates:",
       "options": [
         "Valid decomposition",
@@ -210,7 +210,7 @@
       "answer": "Balancing error"
     },
     {
-      "id": 20,
+      "id": 1019,
       "question": "Two processes in a DFD exchange data directly without a data store. The best correction is to:",
       "options": [
         "Add a shared data store",
@@ -221,7 +221,7 @@
       "answer": "Add a shared data store"
     },
     {
-      "id": 21,
+      "id": 1020,
       "question": "A project suffers repeated scope creep due to changing agency laws. What SDLC tool most effectively mitigates this?",
       "options": [
         "Risk management plan",
@@ -232,7 +232,7 @@
       "answer": "Change control process"
     },
     {
-      "id": 22,
+      "id": 1021,
       "question": "Which SDLC approach best supports systems where requirements evolve monthly?",
       "options": [
         "Waterfall",
@@ -243,7 +243,7 @@
       "answer": "Spiral"
     },
     {
-      "id": 23,
+      "id": 1022,
       "question": "A government portal must integrate with 12 external agencies. The MOST critical architectural concern is:",
       "options": [
         "UI theme consistency",
@@ -254,7 +254,7 @@
       "answer": "API versioning strategy"
     },
     {
-      "id": 24,
+      "id": 1023,
       "question": "A migration from a monolithic system to microservices reveals significant latency between services. What should be implemented first?",
       "options": [
         "Distributed caching",
@@ -265,7 +265,7 @@
       "answer": "Distributed caching"
     },
     {
-      "id": 25,
+      "id": 1024,
       "question": "Which requirement is the most difficult to validate objectively?",
       "options": [
         "System must support 5,000 concurrent users",
@@ -276,7 +276,7 @@
       "answer": "UI must be intuitive"
     },
     {
-      "id": 26,
+      "id": 1025,
       "question": "An analyst uncovers contradictory requirements from two departments. Best first step?",
       "options": [
         "Select the requirement that supports agency goals",
@@ -287,7 +287,7 @@
       "answer": "Facilitate a requirements reconciliation meeting"
     },
     {
-      "id": 27,
+      "id": 1026,
       "question": "What is the primary advantage of using a traceability matrix?",
       "options": [
         "Identifies redundant code",
@@ -298,7 +298,7 @@
       "answer": "Ensures every requirement is tied to test cases"
     },
     {
-      "id": 28,
+      "id": 1027,
       "question": "Which architectural pattern best isolates business logic from UI and data layers?",
       "options": [
         "Monolithic",
@@ -309,7 +309,7 @@
       "answer": "Layered (n-tier)"
     },
     {
-      "id": 29,
+      "id": 1028,
       "question": "A performance test reveals that 80% of delays occur due to repeated database lookups. What should be implemented first?",
       "options": [
         "Optimize joins",
@@ -320,7 +320,7 @@
       "answer": "Add caching"
     },
     {
-      "id": 30,
+      "id": 1029,
       "question": "A project requires high security, strong audit trails, and minimal downtime. Which SDLC model is most appropriate?",
       "options": [
         "Agile",
@@ -331,7 +331,7 @@
       "answer": "V-model"
     },
     {
-      "id": 31,
+      "id": 1030,
       "question": "A system is deployed but shows inconsistent behavior only after unexpected data patterns are entered. This indicates a failure in:",
       "options": [
         "Boundary value testing",
@@ -342,7 +342,7 @@
       "answer": "Boundary value testing"
     },
     {
-      "id": 32,
+      "id": 1031,
       "question": "A QA lead wants to validate that new code changes didn't break unrelated modules. Which approach is best?",
       "options": [
         "Regression testing",
@@ -353,7 +353,7 @@
       "answer": "Regression testing"
     },
     {
-      "id": 33,
+      "id": 1032,
       "question": "A system shows poor performance due to serialization overhead. Which format is most efficient?",
       "options": [
         "JSON",
@@ -364,7 +364,7 @@
       "answer": "Binary serialization"
     },
     {
-      "id": 34,
+      "id": 1033,
       "question": "A new release introduces intermittent failures under peak traffic. What testing method would best capture this?",
       "options": [
         "Smoke testing",
@@ -375,7 +375,7 @@
       "answer": "Stress testing"
     },
     {
-      "id": 35,
+      "id": 1034,
       "question": "Which testing artifact ensures every test case maps directly to a specific requirement?",
       "options": [
         "UAT Script",
@@ -386,7 +386,7 @@
       "answer": "Traceability Matrix"
     },
     {
-      "id": 36,
+      "id": 1035,
       "question": "A system needs additional security due to new compliance laws. Which control is most effective?",
       "options": [
         "Input validation",
@@ -397,7 +397,7 @@
       "answer": "Encryption at rest"
     },
     {
-      "id": 37,
+      "id": 1036,
       "question": "A DFD shows a process producing more outputs than inputs without external data sources. This violates:",
       "options": [
         "Sink rule",
@@ -408,7 +408,7 @@
       "answer": "Black hole rule"
     },
     {
-      "id": 38,
+      "id": 1037,
       "question": "An ERD contains a recursive relationship. What does this model?",
       "options": [
         "An entity referencing itself",
@@ -419,7 +419,7 @@
       "answer": "An entity referencing itself"
     },
     {
-      "id": 39,
+      "id": 1038,
       "question": "A context diagram shows five data flows, but the level-0 DFD shows seven. What is this?",
       "options": [
         "Logical refinement",
@@ -430,7 +430,7 @@
       "answer": "Balancing error"
     },
     {
-      "id": 40,
+      "id": 1039,
       "question": "A data dictionary indicates optional attributes that are required in the UI. What must be updated?",
       "options": [
         "DFD diagrams",
@@ -441,7 +441,7 @@
       "answer": "Requirements document"
     },
     {
-      "id": 41,
+      "id": 1040,
       "question": "Which SDLC tool best ensures that all risks have documented mitigation steps?",
       "options": [
         "Issue log",
@@ -452,7 +452,7 @@
       "answer": "Risk register"
     },
     {
-      "id": 42,
+      "id": 1041,
       "question": "A software build introduces discrepancies between test and production environments. A failure occurred in:",
       "options": [
         "Version control",
@@ -463,7 +463,7 @@
       "answer": "Deployment pipeline"
     },
     {
-      "id": 43,
+      "id": 1042,
       "question": "A state agency must implement FIPS-compliant encryption. This requirement is classified as:",
       "options": [
         "Functional",
@@ -474,7 +474,7 @@
       "answer": "Non-functional: Security"
     },
     {
-      "id": 44,
+      "id": 1043,
       "question": "An API gateway is added to a multi-service architecture. What benefit is achieved?",
       "options": [
         "Reduces database indexing",
@@ -485,7 +485,7 @@
       "answer": "Centralizes authentication and routing"
     },
     {
-      "id": 45,
+      "id": 1044,
       "question": "Two systems must exchange data but follow different schemas. Best solution?",
       "options": [
         "ETL transformation layer",
@@ -496,7 +496,7 @@
       "answer": "ETL transformation layer"
     },
     {
-      "id": 46,
+      "id": 1045,
       "question": "A project requires strict validation of data quality before loading into a new database. Which tool is best?",
       "options": [
         "Unit tests",
@@ -507,7 +507,7 @@
       "answer": "Data profiling"
     },
     {
-      "id": 47,
+      "id": 1046,
       "question": "What is the strongest indicator that a requirement is testable?",
       "options": [
         "It uses clear and measurable criteria",
@@ -518,7 +518,7 @@
       "answer": "It uses clear and measurable criteria"
     },
     {
-      "id": 48,
+      "id": 1047,
       "question": "A system must remain available during database upgrades. Which architecture supports this?",
       "options": [
         "Active-passive failover",
@@ -529,7 +529,7 @@
       "answer": "Active-active clustering"
     },
     {
-      "id": 49,
+      "id": 1048,
       "question": "A requirement changes six months after go-live. Which SDLC phase does this most impact?",
       "options": [
         "Testing",
@@ -540,7 +540,7 @@
       "answer": "Maintenance"
     },
     {
-      "id": 50,
+      "id": 1049,
       "question": "Which visualization best supports workflow optimization efforts?",
       "options": [
         "Context diagram",
@@ -551,7 +551,7 @@
       "answer": "Swimlane process model"
     },
     {
-      "id": 51,
+      "id": 1050,
       "question": "A project shows repeated slippage due to late requirement clarifications. Which SDLC artifact should be strengthened to prevent this?",
       "options": [
         "Traceability matrix",
@@ -562,7 +562,7 @@
       "answer": "Communication plan"
     },
     {
-      "id": 52,
+      "id": 1051,
       "question": "Which SDLC model provides the strongest risk mitigation for high-cost government systems?",
       "options": [
         "Waterfall",
@@ -573,7 +573,7 @@
       "answer": "Spiral"
     },
     {
-      "id": 53,
+      "id": 1052,
       "question": "A system must process requests from multiple agencies with different SLAs. What is the most critical design consideration?",
       "options": [
         "Data normalization",
@@ -584,7 +584,7 @@
       "answer": "API throttling and rate limiting"
     },
     {
-      "id": 54,
+      "id": 1053,
       "question": "A requirements document specifies vague user expectations. What technique is most effective for resolving ambiguity?",
       "options": [
         "User surveys",
@@ -595,7 +595,7 @@
       "answer": "Prototyping"
     },
     {
-      "id": 55,
+      "id": 1054,
       "question": "A project requires multiple releases where each increment must be tested independently. Which SDLC approach is best?",
       "options": [
         "Waterfall",
@@ -606,7 +606,7 @@
       "answer": "Incremental model"
     },
     {
-      "id": 56,
+      "id": 1055,
       "question": "A system with a high volume of real-time data requires maximum read scalability. Which architecture is most appropriate?",
       "options": [
         "Master-slave replication",
@@ -617,7 +617,7 @@
       "answer": "CQRS (Command Query Responsibility Segregation)"
     },
     {
-      "id": 57,
+      "id": 1056,
       "question": "Which requirement is MOST vulnerable to scope creep?",
       "options": [
         "Data validation rules",
@@ -628,7 +628,7 @@
       "answer": "Reporting features"
     },
     {
-      "id": 58,
+      "id": 1057,
       "question": "A system uses synchronous API calls and suffers from timeout failures under load. What design change is most effective?",
       "options": [
         "Enable vertical scaling",
@@ -639,7 +639,7 @@
       "answer": "Implement asynchronous messaging queues"
     },
     {
-      "id": 59,
+      "id": 1058,
       "question": "Which artifact proves that each business rule is implemented and testable?",
       "options": [
         "Requirements status sheet",
@@ -650,7 +650,7 @@
       "answer": "Traceability matrix"
     },
     {
-      "id": 60,
+      "id": 1059,
       "question": "A new system must integrate with a legacy COBOL database. What is the biggest risk?",
       "options": [
         "Lack of documentation",
@@ -661,7 +661,7 @@
       "answer": "Lack of documentation"
     },
     {
-      "id": 61,
+      "id": 1060,
       "question": "An error occurs only during high concurrency. Which test best isolates the issue?",
       "options": [
         "Functional testing",
@@ -672,7 +672,7 @@
       "answer": "Concurrency testing"
     },
     {
-      "id": 62,
+      "id": 1061,
       "question": "A high-security application must ensure every transaction is logged immutably. Best solution?",
       "options": [
         "Flat file log",
@@ -683,7 +683,7 @@
       "answer": "Append-only database"
     },
     {
-      "id": 63,
+      "id": 1062,
       "question": "The primary purpose of normalization in database design is to:",
       "options": [
         "Improve performance",
@@ -694,7 +694,7 @@
       "answer": "Reduce redundancy and anomalies"
     },
     {
-      "id": 64,
+      "id": 1063,
       "question": "A project requires modeling of complex state transitions. Which diagram is most useful?",
       "options": [
         "DFD",
@@ -705,7 +705,7 @@
       "answer": "State machine diagram"
     },
     {
-      "id": 65,
+      "id": 1064,
       "question": "A process in a DFD has no outputs. This violates:",
       "options": [
         "Black hole rule",
@@ -716,7 +716,7 @@
       "answer": "Black hole rule"
     },
     {
-      "id": 66,
+      "id": 1065,
       "question": "A system's response time varies significantly depending on input size. What type of testing identifies the cause?",
       "options": [
         "Load testing",
@@ -727,7 +727,7 @@
       "answer": "Performance profiling"
     },
     {
-      "id": 67,
+      "id": 1066,
       "question": "A project uses microservices with shared databases. What is the biggest architectural risk?",
       "options": [
         "Tight coupling between services",
@@ -738,7 +738,7 @@
       "answer": "Tight coupling between services"
     },
     {
-      "id": 68,
+      "id": 1067,
       "question": "Which type of requirement typically requires the most cross-agency negotiation?",
       "options": [
         "Security requirements",
@@ -749,7 +749,7 @@
       "answer": "Functional workflow requirements"
     },
     {
-      "id": 69,
+      "id": 1068,
       "question": "An ERD shows a many-to-many relationship. What must be added?",
       "options": [
         "A lookup table",
@@ -760,7 +760,7 @@
       "answer": "A bridge (intersection) table"
     },
     {
-      "id": 70,
+      "id": 1069,
       "question": "Which method best validates that proposed workflows match real-world user behavior?",
       "options": [
         "Use case modeling",
@@ -771,7 +771,7 @@
       "answer": "Shadowing and observation"
     },
     {
-      "id": 71,
+      "id": 1070,
       "question": "Mission-critical systems must update state atomically. Which ACID property ensures this?",
       "options": [
         "Isolation",
@@ -782,7 +782,7 @@
       "answer": "Atomicity"
     },
     {
-      "id": 72,
+      "id": 1071,
       "question": "An API change breaks multiple external integrations. This indicates failure in:",
       "options": [
         "Schema validation",
@@ -793,7 +793,7 @@
       "answer": "Versioning strategy"
     },
     {
-      "id": 73,
+      "id": 1072,
       "question": "A project team wants to reduce duplicate logic across modules. Best approach?",
       "options": [
         "Normalization",
@@ -804,7 +804,7 @@
       "answer": "Refactoring to shared services"
     },
     {
-      "id": 74,
+      "id": 1073,
       "question": "A system duplicate-checks large datasets using nested loops. What optimization is most effective?",
       "options": [
         "Add more RAM",
@@ -815,7 +815,7 @@
       "answer": "Replace loops with a hash-based lookup"
     },
     {
-      "id": 75,
+      "id": 1074,
       "question": "Which documentation artifact is most useful for onboarding new developers?",
       "options": [
         "ERD",
@@ -826,7 +826,7 @@
       "answer": "Architecture decision records (ADRs)"
     },
     {
-      "id": 76,
+      "id": 1075,
       "question": "A state agency requires audit trails with non-repudiation. Best solution?",
       "options": [
         "Plain text logs",
@@ -837,7 +837,7 @@
       "answer": "Digital signatures"
     },
     {
-      "id": 77,
+      "id": 1076,
       "question": "A CPU-bound process slows system throughput. Best scaling approach?",
       "options": [
         "Horizontal scaling",
@@ -848,7 +848,7 @@
       "answer": "Vertical scaling"
     },
     {
-      "id": 78,
+      "id": 1077,
       "question": "A DFD shows numerous crossing lines and complex routing. What should be done?",
       "options": [
         "Add labels",
@@ -859,7 +859,7 @@
       "answer": "Split into multiple diagrams"
     },
     {
-      "id": 79,
+      "id": 1078,
       "question": "Which system architecture best supports independent deployments?",
       "options": [
         "Monolithic",
@@ -870,7 +870,7 @@
       "answer": "Microservices"
     },
     {
-      "id": 80,
+      "id": 1079,
       "question": "A team wants predictable release cycles with strong test discipline. Which model is best?",
       "options": [
         "V-model",
@@ -881,7 +881,7 @@
       "answer": "V-model"
     },
     {
-      "id": 81,
+      "id": 1080,
       "question": "Which artifact records assumptions that justify a particular system architecture?",
       "options": [
         "Traceability matrix",
@@ -892,7 +892,7 @@
       "answer": "Architecture decision records"
     },
     {
-      "id": 82,
+      "id": 1081,
       "question": "A system must synchronize data between multiple databases. Which method is most consistent?",
       "options": [
         "Event streaming",
@@ -903,7 +903,7 @@
       "answer": "Event streaming"
     },
     {
-      "id": 83,
+      "id": 1082,
       "question": "A system needs to detect anomalies in incoming data streams. First step?",
       "options": [
         "Normalizing the schema",
@@ -914,7 +914,7 @@
       "answer": "Profiling data patterns"
     },
     {
-      "id": 84,
+      "id": 1083,
       "question": "Which testing type ensures compliance with ADA accessibility standards?",
       "options": [
         "UAT",
@@ -925,7 +925,7 @@
       "answer": "Accessibility testing"
     },
     {
-      "id": 85,
+      "id": 1084,
       "question": "A system shows performance degradation in distributed calls. First optimization?",
       "options": [
         "Batch requests",
@@ -936,7 +936,7 @@
       "answer": "Batch requests"
     },
     {
-      "id": 86,
+      "id": 1085,
       "question": "A requirement reads: 'System must be easy to use.' What is the problem?",
       "options": [
         "It is not testable",
@@ -947,7 +947,7 @@
       "answer": "It is not testable"
     },
     {
-      "id": 87,
+      "id": 1086,
       "question": "Which diagram best shows how users interact with high-level system processes?",
       "options": [
         "Context diagram",
@@ -958,7 +958,7 @@
       "answer": "Context diagram"
     },
     {
-      "id": 88,
+      "id": 1087,
       "question": "A system requires immediate failover with no data loss. Best setup?",
       "options": [
         "Cold backup",
@@ -969,7 +969,7 @@
       "answer": "Synchronous replication"
     },
     {
-      "id": 89,
+      "id": 1088,
       "question": "A multi-state agency portal must support different authentication providers. What should be used?",
       "options": [
         "Custom login forms",
@@ -980,7 +980,7 @@
       "answer": "Centralized SSO with SAML/OAuth"
     },
     {
-      "id": 90,
+      "id": 1089,
       "question": "Which metric best measures system scalability?",
       "options": [
         "Time to deploy",
@@ -991,7 +991,7 @@
       "answer": "Requests per second under load"
     },
     {
-      "id": 91,
+      "id": 1090,
       "question": "A DFD shows multiple processes accessing a data store directly. What should be introduced?",
       "options": [
         "A data access layer",
@@ -1002,7 +1002,7 @@
       "answer": "A data access layer"
     },
     {
-      "id": 92,
+      "id": 1091,
       "question": "Which system architecture best supports zero-downtime deployments?",
       "options": [
         "Blue-green deployment",
@@ -1013,7 +1013,7 @@
       "answer": "Blue-green deployment"
     },
     {
-      "id": 93,
+      "id": 1092,
       "question": "Which requirement type is most likely impacted by network latency?",
       "options": [
         "Functional",
@@ -1024,7 +1024,7 @@
       "answer": "Non-functional: Performance"
     },
     {
-      "id": 94,
+      "id": 1093,
       "question": "Users report inconsistent behavior when submitting forms rapidly. What test exposes this issue?",
       "options": [
         "Stress test",
@@ -1035,7 +1035,7 @@
       "answer": "Concurrency test"
     },
     {
-      "id": 95,
+      "id": 1094,
       "question": "Which modeling method best captures interactions between system components over time?",
       "options": [
         "ERD",
@@ -1046,7 +1046,7 @@
       "answer": "Sequence diagram"
     },
     {
-      "id": 96,
+      "id": 1095,
       "question": "A project has unclear decision-making authority. What document defines roles and responsibilities?",
       "options": [
         "Risk register",
@@ -1057,7 +1057,7 @@
       "answer": "RACI matrix"
     },
     {
-      "id": 97,
+      "id": 1096,
       "question": "What is the PRIMARY benefit of using a service bus in distributed architecture?",
       "options": [
         "UI layout simplification",
@@ -1068,7 +1068,7 @@
       "answer": "Loose coupling between components"
     },
     {
-      "id": 98,
+      "id": 1097,
       "question": "A legacy system stores mixed-format text data with errors. What is the first step to modernize it?",
       "options": [
         "Encrypt the data",
@@ -1079,7 +1079,7 @@
       "answer": "Perform data cleansing and profiling"
     },
     {
-      "id": 99,
+      "id": 1098,
       "question": "Which SDLC phase validates that the system meets business objectives?",
       "options": [
         "Testing",
@@ -1090,7 +1090,7 @@
       "answer": "UAT"
     },
     {
-      "id": 100,
+      "id": 1099,
       "question": "Which documentation artifact best represents cross-departmental workflows?",
       "options": [
         "Context diagram",
