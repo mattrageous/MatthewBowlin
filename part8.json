@@ -1,0 +1,1115 @@
+{
+    "evaluating_conclusions_based_on_factual_information": [
+        {
+            "id": 8000,
+            "question": "FACTS:\n1. All confidential files are stored in the red cabinet.\n2. Some files in the red cabinet are outdated.\n\nCONCLUSION:\nSome confidential files are outdated.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know all confidential files are in the cabinet, and we know *some* items in that cabinet are outdated. However, the outdated items might be the non-confidential files that also happen to be in the cabinet. There is no overlap guaranteed by the facts."
+        },
+        {
+            "id": 8001,
+            "question": "FACTS:\n1. If the server maintenance is not completed by 5 PM, the website will crash.\n2. The website did not crash.\n\nCONCLUSION:\nThe server maintenance was completed by 5 PM.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "This is valid logical deduction (Modus Tollens). If P implies Q, and Q is false, then P must be false. If 'maintenance NOT done' implies 'crash', and there was 'NO crash', then 'maintenance NOT done' must be false (meaning it WAS done)."
+        },
+        {
+            "id": 8002,
+            "question": "FACTS:\n1. Only IT Managers have access to the Main Server Room.\n2. Sarah has access to the Main Server Room.\n\nCONCLUSION:\nSarah is an IT Manager.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "The word 'Only' sets a necessary condition. 'Only IT Managers have access' is equivalent to 'If you have access, you MUST be an IT Manager.' Since Sarah has access, she must be a manager."
+        },
+        {
+            "id": 8003,
+            "question": "FACTS:\n1. Only IT Managers have access to the Main Server Room.\n2. John is an IT Manager.\n\nCONCLUSION:\nJohn has access to the Main Server Room.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Be careful with 'Only'. The rule says you *must* be a manager to enter. It does NOT say that *every* manager has access. There could be managers who do not have access."
+        },
+        {
+            "id": 8004,
+            "question": "FACTS:\n1. All software updates require a restart.\n2. The system was restarted.\n\nCONCLUSION:\nA software update was installed.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "This is the fallacy of 'Affirming the Consequent'. Updates cause restarts, but restarts can also be caused by power failures, crashes, or manual resets. We don't know if an update was the cause."
+        },
+        {
+            "id": 8005,
+            "question": "FACTS:\n1. No part-time employees are eligible for overtime.\n2. All analysts are eligible for overtime.\n\nCONCLUSION:\nNo part-time employees are analysts.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If Analyst = Eligible, and Part-Time = Not Eligible, then no one can be both an Analyst and Part-Time. The groups are mutually exclusive."
+        },
+        {
+            "id": 8006,
+            "question": "FACTS:\n1. Department A has more employees than Department B.\n2. Department B has fewer employees than Department C.\n\nCONCLUSION:\nDepartment A has more employees than Department C.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know A > B and C > B. However, we do not know the relationship between A and C. Both are larger than B, but A could be larger, smaller, or equal to C."
+        },
+        {
+            "id": 8007,
+            "question": "FACTS:\n1. All Network Admins are certified.\n2. Some Help Desk staff are certified.\n3. No interns are certified.\n\nCONCLUSION:\nSome Network Admins are interns.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "False",
+            "explanation": "All Network Admins are certified, and NO interns are certified. Therefore, it is impossible for a Network Admin to be an intern. The conclusion is definitely False."
+        },
+        {
+            "id": 8008,
+            "question": "FACTS:\n1. If the budget is approved, we will hire two developers.\n2. We hired two developers.\n\nCONCLUSION:\nThe budget was approved.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Budget approval leads to hiring, but hiring could have happened for other reasons (e.g., emergency funds, reallocation). The fact that hiring occurred does not prove the budget was the cause."
+        },
+        {
+            "id": 8009,
+            "question": "FACTS:\n1. Every report filed on Tuesday was rejected.\n2. Report X was not rejected.\n\nCONCLUSION:\nReport X was not filed on Tuesday.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If it HAD been filed on Tuesday, it WOULD have been rejected. Since it wasn't rejected, it couldn't have been filed on Tuesday."
+        },
+        {
+            "id": 8010,
+            "question": "FACTS:\n1. Most of the computers in Lab A are new.\n2. Most of the new computers have SSDs.\n\nCONCLUSION:\nSome computers in Lab A have SSDs.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "This is a hard one. 'Most' implies >50%. If Lab A has new computers, and the global population of new computers has SSDs, it is logically possible that the specific new computers in Lab A are the ones *without* SSDs. Without 'All', the overlap is not guaranteed."
+        },
+        {
+            "id": 8011,
+            "question": "FACTS:\n1. All priority tickets must be resolved within 24 hours.\n2. Ticket #501 was resolved in 30 hours.\n\nCONCLUSION:\nTicket #501 was not a priority ticket.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Logic trap: The rule states what *must* happen, not what *did* happen. Ticket #501 could have been a priority ticket that the team failed to resolve on time (violating the rule). The facts describe a rule, not a physical impossibility."
+        },
+        {
+            "id": 8012,
+            "question": "FACTS:\n1. Employees can access the VPN if they have a token OR a smart card.\n2. Employee Z does not have a token.\n\nCONCLUSION:\nEmployee Z cannot access the VPN.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "The condition is an 'OR'. Lacking a token does not prevent access; Employee Z might still have a smart card."
+        },
+        {
+            "id": 8013,
+            "question": "FACTS:\n1. None of the legacy systems support encryption.\n2. System Omega supports encryption.\n\nCONCLUSION:\nSystem Omega is not a legacy system.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If Omega were legacy, it would not support encryption. Since it does support encryption, it cannot be legacy."
+        },
+        {
+            "id": 8014,
+            "question": "FACTS:\n1. Supervisors are not allowed to approve their own timesheets.\n2. Supervisor Green's timesheet was approved.\n\nCONCLUSION:\nSupervisor Green's timesheet was approved by someone else.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Similar to Q8011. While the rule forbids it, it is physically possible that Supervisor Green violated the rule and approved it himself. The fact that it 'was approved' does not prove the rule was followed."
+        },
+        {
+            "id": 8015,
+            "question": "FACTS:\n1. Unless the firewall is active, external connections are blocked.\n2. External connections are blocked.\n\nCONCLUSION:\nThe firewall is not active.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "\"Unless P, Q\" is equivalent to \"If not P, then Q\". So, \"If Firewall NOT active -> Blocked\". We know connections are Blocked (Q). This is affirming the consequent. Connections could be blocked for other reasons even if the firewall IS active."
+        },
+        {
+            "id": 8016,
+            "question": "FACTS:\n1. All critical vulnerabilities must be patched within 48 hours.\n2. Vulnerability V-101 was not patched within 48 hours.\n\nCONCLUSION:\nVulnerability V-101 was not a critical vulnerability.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "The rule states what *must* happen to critical vulnerabilities. The fact that V-101 wasn't patched might mean it wasn't critical, OR it might mean it WAS critical and the team simply failed to follow the rule. We cannot deduce the nature of the vulnerability from the failure to act."
+        },
+        {
+            "id": 8017,
+            "question": "FACTS:\n1. Every employee with a security clearance has undergone a background check.\n2. Smith has undergone a background check.\n\nCONCLUSION:\nSmith has a security clearance.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "All A are B. Smith is B. Smith might be in the group of people who had background checks but do NOT have clearance."
+        },
+        {
+            "id": 8018,
+            "question": "FACTS:\n1. No systems running OS X are vulnerable to Virus Y.\n2. System Alpha is vulnerable to Virus Y.\n\nCONCLUSION:\nSystem Alpha is not running OS X.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If it were running OS X, it would NOT be vulnerable. Since it IS vulnerable, it cannot be running OS X."
+        },
+        {
+            "id": 8019,
+            "question": "FACTS:\n1. Only authorized personnel can sign the visitor log.\n2. Mr. Jones signed the visitor log.\n\nCONCLUSION:\nMr. Jones is authorized personnel.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Only A can do B\" means \"If you do B, you must be A\". Since Jones signed (B), he must be authorized (A). Note: This assumes the rule is strictly physical/enforced, which logic puzzles usually imply unless stated otherwise."
+        },
+        {
+            "id": 8020,
+            "question": "FACTS:\n1. If the backup fails AND the primary server crashes, data is lost.\n2. Data was lost.\n\nCONCLUSION:\nThe backup failed.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Data loss is the result of (Backup Fail AND Crash). However, data loss could also be caused by other factors not listed (e.g., intentional deletion). Even if this is the only cause, we only know the *combination* happened. We don't know for sure if the backup failed; maybe the backup worked but something else caused the loss? Actually, if this is the ONLY rule, it's affirming the consequent. If it's the *only* way data is lost, then yes. But usually, \"If P then Q\" does not mean \"If Q then P\". Indeterminate."
+        },
+        {
+            "id": 8021,
+            "question": "FACTS:\n1. Some database administrators (DBAs) know Python.\n2. All people who know Python are programmers.\n\nCONCLUSION:\nSome DBAs are programmers.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Let X be the DBAs who know Python. Since they know Python, they must be programmers (Fact 2). Therefore, that group X represents DBAs who are programmers."
+        },
+        {
+            "id": 8022,
+            "question": "FACTS:\n1. Managers must approve all expenses over $500.\n2. Expense Report #4 was approved.\n\nCONCLUSION:\nExpense Report #4 was over $500.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Managers must approve >$500. They *might* also approve expenses under $500. We don't know the amount based solely on the approval."
+        },
+        {
+            "id": 8023,
+            "question": "FACTS:\n1. Either the router is unplugged OR the ISP is down.\n2. The router is plugged in.\n\nCONCLUSION:\nThe ISP is down.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Disjunctive Syllogism. A or B. Not A. Therefore B."
+        },
+        {
+            "id": 8024,
+            "question": "FACTS:\n1. All audit logs are archived for 5 years.\n2. File X has been archived for 5 years.\n\nCONCLUSION:\nFile X is an audit log.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "All Audit Logs -> Archived. File X -> Archived. This is affirming the consequent. Other types of files might also be archived."
+        },
+        {
+            "id": 8025,
+            "question": "FACTS:\n1. Not all software errors are critical.\n2. Error 404 is a software error.\n\nCONCLUSION:\nError 404 is not critical.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "\"Not all\" means \"Some are not\". It leaves open the possibility that \"Some are\". Error 404 could fall into either the critical or non-critical group."
+        },
+        {
+            "id": 8026,
+            "question": "FACTS:\n1. If the system is under maintenance, users cannot log in.\n2. Users cannot log in.\n\nCONCLUSION:\nThe system is under maintenance.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Users might be unable to login due to network failure, bad passwords, or server crashes. Maintenance is just one sufficient condition, not a necessary one."
+        },
+        {
+            "id": 8027,
+            "question": "FACTS:\n1. Supervisors are eligible for Parking Zone A.\n2. No interns are Supervisors.\n\nCONCLUSION:\nNo interns are eligible for Parking Zone A.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know Supervisors -> Eligible. We know Interns != Supervisors. However, there might be *other* people eligible for Zone A (e.g., Executives, Visitors). Interns might be eligible through another rule not stated."
+        },
+        {
+            "id": 8028,
+            "question": "FACTS:\n1. Any system with a CVSS score above 9.0 is patched immediately.\n2. System Beta was not patched immediately.\n\nCONCLUSION:\nSystem Beta does not have a CVSS score above 9.0.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens. If Score > 9.0 -> Patched Immediately. Not Patched Immediately -> Score NOT > 9.0."
+        },
+        {
+            "id": 8029,
+            "question": "FACTS:\n1. Some cloud services are expensive.\n2. No open-source tools are expensive.\n\nCONCLUSION:\nSome cloud services are not open-source tools.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Let X be the \"expensive cloud services\". Since they are expensive, and NO open-source tools are expensive, the items in group X cannot be open-source. Thus, some cloud services (group X) are not open-source."
+        },
+        {
+            "id": 8030,
+            "question": "FACTS:\n1. Participation in the pilot program is mandatory for Unit A.\n2. Employee Green is not in Unit A.\n\nCONCLUSION:\nParticipation in the pilot program is not mandatory for Employee Green.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Mandatory for Unit A does not imply it is *optional* for everyone else. It might be mandatory for Unit B as well, where Green resides."
+        },
+        {
+            "id": 8031,
+            "question": "FACTS:\n1. Only encrypted drives are allowed off-site.\n2. Drive D is encrypted.\n\nCONCLUSION:\nDrive D is allowed off-site.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "\"Only encrypted drives are allowed\" means encryption is a *necessary* condition. It does not mean it is *sufficient*. Drive D might be encrypted but still banned for other reasons (e.g., it contains classified info)."
+        },
+        {
+            "id": 8032,
+            "question": "FACTS:\n1. If the alert is Red, then the Chief Information Officer (CIO) must be notified.\n2. The CIO was notified.\n\nCONCLUSION:\nThe alert was Red.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "The CIO might be notified for other alert levels or reasons. Affirming the consequent."
+        },
+        {
+            "id": 8033,
+            "question": "FACTS:\n1. All valid passwords contain a number.\n2. MyPassword123 contains a number.\n\nCONCLUSION:\nMyPassword123 is a valid password.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Containing a number is a requirement (necessary), but there may be other requirements (length, special chars) that MyPassword123 fails."
+        },
+        {
+            "id": 8034,
+            "question": "FACTS:\n1. Few employees use the legacy VPN.\n2. Most employees using the legacy VPN are in the Sales department.\n\nCONCLUSION:\nSome employees in the Sales department use the legacy VPN.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Few\" implies at least some exist. \"Most of those\" are in Sales. Therefore, there is an overlap between Legacy VPN Users and Sales."
+        },
+        {
+            "id": 8035,
+            "question": "FACTS:\n1. If the ticket is Urgent AND assigned to Tier 3, it will be resolved today.\n2. The ticket is assigned to Tier 3.\n\nCONCLUSION:\nThe ticket will be resolved today.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know one condition (Tier 3) is met, but we don't know if the ticket is Urgent. Both are required for the conclusion."
+        },
+        {
+            "id": 8036,
+            "question": "FACTS:\n1. No workstations have 8GB RAM.\n2. Device X has 8GB RAM.\n\nCONCLUSION:\nDevice X is not a workstation.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If it were a workstation, it would NOT have 8GB RAM. Since it does, it cannot be a workstation."
+        },
+        {
+            "id": 8037,
+            "question": "FACTS:\n1. All projects completed on time received a bonus.\n2. Project Omega did not receive a bonus.\n\nCONCLUSION:\nProject Omega was not completed on time.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens. On Time -> Bonus. No Bonus -> Not On Time."
+        },
+        {
+            "id": 8038,
+            "question": "FACTS:\n1. Most server crashes are caused by memory leaks.\n2. Server Alpha crashed.\n\nCONCLUSION:\nServer Alpha had a memory leak.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "\"Most\" refers to probability, not certainty. Server Alpha could be one of the few cases caused by something else."
+        },
+        {
+            "id": 8039,
+            "question": "FACTS:\n1. Employees may choose a laptop OR a tablet, but not both.\n2. Employee Lee chose a laptop.\n\nCONCLUSION:\nEmployee Lee did not choose a tablet.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "The rule specifies \"but not both\" (Exclusive OR). Choosing one negates the other."
+        },
+        {
+            "id": 8040,
+            "question": "FACTS:\n1. If the network is slow, we will disable video streaming.\n2. We disabled video streaming.\n\nCONCLUSION:\nThe network was slow.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. We might disable streaming for other reasons (e.g., policy change, testing)."
+        },
+        {
+            "id": 8041,
+            "question": "FACTS:\n1. All certified professionals must renew their license annually.\n2. Person Z is not a certified professional.\n\nCONCLUSION:\nPerson Z does not need to renew their license annually.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Being certified is *one* reason to renew, but Person Z might hold a different license (e.g., driving, medical) that also requires annual renewal. The fact doesn't say \"Only certified professionals renew\"."
+        },
+        {
+            "id": 8042,
+            "question": "FACTS:\n1. Only full-time staff are eligible for the retreat.\n2. Alex is a full-time staff member.\n\nCONCLUSION:\nAlex is eligible for the retreat.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Full-time status is necessary (\"Only\"), but not necessarily sufficient. There could be other criteria (e.g., \"Full-time staff employed > 1 year\")."
+        },
+        {
+            "id": 8043,
+            "question": "FACTS:\n1. Whenever the temperature exceeds 80 degrees, the cooling fans turn on.\n2. The cooling fans are not on.\n\nCONCLUSION:\nThe temperature is not exceeding 80 degrees.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens. >80 -> Fans On. Fans NOT On -> Not >80."
+        },
+        {
+            "id": 8044,
+            "question": "FACTS:\n1. Some errors are fatal.\n2. All fatal errors require a reboot.\n\nCONCLUSION:\nSome errors require a reboot.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "There is an overlap (Fatal Errors). Since those fatal errors require a reboot, the \"Some errors\" that are fatal must require a reboot."
+        },
+        {
+            "id": 8045,
+            "question": "FACTS:\n1. No test data should be used in production.\n2. Dataset Q is used in production.\n\nCONCLUSION:\nDataset Q is not test data.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "This is a tricky one. Fact 1 says what *should* happen (a rule). Fact 2 says what *is* happening. It is possible the rule is being broken and Dataset Q IS test data that was improperly used. Logic questions on exams distinguish between \"Cannot happen\" (physical impossibility) and \"Should not happen\" (policy). If the fact was \"No test data IS used in production\", the answer would be True. With \"Should\", it's Indeterminate."
+        },
+        {
+            "id": 8046,
+            "question": "FACTS:\n1. If the power light is blinking, the battery is low.\n2. The battery is low.\n\nCONCLUSION:\nThe power light is blinking.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Low battery might be indicated by a solid light or a beep, or the light might only blink for *critically* low battery."
+        },
+        {
+            "id": 8047,
+            "question": "FACTS:\n1. All Tier 2 tickets are escalated to Tier 3 if unresolved after 4 hours.\n2. Ticket #99 was escalated to Tier 3.\n\nCONCLUSION:\nTicket #99 was a Tier 2 ticket unresolved after 4 hours.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Ticket #99 could have been escalated for other reasons (e.g., VIP request, Tier 1 immediate escalation)."
+        },
+        {
+            "id": 8048,
+            "question": "FACTS:\n1. Every new user must attend orientation.\n2. Person K attended orientation.\n\nCONCLUSION:\nPerson K is a new user.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Existing users might also be allowed (or required) to attend orientation (e.g., as refreshers or mentors)."
+        },
+        {
+            "id": 8049,
+            "question": "FACTS:\n1. If and only if the key is valid, the door opens.\n2. The door opened.\n\nCONCLUSION:\nThe key was valid.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"If and only if\" (Biconditional) means the relationship goes both ways. Valid Key <-> Door Opens. Since Door Opened, Key must be Valid."
+        },
+        {
+            "id": 8050,
+            "question": "FACTS:\n1. All servers in Rack 1 run Linux.\n2. Some Linux servers require a kernel update.\n\nCONCLUSION:\nSome servers in Rack 1 require a kernel update.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know Rack 1 servers are Linux, and we know *some* Linux servers need updates. However, the Linux servers needing updates might be located in Rack 2, Rack 3, etc. There is no guarantee the specific Linux servers in Rack 1 are the ones needing updates."
+        },
+        {
+            "id": 8051,
+            "question": "FACTS:\n1. If the network is down, email cannot be sent.\n2. Email is being sent successfully.\n\nCONCLUSION:\nThe network is not down.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens. P implies Q (Network Down -> No Email). Not Q (Email IS sent) implies Not P (Network is NOT down)."
+        },
+        {
+            "id": 8052,
+            "question": "FACTS:\n1. No contractors have administrative privileges.\n2. Alice has administrative privileges.\n\nCONCLUSION:\nAlice is not a contractor.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If Alice were a contractor, she would not have privileges (Fact 1). Since she does, she cannot be a contractor."
+        },
+        {
+            "id": 8053,
+            "question": "FACTS:\n1. All high-priority tickets are assigned to Team A.\n2. Ticket #55 was assigned to Team A.\n\nCONCLUSION:\nTicket #55 is a high-priority ticket.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Team A might handle high-priority tickets AND some medium-priority tickets. Being assigned to Team A does not prove the ticket is high priority."
+        },
+        {
+            "id": 8054,
+            "question": "FACTS:\n1. Only certified staff can operate the mainframe.\n2. Bob is certified.\n\nCONCLUSION:\nBob can operate the mainframe.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "\"Only certified staff can operate\" means certification is *necessary*. It does not mean it is *sufficient*. Bob might be certified but lack the specific authorization or login credentials to operate it."
+        },
+        {
+            "id": 8055,
+            "question": "FACTS:\n1. If and only if the status light is green, the backup is complete.\n2. The status light is green.\n\nCONCLUSION:\nThe backup is complete.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Biconditional statement (\"If and only if\"). This means Green Light <-> Backup Complete. Since the light is green, the backup must be complete."
+        },
+        {
+            "id": 8056,
+            "question": "FACTS:\n1. All data in the 'Finance' folder is encrypted.\n2. All encrypted data is backed up nightly.\n\nCONCLUSION:\nAll data in the 'Finance' folder is backed up nightly.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Transitive Property. A implies B (Finance -> Encrypted). B implies C (Encrypted -> Backed Up). Therefore, A implies C (Finance -> Backed Up)."
+        },
+        {
+            "id": 8057,
+            "question": "FACTS:\n1. Most help desk calls are regarding password resets.\n2. Call #101 was regarding a password reset.\n\nCONCLUSION:\nCall #101 represents a typical help desk call.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If \"typical\" is defined by the majority (Most), and Call #101 aligns with the majority category, it is a typical call in this context."
+        },
+        {
+            "id": 8058,
+            "question": "FACTS:\n1. No temporary files are backed up.\n2. Some log files are temporary files.\n\nCONCLUSION:\nSome log files are not backed up.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "The log files that *are* temporary files (Fact 2) fall under the rule of \"No temporary files are backed up\" (Fact 1). Therefore, those specific log files are not backed up."
+        },
+        {
+            "id": 8059,
+            "question": "FACTS:\n1. If the update fails OR the user cancels, the installation rolls back.\n2. The installation did not roll back.\n\nCONCLUSION:\nThe user did not cancel.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens with logic gate. If (A or B) -> C. Not C implies Not (A or B). De Morgan's Law: Not (A or B) = Not A AND Not B. So the user did not cancel."
+        },
+        {
+            "id": 8060,
+            "question": "FACTS:\n1. If the bandwidth limit is reached, throttling activates.\n2. If throttling activates, video quality drops.\n3. The bandwidth limit was reached.\n\nCONCLUSION:\nVideo quality dropped.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Chain reaction (Hypothetical Syllogism). A -> B. B -> C. A happened, so C must happen."
+        },
+        {
+            "id": 8061,
+            "question": "FACTS:\n1. All remote users connect via VPN.\n2. All administrators connect via VPN.\n\nCONCLUSION:\nSome remote users are administrators.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Both groups share a common characteristic (VPN usage), but that doesn't mean the groups overlap. Administrators might work entirely on-site, or the remote users might all be sales staff."
+        },
+        {
+            "id": 8062,
+            "question": "FACTS:\n1. Only if the manager approves can the budget be exceeded.\n2. The budget was exceeded.\n\nCONCLUSION:\nThe manager approved.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Only if P, then Q\" is logically equivalent to \"If Q, then P\". If Budget Exceeded -> Manager Approved. Since budget was exceeded, approval must have happened."
+        },
+        {
+            "id": 8063,
+            "question": "FACTS:\n1. Unless the logs are checked daily, security breaches will be missed.\n2. No security breaches were missed.\n\nCONCLUSION:\nThe logs were checked daily.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Unless X, Y\" = \"If Not X, then Y\". If Logs NOT checked -> Breaches missed. Fact 2 says Breaches NOT missed. Modus Tollens: Not (Breaches missed) -> Not (Logs NOT checked) -> Logs WERE checked."
+        },
+        {
+            "id": 8064,
+            "question": "FACTS:\n1. All legacy applications are written in COBOL.\n2. No web applications are written in COBOL.\n\nCONCLUSION:\nNo web applications are legacy applications.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Legacy apps are COBOL. Web apps are NOT COBOL. Since the attribute (COBOL) is mutually exclusive, the groups must be disjoint."
+        },
+        {
+            "id": 8065,
+            "question": "FACTS:\n1. Some developers are certified in Java.\n2. All Java-certified professionals are eligible for Project J.\n\nCONCLUSION:\nSome developers are eligible for Project J.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Take the developers from Fact 1 (who are Java certified). According to Fact 2, they are eligible for Project J. Therefore, some developers are eligible."
+        },
+        {
+            "id": 8066,
+            "question": "FACTS:\n1. If System A fails, System B takes over.\n2. If System A does not fail, System B remains in standby.\n3. System B did not remain in standby.\n\nCONCLUSION:\nSystem A failed.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "From Fact 2: If A Not Fail -> B Standby. Fact 3: B Not Standby. Modus Tollens on Fact 2: Not (B Standby) -> Not (A Not Fail) -> A Failed."
+        },
+        {
+            "id": 8067,
+            "question": "FACTS:\n1. Access to the data center requires a smart card.\n2. Access to the server rack requires a physical key.\n3. Access to the server rack requires access to the data center.\n4. Employee X has a physical key.\n\nCONCLUSION:\nEmployee X has a smart card.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Employee X has a key (Fact 4). This allows access to the rack *if* they can get to it. But having the key doesn't prove they possess the smart card needed for the room. They might have been given the key but still lack the smart card."
+        },
+        {
+            "id": 8068,
+            "question": "FACTS:\n1. Running the script requires Python installed.\n2. Python is installed on Server 1.\n\nCONCLUSION:\nThe script runs on Server 1.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Python is a *necessary* condition (Fact 1), but not sufficient. The script might not be on the server, or permissions might deny execution."
+        },
+        {
+            "id": 8069,
+            "question": "FACTS:\n1. All managers have access to the budget.\n2. All managers have access to the personnel files.\n\nCONCLUSION:\nSome people with access to the budget have access to the personnel files.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Assuming there is at least one manager (standard logic assumption in these tests unless 'empty set' is specified), that manager has both accesses. Thus, the intersection exists."
+        },
+        {
+            "id": 8070,
+            "question": "FACTS:\n1. No interns are assigned laptops.\n2. No one assigned a laptop works remotely.\n\nCONCLUSION:\nNo interns work remotely.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know Interns -> No Laptop. And Laptop -> No Remote. This doesn't prevent Interns (No Laptop) from working remote. They might use personal desktops."
+        },
+        {
+            "id": 8071,
+            "question": "FACTS:\n1. If the database is indexed, queries are fast.\n2. Queries are fast.\n\nCONCLUSION:\nThe database is indexed.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Queries might be fast because the dataset is small, even without indexing."
+        },
+        {
+            "id": 8072,
+            "question": "FACTS:\n1. If the server is overloaded, response time increases.\n2. The server is not overloaded.\n\nCONCLUSION:\nResponse time does not increase.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Denying the antecedent. Response time could increase for other reasons (e.g., network latency)."
+        },
+        {
+            "id": 8073,
+            "question": "FACTS:\n1. The project can be completed by Team A OR Team B (but not both).\n2. Team A completed the project.\n\nCONCLUSION:\nTeam B did not complete the project.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "The 'but not both' clause makes this an Exclusive OR. If A did it, B did not."
+        },
+        {
+            "id": 8074,
+            "question": "FACTS:\n1. Everyone in the IT department has a security badge.\n2. Person Z has a security badge.\n\nCONCLUSION:\nPerson Z is in the IT department.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "IT Dept -> Badge. Person Z -> Badge. Affirming the consequent. HR or Security staff might also have badges."
+        },
+        {
+            "id": 8075,
+            "question": "FACTS:\n1. Only the IT department has security badges.\n2. Person Z has a security badge.\n\nCONCLUSION:\nPerson Z is in the IT department.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Only IT\" means if you have a badge, you MUST be IT. Person Z has a badge, so they are IT."
+        },
+        {
+            "id": 8076,
+            "question": "FACTS:\n1. Shift supervisors work on weekends.\n2. Liam works on weekends.\n\nCONCLUSION:\nLiam is a shift supervisor.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Regular staff might also work weekends. Working weekends is not unique to supervisors based on the facts."
+        },
+        {
+            "id": 8077,
+            "question": "FACTS:\n1. If scheduled maintenance occurs, the system goes offline.\n2. The system did not go offline.\n\nCONCLUSION:\nScheduled maintenance did not occur.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens. Maintenance -> Offline. Not Offline -> Not Maintenance."
+        },
+        {
+            "id": 8078,
+            "question": "FACTS:\n1. Fiber optic is faster than copper cable.\n2. Copper cable is faster than dial-up.\n\nCONCLUSION:\nFiber optic is faster than dial-up.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Transitive property. A > B, B > C, therefore A > C."
+        },
+        {
+            "id": 8079,
+            "question": "FACTS:\n1. Department A spent more than Department B.\n2. Department C spent more than Department B.\n\nCONCLUSION:\nDepartment A spent more than Department C.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "We know A > B and C > B. We do not know the relationship between A and C. A could be equal to C, less than C, or greater than C."
+        },
+        {
+            "id": 8080,
+            "question": "FACTS:\n1. All Priority 1 tickets must be resolved within 1 hour.\n2. Ticket #900 was resolved within 1 hour.\n\nCONCLUSION:\nTicket #900 was a Priority 1 ticket.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Priority 2 tickets might also be resolved quickly (within 1 hour)."
+        },
+        {
+            "id": 8081,
+            "question": "FACTS:\n1. No servers on the public subnet are allowed to have open RDP ports.\n2. Server Web-01 is on the public subnet.\n\nCONCLUSION:\nServer Web-01 does not have open RDP ports.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Fact 1 is a rule (\"allowed to have\"). Fact 2 places the server in the jurisdiction of that rule. However, it is logically possible the rule is being violated. In strict logic tests, unless the rule is descriptive (\"No servers HAVE open ports\"), a normative rule (\"ALLOWED\") does not guarantee reality."
+        },
+        {
+            "id": 8082,
+            "question": "FACTS:\n1. All cloud instances are virtual machines.\n2. No cloud instances are physical servers.\n\nCONCLUSION:\nSome virtual machines are not physical servers.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Since Cloud Instances exist and are Virtual Machines (Fact 1), and those instances are NOT physical servers (Fact 2), there are at least some Virtual Machines (the cloud ones) that are not physical servers."
+        },
+        {
+            "id": 8083,
+            "question": "FACTS:\n1. If the printer is jammed (A), the error light blinks (B).\n2. If the toner is low (C), the error light blinks (B).\n3. The error light is blinking (B).\n\nCONCLUSION:\nEither the printer is jammed or the toner is low.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "The error light could be blinking for a third reason D (e.g., no paper). Just because A and C cause B doesn't mean they are the *only* causes."
+        },
+        {
+            "id": 8084,
+            "question": "FACTS:\n1. All successful logins are recorded in the access log.\n2. An event at 10:00 AM was recorded in the access log.\n\nCONCLUSION:\nThe event at 10:00 AM was a successful login.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "The log might record other things too (failed logins, logouts, errors). Successful login -> Recorded. Recorded -/> Successful login."
+        },
+        {
+            "id": 8085,
+            "question": "FACTS:\n1. Some files in the repository are corrupted.\n2. All corrupted files are moved to quarantine.\n\nCONCLUSION:\nSome files in quarantine are corrupted.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "From Fact 1, there exists a group of Corrupted Files. Fact 2 says ALL of these are moved to Quarantine. Therefore, the Quarantine now contains those Corrupted Files."
+        },
+        {
+            "id": 8086,
+            "question": "FACTS:\n1. Employees must change their password every 90 days.\n2. Employee A last changed their password 100 days ago.\n\nCONCLUSION:\nEmployee A is in violation of the password policy.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "The rule sets a deadline (90 days). The employee exceeded it (100 days). Therefore, the policy was violated."
+        },
+        {
+            "id": 8087,
+            "question": "FACTS:\n1. If the input is numeric, Process A executes.\n2. Process A executed.\n\nCONCLUSION:\nThe input was numeric.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Process A might also execute for alphanumeric inputs or empty inputs."
+        },
+        {
+            "id": 8088,
+            "question": "FACTS:\n1. Only verified emails are delivered to the inbox.\n2. Email E was delivered to the inbox.\n\nCONCLUSION:\nEmail E was verified.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Only verified emails are delivered\" = \"Delivered implies Verified\". Since Email E was delivered, it must be verified."
+        },
+        {
+            "id": 8089,
+            "question": "FACTS:\n1. All Tier 1 agents handle phone calls.\n2. Tier 2 agents do not handle phone calls.\n\nCONCLUSION:\nNo Tier 2 agent is a Tier 1 agent.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Tier 1 has property P (handles calls). Tier 2 has property Not-P. Therefore, the two groups cannot overlap."
+        },
+        {
+            "id": 8090,
+            "question": "FACTS:\n1. The system is either Online OR in Maintenance Mode.\n2. The system is not Online.\n\nCONCLUSION:\nThe system is in Maintenance Mode.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Disjunctive Syllogism. A or B. Not A. Therefore B."
+        },
+        {
+            "id": 8091,
+            "question": "FACTS:\n1. If the server crashes (A), the alerts trigger (B).\n2. If the alerts trigger (B), the on-call engineer is paged (C).\n3. The on-call engineer was NOT paged (Not C).\n\nCONCLUSION:\nThe server did not crash (Not A).\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Not C -> Not B (Modus Tollens on Fact 2). Not B -> Not A (Modus Tollens on Fact 1). Chain logic holds."
+        },
+        {
+            "id": 8092,
+            "question": "FACTS:\n1. Most IT projects are over budget.\n2. Most over-budget projects are delayed.\n\nCONCLUSION:\nSome IT projects are delayed.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Logic trap. \"Most A are B\" and \"Most B are C\" does NOT guarantee overlap between A and C. The \"Most B\" that are C could be the minority of B's that are NOT A."
+        },
+        {
+            "id": 8093,
+            "question": "FACTS:\n1. Everyone who completed the training received a certificate.\n2. Alice received a certificate.\n\nCONCLUSION:\nAlice completed the training.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. Certificates might be awarded for other reasons (e.g., passing an exam without training, honorary award)."
+        },
+        {
+            "id": 8094,
+            "question": "FACTS:\n1. No one without a security badge can enter the building.\n2. Dave entered the building.\n\nCONCLUSION:\nDave has a security badge.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If Dave did NOT have a badge, he could not enter. Since he did enter, he must have a badge."
+        },
+        {
+            "id": 8095,
+            "question": "FACTS:\n1. If the storage is full, the write operation fails.\n2. The write operation succeeded.\n\nCONCLUSION:\nThe storage is not full.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Modus Tollens. Full -> Fail. Not Fail -> Not Full."
+        },
+        {
+            "id": 8096,
+            "question": "FACTS:\n1. All Managers are Full-time employees.\n2. Some Staff are not Full-time employees.\n\nCONCLUSION:\nSome Staff are not Managers.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "If some Staff are NOT Full-time, and All Managers ARE Full-time, then those specific Staff members cannot be Managers."
+        },
+        {
+            "id": 8097,
+            "question": "FACTS:\n1. Few users enable Two-Factor Authentication (2FA).\n2. All users who enable 2FA are considered 'Secure Users'.\n\nCONCLUSION:\nSome users are 'Secure Users'.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "\"Few\" implies a non-zero number (existence). Since those few users enable 2FA, and 2FA users are Secure, then there are some Secure Users."
+        },
+        {
+            "id": 8098,
+            "question": "FACTS:\n1. If the update is installed (X) AND the server is restarted (Y), the feature is active (Z).\n2. The feature is active (Z).\n3. The update was installed (X).\n\nCONCLUSION:\nThe server was restarted (Y).\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Affirming the consequent. The feature might be active for other reasons, or maybe only X was needed in a specific edge case not listed. The rule says (X+Y)->Z. It doesn't say Z->(X+Y)."
+        },
+        {
+            "id": 8099,
+            "question": "FACTS:\n1. The system runs if and only if the power is on.\n2. The system is not running.\n\nCONCLUSION:\nThe power is not on.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "True",
+            "explanation": "Biconditional. Power On <-> System Runs. System Not Running <-> Power Not On."
+        },
+        {
+            "id": 8100,
+            "question": "FACTS:\n1. The application crashes if memory usage exceeds 90%.\n2. The application crashed.\n3. Memory usage was at 95%.\n\nCONCLUSION:\nThe crash was caused by memory usage.\n\nBased strictly on the facts provided, is this conclusion True, False, or Indeterminate?",
+            "options": [
+                "True",
+                "False",
+                "Indeterminate"
+            ],
+            "answer": "Indeterminate",
+            "explanation": "Causation fallacy. We know (High Memory -> Crash) and we know (High Memory) and (Crash). However, the crash could have been caused by a concurrent power failure or software bug. The facts establish correlation and a sufficient condition, but do not definitively prove the specific *cause* of this instance without assuming it was the only possible cause."
+        }
+    ]
+}
