@@ -94,7 +94,7 @@
     .logo {
       width: 80px;
       height: 90px;
-      background: var(--gradient-accent-transparent); /* new variable */
+      background: var(--gradient-accent-transparent);
       border-radius: 20px;
       display: flex;
       align-items: center;
@@ -104,7 +104,6 @@
       box-shadow: var(--shadow-glow);
       animation: float 3s ease-in-out infinite;
     }
-
 
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
@@ -802,7 +801,10 @@
     <header class="header">
       <div class="logo">🗽</div>
       <h1 class="title">NYS Information Technology Civil Service Study Guide</h1>
-      <p class="subtitle">Complete exam preparation for Information Technology Specialist (ITS-3, ITS-4) and Manager Information Technology Services (MITS-1, MITS-2) positions with targeted practice questions and competency coverage.</p>
+      <p class="subtitle">
+        A unified study system for New York State ITS-3, ITS-4, MITS-1, and MITS-2 exams, 
+        featuring targeted practice questions and coverage of all core test competencies.
+      </p>
     </header>
 
     <!-- Progress Section -->
@@ -836,20 +838,26 @@
 
     <!-- Filter Controls -->
     <div class="card filter-section">
-      <div class="filter-controls">
-        <button class="filter-btn active" data-category="all">All Questions</button>
-        <button class="filter-btn" data-category="part1">Part 1 – Systems Analysis & Design (ITS-3, ITS-4, MITS-1, MITS-2)</button>
-        <button class="filter-btn" data-category="part2">Part 2 – Tabular Interpretation (ITS-3, ITS-4, MITS-1, MITS-2)</button>
-        <button class="filter-btn" data-category="part3">Part 3 – Flowchart Logic (ITS-3, ITS-4, MITS-1, MITS-2)</button>
-        <button class="filter-btn" data-category="part4">Part 4 – Administrative Principles (ITS-4, MITS-1, MITS-2)</button>
-        <button class="filter-btn" data-category="part5">Part 5 – Analyzing & Evaluating Information (ITS-3*, ITS-4, MITS-1, MITS-2)</button>
-        <button class="filter-btn" data-category="part5.5">Part 5.5 – Evaluating Conclusions Based On Factual Information (ITS-3)</button>
-        <button class="filter-btn" data-category="part6">Part 6 – Reports & Official Documents (MITS-1, MITS-2)</button>
-        <button class="filter-btn" data-category="part7">Part 7 – Administrative Supervision (ITS-3, MITS-2)</button>
-        <div class="filter-divider"></div>
-        <button class="filter-btn" id="shuffleToggle" data-shuffle="true">🎲 Shuffle: ON</button>
+      <!-- Exam Selection (Level 1) -->
+      <div class="filter-controls" id="examSelector">
+        <button class="filter-btn active" data-exam="all">📚 All Questions</button>
+        <button class="filter-btn" data-exam="its3">💻 Information Technology Specialist 3 Exam</button>
+        <button class="filter-btn" data-exam="its4">💻 Information Technology Specialist 4 Exam</button>
+        <button class="filter-btn" data-exam="mits1">🏛️ Manager Information Technology Services 1 Exam</button>
+        <button class="filter-btn" data-exam="mits2">🏛️ Manager Information Technology Services 2 Exam</button>
       </div>
-      <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.75rem; text-align: center;">* ITS-3 lists this subject as "Evaluating Conclusions Based on Facts," which is fully covered by Part 5 and expanded upon in Part 5.5.
+      
+      <!-- Parts Selection (Level 2) - Hidden by default -->
+      <div class="filter-controls" id="partsSelector" style="display: none;">
+        <button class="filter-btn" id="goBackBtn">← Go Back</button>
+        <div id="examPartsContainer" style="display: contents;">
+          <!-- Parts will be dynamically populated here -->
+        </div>
+      </div>
+      
+      <!-- ITS-3 specific note - only shown when viewing ITS-3 parts -->
+      <p id="its3Note" style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.75rem; text-align: center; display: none;">
+        * ITS-3 lists this subject as "Evaluating Conclusions Based on Facts," which is fully covered by Part 5 and expanded upon in Part 5.5.
       </p>
     </div>
 
@@ -953,9 +961,48 @@ let questionShuffleMap = {}; // Store shuffle mappings for each question
 let quizCompleted = false;
 let isLoadingQuestions = false;
 let shuffleEnabled = true; // Global shuffle setting
+let currentNavigationLevel = 1; // 1 = exam selection, 2 = parts selection
 
 /* --------------------------------------------- */
-/* 4. Fallback Questions                         */
+/* 4. Exam Parts Configuration                   */
+/* --------------------------------------------- */
+const EXAM_PARTS = {
+  its3: [
+    { part: 'part1', title: 'Part 1 – Systems Analysis & Design' },
+    { part: 'part2', title: 'Part 2 – Interpreting Tabular Data' },
+    { part: 'part3', title: 'Part 3 – Logical Reasoning with Flowcharts' },
+    { part: 'part5', title: 'Part 5 – Analyzing & Evaluating Information' },
+    { part: 'part5.5', title: 'Part 5.5 – Evaluating Conclusions from Facts' },
+    { part: 'part7', title: 'Part 7 – Administrative Supervision' }
+  ],
+  its4: [
+    { part: 'part1', title: 'Part 1 – Systems Analysis & Design' },
+    { part: 'part2', title: 'Part 2 – Interpreting Tabular Data' },
+    { part: 'part3', title: 'Part 3 – Logical Reasoning with Flowcharts' },
+    { part: 'part4', title: 'Part 4 – Administrative Principles' },
+    { part: 'part5', title: 'Part 5 – Analyzing & Evaluating Information' }
+  ],
+  mits1: [
+    { part: 'part1', title: 'Part 1 – Systems Analysis & Design' },
+    { part: 'part2', title: 'Part 2 – Interpreting Tabular Data' },
+    { part: 'part3', title: 'Part 3 – Logical Reasoning with Flowcharts' },
+    { part: 'part4', title: 'Part 4 – Administrative Principles' },
+    { part: 'part5', title: 'Part 5 – Analyzing & Evaluating Information' },
+    { part: 'part6', title: 'Part 6 – Reports & Official Documents' }
+  ],
+  mits2: [
+    { part: 'part1', title: 'Part 1 – Systems Analysis & Design' },
+    { part: 'part2', title: 'Part 2 – Interpreting Tabular Data' },
+    { part: 'part3', title: 'Part 3 – Logical Reasoning with Flowcharts' },
+    { part: 'part4', title: 'Part 4 – Administrative Principles' },
+    { part: 'part5', title: 'Part 5 – Analyzing & Evaluating Information' },
+    { part: 'part6', title: 'Part 6 – Reports & Official Documents' },
+    { part: 'part7', title: 'Part 7 – Administrative Supervision' }
+  ]
+};
+
+/* --------------------------------------------- */
+/* 5. Fallback Questions                         */
 /* --------------------------------------------- */
 const fallbackQuestions = [
   {
@@ -970,7 +1017,7 @@ const fallbackQuestions = [
 ];
 
 /* --------------------------------------------- */
-/* 5. DOM element variables (declared only)      */
+/* 6. DOM element variables (declared only)      */
 /* (bound later via rebindQuizElements())        */
 /* --------------------------------------------- */
 let questionText;
@@ -994,7 +1041,7 @@ let passageText;
 let shuffleIndicator;
 
 /* --------------------------------------------- */
-/* 6. Rebind DOM elements after restoring HTML   */
+/* 7. Rebind DOM elements after restoring HTML   */
 /* --------------------------------------------- */
 function rebindQuizElements() {
   questionText = document.getElementById("questionText");
@@ -1019,7 +1066,91 @@ function rebindQuizElements() {
 }
 
 /* --------------------------------------------- */
-/* 7. SHUFFLE UTILITIES                          */
+/* 8. Navigation Functions                       */
+/* --------------------------------------------- */
+function showExamParts(examType) {
+  const examSelector = document.getElementById('examSelector');
+  const partsSelector = document.getElementById('partsSelector');
+  const partsContainer = document.getElementById('examPartsContainer');
+  const its3Note = document.getElementById('its3Note');
+  
+  // Hide exam selector and show parts selector
+  examSelector.style.display = 'none';
+  partsSelector.style.display = 'flex';
+  
+  // Show/hide ITS-3 note based on exam type
+  if (examType === 'its3') {
+    its3Note.style.display = 'block';
+  } else {
+    its3Note.style.display = 'none';
+  }
+  
+  // Clear and populate parts
+  partsContainer.innerHTML = '';
+  
+  // Get full exam name for the "All Parts" button
+  const examNames = {
+    its3: 'All ITS-3 Parts',
+    its4: 'All ITS-4 Parts', 
+    mits1: 'All MITS-1 Parts',
+    mits2: 'All MITS-2 Parts'
+  };
+  
+  // Add "All Parts" option for the selected exam
+  const allPartsBtn = document.createElement('button');
+  allPartsBtn.className = 'filter-btn active';
+  allPartsBtn.dataset.exam = examType;
+  allPartsBtn.textContent = examNames[examType] || `All ${examType.toUpperCase()} Parts`;
+  partsContainer.appendChild(allPartsBtn);
+  
+  // Add individual part buttons
+  EXAM_PARTS[examType].forEach(partInfo => {
+    const partBtn = document.createElement('button');
+    partBtn.className = 'filter-btn';
+    partBtn.dataset.category = partInfo.part;
+    partBtn.textContent = partInfo.title;
+    partsContainer.appendChild(partBtn);
+  });
+  
+  currentNavigationLevel = 2;
+  
+  // Set current filter to this exam and update questions
+  currentFilter = examType;
+  currentQuestionIndex = 0;
+  updateFilteredQuestions();
+  displayQuestion();
+  updateProgress();
+}
+
+function goBackToExams() {
+  const examSelector = document.getElementById('examSelector');
+  const partsSelector = document.getElementById('partsSelector');
+  const its3Note = document.getElementById('its3Note');
+  
+  // Show exam selector and hide parts selector
+  examSelector.style.display = 'flex';
+  partsSelector.style.display = 'none';
+  
+  // Hide the ITS-3 note when returning to main selection
+  its3Note.style.display = 'none';
+  
+  currentNavigationLevel = 1;
+  
+  // Reset to "All Questions"
+  document.querySelectorAll('#examSelector .filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelector('#examSelector [data-exam="all"]').classList.add('active');
+  
+  currentFilter = 'all';
+  currentQuestionIndex = 0;
+  updateFilteredQuestions();
+  displayQuestion();
+  updateProgress();
+}
+
+/* --------------------------------------------- */
+/* 9. SHUFFLE UTILITIES                          */
 /* --------------------------------------------- */
 
 // Fisher-Yates shuffle algorithm
@@ -1072,7 +1203,7 @@ function getShuffledCorrectIndex(questionId, originalCorrectIndex) {
 }
 
 /* --------------------------------------------- */
-/* 8. TABLE RENDERING FUNCTION                   */
+/* 10. TABLE RENDERING FUNCTION                  */
 /* --------------------------------------------- */
 function renderTable(tableData) {
   if (!Array.isArray(tableData) || tableData.length === 0) {
@@ -1113,7 +1244,7 @@ function renderTable(tableData) {
 }
 
 /* --------------------------------------------- */
-/* 9. HTML ESCAPE FUNCTION                       */
+/* 11. HTML ESCAPE FUNCTION                      */
 /* --------------------------------------------- */
 function escapeHtml(unsafe) {
   return unsafe
@@ -1126,7 +1257,7 @@ function escapeHtml(unsafe) {
 }
 
 /* --------------------------------------------- */
-/* 10. JSON Loader                               */
+/* 12. JSON Loader                               */
 /* --------------------------------------------- */
 async function loadQuestionsFromJSON() {
   try {
@@ -1175,7 +1306,7 @@ async function loadQuestionsFromJSON() {
 }
 
 /* --------------------------------------------- */
-/* 11. Parse JSON - Enhanced for Passages        */
+/* 13. Parse JSON - Enhanced for Passages        */
 /* --------------------------------------------- */
 function parseJSONToQuestions(jsonData, partName) {
   // Handle the new logical reasoning format for Part 5.5
@@ -1220,7 +1351,7 @@ function parseJSONToQuestions(jsonData, partName) {
 }
 
 /* --------------------------------------------- */
-/* 12. Parse Logical Reasoning Questions (NEW)   */
+/* 14. Parse Logical Reasoning Questions (NEW)   */
 /* --------------------------------------------- */
 function parseLogicalReasoningQuestions(logicalReasoningData, partName) {
   const questions = [];
@@ -1245,7 +1376,7 @@ function parseLogicalReasoningQuestions(logicalReasoningData, partName) {
 }
 
 /* --------------------------------------------- */
-/* 13. Parse Passage-Based Questions             */
+/* 15. Parse Passage-Based Questions             */
 /* --------------------------------------------- */
 function parsePassageBasedQuestions(passageData, partName) {
   const questions = [];
@@ -1281,7 +1412,7 @@ function parsePassageBasedQuestions(passageData, partName) {
 }
 
 /* --------------------------------------------- */
-/* 14. ENHANCED DISPLAY QUESTION FUNCTION        */
+/* 16. ENHANCED DISPLAY QUESTION FUNCTION        */
 /* --------------------------------------------- */
 function displayQuestion() {
   const question = filteredQuestions[currentQuestionIndex];
@@ -1387,25 +1518,70 @@ function displayQuestion() {
 
 function setupEventListeners() {
   // Filter buttons
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Handle shuffle toggle
-      if (btn.id === 'shuffleToggle') {
-        toggleShuffle();
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('filter-btn')) {
+      
+      // Handle go back button
+      if (e.target.id === 'goBackBtn') {
+        goBackToExams();
         return;
       }
 
-      // Handle category filtering
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        if (b.id !== 'shuffleToggle') b.classList.remove('active');
-      });
-      btn.classList.add('active');
-      currentFilter = btn.dataset.category;
-      currentQuestionIndex = 0;
-      updateFilteredQuestions();
-      displayQuestion();
-      updateProgress();
-    });
+      // Handle exam selection (Level 1)
+      if (e.target.dataset.exam && currentNavigationLevel === 1) {
+        if (e.target.dataset.exam === 'all') {
+          // Set "All Questions" as active
+          document.querySelectorAll('#examSelector .filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          e.target.classList.add('active');
+          
+          currentFilter = 'all';
+          currentQuestionIndex = 0;
+          updateFilteredQuestions();
+          displayQuestion();
+          updateProgress();
+        } else {
+          // Show parts for this exam
+          document.querySelectorAll('#examSelector .filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          e.target.classList.add('active');
+          showExamParts(e.target.dataset.exam);
+        }
+        return;
+      }
+      
+      // Handle exam selection (Level 2 - "All X Parts")
+      if (e.target.dataset.exam && currentNavigationLevel === 2) {
+        document.querySelectorAll('#partsSelector .filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        e.target.classList.add('active');
+        
+        currentFilter = e.target.dataset.exam;
+        currentQuestionIndex = 0;
+        updateFilteredQuestions();
+        displayQuestion();
+        updateProgress();
+        return;
+      }
+
+      // Handle part selection (Level 2)
+      if (e.target.dataset.category && currentNavigationLevel === 2) {
+        document.querySelectorAll('#partsSelector .filter-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        e.target.classList.add('active');
+        
+        currentFilter = e.target.dataset.category;
+        currentQuestionIndex = 0;
+        updateFilteredQuestions();
+        displayQuestion();
+        updateProgress();
+        return;
+      }
+    }
   });
 
   // Navigation
@@ -1442,7 +1618,7 @@ function toggleShuffle() {
 }
 
 /* --------------------------------------------- */
-/* 15. Restore HTML + Bind + Start Quiz          */
+/* 17. Restore HTML + Bind + Start Quiz          */
 /* --------------------------------------------- */
 function initializeQuizAfterLoad() {
   const container = document.getElementById("quizContainer");
@@ -1451,21 +1627,8 @@ function initializeQuizAfterLoad() {
   rebindQuizElements();
   setupEventListeners();
   
-  // Restore shuffle preference
-  const savedShuffle = localStorage.getItem('shuffleEnabled');
-  if (savedShuffle !== null) {
-    shuffleEnabled = savedShuffle === 'true';
-  }
-  
-  // Update shuffle button display
-  const shuffleBtn = document.getElementById('shuffleToggle');
-  if (shuffleEnabled) {
-    shuffleBtn.textContent = '🎲 Shuffle: ON';
-    shuffleBtn.classList.add('active');
-  } else {
-    shuffleBtn.textContent = '🔒 Shuffle: OFF';
-    shuffleBtn.classList.remove('active');
-  }
+  // Set shuffle as always enabled (no toggle needed)
+  shuffleEnabled = true;
   
   updateFilteredQuestions();
   displayQuestion();
@@ -1473,7 +1636,7 @@ function initializeQuizAfterLoad() {
 }
 
 /* --------------------------------------------- */
-/* 16. Loading UI                                */
+/* 18. Loading UI                                */
 /* --------------------------------------------- */
 function showLoadingState() {
   const qc = document.getElementById("quizContainer");
@@ -1495,94 +1658,26 @@ function showOfflineNotice() {
 }
 
 /* --------------------------------------------- */
-/* 17. Category Detection                         */
+/* 19. Category Detection                         */
 /* --------------------------------------------- */
 function determineCategory(text) {
   const map = {
-    // Part 1 – Systems Analysis & Design
-    sdlc: [
-      "phase", "planning", "analysis", "design", "implementation",
-      "maintenance", "agile", "waterfall", "scrum", "kanban",
-      "iteration", "lifecycle", "requirements gathering"
-    ],
-
-    requirements: [
-      "requirement", "stakeholder", "business rule",
-      "user story", "acceptance criteria", "elicitation", "feasibility"
-    ],
-
-    architecture: [
-      "api", "tier", "client", "server", "cloud", "integration",
-      "distributed", "architecture", "infrastructure", "middleware"
-    ],
-
-    controls: [
-      "test", "qa", "unit", "integration", "regression", "uat",
-      "quality", "controls", "validation", "verification"
-    ],
-
-    documentation: [
-      "diagram", "dfd", "erd", "flowchart", "documentation",
-      "specification", "model", "notation", "technical writing"
-    ],
-
-    // Part 2 – Tabular Interpretation
-    tabular: [
-      "table", "percent", "increase", "decrease", "ratio", "trend",
-      "comparison", "variance", "cases", "rows", "columns"
-    ],
-
-    // Part 3 – Flowchart Logic
-    flowcharts: [
-      "flowchart", "step", "decision", "process", "branch",
-      "condition", "loop", "symbol"
-    ],
-
-    // Part 4 – Administrative Principles
-    admin_principles: [
-      "policy", "procedure", "workflow", "governance", "authority",
-      "responsibility", "delegation", "priority", "escalation",
-      "administrative"
-    ],
-
-    // Part 5 – Analyzing & Evaluating Information
-    analysis_eval: [
-      "conclusion", "interpretation", "evidence", "trend",
-      "argument", "validity", "supports", "weakens", "dataset",
-      "memo", "report", "chart", "graph"
-    ],
-
-    // Part 5.5 – Evaluating Conclusions Based on Facts
-    logical_reasoning: [
-      "facts:", "conclusion:", "true", "false", "indeterminate",
-      "modus", "contrapositive", "inference", "logical"
-    ],
-
-    // Part 6 – Reports & Official Documents
-    reports_docs: [
-      "passage", "paragraph", "tone", "revision", "clarity",
-      "transition", "purpose", "formal", "concise", "main idea"
-    ],
-
-    // Part 7 – Administrative Supervision
-    supervision: [
-      "supervisor", "team", "performance", "discipline", "workload",
-      "coaching", "documentation", "conflict", "delegate",
-      "evaluate", "behavior"
-    ]
+    sdlc: ["phase", "planning", "design", "maintenance", "agile", "waterfall"],
+    requirements: ["requirement", "stakeholder", "business rule"],
+    architecture: ["api", "tier", "client", "server", "cloud"],
+    controls: ["test", "qa", "unit", "integration", "regression"],
+    documentation: ["diagram", "dfd", "erd", "flowchart"]
   };
 
   const lower = text?.toLowerCase() || "";
-
-  for (const [category, words] of Object.entries(map)) {
-    if (words.some(w => lower.includes(w))) return category;
-  }
+  for (const [cat, words] of Object.entries(map))
+    if (words.some(w => lower.includes(w))) return cat;
 
   return "general";
 }
 
 /* --------------------------------------------- */
-/* 18. Initialize Quiz                           */
+/* 20. Initialize Quiz                           */
 /* --------------------------------------------- */
 function initializeQuiz() {
   loadQuestionsFromJSON();
@@ -1591,6 +1686,26 @@ function initializeQuiz() {
     function updateFilteredQuestions() {
       if (currentFilter === 'all') {
         filteredQuestions = [...questionsDB];
+      } else if (currentFilter === 'mits1') {
+        // MITS-1: Parts 1, 2, 3, 4, 5, 6
+        filteredQuestions = questionsDB.filter(q => 
+          ['part1', 'part2', 'part3', 'part4', 'part5', 'part6'].includes(q.part)
+        );
+      } else if (currentFilter === 'mits2') {
+        // MITS-2: Parts 1, 2, 3, 4, 5, 6, 7
+        filteredQuestions = questionsDB.filter(q => 
+          ['part1', 'part2', 'part3', 'part4', 'part5', 'part6', 'part7'].includes(q.part)
+        );
+      } else if (currentFilter === 'its3') {
+        // ITS-3: Parts 1, 2, 3, 5, 5.5, 7
+        filteredQuestions = questionsDB.filter(q => 
+          ['part1', 'part2', 'part3', 'part5', 'part5.5', 'part7'].includes(q.part)
+        );
+      } else if (currentFilter === 'its4') {
+        // ITS-4: Parts 1, 2, 3, 4, 5
+        filteredQuestions = questionsDB.filter(q => 
+          ['part1', 'part2', 'part3', 'part4', 'part5'].includes(q.part)
+        );
       } else if (currentFilter.startsWith('part')) {
         filteredQuestions = questionsDB.filter(q => q.part === currentFilter);
       } else {
@@ -1675,22 +1790,61 @@ function initializeQuiz() {
     }
 
     function updateProgress() {
-      const answeredCount = filteredQuestions.filter(q => userAnswers[q.id] !== undefined).length;
-      const correctCount = filteredQuestions.filter(q => 
+      // Get questions relevant to current filter
+      const relevantQuestions = filteredQuestions;
+      const answeredCount = relevantQuestions.filter(q => userAnswers[q.id] !== undefined).length;
+      const correctCount = relevantQuestions.filter(q => 
         userAnswers[q.id] !== undefined && userAnswers[q.id] === q.correct
       ).length;
       
-      const progressPercentage = (answeredCount / filteredQuestions.length) * 100;
+      const progressPercentage = relevantQuestions.length > 0 ? (answeredCount / relevantQuestions.length) * 100 : 0;
       const scorePercentage = answeredCount > 0 ? (correctCount / answeredCount) * 100 : 0;
       
+      // Update progress bar
       progressFill.style.width = `${progressPercentage}%`;
+      
+      // Update stats display
       correctAnswersSpan.textContent = correctCount;
       scorePercentageSpan.textContent = `${Math.round(scorePercentage)}%`;
+      totalQuestionsSpan.textContent = relevantQuestions.length;
       
       // Update progress percentage display
       const progressPercentageSpan = document.getElementById('progressPercentage');
       if (progressPercentageSpan) {
         progressPercentageSpan.textContent = `${Math.round(progressPercentage)}%`;
+      }
+      
+      // Update progress title to show context
+      const progressTitle = document.querySelector('.progress-title');
+      if (progressTitle && currentFilter !== 'all') {
+        // Show what we're tracking progress for
+        let contextTitle = 'Your Progress';
+        
+        if (currentFilter === 'its3') {
+          contextTitle = 'ITS-3 Progress';
+        } else if (currentFilter === 'its4') {
+          contextTitle = 'ITS-4 Progress';
+        } else if (currentFilter === 'mits1') {
+          contextTitle = 'MITS-1 Progress';
+        } else if (currentFilter === 'mits2') {
+          contextTitle = 'MITS-2 Progress';
+        } else if (currentFilter.startsWith('part')) {
+          const partNames = {
+            'part1': 'Part 1 Progress',
+            'part2': 'Part 2 Progress',
+            'part3': 'Part 3 Progress',
+            'part4': 'Part 4 Progress',
+            'part5': 'Part 5 Progress',
+            'part5.5': 'Part 5.5 Progress',
+            'part6': 'Part 6 Progress',
+            'part7': 'Part 7 Progress'
+          };
+          contextTitle = partNames[currentFilter] || 'Your Progress';
+        }
+        
+        progressTitle.textContent = contextTitle;
+      } else if (progressTitle) {
+        progressTitle.textContent = 'Your Progress';
       }
     }
 
@@ -1723,9 +1877,36 @@ function initializeQuiz() {
         
         document.getElementById('finalScore').textContent = `${finalScore}%`;
         
+        // Contextual results title
+        let resultsTitle = '🎉 Quiz Complete!';
+        if (currentFilter === 'its3') {
+          resultsTitle = '🎉 ITS-3 Section Complete!';
+        } else if (currentFilter === 'its4') {
+          resultsTitle = '🎉 ITS-4 Section Complete!';
+        } else if (currentFilter === 'mits1') {
+          resultsTitle = '🎉 MITS-1 Section Complete!';
+        } else if (currentFilter === 'mits2') {
+          resultsTitle = '🎉 MITS-2 Section Complete!';
+        } else if (currentFilter.startsWith('part')) {
+          const partNames = {
+            'part1': 'Part 1',
+            'part2': 'Part 2', 
+            'part3': 'Part 3',
+            'part4': 'Part 4',
+            'part5': 'Part 5',
+            'part5.5': 'Part 5.5',
+            'part6': 'Part 6',
+            'part7': 'Part 7'
+          };
+          const partName = partNames[currentFilter] || currentFilter;
+          resultsTitle = `🎉 ${partName} Complete!`;
+        }
+        
+        document.querySelector('.results-title').textContent = resultsTitle;
+        
         let message = '';
         if (finalScore >= 90) {
-          message = '🎉 Excellent! You\'re well prepared for the exam!';
+          message = '🎉 Excellent! You\'re well prepared for this section!';
         } else if (finalScore >= 80) {
           message = '👍 Good job! Review the areas you missed and you\'ll be ready!';
         } else if (finalScore >= 70) {
@@ -1757,38 +1938,15 @@ function initializeQuiz() {
       }
       
       const categoryNames = {
-          // Part 1 – Systems Analysis & Design
-          'sdlc': 'SDLC Phases',
-          'requirements': 'Requirements Analysis',
-          'architecture': 'Systems Architecture',
-          'controls': 'Testing & Quality Assurance',
-          'documentation': 'Technical Documentation',
-        
-          // Part 2 – Tabular Interpretation
-          'tabular': 'Tabular Interpretation',
-        
-          // Part 3 – Flowchart Logic
-          'flowcharts': 'Flowchart Logic',
-        
-          // Part 4 – Administrative Principles
-          'admin_principles': 'Administrative Principles',
-        
-          // Part 5 – Analyzing & Evaluating Info
-          'analysis_eval': 'Analyzing & Evaluating Information',
-        
-          // Part 5.5 – Evaluating Conclusions Based on Facts
-          'logical_reasoning': 'Logical Reasoning (ITS-3)',
-        
-          // Part 6 – Reports & Official Documents
-          'reports_docs': 'Reports & Official Documents',
-        
-          // Part 7 – Administrative Supervision
-          'supervision': 'Administrative Supervision',
-        
-          // Fallback
-          'passage': 'Passage Reading',
-          'general': 'General'
-        };
+        'sdlc': 'SDLC Phases',
+        'requirements': 'Requirements',
+        'architecture': 'Architecture', 
+        'controls': 'Testing & QA',
+        'documentation': 'Documentation',
+        'passage': 'Passage Reading',
+        'logical-reasoning': 'Logical Reasoning',
+        'general': 'General'
+      };
       
       const partNames = {
         'part1': 'Part 1',
@@ -1796,7 +1954,7 @@ function initializeQuiz() {
         'part3': 'Part 3',
         'part4': 'Part 4',
         'part5': 'Part 5',
-        'part5.5': 'Part 5.5',
+        'part5.5': 'Part 5.5 - ITS-3',
         'part6': 'Part 6',
         'part7': 'Part 7'
       };
