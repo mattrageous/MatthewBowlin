@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NYS Manager Information Technology Services 1 & 2 Exam Prep – 7-Part Study Guide – Matthew Bowlin</title>
-  <meta name="description" content="Official New York State themed study guide with comprehensive multiple choice questions for Systems Analysis and Design certification exam preparation." />
+  <title>NYS Information Technology Civil Service Study Guide – Matthew Bowlin</title>
+  <meta name="description" content="Complete exam preparation for Information Technology Specialist (ITS-3, ITS-4) and Manager Information Technology Services (MITS-1, MITS-2) positions with targeted practice questions and competency coverage." />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,6 +158,41 @@
       transform: translateY(-2px);
       box-shadow: var(--shadow-xl);
       border-color: rgba(255, 209, 0, 0.2);
+    }
+
+    /* Special styling for logical reasoning questions */
+    .facts-container {
+      background: rgba(255, 209, 0, 0.1);
+      border-left: 4px solid var(--accent);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .facts-title {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .conclusion-container {
+      background: rgba(0, 119, 200, 0.1);
+      border-left: 4px solid var(--secondary);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .conclusion-title {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
     }
 
     /* Table Styles */
@@ -766,8 +801,8 @@
     <!-- Header -->
     <header class="header">
       <div class="logo">🗽</div>
-      <h1 class="title">NYS Manager Information Technology Services 1 & 2 Exam Prep – 7-Part Study Guide</h1>
-      <p class="subtitle">Prepare for the NYS Manager Information Technology Services exam with a comprehensive set of multiple-choice questions built around official state standards and real exam competencies.</p>
+      <h1 class="title">NYS Information Technology Civil Service Study Guide</h1>
+      <p class="subtitle">Complete exam preparation for Information Technology Specialist (ITS-3, ITS-4) and Manager Information Technology Services (MITS-1, MITS-2) positions with targeted practice questions and competency coverage.</p>
     </header>
 
     <!-- Progress Section -->
@@ -803,16 +838,19 @@
     <div class="card filter-section">
       <div class="filter-controls">
         <button class="filter-btn active" data-category="all">All Questions</button>
-        <button class="filter-btn" data-category="part1">Part 1 – Systems Analysis & Design</button>
-        <button class="filter-btn" data-category="part2">Part 2 – Tabular Interpretation</button>
-        <button class="filter-btn" data-category="part3">Part 3 – Flowchart Logic</button>
-        <button class="filter-btn" data-category="part4">Part 4 – Administrative Principles</button>
-        <button class="filter-btn" data-category="part5">Part 5 – Analyzing & Evaluating Information</button>
-        <button class="filter-btn" data-category="part6">Part 6 – Reports & Official Documents</button>
-        <button class="filter-btn" data-category="part7">Part 7 – Administrative Supervision (MITS-2)</button>
+        <button class="filter-btn" data-category="part1">Part 1 – Systems Analysis & Design (ITS-3, ITS-4, MITS-1, MITS-2)</button>
+        <button class="filter-btn" data-category="part2">Part 2 – Tabular Interpretation (ITS-3, ITS-4, MITS-1, MITS-2)</button>
+        <button class="filter-btn" data-category="part3">Part 3 – Flowchart Logic (ITS-3, ITS-4, MITS-1, MITS-2)</button>
+        <button class="filter-btn" data-category="part4">Part 4 – Administrative Principles (ITS-4, MITS-1, MITS-2)</button>
+        <button class="filter-btn" data-category="part5">Part 5 – Analyzing & Evaluating Information (ITS-3*, ITS-4, MITS-1, MITS-2)</button>
+        <button class="filter-btn" data-category="part5.5">Part 5.5 – Evaluating Conclusions Based On Factual Information (ITS-3)</button>
+        <button class="filter-btn" data-category="part6">Part 6 – Reports & Official Documents (MITS-1, MITS-2)</button>
+        <button class="filter-btn" data-category="part7">Part 7 – Administrative Supervision (ITS-3, MITS-2)</button>
         <div class="filter-divider"></div>
         <button class="filter-btn" id="shuffleToggle" data-shuffle="true">🎲 Shuffle: ON</button>
       </div>
+      <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.75rem; text-align: center;">* ITS-3 lists this subject as "Evaluating Conclusions Based on Facts," which is fully covered by Part 5 and expanded upon in Part 5.5.
+      </p>
     </div>
 
     <!-- Quiz Container -->
@@ -895,6 +933,7 @@ const JSON_CONFIG = {
   part3: BASE_URL + "part3.json",
   part4: BASE_URL + "part4.json",
   part5: BASE_URL + "part5.json",
+  "part5.5": BASE_URL + "part8.json",
   part6: BASE_URL + "part6.json",
   part7: BASE_URL + "part7.json"
 };
@@ -1139,6 +1178,11 @@ async function loadQuestionsFromJSON() {
 /* 11. Parse JSON - Enhanced for Passages        */
 /* --------------------------------------------- */
 function parseJSONToQuestions(jsonData, partName) {
+  // Handle the new logical reasoning format for Part 5.5
+  if (jsonData.evaluating_conclusions_based_on_factual_information) {
+    return parseLogicalReasoningQuestions(jsonData.evaluating_conclusions_based_on_factual_information, partName);
+  }
+  
   // Handle passage-based format (like preparing_reports_and_official_documents)
   if (jsonData.preparing_reports_and_official_documents) {
     return parsePassageBasedQuestions(jsonData.preparing_reports_and_official_documents, partName);
@@ -1169,13 +1213,39 @@ function parseJSONToQuestions(jsonData, partName) {
       correct: correctIndex >= 0 ? correctIndex : 0,
       answer: q.answer,
       explanation: q.explanation || `The correct answer is "${q.answer}".`,
-      isPassageBased: false
+      isPassageBased: false,
+      isLogicalReasoning: false
     };
   });
 }
 
 /* --------------------------------------------- */
-/* 12. Parse Passage-Based Questions             */
+/* 12. Parse Logical Reasoning Questions (NEW)   */
+/* --------------------------------------------- */
+function parseLogicalReasoningQuestions(logicalReasoningData, partName) {
+  const questions = [];
+
+  logicalReasoningData.forEach((q, index) => {
+    const correctIndex = q.options?.indexOf(q.answer) ?? 0;
+    questions.push({
+      id: q.id || (8000 + index),
+      part: partName,
+      category: "logical-reasoning",
+      question: q.question,
+      options: q.options,
+      correct: correctIndex >= 0 ? correctIndex : 0,
+      answer: q.answer,
+      explanation: q.explanation || `The correct answer is "${q.answer}".`,
+      isPassageBased: false,
+      isLogicalReasoning: true
+    });
+  });
+
+  return questions;
+}
+
+/* --------------------------------------------- */
+/* 13. Parse Passage-Based Questions             */
 /* --------------------------------------------- */
 function parsePassageBasedQuestions(passageData, partName) {
   const questions = [];
@@ -1201,6 +1271,7 @@ function parsePassageBasedQuestions(passageData, partName) {
         answer: q.answer,
         explanation: q.explanation || `The correct answer is "${q.answer}".`,
         isPassageBased: true,
+        isLogicalReasoning: false,
         questionInPassage: q.qid
       });
     });
@@ -1210,7 +1281,7 @@ function parsePassageBasedQuestions(passageData, partName) {
 }
 
 /* --------------------------------------------- */
-/* 13. ENHANCED DISPLAY QUESTION FUNCTION        */
+/* 14. ENHANCED DISPLAY QUESTION FUNCTION        */
 /* --------------------------------------------- */
 function displayQuestion() {
   const question = filteredQuestions[currentQuestionIndex];
@@ -1231,11 +1302,39 @@ function displayQuestion() {
     shuffleIndicator.style.display = 'none';
   }
 
-  // Handle question text and table display
+  // Handle question text and logical reasoning formatting
   let questionContent = question.question;
   
-  if (question.table && Array.isArray(question.table)) {
-    // Remove table content from question text if it exists
+  // Special handling for logical reasoning questions
+  if (question.isLogicalReasoning) {
+    // Parse the question to extract FACTS and CONCLUSION sections
+    const factsMatch = questionContent.match(/FACTS:([\s\S]*?)CONCLUSION:/);
+    const conclusionMatch = questionContent.match(/CONCLUSION:([\s\S]*?)Based strictly on/);
+    const baseQuestionMatch = questionContent.match(/(Based strictly on[\s\S]*)$/);
+    
+    if (factsMatch && conclusionMatch && baseQuestionMatch) {
+      const facts = factsMatch[1].trim();
+      const conclusion = conclusionMatch[1].trim();
+      const baseQuestion = baseQuestionMatch[1].trim();
+      
+      questionText.innerHTML = `
+        <div class="facts-container">
+          <div class="facts-title">Facts:</div>
+          <div>${escapeHtml(facts).replace(/\n/g, '<br>')}</div>
+        </div>
+        <div class="conclusion-container">
+          <div class="conclusion-title">Conclusion:</div>
+          <div>${escapeHtml(conclusion)}</div>
+        </div>
+        <div style="margin-top: 1.5rem; font-weight: 600;">
+          ${escapeHtml(baseQuestion)}
+        </div>
+      `;
+    } else {
+      questionText.textContent = questionContent;
+    }
+  } else if (question.table && Array.isArray(question.table)) {
+    // Handle table-based questions
     const parts = questionContent.split('\n\n');
     let cleanQuestionText = parts[0];
     
@@ -1243,7 +1342,6 @@ function displayQuestion() {
       cleanQuestionText = questionContent.split(/\n\n[A-Z\s|]+\n/)[0];
     }
     
-    // Create the question HTML with table
     questionText.innerHTML = `
       <div style="margin-bottom: 1.5rem;">${escapeHtml(cleanQuestionText)}</div>
       ${renderTable(question.table)}
@@ -1253,7 +1351,7 @@ function displayQuestion() {
   }
 
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${filteredQuestions.length}`;
-  categoryTag.textContent = getCategoryName(question.category, question.part, question.isPassageBased);
+  categoryTag.textContent = getCategoryName(question.category, question.part, question.isPassageBased, question.isLogicalReasoning);
   currentQuestionSpan.textContent = currentQuestionIndex + 1;
 
   // Clear previous options
@@ -1344,7 +1442,7 @@ function toggleShuffle() {
 }
 
 /* --------------------------------------------- */
-/* 14. Restore HTML + Bind + Start Quiz          */
+/* 15. Restore HTML + Bind + Start Quiz          */
 /* --------------------------------------------- */
 function initializeQuizAfterLoad() {
   const container = document.getElementById("quizContainer");
@@ -1375,7 +1473,7 @@ function initializeQuizAfterLoad() {
 }
 
 /* --------------------------------------------- */
-/* 15. Loading UI                                */
+/* 16. Loading UI                                */
 /* --------------------------------------------- */
 function showLoadingState() {
   const qc = document.getElementById("quizContainer");
@@ -1397,26 +1495,94 @@ function showOfflineNotice() {
 }
 
 /* --------------------------------------------- */
-/* 16. Category Detection                         */
+/* 17. Category Detection                         */
 /* --------------------------------------------- */
 function determineCategory(text) {
   const map = {
-    sdlc: ["phase", "planning", "design", "maintenance", "agile", "waterfall"],
-    requirements: ["requirement", "stakeholder", "business rule"],
-    architecture: ["api", "tier", "client", "server", "cloud"],
-    controls: ["test", "qa", "unit", "integration", "regression"],
-    documentation: ["diagram", "dfd", "erd", "flowchart"]
+    // Part 1 – Systems Analysis & Design
+    sdlc: [
+      "phase", "planning", "analysis", "design", "implementation",
+      "maintenance", "agile", "waterfall", "scrum", "kanban",
+      "iteration", "lifecycle", "requirements gathering"
+    ],
+
+    requirements: [
+      "requirement", "stakeholder", "business rule",
+      "user story", "acceptance criteria", "elicitation", "feasibility"
+    ],
+
+    architecture: [
+      "api", "tier", "client", "server", "cloud", "integration",
+      "distributed", "architecture", "infrastructure", "middleware"
+    ],
+
+    controls: [
+      "test", "qa", "unit", "integration", "regression", "uat",
+      "quality", "controls", "validation", "verification"
+    ],
+
+    documentation: [
+      "diagram", "dfd", "erd", "flowchart", "documentation",
+      "specification", "model", "notation", "technical writing"
+    ],
+
+    // Part 2 – Tabular Interpretation
+    tabular: [
+      "table", "percent", "increase", "decrease", "ratio", "trend",
+      "comparison", "variance", "cases", "rows", "columns"
+    ],
+
+    // Part 3 – Flowchart Logic
+    flowcharts: [
+      "flowchart", "step", "decision", "process", "branch",
+      "condition", "loop", "symbol"
+    ],
+
+    // Part 4 – Administrative Principles
+    admin_principles: [
+      "policy", "procedure", "workflow", "governance", "authority",
+      "responsibility", "delegation", "priority", "escalation",
+      "administrative"
+    ],
+
+    // Part 5 – Analyzing & Evaluating Information
+    analysis_eval: [
+      "conclusion", "interpretation", "evidence", "trend",
+      "argument", "validity", "supports", "weakens", "dataset",
+      "memo", "report", "chart", "graph"
+    ],
+
+    // Part 5.5 – Evaluating Conclusions Based on Facts
+    logical_reasoning: [
+      "facts:", "conclusion:", "true", "false", "indeterminate",
+      "modus", "contrapositive", "inference", "logical"
+    ],
+
+    // Part 6 – Reports & Official Documents
+    reports_docs: [
+      "passage", "paragraph", "tone", "revision", "clarity",
+      "transition", "purpose", "formal", "concise", "main idea"
+    ],
+
+    // Part 7 – Administrative Supervision
+    supervision: [
+      "supervisor", "team", "performance", "discipline", "workload",
+      "coaching", "documentation", "conflict", "delegate",
+      "evaluate", "behavior"
+    ]
   };
 
   const lower = text?.toLowerCase() || "";
-  for (const [cat, words] of Object.entries(map))
-    if (words.some(w => lower.includes(w))) return cat;
+
+  for (const [category, words] of Object.entries(map)) {
+    if (words.some(w => lower.includes(w))) return category;
+  }
 
   return "general";
 }
 
 /* --------------------------------------------- */
-/* 17. Initialize Quiz                           */
+/* 18. Initialize Quiz                           */
 /* --------------------------------------------- */
 function initializeQuiz() {
   loadQuestionsFromJSON();
@@ -1581,20 +1747,48 @@ function initializeQuiz() {
       }
     }
 
-    function getCategoryName(category, part, isPassageBased = false) {
+    function getCategoryName(category, part, isPassageBased = false, isLogicalReasoning = false) {
+      if (isLogicalReasoning) {
+        return 'Logical Reasoning - ITS-3';
+      }
+      
       if (isPassageBased) {
         return `Passage Reading - ${part.toUpperCase()}`;
       }
       
       const categoryNames = {
-        'sdlc': 'SDLC Phases',
-        'requirements': 'Requirements',
-        'architecture': 'Architecture', 
-        'controls': 'Testing & QA',
-        'documentation': 'Documentation',
-        'passage': 'Passage Reading',
-        'general': 'General'
-      };
+          // Part 1 – Systems Analysis & Design
+          'sdlc': 'SDLC Phases',
+          'requirements': 'Requirements Analysis',
+          'architecture': 'Systems Architecture',
+          'controls': 'Testing & Quality Assurance',
+          'documentation': 'Technical Documentation',
+        
+          // Part 2 – Tabular Interpretation
+          'tabular': 'Tabular Interpretation',
+        
+          // Part 3 – Flowchart Logic
+          'flowcharts': 'Flowchart Logic',
+        
+          // Part 4 – Administrative Principles
+          'admin_principles': 'Administrative Principles',
+        
+          // Part 5 – Analyzing & Evaluating Info
+          'analysis_eval': 'Analyzing & Evaluating Information',
+        
+          // Part 5.5 – Evaluating Conclusions Based on Facts
+          'logical_reasoning': 'Logical Reasoning (ITS-3)',
+        
+          // Part 6 – Reports & Official Documents
+          'reports_docs': 'Reports & Official Documents',
+        
+          // Part 7 – Administrative Supervision
+          'supervision': 'Administrative Supervision',
+        
+          // Fallback
+          'passage': 'Passage Reading',
+          'general': 'General'
+        };
       
       const partNames = {
         'part1': 'Part 1',
@@ -1602,6 +1796,7 @@ function initializeQuiz() {
         'part3': 'Part 3',
         'part4': 'Part 4',
         'part5': 'Part 5',
+        'part5.5': 'Part 5.5',
         'part6': 'Part 6',
         'part7': 'Part 7'
       };
