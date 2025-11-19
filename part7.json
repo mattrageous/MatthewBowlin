@@ -1,7 +1,7 @@
 {
   "administrative_supervision": [
     {
-      "id": 1,
+      "id": 7000,
       "question": "A subordinate supervisor consistently submits weekly team performance summaries that omit required metrics. What is the MOST appropriate action?",
       "options": [
         "Rewrite their summaries yourself to ensure accuracy",
@@ -12,7 +12,7 @@
       "answer": "Clarify expectations and require immediate correction with future compliance monitoring"
     },
     {
-      "id": 2,
+      "id": 7001,
       "question": "You oversee three units. One supervisor underperforms, but their team meets deadlines because senior staff compensate for the supervisor's weaknesses. What is the BEST step?",
       "options": [
         "Rate the supervisor highly because the team performs well",
@@ -23,7 +23,7 @@
       "answer": "Evaluate the supervisor's performance separately from team output and implement a development plan"
     },
     {
-      "id": 3,
+      "id": 7002,
       "question": "A supervisor reports that workload in their unit has increased dramatically, but productivity data shows no change in outputs. What should you do FIRST?",
       "options": [
         "Deny the supervisor's concern because outputs are unchanged",
@@ -34,7 +34,7 @@
       "answer": "Request detailed task-level data to validate workload claims"
     },
     {
-      "id": 4,
+      "id": 7003,
       "question": "A supervisor regularly resolves conflicts informally but fails to document them. What is the BEST coaching message?",
       "options": [
         "Reinforce that documentation is required to ensure accountability and track patterns",
@@ -45,7 +45,7 @@
       "answer": "Reinforce that documentation is required to ensure accountability and track patterns"
     },
     {
-      "id": 5,
+      "id": 7004,
       "question": "Two units you supervise report conflicting interpretations of a recently issued policy. What should you do?",
       "options": [
         "Allow each unit to use its own interpretation",
@@ -56,7 +56,7 @@
       "answer": "Hold a joint clarification meeting and issue a unified written interpretation"
     },
     {
-      "id": 6,
+      "id": 7005,
       "question": "A subordinate supervisor resists a new performance tracking tool. What is the MOST effective supervisory action?",
       "options": [
         "Allow them to opt out if their team performs well",
@@ -67,7 +67,7 @@
       "answer": "Explain the purpose, require usage, and offer training to ensure competency"
     },
     {
-      "id": 7,
+      "id": 7006,
       "question": "A supervisor routinely delegates tasks in a way that overloads the same high-performing staff. What should you address?",
       "options": [
         "Encourage the supervisor to continue using their strongest staff",
@@ -78,7 +78,7 @@
       "answer": "Equitable workload distribution and long-term risk of burnout"
     },
     {
-      "id": 8,
+      "id": 7007,
       "question": "An employee bypasses their supervisor and emails you directly with minor complaints. What is the BEST supervisory response?",
       "options": [
         "Respond to the employee in detail every time",
@@ -89,7 +89,7 @@
       "answer": "Redirect the employee to their supervisor and notify the supervisor of the pattern"
     },
     {
-      "id": 9,
+      "id": 7008,
       "question": "A supervisor claims their team cannot meet deadlines due to unclear instructions. You review their communications and note they lack specific guidance. What should you do?",
       "options": [
         "Tell the team to work faster regardless",
@@ -100,7 +100,7 @@
       "answer": "Provide coaching on clear communication and require more structured directives"
     },
     {
-      "id": 10,
+      "id": 7009,
       "question": "Multiple supervisors report that the same employee is struggling across units. What is the MOST appropriate next step?",
       "options": [
         "Transfer the employee to another team to see if the issue resolves",
@@ -111,7 +111,7 @@
       "answer": "Initiate a coordinated performance improvement plan with all supervisors"
     },
     {
-      "id": 11,
+      "id": 7010,
       "question": "A supervisor's team consistently misses internal deadlines, but external deadlines are met. What should you evaluate?",
       "options": [
         "Whether the team should handle fewer tasks",
@@ -122,7 +122,7 @@
       "answer": "Whether internal deadlines are realistic and whether the supervisor is managing workflow effectively"
     },
     {
-      "id": 12,
+      "id": 7011,
       "question": "During a performance review, a supervisor cannot provide examples to support their ratings. What is the BEST supervisory response?",
       "options": [
         "Accept the ratings anyway to avoid conflict",
@@ -133,7 +133,7 @@
       "answer": "Require evidence-based documentation and offer coaching on monitoring staff performance"
     },
     {
-      "id": 13,
+      "id": 7012,
       "question": "Two supervisors disagree over priority use of shared resources. What is your BEST action?",
       "options": [
         "Let them resolve it informally without guidance",
@@ -144,7 +144,7 @@
       "answer": "Facilitate a structured discussion and establish clear resource-allocation rules"
     },
     {
-      "id": 14,
+      "id": 7013,
       "question": "You observe that one supervisor rarely gives staff corrective feedback. What should you do FIRST?",
       "options": [
         "Immediately discipline the supervisor",
@@ -155,7 +155,7 @@
       "answer": "Discuss the importance of timely feedback and assess their comfort level with providing correction"
     },
     {
-      "id": 15,
+      "id": 7014,
       "question": "You supervise supervisors who frequently escalate minor issues to you. What is the BEST improvement strategy?",
       "options": [
         "Handle all issues yourself to speed up operations",
@@ -166,7 +166,7 @@
       "answer": "Clarify decision-making authority and coach them to resolve routine matters independently"
     },
     {
-      "id": 16,
+      "id": 7015,
       "question": "A subordinate supervisor is well-liked but fails to enforce attendance rules consistently. What is the BEST supervisory response?",
       "options": [
         "Allow flexible enforcement because morale is high",
@@ -177,7 +177,7 @@
       "answer": "Reinforce the requirement to enforce policy uniformly, regardless of personal relationships"
     },
     {
-      "id": 17,
+      "id": 7016,
       "question": "A supervisor's team productivity declines after new responsibilities are added. What should be assessed FIRST?",
       "options": [
         "Whether staff dislike the new tasks",
@@ -188,7 +188,7 @@
       "answer": "Whether workload distribution and staffing levels remain appropriate"
     },
     {
-      "id": 18,
+      "id": 7017,
       "question": "Your supervisors must coordinate cross-unit work, but they manage scheduling differently. What should you implement?",
       "options": [
         "Allow every unit to work independently without coordination",
@@ -199,7 +199,7 @@
       "answer": "A unified scheduling process that standardizes coordination across units"
     },
     {
-      "id": 19,
+      "id": 7018,
       "question": "A supervisor gives overly generous ratings to avoid difficult conversations with staff. What is the BEST corrective step?",
       "options": [
         "Accept the ratings to maintain morale",
@@ -210,7 +210,7 @@
       "answer": "Provide coaching on honest evaluations and require justification for each rating"
     },
     {
-      "id": 20,
+      "id": 7019,
       "question": "A supervisor keeps missing deadlines for monthly reports. What should you do?",
       "options": [
         "Complete the reports for them each month",
@@ -221,7 +221,7 @@
       "answer": "Clarify expectations, identify obstacles, and set a monitored improvement deadline"
     },
     {
-      "id": 21,
+      "id": 7020,
       "question": "A supervisor is excellent operationally but struggles with interpersonal issues among staff. What is the BEST development action?",
       "options": [
         "Overlook the issue because operations are strong",
@@ -232,7 +232,7 @@
       "answer": "Assign targeted coaching and conflict-resolution training"
     },
     {
-      "id": 22,
+      "id": 7021,
       "question": "During a coaching discussion, a supervisor blames staff for all performance problems. What is the BEST supervisory guidance?",
       "options": [
         "Agree with them to avoid conflict",
@@ -243,7 +243,7 @@
       "answer": "Explain supervisory responsibility for setting expectations, monitoring work, and providing support"
     },
     {
-      "id": 23,
+      "id": 7022,
       "question": "A supervisor refuses to use newly required performance metrics because they prefer older methods. What is the proper response?",
       "options": [
         "Allow them to continue using outdated metrics",
@@ -254,7 +254,7 @@
       "answer": "Reinforce mandatory compliance and provide training to ensure successful adoption"
     },
     {
-      "id": 24,
+      "id": 7023,
       "question": "Productivity differs noticeably between two units with similar staffing and workload. What is the BEST supervisory action?",
       "options": [
         "Assume one team is simply better and ignore the issue",
@@ -265,7 +265,7 @@
       "answer": "Compare supervisory practices, workload planning, and monitoring processes between units"
     },
     {
-      "id": 25,
+      "id": 7024,
       "question": "A supervisor complains that disciplinary procedures take too long. What should you explain?",
       "options": [
         "Supervisors may skip steps if they feel strongly",
@@ -276,7 +276,7 @@
       "answer": "Discipline must follow due process to ensure fairness and defensibility"
     },
     {
-      "id": 26,
+      "id": 7025,
       "question": "A supervisor manages a remote team but fails to monitor staff activity effectively. What is the MOST appropriate step?",
       "options": [
         "Require staff to return to the office immediately",
@@ -287,7 +287,7 @@
       "answer": "Provide training on remote supervision tools and expectations"
     },
     {
-      "id": 27,
+      "id": 7026,
       "question": "A supervisor often escalates minor interpersonal conflicts to HR. What is the BEST supervisory correction?",
       "options": [
         "Encourage the escalations to reduce your workload",
@@ -298,7 +298,7 @@
       "answer": "Coach them on resolving low-level conflicts and clarify when HR involvement is appropriate"
     },
     {
-      "id": 28,
+      "id": 7027,
       "question": "An employee files a complaint that their supervisor plays favorites in scheduling. What is the FIRST step?",
       "options": [
         "Tell the employee to stop complaining",
@@ -309,7 +309,7 @@
       "answer": "Review scheduling records for patterns and meet with the supervisor to discuss findings"
     },
     {
-      "id": 29,
+      "id": 7028,
       "question": "You identify inconsistencies in how supervisors apply telework rules. What action should you take?",
       "options": [
         "Let each supervisor interpret the rules independently",
@@ -320,7 +320,7 @@
       "answer": "Issue standardized guidelines and verify implementation"
     },
     {
-      "id": 30,
+      "id": 7029,
       "question": "A supervisor reports that staff morale is low, but productivity remains high. What is the BEST supervisory response?",
       "options": [
         "Ignore morale concerns since outputs are high",
@@ -331,7 +331,7 @@
       "answer": "Discuss causes of low morale and determine whether workload, communication, or recognition practices need adjustment"
     },
     {
-      "id": 31,
+      "id": 7030,
       "question": "A supervisor's unit repeatedly submits error-prone work. Staff blame confusing instructions. What should you do FIRST?",
       "options": [
         "Punish staff for errors",
@@ -342,7 +342,7 @@
       "answer": "Review the supervisor's instructions and provide coaching on clarity and structure"
     },
     {
-      "id": 32,
+      "id": 7031,
       "question": "A new supervisor struggles with time management. What is the MOST effective intervention?",
       "options": [
         "Expect them to figure it out independently",
@@ -353,7 +353,7 @@
       "answer": "Provide mentoring and training in prioritization and workload planning"
     },
     {
-      "id": 33,
+      "id": 7032,
       "question": "A supervisor consistently sends incomplete draft reports for your review. What is the BEST supervisory step?",
       "options": [
         "Rewrite every report to save time",
@@ -364,7 +364,7 @@
       "answer": "Clarify quality expectations and require a checklist before submission"
     },
     {
-      "id": 34,
+      "id": 7033,
       "question": "Your supervisors interpret agency priorities differently. What should you do?",
       "options": [
         "Let each unit focus on their own interpretation",
@@ -375,7 +375,7 @@
       "answer": "Hold a supervisors-only meeting to clarify priorities and define consistent expectations"
     },
     {
-      "id": 35,
+      "id": 7034,
       "question": "A supervisor resists giving staff constructive feedback during evaluations. What is the BEST strategy?",
       "options": [
         "Allow fully positive evaluations to continue",
@@ -386,7 +386,7 @@
       "answer": "Provide coaching on effective evaluation conversations and emphasize the importance of balanced feedback"
     },
     {
-      "id": 36,
+      "id": 7035,
       "question": "A team consistently meets expectations, but the supervisor provides no recognition. What should you encourage?",
       "options": [
         "Ignore the lack of recognition",
@@ -397,7 +397,7 @@
       "answer": "Use regular acknowledgment to reinforce positive performance and sustain motivation"
     },
     {
-      "id": 37,
+      "id": 7036,
       "question": "A subordinate supervisor fails to follow up on assigned corrective actions. What should you do?",
       "options": [
         "Handle all corrective actions yourself",
@@ -408,7 +408,7 @@
       "answer": "Reinforce accountability and set check-ins to verify completion"
     },
     {
-      "id": 38,
+      "id": 7037,
       "question": "You learn two supervisors provide contradictory guidance to the same staff who work cross-unit. What is the appropriate next step?",
       "options": [
         "Tell staff to choose whichever supervisor they prefer",
@@ -419,7 +419,7 @@
       "answer": "Facilitate alignment between supervisors and issue unified written guidance"
     },
     {
-      "id": 39,
+      "id": 7038,
       "question": "A supervisor rates an employee highly despite documented attendance problems. What is the BEST supervisory correction?",
       "options": [
         "Let the positive rating stand",
@@ -430,7 +430,7 @@
       "answer": "Require ratings to reflect documented performance and provide coaching on fair evaluation"
     },
     {
-      "id": 40,
+      "id": 7039,
       "question": "A subordinate supervisor wants to reorganize team responsibilities. What should you require BEFORE approving?",
       "options": [
         "Immediate implementation without review",
@@ -441,7 +441,7 @@
       "answer": "A written justification detailing goals, workload impact, and expected benefits"
     },
     {
-      "id": 41,
+      "id": 7040,
       "question": "You notice one supervisor rarely meets with their team. What is the MOST effective action?",
       "options": [
         "Assume the team can self-manage",
@@ -452,7 +452,7 @@
       "answer": "Clarify expectations for regular supervision and require scheduled check-ins"
     },
     {
-      "id": 42,
+      "id": 7041,
       "question": "A supervisor expresses difficulty managing multiple projects. What should you do FIRST?",
       "options": [
         "Assign them even more projects",
@@ -463,7 +463,7 @@
       "answer": "Assess workload distribution and assist them with prioritization strategies"
     },
     {
-      "id": 43,
+      "id": 7042,
       "question": "A supervisor consistently misapplies policy due to misunderstandings. What is the appropriate supervisory step?",
       "options": [
         "Punish the supervisor immediately",
@@ -474,7 +474,7 @@
       "answer": "Provide targeted training and verify comprehension through practical examples"
     },
     {
-      "id": 44,
+      "id": 7043,
       "question": "Cross-unit deadlines are being missed because supervisors fail to coordinate task dependencies. What should you implement?",
       "options": [
         "Handle all scheduling yourself",
@@ -485,7 +485,7 @@
       "answer": "A structured planning process requiring supervisors to review interdependencies jointly"
     },
     {
-      "id": 45,
+      "id": 7044,
       "question": "A supervisor promotes a staff member informally by giving them leadership responsibilities without your approval. What is the BEST action?",
       "options": [
         "Accept the change permanently",
@@ -496,7 +496,7 @@
       "answer": "Clarify delegation boundaries and require formal approval for expanded duties"
     },
     {
-      "id": 46,
+      "id": 7045,
       "question": "A supervisor complains that staff frequently misunderstand instructions. What should you explore first?",
       "options": [
         "Whether the staff should be disciplined",
@@ -507,7 +507,7 @@
       "answer": "Whether the supervisor communicates expectations clearly and verifies understanding"
     },
     {
-      "id": 47,
+      "id": 7046,
       "question": "A supervisor successfully manages operations but fails to develop staff. What is the BEST supervisory guidance?",
       "options": [
         "Ignore staff development needs",
@@ -518,7 +518,7 @@
       "answer": "Set development-oriented goals and require regular coaching sessions"
     },
     {
-      "id": 48,
+      "id": 7047,
       "question": "A supervisor identifies a skills gap on their team. What is the MOST appropriate next step?",
       "options": [
         "Fire staff with the skills gap",
@@ -529,7 +529,7 @@
       "answer": "Develop a training plan aligned with performance needs and operational goals"
     },
     {
-      "id": 49,
+      "id": 7048,
       "question": "A supervisor repeatedly misses meetings with other units. What is the BEST supervisory response?",
       "options": [
         "Attend meetings on their behalf",
@@ -540,7 +540,7 @@
       "answer": "Address reliability expectations and require a corrective plan with accountability checks"
     },
     {
-      "id": 50,
+      "id": 7049,
       "question": "You must ensure consistent supervision standards across all subordinate supervisors. What is the BEST method?",
       "options": [
         "Let each supervisor define their own approach independently",
@@ -551,7 +551,7 @@
       "answer": "Establish formal supervisory expectations, provide shared tools, and conduct regular calibration meetings"
     },
     {
-      "id": 51,
+      "id": 7050,
       "question": "A supervisor states they cannot complete mandated quality reviews because they are 'too busy with day-to-day fires.' What is the MOST appropriate next step?",
       "options": [
         "Allow them to skip quality reviews temporarily",
@@ -562,7 +562,7 @@
       "answer": "Review their prioritization approach and require a schedule that incorporates mandatory reviews"
     },
     {
-      "id": 52,
+      "id": 7051,
       "question": "You discover that two subordinate supervisors apply different criteria when evaluating similar staff roles. What should you do FIRST?",
       "options": [
         "Allow each supervisor to continue independently",
@@ -573,7 +573,7 @@
       "answer": "Provide a calibration session to standardize evaluation expectations"
     },
     {
-      "id": 53,
+      "id": 7052,
       "question": "A supervisor often forwards staff complaints without attempting resolution. What action should you take?",
       "options": [
         "Handle all complaints yourself to save time",
@@ -584,7 +584,7 @@
       "answer": "Clarify their responsibility to handle first-level issues and provide coaching"
     },
     {
-      "id": 54,
+      "id": 7053,
       "question": "You observe a supervisor giving tasks verbally with no follow-up documentation. Errors increase. What is the BEST corrective action?",
       "options": [
         "Tell the team to pay closer attention",
@@ -595,7 +595,7 @@
       "answer": "Require written task assignments and periodic progress checks"
     },
     {
-      "id": 55,
+      "id": 7054,
       "question": "A supervisor reports that two employees refuse to collaborate. What should you require FIRST?",
       "options": [
         "Immediate disciplinary action for both employees",
@@ -606,7 +606,7 @@
       "answer": "A clear description of the issue, expectations set, and attempts at mediation"
     },
     {
-      "id": 56,
+      "id": 7055,
       "question": "A supervisor with a new unit claims their inherited workflow is inefficient. What should you do?",
       "options": [
         "Tell them to keep the old process regardless",
@@ -617,7 +617,7 @@
       "answer": "Review the workflow with them and determine whether procedural changes are warranted"
     },
     {
-      "id": 57,
+      "id": 7056,
       "question": "A supervisor's staff turnover is significantly higher than other units. What should you evaluate FIRST?",
       "options": [
         "Whether the unit should stop hiring",
@@ -628,7 +628,7 @@
       "answer": "Supervisory practices, workload expectations, and communication patterns"
     },
     {
-      "id": 58,
+      "id": 7057,
       "question": "A supervisor ignores a new reporting format, stating the old one is 'good enough.' What is your BEST response?",
       "options": [
         "Allow use of the old report",
@@ -639,7 +639,7 @@
       "answer": "Reinforce compliance requirements and ensure the supervisor understands the purpose of the new format"
     },
     {
-      "id": 59,
+      "id": 7058,
       "question": "A supervisor requests additional staff but provides no data. What should you require FIRST?",
       "options": [
         "Approval from another supervisor",
@@ -650,7 +650,7 @@
       "answer": "Workload metrics, task analysis, and supporting evidence"
     },
     {
-      "id": 60,
+      "id": 7059,
       "question": "A supervisor frequently resolves staff performance problems verbally but never follows up in writing. What is the risk you should emphasize?",
       "options": [
         "Staff will complain more often",
@@ -661,7 +661,7 @@
       "answer": "Lack of documentation weakens accountability and undermines future disciplinary processes"
     },
     {
-      "id": 61,
+      "id": 7060,
       "question": "A supervisor says two employees are 'slow' but provides no metrics. What is your BEST next step?",
       "options": [
         "Order discipline immediately",
@@ -672,7 +672,7 @@
       "answer": "Require objective performance data before taking further action"
     },
     {
-      "id": 62,
+      "id": 7061,
       "question": "Your supervisors apply onboarding differently in each unit. What should you implement?",
       "options": [
         "Let each supervisor onboard staff their own way",
@@ -683,7 +683,7 @@
       "answer": "A standardized onboarding checklist and supervisory training"
     },
     {
-      "id": 63,
+      "id": 7062,
       "question": "A subordinate supervisor asks for clarification on a new policy but seems embarrassed. What is the MOST appropriate response?",
       "options": [
         "Tell them to read the policy again more carefully",
@@ -694,7 +694,7 @@
       "answer": "Provide supportive clarification and encourage open questions to prevent misapplication"
     },
     {
-      "id": 64,
+      "id": 7063,
       "question": "A supervisor with excellent technical skills struggles with delegation. What is the BEST development approach?",
       "options": [
         "Tell them to do all tasks themselves",
@@ -705,7 +705,7 @@
       "answer": "Provide targeted coaching on delegation and have them practice with follow-up review"
     },
     {
-      "id": 65,
+      "id": 7064,
       "question": "A supervisor claims their team is overwhelmed but daily output logs show idle time. What should you do FIRST?",
       "options": [
         "Increase team size immediately",
@@ -716,7 +716,7 @@
       "answer": "Meet with the supervisor to review workload distribution and identify gaps"
     },
     {
-      "id": 66,
+      "id": 7065,
       "question": "A supervisor was recently promoted and now struggles with disciplining former peers. What is the BEST coaching strategy?",
       "options": [
         "Allow them to avoid discipline altogether",
@@ -727,7 +727,7 @@
       "answer": "Discuss role transition, reinforce expectations, and provide guidance on objective documentation"
     },
     {
-      "id": 67,
+      "id": 7066,
       "question": "A supervisor repeatedly provides vague performance goals. What is the BEST corrective action?",
       "options": [
         "Allow them to continue giving vague goals",
@@ -738,7 +738,7 @@
       "answer": "Train them to set measurable, time-bound expectations and review examples"
     },
     {
-      "id": 68,
+      "id": 7067,
       "question": "You notice a supervisor rarely reviews their team's work before approval. Errors increase. What should you do?",
       "options": [
         "Lower performance standards",
@@ -749,7 +749,7 @@
       "answer": "Reinforce supervisory responsibility for quality control and require a review process"
     },
     {
-      "id": 69,
+      "id": 7068,
       "question": "A supervisor requests disciplinary action for an employee without documentation. What is the correct response?",
       "options": [
         "Approve the discipline immediately",
@@ -760,7 +760,7 @@
       "answer": "Require documented performance issues before pursuing discipline"
     },
     {
-      "id": 70,
+      "id": 7069,
       "question": "A supervisor allows staff to set their own deadlines, resulting in uneven productivity. What is the BEST supervisory intervention?",
       "options": [
         "Allow staff to continue choosing their own timelines",
@@ -771,7 +771,7 @@
       "answer": "Require the supervisor to establish consistent deadlines and monitor adherence"
     },
     {
-      "id": 71,
+      "id": 7070,
       "question": "A supervisor continually escalates interpersonal conflicts but provides little context. What should you require FIRST?",
       "options": [
         "HR involvement in every conflict",
@@ -782,7 +782,7 @@
       "answer": "Detailed accounts of attempts at resolution and documented communication"
     },
     {
-      "id": 72,
+      "id": 7071,
       "question": "A supervisor's communication style is abrupt and causing tension. What is the BEST corrective approach?",
       "options": [
         "Tell staff to ignore the tone",
@@ -793,7 +793,7 @@
       "answer": "Offer feedback on tone, provide communication coaching, and set expectations for professionalism"
     },
     {
-      "id": 73,
+      "id": 7072,
       "question": "A supervisor misinterprets a staffing directive and reallocates half their team. What is your FIRST action?",
       "options": [
         "Discipline the staff who moved",
@@ -804,7 +804,7 @@
       "answer": "Clarify the directive, undo inappropriate changes, and coach the supervisor on verifying instructions"
     },
     {
-      "id": 74,
+      "id": 7073,
       "question": "You discover a supervisor is unaware of new reporting deadlines. What is the appropriate step?",
       "options": [
         "Dismiss them for negligence",
@@ -815,7 +815,7 @@
       "answer": "Review communication channels and ensure they receive and acknowledge all updates"
     },
     {
-      "id": 75,
+      "id": 7074,
       "question": "A supervisor manages well but shows little initiative in improving processes. What is the BEST development focus?",
       "options": [
         "Accept minimal initiative as long as operations run",
@@ -826,7 +826,7 @@
       "answer": "Encourage proactive problem-solving and assign a process-improvement project with support"
     },
     {
-      "id": 76,
+      "id": 7075,
       "question": "A supervisor's staff frequently complain about unclear priorities. What should you address?",
       "options": [
         "Tell staff to figure it out themselves",
@@ -837,7 +837,7 @@
       "answer": "Coach the supervisor on setting and communicating clear priorities with supporting rationale"
     },
     {
-      "id": 77,
+      "id": 7076,
       "question": "A supervisor shows strong technical expertise but fails to develop their second-in-command. What is your best action?",
       "options": [
         "Ignore development needs",
@@ -848,7 +848,7 @@
       "answer": "Set explicit development expectations and require delegation of leadership tasks"
     },
     {
-      "id": 78,
+      "id": 7077,
       "question": "A supervisor privately expresses burnout from managing multiple high-priority initiatives. What is the MOST appropriate response?",
       "options": [
         "Tell them burnout is part of the job",
@@ -859,7 +859,7 @@
       "answer": "Assess workload distribution and provide support or reprioritization where appropriate"
     },
     {
-      "id": 79,
+      "id": 7078,
       "question": "A supervisor is highly detail-oriented but micromanages staff. What is the BEST coaching approach?",
       "options": [
         "Encourage them to continue micromanaging for quality",
@@ -870,7 +870,7 @@
       "answer": "Discuss trust-based delegation, review boundaries, and set expectations for staff autonomy"
     },
     {
-      "id": 80,
+      "id": 7079,
       "question": "A supervisor frequently arrives late to meetings with other units. What should you do?",
       "options": [
         "Ignore it unless someone complains",
@@ -881,7 +881,7 @@
       "answer": "Address expectations for timeliness and require accountability measures"
     },
     {
-      "id": 81,
+      "id": 7080,
       "question": "A supervisor asks to discipline staff for missing informal verbal expectations. What is the correct response?",
       "options": [
         "Approve the discipline anyway",
@@ -892,7 +892,7 @@
       "answer": "Explain that expectations must be clearly documented and communicated before discipline"
     },
     {
-      "id": 82,
+      "id": 7081,
       "question": "A supervisor's unit experiences inconsistent productivity spikes and drops. What should you analyze FIRST?",
       "options": [
         "Whether staff dislikes the supervisor",
@@ -903,7 +903,7 @@
       "answer": "Workflow design, bottlenecks, and supervision practices"
     },
     {
-      "id": 83,
+      "id": 7082,
       "question": "Staff report that their supervisor rarely follows through on commitments. What is the BEST approach?",
       "options": [
         "Tell staff to accept it",
@@ -914,7 +914,7 @@
       "answer": "Discuss the importance of reliability and implement a follow-up structure with deadlines"
     },
     {
-      "id": 84,
+      "id": 7083,
       "question": "A supervisor misallocates resources due to misreading a priority memo. What is your FIRST action?",
       "options": [
         "Punish staff who followed instructions",
@@ -925,7 +925,7 @@
       "answer": "Clarify the memo, correct resource assignments, and verify their understanding"
     },
     {
-      "id": 85,
+      "id": 7084,
       "question": "A supervisor avoids conflict with a chronically underperforming employee. What is the BEST supervisory action?",
       "options": [
         "Allow the behavior to continue to avoid tension",
@@ -936,7 +936,7 @@
       "answer": "Coach the supervisor on conducting corrective feedback and develop a performance improvement plan"
     },
     {
-      "id": 86,
+      "id": 7085,
       "question": "Two supervisors are giving their teams different interpretations of workload priorities. What should you do?",
       "options": [
         "Let each supervisor decide independently",
@@ -947,7 +947,7 @@
       "answer": "Hold a joint session to unify expectations and issue written priority guidance"
     },
     {
-      "id": 87,
+      "id": 7086,
       "question": "A supervisor lacks confidence in assigning tasks to senior employees. What is the BEST development approach?",
       "options": [
         "Assign all senior staff to a different supervisor",
@@ -958,7 +958,7 @@
       "answer": "Provide coaching on assessing capability and delegating appropriately"
     },
     {
-      "id": 88,
+      "id": 7087,
       "question": "A supervisor claims their unit cannot meet deadlines without overtime, but historical data shows they frequently start tasks late. What is your FIRST step?",
       "options": [
         "Approve overtime immediately",
@@ -969,7 +969,7 @@
       "answer": "Review their planning practices and require earlier task initiation"
     },
     {
-      "id": 89,
+      "id": 7088,
       "question": "A supervisor wants to change team roles but has not consulted staff. What should you require?",
       "options": [
         "Immediate implementation",
@@ -980,7 +980,7 @@
       "answer": "A plan including rationale, impact analysis, and communication strategy"
     },
     {
-      "id": 90,
+      "id": 7089,
       "question": "A supervisor's staff complain that performance expectations changed mid-cycle without explanation. What should you address?",
       "options": [
         "Staff should accept any changes without explanation",
@@ -991,7 +991,7 @@
       "answer": "Expectations must be communicated clearly and consistently, and mid-cycle changes require justification"
     },
     {
-      "id": 91,
+      "id": 7090,
       "question": "A supervisor fails to follow mandatory documentation requirements. What is the correct action?",
       "options": [
         "Ignore documentation requirements",
@@ -1002,7 +1002,7 @@
       "answer": "Reinforce requirements, provide training, and verify compliance through monitoring"
     },
     {
-      "id": 92,
+      "id": 7091,
       "question": "You observe a supervisor assigning complex work without verifying staff readiness. Errors increase. What is the BEST action?",
       "options": [
         "Tell staff to stop making mistakes",
@@ -1013,7 +1013,7 @@
       "answer": "Coach the supervisor on assessing readiness and providing appropriate support"
     },
     {
-      "id": 93,
+      "id": 7092,
       "question": "A subordinate supervisor misses multiple deadlines due to poor planning. What should you implement?",
       "options": [
         "A reduction of responsibilities",
@@ -1024,7 +1024,7 @@
       "answer": "A structured planning and tracking process with accountability checkpoints"
     },
     {
-      "id": 94,
+      "id": 7093,
       "question": "A supervisor says they 'don't believe in written expectations.' What is your response?",
       "options": [
         "Allow them to continue setting verbal expectations",
@@ -1035,7 +1035,7 @@
       "answer": "Reinforce that clear, written expectations are mandatory for accountability and fairness"
     },
     {
-      "id": 95,
+      "id": 7094,
       "question": "A supervisor's unit excels operationally but struggles with strategic planning. What is the best development approach?",
       "options": [
         "Ignore the issue because operations are strong",
@@ -1046,7 +1046,7 @@
       "answer": "Provide training in long-term planning and require participation in strategic initiatives"
     },
     {
-      "id": 96,
+      "id": 7095,
       "question": "A supervisor gives inconsistent instructions to their staff. What is the MOST effective supervisory response?",
       "options": [
         "Allow inconsistency as long as tasks get done",
@@ -1057,7 +1057,7 @@
       "answer": "Coach them on structured communication and require standardized instructions"
     },
     {
-      "id": 97,
+      "id": 7096,
       "question": "A supervisor is reluctant to address staff behavior issues because they fear damaging relationships. What is your BEST coaching method?",
       "options": [
         "Handle all discipline yourself",
@@ -1068,7 +1068,7 @@
       "answer": "Explain the importance of timely, objective feedback and role-play conversations with them"
     },
     {
-      "id": 98,
+      "id": 7097,
       "question": "A supervisor asks to terminate an employee due to poor performance but provides no prior documentation. What is your response?",
       "options": [
         "Agree to terminate immediately",
@@ -1079,7 +1079,7 @@
       "answer": "Explain that termination requires clear documentation and progressive discipline steps"
     },
     {
-      "id": 99,
+      "id": 7098,
       "question": "A supervisor has difficulty managing staff across multiple locations. What is the BEST development approach?",
       "options": [
         "Require all staff to return onsite immediately",
@@ -1090,7 +1090,7 @@
       "answer": "Provide training in remote supervision practices and establish structured check-ins"
     },
     {
-      "id": 100,
+      "id": 7099,
       "question": "A supervisor overlooks chronic lateness because the employee is highly productive. What is the correct supervisory direction?",
       "options": [
         "Allow exceptions for productive staff",
