@@ -2160,7 +2160,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C"
+            "answer": "A"
         },
         {
             "id": 2050,
@@ -2209,7 +2209,7 @@
                 "C",
                 "D"
             ],
-            "answer": "A"
+            "answer": "D"
         },
         {
             "id": 2051,
@@ -2248,7 +2248,7 @@
                 "C",
                 "D"
             ],
-            "answer": "C"
+            "answer": "B"
         },
         {
             "id": 2052,
@@ -2331,7 +2331,7 @@
                 "Evening",
                 "Overnight"
             ],
-            "answer": "Evening"
+            "answer": "Overnight"
         },
         {
             "id": 2054,
@@ -2446,8 +2446,8 @@
         },
         {
             "id": 2057,
-            "question": "Which manager has the highest productivity per staff member based on the table?\n\nManager | Staff | Output\nSmith | 22 | 4,600\nLopez | 20 | 4,300\nChen | 24 | 5,200\nDawson | 18 | 3,900",
-            "table_pretty": "Manager | Staff | Output\nSmith | 22 | 4600\nLopez | 20 | 4300\nChen | 24 | 5200\nDawson | 18 | 3900",
+            "question": "Which manager has the highest productivity per staff member based on the table?\n\nManager | Staff | Output\nSmith | 22 | 4,600\nLopez | 20 | 4,300\nChen | 24 | 5,200\nDawson | 18 | 6,400",
+            "table_pretty": "Manager | Staff | Output\nSmith | 22 | 4600\nLopez | 20 | 4300\nChen | 24 | 5200\nDawson | 18 | 6400",
             "table": [
                 [
                     "Manager",
@@ -2472,7 +2472,7 @@
                 [
                     "Dawson",
                     18,
-                    3900
+                    6400
                 ]
             ],
             "options": [
@@ -3224,7 +3224,7 @@
                 "Product R",
                 "Product S"
             ],
-            "answer": "Product R"
+            "answer": "Product P"
         },
         {
             "id": 2075,
@@ -4790,7 +4790,7 @@
         {
             "id": 2113,
             "question": "Based on the road maintenance log, which county has the highest cost per mile paved?",
-            "table_pretty": "County | Miles Paved | Total Cost ($)\nEssex | 20 | 2,000,000\nAlbany | 15 | 1,800,000\nMonroe | 30 | 2,700,000\nNassau | 10 | 1,200,000",
+            "table_pretty": "County | Miles Paved | Total Cost ($)\nEssex | 20 | 2,000,000\nAlbany | 15 | 2,000,000\nMonroe | 30 | 2,700,000\nNassau | 10 | 1,200,000",
             "table": [
                 [
                     "County",
@@ -4805,7 +4805,7 @@
                 [
                     "Albany",
                     15,
-                    1800000
+                    2000000
                 ],
                 [
                     "Monroe",
@@ -4824,7 +4824,7 @@
                 "Monroe",
                 "Nassau"
             ],
-            "answer": "Nassau"
+            "answer": "Albany"
         },
         {
             "id": 2114,
@@ -5852,4 +5852,5 @@
         }
     ]
 }
+
 
