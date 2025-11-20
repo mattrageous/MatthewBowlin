@@ -921,6 +921,8 @@
       <button class="btn btn-secondary" id="randomBtn">🎲 Random Question</button>
       <button class="btn btn-secondary" id="resetBtn">🔄 Reset Progress</button>
       <a href="https://matthewbowlin.com" class="btn btn-secondary">🏠 Back to Homepage</a>
+            <!-- NEW EMAIL ISSUE BUTTON -->
+      <button class="btn btn-secondary" id="emailIssueBtn">📧 Report Issue</button>
     </div>
   </div>
 
@@ -1594,8 +1596,66 @@ function setupEventListeners() {
 
   // Reset
   document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+
+  // NEW EMAIL REPORT BUTTON
+  document.getElementById('emailIssueBtn').addEventListener('click', sendIssueEmail);
 }
 
+/* --------------------------------------------- */
+/* NEW FUNCTION: REPORT ISSUE EMAIL              */
+/* --------------------------------------------- */
+
+function sendIssueEmail() {
+  const q = filteredQuestions[currentQuestionIndex];
+
+  const userAnswerIndex = userAnswers[q.id];
+  const userAnswerText = userAnswerIndex !== undefined 
+    ? q.options[userAnswerIndex] 
+    : "No answer selected";
+
+  const correctAnswerText = q.answer;
+
+  let optionList = "";
+  q.options.forEach((opt, i) => {
+    optionList += `${String.fromCharCode(65 + i)}. ${opt}\n`;
+  });
+
+  const subject = encodeURIComponent(`Issue Report – Question ${q.id} (${q.part})`);
+
+  const body = encodeURIComponent(
+`Hello Matthew,
+
+I found an issue with the following question.
+
+------------------------------------
+Question ID: ${q.id}
+Part: ${q.part}
+Category: ${q.category}
+------------------------------------
+
+Full Question:
+${q.question}
+
+Options:
+${optionList}
+
+My Selected Answer:
+${userAnswerText}
+
+Correct Answer:
+${correctAnswerText}
+
+------------------------------------
+Additional Comments:
+[Please describe the problem here]
+------------------------------------
+
+Thank you!
+`);
+
+  window.location.href = `mailto:mattrageous@gmail.com?subject=${subject}&body=${body}`;
+}
+  
 function toggleShuffle() {
   shuffleEnabled = !shuffleEnabled;
   const shuffleBtn = document.getElementById('shuffleToggle');
