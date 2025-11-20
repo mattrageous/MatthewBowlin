@@ -1171,8 +1171,8 @@
         },
         {
             "id": 2027,
-            "question": "Which team shows the smallest variance across the three quarters?\n\nTeam | Q1 | Q2 | Q3\nA | 310 | 330 | 320\nB | 290 | 295 | 300\nC | 400 | 450 | 460\nD | 510 | 505 | 515",
-            "table_pretty": "Team | Q1 | Q2 | Q3\nA | 310 | 330 | 320\nB | 290 | 295 | 300\nC | 400 | 450 | 460\nD | 510 | 505 | 515",
+            "question": "Which team shows the smallest variance across the three quarters?\n\nTeam | Q1 | Q2 | Q3\nA | 310 | 330 | 320\nB | 290 | 295 | 300\nC | 400 | 450 | 460\nD | 510 | 500 | 530",
+            "table_pretty": "Team | Q1 | Q2 | Q3\nA | 310 | 330 | 320\nB | 290 | 295 | 300\nC | 400 | 450 | 460\nD | 510 | 500 | 530",
             "table": [
                 [
                     "Team",
@@ -1201,8 +1201,8 @@
                 [
                     "D",
                     510,
-                    505,
-                    515
+                    500,
+                    530
                 ]
             ],
             "options": [
@@ -4363,7 +4363,7 @@
         {
             "id": 2102,
             "question": "Which unit has the highest ratio of active cases to assigned caseworkers?",
-            "table_pretty": "Unit | Active Cases | Caseworkers\nChild Welfare | 450 | 15\nAdult Services | 320 | 8\nFamily Support | 500 | 20\nIntake | 200 | 5",
+            "table_pretty": "Unit | Active Cases | Caseworkers\nChild Welfare | 450 | 15\nAdult Services | 336 | 8\nFamily Support | 500 | 20\nIntake | 200 | 5",
             "table": [
                 [
                     "Unit",
@@ -4377,7 +4377,7 @@
                 ],
                 [
                     "Adult Services",
-                    320,
+                    336,
                     8
                 ],
                 [
@@ -4600,7 +4600,7 @@
         {
             "id": 2108,
             "question": "Which utility category experienced the largest absolute cost increase from 2023 to 2024?",
-            "table_pretty": "Utility | 2023 Cost | 2024 Cost\nElectricity | $150,000 | $165,000\nNatural Gas | $80,000 | $95,000\nWater/Sewer | $40,000 | $42,000\nInternet | $25,000 | $25,500",
+            "table_pretty": "Utility | 2023 Cost | 2024 Cost\nElectricity | $150,000 | $166,000\nNatural Gas | $80,000 | $95,000\nWater/Sewer | $40,000 | $42,000\nInternet | $25,000 | $25,500",
             "table": [
                 [
                     "Utility",
@@ -4610,7 +4610,7 @@
                 [
                     "Electricity",
                     150000,
-                    165000
+                    166000
                 ],
                 [
                     "Natural Gas",
@@ -5852,5 +5852,6 @@
         }
     ]
 }
+
 
 
