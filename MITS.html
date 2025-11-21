@@ -1267,20 +1267,11 @@ async function loadQuestionsFromJSON() {
     showLoadingState();
 
     const loadPromises = Object.entries(JSON_CONFIG).map(async ([partKey, url]) => {
-      try {
-        const response = await fetch(url);
-        if (response.ok) {
-          const data = await response.json();
-          return { part: partKey, data };
-        } else {
-          console.warn(`Failed to load ${partKey}: ${response.status}`);
-          return null;
-        }
-      } catch (e) {
-        console.warn(`Error loading ${partKey}:`, e);
-        return null;
-      }
-    });
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Failed to load ${partKey}`);
+  const data = await response.json();
+  return { part: partKey, data };
+});
 
     const results = await Promise.all(loadPromises);
     questionsDB = [];
