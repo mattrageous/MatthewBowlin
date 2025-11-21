@@ -921,7 +921,7 @@
       <button class="btn btn-secondary" id="randomBtn">🎲 Random Question</button>
       <button class="btn btn-secondary" id="resetBtn">🔄 Reset Progress</button>
       <a href="https://matthewbowlin.com" class="btn btn-secondary">🏠 Back to Homepage</a>
-            <!-- NEW EMAIL ISSUE BUTTON -->
+      <!-- NEW EMAIL ISSUE BUTTON -->
       <button class="btn btn-secondary" id="emailIssueBtn">📧 Report Issue</button>
     </div>
   </div>
@@ -1715,6 +1715,38 @@ function hideLoadingState() {
 
 function showOfflineNotice() {
   console.log("Using fallback questions - check network connection");
+  
+  // Show a prominent notification to the user
+  const quizContainer = document.getElementById("quizContainer");
+const noticeHTML = `
+  <div class="status-message status-info" style="display: block; margin-bottom: 2rem;">
+    <strong style="font-size: 1.05rem;">⚠️ Limited Access Detected</strong>
+    <p style="margin-top: 0.5rem;">
+      Some question files could not be loaded due to network restrictions on your current connection.
+      A reduced fallback set is being displayed.
+    </p>
+
+    <p style="margin-top: 1rem; font-weight: 600;">How to restore full access:</p>
+    <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.7;">
+      <li>
+        Contact your agency’s <strong>Security or IT Support team</strong> and request that the following GitHub domains be unblocked:
+        <ul style="margin-left: 1rem; margin-top: 0.4rem;">
+          <li>
+            <code style="background: rgba(0,0,0,0.28); padding: 0.125rem 0.375rem; border-radius: 0.25rem;">github.io</code>
+          </li>
+          <li>
+            <code style="background: rgba(0,0,0,0.28); padding: 0.125rem 0.375rem; border-radius: 0.25rem;">github.com</code>
+          </li>
+        </ul>
+      </li>
+      <li style="margin-top: 0.6rem;">
+        Or access the site from a personal device on a non-work network.
+      </li>
+    </ul>
+  </div>
+`;
+    
+quizContainer.insertAdjacentHTML('afterbegin', noticeHTML);
 }
 
 /* --------------------------------------------- */
