@@ -964,6 +964,7 @@ let quizCompleted = false;
 let isLoadingQuestions = false;
 let shuffleEnabled = true; // Global shuffle setting
 let currentNavigationLevel = 1; // 1 = exam selection, 2 = parts selection
+let shouldShowOfflineNotice = false; // Flag for showing offline notice
 
 /* --------------------------------------------- */
 /* 4. Exam Parts Configuration                   */
@@ -1274,12 +1275,10 @@ async function loadQuestionsFromJSON() {
           return { part: partKey, data };
         } else {
           console.warn(`Failed to load ${partKey}: ${response.status}`);
-          showOfflineNotice();
           return null;
         }
       } catch (e) {
         console.warn(`Error loading ${partKey}:`, e);
-        showOfflineNotice();
         return null;
       }
     });
@@ -1695,32 +1694,9 @@ function initializeQuizAfterLoad() {
   updateFilteredQuestions();
   displayQuestion();
   updateProgress();
-}
-
-/* --------------------------------------------- */
-/* 18. Loading UI                                */
-/* --------------------------------------------- */
-function showLoadingState() {
-  const qc = document.getElementById("quizContainer");
-  qc.innerHTML = `
-    <div class="loading-container">
-      <div class="loading-spinner"></div>
-      <h3 class="loading-title">Loading Questions...</h3>
-      <p class="loading-subtitle">Fetching questions from JSON files</p>
-    </div>
-  `;
-}
-
-function hideLoadingState() {
-  /* replaced automatically */
-}
-
-function showOfflineNotice() {
-  console.log("Using fallback questions - check network connection");
   
-  // Store the notice to be displayed after quiz initialization
-  setTimeout(() => {
-    const quizContainer = document.getElementById("quizContainer");
+  // NOW show offline notice if needed
+  if (shouldShowOfflineNotice) {
     const noticeHTML = `
       <div class="status-message status-info" id="networkNotice" style="display: block; margin-bottom: 2rem;">
         <strong style="font-size: 1.05rem;">⚠️ Limited Access Detected</strong>
@@ -1748,16 +1724,31 @@ function showOfflineNotice() {
         </ul>
       </div>
     `;
-    
-    // Remove existing notice if present
-    const existingNotice = document.getElementById('networkNotice');
-    if (existingNotice) {
-      existingNotice.remove();
-    }
-    
-    // Insert at the beginning of quiz container
-    quizContainer.insertAdjacentHTML('afterbegin', noticeHTML);
-  }, 100);
+    container.insertAdjacentHTML('afterbegin', noticeHTML);
+  }
+}
+
+/* --------------------------------------------- */
+/* 18. Loading UI                                */
+/* --------------------------------------------- */
+function showLoadingState() {
+  const qc = document.getElementById("quizContainer");
+  qc.innerHTML = `
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+      <h3 class="loading-title">Loading Questions...</h3>
+      <p class="loading-subtitle">Fetching questions from JSON files</p>
+    </div>
+  `;
+}
+
+function hideLoadingState() {
+  /* replaced automatically */
+}
+
+function showOfflineNotice() {
+  console.log("Using fallback questions - check network connection");
+  shouldShowOfflineNotice = true; // Just set flag
 }
 
 /* --------------------------------------------- */
