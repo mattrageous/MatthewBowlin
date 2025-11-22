@@ -2061,7 +2061,7 @@
           ],
           "answer": "8",
           "correction": "Iter 1: A=2, B=11. Iter 2: A=4, B=10. Iter 3: A=6, B=9. Iter 4: A=8, B=8. Condition A < B (8 < 8) is False. Loop ends. Final A = 8."
-        }
+        },
         {
             "id": 3180,
             "question": "Corrected Sqrt Loop Question: X = 256. While X > 2: X = SquareRoot(X). Values of X?",
@@ -2121,3 +2121,4 @@
         }
     ]
 }
+
