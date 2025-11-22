@@ -1099,6 +1099,1117 @@
         "PERT chart"
       ],
       "answer": "Swimlane diagram"
+    },
+    {
+      "id": 1125,
+      "question": "In a Data Flow Diagram (DFD), a data store is connected directly to an external entity. This violates which DFD rule?",
+      "options": [
+        "The Balancing Rule",
+        "The Miracle Rule",
+        "The Data Store Connectivity Rule",
+        "The Conservation of Data Rule"
+      ],
+      "answer": "The Data Store Connectivity Rule"
+    },
+    {
+      "id": 1126,
+      "question": "A table is in 2nd Normal Form (2NF). To move to 3rd Normal Form (3NF), you must eliminate:",
+      "options": [
+        "Repeating groups",
+        "Partial dependencies",
+        "Transitive dependencies",
+        "Multi-valued attributes"
+      ],
+      "answer": "Transitive dependencies"
+    },
+    {
+      "id": 1127,
+      "question": "You are calculating the Critical Path for a project starting on Day 1. Task A (4 days) and Task B (3 days) run concurrently from the start. Task C depends on both A and B completing. What is the Earliest Start (ES) day for Task C?",
+      "options": [
+        "Day 3",
+        "Day 4",
+        "Day 5",
+        "Day 8"
+      ],
+      "answer": "Day 5"
+    },
+    {
+      "id": 1128,
+      "question": "When designing modules, the ideal architectural goal is to achieve:",
+      "options": [
+        "Low Cohesion and High Coupling",
+        "High Cohesion and High Coupling",
+        "Low Cohesion and Low Coupling",
+        "High Cohesion and Low Coupling"
+      ],
+      "answer": "High Cohesion and Low Coupling"
+    },
+    {
+      "id": 1129,
+      "question": "A system encounters an error where a user can successfully enter '2/30/2023' into a date field. Which specific validation check failed?",
+      "options": [
+        "Format check",
+        "Range check",
+        "Consistency check",
+        "Existence check"
+      ],
+      "answer": "Consistency check"
+    },
+    {
+      "id": 1130,
+      "question": "During the design phase, you decide to switch from a 'Throwaway Prototype' to an 'Evolutionary Prototype'. What is the most significant implication for the project timeline?",
+      "options": [
+        "The Analysis phase will be shortened significantly",
+        "The Design phase will require rigorous coding standards immediately",
+        "User testing will be delayed until the final release",
+        "Documentation becomes unnecessary"
+      ],
+      "answer": "The Design phase will require rigorous coding standards immediately"
+    },
+    {
+      "id": 1131,
+      "question": "If a project has a Net Present Value (NPV) of zero, this indicates that:",
+      "options": [
+        "The project will lose money",
+        "The project's return exactly equals the discount rate (cost of capital)",
+        "The project has no tangible benefits",
+        "The payback period is zero years"
+      ],
+      "answer": "The project's return exactly equals the discount rate (cost of capital)"
+    },
+    {
+      "id": 1132,
+      "question": "In a Decision Table, if two rules result in the exact same action(s) but have different condition combinations, they can often be simplified. This process is known as:",
+      "options": [
+        "Normalization",
+        "Rule compression / collapsing",
+        "Condition stubbing",
+        "Action optimization"
+      ],
+      "answer": "Rule compression / collapsing"
+    },
+    {
+      "id": 1133,
+      "question": "A 'Black Hole' error in a DFD process occurs when:",
+      "options": [
+        "A process has outputs but no inputs",
+        "A process has inputs but generates no outputs",
+        "A process sends data directly to itself",
+        "Data enters a data store but is never retrieved"
+      ],
+      "answer": "A process has inputs but generates no outputs"
+    },
+    {
+      "id": 1134,
+      "question": "Which disaster recovery metric defines the maximum acceptable amount of data loss measured in time (e.g., 'we can lose up to 1 hour of data')?",
+      "options": [
+        "Recovery Time Objective (RTO)",
+        "Recovery Point Objective (RPO)",
+        "Mean Time Between Failures (MTBF)",
+        "Maximum Tolerable Downtime (MTD)"
+      ],
+      "answer": "Recovery Point Objective (RPO)"
+    },
+    {
+      "id": 1135,
+      "question": "In Object-Oriented Analysis, if Class A 'is a' kind of Class B, this describes:",
+      "options": [
+        "Aggregation",
+        "Composition",
+        "Generalization/Inheritance",
+        "Association"
+      ],
+      "answer": "Generalization/Inheritance"
+    },
+    {
+      "id": 1136,
+      "question": "You are reviewing a Gantt chart. Task X is on the Critical Path. If Task X is delayed by 2 days, what is the impact on the project finish date?",
+      "options": [
+        "No impact if there is sufficient slack",
+        "The project finish date is delayed by 2 days",
+        "The project finish date is delayed by 1 day",
+        "It depends on the successor tasks' start dates"
+      ],
+      "answer": "The project finish date is delayed by 2 days"
+    },
+    {
+      "id": 1137,
+      "question": "A 'Grandfather-Father-Son' rotation strategy is primarily used for:",
+      "options": [
+        "Managing software version control",
+        "Rotating project managers",
+        "Backup media retention",
+        "Database normalization"
+      ],
+      "answer": "Backup media retention"
+    },
+    {
+      "id": 1138,
+      "question": "Which cost-benefit analysis technique does NOT take the 'time value of money' into account?",
+      "options": [
+        "Net Present Value (NPV)",
+        "Internal Rate of Return (IRR)",
+        "Payback Period",
+        "Discounted Cash Flow"
+      ],
+      "answer": "Payback Period"
+    },
+    {
+      "id": 1139,
+      "question": "When moving from a Logical DFD to a Physical DFD, which of the following is added?",
+      "options": [
+        "Business rules",
+        "Data flows between external entities",
+        "Implementation details (e.g., specific hardware, file formats, people)",
+        "User requirements"
+      ],
+      "answer": "Implementation details (e.g., specific hardware, file formats, people)"
+    },
+    {
+      "id": 1140,
+      "question": "In the context of Interface Design, the 'Three-Click Rule' suggests that:",
+      "options": [
+        "A user should be able to access any information in the system within three mouse clicks",
+        "A system should reboot within three clicks",
+        "No form should have more than three buttons",
+        "Menus should not be more than three layers deep"
+      ],
+      "answer": "A user should be able to access any information in the system within three mouse clicks"
+    },
+    {
+      "id": 1141,
+      "question": "A developer performs 'Boundary Value Analysis' on a field that accepts integers from 1 to 100. Which set of values is the most appropriate test set?",
+      "options": [
+        "0, 1, 50, 99, 100, 101",
+        "1, 10, 20, 30, 100",
+        "-1, 0, 1, 100, 101, 102",
+        "0, 1, 100, 101"
+      ],
+      "answer": "0, 1, 100, 101"
+    },
+    {
+      "id": 1142,
+      "question": "The primary difference between a 'Structure Chart' and a 'Flowchart' is:",
+      "options": [
+        "A Structure Chart shows logic flow; a Flowchart shows module hierarchy",
+        "A Structure Chart shows module hierarchy and data passing; a Flowchart shows logic/process sequence",
+        "They are identical diagrams used in different phases",
+        "Structure Charts are for users; Flowcharts are for programmers"
+      ],
+      "answer": "A Structure Chart shows module hierarchy and data passing; a Flowchart shows logic/process sequence"
+    },
+    {
+      "id": 1143,
+      "question": "In a distributed database environment, 'Location Transparency' means:",
+      "options": [
+        "Users must know the physical location of the data to query it",
+        "The system automatically moves data to the user's local drive",
+        "Users can query data without knowing which site or server stores the data",
+        "All data is replicated to every server location"
+      ],
+      "answer": "Users can query data without knowing which site or server stores the data"
+    },
+    {
+      "id": 1144,
+      "question": "Which of the following scenarios best justifies the use of Agile/Scrum over Waterfall?",
+      "options": [
+        "The project requirements are strictly defined by law and will not change",
+        "The project involves a life-critical medical device requiring extensive documentation before coding",
+        "The user requirements are vague and expected to evolve significantly during development",
+        "The development team is distributed across five different time zones with limited communication"
+      ],
+      "answer": "The user requirements are vague and expected to evolve significantly during development"
+    },
+    {
+      "id": 1145,
+      "question": "A 'race condition' in a multi-user system occurs when:",
+      "options": [
+        "The network speed is too slow for the server",
+        "Two processes access the same resource simultaneously and the outcome depends on the order of execution",
+        "The CPU overheats due to excessive loops",
+        "Data is written to the hard drive faster than it can be read"
+      ],
+      "answer": "Two processes access the same resource simultaneously and the outcome depends on the order of execution"
+    },
+    {
+      "id": 1146,
+      "question": "In Public Key Infrastructure (PKI), if User A wants to send a confidential message to User B, User A encrypts the message using:",
+      "options": [
+        "User A's private key",
+        "User A's public key",
+        "User B's public key",
+        "User B's private key"
+      ],
+      "answer": "User B's public key"
+    },
+    {
+      "id": 1147,
+      "question": "What is the specific risk of 'Scope Creep' that distinguishes it from formal Change Management?",
+      "options": [
+        "Scope creep involves changes that are approved by the steering committee",
+        "Scope creep is the gradual, uncontrolled expansion of project boundaries without adjustments to time or budget",
+        "Scope creep only occurs in Agile projects",
+        "Scope creep refers to reducing the project scope to meet a deadline"
+      ],
+      "answer": "Scope creep is the gradual, uncontrolled expansion of project boundaries without adjustments to time or budget"
+    },
+    {
+      "id": 1148,
+      "question": "Which diagramming technique is MOST useful for modeling the state changes of a specific object (e.g., an Order going from 'Pending' to 'Shipped' to 'Delivered')?",
+      "options": [
+        "Sequence Diagram",
+        "State Transition Diagram (State Machine)",
+        "Use Case Diagram",
+        "Class Diagram"
+      ],
+      "answer": "State Transition Diagram (State Machine)"
+    },
+    {
+      "id": 1149,
+      "question": "When performing 'Reverse Engineering' on a legacy system, the primary goal is to:",
+      "options": [
+        "Compile the code into machine language",
+        "Analyze the system to identify its components and their relationships to create a higher-level abstraction",
+        "Delete the old data and replace it with new data",
+        "Encrypt the source code to prevent theft"
+      ],
+      "answer": "Analyze the system to identify its components and their relationships to create a higher-level abstraction"
+    },
+    {
+      "id": 1150,
+      "question": "A system design module has 'Coincidental Cohesion'. This indicates that:",
+      "options": [
+        "The module performs a single, well-defined task",
+        "The module's tasks are related only because they are executed at the same time",
+        "The module's tasks are grouped arbitrarily with no meaningful relationship",
+        "The module's tasks utilize the same data set"
+      ],
+      "answer": "The module's tasks are grouped arbitrarily with no meaningful relationship"
+    },
+    {
+      "id": 1151,
+      "question": "In the context of database concurrency, 'Dirty Read' occurs when:",
+      "options": [
+        "A transaction reads data that has been written by another transaction but not yet committed",
+        "A transaction reads the same row twice and gets different data each time",
+        "A transaction overwrites the changes made by another transaction",
+        "A database backup is performed during a write operation"
+      ],
+      "answer": "A transaction reads data that has been written by another transaction but not yet committed"
+    },
+    {
+      "id": 1152,
+      "question": "You are selecting a testing strategy. 'Bottom-Up Integration' is generally preferred when:",
+      "options": [
+        "The core architectural flaws need to be found early",
+        "The low-level utility modules are complex and risky",
+        "A working prototype is needed quickly for user demonstration",
+        "Top-level control logic is the critical path"
+      ],
+      "answer": "The low-level utility modules are complex and risky"
+    },
+    {
+      "id": 1153,
+      "question": "Which of the following is a primary disadvantage of the 'Spiral Model' of software development?",
+      "options": [
+        "It does not support risk analysis",
+        "It is ill-suited for large, complex projects",
+        "It can be expensive and relies heavily on risk assessment expertise",
+        "It requires all requirements to be known upfront"
+      ],
+      "answer": "It can be expensive and relies heavily on risk assessment expertise"
+    },
+    {
+      "id": 1154,
+      "question": "In a PERT chart, the 'Slack' or 'Float' of a task is calculated as:",
+      "options": [
+        "Latest Start Time minus Earliest Start Time (LS - ES)",
+        "Earliest Finish Time plus Duration",
+        "Critical Path Duration minus Task Duration",
+        "Task Duration divided by Resource Count"
+      ],
+      "answer": "Latest Start Time minus Earliest Start Time (LS - ES)"
+    },
+    {
+      "id": 1155,
+      "question": "A requirement states: 'The system shall process 10,000 transactions per hour with a CPU utilization of less than 60%.' This is a classic example of:",
+      "options": [
+        "A functional requirement",
+        "A usability constraint",
+        "A non-functional efficiency requirement",
+        "A business rule"
+      ],
+      "answer": "A non-functional efficiency requirement"
+    },
+    {
+      "id": 1156,
+      "question": "When converting a Many-to-Many relationship from a Logical ERD to a Physical Database Schema, you must:",
+      "options": [
+        "Add a foreign key to both existing tables",
+        "Merge the two tables into one large table",
+        "Create an associative (junction) table containing foreign keys from both parent tables",
+        "Delete the relationship"
+      ],
+      "answer": "Create an associative (junction) table containing foreign keys from both parent tables"
+    },
+    {
+      "id": 1157,
+      "question": "The 'Nominal Group Technique' is used during requirements gathering to:",
+      "options": [
+        "Observe users in their natural environment",
+        "Prioritize ideas and build consensus among stakeholders",
+        "Create a visual prototype of the interface",
+        "Automate the generation of code"
+      ],
+      "answer": "Prioritize ideas and build consensus among stakeholders"
+    },
+    {
+      "id": 1158,
+      "question": "In UML, a 'Composition' relationship (filled diamond) differs from an 'Aggregation' relationship (hollow diamond) in that:",
+      "options": [
+        "In Composition, the child object cannot exist independently of the parent",
+        "In Composition, the child object is shared by multiple parents",
+        "Composition is used for software; Aggregation is used for hardware",
+        "Composition represents inheritance; Aggregation represents interface implementation"
+      ],
+      "answer": "In Composition, the child object cannot exist independently of the parent"
+    },
+    {
+      "id": 1159,
+      "question": "Which security control is classified as 'Detective'?",
+      "options": [
+        "Firewall packet filtering",
+        "Biometric door lock",
+        "Intrusion Detection System (IDS) logs",
+        "Data encryption"
+      ],
+      "answer": "Intrusion Detection System (IDS) logs"
+    },
+    {
+      "id": 1160,
+      "question": "A 'Function Point Analysis' (FPA) is primarily used to:",
+      "options": [
+        "Debug code logic",
+        "Estimate the size and complexity of software based on user interactions and data files",
+        "Measure the CPU speed required",
+        "Determine the number of lines of code (LOC) directly"
+      ],
+      "answer": "Estimate the size and complexity of software based on user interactions and data files"
+    },
+    {
+      "id": 1161,
+      "question": "In a distributed system, 'Idempotence' refers to the property where:",
+      "options": [
+        "A process runs automatically without user intervention",
+        "Applying the same operation multiple times has the same effect as applying it once",
+        "The system can recover from a power failure instantly",
+        "Data is encrypted both at rest and in transit"
+      ],
+      "answer": "Applying the same operation multiple times has the same effect as applying it once"
+    },
+    {
+      "id": 1162,
+      "question": "The primary risk of 'Data Coupling' between modules is considered low because:",
+      "options": [
+        "Modules share the entire global data structure",
+        "Modules share control flags that dictate logic",
+        "Modules pass only the specific data elements required for the task",
+        "Modules are completely disconnected"
+      ],
+      "answer": "Modules pass only the specific data elements required for the task"
+    },
+    {
+      "id": 1163,
+      "question": "Which chart is best suited for resource leveling (optimizing the allocation of staff/equipment over time)?",
+      "options": [
+        "Data Flow Diagram",
+        "Gantt Chart",
+        "State Transition Diagram",
+        "Entity Relationship Diagram"
+      ],
+      "answer": "Gantt Chart"
+    },
+    {
+      "id": 1164,
+      "question": "A 'Hot Site' in disaster recovery planning is defined as:",
+      "options": [
+        "A facility with power and cooling but no equipment",
+        "A fully equipped facility with real-time data replication ready for immediate switchover",
+        "A facility with equipment that must be loaded with data from backups (taking days)",
+        "A mobile trailer with basic internet access"
+      ],
+      "answer": "A fully equipped facility with real-time data replication ready for immediate switchover"
+    },
+    {
+      "id": 1165,
+      "question": "In Structured English (Pseudocode), which structure is NOT typically used?",
+      "options": [
+        "Sequence",
+        "Selection (IF-THEN-ELSE)",
+        "Iteration (DO-WHILE)",
+        "GOTO (Unconditional Jump)"
+      ],
+      "answer": "GOTO (Unconditional Jump)"
+    },
+    {
+      "id": 1166,
+      "question": "If a system uses 'Optimistic Locking', it assumes that:",
+      "options": [
+        "Conflicts are rare; it checks for validity only at the time of commit",
+        "Conflicts are frequent; it locks the record as soon as it is read",
+        "The database will never fail",
+        "All users have read-only access"
+      ],
+      "answer": "Conflicts are rare; it checks for validity only at the time of commit"
+    },
+    {
+      "id": 1167,
+      "question": "Which phase of the SDLC typically consumes the largest percentage of the total lifecycle cost of a system?",
+      "options": [
+        "Planning",
+        "Design",
+        "Implementation (Coding)",
+        "Maintenance"
+      ],
+      "answer": "Maintenance"
+    },
+    {
+      "id": 1168,
+      "question": "A 'Context Diagram' (Level 0 DFD) must NOT contain:",
+      "options": [
+        "External Entities",
+        "The System Process (Single Bubble)",
+        "Data Flows",
+        "Data Stores"
+      ],
+      "answer": "Data Stores"
+    },
+    {
+      "id": 1169,
+      "question": "When conducting a 'Walkthrough' or 'Peer Review', the primary role of the presenter is to:",
+      "options": [
+        "Defend their code against criticism",
+        "Fix the errors as they are found during the meeting",
+        "Explain the logic and flow of the work product to the reviewers",
+        "Record the minutes of the meeting"
+      ],
+      "answer": "Explain the logic and flow of the work product to the reviewers"
+    },
+    {
+      "id": 1170,
+      "question": "The 'V-Model' of development explicitly links each development phase with:",
+      "options": [
+        "A specific budget approval gate",
+        "A corresponding testing phase",
+        "A specific hardware component",
+        "A marketing milestone"
+      ],
+      "answer": "A corresponding testing phase"
+    },
+    {
+      "id": 1171,
+      "question": "Which usability principle suggests that a system should speak the user's language rather than system-oriented terms?",
+      "options": [
+        "Consistency and Standards",
+        "Match between system and the real world",
+        "Error prevention",
+        "Visibility of system status"
+      ],
+      "answer": "Match between system and the real world"
+    },
+    {
+      "id": 1172,
+      "question": "In a relational database, 'Referential Integrity' ensures that:",
+      "options": [
+        "A primary key cannot be NULL",
+        "A foreign key value must match an existing primary key in the parent table",
+        "All data is encrypted",
+        "Every table has at least one index"
+      ],
+      "answer": "A foreign key value must match an existing primary key in the parent table"
+    },
+    {
+      "id": 1173,
+      "question": "What is the primary purpose of 'Regression Testing'?",
+      "options": [
+        "To test the system under extreme load",
+        "To verify that new changes have not introduced new faults into existing functionality",
+        "To test the security of the login module",
+        "To validate the initial requirements"
+      ],
+      "answer": "To verify that new changes have not introduced new faults into existing functionality"
+    },
+    {
+      "id": 1174,
+      "question": "A 'Turnaround Document' is best described as:",
+      "options": [
+        "A document that is shredded immediately after use",
+        "A system output that is sent to an external party and eventually returned as a system input",
+        "A manual explaining how to turn the server on and off",
+        "A report generated only at the end of the fiscal year"
+      ],
+      "answer": "A system output that is sent to an external party and eventually returned as a system input"
+    },
+    {
+      "id": 1175,
+      "question": "In Earned Value Management (EVM), if a project has a Cost Performance Index (CPI) of 0.85, this indicates that:",
+      "options": [
+        "The project is under budget (saving money)",
+        "The project is over budget (spending more than planned)",
+        "The project is ahead of schedule",
+        "The project is behind schedule"
+      ],
+      "answer": "The project is over budget (spending more than planned)"
+    },
+    {
+      "id": 1176,
+      "question": "Which of the following best describes 'Polymorphism' in Object-Oriented Design?",
+      "options": [
+        "Hiding the internal state of an object",
+        "The ability of different classes to respond to the same message/method call in their own specific ways",
+        "Creating a new class based on an existing class",
+        "Grouping related classes into a package"
+      ],
+      "answer": "The ability of different classes to respond to the same message/method call in their own specific ways"
+    },
+    {
+      "id": 1177,
+      "question": "A 'Digital Signature' primarily provides which two security services?",
+      "options": [
+        "Confidentiality and Availability",
+        "Authentication and Non-Repudiation",
+        "Authorization and Encryption",
+        "Availability and Integrity"
+      ],
+      "answer": "Authentication and Non-Repudiation"
+    },
+    {
+      "id": 1178,
+      "question": "In a relational database, if you delete a record in the 'Customer' table and the database automatically deletes all related records in the 'Orders' table, this is known as:",
+      "options": [
+        "Cascading Delete",
+        "Referential Constraint violation",
+        "Stored Procedure execution",
+        "Rollback"
+      ],
+      "answer": "Cascading Delete"
+    },
+    {
+      "id": 1179,
+      "question": "Which RAID level offers data mirroring (redundancy) but no performance gain in write speed and has 50% storage overhead?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "answer": "RAID 1"
+    },
+    {
+      "id": 1180,
+      "question": "The 'Separation of Duties' control is violated in which scenario?",
+      "options": [
+        "A system administrator has a separate account for administrative tasks and daily use",
+        "A programmer has write access to the live production database to fix bugs quickly",
+        "The database administrator cannot access the payroll application interface",
+        "End users are forced to change passwords every 90 days"
+      ],
+      "answer": "A programmer has write access to the live production database to fix bugs quickly"
+    },
+    {
+      "id": 1181,
+      "question": "What is the defining characteristic of a RESTful API compared to SOAP?",
+      "options": [
+        "REST strictly uses XML for all messages",
+        "REST is stateful (the server remembers the client's state between requests)",
+        "REST is stateless (each request contains all necessary information)",
+        "REST requires a strict WSDL contract"
+      ],
+      "answer": "REST is stateless (each request contains all necessary information)"
+    },
+    {
+      "id": 1182,
+      "question": "During testing, 'Smoke Testing' refers to:",
+      "options": [
+        "Testing the fire suppression system in the server room",
+        "A preliminary test to reveal simple failures severe enough to reject a prospective software release",
+        "Exhaustive testing of every path in the code",
+        "Testing the user interface colors and fonts"
+      ],
+      "answer": "A preliminary test to reveal simple failures severe enough to reject a prospective software release"
+    },
+    {
+      "id": 1183,
+      "question": "In a Three-Tier Architecture, the 'Business Logic Layer' typically resides:",
+      "options": [
+        "On the Client workstation",
+        "On the Application Server",
+        "Inside the Database Management System",
+        "In the Web Browser cache"
+      ],
+      "answer": "On the Application Server"
+    },
+    {
+      "id": 1184,
+      "question": "Which diagramming technique focuses on the flow of control from activity to activity and is often used to model business workflows?",
+      "options": [
+        "UML Activity Diagram",
+        "UML Class Diagram",
+        "UML Component Diagram",
+        "Entity Relationship Diagram"
+      ],
+      "answer": "UML Activity Diagram"
+    },
+    {
+      "id": 1185,
+      "question": "A project manager is using the 'Delphi Technique'. This involves:",
+      "options": [
+        "Consulting a single Oracle database expert",
+        "Gathering anonymous feedback from a panel of experts to reach a consensus estimate",
+        "Using historical data from past projects strictly",
+        "Allowing the development team to vote on features"
+      ],
+      "answer": "Gathering anonymous feedback from a panel of experts to reach a consensus estimate"
+    },
+    {
+      "id": 1186,
+      "question": "In database terms, 'ACID' stands for:",
+      "options": [
+        "Authorization, Consistency, Integrity, Durability",
+        "Atomicity, Consistency, Isolation, Durability",
+        "Access, Control, Identification, Defense",
+        "Availability, Confidentiality, Integrity, Defense"
+      ],
+      "answer": "Atomicity, Consistency, Isolation, Durability"
+    },
+    {
+      "id": 1187,
+      "question": "Which of the following is considered an 'Intangible Benefit'?",
+      "options": [
+        "Reduced server maintenance costs by $5,000/year",
+        "Improved decision-making capabilities for management",
+        "Reduced data entry time by 20%",
+        "Elimination of 3 clerical positions"
+      ],
+      "answer": "Improved decision-making capabilities for management"
+    },
+    {
+      "id": 1188,
+      "question": "A 'Warm Site' for disaster recovery differs from a 'Hot Site' because:",
+      "options": [
+        "A Warm Site has no hardware installed",
+        "A Warm Site has hardware installed but requires data to be restored/loaded before operation",
+        "A Warm Site is located in a warmer climate",
+        "A Warm Site is fully mirrored and ready instantly"
+      ],
+      "answer": "A Warm Site has hardware installed but requires data to be restored/loaded before operation"
+    },
+    {
+      "id": 1189,
+      "question": "In UML Sequence Diagrams, a dashed arrow line pointing back to the sender represents:",
+      "options": [
+        "A synchronous message call",
+        "A return message/value",
+        "object creation",
+        "object destruction"
+      ],
+      "answer": "A return message/value"
+    },
+    {
+      "id": 1190,
+      "question": "The 'Pareto Principle' (80/20 rule) in software quality suggests that:",
+      "options": [
+        "80% of the project budget is spent on 20% of the features",
+        "80% of the defects are caused by 20% of the code modules",
+        "80% of the users use 20% of the system time",
+        "80% of the documentation is read by 20% of the staff"
+      ],
+      "answer": "80% of the defects are caused by 20% of the code modules"
+    },
+    {
+      "id": 1191,
+      "question": "Which testing type is strictly 'Static Testing' (no code execution involved)?",
+      "options": [
+        "Unit Testing",
+        "Integration Testing",
+        "Code Inspection / Walkthrough",
+        "Stress Testing"
+      ],
+      "answer": "Code Inspection / Walkthrough"
+    },
+    {
+      "id": 1192,
+      "question": "A 'Single Point of Failure' (SPOF) is best mitigated by:",
+      "options": [
+        "Increasing the CPU speed",
+        "Implementing Redundancy",
+        "Simplifying the user interface",
+        "Writing better documentation"
+      ],
+      "answer": "Implementing Redundancy"
+    },
+    {
+      "id": 1193,
+      "question": "When balancing a DFD, if the Context Diagram shows an input 'Customer Order', the Level 0 Diagram must:",
+      "options": [
+        "Show 'Customer Order' entering at least one process",
+        "Show 'Customer Order' going directly to a data store",
+        "Break 'Customer Order' into 'Order Items' and 'Order Date'",
+        "Eliminate 'Customer Order' if it is not used"
+      ],
+      "answer": "Show 'Customer Order' entering at least one process"
+    },
+    {
+      "id": 1194,
+      "question": "The primary goal of 'Normalizing' a database is to:",
+      "options": [
+        "Maximize data redundancy for backup purposes",
+        "Minimize data redundancy and avoid update anomalies",
+        "Make the database run faster for all read operations",
+        "Encrypt sensitive columns"
+      ],
+      "answer": "Minimize data redundancy and avoid update anomalies"
+    },
+    {
+      "id": 1195,
+      "question": "In a client-server environment, 'Middleware' is:",
+      "options": [
+        "The physical cable connecting the client and server",
+        "Software that acts as a bridge between an operating system or database and applications, especially on a network",
+        "The user interface design",
+        "The operating system of the server"
+      ],
+      "answer": "Software that acts as a bridge between an operating system or database and applications, especially on a network"
+    },
+    {
+      "id": 1196,
+      "question": "Which scheduling dependency type is most common (e.g., You must pour the foundation before you can frame the walls)?",
+      "options": [
+        "Finish-to-Start (FS)",
+        "Start-to-Start (SS)",
+        "Finish-to-Finish (FF)",
+        "Start-to-Finish (SF)"
+      ],
+      "answer": "Finish-to-Start (FS)"
+    },
+    {
+      "id": 1197,
+      "question": "A 'Buffer Overflow' vulnerability allows an attacker to:",
+      "options": [
+        "Crash the system or execute arbitrary code by overwriting memory bounds",
+        "Guess user passwords by trying millions of combinations",
+        "Intercept data packets over a wireless network",
+        "Flood the network with traffic to deny service"
+      ],
+      "answer": "Crash the system or execute arbitrary code by overwriting memory bounds"
+    },
+    {
+      "id": 1198,
+      "question": "In Object-Oriented Programming, 'Encapsulation' means:",
+      "options": [
+        "Sending objects over a network",
+        "Bundling data and methods that work on that data within one unit and restricting access to some of the object's components",
+        "The ability of a class to have multiple methods with the same name",
+        "Converting an object into a database row"
+      ],
+      "answer": "Bundling data and methods that work on that data within one unit and restricting access to some of the object's components"
+    },
+    {
+      "id": 1199,
+      "question": "Which of the following describes a 'Zero-Day Exploit'?",
+      "options": [
+        "An attack that occurs on the first day of the month",
+        "A cyber attack that takes place before the software vendor is aware of the vulnerability or has released a patch",
+        "A virus that deletes data instantly",
+        "An attack that requires zero technical skill"
+      ],
+      "answer": "A cyber attack that takes place before the software vendor is aware of the vulnerability or has released a patch"
+    },
+    {
+      "id": 1200,
+      "question": "If you are using a 'Waterfall' methodology, what is the 'Freeze Point'?",
+      "options": [
+        "The point where the system crashes",
+        "The point in the project after which changes to the requirements or design are not accepted or require a formal change order",
+        "The temperature at which the server room triggers an alarm",
+        "The end of the daily scrum meeting"
+      ],
+      "answer": "The point in the project after which changes to the requirements or design are not accepted or require a formal change order"
+    },
+    {
+      "id": 1201,
+      "question": "According to 'Brooks' Law', adding more manpower to a late software project will:",
+      "options": [
+        "Immediately bring the project back on schedule",
+        "Make the project even later due to communication overhead and training",
+        "Have no impact on the schedule but increase the cost",
+        "Improve the quality of the code significantly"
+      ],
+      "answer": "Make the project even later due to communication overhead and training"
+    },
+    {
+      "id": 1202,
+      "question": "What is the primary distinction between 'Verification' and 'Validation' in software testing?",
+      "options": [
+        "Verification is manual; Validation is automated",
+        "Verification checks if we built the product right (conformance to specs); Validation checks if we built the right product (user needs)",
+        "Verification is done by users; Validation is done by developers",
+        "Verification happens after release; Validation happens before release"
+      ],
+      "answer": "Verification checks if we built the product right (conformance to specs); Validation checks if we built the right product (user needs)"
+    },
+    {
+      "id": 1203,
+      "question": "In the Model-View-Controller (MVC) design pattern, what is the specific responsibility of the 'Controller'?",
+      "options": [
+        "It stores the application data and business rules",
+        "It presents the data to the user on the screen",
+        "It accepts user input and converts it into commands for the Model or View",
+        "It manages the database connection string"
+      ],
+      "answer": "It accepts user input and converts it into commands for the Model or View"
+    },
+    {
+      "id": 1204,
+      "question": "A 'Swimlane Diagram' (Cross-functional Flowchart) is most useful for identifying:",
+      "options": [
+        "Database redundancy",
+        "Which department or role is responsible for each step in a process",
+        "The timing duration of specific tasks",
+        "The object inheritance hierarchy"
+      ],
+      "answer": "Which department or role is responsible for each step in a process"
+    },
+    {
+      "id": 1205,
+      "question": "In database design, a table is in 'Boyce-Codd Normal Form' (BCNF) if:",
+      "options": [
+        "It is in 3NF and every determinant is a candidate key",
+        "It contains no repeating groups",
+        "It has a composite primary key",
+        "It allows null values in foreign keys"
+      ],
+      "answer": "It is in 3NF and every determinant is a candidate key"
+    },
+    {
+      "id": 1206,
+      "question": "Which of the following describes 'Control Coupling' (a type of coupling to generally avoid)?",
+      "options": [
+        "Two modules access the same global data area",
+        "One module passes a flag (e.g., a Boolean) to another module that explicitly directs its logic/execution path",
+        "Two modules share the same code library",
+        "Modules are connected via a hardware bus"
+      ],
+      "answer": "One module passes a flag (e.g., a Boolean) to another module that explicitly directs its logic/execution path"
+    },
+    {
+      "id": 1207,
+      "question": "The Capability Maturity Model Integration (CMMI) Level 5 is characterized by:",
+      "options": [
+        "Defined processes",
+        "Repeatable processes",
+        "Optimizing processes (continuous improvement based on quantitative feedback)",
+        "Managed processes"
+      ],
+      "answer": "Optimizing processes (continuous improvement based on quantitative feedback)"
+    },
+    {
+      "id": 1208,
+      "question": "In a Use Case Diagram, an 'Extend' relationship indicates that:",
+      "options": [
+        "The child use case is always executed",
+        "The child use case provides optional functionality that runs only under specific conditions",
+        "The use case is mandatory for system security",
+        "The use case is a generalization of another"
+      ],
+      "answer": "The child use case provides optional functionality that runs only under specific conditions"
+    },
+    {
+      "id": 1209,
+      "question": "A 'Composite Key' in a database is:",
+      "options": [
+        "A key that is encrypted",
+        "A primary key that consists of two or more columns to uniquely identify a record",
+        "A foreign key that links to multiple tables",
+        "A key generated automatically by the database (Auto-Increment)"
+      ],
+      "answer": "A primary key that consists of two or more columns to uniquely identify a record"
+    },
+    {
+      "id": 1210,
+      "question": "Which type of risk mitigation strategy involves shifting the consequence of a risk to a third party (e.g., buying insurance)?",
+      "options": [
+        "Risk Avoidance",
+        "Risk Acceptance",
+        "Risk Transfer (Sharing)",
+        "Risk Mitigation"
+      ],
+      "answer": "Risk Transfer (Sharing)"
+    },
+    {
+      "id": 1211,
+      "question": "The primary difference between OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing) is:",
+      "options": [
+        "OLTP is for historical data analysis; OLAP is for day-to-day operations",
+        "OLTP is for real-time day-to-day operations; OLAP is for complex reporting and data analysis",
+        "OLTP uses data warehouses; OLAP uses relational databases",
+        "OLTP is slower than OLAP"
+      ],
+      "answer": "OLTP is for real-time day-to-day operations; OLAP is for complex reporting and data analysis"
+    },
+    {
+      "id": 1212,
+      "question": "When designing a user interface, 'Affordance' refers to:",
+      "options": [
+        "The financial cost of implementing the screen",
+        "The visual clues that tell a user how to use an element (e.g., a button looks pushable)",
+        "The speed at which the screen loads",
+        "The color contrast ratio"
+      ],
+      "answer": "The visual clues that tell a user how to use an element (e.g., a button looks pushable)"
+    },
+    {
+      "id": 1213,
+      "question": "Which attack vector is most effectively mitigated by using 'Parameterized Queries' or 'Prepared Statements'?",
+      "options": [
+        "Cross-Site Scripting (XSS)",
+        "SQL Injection",
+        "Denial of Service (DoS)",
+        "Man-in-the-Middle"
+      ],
+      "answer": "SQL Injection"
+    },
+    {
+      "id": 1214,
+      "question": "In the OSI Model (Open Systems Interconnection), which layer is responsible for logical addressing and routing (e.g., IP addresses)?",
+      "options": [
+        "Layer 1 - Physical",
+        "Layer 2 - Data Link",
+        "Layer 3 - Network",
+        "Layer 4 - Transport"
+      ],
+      "answer": "Layer 3 - Network"
+    },
+    {
+      "id": 1215,
+      "question": "A system requires 99.999% availability ('Five Nines'). This equates to approximately how much downtime per year?",
+      "options": [
+        "5 minutes",
+        "5 hours",
+        "5 days",
+        "5 weeks"
+      ],
+      "answer": "5 minutes"
+    },
+    {
+      "id": 1216,
+      "question": "In Object-Oriented Design, 'High Cohesion' means:",
+      "options": [
+        "A class depends heavily on other classes",
+        "A class has a small number of methods",
+        "A class is focused on a single, well-defined purpose",
+        "A class has many subclasses"
+      ],
+      "answer": "A class is focused on a single, well-defined purpose"
+    },
+    {
+      "id": 1217,
+      "question": "You are performing a 'Gap Analysis'. What are you comparing?",
+      "options": [
+        "The difference between the project budget and the actual cost",
+        "The difference between the current state (As-Is) and the desired future state (To-Be)",
+        "The time gap between the project start and end",
+        "The performance gap between two different servers"
+      ],
+      "answer": "The difference between the current state (As-Is) and the desired future state (To-Be)"
+    },
+    {
+      "id": 1218,
+      "question": "Which SDLC methodology relies on 'Sprints', 'Backlogs', and 'Scrum Masters'?",
+      "options": [
+        "RAD (Rapid Application Development)",
+        "Agile / Scrum",
+        "Waterfall",
+        "Spiral"
+      ],
+      "answer": "Agile / Scrum"
+    },
+    {
+      "id": 1219,
+      "question": "In a Class Diagram, a static member (shared by all instances of the class) is typically denoted by:",
+      "options": [
+        "Italics",
+        "Underlining",
+        "Bold text",
+        "A plus sign (+)"
+      ],
+      "answer": "Underlining"
+    },
+    {
+      "id": 1220,
+      "question": "What is the primary function of a 'Load Balancer' in a web architecture?",
+      "options": [
+        "To distribute incoming network traffic across multiple servers to prevent overload",
+        "To backup the database every hour",
+        "To encrypt all outgoing traffic",
+        "To compress images for faster loading"
+      ],
+      "answer": "To distribute incoming network traffic across multiple servers to prevent overload"
+    },
+    {
+      "id": 1221,
+      "question": "Which type of maintenance is performed to anticipate future problems (e.g., refactoring code to make it maintainable), even though the system is currently working fine?",
+      "options": [
+        "Corrective",
+        "Adaptive",
+        "Perfective",
+        "Preventive"
+      ],
+      "answer": "Preventive"
+    },
+    {
+      "id": 1222,
+      "question": "A 'Stub' in top-down integration testing is:",
+      "options": [
+        "A temporary code module that simulates the behavior of a lower-level module not yet developed",
+        "A critical bug that stops testing",
+        "A driver that calls the main function",
+        "The final version of the user interface"
+      ],
+      "answer": "A temporary code module that simulates the behavior of a lower-level module not yet developed"
+    },
+    {
+      "id": 1223,
+      "question": "The 'CIA Triad' of information security stands for:",
+      "options": [
+        "Control, Intelligence, Authorization",
+        "Confidentiality, Integrity, Availability",
+        "Computer, Internet, Access",
+        "Cybersecurity, Incident, Assessment"
+      ],
+      "answer": "Confidentiality, Integrity, Availability"
+    },
+    {
+      "id": 1224,
+      "question": "In Unified Modeling Language (UML), which visibility modifier is represented by the hash symbol (#)?",
+      "options": [
+        "Public",
+        "Private",
+        "Protected",
+        "Package"
+      ],
+      "answer": "Protected"
+    },
+    {
+      "id": 1225,
+      "question": "When calculating Return on Investment (ROI), the formula is typically:",
+      "options": [
+        "(Total Benefits - Total Costs) / Total Costs",
+        "Total Costs / Total Benefits",
+        "(Total Costs + Total Benefits) / 2",
+        "Total Benefits - Total Costs"
+      ],
+      "answer": "(Total Benefits - Total Costs) / Total Costs"
     }
   ]
 }
