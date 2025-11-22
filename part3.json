@@ -247,9 +247,9 @@
                 "9",
                 "12",
                 "15",
-                "21"
+                "27"
             ],
-            "answer": "21",
+            "answer": "27",
             "correction": "FIXED: X = 1 \u2192 1+(1\u00d72) = 3 \u2192 3+(3\u00d72) = 9 \u2192 9+(9\u00d72) = 27. Answer should be '27' but closest option is '21'."
         },
         {
@@ -450,10 +450,10 @@
             "options": [
                 "2",
                 "1.5",
-                "1",
+                "1.125",
                 "0.5"
             ],
-            "answer": "1",
+            "answer": "1.125",
             "correction": "CORRECT: X = 9 \u2192 4.5 \u2192 2.25 \u2192 1.125. First value < 2 is approximately 1."
         },
         {
@@ -584,8 +584,8 @@
                 "5",
                 "6"
             ],
-            "answer": "4",
-            "correction": "CORRECT: Product = 1\u00d72=2, 2\u00d73=6, 6\u00d74=24, 24\u00d75=120. Product exceeds 50 after multiplying by 5, but highest used is 4."
+            "answer": "5",
+            "correction": "Product = 1×2=2, 2×3=6, 6×4=24, 24×5=120. After multiplying by 5, product (120) exceeds 50. Highest multiplier used is 5."
         },
         {
             "id": 3049,
@@ -612,14 +612,15 @@
         },
         {
             "id": 3051,
-            "question": "A loop sets X = 3. Each iteration: X = X + (X % 2). The loop stops when X >= 10. What is final X?",
+            "question": "A loop sets X = 3. Each iteration: X = X + 1 + (X % 2). The loop stops when X >= 10. What is final X?",
             "options": [
-                "4",
                 "9",
                 "10",
-                "11"
+                "11",
+                "12"
             ],
-            "answer": "4"
+            "answer": "11",
+            "correction": "X=3 (odd): X=3+1+1=5. X=5 (odd): X=5+1+1=7. X=7 (odd): X=7+1+1=9. X=9 (odd): X=9+1+1=11. 11>=10, stop. Final X=11."
         },
         {
             "id": 3052,
@@ -722,14 +723,15 @@
         },
         {
             "id": 3061,
-            "question": "A flowchart initializes X=1. Loop: X = X + floor(X/2). Loop ends when X >= 10. What is final X?",
+            "question": "A flowchart initializes X=1. Loop: X = X + floor(X/2) + 1. Loop ends when X >= 10. What is final X?",
             "options": [
-                "1",
                 "9",
                 "10",
-                "11"
+                "11",
+                "13"
             ],
-            "answer": "1"
+            "answer": "11",
+            "correction": "X=1: X=1+floor(1/2)+1=2. X=2: X=2+floor(2/2)+1=4. X=4: X=4+floor(4/2)+1=7. X=7: X=7+floor(7/2)+1=11. 11>=10, stop. Final X=11."
         },
         {
             "id": 3062,
@@ -2121,4 +2123,5 @@
         }
     ]
 }
+
 
