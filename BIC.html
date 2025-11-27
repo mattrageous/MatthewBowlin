@@ -6,12 +6,12 @@
     <title>Bowlin Interior Cosmology - Interactive Research Paper</title>
     
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_TRACKING_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-592K2HC1Q9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-YOUR_TRACKING_ID');
+        gtag('config', 'G-592K2HC1Q9');
     </script>
     
     <!-- External Libraries -->
@@ -680,9 +680,21 @@
             try {
                 pyodide = await loadPyodide();
                 await pyodide.loadPackage(['numpy']);
+                
+                // Set up Python environment with json module
+                pyodide.runPython(`
+                    import numpy as np
+                    import json
+                    print("Python environment ready")
+                `);
+                
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('controls-container').style.display = 'block';
                 console.log('Pyodide loaded successfully');
+                
+                // Run initial simulation
+                runSimulation();
+                
             } catch (error) {
                 document.getElementById('loading').innerHTML = 
                     '<p style="color: var(--error);">Error loading Python engine. Please refresh the page.</p>';
@@ -707,8 +719,8 @@
             document.getElementById('t_shift-value').textContent = e.target.value + ' Gyr';
         });
         
-        // Run simulation
-        document.getElementById('run-simulation').addEventListener('click', async () => {
+        // Run simulation function
+        async function runSimulation() {
             if (!pyodide) {
                 alert('Python engine not loaded yet. Please wait...');
                 return;
@@ -721,6 +733,7 @@
             
             const pythonCode = `
 import numpy as np
+import json
 
 # Parameters
 A = ${A}
@@ -753,21 +766,21 @@ for z in z_array:
     t_array.append(t)
     H_array.append(H)
 
-# Output arrays
-z_list = z_array.tolist()
-H_list = H_array
-
+# Convert to lists for JavaScript
 result = {
-    'z': z_list,
-    'H': H_list,
-    'H0': H_list[0]
+    'z': z_array.tolist(),
+    'H': H_array,
+    'H0': H_array[0]
 }
-result
+
+# Convert to JSON string
+json.dumps(result)
 `;
             
             try {
-                const result = await pyodide.runPythonAsync(pythonCode);
-                const data = result.toJs({dict_converter: Object.fromEntries});
+                // Run Python code and get JSON string
+                const jsonString = await pyodide.runPythonAsync(pythonCode);
+                const data = JSON.parse(jsonString);
                 
                 // Plot using Plotly
                 const trace = {
@@ -852,7 +865,10 @@ result
                 alert('Simulation error: ' + error.message);
                 console.error('Simulation error:', error);
             }
-        });
+        }
+        
+        // Attach event listener to run button
+        document.getElementById('run-simulation').addEventListener('click', runSimulation);
         
         // Initialize on page load
         window.addEventListener('load', initPyodide);
