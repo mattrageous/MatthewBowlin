@@ -735,46 +735,71 @@
 import numpy as np
 import json
 
-# Parameters
+# Parameters from sliders
 A = ${A}
 B = ${B}
 p = 0.5
 tau = ${tau}
 t_shift = ${t_shift}
-t_now = 13.8
-H_unit_conv = 67.4 / (1.0**p + 0.2 * np.exp((13.8 - 9.7)/4.0))
+
+# Constants
+t_now = 13.8   # Gyr
+H_planck = 67.4  # km/s/Mpc target normalization
+
+# -------------------------------
+# 1. Compute M and M_dot TODAY
+# -------------------------------
+M_now = A * t_now**p + B * np.exp((t_now - t_shift)/tau)
+M_dot_now = (
+    A * p * t_now**(p-1)
+    + (B/tau) * np.exp((t_now - t_shift)/tau)
+)
+
+# Avoid division by zero
+if M_now == 0:
+    M_now = 1e-10
+
+# -------------------------------
+# 2. Compute scaling factor to match Planck's H0
+# -------------------------------
+H0_model_raw = M_dot_now / M_now
+H_unit_conv = H_planck / H0_model_raw
 
 # Redshift array
 z_array = np.linspace(0, 2, 100)
-t_array = []
 H_array = []
 
-# Calculate for each redshift
+# -------------------------------
+# 3. Compute H(z)
+# -------------------------------
 for z in z_array:
-    # Simple time-redshift relation (approximate)
+    # Simplified time-redshift relation
     t = t_now / (1 + z)**1.5
     
     # Mass function
     M = A * t**p + B * np.exp((t - t_shift)/tau)
+    M_dot = (
+        A * p * t**(p-1)
+        + (B/tau) * np.exp((t - t_shift)/tau)
+    )
     
-    # Derivatives
-    M_dot = A * p * t**(p-1) + (B/tau) * np.exp((t - t_shift)/tau)
+    # Compute H(z)
+    if M == 0:
+        H = 0
+    else:
+        H = (M_dot / M) * H_unit_conv
     
-    # Hubble parameter
-    H = (M_dot / M) * H_unit_conv
-    
-    t_array.append(t)
     H_array.append(H)
 
-# Convert to lists for JavaScript
+# Build JSON result
 result = {
-    'z': z_array.tolist(),
-    'H': H_array,
-    'H0': H_array[0]
+    "z": z_array.tolist(),
+    "H": H_array,
+    "H0": H_array[0]
 }
 
-# Convert to JSON string
 json.dumps(result)
+
 `;
             
             try {
