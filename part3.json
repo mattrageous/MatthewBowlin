@@ -1431,12 +1431,12 @@
             "question": "A flowchart iterates through a list of numbers [2, 4, 6, 8]. It sums only numbers where (Number / 2) is an odd integer. What is the Final Sum?",
             "options": [
                 "6",
+                "8",
                 "10",
-                "12",
-                "20"
+                "12"
             ],
-            "answer": "10",
-            "correction": "Logic: 2/2=1 (odd), 4/2=2 (even), 6/2=3 (odd), 8/2=4 (even). Sum = 2 + 6 = 10."
+            "answer": "8",
+            "correction": "Logic: 2/2=1 (odd), 4/2=2 (even), 6/2=3 (odd), 8/2=4 (even). Sum = 2 + 6 = 8."
         },
         {
             "id": 3126,
@@ -2123,6 +2123,7 @@
         }
     ]
 }
+
 
 
 
