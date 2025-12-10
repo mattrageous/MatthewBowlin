@@ -670,12 +670,12 @@
             "id": 3056,
             "question": "A decision tests IF (A - B) != (B - A). What is the result for any integers A and B?",
             "options": [
-                "TRUE",
-                "FALSE",
-                "Only when A=B",
-                "UNDEFINED"
+                "Always TRUE",
+                "Always FALSE",
+                "TRUE only when A≠B",
+                "TRUE only when A=B"
             ],
-            "answer": "TRUE"
+            "answer": "TRUE only when A≠B"
         },
         {
             "id": 3057,
@@ -2123,6 +2123,7 @@
         }
     ]
 }
+
 
 
 
