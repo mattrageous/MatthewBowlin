@@ -775,6 +775,128 @@
       }
     }
 
+    /* Jump to Question */
+    .jump-to-question {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .jump-to-question label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .jump-to-question input[type="number"] {
+      width: 80px;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.875rem;
+      text-align: center;
+      -moz-appearance: textfield;
+    }
+
+    .jump-to-question input[type="number"]::-webkit-outer-spin-button,
+    .jump-to-question input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .jump-to-question input[type="number"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(255, 209, 0, 0.2);
+    }
+
+    .jump-to-question .btn-jump {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    .jump-to-question .question-range {
+      font-size: 0.75rem;
+      color: var(--text-dark);
+    }
+
+    /* Save Status Indicator */
+    .save-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(25, 115, 82, 0.1);
+      border: 1px solid rgba(25, 115, 82, 0.3);
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--success);
+      margin-top: 1rem;
+    }
+
+    .save-status.saving {
+      background: rgba(255, 209, 0, 0.1);
+      border-color: rgba(255, 209, 0, 0.3);
+      color: var(--accent);
+    }
+
+    .save-status-icon {
+      font-size: 1rem;
+    }
+
+    /* Resume Banner */
+    .resume-banner {
+      background: var(--gradient-accent-transparent);
+      border: 1px solid rgba(255, 209, 0, 0.3);
+      border-radius: 0.75rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .resume-banner-text {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .resume-banner-icon {
+      font-size: 1.5rem;
+    }
+
+    .resume-banner-info h4 {
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .resume-banner-info p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .resume-banner-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .resume-banner .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+
     /* Loading Animation */
     .loading-spinner {
       width: 50px;
@@ -875,6 +997,21 @@
       </p>
     </div>
 
+    <!-- Resume Progress Banner (shown when saved progress exists) -->
+    <div class="resume-banner" id="resumeBanner" style="display: none;">
+      <div class="resume-banner-text">
+        <span class="resume-banner-icon">📌</span>
+        <div class="resume-banner-info">
+          <h4>Welcome back!</h4>
+          <p id="resumeInfo">You left off at Question 1</p>
+        </div>
+      </div>
+      <div class="resume-banner-actions">
+        <button class="btn btn-primary" id="resumeBtn">Resume</button>
+        <button class="btn btn-secondary" id="startFreshBtn">Start Fresh</button>
+      </div>
+    </div>
+
     <!-- Quiz Container -->
     <div class="card quiz-container" id="quizContainer">
       <div class="question-header">
@@ -914,6 +1051,20 @@
       <div class="explanation" id="explanation">
         <h4 class="explanation-title">💡 Explanation</h4>
         <p class="explanation-text" id="explanationText"></p>
+      </div>
+      
+      <!-- Jump to Question -->
+      <div class="jump-to-question" id="jumpToQuestion">
+        <label for="questionInput">Jump to question:</label>
+        <input type="number" id="questionInput" min="1" value="1" />
+        <span class="question-range" id="questionRange">of 100</span>
+        <button class="btn btn-secondary btn-jump" id="jumpBtn">Go</button>
+      </div>
+      
+      <!-- Save Status -->
+      <div class="save-status" id="saveStatus" style="display: none;">
+        <span class="save-status-icon">✓</span>
+        <span id="saveStatusText">Progress saved</span>
       </div>
     </div>
 
@@ -1073,6 +1224,13 @@ let quizContainer;
 let passageContainer;
 let passageText;
 let shuffleIndicator;
+let questionInput;
+let jumpBtn;
+let questionRange;
+let saveStatus;
+let saveStatusText;
+let resumeBanner;
+let resumeInfo;
 
 /* --------------------------------------------- */
 /* 7. Rebind DOM elements after restoring HTML   */
@@ -1097,6 +1255,13 @@ function rebindQuizElements() {
   passageContainer = document.getElementById("passageContainer");
   passageText = document.getElementById("passageText");
   shuffleIndicator = document.getElementById("shuffleIndicator");
+  questionInput = document.getElementById("questionInput");
+  jumpBtn = document.getElementById("jumpBtn");
+  questionRange = document.getElementById("questionRange");
+  saveStatus = document.getElementById("saveStatus");
+  saveStatusText = document.getElementById("saveStatusText");
+  resumeBanner = document.getElementById("resumeBanner");
+  resumeInfo = document.getElementById("resumeInfo");
 }
 
 /* --------------------------------------------- */
@@ -1150,10 +1315,11 @@ function showExamParts(examType) {
   
   // Set current filter to this exam and update questions
   currentFilter = examType;
-  currentQuestionIndex = 0;
   updateFilteredQuestions();
+  currentQuestionIndex = getPositionForFilter();
   displayQuestion();
   updateProgress();
+  autoSave();
 }
 
 function goBackToExams() {
@@ -1177,10 +1343,11 @@ function goBackToExams() {
   document.querySelector('#examSelector [data-exam="all"]').classList.add('active');
   
   currentFilter = 'all';
-  currentQuestionIndex = 0;
   updateFilteredQuestions();
+  currentQuestionIndex = getPositionForFilter();
   displayQuestion();
   updateProgress();
+  autoSave();
 }
 
 /* --------------------------------------------- */
@@ -1234,6 +1401,196 @@ function getShuffledCorrectIndex(questionId, originalCorrectIndex) {
   }
   const shuffleMapping = questionShuffleMap[questionId];
   return shuffleMapping.indexOf(originalCorrectIndex);
+}
+
+/* --------------------------------------------- */
+/* 9.5 LOCAL STORAGE SAVE/RESTORE                */
+/* --------------------------------------------- */
+
+const STORAGE_KEY = 'nys_it_quiz_progress';
+
+// Save progress to localStorage
+function saveProgress() {
+  // Get the current question ID to track position
+  const currentQuestionId = filteredQuestions[currentQuestionIndex]?.id || null;
+  
+  const progressData = {
+    userAnswers: userAnswers,
+    currentQuestionIndex: currentQuestionIndex,
+    currentQuestionId: currentQuestionId, // Track by question ID
+    currentFilter: currentFilter,
+    currentNavigationLevel: currentNavigationLevel,
+    questionShuffleMap: questionShuffleMap,
+    lastSaved: new Date().toISOString(),
+    version: 4 // Version to handle future schema changes
+  };
+  
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progressData));
+    showSaveStatus('Progress saved');
+  } catch (e) {
+    console.warn('Could not save progress to localStorage:', e);
+  }
+}
+
+// Load progress from localStorage
+function loadProgress() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      return JSON.parse(saved);
+    }
+  } catch (e) {
+    console.warn('Could not load progress from localStorage:', e);
+  }
+  return null;
+}
+
+// Check if there's saved progress to resume
+function checkForSavedProgress() {
+  const saved = loadProgress();
+  if (saved && saved.userAnswers && Object.keys(saved.userAnswers).length > 0) {
+    return saved;
+  }
+  return null;
+}
+
+// Restore progress from saved data
+function restoreProgress(savedData) {
+  if (!savedData) return false;
+  
+  try {
+    userAnswers = savedData.userAnswers || {};
+    currentFilter = savedData.currentFilter || 'all';
+    currentNavigationLevel = savedData.currentNavigationLevel || 1;
+    questionShuffleMap = savedData.questionShuffleMap || {};
+    
+    // Store the last question ID globally so we can find it in any filter
+    window.lastQuestionId = savedData.currentQuestionId || null;
+    
+    // Restore the question index for the current filter
+    currentQuestionIndex = savedData.currentQuestionIndex || 0;
+    
+    // Restore navigation UI state
+    if (currentNavigationLevel === 2 && currentFilter !== 'all') {
+      // Determine which exam type to show parts for
+      let examType = currentFilter;
+      if (currentFilter.startsWith('part')) {
+        // Need to figure out which exam context we were in
+        // Default to showing the part directly
+        examType = null;
+      }
+      
+      if (examType && EXAM_PARTS[examType]) {
+        showExamParts(examType);
+      }
+    }
+    
+    return true;
+  } catch (e) {
+    console.warn('Error restoring progress:', e);
+    return false;
+  }
+}
+
+// Find the position of a question ID in the current filtered questions
+// Returns the index if found, or 0 if not found
+function findQuestionIndexById(questionId) {
+  if (!questionId) return 0;
+  
+  const index = filteredQuestions.findIndex(q => q.id === questionId);
+  return index >= 0 ? index : 0;
+}
+
+// Get the best starting position when switching filters
+// Tries to find the last viewed question in the new filter
+function getPositionForFilter() {
+  if (window.lastQuestionId) {
+    const index = findQuestionIndexById(window.lastQuestionId);
+    if (index > 0) {
+      return index; // Found the question in this filter
+    }
+  }
+  return 0; // Start from beginning if question not in this filter
+}
+
+// Clear saved progress
+function clearSavedProgress() {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    window.lastQuestionId = null;
+  } catch (e) {
+    console.warn('Could not clear saved progress:', e);
+  }
+}
+
+// Show save status indicator
+function showSaveStatus(message) {
+  if (!saveStatus) return;
+  
+  saveStatusText.textContent = message;
+  saveStatus.style.display = 'flex';
+  saveStatus.classList.remove('saving');
+  
+  // Hide after 2 seconds
+  setTimeout(() => {
+    saveStatus.style.display = 'none';
+  }, 2000);
+}
+
+// Auto-save debouncer
+let saveTimeout = null;
+function autoSave() {
+  if (saveTimeout) {
+    clearTimeout(saveTimeout);
+  }
+  saveTimeout = setTimeout(() => {
+    saveProgress();
+  }, 1000); // Save 1 second after last action
+}
+
+// Update the last question ID when navigating (call this after changing questions)
+function updateLastQuestionId() {
+  const currentQuestion = filteredQuestions[currentQuestionIndex];
+  if (currentQuestion) {
+    window.lastQuestionId = currentQuestion.id;
+  }
+}
+
+/* --------------------------------------------- */
+/* 9.6 JUMP TO QUESTION FUNCTIONS                */
+/* --------------------------------------------- */
+
+function jumpToQuestion(targetQuestion) {
+  const questionNum = parseInt(targetQuestion);
+  
+  if (isNaN(questionNum) || questionNum < 1 || questionNum > filteredQuestions.length) {
+    // Invalid input - reset to current
+    if (questionInput) {
+      questionInput.value = currentQuestionIndex + 1;
+    }
+    return;
+  }
+  
+  currentQuestionIndex = questionNum - 1;
+  displayQuestion();
+  autoSave();
+  
+  // Scroll to quiz container
+  const quizCard = document.getElementById('quizContainer');
+  if (quizCard) {
+    quizCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function updateJumpToQuestionUI() {
+  if (questionInput) {
+    questionInput.value = currentQuestionIndex + 1;
+    questionInput.max = filteredQuestions.length;
+  }
+  if (questionRange) {
+    questionRange.textContent = `of ${filteredQuestions.length}`;
+  }
 }
 
 /* --------------------------------------------- */
@@ -1518,6 +1875,12 @@ function displayQuestion() {
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${filteredQuestions.length}`;
   categoryTag.textContent = getCategoryName(question.category, question.part, question.isPassageBased, question.isLogicalReasoning);
   currentQuestionSpan.textContent = currentQuestionIndex + 1;
+  
+  // Update jump-to-question UI
+  updateJumpToQuestionUI();
+  
+  // Track current question ID for position restoration
+  updateLastQuestionId();
 
   // Clear previous options
   optionsContainer.innerHTML = '';
@@ -1571,10 +1934,11 @@ function setupEventListeners() {
           e.target.classList.add('active');
           
           currentFilter = 'all';
-          currentQuestionIndex = 0;
           updateFilteredQuestions();
+          currentQuestionIndex = getPositionForFilter();
           displayQuestion();
           updateProgress();
+          autoSave();
         } else {
           // Show parts for this exam
           document.querySelectorAll('#examSelector .filter-btn').forEach(btn => {
@@ -1594,10 +1958,11 @@ function setupEventListeners() {
         e.target.classList.add('active');
         
         currentFilter = e.target.dataset.exam;
-        currentQuestionIndex = 0;
         updateFilteredQuestions();
+        currentQuestionIndex = getPositionForFilter();
         displayQuestion();
         updateProgress();
+        autoSave();
         return;
       }
 
@@ -1609,10 +1974,11 @@ function setupEventListeners() {
         e.target.classList.add('active');
         
         currentFilter = e.target.dataset.category;
-        currentQuestionIndex = 0;
         updateFilteredQuestions();
+        currentQuestionIndex = getPositionForFilter();
         displayQuestion();
         updateProgress();
+        autoSave();
         return;
       }
     }
@@ -1628,6 +1994,50 @@ function setupEventListeners() {
 
   // Reset
   document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+
+  // Jump to question
+  if (jumpBtn) {
+    jumpBtn.addEventListener('click', () => {
+      jumpToQuestion(questionInput.value);
+    });
+  }
+  
+  if (questionInput) {
+    questionInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        jumpToQuestion(questionInput.value);
+      }
+    });
+    
+    // Validate on blur
+    questionInput.addEventListener('blur', () => {
+      const val = parseInt(questionInput.value);
+      if (isNaN(val) || val < 1) {
+        questionInput.value = 1;
+      } else if (val > filteredQuestions.length) {
+        questionInput.value = filteredQuestions.length;
+      }
+    });
+  }
+  
+  // Resume banner buttons
+  const resumeBtn = document.getElementById('resumeBtn');
+  const startFreshBtn = document.getElementById('startFreshBtn');
+  
+  if (resumeBtn) {
+    resumeBtn.addEventListener('click', () => {
+      resumeBanner.style.display = 'none';
+      // Progress already restored, just continue
+    });
+  }
+  
+  if (startFreshBtn) {
+    startFreshBtn.addEventListener('click', () => {
+      resumeBanner.style.display = 'none';
+      clearSavedProgress();
+      resetQuiz();
+    });
+  }
 
   // NEW EMAIL REPORT BUTTON
   document.getElementById('emailIssueBtn').addEventListener('click', sendIssueEmail);
@@ -1721,6 +2131,38 @@ function initializeQuizAfterLoad() {
   
   // Set shuffle as always enabled (no toggle needed)
   shuffleEnabled = true;
+  
+  // Check for saved progress
+  const savedProgress = checkForSavedProgress();
+  
+  if (savedProgress) {
+    // Restore progress
+    restoreProgress(savedProgress);
+    
+    // Show resume banner
+    if (resumeBanner && resumeInfo) {
+      const answeredCount = Object.keys(savedProgress.userAnswers || {}).length;
+      const lastQuestion = (savedProgress.currentQuestionIndex || 0) + 1;
+      const lastFilter = savedProgress.currentFilter || 'all';
+      
+      let filterLabel = 'All Questions';
+      if (lastFilter === 'its3') filterLabel = 'ITS-3';
+      else if (lastFilter === 'its4') filterLabel = 'ITS-4';
+      else if (lastFilter === 'mits1') filterLabel = 'MITS-1';
+      else if (lastFilter === 'mits2') filterLabel = 'MITS-2';
+      else if (lastFilter.startsWith('part')) {
+        const partLabels = {
+          'part1': 'Part 1', 'part2': 'Part 2', 'part3': 'Part 3',
+          'part4': 'Part 4', 'part5': 'Part 5', 'part5.5': 'Part 5.5',
+          'part6': 'Part 6', 'part7': 'Part 7'
+        };
+        filterLabel = partLabels[lastFilter] || lastFilter;
+      }
+      
+      resumeInfo.textContent = `You left off at Question ${lastQuestion} in ${filterLabel} (${answeredCount} answered)`;
+      resumeBanner.style.display = 'flex';
+    }
+  }
   
   updateFilteredQuestions();
   displayQuestion();
@@ -1865,6 +2307,7 @@ function initializeQuiz() {
       
       showAnswerState(question.id);
       updateProgress();
+      autoSave(); // Save after answering
     }
 
     function showAnswerState(questionId) {
@@ -1904,6 +2347,7 @@ function initializeQuiz() {
       if (newIndex >= 0 && newIndex < filteredQuestions.length) {
         currentQuestionIndex = newIndex;
         displayQuestion();
+        autoSave(); // Save position when navigating
       }
     }
 
@@ -1989,6 +2433,7 @@ function initializeQuiz() {
       quizCompleted = false;
       resultsSummary.classList.remove('show');
       quizContainer.style.display = 'block';
+      clearSavedProgress(); // Clear localStorage
       displayQuestion();
       updateProgress();
     }
