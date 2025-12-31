@@ -1315,12 +1315,8 @@ function showExamParts(examType) {
   
   // Set current filter to this exam and update questions
   currentFilter = examType;
-  currentQuestionIndex = getSavedPositionForFilter(examType);
   updateFilteredQuestions();
-  // Validate index is within bounds
-  if (currentQuestionIndex >= filteredQuestions.length) {
-    currentQuestionIndex = 0;
-  }
+  currentQuestionIndex = getPositionForFilter();
   displayQuestion();
   updateProgress();
   autoSave();
@@ -1347,12 +1343,8 @@ function goBackToExams() {
   document.querySelector('#examSelector [data-exam="all"]').classList.add('active');
   
   currentFilter = 'all';
-  currentQuestionIndex = getSavedPositionForFilter('all');
   updateFilteredQuestions();
-  // Validate index is within bounds
-  if (currentQuestionIndex >= filteredQuestions.length) {
-    currentQuestionIndex = 0;
-  }
+  currentQuestionIndex = getPositionForFilter();
   displayQuestion();
   updateProgress();
   autoSave();
@@ -1419,28 +1411,18 @@ const STORAGE_KEY = 'nys_it_quiz_progress';
 
 // Save progress to localStorage
 function saveProgress() {
-  // Load existing data to preserve per-filter positions
-  let existingData = {};
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      existingData = JSON.parse(saved);
-    }
-  } catch (e) {}
-  
-  // Save current position for current filter
-  const filterPositions = existingData.filterPositions || {};
-  filterPositions[currentFilter] = currentQuestionIndex;
+  // Get the current question ID to track position
+  const currentQuestionId = filteredQuestions[currentQuestionIndex]?.id || null;
   
   const progressData = {
     userAnswers: userAnswers,
     currentQuestionIndex: currentQuestionIndex,
+    currentQuestionId: currentQuestionId, // Track by question ID
     currentFilter: currentFilter,
     currentNavigationLevel: currentNavigationLevel,
     questionShuffleMap: questionShuffleMap,
-    filterPositions: filterPositions, // Track position per filter
     lastSaved: new Date().toISOString(),
-    version: 3 // Version to handle future schema changes
+    version: 4 // Version to handle future schema changes
   };
   
   try {
@@ -1483,8 +1465,8 @@ function restoreProgress(savedData) {
     currentNavigationLevel = savedData.currentNavigationLevel || 1;
     questionShuffleMap = savedData.questionShuffleMap || {};
     
-    // Store filterPositions globally so we can use it when switching filters
-    window.savedFilterPositions = savedData.filterPositions || {};
+    // Store the last question ID globally so we can find it in any filter
+    window.lastQuestionId = savedData.currentQuestionId || null;
     
     // Restore the question index for the current filter
     currentQuestionIndex = savedData.currentQuestionIndex || 0;
@@ -1511,19 +1493,32 @@ function restoreProgress(savedData) {
   }
 }
 
-// Get saved position for a specific filter
-function getSavedPositionForFilter(filter) {
-  if (window.savedFilterPositions && window.savedFilterPositions[filter] !== undefined) {
-    return window.savedFilterPositions[filter];
+// Find the position of a question ID in the current filtered questions
+// Returns the index if found, or 0 if not found
+function findQuestionIndexById(questionId) {
+  if (!questionId) return 0;
+  
+  const index = filteredQuestions.findIndex(q => q.id === questionId);
+  return index >= 0 ? index : 0;
+}
+
+// Get the best starting position when switching filters
+// Tries to find the last viewed question in the new filter
+function getPositionForFilter() {
+  if (window.lastQuestionId) {
+    const index = findQuestionIndexById(window.lastQuestionId);
+    if (index > 0) {
+      return index; // Found the question in this filter
+    }
   }
-  return 0;
+  return 0; // Start from beginning if question not in this filter
 }
 
 // Clear saved progress
 function clearSavedProgress() {
   try {
     localStorage.removeItem(STORAGE_KEY);
-    window.savedFilterPositions = {};
+    window.lastQuestionId = null;
   } catch (e) {
     console.warn('Could not clear saved progress:', e);
   }
@@ -1552,6 +1547,14 @@ function autoSave() {
   saveTimeout = setTimeout(() => {
     saveProgress();
   }, 1000); // Save 1 second after last action
+}
+
+// Update the last question ID when navigating (call this after changing questions)
+function updateLastQuestionId() {
+  const currentQuestion = filteredQuestions[currentQuestionIndex];
+  if (currentQuestion) {
+    window.lastQuestionId = currentQuestion.id;
+  }
 }
 
 /* --------------------------------------------- */
@@ -1875,6 +1878,9 @@ function displayQuestion() {
   
   // Update jump-to-question UI
   updateJumpToQuestionUI();
+  
+  // Track current question ID for position restoration
+  updateLastQuestionId();
 
   // Clear previous options
   optionsContainer.innerHTML = '';
@@ -1928,12 +1934,8 @@ function setupEventListeners() {
           e.target.classList.add('active');
           
           currentFilter = 'all';
-          currentQuestionIndex = getSavedPositionForFilter('all');
           updateFilteredQuestions();
-          // Validate index is within bounds
-          if (currentQuestionIndex >= filteredQuestions.length) {
-            currentQuestionIndex = 0;
-          }
+          currentQuestionIndex = getPositionForFilter();
           displayQuestion();
           updateProgress();
           autoSave();
@@ -1956,12 +1958,8 @@ function setupEventListeners() {
         e.target.classList.add('active');
         
         currentFilter = e.target.dataset.exam;
-        currentQuestionIndex = getSavedPositionForFilter(currentFilter);
         updateFilteredQuestions();
-        // Validate index is within bounds
-        if (currentQuestionIndex >= filteredQuestions.length) {
-          currentQuestionIndex = 0;
-        }
+        currentQuestionIndex = getPositionForFilter();
         displayQuestion();
         updateProgress();
         autoSave();
@@ -1976,12 +1974,8 @@ function setupEventListeners() {
         e.target.classList.add('active');
         
         currentFilter = e.target.dataset.category;
-        currentQuestionIndex = getSavedPositionForFilter(currentFilter);
         updateFilteredQuestions();
-        // Validate index is within bounds
-        if (currentQuestionIndex >= filteredQuestions.length) {
-          currentQuestionIndex = 0;
-        }
+        currentQuestionIndex = getPositionForFilter();
         displayQuestion();
         updateProgress();
         autoSave();
