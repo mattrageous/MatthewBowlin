@@ -1315,10 +1315,15 @@ function showExamParts(examType) {
   
   // Set current filter to this exam and update questions
   currentFilter = examType;
-  currentQuestionIndex = 0;
+  currentQuestionIndex = getSavedPositionForFilter(examType);
   updateFilteredQuestions();
+  // Validate index is within bounds
+  if (currentQuestionIndex >= filteredQuestions.length) {
+    currentQuestionIndex = 0;
+  }
   displayQuestion();
   updateProgress();
+  autoSave();
 }
 
 function goBackToExams() {
@@ -1342,10 +1347,15 @@ function goBackToExams() {
   document.querySelector('#examSelector [data-exam="all"]').classList.add('active');
   
   currentFilter = 'all';
-  currentQuestionIndex = 0;
+  currentQuestionIndex = getSavedPositionForFilter('all');
   updateFilteredQuestions();
+  // Validate index is within bounds
+  if (currentQuestionIndex >= filteredQuestions.length) {
+    currentQuestionIndex = 0;
+  }
   displayQuestion();
   updateProgress();
+  autoSave();
 }
 
 /* --------------------------------------------- */
@@ -1409,14 +1419,28 @@ const STORAGE_KEY = 'nys_it_quiz_progress';
 
 // Save progress to localStorage
 function saveProgress() {
+  // Load existing data to preserve per-filter positions
+  let existingData = {};
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      existingData = JSON.parse(saved);
+    }
+  } catch (e) {}
+  
+  // Save current position for current filter
+  const filterPositions = existingData.filterPositions || {};
+  filterPositions[currentFilter] = currentQuestionIndex;
+  
   const progressData = {
     userAnswers: userAnswers,
     currentQuestionIndex: currentQuestionIndex,
     currentFilter: currentFilter,
     currentNavigationLevel: currentNavigationLevel,
     questionShuffleMap: questionShuffleMap,
+    filterPositions: filterPositions, // Track position per filter
     lastSaved: new Date().toISOString(),
-    version: 2 // Version to handle future schema changes
+    version: 3 // Version to handle future schema changes
   };
   
   try {
@@ -1455,10 +1479,15 @@ function restoreProgress(savedData) {
   
   try {
     userAnswers = savedData.userAnswers || {};
-    currentQuestionIndex = savedData.currentQuestionIndex || 0;
     currentFilter = savedData.currentFilter || 'all';
     currentNavigationLevel = savedData.currentNavigationLevel || 1;
     questionShuffleMap = savedData.questionShuffleMap || {};
+    
+    // Store filterPositions globally so we can use it when switching filters
+    window.savedFilterPositions = savedData.filterPositions || {};
+    
+    // Restore the question index for the current filter
+    currentQuestionIndex = savedData.currentQuestionIndex || 0;
     
     // Restore navigation UI state
     if (currentNavigationLevel === 2 && currentFilter !== 'all') {
@@ -1482,10 +1511,19 @@ function restoreProgress(savedData) {
   }
 }
 
+// Get saved position for a specific filter
+function getSavedPositionForFilter(filter) {
+  if (window.savedFilterPositions && window.savedFilterPositions[filter] !== undefined) {
+    return window.savedFilterPositions[filter];
+  }
+  return 0;
+}
+
 // Clear saved progress
 function clearSavedProgress() {
   try {
     localStorage.removeItem(STORAGE_KEY);
+    window.savedFilterPositions = {};
   } catch (e) {
     console.warn('Could not clear saved progress:', e);
   }
@@ -1890,10 +1928,15 @@ function setupEventListeners() {
           e.target.classList.add('active');
           
           currentFilter = 'all';
-          currentQuestionIndex = 0;
+          currentQuestionIndex = getSavedPositionForFilter('all');
           updateFilteredQuestions();
+          // Validate index is within bounds
+          if (currentQuestionIndex >= filteredQuestions.length) {
+            currentQuestionIndex = 0;
+          }
           displayQuestion();
           updateProgress();
+          autoSave();
         } else {
           // Show parts for this exam
           document.querySelectorAll('#examSelector .filter-btn').forEach(btn => {
@@ -1913,10 +1956,15 @@ function setupEventListeners() {
         e.target.classList.add('active');
         
         currentFilter = e.target.dataset.exam;
-        currentQuestionIndex = 0;
+        currentQuestionIndex = getSavedPositionForFilter(currentFilter);
         updateFilteredQuestions();
+        // Validate index is within bounds
+        if (currentQuestionIndex >= filteredQuestions.length) {
+          currentQuestionIndex = 0;
+        }
         displayQuestion();
         updateProgress();
+        autoSave();
         return;
       }
 
@@ -1928,11 +1976,15 @@ function setupEventListeners() {
         e.target.classList.add('active');
         
         currentFilter = e.target.dataset.category;
-        currentQuestionIndex = 0;
+        currentQuestionIndex = getSavedPositionForFilter(currentFilter);
         updateFilteredQuestions();
+        // Validate index is within bounds
+        if (currentQuestionIndex >= filteredQuestions.length) {
+          currentQuestionIndex = 0;
+        }
         displayQuestion();
         updateProgress();
-        autoSave(); // Save when changing filters
+        autoSave();
         return;
       }
     }
