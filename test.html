@@ -1584,7 +1584,7 @@ function exportProgress() {
   };
   
   const dataStr = JSON.stringify(progressData, null, 2);
-  const blob = new Blob([dataStr], { type: 'application/json' });
+  const blob = new Blob([dataStr], { type: 'application/octet-stream' });
   const url = URL.createObjectURL(blob);
   
   // Create download link
