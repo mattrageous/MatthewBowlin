@@ -1089,6 +1089,13 @@
       <!-- NEW EMAIL ISSUE BUTTON -->
       <button class="btn btn-secondary" id="emailIssueBtn">📧 Report Issue</button>
     </div>
+    
+    <!-- Export/Import Progress -->
+    <div class="navigation" style="margin-top: 1rem;">
+      <button class="btn btn-secondary" id="exportBtn">📤 Export Progress</button>
+      <button class="btn btn-secondary" id="importBtn">📥 Import Progress</button>
+      <input type="file" id="importFileInput" accept=".matt" style="display: none;" />
+    </div>
   </div>
   <div style="
   text-align: center;
@@ -1555,6 +1562,107 @@ function updateLastQuestionId() {
   if (currentQuestion) {
     window.lastQuestionId = currentQuestion.id;
   }
+}
+
+/* --------------------------------------------- */
+/* 9.7 EXPORT/IMPORT PROGRESS (.matt files)      */
+/* --------------------------------------------- */
+
+function exportProgress() {
+  const currentQuestionId = filteredQuestions[currentQuestionIndex]?.id || null;
+  
+  const progressData = {
+    userAnswers: userAnswers,
+    currentQuestionIndex: currentQuestionIndex,
+    currentQuestionId: currentQuestionId,
+    currentFilter: currentFilter,
+    currentNavigationLevel: currentNavigationLevel,
+    questionShuffleMap: questionShuffleMap,
+    exportedAt: new Date().toISOString(),
+    version: 4,
+    source: 'NYS IT Civil Service Study Guide by Matthew Bowlin'
+  };
+  
+  const dataStr = JSON.stringify(progressData, null, 2);
+  const blob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  
+  // Create download link
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'nys-study-progress.matt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  showSaveStatus('Progress exported!');
+}
+
+function importProgress(file) {
+  if (!file) return;
+  
+  const reader = new FileReader();
+  
+  reader.onload = function(e) {
+    try {
+      const importedData = JSON.parse(e.target.result);
+      
+      // Validate the file has the expected structure
+      if (!importedData.userAnswers || typeof importedData.userAnswers !== 'object') {
+        alert('Invalid file format. Please select a valid .matt progress file.');
+        return;
+      }
+      
+      // Restore the data
+      userAnswers = importedData.userAnswers || {};
+      currentFilter = importedData.currentFilter || 'all';
+      currentNavigationLevel = importedData.currentNavigationLevel || 1;
+      questionShuffleMap = importedData.questionShuffleMap || {};
+      window.lastQuestionId = importedData.currentQuestionId || null;
+      
+      // Save to localStorage
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(importedData));
+      
+      // Restore navigation UI state
+      if (currentNavigationLevel === 2 && currentFilter !== 'all' && !currentFilter.startsWith('part')) {
+        if (EXAM_PARTS[currentFilter]) {
+          showExamParts(currentFilter);
+        }
+      } else {
+        // Reset to proper filter state
+        if (currentNavigationLevel === 1 || currentFilter === 'all') {
+          document.querySelectorAll('#examSelector .filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          const allBtn = document.querySelector('#examSelector [data-exam="all"]');
+          if (allBtn) allBtn.classList.add('active');
+        }
+        
+        updateFilteredQuestions();
+        currentQuestionIndex = getPositionForFilter();
+        displayQuestion();
+        updateProgress();
+      }
+      
+      showSaveStatus('Progress imported!');
+      
+      // Hide resume banner if showing
+      if (resumeBanner) {
+        resumeBanner.style.display = 'none';
+      }
+      
+    } catch (err) {
+      console.error('Import error:', err);
+      alert('Could not read the file. Please make sure it\'s a valid .matt progress file.');
+    }
+  };
+  
+  reader.onerror = function() {
+    alert('Error reading file. Please try again.');
+  };
+  
+  reader.readAsText(file);
 }
 
 /* --------------------------------------------- */
@@ -2041,6 +2149,30 @@ function setupEventListeners() {
 
   // NEW EMAIL REPORT BUTTON
   document.getElementById('emailIssueBtn').addEventListener('click', sendIssueEmail);
+  
+  // Export/Import Progress
+  const exportBtn = document.getElementById('exportBtn');
+  const importBtn = document.getElementById('importBtn');
+  const importFileInput = document.getElementById('importFileInput');
+  
+  if (exportBtn) {
+    exportBtn.addEventListener('click', exportProgress);
+  }
+  
+  if (importBtn && importFileInput) {
+    importBtn.addEventListener('click', () => {
+      importFileInput.click();
+    });
+    
+    importFileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        importProgress(file);
+        // Reset input so the same file can be selected again
+        importFileInput.value = '';
+      }
+    });
+  }
 }
 
 /* --------------------------------------------- */
