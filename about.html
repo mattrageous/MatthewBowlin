@@ -1,70 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Matthew Bowlin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap"
+    rel="stylesheet">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-592K2HC1Q9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-592K2HC1Q9');
   </script>
   <style>
+    :root {
+      --primary: #1abc9c;
+      --secondary: #2c5364;
+      --dark-bg: #0f2027;
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      /* Frosted glass */
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --text-color: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 700px;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 40px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    }
-    img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #1abc9c;
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-size: 2em;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 1.1em;
-      margin-bottom: 15px;
       line-height: 1.6;
     }
-    a {
-      color: #1abc9c;
-      text-decoration: none;
-      transition: opacity 0.3s;
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, rgba(26, 188, 156, 0.1), transparent 60%);
+      pointer-events: none;
+      z-index: -1;
     }
-    a:hover {
-      opacity: 0.8;
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        padding: 60px;
+      }
+
+      .profile-section {
+        flex: 0 0 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .content-section {
+        flex: 1;
+        padding-left: 40px;
+        border-left: 1px solid var(--glass-border);
+      }
+    }
+
+    /* Profile Image */
+    .profile-img-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 0 20px rgba(26, 188, 156, 0.4);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* Typography */
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      margin-bottom: 10px;
+      line-height: 1.2;
+      background: linear-gradient(90deg, #fff, #1abc9c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      /* Fallback */
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      margin: 25px 0 15px;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    /* Skills Tags */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skill-tag {
+      background: rgba(26, 188, 156, 0.15);
+      /* Tinted primary */
+      color: #1abc9c;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid rgba(26, 188, 156, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .skill-tag:hover {
+      background: rgba(26, 188, 156, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 28px;
+      background-color: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
+      border: 2px solid transparent;
+      /* Reserve space for border */
+      margin-top: 30px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 188, 156, 0.5);
+      background-color: #16a085;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      margin-left: 10px;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(26, 188, 156, 0.1);
+      color: #fff;
+      border-color: #16a085;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
       text-decoration: underline;
+      color: #fff;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Contact Info */
+    .contact-info {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .contact-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      /* Very subtle */
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .contact-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      .content-section {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .skills-container {
+        justify-content: center;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <div class="background-overlay"></div>
+
   <div class="container">
-    <img src="photo.png" alt="Matthew Bowlin">
-    <h2>About Me</h2>
-    <p>I'm Matthew Bowlin, a passionate developer. Starting February 12, 2026, I'll be working as an Information Technology Specialist 4 at NYS Office of Information Technology Services, supporting the Department of Health. My expertise spans Siebel systems, JavaScript, and Python development.</p>
-    <p>I enjoy crafting innovative digital solutions and immersive mobile games like Asteroid Hopper. When I'm not coding, you can find me exploring new technologies and engaging with creative projects.</p>
-    <p><a href="index.html">← Back to Home</a></p>
+    <div class="profile-section">
+      <div class="profile-img-container">
+        <img src="photo.png" alt="Matthew Bowlin" class="profile-img">
+      </div>
+
+      <div class="contact-info">
+        <a href="mailto:MattRageous5@gmail.com" class="contact-button" title="Email me">
+          ✉️ MattRageous5@gmail.com
+        </a>
+        <a href="tel:7184737828" class="contact-button" title="Call me">
+          📞 718-473-7828
+        </a>
+        <a href="Matthew%20Bowlin%20Resume.pdf" class="contact-button" title="Download Resume" target="_blank">
+          📄 Download Resume
+        </a>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h1>Hello, I'm Matthew Bowlin.</h1>
+      <p class="tagline">Developer · Technologist · Creator</p>
+
+      <h2>About Me</h2>
+      <p>
+        I'm a passionate developer dedicated to crafting innovative digital solutions.
+        As a <strong>Project Manager 3</strong> at the NYS Office of Information Technology Services,
+        I support the Department of Health with robust systems.
+      </p>
+      <p>
+        My expertise bridges enterprise systems like Siebel with modern web technologies and game development.
+        Whether it's creating immersive mobile experiences like <em>Asteroid Hopper</em> or building study tools for
+        aspiring IT professionals,
+        I love turning ideas into reality.
+      </p>
+
+      <h2>Skills & Technologies</h2>
+      <div class="skills-container">
+        <!-- Programming & Dev -->
+        <span class="skill-tag">Siebel</span>
+        <span class="skill-tag">OBIEE</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript / HTML / CSS</span>
+        <span class="skill-tag">Kotlin</span>
+        <span class="skill-tag">C#</span>
+        <span class="skill-tag">PL/SQL</span>
+        <span class="skill-tag">Android Development</span>
+        <span class="skill-tag">Jetpack Compose</span>
+
+        <!-- Systems & Platforms -->
+        <span class="skill-tag">Linux / Windows</span>
+        <span class="skill-tag">IBM AS400 / iSeries</span>
+        <span class="skill-tag">Mainframe</span>
+        <span class="skill-tag">Robot / Help Systems</span>
+        <span class="skill-tag">Google Play Console</span>
+
+        <!-- Professional -->
+        <span class="skill-tag">Project Management</span>
+        <span class="skill-tag">System Analysis</span>
+        <span class="skill-tag">IT Operations</span>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <a href="index.html" class="btn">← Back to Home</a>
+        <!-- Optional: <a href="mailto:..." class="btn btn-outline">Contact Me</a> -->
+      </div>
+    </div>
   </div>
+
+  <footer>
+    &copy; <span id="year"></span> MatthewBowlin.com · <a href="privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
+
 </html>
