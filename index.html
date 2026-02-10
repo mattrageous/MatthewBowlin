@@ -1,171 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Bowlin - Developer. Technologist. Creator.</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-592K2HC1Q9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-592K2HC1Q9');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Bowlin - Developer. Technologist. Creator.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-592K2HC1Q9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-592K2HC1Q9');
+  </script>
+
+  <style>
+    :root {
+      --primary: #1abc9c;
+      --secondary: #2c5364;
+      --dark-bg: #0f2027;
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-bg-hover: rgba(255, 255, 255, 0.12);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --text-color: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.7);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, rgba(26, 188, 156, 0.08), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(44, 83, 100, 0.15), transparent 40%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Main Content Wrapper */
+    .main-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0;
+      gap: 60px;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 15px;
+      line-height: 1.1;
+      background: linear-gradient(90deg, #fff, #1abc9c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(26, 188, 156, 0.5);
+      background-color: #16a085;
+    }
+
+    /* Projects Grid */
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: var(--primary);
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: var(--glass-bg-hover);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      background: rgba(26, 188, 156, 0.2);
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .card-arrow {
+      margin-top: auto;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .card:hover .card-arrow {
+      opacity: 1;
+    }
+
+    /* Study System Section */
+    .study-section {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .study-section::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(26, 188, 156, 0.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    .study-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .study-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .study-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .study-tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      width: 100%;
+      padding: 30px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-wrapper {
+        padding: 40px 0;
+        gap: 40px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-  }
-  h1 {
-    font-size: 3em;
-    margin-bottom: 0.3em;
-    letter-spacing: 1px;
-  }
-  p.tagline {
-    font-size: 1.2em;
-    opacity: 0.85;
-    margin-bottom: 30px;
-  }
-  .fade-in {
-    animation: fadeIn 1.5s ease-in forwards;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px; /* controls vertical spacing between sections */
-    max-width: 800px;
-  }
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(10px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .button-group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .button {
-    padding: 14px 28px;
-    font-size: 1.1em;
-    background-color: #1abc9c;
-    color: white;
-    text-decoration: none;
-    border-radius: 16px;
-    box-shadow: 0 0 10px rgba(26, 188, 156, 0.5);
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .button:hover {
-    box-shadow: 0 0 20px rgba(26, 188, 156, 0.9), 0 0 40px rgba(26, 188, 156, 0.6);
-    transform: scale(1.05);
-  }
-  .content-text {
-    max-width: 700px;
-    font-size: 1.05em;
-    line-height: 1.6;
-    opacity: 0.9;
-  }
-  .study-guide-section {
-    margin-top: 40px;
-    padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    max-width: 850px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0,0,0,0.25);
-    margin-bottom: 80px;
-    padding-bottom: 20px;
-  }
-  .study-guide-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  .study-guide-section p {
-    font-size: 1.1em;
-    opacity: 0.85;
-    line-height: 1.6;
-  }
-  .study-guide-section .button {
-    margin-top: 20px;
-    display: inline-block;
-  }
-  footer {
-    position: absolute;
-    bottom: 15px;
-    font-size: 0.9em;
-    opacity: 0.6;
-  }
-  footer a {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-</style>
+
 <body>
-  <div class="fade-in">
-    <h1>Matthew Bowlin</h1>
-    <p class="tagline">Developer. Technologist. Creator.</p>
-    <div class="button-group">
-      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link" target="_blank">
-        Become a Tester
-      </a>
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.bowlin.inc.asteroidhopper&hl=en_US" target="_blank">
-        Download Asteroid Hopper
-      </a>
-      <a class="button" href="https://matthewbowlin.com/mysticpalm" target="_blank">
-        Try MysticPalm
-      </a>
-        <a class="button" href="https://matthewbowlin.com/BIC" target="_blank">
-        Bowlin Interior Cosmology
+
+  <div class="background-overlay"></div>
+
+  <div class="main-wrapper">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Matthew Bowlin</h1>
+      <p class="tagline">Developer · Technologist · Creator</p>
+      <a href="about.html" class="cta-button">Meet Matthew</a>
+    </section>
+
+    <!-- Projects Grid -->
+    <section style="width: 100%;">
+      <div class="projects-grid">
+
+        <!-- Asteroid Hopper -->
+        <a href="https://play.google.com/store/apps/details?id=com.bowlin.inc.asteroidhopper&hl=en_US" target="_blank"
+          class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Asteroid Hopper</div>
+          <div class="card-desc">A fully published family-friendly mobile game available on Google Play.</div>
+          <div class="card-arrow">Download App →</div>
         </a>
-    </div>
-    <div class="content-text">
-      <p>
-        Become a beta tester and help build smarter conversations from the ground up — with exclusive early access to what’s coming next.
-      </p>
-    </div>
-    <a class="button" href="about.html">Meet Matthew</a>
-    
-    <div class="study-guide-section">
-      <h2>NYS IT Exam Prep</h2>
-      <p>
-        Prepare for all major New York State IT Civil Service exams in one unified system:
-        <strong>ITS 3</strong>, <strong>ITS 4</strong>, <strong>MITS 1</strong>, and <strong>MITS 2</strong>.
-      </p>
-      <p>
-        Featuring <strong>1,030 questions</strong> across Systems Analysis, Logical Reasoning, 
-        Administrative Supervision, Tabular Interpretation, Flowcharts, Reports & Documents, 
-        and more. Fully aligned to NYS competencies and exam structures.
-      </p>
-      <a class="button" href="MITS.html">Start the Study System</a>
-    </div>
+
+        <!-- MysticPalm -->
+        <a href="https://matthewbowlin.com/mysticpalm" target="_blank" class="card">
+          <div class="card-icon">🔮</div>
+          <div class="card-title">MysticPalm</div>
+          <div class="card-desc">An immersive web experience. Try it out now.</div>
+          <div class="card-arrow">Visit Project →</div>
+        </a>
+
+        <!-- Interior Cosmology -->
+        <a href="https://matthewbowlin.com/BIC" target="_blank" class="card">
+          <div class="card-icon">🌌</div>
+          <div class="card-title">Bowlin Interior Cosmology</div>
+          <div class="card-desc">Design and documentation for interior cosmology concepts.</div>
+          <div class="card-arrow">Explore →</div>
+        </a>
+
+        <!-- Tester Program -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTP7m3ZiKwcwlNEgXmvWNsZ7kRKe7J3TMUKnxSWb1c6H8TjQ/viewform?usp=sf_link"
+          target="_blank" class="card">
+          <div class="card-icon">🧪</div>
+          <div class="card-title">Become a Tester</div>
+          <div class="card-desc">Help build smarter conversations with exclusive early access.</div>
+          <div class="card-arrow">Join Beta →</div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Study System Highlight -->
+    <section class="study-section">
+      <div class="study-content">
+        <h2 class="study-title">NYS IT Exam Prep</h2>
+        <div class="study-tags">
+          <span class="study-tag">ITS 3</span>
+          <span class="study-tag">ITS 4</span>
+          <span class="study-tag">MITS 1 & 2</span>
+          <span class="study-tag">1,030+ Questions</span>
+        </div>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 25px; line-height: 1.6;">
+          Prepare for all major New York State IT Civil Service exams in one unified system.
+          Fully aligned to NYS competencies.
+        </p>
+        <a href="MITS.html" class="cta-button" style="padding: 12px 28px; font-size: 1rem;">Start Studying</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      &copy; <span id="year"></span> MatthewBowlin.com · <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
   </div>
-    <br>
-  <footer>
-    &copy; <span id="year"></span> MatthewBowlin.com · 
-    <a href="privacy-policy.html">Privacy Policy</a>
-  </footer>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
