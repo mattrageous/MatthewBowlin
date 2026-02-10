@@ -1,94 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowlin Interior Cosmology - Interactive Research Paper</title>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-592K2HC1Q9"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-592K2HC1Q9');
     </script>
-    
+
     <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             /* Cosmic Theme Colors */
-            --primary: #1a0033;        /* Deep Space Purple */
-            --secondary: #4a148c;      /* Royal Purple */
-            --accent: #ffd700;         /* Cosmic Gold */
-            --success: #00c853;        /* Success Green */
-            --warning: #ff6f00;        /* Warning Orange */
-            --error: #d32f2f;          /* Error Red */
-            
+            --primary: #1a0033;
+            /* Deep Space Purple */
+            --secondary: #4a148c;
+            /* Royal Purple */
+            --accent: #ffd700;
+            /* Cosmic Gold */
+            --success: #00c853;
+            /* Success Green */
+            --warning: #ff6f00;
+            /* Warning Orange */
+            --error: #d32f2f;
+            /* Error Red */
+
             /* Modern Neutrals */
-            --background: #0a0014;     /* Deep Dark Space */
-            --surface: #1a1a2e;        /* Card Background */
-            --surface-light: #2a2a40;  /* Elevated Surface */
-            --text: #f7fafc;           /* Primary Text */
-            --text-muted: #a0aec0;     /* Muted Text */
-            --text-dark: #4a5568;      /* Dark Text */
-            --border: #2d3748;         /* Border Color */
-            --border-light: #4a5568;   /* Light Border */
-            
+            --background: #0a0014;
+            /* Deep Dark Space */
+            --surface: rgba(26, 26, 46, 0.6);
+            /* Card Background */
+            --surface-light: rgba(42, 42, 64, 0.6);
+            /* Elevated Surface */
+            --text: #f7fafc;
+            /* Primary Text */
+            --text-muted: #a0aec0;
+            /* Muted Text */
+            --text-dark: #4a5568;
+            /* Dark Text */
+            --border: rgba(255, 255, 255, 0.1);
+            /* Border Color */
+
             /* Glass Effects */
-            --glass: rgba(26, 26, 46, 0.8);
-            --glass-border: rgba(255, 215, 0, 0.1);
-            --blur: blur(20px);
-            
+            --glass: rgba(26, 26, 46, 0.6);
+            --glass-border: rgba(255, 215, 0, 0.15);
+            --blur: blur(16px);
+
             /* Shadows */
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.2);
-            
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.15);
+
             /* Gradients */
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             --gradient-accent: linear-gradient(135deg, var(--accent) 0%, #ff6f00 100%);
-            --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%);
+            --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.0) 100%);
             --gradient-accent-transparent: linear-gradient(135deg, rgba(255, 215, 0, 0.20) 0%, rgba(255, 111, 0, 0.20) 100%);
-            
+
             /* Animation */
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * {
-            box-sizing: border-box;
+        html,
+        body {
+            height: 100%;
             margin: 0;
             padding: 0;
         }
 
-        html, body {
-            height: 100%;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-
         body {
-            background: var(--background);
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(74, 20, 140, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(74, 20, 140, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(138, 43, 226, 0.15) 0%, transparent 50%);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
             color: var(--text);
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -117,8 +133,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .title {
@@ -141,7 +164,7 @@
         }
 
         /* Card Component */
-        .card {
+        .glass-card {
             background: var(--glass);
             backdrop-filter: var(--blur);
             border: 1px solid var(--glass-border);
@@ -154,7 +177,7 @@
             margin-bottom: 2rem;
         }
 
-        .card::before {
+        .glass-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -165,7 +188,7 @@
             opacity: 0.8;
         }
 
-        .card:hover {
+        .glass-card:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-xl);
             border-color: rgba(255, 215, 0, 0.3);
@@ -235,7 +258,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
             transition: left 0.5s ease;
         }
 
@@ -397,8 +420,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Footer */
@@ -433,56 +461,57 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
         <header class="header">
+            <div style="text-align: left; margin-bottom: 20px;">
+                <a href="/" class="btn btn-secondary">← Back to Home</a>
+            </div>
             <div class="logo">🌌</div>
             <h1 class="title">Bowlin Interior Cosmology</h1>
             <p class="subtitle">
                 A Geometric Alternative to ΛCDM - Interactive Research Paper with Python Simulations
             </p>
-            
+
             <div class="author-info">
                 <strong>Matthew Bowlin</strong><br>
                 Independent Research<br>
                 <a href="mailto:Mattrageous5@gmail.com" style="color: var(--accent);">Mattrageous5@gmail.com</a>
             </div>
-            
+
             <div>
                 <span class="status-badge">✅ Publication Ready</span>
                 <span class="status-badge arxiv-badge">📄 arXiv: Coming Soon</span>
                 <span class="status-badge validation-badge">🔬 4/4 AI Validation</span>
             </div>
-            
+
             <div class="download-buttons">
                 <a href="Bowlin Interior Cosmology.pdf" class="btn btn-primary" download>📥 Download Paper (PDF)</a>
                 <a href="Bowlin Interior Cosmology.docx" class="btn btn-secondary" download>📄 Word Document</a>
                 <a href="#simulator" class="btn btn-success">🚀 Try Simulator</a>
             </div>
-            <div class="download-buttons">
-                <a href="index.html" class="btn btn-secondary">🏠 Back to Home</a>
-            </div>
         </header>
 
         <!-- Abstract Section -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Abstract</h2>
             <p style="margin-bottom: 1rem;">
-                We present Bowlin Interior Cosmology (BIC), a novel cosmological framework proposing that our observable 
-                universe exists within the interior of an accreting black hole. In this model, cosmic expansion emerges 
-                from the growth of the parent black hole's event horizon rather than from spatial expansion, with the 
+                We present Bowlin Interior Cosmology (BIC), a novel cosmological framework proposing that our observable
+                universe exists within the interior of an accreting black hole. In this model, cosmic expansion emerges
+                from the growth of the parent black hole's event horizon rather than from spatial expansion, with the
                 Hubble parameter given by H = Ṁ/M, where M is the black hole mass and Ṁ is its accretion rate.
             </p>
             <p>
-                The model naturally produces H₀ = 73.5 km/s/Mpc from realistic black hole accretion histories, resolving 
-                the Hubble tension between SH0ES and Planck measurements. BIC resolves nine major cosmological anomalies 
+                The model naturally produces H₀ = 73.5 km/s/Mpc from realistic black hole accretion histories, resolving
+                the Hubble tension between SH0ES and Planck measurements. BIC resolves nine major cosmological anomalies
                 using only five free parameters, with no requirement for exotic fields or undetected particles.
             </p>
         </div>
 
         <!-- Key Achievements Section -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1.5rem;">Key Achievements</h2>
             <div class="highlights">
                 <div class="highlight-card">
@@ -505,7 +534,7 @@
         </div>
 
         <!-- Problems Solved Section -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Problems Solved</h2>
             <ul style="font-size: 1.1em; line-height: 2; list-style-position: inside;">
                 <li>✅ <strong>Hubble Tension:</strong> 4-5σ discrepancy resolved via dynamic H(z)</li>
@@ -521,7 +550,7 @@
         </div>
 
         <!-- AI Validation Results -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">AI Validation Results</h2>
             <table class="validation-table">
                 <thead>
@@ -560,19 +589,19 @@
         </div>
 
         <!-- Interactive Simulator Section -->
-        <div class="card" id="simulator">
+        <div class="glass-card" id="simulator">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">🚀 Interactive Cosmology Simulator</h2>
             <p style="margin-bottom: 20px;">
-                Adjust the parameters below to see how different accretion histories affect cosmic expansion. 
+                Adjust the parameters below to see how different accretion histories affect cosmic expansion.
                 The simulation calculates H(z) using the BIC framework: H = Ṁ/M.
             </p>
-            
+
             <div class="simulator">
                 <div id="loading" class="loading">
                     <div class="spinner"></div>
                     Loading Python engine (Pyodide)... This may take 10-15 seconds on first load.
                 </div>
-                
+
                 <div id="controls-container" style="display: none;">
                     <h3 style="color: var(--accent); margin-bottom: 1rem;">Model Parameters</h3>
                     <div class="controls">
@@ -581,52 +610,52 @@
                             <input type="range" id="A" min="0.5" max="2.0" step="0.1" value="1.0">
                             <div class="value-display" id="A-value">1.0</div>
                         </div>
-                        
+
                         <div class="control-group">
                             <label for="B">Merger Amplitude (B):</label>
                             <input type="range" id="B" min="0.0" max="0.5" step="0.05" value="0.2">
                             <div class="value-display" id="B-value">0.2</div>
                         </div>
-                        
+
                         <div class="control-group">
                             <label for="tau">Merger Timescale (τ in Gyr):</label>
                             <input type="range" id="tau" min="1.0" max="8.0" step="0.5" value="4.0">
                             <div class="value-display" id="tau-value">4.0 Gyr</div>
                         </div>
-                        
+
                         <div class="control-group">
                             <label for="t_shift">Merger Time (t_shift in Gyr):</label>
                             <input type="range" id="t_shift" min="8.0" max="12.0" step="0.5" value="9.7">
                             <div class="value-display" id="t_shift-value">9.7 Gyr</div>
                         </div>
                     </div>
-                    
+
                     <button id="run-simulation" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
                         🔄 Run Simulation
                     </button>
                 </div>
-                
+
                 <div id="plot"></div>
                 <div id="results" style="margin-top: 20px;"></div>
             </div>
         </div>
 
         <!-- Testable Predictions -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Testable Predictions</h2>
-            
+
             <h3 style="color: var(--text); margin-top: 1.5rem;">Short-Term (6-12 months)</h3>
             <ul style="line-height: 2; margin-bottom: 1.5rem;">
                 <li><strong>Test #1:</strong> Galaxy spin axes correlate with CMB "Axis of Evil" direction</li>
                 <li><strong>Test #2:</strong> Orbital angular momentum dependence in nuclear abundances</li>
             </ul>
-            
+
             <h3 style="color: var(--text);">Medium-Term (2027-2030)</h3>
             <ul style="line-height: 2; margin-bottom: 1.5rem;">
                 <li><strong>Test #3:</strong> w(z) deviates from -1 (Euclid measurements)</li>
                 <li><strong>Test #4:</strong> fσ₈(z) shows characteristic "kink" at z ≈ 0.6</li>
             </ul>
-            
+
             <h3 style="color: var(--text);">Long-Term (2030+)</h3>
             <ul style="line-height: 2;">
                 <li><strong>Test #5:</strong> High-ℓ CMB peaks show anharmonic drift</li>
@@ -635,9 +664,10 @@
         </div>
 
         <!-- Citation Section -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Citation</h2>
-            <div style="background: var(--surface); padding: 20px; border-radius: 8px; font-family: monospace; border: 1px solid var(--border);">
+            <div
+                style="background: var(--surface); padding: 20px; border-radius: 8px; font-family: monospace; border: 1px solid var(--border);">
                 <strong>BibTeX:</strong>
                 <pre style="margin-top: 10px; color: var(--text-muted); overflow-x: auto;">
 @article{Bowlin2025BIC,
@@ -654,13 +684,15 @@
         </div>
 
         <!-- Contact Section -->
-        <div class="card">
+        <div class="glass-card">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Contact & Collaboration</h2>
             <p style="font-size: 1.1em; line-height: 2;">
                 <strong>Author:</strong> Matthew Bowlin<br>
-                <strong>Email:</strong> <a href="mailto:Mattrageous5@gmail.com" style="color: var(--accent);">Mattrageous5@gmail.com</a><br>
+                <strong>Email:</strong> <a href="mailto:Mattrageous5@gmail.com"
+                    style="color: var(--accent);">Mattrageous5@gmail.com</a><br>
                 <strong>Location:</strong> Ravena, New York, United States<br>
-                <strong>Website:</strong> <a href="https://MatthewBowlin.com" style="color: var(--accent);">MatthewBowlin.com</a>
+                <strong>Website:</strong> <a href="https://MatthewBowlin.com"
+                    style="color: var(--accent);">MatthewBowlin.com</a>
             </p>
             <p style="margin-top: 20px;">
                 Interested in collaboration, peer review, or discussing the theory? Feel free to reach out!
@@ -669,71 +701,75 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Matthew Bowlin | Bowlin Interior Cosmology</p>
-        <p style="margin-top: 10px;">
+        <p>&copy; <span id="year"></span> MatthewBowlin.com | Bowlin Interior Cosmology</p>
+        <p style="margin-top: 10px; font-style: italic; opacity: 0.8;">
             "Replacing the dark epicycles of ΛCDM with the clean lines of black hole geometry"
         </p>
     </footer>
 
     <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
         let pyodide;
-        
+
         // Initialize Pyodide
         async function initPyodide() {
             try {
                 pyodide = await loadPyodide();
                 await pyodide.loadPackage(['numpy']);
-                
+
                 // Set up Python environment with json module
                 pyodide.runPython(`
                     import numpy as np
                     import json
                     print("Python environment ready")
                 `);
-                
+
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('controls-container').style.display = 'block';
                 console.log('Pyodide loaded successfully');
-                
+
                 // Run initial simulation
                 runSimulation();
-                
+
             } catch (error) {
-                document.getElementById('loading').innerHTML = 
+                document.getElementById('loading').innerHTML =
                     '<p style="color: var(--error);">Error loading Python engine. Please refresh the page.</p>';
                 console.error('Pyodide load error:', error);
             }
         }
-        
+
         // Update value displays
         document.getElementById('A').addEventListener('input', (e) => {
             document.getElementById('A-value').textContent = e.target.value;
         });
-        
+
         document.getElementById('B').addEventListener('input', (e) => {
             document.getElementById('B-value').textContent = e.target.value;
         });
-        
+
         document.getElementById('tau').addEventListener('input', (e) => {
             document.getElementById('tau-value').textContent = e.target.value + ' Gyr';
         });
-        
+
         document.getElementById('t_shift').addEventListener('input', (e) => {
             document.getElementById('t_shift-value').textContent = e.target.value + ' Gyr';
         });
-        
+
         // Run simulation function
         async function runSimulation() {
             if (!pyodide) {
                 alert('Python engine not loaded yet. Please wait...');
                 return;
             }
-            
+
             const A = parseFloat(document.getElementById('A').value);
             const B = parseFloat(document.getElementById('B').value);
             const tau = parseFloat(document.getElementById('tau').value);
             const t_shift = parseFloat(document.getElementById('t_shift').value);
-            
+
             const pythonCode = `
 import numpy as np
 import json
@@ -804,12 +840,12 @@ result = {
 json.dumps(result)
 
 `;
-            
+
             try {
                 // Run Python code and get JSON string
                 const jsonString = await pyodide.runPythonAsync(pythonCode);
                 const data = JSON.parse(jsonString);
-                
+
                 // Plot using Plotly
                 const trace = {
                     x: data.z,
@@ -821,7 +857,7 @@ json.dumps(result)
                         width: 3
                     }
                 };
-                
+
                 // Add observational data points
                 const planck = {
                     x: [0],
@@ -834,7 +870,7 @@ json.dumps(result)
                         symbol: 'diamond'
                     }
                 };
-                
+
                 const shoes = {
                     x: [0],
                     y: [73.0],
@@ -846,7 +882,7 @@ json.dumps(result)
                         symbol: 'square'
                     }
                 };
-                
+
                 const layout = {
                     title: {
                         text: 'Hubble Parameter H(z) Evolution',
@@ -875,9 +911,9 @@ json.dumps(result)
                         font: { color: '#f7fafc' }
                     }
                 };
-                
-                Plotly.newPlot('plot', [trace, planck, shoes], layout, {responsive: true});
-                
+
+                Plotly.newPlot('plot', [trace, planck, shoes], layout, { responsive: true });
+
                 // Display results
                 document.getElementById('results').innerHTML = `
                     <h3 style="color: var(--accent);">Results:</h3>
@@ -888,18 +924,19 @@ json.dumps(result)
                         <strong>Tension Resolution:</strong> ${Math.abs(data.H0 - 70).toFixed(1)} km/s/Mpc from midpoint
                     </p>
                 `;
-                
+
             } catch (error) {
                 alert('Simulation error: ' + error.message);
                 console.error('Simulation error:', error);
             }
         }
-        
+
         // Attach event listener to run button
         document.getElementById('run-simulation').addEventListener('click', runSimulation);
-        
+
         // Initialize on page load
         window.addEventListener('load', initPyodide);
     </script>
 </body>
+
 </html>
