@@ -1020,7 +1020,7 @@
       <div class="logo">🗽</div>
       <h1 class="title">NYS Information Technology Civil Service Study Guide</h1>
       <p class="subtitle">
-        A unified study system for New York State ITS-3, ITS-4, MITS-1, and MITS-2 exams,
+        A unified study system for New York State ITS-3, ITS-4, MITS-1, MITS-2, and BSA-2 exams,
         featuring targeted practice questions and coverage of all core test competencies.
       </p>
     </header>
@@ -1063,6 +1063,7 @@
         <button class="filter-btn" data-exam="its4">💻 Information Technology Specialist 4 Exam</button>
         <button class="filter-btn" data-exam="mits1">🏛️ Manager Information Technology Services 1 Exam</button>
         <button class="filter-btn" data-exam="mits2">🏛️ Manager Information Technology Services 2 Exam</button>
+        <button class="filter-btn" data-exam="bsa2">📋 Business Systems Analyst 2 Exam</button>
       </div>
 
       <!-- Parts Selection (Level 2) - Hidden by default -->
@@ -1197,6 +1198,88 @@
       <strong>no third-party resource can guarantee a passing score</strong>.
       Your results will depend on your overall preparation and understanding of the material.
     </p>
+    <!-- Exam Request Card -->
+    <div class="card" id="requestCard" style="margin-top: 1.5rem; border: 1px solid rgba(255,209,0,0.2);">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+        <span style="font-size: 1.4rem;">📬</span>
+        <div>
+          <div style="font-weight: 600; font-size: 1rem; color: var(--text);">Request an Exam</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Don't see your civil service exam? Submit the announcement link and I'll add it.</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: flex-end;">
+        <div style="flex: 1; min-width: 220px;">
+          <label for="examRequestUrl" style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+            cs.ny.gov Exam Announcement URL
+          </label>
+          <input
+            id="examRequestUrl"
+            type="url"
+            placeholder="https://www.cs.ny.gov/examannouncements/..."
+            style="
+              width: 100%;
+              padding: 0.6rem 0.85rem;
+              background: rgba(255,255,255,0.05);
+              border: 1px solid var(--glass-border);
+              border-radius: 8px;
+              color: var(--text);
+              font-size: 0.875rem;
+              outline: none;
+              box-sizing: border-box;
+              transition: border-color 0.2s;
+            "
+            onfocus="this.style.borderColor='var(--accent)'"
+            onblur="this.style.borderColor='var(--glass-border)'"
+          />
+        </div>
+        <div style="min-width: 140px;">
+          <label for="examRequestNote" style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+            Exam title (optional)
+          </label>
+          <input
+            id="examRequestNote"
+            type="text"
+            placeholder="e.g. IT Specialist 5"
+            style="
+              width: 100%;
+              padding: 0.6rem 0.85rem;
+              background: rgba(255,255,255,0.05);
+              border: 1px solid var(--glass-border);
+              border-radius: 8px;
+              color: var(--text);
+              font-size: 0.875rem;
+              outline: none;
+              box-sizing: border-box;
+              transition: border-color 0.2s;
+            "
+            onfocus="this.style.borderColor='var(--accent)'"
+            onblur="this.style.borderColor='var(--glass-border)'"
+          />
+        </div>
+        <button
+          id="examRequestBtn"
+          onclick="submitExamRequest()"
+          style="
+            padding: 0.6rem 1.25rem;
+            background: var(--gradient-accent);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: opacity 0.2s;
+          "
+          onmouseover="this.style.opacity='0.85'"
+          onmouseout="this.style.opacity='1'"
+        >
+          Submit Request
+        </button>
+      </div>
+      <div id="examRequestStatus" style="margin-top: 0.6rem; font-size: 0.8rem; display: none;"></div>
+    </div>
+
     <!-- Footer -->
     <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.875rem;">
       <p>&copy; <span id="year"></span> MatthewBowlin.com | NYS IT Study Guide</p>
@@ -1208,6 +1291,62 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* --------------------------------------------- */
+    /* Exam Request Submission                        */
+    /* --------------------------------------------- */
+    function submitExamRequest() {
+      const urlInput = document.getElementById('examRequestUrl');
+      const noteInput = document.getElementById('examRequestNote');
+      const statusEl = document.getElementById('examRequestStatus');
+      const btn = document.getElementById('examRequestBtn');
+
+      const url = urlInput.value.trim();
+      const note = noteInput.value.trim();
+
+      // Basic validation
+      if (!url) {
+        statusEl.style.display = 'block';
+        statusEl.style.color = 'var(--error)';
+        statusEl.textContent = '⚠️ Please paste the exam announcement URL before submitting.';
+        return;
+      }
+      if (!url.startsWith('http')) {
+        statusEl.style.display = 'block';
+        statusEl.style.color = 'var(--error)';
+        statusEl.textContent = '⚠️ Please enter a valid URL starting with https://';
+        return;
+      }
+
+      // Build mailto link – opens user's email client pre-filled
+      const subject = encodeURIComponent('NYS Study Guide – Exam Request' + (note ? ': ' + note : ''));
+      const body = encodeURIComponent(
+        'Hi Matthew,\n\nI\'d like to request the following exam be added to the NYS IT Study Guide:\n\n' +
+        (note ? 'Exam: ' + note + '\n' : '') +
+        'Announcement URL: ' + url + '\n\n' +
+        'Thanks!'
+      );
+      const mailtoLink = 'mailto:matt@matthewbowlin.com?subject=' + subject + '&body=' + body;
+
+      // Open email client
+      window.location.href = mailtoLink;
+
+      // Show confirmation
+      btn.disabled = true;
+      btn.style.opacity = '0.5';
+      statusEl.style.display = 'block';
+      statusEl.style.color = 'var(--success)';
+      statusEl.textContent = '✅ Opening your email client with the request pre-filled. Thank you!';
+
+      // Reset after 8 seconds
+      setTimeout(() => {
+        urlInput.value = '';
+        noteInput.value = '';
+        statusEl.style.display = 'none';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }, 8000);
+    }
     /* --------------------------------------------- */
     /* 1. Store original quiz HTML                   */
     /* --------------------------------------------- */
@@ -1226,7 +1365,10 @@
       part5: BASE_URL + "part5.json",
       "part5.5": BASE_URL + "part8.json",
       part6: BASE_URL + "part6.json",
-      part7: BASE_URL + "part7.json"
+      part7: BASE_URL + "part7.json",
+      part9: BASE_URL + "part9.json",
+      part10: BASE_URL + "part10.json",
+      part11: BASE_URL + "part11.json"
     };
 
     /* --------------------------------------------- */
@@ -1282,6 +1424,13 @@
         { part: 'part5', title: 'Part 5 – Analyzing & Evaluating Information' },
         { part: 'part6', title: 'Part 6 – Reports & Official Documents' },
         { part: 'part7', title: 'Part 7 – Administrative Supervision' }
+      ],
+      bsa2: [
+        { part: 'part9',  title: 'Part 9 – Business Analysis (BABOK)' },
+        { part: 'part7',  title: 'Part 7 – Supervision' },
+        { part: 'part10', title: 'Part 10 – Project Management Fundamentals' },
+        { part: 'part6',  title: 'Part 6 – Preparing Written Material' },
+        { part: 'part11', title: 'Part 11 – Facilitating Communications' }
       ]
     };
 
@@ -1391,7 +1540,8 @@
         its3: 'All ITS-3 Parts',
         its4: 'All ITS-4 Parts',
         mits1: 'All MITS-1 Parts',
-        mits2: 'All MITS-2 Parts'
+        mits2: 'All MITS-2 Parts',
+        bsa2: 'All BSA-2 Parts'
       };
 
       // Add "All Parts" option for the selected exam
