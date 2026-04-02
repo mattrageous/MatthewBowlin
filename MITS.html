@@ -1426,10 +1426,10 @@
         { part: 'part7', title: 'Part 7 – Administrative Supervision' }
       ],
       bsa2: [
-        { part: 'part6',  title: 'Part 6 – Preparing Written Material' },
-        { part: 'part7',  title: 'Part 7 – Supervision' },
         { part: 'part9',  title: 'Part 9 – Business Analysis (BABOK)' },
+        { part: 'part7',  title: 'Part 7 – Supervision' },
         { part: 'part10', title: 'Part 10 – Project Management Fundamentals' },
+        { part: 'part6',  title: 'Part 6 – Preparing Written Material' },
         { part: 'part11', title: 'Part 11 – Facilitating Communications' }
       ]
     };
@@ -2069,6 +2069,9 @@
         jsonData.analyzing_and_evaluating_information ||
         jsonData.preparing_reports_and_official_documents ||
         jsonData.administrative_supervision ||
+        jsonData.business_analysis_babok_questions ||
+        jsonData.project_management_fundamentals_questions ||
+        jsonData.facilitating_communications_questions ||
         jsonData;
 
       if (!Array.isArray(arr)) return [];
@@ -2524,11 +2527,20 @@ Thank you!
           else if (lastFilter === 'its4') filterLabel = 'ITS-4';
           else if (lastFilter === 'mits1') filterLabel = 'MITS-1';
           else if (lastFilter === 'mits2') filterLabel = 'MITS-2';
+          else if (lastFilter === 'bsa2') filterLabel = 'BSA-2';
           else if (lastFilter.startsWith('part')) {
             const partLabels = {
-              'part1': 'Part 1', 'part2': 'Part 2', 'part3': 'Part 3',
-              'part4': 'Part 4', 'part5': 'Part 5', 'part5.5': 'Part 5.5',
-              'part6': 'Part 6', 'part7': 'Part 7'
+              'part1': 'Part 1 – Systems Analysis & Design',
+              'part2': 'Part 2 – Interpreting Tabular Data',
+              'part3': 'Part 3 – Logical Reasoning with Flowcharts',
+              'part4': 'Part 4 – Administrative Principles',
+              'part5': 'Part 5 – Analyzing & Evaluating Information',
+              'part5.5': 'Part 5.5 – Evaluating Conclusions from Facts',
+              'part6': 'Part 6 – Reports & Official Documents',
+              'part7': 'Part 7 – Administrative Supervision',
+              'part9': 'Part 9 – Business Analysis (BABOK)',
+              'part10': 'Part 10 – Project Management Fundamentals',
+              'part11': 'Part 11 – Facilitating Communications'
             };
             filterLabel = partLabels[lastFilter] || lastFilter;
           }
@@ -2649,6 +2661,11 @@ Thank you!
         // ITS-4: Parts 1, 2, 3, 4, 5
         filteredQuestions = questionsDB.filter(q =>
           ['part1', 'part2', 'part3', 'part4', 'part5'].includes(q.part)
+        );
+      } else if (currentFilter === 'bsa2') {
+        // BSA-2: Parts 9, 7, 10, 6, 11
+        filteredQuestions = questionsDB.filter(q =>
+          ['part9', 'part7', 'part10', 'part6', 'part11'].includes(q.part)
         );
       } else if (currentFilter.startsWith('part')) {
         filteredQuestions = questionsDB.filter(q => q.part === currentFilter);
