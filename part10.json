@@ -1,0 +1,1104 @@
+{
+  "project_management_fundamentals_questions": [
+    {
+      "id": 10000,
+      "question": "A project is BEST defined as which of the following?",
+      "options": [
+        "An ongoing operational function with a permanent team",
+        "A temporary endeavor undertaken to create a unique product, service, or result",
+        "A recurring annual process managed by a standing committee",
+        "A continuous improvement program with no defined end date"
+      ],
+      "answer": "A temporary endeavor undertaken to create a unique product, service, or result"
+    },
+    {
+      "id": 10001,
+      "question": "The triple constraint of project management refers to:",
+      "options": [
+        "People, process, and technology",
+        "Scope, schedule, and cost \u2013 balanced against quality",
+        "Strategy, execution, and governance",
+        "Planning, monitoring, and closing"
+      ],
+      "answer": "Scope, schedule, and cost \u2013 balanced against quality"
+    },
+    {
+      "id": 10002,
+      "question": "A project baseline is MOST accurately described as:",
+      "options": [
+        "The original project charter before any revisions",
+        "The approved version of a project plan component used as a reference point for measuring performance",
+        "The project schedule before stakeholder review",
+        "The final deliverable submitted to the sponsor"
+      ],
+      "answer": "The approved version of a project plan component used as a reference point for measuring performance"
+    },
+    {
+      "id": 10003,
+      "question": "Which document formally authorizes a project and grants the project manager authority to apply organizational resources?",
+      "options": [
+        "Project management plan",
+        "Statement of work",
+        "Project charter",
+        "Risk register"
+      ],
+      "answer": "Project charter"
+    },
+    {
+      "id": 10004,
+      "question": "A project's 'deliverable' is BEST described as:",
+      "options": [
+        "A task assigned to a team member",
+        "Any unique, verifiable product, result, or capability produced as an output of a project activity",
+        "A milestone with no associated work",
+        "A project status report"
+      ],
+      "answer": "Any unique, verifiable product, result, or capability produced as an output of a project activity"
+    },
+    {
+      "id": 10005,
+      "question": "Which statement BEST describes the difference between a project and a program?",
+      "options": [
+        "Programs are smaller in scope than projects",
+        "A program is a group of related projects managed in a coordinated way to obtain benefits not available from managing them individually",
+        "Projects are always part of a program",
+        "Programs do not require a charter"
+      ],
+      "answer": "A program is a group of related projects managed in a coordinated way to obtain benefits not available from managing them individually"
+    },
+    {
+      "id": 10006,
+      "question": "A project's 'critical path' is defined as:",
+      "options": [
+        "The sequence of tasks with the most resources assigned",
+        "The sequence of scheduled activities that determines the longest path through the project, defining the minimum project duration",
+        "The path with the most risk",
+        "The path connecting all milestones"
+      ],
+      "answer": "The sequence of scheduled activities that determines the longest path through the project, defining the minimum project duration"
+    },
+    {
+      "id": 10007,
+      "question": "'Float' (or slack) in project scheduling refers to:",
+      "options": [
+        "The contingency budget reserved for risk events",
+        "The amount of time a task can be delayed without delaying the project's completion date or a successor task's early start",
+        "The number of unassigned resources on the project",
+        "Buffer time added arbitrarily to each task"
+      ],
+      "answer": "The amount of time a task can be delayed without delaying the project's completion date or a successor task's early start"
+    },
+    {
+      "id": 10008,
+      "question": "In Critical Path Method (CPM), an activity with zero float:",
+      "options": [
+        "Can be delayed without affecting the project end date",
+        "Has no dependencies",
+        "Lies on the critical path and any delay will delay the project",
+        "Is a risk that has been mitigated"
+      ],
+      "answer": "Lies on the critical path and any delay will delay the project"
+    },
+    {
+      "id": 10009,
+      "question": "A project has four tasks: A (5 days, no predecessor), B (3 days, follows A), C (7 days, follows A), D (2 days, follows B and C). What is the critical path duration?",
+      "options": [
+        "10 days",
+        "12 days",
+        "14 days",
+        "9 days"
+      ],
+      "answer": "14 days"
+    },
+    {
+      "id": 10010,
+      "question": "The Program Evaluation and Review Technique (PERT) differs from CPM primarily in that PERT:",
+      "options": [
+        "Only uses one time estimate per task",
+        "Uses three time estimates (optimistic, most likely, pessimistic) to address schedule uncertainty",
+        "Does not identify the critical path",
+        "Is used only for construction projects"
+      ],
+      "answer": "Uses three time estimates (optimistic, most likely, pessimistic) to address schedule uncertainty"
+    },
+    {
+      "id": 10011,
+      "question": "Using PERT, a task has an optimistic estimate of 4 days, a most likely estimate of 6 days, and a pessimistic estimate of 14 days. What is the PERT expected duration?",
+      "options": [
+        "6 days",
+        "7 days",
+        "8 days",
+        "9 days"
+      ],
+      "answer": "7 days"
+    },
+    {
+      "id": 10012,
+      "question": "A 'Finish-to-Start' (FS) dependency with a lag of 3 days means:",
+      "options": [
+        "The successor task must finish 3 days after the predecessor finishes",
+        "The successor task cannot start until 3 days after the predecessor finishes",
+        "The successor task must finish 3 days before the predecessor starts",
+        "The predecessor task must wait 3 days before starting"
+      ],
+      "answer": "The successor task cannot start until 3 days after the predecessor finishes"
+    },
+    {
+      "id": 10013,
+      "question": "Fast tracking a project schedule means:",
+      "options": [
+        "Replacing all tasks with automated processes",
+        "Performing phases or activities in parallel that were originally planned sequentially, accepting increased risk",
+        "Adding more resources to reduce task durations",
+        "Eliminating non-critical tasks from the schedule"
+      ],
+      "answer": "Performing phases or activities in parallel that were originally planned sequentially, accepting increased risk"
+    },
+    {
+      "id": 10014,
+      "question": "Crashing a project schedule involves:",
+      "options": [
+        "Eliminating scope to meet the deadline",
+        "Adding resources (often at increased cost) to reduce the duration of critical path activities",
+        "Removing non-critical activities from the plan",
+        "Extending the project deadline"
+      ],
+      "answer": "Adding resources (often at increased cost) to reduce the duration of critical path activities"
+    },
+    {
+      "id": 10015,
+      "question": "A Gantt chart PRIMARILY communicates:",
+      "options": [
+        "Project budget and cost variances",
+        "Task dependencies using network logic only",
+        "The project schedule showing tasks, durations, and time periods in bar chart format",
+        "Risk probability and impact scores"
+      ],
+      "answer": "The project schedule showing tasks, durations, and time periods in bar chart format"
+    },
+    {
+      "id": 10016,
+      "question": "A Request for Proposal (RFP) differs from a Request for Quotation (RFQ) in that an RFP:",
+      "options": [
+        "Requests a fixed price for a commodity product with defined specifications",
+        "Invites vendors to propose solutions and methodologies for a more complex requirement where the solution is not fully defined",
+        "Is only used for construction projects",
+        "Requires no vendor response timeline"
+      ],
+      "answer": "Invites vendors to propose solutions and methodologies for a more complex requirement where the solution is not fully defined"
+    },
+    {
+      "id": 10017,
+      "question": "Which evaluation criterion is MOST important when assessing vendor bids for a complex IT project?",
+      "options": [
+        "Alphabetical order of vendor names",
+        "A weighted scoring matrix that evaluates technical approach, past performance, staffing, and cost against defined requirements",
+        "The vendor's geographic proximity to the agency",
+        "The vendor's marketing materials"
+      ],
+      "answer": "A weighted scoring matrix that evaluates technical approach, past performance, staffing, and cost against defined requirements"
+    },
+    {
+      "id": 10018,
+      "question": "A project manager receives two bids: Vendor A at $500,000 with a 10-month timeline and Vendor B at $350,000 with an 18-month timeline. The project has a hard deadline in 12 months and the cost of delay is $80,000/month. Which vendor provides better value?",
+      "options": [
+        "Vendor B because the initial cost is lower",
+        "Vendor A because it meets the deadline and avoids $480,000 in potential delay costs",
+        "Vendor B because vendors should always be selected on price",
+        "Neither vendor meets the requirements"
+      ],
+      "answer": "Vendor A because it meets the deadline and avoids $480,000 in potential delay costs"
+    },
+    {
+      "id": 10019,
+      "question": "A Statement of Work (SOW) in a procurement context MUST include which essential element?",
+      "options": [
+        "The vendor's internal organizational chart",
+        "A precise description of the work to be performed, deliverables, and acceptance criteria",
+        "The project manager's biography",
+        "A list of past projects unrelated to the current contract"
+      ],
+      "answer": "A precise description of the work to be performed, deliverables, and acceptance criteria"
+    },
+    {
+      "id": 10020,
+      "question": "During bid evaluation, a vendor's response is technically superior but 40% more expensive than the next best proposal. A project manager should:",
+      "options": [
+        "Automatically select the lower-cost vendor",
+        "Conduct a cost-benefit analysis to determine whether the technical superiority justifies the additional cost relative to project risk",
+        "Select the higher-cost vendor without analysis",
+        "Request that both vendors lower their prices to the same level"
+      ],
+      "answer": "Conduct a cost-benefit analysis to determine whether the technical superiority justifies the additional cost relative to project risk"
+    },
+    {
+      "id": 10021,
+      "question": "Earned Value Management (EVM) integrates which three dimensions of project performance?",
+      "options": [
+        "Quality, risk, and stakeholder satisfaction",
+        "Planned value (PV), earned value (EV), and actual cost (AC)",
+        "Scope, resources, and procurement",
+        "Budget, schedule, and communications"
+      ],
+      "answer": "Planned value (PV), earned value (EV), and actual cost (AC)"
+    },
+    {
+      "id": 10022,
+      "question": "A project has a Planned Value (PV) of $100,000, an Earned Value (EV) of $80,000, and an Actual Cost (AC) of $90,000. What is the Schedule Performance Index (SPI)?",
+      "options": [
+        "0.89",
+        "0.80",
+        "1.25",
+        "1.12"
+      ],
+      "answer": "0.80"
+    },
+    {
+      "id": 10023,
+      "question": "Using the same data as the previous question (PV=$100K, EV=$80K, AC=$90K), what is the Cost Performance Index (CPI)?",
+      "options": [
+        "0.80",
+        "0.89",
+        "1.25",
+        "1.13"
+      ],
+      "answer": "0.89"
+    },
+    {
+      "id": 10024,
+      "question": "A project with a CPI of 0.85 and an SPI of 0.92 indicates which condition?",
+      "options": [
+        "The project is over budget and behind schedule",
+        "The project is under budget and ahead of schedule",
+        "The project is on budget but behind schedule",
+        "The project is over budget and ahead of schedule"
+      ],
+      "answer": "The project is over budget and behind schedule"
+    },
+    {
+      "id": 10025,
+      "question": "A project status report shows a Schedule Variance (SV) of -$15,000. This means:",
+      "options": [
+        "The project has spent $15,000 less than planned",
+        "The project has accomplished $15,000 less work than planned at this point in time",
+        "The project is $15,000 over budget",
+        "The schedule has been compressed by $15,000"
+      ],
+      "answer": "The project has accomplished $15,000 less work than planned at this point in time"
+    },
+    {
+      "id": 10026,
+      "question": "Which project monitoring artifact provides the MOST comprehensive view of project health across scope, schedule, cost, and risk simultaneously?",
+      "options": [
+        "Gantt chart",
+        "Project status dashboard with integrated KPIs",
+        "Risk register alone",
+        "Invoice tracking spreadsheet"
+      ],
+      "answer": "Project status dashboard with integrated KPIs"
+    },
+    {
+      "id": 10027,
+      "question": "A project manager holds weekly status meetings with a distributed team. Which practice MOST effectively ensures accountability for action items?",
+      "options": [
+        "Rely on team members to remember their commitments verbally",
+        "Document action items with owner, due date, and status; distribute minutes; and review open items at the start of each subsequent meeting",
+        "Send a summary email without assigning owners",
+        "Hold more frequent meetings until all items are resolved"
+      ],
+      "answer": "Document action items with owner, due date, and status; distribute minutes; and review open items at the start of each subsequent meeting"
+    },
+    {
+      "id": 10028,
+      "question": "A project manager identifies that a deliverable is three weeks behind schedule. What is the FIRST step?",
+      "options": [
+        "Immediately notify the sponsor",
+        "Perform root cause analysis to understand why the delay occurred before determining corrective action",
+        "Add resources to the task without further analysis",
+        "Revise the baseline schedule to hide the variance"
+      ],
+      "answer": "Perform root cause analysis to understand why the delay occurred before determining corrective action"
+    },
+    {
+      "id": 10029,
+      "question": "Which document records all project changes, their status, and disposition decisions?",
+      "options": [
+        "Risk register",
+        "Change log",
+        "Issues log",
+        "Communications plan"
+      ],
+      "answer": "Change log"
+    },
+    {
+      "id": 10030,
+      "question": "A project manager receives a request for a small change that 'won't take more than an hour.' The CORRECT response is to:",
+      "options": [
+        "Approve and implement it immediately to maintain goodwill",
+        "Route it through the formal change control process to assess cumulative impact",
+        "Deny all small changes to prevent scope creep",
+        "Implement it informally and document it in the next status report"
+      ],
+      "answer": "Route it through the formal change control process to assess cumulative impact"
+    },
+    {
+      "id": 10031,
+      "question": "Scope creep on a project is BEST managed through:",
+      "options": [
+        "Accepting all stakeholder requests to maintain relationships",
+        "A formal integrated change control process with impact analysis and sponsor approval",
+        "Reducing the project team to limit intake of new requests",
+        "Increasing the project budget to accommodate all changes"
+      ],
+      "answer": "A formal integrated change control process with impact analysis and sponsor approval"
+    },
+    {
+      "id": 10032,
+      "question": "A project manager discovers that a task's actual duration has exceeded its planned duration. The FIRST corrective action should be to:",
+      "options": [
+        "Immediately crash the critical path",
+        "Assess whether the overrun affects the critical path and project end date, then evaluate options",
+        "Revise the project charter",
+        "Notify all stakeholders simultaneously"
+      ],
+      "answer": "Assess whether the overrun affects the critical path and project end date, then evaluate options"
+    },
+    {
+      "id": 10033,
+      "question": "Resource leveling is used to:",
+      "options": [
+        "Reduce project cost by eliminating resources",
+        "Resolve resource conflicts by adjusting the schedule to work within resource constraints, which may extend the project duration",
+        "Increase the number of resources assigned to all tasks",
+        "Eliminate the critical path"
+      ],
+      "answer": "Resolve resource conflicts by adjusting the schedule to work within resource constraints, which may extend the project duration"
+    },
+    {
+      "id": 10034,
+      "question": "A milestone on a project schedule represents:",
+      "options": [
+        "A task requiring more than 40 hours of effort",
+        "A significant point or event in a project, typically with zero duration",
+        "A task assigned to the project manager",
+        "Any task on the critical path"
+      ],
+      "answer": "A significant point or event in a project, typically with zero duration"
+    },
+    {
+      "id": 10035,
+      "question": "A project has a 10-week baseline schedule. After 5 weeks, 40% of the work is complete. The project is:",
+      "options": [
+        "On schedule",
+        "Ahead of schedule",
+        "Behind schedule \u2013 10% less work has been completed than planned",
+        "At risk due to budget overruns only"
+      ],
+      "answer": "Behind schedule \u2013 10% less work has been completed than planned"
+    },
+    {
+      "id": 10036,
+      "question": "Which technique involves breaking down the project scope into progressively smaller components until work can be reliably estimated and assigned?",
+      "options": [
+        "Critical path analysis",
+        "Work Breakdown Structure (WBS) decomposition",
+        "Risk breakdown structure",
+        "Organizational breakdown structure"
+      ],
+      "answer": "Work Breakdown Structure (WBS) decomposition"
+    },
+    {
+      "id": 10037,
+      "question": "A Work Breakdown Structure (WBS) should be decomposed to which level?",
+      "options": [
+        "Until every individual keystroke is documented",
+        "To the work package level, where work can be reliably estimated, assigned, and monitored",
+        "Until only one team member is responsible for each element",
+        "Until the project charter is complete"
+      ],
+      "answer": "To the work package level, where work can be reliably estimated, assigned, and monitored"
+    },
+    {
+      "id": 10038,
+      "question": "A project retrospective (lessons learned session) is conducted PRIMARILY to:",
+      "options": [
+        "Assign blame for project failures",
+        "Capture what went well and what should be improved so future projects benefit from current experience",
+        "Finalize the project budget",
+        "Renegotiate contracts with vendors"
+      ],
+      "answer": "Capture what went well and what should be improved so future projects benefit from current experience"
+    },
+    {
+      "id": 10039,
+      "question": "Project closure activities include which of the following?",
+      "options": [
+        "Initiating a new project immediately without documentation",
+        "Obtaining formal acceptance of deliverables, archiving project documents, releasing resources, and conducting lessons learned",
+        "Reassigning all project team members without documentation",
+        "Destroying project records to protect confidentiality"
+      ],
+      "answer": "Obtaining formal acceptance of deliverables, archiving project documents, releasing resources, and conducting lessons learned"
+    },
+    {
+      "id": 10040,
+      "question": "A project is deemed successful when:",
+      "options": [
+        "It was delivered under budget regardless of scope",
+        "All project objectives are met within the agreed constraints and stakeholders accept the deliverables",
+        "The project team enjoyed working on it",
+        "It was completed ahead of schedule regardless of cost"
+      ],
+      "answer": "All project objectives are met within the agreed constraints and stakeholders accept the deliverables"
+    },
+    {
+      "id": 10041,
+      "question": "Post-implementation review differs from a lessons learned session in that a post-implementation review:",
+      "options": [
+        "Is conducted during project planning",
+        "Evaluates whether the solution delivered the expected business benefits after a period of operational use",
+        "Is only conducted for failed projects",
+        "Focuses exclusively on budget performance"
+      ],
+      "answer": "Evaluates whether the solution delivered the expected business benefits after a period of operational use"
+    },
+    {
+      "id": 10042,
+      "question": "A qualitative risk assessment matrix ranks risks based on:",
+      "options": [
+        "Actual financial cost of each risk",
+        "Probability of occurrence and potential impact on project objectives",
+        "Number of stakeholders affected by the risk",
+        "Technical complexity of the risk mitigation strategy"
+      ],
+      "answer": "Probability of occurrence and potential impact on project objectives"
+    },
+    {
+      "id": 10043,
+      "question": "Which risk response strategy involves working with a third party to share the financial impact of a risk event?",
+      "options": [
+        "Avoid",
+        "Mitigate",
+        "Transfer",
+        "Accept"
+      ],
+      "answer": "Transfer"
+    },
+    {
+      "id": 10044,
+      "question": "A project manager identifies a risk with a 30% probability and a $50,000 impact. What is the risk's expected monetary value (EMV)?",
+      "options": [
+        "$50,000",
+        "$15,000",
+        "$35,000",
+        "$30,000"
+      ],
+      "answer": "$15,000"
+    },
+    {
+      "id": 10045,
+      "question": "A risk that has already occurred is reclassified as:",
+      "options": [
+        "A residual risk",
+        "An issue",
+        "A secondary risk",
+        "A trigger"
+      ],
+      "answer": "An issue"
+    },
+    {
+      "id": 10046,
+      "question": "A 'risk trigger' is BEST described as:",
+      "options": [
+        "The financial value of a risk",
+        "An indicator or warning sign that a risk event is about to occur",
+        "The person responsible for monitoring a risk",
+        "The probability score assigned to a risk"
+      ],
+      "answer": "An indicator or warning sign that a risk event is about to occur"
+    },
+    {
+      "id": 10047,
+      "question": "Which risk response strategy eliminates the threat entirely by changing the project plan to remove the risk?",
+      "options": [
+        "Transfer",
+        "Mitigate",
+        "Accept",
+        "Avoid"
+      ],
+      "answer": "Avoid"
+    },
+    {
+      "id": 10048,
+      "question": "Residual risks are:",
+      "options": [
+        "Risks that have been fully mitigated",
+        "Risks that remain after risk response strategies have been implemented",
+        "New risks identified during project execution",
+        "Risks transferred to a vendor"
+      ],
+      "answer": "Risks that remain after risk response strategies have been implemented"
+    },
+    {
+      "id": 10049,
+      "question": "A stakeholder has HIGH interest in the project but LOW power to influence decisions. The appropriate engagement strategy is to:",
+      "options": [
+        "Ignore them since they lack power",
+        "Keep them informed with regular updates and involve them in relevant decisions",
+        "Give them full decision-making authority",
+        "Limit all communications to the project sponsor"
+      ],
+      "answer": "Keep them informed with regular updates and involve them in relevant decisions"
+    },
+    {
+      "id": 10050,
+      "question": "A communications management plan defines which of the following for each communication?",
+      "options": [
+        "Developer assignments",
+        "What information is communicated, to whom, when, by what method, and who is responsible",
+        "The project budget allocation",
+        "Technical architecture specifications"
+      ],
+      "answer": "What information is communicated, to whom, when, by what method, and who is responsible"
+    },
+    {
+      "id": 10051,
+      "question": "A project manager needs to communicate an unexpected $200,000 cost overrun to the project sponsor. Which communication approach is MOST appropriate?",
+      "options": [
+        "Send an email and hope the sponsor responds",
+        "Deliver the message in a face-to-face meeting, presenting root cause analysis, options, and a recommended corrective action plan",
+        "Include it only in the monthly status report without explanation",
+        "Delay communication until the issue resolves itself"
+      ],
+      "answer": "Deliver the message in a face-to-face meeting, presenting root cause analysis, options, and a recommended corrective action plan"
+    },
+    {
+      "id": 10052,
+      "question": "A project is at 75% completion with a Budget at Completion (BAC) of $400,000, an Actual Cost (AC) of $330,000, and an Earned Value (EV) of $300,000. What is the Estimate at Completion (EAC) using the CPI-based formula?",
+      "options": [
+        "$400,000",
+        "$440,000",
+        "$441,818",
+        "$430,000"
+      ],
+      "answer": "$440,000"
+    },
+    {
+      "id": 10053,
+      "question": "A project using a fixed-price contract experiences scope changes that the vendor argues are outside the original statement of work. The project manager should FIRST:",
+      "options": [
+        "Pay the vendor's requested increase immediately",
+        "Review the original contract SOW, assess whether the change is in or out of scope, and engage legal/procurement if needed before approving any additional payment",
+        "Deny all vendor claims regardless of merit",
+        "Issue a stop-work order immediately"
+      ],
+      "answer": "Review the original contract SOW, assess whether the change is in or out of scope, and engage legal/procurement if needed before approving any additional payment"
+    },
+    {
+      "id": 10054,
+      "question": "Which scheduling technique allows the project manager to perform 'what-if' analysis on how changes to one task affect the overall project timeline?",
+      "options": [
+        "Resource leveling",
+        "Schedule network analysis using CPM/PERT tools",
+        "Gantt chart review",
+        "Issue log review"
+      ],
+      "answer": "Schedule network analysis using CPM/PERT tools"
+    },
+    {
+      "id": 10055,
+      "question": "A project plan shows Task A (5 days) must finish before Task B (3 days) can start, and Task C (4 days) can start when Task A is 50% complete. What is the EARLIEST possible finish for all three tasks if Task A starts on Day 1?",
+      "options": [
+        "Day 8",
+        "Day 9",
+        "Day 10",
+        "Day 11"
+      ],
+      "answer": "Day 8"
+    },
+    {
+      "id": 10056,
+      "question": "A project manager learns that a critical team member will be unavailable for two weeks during a critical phase. The BEST immediate action is to:",
+      "options": [
+        "Remove the critical tasks from scope",
+        "Assess the schedule impact, identify alternative resources or task resequencing, and update the risk register",
+        "Do nothing until the absence occurs",
+        "Extend the project deadline by two weeks immediately"
+      ],
+      "answer": "Assess the schedule impact, identify alternative resources or task resequencing, and update the risk register"
+    },
+    {
+      "id": 10057,
+      "question": "Which project management process group focuses on defining and authorizing the project or project phase?",
+      "options": [
+        "Planning",
+        "Executing",
+        "Monitoring and Controlling",
+        "Initiating"
+      ],
+      "answer": "Initiating"
+    },
+    {
+      "id": 10058,
+      "question": "A change control board (CCB) is PRIMARILY responsible for:",
+      "options": [
+        "Writing the project charter",
+        "Reviewing, evaluating, approving, or rejecting change requests to the project baseline",
+        "Managing day-to-day project tasks",
+        "Selecting the project manager"
+      ],
+      "answer": "Reviewing, evaluating, approving, or rejecting change requests to the project baseline"
+    },
+    {
+      "id": 10059,
+      "question": "A project manager identifies that the current trajectory will cause the project to miss its deadline by three weeks. The sponsor insists the deadline is fixed. Which option is MOST viable without scope reduction?",
+      "options": [
+        "Accept the delay",
+        "Crash the schedule by adding resources to critical path tasks, accepting increased cost",
+        "Eliminate quality review processes",
+        "Ask the sponsor to replace key team members"
+      ],
+      "answer": "Crash the schedule by adding resources to critical path tasks, accepting increased cost"
+    },
+    {
+      "id": 10060,
+      "question": "A project's Schedule Performance Index (SPI) is 1.15. This means:",
+      "options": [
+        "The project is over budget",
+        "The project is 15% behind schedule",
+        "The project is performing 15% ahead of schedule based on the work accomplished",
+        "The project is 15% over its cost baseline"
+      ],
+      "answer": "The project is performing 15% ahead of schedule based on the work accomplished"
+    },
+    {
+      "id": 10061,
+      "question": "Which document captures the work packages, tasks, and hierarchy of all project deliverables in a structured format?",
+      "options": [
+        "Risk register",
+        "Work Breakdown Structure (WBS) dictionary",
+        "Network diagram",
+        "Communications plan"
+      ],
+      "answer": "Work Breakdown Structure (WBS) dictionary"
+    },
+    {
+      "id": 10062,
+      "question": "A project team is using an iterative project management approach (e.g., Scrum). Sprint reviews serve which primary monitoring function?",
+      "options": [
+        "Tracking vendor invoice payments",
+        "Demonstrating completed work to stakeholders and gathering feedback that informs the next sprint's backlog",
+        "Performing risk analysis for the next fiscal year",
+        "Revising the project charter"
+      ],
+      "answer": "Demonstrating completed work to stakeholders and gathering feedback that informs the next sprint's backlog"
+    },
+    {
+      "id": 10063,
+      "question": "When preparing a bid response for a government IT project, a vendor's proposed staffing plan should be evaluated against which criterion FIRST?",
+      "options": [
+        "The number of resumes submitted",
+        "Whether proposed staff have relevant qualifications and demonstrated experience matched to the specific roles required by the SOW",
+        "The vendor's headquarters location",
+        "Whether proposed staff are local to the agency"
+      ],
+      "answer": "Whether proposed staff have relevant qualifications and demonstrated experience matched to the specific roles required by the SOW"
+    },
+    {
+      "id": 10064,
+      "question": "A 'rolling wave planning' approach is BEST described as:",
+      "options": [
+        "Planning the entire project in detail before starting any work",
+        "Elaborating near-term work in detail while planning future phases at a high level, with detail added progressively as more information becomes available",
+        "Repeating the same plan for each project phase",
+        "Using only top-down estimation techniques"
+      ],
+      "answer": "Elaborating near-term work in detail while planning future phases at a high level, with detail added progressively as more information becomes available"
+    },
+    {
+      "id": 10065,
+      "question": "A project manager's role during project execution is PRIMARILY to:",
+      "options": [
+        "Design the technical architecture",
+        "Direct and manage project work, monitor performance, manage risks and issues, and communicate with stakeholders",
+        "Write code for the development team",
+        "Conduct user acceptance testing"
+      ],
+      "answer": "Direct and manage project work, monitor performance, manage risks and issues, and communicate with stakeholders"
+    },
+    {
+      "id": 10066,
+      "question": "An assumption log in project management is used to:",
+      "options": [
+        "Document all risk events that have occurred",
+        "Track all assumptions made during planning, monitor their validity throughout the project, and document the impact if assumptions prove false",
+        "Record team member vacation schedules",
+        "List all approved project changes"
+      ],
+      "answer": "Track all assumptions made during planning, monitor their validity throughout the project, and document the impact if assumptions prove false"
+    },
+    {
+      "id": 10067,
+      "question": "Which tool BEST supports identifying the project tasks required to produce each deliverable and establishing their logical sequence?",
+      "options": [
+        "Responsibility assignment matrix (RAM)",
+        "Precedence diagramming method (PDM)",
+        "Budget variance report",
+        "Stakeholder register"
+      ],
+      "answer": "Precedence diagramming method (PDM)"
+    },
+    {
+      "id": 10068,
+      "question": "A project sponsor asks for the Estimate to Complete (ETC) for a project with a BAC of $500,000, an EV of $200,000, an AC of $240,000, and a CPI of 0.833. Using the CPI-adjusted formula, what is the ETC?",
+      "options": [
+        "$260,000",
+        "$312,000",
+        "$360,000",
+        "$300,000"
+      ],
+      "answer": "$360,000"
+    },
+    {
+      "id": 10069,
+      "question": "'Scope verification' (validate scope) in project management is concerned with:",
+      "options": [
+        "Confirming requirements were gathered correctly",
+        "Obtaining formal stakeholder acceptance of completed project deliverables",
+        "Verifying that the project schedule is accurate",
+        "Confirming that all test cases have passed"
+      ],
+      "answer": "Obtaining formal stakeholder acceptance of completed project deliverables"
+    },
+    {
+      "id": 10070,
+      "question": "A project manager must reduce a 20-week project to 15 weeks. Analysis shows that crashing will cost $10,000 per week saved on critical tasks but fast tracking introduces a 25% rework risk on affected tasks. The project manager should:",
+      "options": [
+        "Automatically choose crashing",
+        "Automatically choose fast tracking",
+        "Analyze cost, risk, and schedule trade-offs for each option and select the approach that best balances project objectives",
+        "Do nothing and accept the 20-week timeline"
+      ],
+      "answer": "Analyze cost, risk, and schedule trade-offs for each option and select the approach that best balances project objectives"
+    },
+    {
+      "id": 10071,
+      "question": "During project closure, all of the following are required EXCEPT:",
+      "options": [
+        "Formal stakeholder acceptance of deliverables",
+        "Archiving project documents",
+        "Releasing project team members",
+        "Initiating the next project's requirements elicitation"
+      ],
+      "answer": "Initiating the next project's requirements elicitation"
+    },
+    {
+      "id": 10072,
+      "question": "A RACI matrix assigns 'Responsible' to the person who:",
+      "options": [
+        "Is ultimately accountable for the outcome",
+        "Does the actual work to complete the task",
+        "Provides expert input and must be consulted",
+        "Receives information about the task outcome"
+      ],
+      "answer": "Does the actual work to complete the task"
+    },
+    {
+      "id": 10073,
+      "question": "Which type of project cost estimate has the WIDEST acceptable variance range and is prepared with the LEAST information?",
+      "options": [
+        "Definitive estimate",
+        "Parametric estimate",
+        "Analogous (rough order of magnitude) estimate",
+        "Bottom-up estimate"
+      ],
+      "answer": "Analogous (rough order of magnitude) estimate"
+    },
+    {
+      "id": 10074,
+      "question": "A project has 5 stakeholders. How many potential communication channels exist?",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "answer": "10"
+    },
+    {
+      "id": 10075,
+      "question": "When a project manager detects a consistent pattern of schedule slippage across multiple tasks, the MOST likely root cause to investigate FIRST is:",
+      "options": [
+        "Individual team member performance failures",
+        "Systemic issues such as inadequate resource allocation, unrealistic estimates, or unmanaged dependencies",
+        "Sponsor disengagement",
+        "Vendor non-performance"
+      ],
+      "answer": "Systemic issues such as inadequate resource allocation, unrealistic estimates, or unmanaged dependencies"
+    },
+    {
+      "id": 10076,
+      "question": "An issues log differs from a risk register in that an issues log records:",
+      "options": [
+        "Future uncertainties and their mitigation strategies",
+        "Problems or matters that have already materialized and require resolution",
+        "Approved change requests",
+        "Completed project deliverables"
+      ],
+      "answer": "Problems or matters that have already materialized and require resolution"
+    },
+    {
+      "id": 10077,
+      "question": "A project manager is told that the project budget cannot be increased. Two weeks before deadline, a critical vendor deliverable is late. The project manager should:",
+      "options": [
+        "Cancel the project",
+        "Renegotiate the vendor contract, assess alternative sourcing, evaluate scope adjustments, and escalate to the sponsor with options and recommendations",
+        "Wait for the vendor to deliver and accept the delay passively",
+        "Hire additional internal staff immediately beyond the approved budget"
+      ],
+      "answer": "Renegotiate the vendor contract, assess alternative sourcing, evaluate scope adjustments, and escalate to the sponsor with options and recommendations"
+    },
+    {
+      "id": 10078,
+      "question": "In project risk management, an 'opportunity' is:",
+      "options": [
+        "A type of schedule variance",
+        "A positive risk event that, if it occurs, would benefit the project",
+        "A change request submitted by a stakeholder",
+        "A task completed ahead of schedule"
+      ],
+      "answer": "A positive risk event that, if it occurs, would benefit the project"
+    },
+    {
+      "id": 10079,
+      "question": "A project management office (PMO) in a New York State agency context MOST likely provides which function?",
+      "options": [
+        "Writing code for all agency IT projects",
+        "Setting project management standards, providing governance oversight, and offering portfolio-level visibility to leadership",
+        "Managing only vendor relationships",
+        "Replacing the role of individual project managers"
+      ],
+      "answer": "Setting project management standards, providing governance oversight, and offering portfolio-level visibility to leadership"
+    },
+    {
+      "id": 10080,
+      "question": "When presenting a project status to an executive steering committee, the project manager should PRIMARILY:",
+      "options": [
+        "Provide detailed technical specifications",
+        "Summarize health against scope, schedule, cost, and key risks, and present decisions required from the committee",
+        "Read through the full project plan line by line",
+        "Distribute the full risk register for committee review"
+      ],
+      "answer": "Summarize health against scope, schedule, cost, and key risks, and present decisions required from the committee"
+    },
+    {
+      "id": 10081,
+      "question": "A project manager calculates a schedule variance of +$20,000 and a cost variance of -$30,000. What does this tell the project manager?",
+      "options": [
+        "The project is ahead of schedule and under budget",
+        "The project is behind schedule and under budget",
+        "The project is ahead of schedule but over budget",
+        "The project is behind schedule and over budget"
+      ],
+      "answer": "The project is ahead of schedule but over budget"
+    },
+    {
+      "id": 10082,
+      "question": "Which factor MOST directly determines whether a task is on the critical path?",
+      "options": [
+        "The task has the highest budget",
+        "The task has zero total float",
+        "The task is assigned to the project manager",
+        "The task has the most dependencies"
+      ],
+      "answer": "The task has zero total float"
+    },
+    {
+      "id": 10083,
+      "question": "A project manager is evaluating two project proposals. Project A has an NPV of $150,000 and Project B has an NPV of $200,000, but Project B carries significantly higher risk. The project manager should:",
+      "options": [
+        "Select Project B because its NPV is higher",
+        "Select Project A because lower risk always wins",
+        "Evaluate both NPV and risk-adjusted return, then recommend based on organizational risk tolerance and strategic alignment",
+        "Select neither project and request new alternatives"
+      ],
+      "answer": "Evaluate both NPV and risk-adjusted return, then recommend based on organizational risk tolerance and strategic alignment"
+    },
+    {
+      "id": 10084,
+      "question": "A project manager uses a probability and impact matrix. A risk rated 'High' probability and 'High' impact should be:",
+      "options": [
+        "Accepted passively",
+        "Actively managed with a defined response strategy and owner assigned",
+        "Logged and reviewed quarterly",
+        "Transferred automatically to the sponsor"
+      ],
+      "answer": "Actively managed with a defined response strategy and owner assigned"
+    },
+    {
+      "id": 10085,
+      "question": "Which scheduling technique adds buffer time at the end of the critical chain rather than within each task to protect against uncertainty?",
+      "options": [
+        "Resource leveling",
+        "Critical Chain Method (CCM)",
+        "Fast tracking",
+        "Precedence diagramming"
+      ],
+      "answer": "Critical Chain Method (CCM)"
+    },
+    {
+      "id": 10086,
+      "question": "A project is in execution when a new regulation takes effect that fundamentally changes a key deliverable's requirements. The project manager should FIRST:",
+      "options": [
+        "Ignore the regulation until the project closes",
+        "Formally assess the impact on scope, schedule, cost, and risk; submit a change request; and present options to the change control board",
+        "Immediately redesign the deliverable without formal change control",
+        "Cancel the project"
+      ],
+      "answer": "Formally assess the impact on scope, schedule, cost, and risk; submit a change request; and present options to the change control board"
+    },
+    {
+      "id": 10087,
+      "question": "What is the difference between 'quality control' and 'quality assurance' in project management?",
+      "options": [
+        "Quality control is proactive; quality assurance is reactive",
+        "Quality assurance audits processes to ensure standards are followed; quality control inspects deliverables to detect and correct defects",
+        "They are identical activities with different names",
+        "Quality control applies only to construction projects"
+      ],
+      "answer": "Quality assurance audits processes to ensure standards are followed; quality control inspects deliverables to detect and correct defects"
+    },
+    {
+      "id": 10088,
+      "question": "A project manager receives a change request that has already been implemented by a developer without approval. This situation is called:",
+      "options": [
+        "Proactive change management",
+        "An unauthorized change or 'gold plating' \u2013 it must be retroactively assessed, documented, and either formally approved or reversed",
+        "A minor scope adjustment",
+        "A standard agile practice"
+      ],
+      "answer": "An unauthorized change or 'gold plating' \u2013 it must be retroactively assessed, documented, and either formally approved or reversed"
+    },
+    {
+      "id": 10089,
+      "question": "When preparing a project schedule, identifying task dependencies should occur:",
+      "options": [
+        "After the schedule is baselined",
+        "Before estimating task durations to ensure the network logic is correct",
+        "After project execution begins",
+        "Only for tasks on the critical path"
+      ],
+      "answer": "Before estimating task durations to ensure the network logic is correct"
+    },
+    {
+      "id": 10090,
+      "question": "A project manager documents that 'the financial system API will be available for integration by Week 6.' This is an example of:",
+      "options": [
+        "A project constraint",
+        "A project assumption",
+        "A project risk",
+        "A project milestone"
+      ],
+      "answer": "A project assumption"
+    },
+    {
+      "id": 10091,
+      "question": "Which stakeholder register attribute is MOST useful for determining how frequently and in what format to communicate with a stakeholder?",
+      "options": [
+        "Their title and department",
+        "Their level of interest, influence, engagement status, and preferred communication method",
+        "Their length of employment with the agency",
+        "Their budget authority"
+      ],
+      "answer": "Their level of interest, influence, engagement status, and preferred communication method"
+    },
+    {
+      "id": 10092,
+      "question": "A cost performance index (CPI) of 1.10 indicates:",
+      "options": [
+        "The project is 10% over budget",
+        "The project is receiving $1.10 of work for every $1.00 spent \u2013 the project is under budget",
+        "The schedule is ahead by 10%",
+        "The team velocity is 10% above average"
+      ],
+      "answer": "The project is receiving $1.10 of work for every $1.00 spent \u2013 the project is under budget"
+    },
+    {
+      "id": 10093,
+      "question": "A project's contingency reserve is DIFFERENT from a management reserve in that contingency reserve is:",
+      "options": [
+        "Controlled by executive leadership only",
+        "Planned for known risks within the project's risk register and is part of the project baseline",
+        "Available for any unplanned use without change control",
+        "Only used for vendor-related risks"
+      ],
+      "answer": "Planned for known risks within the project's risk register and is part of the project baseline"
+    },
+    {
+      "id": 10094,
+      "question": "Which of the following BEST describes the 'Monitor and Control Project Work' process?",
+      "options": [
+        "Creating the project schedule",
+        "Tracking, reviewing, and reporting project progress to meet performance objectives defined in the project management plan",
+        "Acquiring project team members",
+        "Conducting stakeholder interviews"
+      ],
+      "answer": "Tracking, reviewing, and reporting project progress to meet performance objectives defined in the project management plan"
+    },
+    {
+      "id": 10095,
+      "question": "A project manager discovers that two team members have conflicting responsibilities on the same task in the RACI chart. This represents which type of planning deficiency?",
+      "options": [
+        "Schedule compression error",
+        "Unclear roles and accountability creating a risk of ownership gaps or duplicate effort",
+        "Budget overrun",
+        "Scope creep"
+      ],
+      "answer": "Unclear roles and accountability creating a risk of ownership gaps or duplicate effort"
+    },
+    {
+      "id": 10096,
+      "question": "A project charter's primary purpose is to:",
+      "options": [
+        "Define detailed requirements for the final deliverable",
+        "Formally authorize the project, document high-level objectives, constraints, and assumptions, and empower the project manager",
+        "Replace the project management plan",
+        "Serve as the contract with the project sponsor"
+      ],
+      "answer": "Formally authorize the project, document high-level objectives, constraints, and assumptions, and empower the project manager"
+    },
+    {
+      "id": 10097,
+      "question": "A project manager is asked to provide a 'parametric estimate.' This means the estimate is based on:",
+      "options": [
+        "Team gut feeling",
+        "A statistical relationship between historical data and project variables (e.g., cost per function point)",
+        "A detailed bottom-up review of every task",
+        "Analogous estimation from a single past project"
+      ],
+      "answer": "A statistical relationship between historical data and project variables (e.g., cost per function point)"
+    },
+    {
+      "id": 10098,
+      "question": "Which document, produced during project closing, captures the final performance measurements and formally marks the project's completion?",
+      "options": [
+        "Project charter",
+        "Final project report (project closure report)",
+        "Kickoff meeting agenda",
+        "Requirements traceability matrix"
+      ],
+      "answer": "Final project report (project closure report)"
+    },
+    {
+      "id": 10099,
+      "question": "A project is 60% complete, has an SPI of 0.88, and has a hard statutory deadline. The MOST urgent action for the project manager is to:",
+      "options": [
+        "Accept the delay",
+        "Conduct an immediate schedule impact analysis, identify recovery options (crash, fast track, or scope reduction), and present a recovery plan to the sponsor",
+        "Replace the project team",
+        "Submit a change request to extend the deadline"
+      ],
+      "answer": "Conduct an immediate schedule impact analysis, identify recovery options (crash, fast track, or scope reduction), and present a recovery plan to the sponsor"
+    }
+  ]
+}
