@@ -266,6 +266,141 @@
       color: var(--text-muted);
     }
 
+    /* Exam Request Section */
+    .request-section {
+      width: 100%;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 35px 40px;
+    }
+
+    .request-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .request-icon {
+      font-size: 1.6rem;
+      background: rgba(26, 188, 156, 0.15);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .request-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .request-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      padding-left: 62px;
+    }
+
+    .request-fields {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .request-field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .request-field label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .request-input {
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 0.875rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .request-input:focus {
+      border-color: var(--primary);
+    }
+
+    .request-input::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .request-btn {
+      padding: 10px 22px;
+      background: var(--primary);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.875rem;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(26, 188, 156, 0.3);
+    }
+
+    .request-btn:hover {
+      background: #16a085;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(26, 188, 156, 0.45);
+    }
+
+    .request-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .request-status {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .request-section {
+        padding: 25px 20px;
+      }
+
+      .request-fields {
+        flex-direction: column;
+      }
+
+      .request-input {
+        width: 100%;
+      }
+
+      .request-subtitle {
+        padding-left: 0;
+      }
+    }
+
     /* Footer */
     footer {
       width: 100%;
@@ -312,6 +447,14 @@
 
       .projects-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .study-section {
+        padding: 25px 20px;
+      }
+      
+      .study-title {
+        font-size: 1.6rem;
       }
     }
   </style>
@@ -380,15 +523,49 @@
         <div class="study-tags">
           <span class="study-tag">ITS 3</span>
           <span class="study-tag">ITS 4</span>
-          <span class="study-tag">MITS 1 & 2</span>
-          <span class="study-tag">1,030+ Questions</span>
+          <span class="study-tag">MITS 1 &amp; 2</span>
+          <span class="study-tag" style="background: rgba(26,188,156,0.25); color: #1abc9c; font-weight: 600;">🆕 BSA
+            2</span>
+          <span class="study-tag">1,330+ Questions</span>
         </div>
-        <p style="color: rgba(255,255,255,0.8); margin-bottom: 25px; line-height: 1.6;">
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 10px; line-height: 1.6;">
           Prepare for all major New York State IT Civil Service exams in one unified system.
           Fully aligned to NYS competencies.
         </p>
+        <p style="color: rgba(26,188,156,0.9); font-size: 0.9rem; margin-bottom: 25px; line-height: 1.6;">
+          ✨ <strong>Now includes Business Systems Analyst 2</strong> — 300 new questions covering BABOK Business
+          Analysis, Project Management Fundamentals, and Facilitating Communications.
+        </p>
         <a href="MITS.html" class="cta-button" style="padding: 12px 28px; font-size: 1rem;">Start Studying</a>
       </div>
+    </section>
+
+    <!-- Exam Request Section -->
+    <section class="request-section">
+      <div class="request-header">
+        <div class="request-icon">📬</div>
+        <div class="request-title">Request an Exam</div>
+      </div>
+      <p class="request-subtitle">
+        Don't see your NYS civil service exam in the study guide? Paste the cs.ny.gov announcement link below and I'll
+        add it.
+      </p>
+      <div class="request-fields">
+        <div class="request-field" style="flex: 2; min-width: 240px;">
+          <label for="reqUrl">cs.ny.gov Announcement URL</label>
+          <input id="reqUrl" type="url" class="request-input"
+            placeholder="https://www.cs.ny.gov/examannouncements/..." />
+        </div>
+        <div class="request-field" style="flex: 1; min-width: 160px;">
+          <label for="reqTitle">Exam title (optional)</label>
+          <input id="reqTitle" type="text" class="request-input" placeholder="e.g. IT Specialist 5" />
+        </div>
+        <div class="request-field">
+          <label style="visibility: hidden;">Submit</label>
+          <button class="request-btn" id="reqBtn" onclick="submitExamRequest()">Submit Request</button>
+        </div>
+      </div>
+      <div class="request-status" id="reqStatus"></div>
     </section>
 
     <!-- Footer -->
@@ -399,6 +576,51 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    function submitExamRequest() {
+      const urlInput = document.getElementById('reqUrl');
+      const titleInput = document.getElementById('reqTitle');
+      const statusEl = document.getElementById('reqStatus');
+      const btn = document.getElementById('reqBtn');
+
+      const url = urlInput.value.trim();
+      const title = titleInput.value.trim();
+
+      if (!url) {
+        statusEl.style.display = 'block';
+        statusEl.style.color = '#ef4444';
+        statusEl.textContent = '⚠️ Please paste the exam announcement URL before submitting.';
+        return;
+      }
+      if (!url.startsWith('http')) {
+        statusEl.style.display = 'block';
+        statusEl.style.color = '#ef4444';
+        statusEl.textContent = '⚠️ Please enter a valid URL starting with https://';
+        return;
+      }
+
+      const subject = encodeURIComponent('NYS Study Guide – Exam Request' + (title ? ': ' + title : ''));
+      const body = encodeURIComponent(
+        'Hi Matthew,\n\nI\'d like to request the following exam be added to the NYS IT Study Guide:\n\n' +
+        (title ? 'Exam: ' + title + '\n' : '') +
+        'Announcement URL: ' + url + '\n\n' +
+        'Thanks!'
+      );
+
+      window.location.href = 'mailto:MattRageous5@gmail.com?subject=' + subject + '&body=' + body;
+
+      btn.disabled = true;
+      statusEl.style.display = 'block';
+      statusEl.style.color = '#1abc9c';
+      statusEl.textContent = '✅ Opening your email client with the request pre-filled. Thank you!';
+
+      setTimeout(() => {
+        urlInput.value = '';
+        titleInput.value = '';
+        statusEl.style.display = 'none';
+        btn.disabled = false;
+      }, 8000);
+    }
   </script>
 </body>
 
