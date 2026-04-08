@@ -1372,6 +1372,7 @@
     /* 2. JSON Configuration                          */
     /* --------------------------------------------- */
     const BASE_URL = "https://raw.githubusercontent.com/mattrageous/MatthewBowlin/main/";
+    const WORKER_URL = "https://mits-explanations.mattrageous5.workers.dev/";
 
     const JSON_CONFIG = {
       part1: BASE_URL + "part1.json",
@@ -1397,6 +1398,7 @@
     let currentQuestionIndex = 0;
     let currentFilter = "all";
     let userAnswers = {};
+    let explanationCache = {};
     let filteredQuestions = [];
     let questionShuffleMap = {}; // Store shuffle mappings for each question
     let quizCompleted = false;
@@ -1686,8 +1688,9 @@
         currentFilter: currentFilter,
         currentNavigationLevel: currentNavigationLevel,
         questionShuffleMap: questionShuffleMap,
+        explanationCache: explanationCache,
         lastSaved: new Date().toISOString(),
-        version: 4 // Version to handle future schema changes
+        version: 5
       };
 
       try {
@@ -1726,6 +1729,7 @@
 
       try {
         userAnswers = savedData.userAnswers || {};
+        explanationCache = savedData.explanationCache || {};
         currentFilter = savedData.currentFilter || 'all';
         currentNavigationLevel = savedData.currentNavigationLevel || 1;
         questionShuffleMap = savedData.questionShuffleMap || {};
@@ -1837,7 +1841,7 @@
         currentNavigationLevel: currentNavigationLevel,
         questionShuffleMap: questionShuffleMap,
         exportedAt: new Date().toISOString(),
-        version: 4,
+        version: 5,
         source: 'NYS IT Civil Service Study Guide by Matthew Bowlin'
       };
 
@@ -2700,7 +2704,7 @@ Thank you!
       submitBtn.disabled = false;
     }
 
-    function submitAnswer() {
+    async function submitAnswer() {
       const question = filteredQuestions[currentQuestionIndex];
       const selectedOption = document.querySelector('.option.selected');
 
@@ -2712,42 +2716,77 @@ Thank you!
 
       userAnswers[question.id] = selectedOriginalIndex;
 
-      showAnswerState(question.id);
+      await showAnswerState(question.id);
       updateProgress();
       autoSave(); // Save after answering
     }
 
-    function showAnswerState(questionId) {
-      const question = filteredQuestions.find(q => q.id === questionId);
-      const userAnswerOriginal = userAnswers[questionId];
-      const options = document.querySelectorAll('.option');
-
-      // Get the correct answer in shuffled position
-      const shuffledCorrectIndex = getShuffledCorrectIndex(questionId, question.correct);
-      // Get the user's answer in shuffled position
-      const userShuffledIndex = questionShuffleMap[questionId] ?
-        questionShuffleMap[questionId].indexOf(userAnswerOriginal) : userAnswerOriginal;
-
-      options.forEach((option, index) => {
-        option.classList.remove('selected', 'correct', 'incorrect');
-        if (index === shuffledCorrectIndex) {
-          option.classList.add('correct');
-        } else if (index === userShuffledIndex && userAnswerOriginal !== question.correct) {
-          option.classList.add('incorrect');
+    async function showAnswerState(questionId) {
+    const question = filteredQuestions.find(q => q.id === questionId);
+    const userAnswerOriginal = userAnswers[questionId];
+    const options = document.querySelectorAll('.option');
+  
+    const shuffledCorrectIndex = getShuffledCorrectIndex(questionId, question.correct);
+    const userShuffledIndex = questionShuffleMap[questionId]
+      ? questionShuffleMap[questionId].indexOf(userAnswerOriginal)
+      : userAnswerOriginal;
+  
+    const isWrong = userAnswerOriginal !== question.correct;
+  
+    options.forEach((option, index) => {
+      option.classList.remove('selected', 'correct', 'incorrect');
+      if (index === shuffledCorrectIndex) {
+        option.classList.add('correct');
+      } else if (index === userShuffledIndex && isWrong) {
+        option.classList.add('incorrect');
+      }
+      if (index === userShuffledIndex) {
+        option.classList.add('selected');
+      }
+    });
+  
+    if (isWrong) {
+      if (explanationCache[questionId]) {
+        explanationText.textContent = explanationCache[questionId];
+        explanation.classList.add('show');
+      } else {
+        explanationText.textContent = 'Loading explanation...';
+        explanation.classList.add('show');
+        try {
+          const selectedAnswerText = question.options[userAnswerOriginal] || '';
+          const resp = await fetch(WORKER_URL + '/explain', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              id: question.id,
+              question: question.question,
+              options: question.options,
+              answer: question.answer,
+              selectedAnswer: selectedAnswerText,
+              topic: question.part || 'NYS IT Civil Service'
+            })
+          });
+          if (resp.ok) {
+            const data = await resp.json();
+            const text = data.explanation || `The correct answer is "${question.answer}".`;
+            explanationText.textContent = text;
+            explanationCache[questionId] = text;
+            autoSave();
+          } else {
+            explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
+          }
+        } catch (e) {
+          explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
         }
-        if (index === userShuffledIndex) {
-          option.classList.add('selected');
-        }
-      });
-
-      // Show explanation
-      explanationText.textContent = question.explanation;
+      }
+    } else {
+      explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
       explanation.classList.add('show');
-      submitBtn.style.display = 'none';
-
-      // Enable next button
-      nextBtn.disabled = false;
     }
+  
+    submitBtn.style.display = 'none';
+    nextBtn.disabled = false;
+  }
 
     function navigateQuestion(direction) {
       const newIndex = currentQuestionIndex + direction;
