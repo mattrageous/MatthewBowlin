@@ -891,13 +891,11 @@
       font-size: 0.875rem;
       text-align: center;
       -moz-appearance: textfield;
-      appearance: textfield;
     }
 
     .jump-to-question input[type="number"]::-webkit-outer-spin-button,
     .jump-to-question input[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
-      appearance: none;
       margin: 0;
     }
 
@@ -1212,7 +1210,7 @@
     <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">
       ⚠️ <strong style="color: var(--accent);">Important Notice:</strong>
       This guide is an independently created study resource intended to help you practice core competencies
-      commonly found on New York State civil service IT examinations. While detailed,
+      commonly found on New York State civil service examinations. While detailed,
       <strong>no third-party resource can guarantee a passing score</strong>.
       Your results will depend on your overall preparation and understanding of the material.
     </p>
@@ -1222,19 +1220,17 @@
         <span style="font-size: 1.4rem;">📬</span>
         <div>
           <div style="font-weight: 600; font-size: 1rem; color: var(--text);">Request an Exam</div>
-          <div style="font-size: 0.8rem; color: var(--text-muted);">Don't see your civil service exam? Submit the announcement link and I'll add it.</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Don't see your civil service exam? Submit the
+            announcement link and I'll add it.</div>
         </div>
       </div>
       <div id="examRequestFields" style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: flex-end;">
         <div id="examRequestUrlWrap" style="flex: 1; min-width: 220px;">
-          <label for="examRequestUrl" style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+          <label for="examRequestUrl"
+            style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;">
             cs.ny.gov Exam Announcement URL
           </label>
-          <input
-            id="examRequestUrl"
-            type="url"
-            placeholder="https://www.cs.ny.gov/examannouncements/..."
-            style="
+          <input id="examRequestUrl" type="url" placeholder="https://www.cs.ny.gov/examannouncements/..." style="
               width: 100%;
               padding: 0.6rem 0.85rem;
               background: rgba(255,255,255,0.05);
@@ -1245,20 +1241,14 @@
               outline: none;
               box-sizing: border-box;
               transition: border-color 0.2s;
-            "
-            onfocus="this.style.borderColor='var(--accent)'"
-            onblur="this.style.borderColor='var(--glass-border)'"
-          />
+            " onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--glass-border)'" />
         </div>
         <div id="examRequestNoteWrap" style="min-width: 140px;">
-          <label for="examRequestNote" style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+          <label for="examRequestNote"
+            style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;">
             Exam title (optional)
           </label>
-          <input
-            id="examRequestNote"
-            type="text"
-            placeholder="e.g. ITS 4"
-            style="
+          <input id="examRequestNote" type="text" placeholder="e.g. ITS 4" style="
               width: 100%;
               padding: 0.6rem 0.85rem;
               background: rgba(255,255,255,0.05);
@@ -1269,15 +1259,9 @@
               outline: none;
               box-sizing: border-box;
               transition: border-color 0.2s;
-            "
-            onfocus="this.style.borderColor='var(--accent)'"
-            onblur="this.style.borderColor='var(--glass-border)'"
-          />
+            " onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--glass-border)'" />
         </div>
-        <button
-          id="examRequestBtn"
-          onclick="submitExamRequest()"
-          style="
+        <button id="examRequestBtn" onclick="submitExamRequest()" style="
             padding: 0.6rem 1.25rem;
             background: var(--gradient-accent);
             border: none;
@@ -1288,10 +1272,7 @@
             cursor: pointer;
             white-space: nowrap;
             transition: opacity 0.2s;
-          "
-          onmouseover="this.style.opacity='0.85'"
-          onmouseout="this.style.opacity='1'"
-        >
+          " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
           Submit Request
         </button>
       </div>
@@ -1300,7 +1281,7 @@
 
     <!-- Footer -->
     <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.875rem;">
-      <p>&copy; <span id="year"></span> MatthewBowlin.com | NYS IT Study Guide</p>
+      <p>&copy; <span id="year"></span> MatthewBowlin.com | NYS Civil Service Study Guide</p>
       <div style="margin-top: 0.5rem;">
         <a href="/" style="color: var(--accent); text-decoration: none;">Back to Home</a>
       </div>
@@ -1339,7 +1320,7 @@
       // Build mailto link – opens user's email client pre-filled
       const subject = encodeURIComponent('NYS Study Guide – Exam Request' + (note ? ': ' + note : ''));
       const body = encodeURIComponent(
-        'Hi Matthew,\n\nI\'d like to request the following exam be added to the NYS IT Study Guide:\n\n' +
+        'Hi Matthew,\n\nI\'d like to request the following exam be added to the NYS Civil Service Study Guide:\n\n' +
         (note ? 'Exam: ' + note + '\n' : '') +
         'Announcement URL: ' + url + '\n\n' +
         'Thanks!'
@@ -1446,10 +1427,10 @@
         { part: 'part7', title: 'Part 7 – Administrative Supervision' }
       ],
       bsa2: [
-        { part: 'part9',  title: 'Part 9 – Business Analysis (BABOK)' },
-        { part: 'part7',  title: 'Part 7 – Supervision' },
+        { part: 'part9', title: 'Part 9 – Business Analysis (BABOK)' },
+        { part: 'part7', title: 'Part 7 – Supervision' },
         { part: 'part10', title: 'Part 10 – Project Management Fundamentals' },
-        { part: 'part6',  title: 'Part 6 – Preparing Written Material' },
+        { part: 'part6', title: 'Part 6 – Preparing Written Material' },
         { part: 'part11', title: 'Part 11 – Facilitating Communications' }
       ]
     };
@@ -1844,7 +1825,7 @@
         questionShuffleMap: questionShuffleMap,
         exportedAt: new Date().toISOString(),
         version: 5,
-        source: 'NYS IT Civil Service Study Guide by Matthew Bowlin'
+        source: 'NYS Civil Service Study Guide by Matthew Bowlin'
       };
 
       const dataStr = JSON.stringify(progressData, null, 2);
@@ -2724,71 +2705,71 @@ Thank you!
     }
 
     async function showAnswerState(questionId) {
-    const question = filteredQuestions.find(q => q.id === questionId);
-    const userAnswerOriginal = userAnswers[questionId];
-    const options = document.querySelectorAll('.option');
-  
-    const shuffledCorrectIndex = getShuffledCorrectIndex(questionId, question.correct);
-    const userShuffledIndex = questionShuffleMap[questionId]
-      ? questionShuffleMap[questionId].indexOf(userAnswerOriginal)
-      : userAnswerOriginal;
-  
-    const isWrong = userAnswerOriginal !== question.correct;
-  
-    options.forEach((option, index) => {
-      option.classList.remove('selected', 'correct', 'incorrect');
-      if (index === shuffledCorrectIndex) {
-        option.classList.add('correct');
-      } else if (index === userShuffledIndex && isWrong) {
-        option.classList.add('incorrect');
-      }
-      if (index === userShuffledIndex) {
-        option.classList.add('selected');
-      }
-    });
-  
-    if (isWrong) {
-      if (explanationCache[questionId]) {
-        explanationText.textContent = explanationCache[questionId];
-        explanation.classList.add('show');
-      } else {
-        explanationText.textContent = 'Loading explanation...';
-        explanation.classList.add('show');
-        try {
-          const selectedAnswerText = question.options[userAnswerOriginal] || '';
-          const resp = await fetch(WORKER_URL + '/explain', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              id: question.id,
-              question: question.question,
-              options: question.options,
-              answer: question.answer,
-              selectedAnswer: selectedAnswerText,
-              topic: question.part || 'NYS IT Civil Service'
-            })
-          });
-          if (resp.ok) {
-            const data = await resp.json();
-            const text = data.explanation || `The correct answer is "${question.answer}".`;
-            explanationText.textContent = text;
-            explanationCache[questionId] = text;
-            autoSave();
-          } else {
+      const question = filteredQuestions.find(q => q.id === questionId);
+      const userAnswerOriginal = userAnswers[questionId];
+      const options = document.querySelectorAll('.option');
+
+      const shuffledCorrectIndex = getShuffledCorrectIndex(questionId, question.correct);
+      const userShuffledIndex = questionShuffleMap[questionId]
+        ? questionShuffleMap[questionId].indexOf(userAnswerOriginal)
+        : userAnswerOriginal;
+
+      const isWrong = userAnswerOriginal !== question.correct;
+
+      options.forEach((option, index) => {
+        option.classList.remove('selected', 'correct', 'incorrect');
+        if (index === shuffledCorrectIndex) {
+          option.classList.add('correct');
+        } else if (index === userShuffledIndex && isWrong) {
+          option.classList.add('incorrect');
+        }
+        if (index === userShuffledIndex) {
+          option.classList.add('selected');
+        }
+      });
+
+      if (isWrong) {
+        if (explanationCache[questionId]) {
+          explanationText.textContent = explanationCache[questionId];
+          explanation.classList.add('show');
+        } else {
+          explanationText.textContent = 'Loading explanation...';
+          explanation.classList.add('show');
+          try {
+            const selectedAnswerText = question.options[userAnswerOriginal] || '';
+            const resp = await fetch(WORKER_URL + '/explain', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                id: question.id,
+                question: question.question,
+                options: question.options,
+                answer: question.answer,
+                selectedAnswer: selectedAnswerText,
+                topic: question.part || 'NYS Civil Service'
+              })
+            });
+            if (resp.ok) {
+              const data = await resp.json();
+              const text = data.explanation || `The correct answer is "${question.answer}".`;
+              explanationText.textContent = text;
+              explanationCache[questionId] = text;
+              autoSave();
+            } else {
+              explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
+            }
+          } catch (e) {
             explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
           }
-        } catch (e) {
-          explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
         }
+      } else {
+        explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
+        explanation.classList.add('show');
       }
-    } else {
-      explanationText.textContent = question.explanation || `The correct answer is "${question.answer}".`;
-      explanation.classList.add('show');
+
+      submitBtn.style.display = 'none';
+      nextBtn.disabled = false;
     }
-  
-    submitBtn.style.display = 'none';
-    nextBtn.disabled = false;
-  }
 
     function navigateQuestion(direction) {
       const newIndex = currentQuestionIndex + direction;
@@ -2848,6 +2829,8 @@ Thank you!
           contextTitle = 'MITS-1 Progress';
         } else if (currentFilter === 'mits2') {
           contextTitle = 'MITS-2 Progress';
+        } else if (currentFilter === 'bsa2') {
+          contextTitle = 'BSA-2 Progress';
         } else if (currentFilter.startsWith('part')) {
           const partNames = {
             'part1': 'Part 1 Progress',
@@ -2857,7 +2840,10 @@ Thank you!
             'part5': 'Part 5 Progress',
             'part5.5': 'Part 5.5 Progress',
             'part6': 'Part 6 Progress',
-            'part7': 'Part 7 Progress'
+            'part7': 'Part 7 Progress',
+            'part9': 'Part 9 Progress',
+            'part10': 'Part 10 Progress',
+            'part11': 'Part 11 Progress'
           };
           contextTitle = partNames[currentFilter] || 'Your Progress';
         }
@@ -2908,6 +2894,8 @@ Thank you!
           resultsTitle = '🎉 MITS-1 Section Complete!';
         } else if (currentFilter === 'mits2') {
           resultsTitle = '🎉 MITS-2 Section Complete!';
+        } else if (currentFilter === 'bsa2') {
+          resultsTitle = '🎉 BSA-2 Section Complete!';
         } else if (currentFilter.startsWith('part')) {
           const partNames = {
             'part1': 'Part 1',
@@ -2917,7 +2905,10 @@ Thank you!
             'part5': 'Part 5',
             'part5.5': 'Part 5.5',
             'part6': 'Part 6',
-            'part7': 'Part 7'
+            'part7': 'Part 7',
+            'part9': 'Part 9',
+            'part10': 'Part 10',
+            'part11': 'Part 11'
           };
           const partName = partNames[currentFilter] || currentFilter;
           resultsTitle = `🎉 ${partName} Complete!`;
@@ -2975,9 +2966,12 @@ Thank you!
         'part3': 'Part 3',
         'part4': 'Part 4',
         'part5': 'Part 5',
-        'part5.5': 'Part 5.5 - ITS-3',
+        'part5.5': 'Part 5.5',
         'part6': 'Part 6',
-        'part7': 'Part 7'
+        'part7': 'Part 7',
+        'part9': 'Part 9',
+        'part10': 'Part 10',
+        'part11': 'Part 11'
       };
 
       const categoryName = categoryNames[category] || 'General';
