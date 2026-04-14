@@ -315,6 +315,7 @@
       gap: 12px;
       flex-wrap: wrap;
       align-items: flex-end;
+      justify-content: flex-start;
     }
 
     .request-field {
@@ -384,21 +385,13 @@
     }
 
     @media (max-width: 768px) {
-      .request-section {
-        padding: 25px 20px;
-      }
-
-      .request-fields {
-        flex-direction: column;
-      }
-
-      .request-input {
-        width: 100%;
-      }
-
-      .request-subtitle {
-        padding-left: 0;
-      }
+      .request-section { padding: 25px 20px; }
+      .request-fields { flex-direction: column; }
+      .request-input { width: 100%; }
+      .request-subtitle { padding-left: 0; }
+      .request-field { width: 100%; }
+      .request-btn { width: 100%; justify-content: center; }
+      .req-spacer-label { display: none; }
     }
 
     /* Footer */
@@ -447,14 +440,6 @@
 
       .projects-grid {
         grid-template-columns: 1fr;
-      }
-      
-      .study-section {
-        padding: 25px 20px;
-      }
-      
-      .study-title {
-        font-size: 1.6rem;
       }
     }
   </style>
@@ -524,8 +509,7 @@
           <span class="study-tag">ITS 3</span>
           <span class="study-tag">ITS 4</span>
           <span class="study-tag">MITS 1 &amp; 2</span>
-          <span class="study-tag" style="background: rgba(26,188,156,0.25); color: #1abc9c; font-weight: 600;">🆕 BSA
-            2</span>
+          <span class="study-tag" style="background: rgba(26,188,156,0.25); color: #1abc9c; font-weight: 600;">🆕 BSA 2</span>
           <span class="study-tag">1,330+ Questions</span>
         </div>
         <p style="color: rgba(255,255,255,0.8); margin-bottom: 10px; line-height: 1.6;">
@@ -533,8 +517,10 @@
           Fully aligned to NYS competencies.
         </p>
         <p style="color: rgba(26,188,156,0.9); font-size: 0.9rem; margin-bottom: 25px; line-height: 1.6;">
-          ✨ <strong>Now includes Business Systems Analyst 2</strong> — 300 new questions covering BABOK Business
-          Analysis, Project Management Fundamentals, and Facilitating Communications.
+          ✨ <strong>Now includes Business Systems Analyst 2</strong> — 300 new questions covering BABOK Business Analysis, Project Management Fundamentals, and Facilitating Communications.
+        </p>
+        <p style="color: rgba(26,188,156,0.9); font-size: 0.9rem; margin-bottom: 25px; line-height: 1.6;">
+          🤖 <strong>New: AI-powered explanations</strong> — answer a question wrong and get an instant AI-generated breakdown of why your answer was incorrect and why the correct answer is right.
         </p>
         <a href="MITS.html" class="cta-button" style="padding: 12px 28px; font-size: 1rem;">Start Studying</a>
       </div>
@@ -547,21 +533,29 @@
         <div class="request-title">Request an Exam</div>
       </div>
       <p class="request-subtitle">
-        Don't see your NYS civil service exam in the study guide? Paste the cs.ny.gov announcement link below and I'll
-        add it.
+        Don't see your NYS civil service exam in the study guide? Paste the cs.ny.gov announcement link below and I'll add it.
       </p>
       <div class="request-fields">
         <div class="request-field" style="flex: 2; min-width: 240px;">
           <label for="reqUrl">cs.ny.gov Announcement URL</label>
-          <input id="reqUrl" type="url" class="request-input"
-            placeholder="https://www.cs.ny.gov/examannouncements/..." />
+          <input
+            id="reqUrl"
+            type="url"
+            class="request-input"
+            placeholder="https://www.cs.ny.gov/examannouncements/..."
+          />
         </div>
         <div class="request-field" style="flex: 1; min-width: 160px;">
           <label for="reqTitle">Exam title (optional)</label>
-          <input id="reqTitle" type="text" class="request-input" placeholder="e.g. IT Specialist 5" />
+          <input
+            id="reqTitle"
+            type="text"
+            class="request-input"
+            placeholder="e.g. ITS 4"
+          />
         </div>
-        <div class="request-field">
-          <label style="visibility: hidden;">Submit</label>
+        <div class="request-field" id="reqBtnField">
+          <label class="req-spacer-label" style="visibility: hidden;">Submit</label>
           <button class="request-btn" id="reqBtn" onclick="submitExamRequest()">Submit Request</button>
         </div>
       </div>
