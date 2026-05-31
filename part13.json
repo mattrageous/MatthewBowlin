@@ -1,0 +1,864 @@
+{
+  "understanding_and_interpreting_written_material": [
+    {
+      "id": 13000,
+      "passageType": "A",
+      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "options": [
+            "To balance the risks of keeping records too long against destroying them too soon",
+            "To ensure all records are kept permanently",
+            "To reduce the number of records an agency creates",
+            "To eliminate the need for physical storage"
+          ],
+          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "global_id": 1300000
+        },
+        {
+          "qid": 2,
+          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "options": [
+            "Increased storage costs and difficulty locating information",
+            "Greater legal protection for the agency",
+            "Loss of institutional knowledge",
+            "Improved retrieval of relevant documents"
+          ],
+          "answer": "Increased storage costs and difficulty locating information",
+          "global_id": 1300001
+        },
+        {
+          "qid": 3,
+          "question": "What risk does the passage associate with destroying records prematurely?",
+          "options": [
+            "Legal exposure and loss of institutional knowledge",
+            "Higher storage costs",
+            "Difficulty creating new records",
+            "Reduced administrative value"
+          ],
+          "answer": "Legal exposure and loss of institutional knowledge",
+          "global_id": 1300002
+        }
+      ]
+    },
+    {
+      "id": 13001,
+      "passageType": "B",
+      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the primary goal of the new permitting system?",
+          "options": [
+            "To streamline applications that previously required multiple in-person visits",
+            "To reduce the number of applications received",
+            "To eliminate paper records entirely",
+            "To increase staffing in the permitting office"
+          ],
+          "answer": "To streamline applications that previously required multiple in-person visits",
+          "global_id": 1300003
+        },
+        {
+          "qid": 2,
+          "question": "Why did some applicants experience delays?",
+          "options": [
+            "They lacked reliable internet access and were unaware of alternative methods",
+            "The automated system was frequently offline",
+            "They submitted incomplete materials",
+            "The agency reduced its processing staff"
+          ],
+          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "global_id": 1300004
+        },
+        {
+          "qid": 3,
+          "question": "How did the agency respond to the problem described?",
+          "options": [
+            "It expanded outreach about available submission options",
+            "It returned to the previous in-person system",
+            "It required all applicants to apply online",
+            "It discontinued automated status updates"
+          ],
+          "answer": "It expanded outreach about available submission options",
+          "global_id": 1300005
+        }
+      ]
+    },
+    {
+      "id": 13002,
+      "passageType": "A",
+      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the pilot program designed to evaluate?",
+          "options": [
+            "Whether flexible scheduling would improve employee retention",
+            "Whether employees preferred working peak hours",
+            "Whether turnover was caused by low pay",
+            "Whether supervisors needed additional training"
+          ],
+          "answer": "Whether flexible scheduling would improve employee retention",
+          "global_id": 1300006
+        },
+        {
+          "qid": 2,
+          "question": "What challenge did supervisors identify?",
+          "options": [
+            "Coordinating adequate coverage during peak hours",
+            "A sharp rise in employee turnover",
+            "Lower reported job satisfaction",
+            "Difficulty tracking employee hours"
+          ],
+          "answer": "Coordinating adequate coverage during peak hours",
+          "global_id": 1300007
+        },
+        {
+          "qid": 3,
+          "question": "What overall conclusion did the evaluation reach?",
+          "options": [
+            "Flexible scheduling shows promise but requires careful planning for staffing",
+            "Flexible scheduling should be adopted without changes",
+            "Flexible scheduling failed to improve retention",
+            "Flexible scheduling reduced job satisfaction"
+          ],
+          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "global_id": 1300008
+        }
+      ]
+    },
+    {
+      "id": 13003,
+      "passageType": "B",
+      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what determines the value of a dashboard?",
+          "options": [
+            "The relevance and clarity of what it presents",
+            "The total volume of data it displays",
+            "The number of stakeholders who view it",
+            "How visually striking its metrics appear"
+          ],
+          "answer": "The relevance and clarity of what it presents",
+          "global_id": 1300009
+        },
+        {
+          "qid": 2,
+          "question": "How can a poorly designed dashboard mislead?",
+          "options": [
+            "By emphasizing unimportant metrics or omitting needed context",
+            "By displaying too little data",
+            "By updating its figures too frequently",
+            "By limiting access to stakeholders"
+          ],
+          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "global_id": 1300010
+        },
+        {
+          "qid": 3,
+          "question": "What benefit does a well-designed dashboard provide?",
+          "options": [
+            "It makes complex information accessible and supports timely decisions",
+            "It guarantees decisions will be correct",
+            "It eliminates the need for stakeholder input",
+            "It increases the volume of data collected"
+          ],
+          "answer": "It makes complex information accessible and supports timely decisions",
+          "global_id": 1300011
+        }
+      ]
+    },
+    {
+      "id": 13004,
+      "passageType": "A",
+      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the committee recommend?",
+          "options": [
+            "Phasing in the new policy rather than implementing it all at once",
+            "Abandoning the new policy",
+            "Implementing the policy immediately across all units",
+            "Delaying the policy indefinitely"
+          ],
+          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "global_id": 1300012
+        },
+        {
+          "qid": 2,
+          "question": "What concern did critics raise about a phased rollout?",
+          "options": [
+            "It could cause confusion if units operated under different rules at the same time",
+            "It would be more expensive than full implementation",
+            "It would prevent staff from adjusting",
+            "It would surface too many problems at once"
+          ],
+          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "global_id": 1300013
+        },
+        {
+          "qid": 3,
+          "question": "How did the committee respond to the critics' concern?",
+          "options": [
+            "It acknowledged the concern but favored the benefits of gradual learning",
+            "It abandoned the phased approach",
+            "It denied that confusion was possible",
+            "It recommended immediate full deployment"
+          ],
+          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "global_id": 1300014
+        }
+      ]
+    },
+    {
+      "id": 13005,
+      "passageType": "B",
+      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "options": [
+            "To balance the risks of keeping records too long against destroying them too soon",
+            "To ensure all records are kept permanently",
+            "To reduce the number of records an agency creates",
+            "To eliminate the need for physical storage"
+          ],
+          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "global_id": 1300015
+        },
+        {
+          "qid": 2,
+          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "options": [
+            "Increased storage costs and difficulty locating information",
+            "Greater legal protection for the agency",
+            "Loss of institutional knowledge",
+            "Improved retrieval of relevant documents"
+          ],
+          "answer": "Increased storage costs and difficulty locating information",
+          "global_id": 1300016
+        },
+        {
+          "qid": 3,
+          "question": "What risk does the passage associate with destroying records prematurely?",
+          "options": [
+            "Legal exposure and loss of institutional knowledge",
+            "Higher storage costs",
+            "Difficulty creating new records",
+            "Reduced administrative value"
+          ],
+          "answer": "Legal exposure and loss of institutional knowledge",
+          "global_id": 1300017
+        }
+      ]
+    },
+    {
+      "id": 13006,
+      "passageType": "A",
+      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the primary goal of the new permitting system?",
+          "options": [
+            "To streamline applications that previously required multiple in-person visits",
+            "To reduce the number of applications received",
+            "To eliminate paper records entirely",
+            "To increase staffing in the permitting office"
+          ],
+          "answer": "To streamline applications that previously required multiple in-person visits",
+          "global_id": 1300018
+        },
+        {
+          "qid": 2,
+          "question": "Why did some applicants experience delays?",
+          "options": [
+            "They lacked reliable internet access and were unaware of alternative methods",
+            "The automated system was frequently offline",
+            "They submitted incomplete materials",
+            "The agency reduced its processing staff"
+          ],
+          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "global_id": 1300019
+        },
+        {
+          "qid": 3,
+          "question": "How did the agency respond to the problem described?",
+          "options": [
+            "It expanded outreach about available submission options",
+            "It returned to the previous in-person system",
+            "It required all applicants to apply online",
+            "It discontinued automated status updates"
+          ],
+          "answer": "It expanded outreach about available submission options",
+          "global_id": 1300020
+        }
+      ]
+    },
+    {
+      "id": 13007,
+      "passageType": "B",
+      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the pilot program designed to evaluate?",
+          "options": [
+            "Whether flexible scheduling would improve employee retention",
+            "Whether employees preferred working peak hours",
+            "Whether turnover was caused by low pay",
+            "Whether supervisors needed additional training"
+          ],
+          "answer": "Whether flexible scheduling would improve employee retention",
+          "global_id": 1300021
+        },
+        {
+          "qid": 2,
+          "question": "What challenge did supervisors identify?",
+          "options": [
+            "Coordinating adequate coverage during peak hours",
+            "A sharp rise in employee turnover",
+            "Lower reported job satisfaction",
+            "Difficulty tracking employee hours"
+          ],
+          "answer": "Coordinating adequate coverage during peak hours",
+          "global_id": 1300022
+        },
+        {
+          "qid": 3,
+          "question": "What overall conclusion did the evaluation reach?",
+          "options": [
+            "Flexible scheduling shows promise but requires careful planning for staffing",
+            "Flexible scheduling should be adopted without changes",
+            "Flexible scheduling failed to improve retention",
+            "Flexible scheduling reduced job satisfaction"
+          ],
+          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "global_id": 1300023
+        }
+      ]
+    },
+    {
+      "id": 13008,
+      "passageType": "A",
+      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what determines the value of a dashboard?",
+          "options": [
+            "The relevance and clarity of what it presents",
+            "The total volume of data it displays",
+            "The number of stakeholders who view it",
+            "How visually striking its metrics appear"
+          ],
+          "answer": "The relevance and clarity of what it presents",
+          "global_id": 1300024
+        },
+        {
+          "qid": 2,
+          "question": "How can a poorly designed dashboard mislead?",
+          "options": [
+            "By emphasizing unimportant metrics or omitting needed context",
+            "By displaying too little data",
+            "By updating its figures too frequently",
+            "By limiting access to stakeholders"
+          ],
+          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "global_id": 1300025
+        },
+        {
+          "qid": 3,
+          "question": "What benefit does a well-designed dashboard provide?",
+          "options": [
+            "It makes complex information accessible and supports timely decisions",
+            "It guarantees decisions will be correct",
+            "It eliminates the need for stakeholder input",
+            "It increases the volume of data collected"
+          ],
+          "answer": "It makes complex information accessible and supports timely decisions",
+          "global_id": 1300026
+        }
+      ]
+    },
+    {
+      "id": 13009,
+      "passageType": "B",
+      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the committee recommend?",
+          "options": [
+            "Phasing in the new policy rather than implementing it all at once",
+            "Abandoning the new policy",
+            "Implementing the policy immediately across all units",
+            "Delaying the policy indefinitely"
+          ],
+          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "global_id": 1300027
+        },
+        {
+          "qid": 2,
+          "question": "What concern did critics raise about a phased rollout?",
+          "options": [
+            "It could cause confusion if units operated under different rules at the same time",
+            "It would be more expensive than full implementation",
+            "It would prevent staff from adjusting",
+            "It would surface too many problems at once"
+          ],
+          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "global_id": 1300028
+        },
+        {
+          "qid": 3,
+          "question": "How did the committee respond to the critics' concern?",
+          "options": [
+            "It acknowledged the concern but favored the benefits of gradual learning",
+            "It abandoned the phased approach",
+            "It denied that confusion was possible",
+            "It recommended immediate full deployment"
+          ],
+          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "global_id": 1300029
+        }
+      ]
+    },
+    {
+      "id": 13010,
+      "passageType": "A",
+      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "options": [
+            "To balance the risks of keeping records too long against destroying them too soon",
+            "To ensure all records are kept permanently",
+            "To reduce the number of records an agency creates",
+            "To eliminate the need for physical storage"
+          ],
+          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "global_id": 1300030
+        },
+        {
+          "qid": 2,
+          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "options": [
+            "Increased storage costs and difficulty locating information",
+            "Greater legal protection for the agency",
+            "Loss of institutional knowledge",
+            "Improved retrieval of relevant documents"
+          ],
+          "answer": "Increased storage costs and difficulty locating information",
+          "global_id": 1300031
+        },
+        {
+          "qid": 3,
+          "question": "What risk does the passage associate with destroying records prematurely?",
+          "options": [
+            "Legal exposure and loss of institutional knowledge",
+            "Higher storage costs",
+            "Difficulty creating new records",
+            "Reduced administrative value"
+          ],
+          "answer": "Legal exposure and loss of institutional knowledge",
+          "global_id": 1300032
+        }
+      ]
+    },
+    {
+      "id": 13011,
+      "passageType": "B",
+      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the primary goal of the new permitting system?",
+          "options": [
+            "To streamline applications that previously required multiple in-person visits",
+            "To reduce the number of applications received",
+            "To eliminate paper records entirely",
+            "To increase staffing in the permitting office"
+          ],
+          "answer": "To streamline applications that previously required multiple in-person visits",
+          "global_id": 1300033
+        },
+        {
+          "qid": 2,
+          "question": "Why did some applicants experience delays?",
+          "options": [
+            "They lacked reliable internet access and were unaware of alternative methods",
+            "The automated system was frequently offline",
+            "They submitted incomplete materials",
+            "The agency reduced its processing staff"
+          ],
+          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "global_id": 1300034
+        },
+        {
+          "qid": 3,
+          "question": "How did the agency respond to the problem described?",
+          "options": [
+            "It expanded outreach about available submission options",
+            "It returned to the previous in-person system",
+            "It required all applicants to apply online",
+            "It discontinued automated status updates"
+          ],
+          "answer": "It expanded outreach about available submission options",
+          "global_id": 1300035
+        }
+      ]
+    },
+    {
+      "id": 13012,
+      "passageType": "A",
+      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the pilot program designed to evaluate?",
+          "options": [
+            "Whether flexible scheduling would improve employee retention",
+            "Whether employees preferred working peak hours",
+            "Whether turnover was caused by low pay",
+            "Whether supervisors needed additional training"
+          ],
+          "answer": "Whether flexible scheduling would improve employee retention",
+          "global_id": 1300036
+        },
+        {
+          "qid": 2,
+          "question": "What challenge did supervisors identify?",
+          "options": [
+            "Coordinating adequate coverage during peak hours",
+            "A sharp rise in employee turnover",
+            "Lower reported job satisfaction",
+            "Difficulty tracking employee hours"
+          ],
+          "answer": "Coordinating adequate coverage during peak hours",
+          "global_id": 1300037
+        },
+        {
+          "qid": 3,
+          "question": "What overall conclusion did the evaluation reach?",
+          "options": [
+            "Flexible scheduling shows promise but requires careful planning for staffing",
+            "Flexible scheduling should be adopted without changes",
+            "Flexible scheduling failed to improve retention",
+            "Flexible scheduling reduced job satisfaction"
+          ],
+          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "global_id": 1300038
+        }
+      ]
+    },
+    {
+      "id": 13013,
+      "passageType": "B",
+      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what determines the value of a dashboard?",
+          "options": [
+            "The relevance and clarity of what it presents",
+            "The total volume of data it displays",
+            "The number of stakeholders who view it",
+            "How visually striking its metrics appear"
+          ],
+          "answer": "The relevance and clarity of what it presents",
+          "global_id": 1300039
+        },
+        {
+          "qid": 2,
+          "question": "How can a poorly designed dashboard mislead?",
+          "options": [
+            "By emphasizing unimportant metrics or omitting needed context",
+            "By displaying too little data",
+            "By updating its figures too frequently",
+            "By limiting access to stakeholders"
+          ],
+          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "global_id": 1300040
+        },
+        {
+          "qid": 3,
+          "question": "What benefit does a well-designed dashboard provide?",
+          "options": [
+            "It makes complex information accessible and supports timely decisions",
+            "It guarantees decisions will be correct",
+            "It eliminates the need for stakeholder input",
+            "It increases the volume of data collected"
+          ],
+          "answer": "It makes complex information accessible and supports timely decisions",
+          "global_id": 1300041
+        }
+      ]
+    },
+    {
+      "id": 13014,
+      "passageType": "A",
+      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the committee recommend?",
+          "options": [
+            "Phasing in the new policy rather than implementing it all at once",
+            "Abandoning the new policy",
+            "Implementing the policy immediately across all units",
+            "Delaying the policy indefinitely"
+          ],
+          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "global_id": 1300042
+        },
+        {
+          "qid": 2,
+          "question": "What concern did critics raise about a phased rollout?",
+          "options": [
+            "It could cause confusion if units operated under different rules at the same time",
+            "It would be more expensive than full implementation",
+            "It would prevent staff from adjusting",
+            "It would surface too many problems at once"
+          ],
+          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "global_id": 1300043
+        },
+        {
+          "qid": 3,
+          "question": "How did the committee respond to the critics' concern?",
+          "options": [
+            "It acknowledged the concern but favored the benefits of gradual learning",
+            "It abandoned the phased approach",
+            "It denied that confusion was possible",
+            "It recommended immediate full deployment"
+          ],
+          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "global_id": 1300044
+        }
+      ]
+    },
+    {
+      "id": 13015,
+      "passageType": "B",
+      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "options": [
+            "To balance the risks of keeping records too long against destroying them too soon",
+            "To ensure all records are kept permanently",
+            "To reduce the number of records an agency creates",
+            "To eliminate the need for physical storage"
+          ],
+          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "global_id": 1300045
+        },
+        {
+          "qid": 2,
+          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "options": [
+            "Increased storage costs and difficulty locating information",
+            "Greater legal protection for the agency",
+            "Loss of institutional knowledge",
+            "Improved retrieval of relevant documents"
+          ],
+          "answer": "Increased storage costs and difficulty locating information",
+          "global_id": 1300046
+        },
+        {
+          "qid": 3,
+          "question": "What risk does the passage associate with destroying records prematurely?",
+          "options": [
+            "Legal exposure and loss of institutional knowledge",
+            "Higher storage costs",
+            "Difficulty creating new records",
+            "Reduced administrative value"
+          ],
+          "answer": "Legal exposure and loss of institutional knowledge",
+          "global_id": 1300047
+        }
+      ]
+    },
+    {
+      "id": 13016,
+      "passageType": "A",
+      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the primary goal of the new permitting system?",
+          "options": [
+            "To streamline applications that previously required multiple in-person visits",
+            "To reduce the number of applications received",
+            "To eliminate paper records entirely",
+            "To increase staffing in the permitting office"
+          ],
+          "answer": "To streamline applications that previously required multiple in-person visits",
+          "global_id": 1300048
+        },
+        {
+          "qid": 2,
+          "question": "Why did some applicants experience delays?",
+          "options": [
+            "They lacked reliable internet access and were unaware of alternative methods",
+            "The automated system was frequently offline",
+            "They submitted incomplete materials",
+            "The agency reduced its processing staff"
+          ],
+          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "global_id": 1300049
+        },
+        {
+          "qid": 3,
+          "question": "How did the agency respond to the problem described?",
+          "options": [
+            "It expanded outreach about available submission options",
+            "It returned to the previous in-person system",
+            "It required all applicants to apply online",
+            "It discontinued automated status updates"
+          ],
+          "answer": "It expanded outreach about available submission options",
+          "global_id": 1300050
+        }
+      ]
+    },
+    {
+      "id": 13017,
+      "passageType": "B",
+      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the pilot program designed to evaluate?",
+          "options": [
+            "Whether flexible scheduling would improve employee retention",
+            "Whether employees preferred working peak hours",
+            "Whether turnover was caused by low pay",
+            "Whether supervisors needed additional training"
+          ],
+          "answer": "Whether flexible scheduling would improve employee retention",
+          "global_id": 1300051
+        },
+        {
+          "qid": 2,
+          "question": "What challenge did supervisors identify?",
+          "options": [
+            "Coordinating adequate coverage during peak hours",
+            "A sharp rise in employee turnover",
+            "Lower reported job satisfaction",
+            "Difficulty tracking employee hours"
+          ],
+          "answer": "Coordinating adequate coverage during peak hours",
+          "global_id": 1300052
+        },
+        {
+          "qid": 3,
+          "question": "What overall conclusion did the evaluation reach?",
+          "options": [
+            "Flexible scheduling shows promise but requires careful planning for staffing",
+            "Flexible scheduling should be adopted without changes",
+            "Flexible scheduling failed to improve retention",
+            "Flexible scheduling reduced job satisfaction"
+          ],
+          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "global_id": 1300053
+        }
+      ]
+    },
+    {
+      "id": 13018,
+      "passageType": "A",
+      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "According to the passage, what determines the value of a dashboard?",
+          "options": [
+            "The relevance and clarity of what it presents",
+            "The total volume of data it displays",
+            "The number of stakeholders who view it",
+            "How visually striking its metrics appear"
+          ],
+          "answer": "The relevance and clarity of what it presents",
+          "global_id": 1300054
+        },
+        {
+          "qid": 2,
+          "question": "How can a poorly designed dashboard mislead?",
+          "options": [
+            "By emphasizing unimportant metrics or omitting needed context",
+            "By displaying too little data",
+            "By updating its figures too frequently",
+            "By limiting access to stakeholders"
+          ],
+          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "global_id": 1300055
+        },
+        {
+          "qid": 3,
+          "question": "What benefit does a well-designed dashboard provide?",
+          "options": [
+            "It makes complex information accessible and supports timely decisions",
+            "It guarantees decisions will be correct",
+            "It eliminates the need for stakeholder input",
+            "It increases the volume of data collected"
+          ],
+          "answer": "It makes complex information accessible and supports timely decisions",
+          "global_id": 1300056
+        }
+      ]
+    },
+    {
+      "id": 13019,
+      "passageType": "B",
+      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the committee recommend?",
+          "options": [
+            "Phasing in the new policy rather than implementing it all at once",
+            "Abandoning the new policy",
+            "Implementing the policy immediately across all units",
+            "Delaying the policy indefinitely"
+          ],
+          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "global_id": 1300057
+        },
+        {
+          "qid": 2,
+          "question": "What concern did critics raise about a phased rollout?",
+          "options": [
+            "It could cause confusion if units operated under different rules at the same time",
+            "It would be more expensive than full implementation",
+            "It would prevent staff from adjusting",
+            "It would surface too many problems at once"
+          ],
+          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "global_id": 1300058
+        },
+        {
+          "qid": 3,
+          "question": "How did the committee respond to the critics' concern?",
+          "options": [
+            "It acknowledged the concern but favored the benefits of gradual learning",
+            "It abandoned the phased approach",
+            "It denied that confusion was possible",
+            "It recommended immediate full deployment"
+          ],
+          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "global_id": 1300059
+        }
+      ]
+    }
+  ]
+}
