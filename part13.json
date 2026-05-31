@@ -3,11 +3,11 @@
     {
       "id": 13000,
       "passageType": "A",
-      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these concerns by specifying defined periods for keeping each category of record.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "question": "What is the main purpose of a retention schedule?",
           "options": [
             "To balance the risks of keeping records too long against destroying them too soon",
             "To ensure all records are kept permanently",
@@ -19,7 +19,7 @@
         },
         {
           "qid": 2,
-          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "question": "What is a consequence of retaining records too long?",
           "options": [
             "Increased storage costs and difficulty locating information",
             "Greater legal protection for the agency",
@@ -31,7 +31,7 @@
         },
         {
           "qid": 3,
-          "question": "What risk does the passage associate with destroying records prematurely?",
+          "question": "What risk is associated with destroying records prematurely?",
           "options": [
             "Legal exposure and loss of institutional knowledge",
             "Higher storage costs",
@@ -74,7 +74,7 @@
         },
         {
           "qid": 3,
-          "question": "How did the agency respond to the problem described?",
+          "question": "How did the agency respond to the problem?",
           "options": [
             "It expanded outreach about available submission options",
             "It returned to the previous in-person system",
@@ -89,11 +89,11 @@
     {
       "id": 13002,
       "passageType": "A",
-      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the pilot program designed to evaluate?",
+          "question": "What did the pilot program evaluate?",
           "options": [
             "Whether flexible scheduling would improve employee retention",
             "Whether employees preferred working peak hours",
@@ -117,7 +117,7 @@
         },
         {
           "qid": 3,
-          "question": "What overall conclusion did the evaluation reach?",
+          "question": "What conclusion did the evaluation reach?",
           "options": [
             "Flexible scheduling shows promise but requires careful planning for staffing",
             "Flexible scheduling should be adopted without changes",
@@ -136,7 +136,7 @@
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what determines the value of a dashboard?",
+          "question": "What determines the value of a dashboard?",
           "options": [
             "The relevance and clarity of what it presents",
             "The total volume of data it displays",
@@ -191,7 +191,7 @@
         },
         {
           "qid": 2,
-          "question": "What concern did critics raise about a phased rollout?",
+          "question": "What concern did critics raise?",
           "options": [
             "It could cause confusion if units operated under different rules at the same time",
             "It would be more expensive than full implementation",
@@ -203,7 +203,7 @@
         },
         {
           "qid": 3,
-          "question": "How did the committee respond to the critics' concern?",
+          "question": "How did the committee respond to the critics?",
           "options": [
             "It acknowledged the concern but favored the benefits of gradual learning",
             "It abandoned the phased approach",
@@ -218,42 +218,42 @@
     {
       "id": 13005,
       "passageType": "B",
-      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "passage": "The annual report noted that customer satisfaction had risen for the third consecutive year, even as the volume of service requests increased. Analysts attributed the improvement primarily to a redesigned intake process that reduced the time callers spent waiting before reaching a representative. Although staffing levels remained flat, the report emphasized that process changes, rather than additional resources, drove most of the gains.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "question": "What trend did the annual report identify?",
           "options": [
-            "To balance the risks of keeping records too long against destroying them too soon",
-            "To ensure all records are kept permanently",
-            "To reduce the number of records an agency creates",
-            "To eliminate the need for physical storage"
+            "Customer satisfaction rose for a third consecutive year despite higher request volume",
+            "Customer satisfaction declined as requests increased",
+            "Service requests decreased sharply",
+            "Staffing levels increased significantly"
           ],
-          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "answer": "Customer satisfaction rose for a third consecutive year despite higher request volume",
           "global_id": 1300015
         },
         {
           "qid": 2,
-          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "question": "What did analysts credit for the improvement?",
           "options": [
-            "Increased storage costs and difficulty locating information",
-            "Greater legal protection for the agency",
-            "Loss of institutional knowledge",
-            "Improved retrieval of relevant documents"
+            "A redesigned intake process that reduced caller wait times",
+            "A large increase in staffing",
+            "A reduction in service requests",
+            "Higher prices for services"
           ],
-          "answer": "Increased storage costs and difficulty locating information",
+          "answer": "A redesigned intake process that reduced caller wait times",
           "global_id": 1300016
         },
         {
           "qid": 3,
-          "question": "What risk does the passage associate with destroying records prematurely?",
+          "question": "According to the report, what mainly drove the gains?",
           "options": [
-            "Legal exposure and loss of institutional knowledge",
-            "Higher storage costs",
-            "Difficulty creating new records",
-            "Reduced administrative value"
+            "Process changes rather than additional resources",
+            "Additional staff hires",
+            "Reduced demand",
+            "Increased budgets"
           ],
-          "answer": "Legal exposure and loss of institutional knowledge",
+          "answer": "Process changes rather than additional resources",
           "global_id": 1300017
         }
       ]
@@ -261,42 +261,42 @@
     {
       "id": 13006,
       "passageType": "A",
-      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "passage": "A memorandum advised staff that the office would transition to a paperless filing system over the next quarter. During the transition, both paper and electronic records would be maintained to prevent any loss of information. Staff were instructed to scan incoming documents promptly and to flag any items that could not be digitized for special handling. The memorandum stressed that the dual system was temporary and would end once digitization was complete.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the primary goal of the new permitting system?",
+          "question": "What change did the memorandum announce?",
           "options": [
-            "To streamline applications that previously required multiple in-person visits",
-            "To reduce the number of applications received",
-            "To eliminate paper records entirely",
-            "To increase staffing in the permitting office"
+            "A transition to a paperless filing system over the next quarter",
+            "The elimination of all electronic records",
+            "A permanent dual paper-and-electronic system",
+            "A reduction in document scanning"
           ],
-          "answer": "To streamline applications that previously required multiple in-person visits",
+          "answer": "A transition to a paperless filing system over the next quarter",
           "global_id": 1300018
         },
         {
           "qid": 2,
-          "question": "Why did some applicants experience delays?",
+          "question": "Why were both paper and electronic records maintained during the transition?",
           "options": [
-            "They lacked reliable internet access and were unaware of alternative methods",
-            "The automated system was frequently offline",
-            "They submitted incomplete materials",
-            "The agency reduced its processing staff"
+            "To prevent any loss of information",
+            "To increase storage costs",
+            "Because staff preferred paper",
+            "To slow the transition"
           ],
-          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "answer": "To prevent any loss of information",
           "global_id": 1300019
         },
         {
           "qid": 3,
-          "question": "How did the agency respond to the problem described?",
+          "question": "What were staff told about items that could not be digitized?",
           "options": [
-            "It expanded outreach about available submission options",
-            "It returned to the previous in-person system",
-            "It required all applicants to apply online",
-            "It discontinued automated status updates"
+            "To flag them for special handling",
+            "To discard them",
+            "To ignore them",
+            "To store them off-site permanently"
           ],
-          "answer": "It expanded outreach about available submission options",
+          "answer": "To flag them for special handling",
           "global_id": 1300020
         }
       ]
@@ -304,42 +304,42 @@
     {
       "id": 13007,
       "passageType": "B",
-      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "passage": "The study examined whether providing written summaries after meetings improved follow-through on assigned tasks. Teams that received summaries completed a higher proportion of action items on time than teams that relied on memory alone. The researchers cautioned, however, that overly long summaries were sometimes ignored, suggesting that brevity and clarity mattered as much as the existence of a summary.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the pilot program designed to evaluate?",
+          "question": "What did the study examine?",
           "options": [
-            "Whether flexible scheduling would improve employee retention",
-            "Whether employees preferred working peak hours",
-            "Whether turnover was caused by low pay",
-            "Whether supervisors needed additional training"
+            "Whether written meeting summaries improved follow-through on tasks",
+            "Whether meetings should be shorter",
+            "Whether teams preferred written or verbal updates",
+            "Whether summaries reduced the number of meetings"
           ],
-          "answer": "Whether flexible scheduling would improve employee retention",
+          "answer": "Whether written meeting summaries improved follow-through on tasks",
           "global_id": 1300021
         },
         {
           "qid": 2,
-          "question": "What challenge did supervisors identify?",
+          "question": "What did teams with summaries do better?",
           "options": [
-            "Coordinating adequate coverage during peak hours",
-            "A sharp rise in employee turnover",
-            "Lower reported job satisfaction",
-            "Difficulty tracking employee hours"
+            "Completed more action items on time",
+            "Held fewer meetings",
+            "Assigned fewer tasks",
+            "Reduced their workload"
           ],
-          "answer": "Coordinating adequate coverage during peak hours",
+          "answer": "Completed more action items on time",
           "global_id": 1300022
         },
         {
           "qid": 3,
-          "question": "What overall conclusion did the evaluation reach?",
+          "question": "What caution did the researchers add?",
           "options": [
-            "Flexible scheduling shows promise but requires careful planning for staffing",
-            "Flexible scheduling should be adopted without changes",
-            "Flexible scheduling failed to improve retention",
-            "Flexible scheduling reduced job satisfaction"
+            "Overly long summaries were sometimes ignored",
+            "Summaries were never useful",
+            "Verbal updates were always better",
+            "Summaries increased errors"
           ],
-          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "answer": "Overly long summaries were sometimes ignored",
           "global_id": 1300023
         }
       ]
@@ -347,42 +347,42 @@
     {
       "id": 13008,
       "passageType": "A",
-      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "passage": "The proposed budget allocates additional funds to preventive maintenance of facilities. Supporters argue that addressing minor issues early avoids the far higher costs of emergency repairs and prolonged closures. Opponents contend that the immediate spending is difficult to justify when many facilities appear to be functioning adequately. The proposal's author counters that the absence of visible problems is precisely what preventive maintenance is designed to sustain.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what determines the value of a dashboard?",
+          "question": "What does the proposed budget prioritize?",
           "options": [
-            "The relevance and clarity of what it presents",
-            "The total volume of data it displays",
-            "The number of stakeholders who view it",
-            "How visually striking its metrics appear"
+            "Additional funds for preventive maintenance of facilities",
+            "Cutting maintenance spending",
+            "Building new facilities",
+            "Reducing emergency repair budgets only"
           ],
-          "answer": "The relevance and clarity of what it presents",
+          "answer": "Additional funds for preventive maintenance of facilities",
           "global_id": 1300024
         },
         {
           "qid": 2,
-          "question": "How can a poorly designed dashboard mislead?",
+          "question": "What is the supporters' main argument?",
           "options": [
-            "By emphasizing unimportant metrics or omitting needed context",
-            "By displaying too little data",
-            "By updating its figures too frequently",
-            "By limiting access to stakeholders"
+            "Early fixes avoid the higher costs of emergency repairs and closures",
+            "Maintenance is unnecessary",
+            "Facilities should be closed",
+            "Emergency repairs are cheaper"
           ],
-          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "answer": "Early fixes avoid the higher costs of emergency repairs and closures",
           "global_id": 1300025
         },
         {
           "qid": 3,
-          "question": "What benefit does a well-designed dashboard provide?",
+          "question": "How does the author respond to opponents?",
           "options": [
-            "It makes complex information accessible and supports timely decisions",
-            "It guarantees decisions will be correct",
-            "It eliminates the need for stakeholder input",
-            "It increases the volume of data collected"
+            "The lack of visible problems is what preventive maintenance sustains",
+            "Visible problems prove maintenance fails",
+            "Spending should be delayed",
+            "Facilities are beyond repair"
           ],
-          "answer": "It makes complex information accessible and supports timely decisions",
+          "answer": "The lack of visible problems is what preventive maintenance sustains",
           "global_id": 1300026
         }
       ]
@@ -390,42 +390,42 @@
     {
       "id": 13009,
       "passageType": "B",
-      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "passage": "An internal review found that response times to public inquiries varied widely across regional offices. Offices that used a shared tracking system to log and assign inquiries responded more consistently than those relying on informal methods. The review recommended adopting the tracking system agency-wide, while noting that training and clear assignment rules would be necessary for the system to be effective.",
       "questions": [
         {
           "qid": 1,
-          "question": "What did the committee recommend?",
+          "question": "What did the internal review find?",
           "options": [
-            "Phasing in the new policy rather than implementing it all at once",
-            "Abandoning the new policy",
-            "Implementing the policy immediately across all units",
-            "Delaying the policy indefinitely"
+            "Response times to inquiries varied widely across regional offices",
+            "All offices responded at the same speed",
+            "Response times were uniformly slow",
+            "The tracking system caused delays"
           ],
-          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "answer": "Response times to inquiries varied widely across regional offices",
           "global_id": 1300027
         },
         {
           "qid": 2,
-          "question": "What concern did critics raise about a phased rollout?",
+          "question": "Which offices responded more consistently?",
           "options": [
-            "It could cause confusion if units operated under different rules at the same time",
-            "It would be more expensive than full implementation",
-            "It would prevent staff from adjusting",
-            "It would surface too many problems at once"
+            "Those using a shared tracking system",
+            "Those relying on informal methods",
+            "The smallest offices",
+            "The newest offices"
           ],
-          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "answer": "Those using a shared tracking system",
           "global_id": 1300028
         },
         {
           "qid": 3,
-          "question": "How did the committee respond to the critics' concern?",
+          "question": "What did the review recommend?",
           "options": [
-            "It acknowledged the concern but favored the benefits of gradual learning",
-            "It abandoned the phased approach",
-            "It denied that confusion was possible",
-            "It recommended immediate full deployment"
+            "Adopting the tracking system agency-wide with training and clear rules",
+            "Eliminating the tracking system",
+            "Reducing the number of offices",
+            "Ending public inquiries"
           ],
-          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "answer": "Adopting the tracking system agency-wide with training and clear rules",
           "global_id": 1300029
         }
       ]
@@ -433,42 +433,42 @@
     {
       "id": 13010,
       "passageType": "A",
-      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "passage": "The guidance explains that effective written communication anticipates the reader's questions. A document that defines unfamiliar terms, presents information in a logical order, and avoids unnecessary jargon is more likely to be understood on first reading. The guidance warns that documents requiring repeated clarification consume staff time and can erode public confidence.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "question": "What does effective written communication anticipate?",
           "options": [
-            "To balance the risks of keeping records too long against destroying them too soon",
-            "To ensure all records are kept permanently",
-            "To reduce the number of records an agency creates",
-            "To eliminate the need for physical storage"
+            "The reader's questions",
+            "The writer's preferences",
+            "The length of the document",
+            "The number of readers"
           ],
-          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "answer": "The reader's questions",
           "global_id": 1300030
         },
         {
           "qid": 2,
-          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "question": "What makes a document more likely to be understood on first reading?",
           "options": [
-            "Increased storage costs and difficulty locating information",
-            "Greater legal protection for the agency",
-            "Loss of institutional knowledge",
-            "Improved retrieval of relevant documents"
+            "Defining terms, logical order, and avoiding jargon",
+            "Using technical jargon",
+            "Making it as long as possible",
+            "Omitting definitions"
           ],
-          "answer": "Increased storage costs and difficulty locating information",
+          "answer": "Defining terms, logical order, and avoiding jargon",
           "global_id": 1300031
         },
         {
           "qid": 3,
-          "question": "What risk does the passage associate with destroying records prematurely?",
+          "question": "What does the guidance warn about unclear documents?",
           "options": [
-            "Legal exposure and loss of institutional knowledge",
-            "Higher storage costs",
-            "Difficulty creating new records",
-            "Reduced administrative value"
+            "They consume staff time and can erode public confidence",
+            "They are always shorter",
+            "They improve efficiency",
+            "They reduce workload"
           ],
-          "answer": "Legal exposure and loss of institutional knowledge",
+          "answer": "They consume staff time and can erode public confidence",
           "global_id": 1300032
         }
       ]
@@ -476,42 +476,42 @@
     {
       "id": 13011,
       "passageType": "B",
-      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "passage": "A survey of employees indicated that most valued opportunities for professional development, but many were unaware of the training resources already available to them. In response, the agency created a single online catalog of approved courses and assigned each unit a contact to help staff navigate the offerings. Early feedback suggested that awareness, rather than availability, had been the main barrier.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the primary goal of the new permitting system?",
+          "question": "What did the employee survey indicate?",
           "options": [
-            "To streamline applications that previously required multiple in-person visits",
-            "To reduce the number of applications received",
-            "To eliminate paper records entirely",
-            "To increase staffing in the permitting office"
+            "Most valued development but many were unaware of available resources",
+            "Most disliked professional development",
+            "No training resources existed",
+            "Training was too expensive"
           ],
-          "answer": "To streamline applications that previously required multiple in-person visits",
+          "answer": "Most valued development but many were unaware of available resources",
           "global_id": 1300033
         },
         {
           "qid": 2,
-          "question": "Why did some applicants experience delays?",
+          "question": "How did the agency respond?",
           "options": [
-            "They lacked reliable internet access and were unaware of alternative methods",
-            "The automated system was frequently offline",
-            "They submitted incomplete materials",
-            "The agency reduced its processing staff"
+            "It created an online catalog and assigned unit contacts",
+            "It cut training programs",
+            "It made training mandatory",
+            "It surveyed employees again"
           ],
-          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "answer": "It created an online catalog and assigned unit contacts",
           "global_id": 1300034
         },
         {
           "qid": 3,
-          "question": "How did the agency respond to the problem described?",
+          "question": "What did early feedback suggest the main barrier had been?",
           "options": [
-            "It expanded outreach about available submission options",
-            "It returned to the previous in-person system",
-            "It required all applicants to apply online",
-            "It discontinued automated status updates"
+            "Awareness rather than availability",
+            "Cost rather than quality",
+            "Time rather than interest",
+            "Location rather than awareness"
           ],
-          "answer": "It expanded outreach about available submission options",
+          "answer": "Awareness rather than availability",
           "global_id": 1300035
         }
       ]
@@ -519,42 +519,42 @@
     {
       "id": 13012,
       "passageType": "A",
-      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "passage": "The report cautioned against drawing firm conclusions from a single quarter of data. Seasonal patterns, one-time events, and reporting lags can all distort short-term figures. The authors recommended comparing results across multiple periods and against historical baselines before concluding that a meaningful change had occurred.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the pilot program designed to evaluate?",
+          "question": "What did the report caution against?",
           "options": [
-            "Whether flexible scheduling would improve employee retention",
-            "Whether employees preferred working peak hours",
-            "Whether turnover was caused by low pay",
-            "Whether supervisors needed additional training"
+            "Drawing firm conclusions from a single quarter of data",
+            "Collecting any data",
+            "Comparing periods",
+            "Using historical baselines"
           ],
-          "answer": "Whether flexible scheduling would improve employee retention",
+          "answer": "Drawing firm conclusions from a single quarter of data",
           "global_id": 1300036
         },
         {
           "qid": 2,
-          "question": "What challenge did supervisors identify?",
+          "question": "What factors can distort short-term figures?",
           "options": [
-            "Coordinating adequate coverage during peak hours",
-            "A sharp rise in employee turnover",
-            "Lower reported job satisfaction",
-            "Difficulty tracking employee hours"
+            "Seasonal patterns, one-time events, and reporting lags",
+            "Only measurement errors",
+            "Only staffing changes",
+            "Only budget cuts"
           ],
-          "answer": "Coordinating adequate coverage during peak hours",
+          "answer": "Seasonal patterns, one-time events, and reporting lags",
           "global_id": 1300037
         },
         {
           "qid": 3,
-          "question": "What overall conclusion did the evaluation reach?",
+          "question": "What did the authors recommend before concluding a change occurred?",
           "options": [
-            "Flexible scheduling shows promise but requires careful planning for staffing",
-            "Flexible scheduling should be adopted without changes",
-            "Flexible scheduling failed to improve retention",
-            "Flexible scheduling reduced job satisfaction"
+            "Comparing across multiple periods and against historical baselines",
+            "Acting on the first quarter's data",
+            "Ignoring historical data",
+            "Reducing data collection"
           ],
-          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "answer": "Comparing across multiple periods and against historical baselines",
           "global_id": 1300038
         }
       ]
@@ -562,42 +562,42 @@
     {
       "id": 13013,
       "passageType": "B",
-      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "passage": "A new onboarding program was designed to help recently hired employees become productive more quickly. The program combined structured orientation sessions with assignment to an experienced mentor. Participants reported feeling more confident in their roles, and supervisors observed fewer routine errors among new hires during their first months. The agency plans to extend the program to all departments.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what determines the value of a dashboard?",
+          "question": "What was the onboarding program designed to do?",
           "options": [
-            "The relevance and clarity of what it presents",
-            "The total volume of data it displays",
-            "The number of stakeholders who view it",
-            "How visually striking its metrics appear"
+            "Help new employees become productive more quickly",
+            "Reduce the number of new hires",
+            "Replace supervisors",
+            "Eliminate orientation"
           ],
-          "answer": "The relevance and clarity of what it presents",
+          "answer": "Help new employees become productive more quickly",
           "global_id": 1300039
         },
         {
           "qid": 2,
-          "question": "How can a poorly designed dashboard mislead?",
+          "question": "What two elements did the program combine?",
           "options": [
-            "By emphasizing unimportant metrics or omitting needed context",
-            "By displaying too little data",
-            "By updating its figures too frequently",
-            "By limiting access to stakeholders"
+            "Structured orientation and assignment to an experienced mentor",
+            "Higher pay and bonuses",
+            "Longer hours and overtime",
+            "Remote work and flexible scheduling"
           ],
-          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "answer": "Structured orientation and assignment to an experienced mentor",
           "global_id": 1300040
         },
         {
           "qid": 3,
-          "question": "What benefit does a well-designed dashboard provide?",
+          "question": "What did supervisors observe among new hires?",
           "options": [
-            "It makes complex information accessible and supports timely decisions",
-            "It guarantees decisions will be correct",
-            "It eliminates the need for stakeholder input",
-            "It increases the volume of data collected"
+            "Fewer routine errors during their first months",
+            "More frequent errors",
+            "No change in performance",
+            "Increased turnover"
           ],
-          "answer": "It makes complex information accessible and supports timely decisions",
+          "answer": "Fewer routine errors during their first months",
           "global_id": 1300041
         }
       ]
@@ -605,42 +605,42 @@
     {
       "id": 13014,
       "passageType": "A",
-      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "passage": "The policy brief argued that clear performance metrics improve accountability only when staff understand how the metrics are calculated and used. When metrics are imposed without explanation, the brief warned, employees may focus narrowly on the measured behaviors while neglecting equally important but unmeasured aspects of their work.",
       "questions": [
         {
           "qid": 1,
-          "question": "What did the committee recommend?",
+          "question": "According to the brief, when do performance metrics improve accountability?",
           "options": [
-            "Phasing in the new policy rather than implementing it all at once",
-            "Abandoning the new policy",
-            "Implementing the policy immediately across all units",
-            "Delaying the policy indefinitely"
+            "When staff understand how the metrics are calculated and used",
+            "When metrics are kept secret",
+            "When metrics are changed frequently",
+            "When metrics are optional"
           ],
-          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "answer": "When staff understand how the metrics are calculated and used",
           "global_id": 1300042
         },
         {
           "qid": 2,
-          "question": "What concern did critics raise about a phased rollout?",
+          "question": "What does the brief warn happens when metrics are imposed without explanation?",
           "options": [
-            "It could cause confusion if units operated under different rules at the same time",
-            "It would be more expensive than full implementation",
-            "It would prevent staff from adjusting",
-            "It would surface too many problems at once"
+            "Employees may neglect important but unmeasured aspects of their work",
+            "Employees ignore all metrics",
+            "Performance always improves",
+            "Metrics become more accurate"
           ],
-          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "answer": "Employees may neglect important but unmeasured aspects of their work",
           "global_id": 1300043
         },
         {
           "qid": 3,
-          "question": "How did the committee respond to the critics' concern?",
+          "question": "What is the brief's overall point about metrics?",
           "options": [
-            "It acknowledged the concern but favored the benefits of gradual learning",
-            "It abandoned the phased approach",
-            "It denied that confusion was possible",
-            "It recommended immediate full deployment"
+            "Understanding matters as much as the metrics themselves",
+            "Metrics are always harmful",
+            "Metrics should never be used",
+            "More metrics are always better"
           ],
-          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "answer": "Understanding matters as much as the metrics themselves",
           "global_id": 1300044
         }
       ]
@@ -648,42 +648,42 @@
     {
       "id": 13015,
       "passageType": "B",
-      "passage": "Effective records management requires that documents be retained only as long as they serve a legal, administrative, or historical purpose. Agencies that retain records beyond their useful life incur unnecessary storage costs and increase the difficulty of locating relevant information. Conversely, destroying records prematurely can expose an agency to legal risk and the loss of institutional knowledge. A well-designed retention schedule balances these competing concerns by specifying defined periods for keeping each category of record.",
+      "passage": "The notice informed residents that street cleaning would shift to a new schedule beginning the following month. To reduce confusion, the agency mailed printed schedules, posted updated signs, and sent reminders through its notification system. Residents were advised that vehicles left on the street during posted cleaning hours could be subject to penalties once the grace period ended.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what is the main purpose of a retention schedule?",
+          "question": "What did the notice inform residents about?",
           "options": [
-            "To balance the risks of keeping records too long against destroying them too soon",
-            "To ensure all records are kept permanently",
-            "To reduce the number of records an agency creates",
-            "To eliminate the need for physical storage"
+            "A new street-cleaning schedule beginning the following month",
+            "The end of street cleaning",
+            "A reduction in penalties",
+            "A change in trash collection"
           ],
-          "answer": "To balance the risks of keeping records too long against destroying them too soon",
+          "answer": "A new street-cleaning schedule beginning the following month",
           "global_id": 1300045
         },
         {
           "qid": 2,
-          "question": "Which of the following is a consequence of retaining records too long, according to the passage?",
+          "question": "How did the agency try to reduce confusion?",
           "options": [
-            "Increased storage costs and difficulty locating information",
-            "Greater legal protection for the agency",
-            "Loss of institutional knowledge",
-            "Improved retrieval of relevant documents"
+            "By mailing schedules, posting signs, and sending reminders",
+            "By sending a single email",
+            "By posting one sign",
+            "By doing nothing"
           ],
-          "answer": "Increased storage costs and difficulty locating information",
+          "answer": "By mailing schedules, posting signs, and sending reminders",
           "global_id": 1300046
         },
         {
           "qid": 3,
-          "question": "What risk does the passage associate with destroying records prematurely?",
+          "question": "What were residents advised about the grace period?",
           "options": [
-            "Legal exposure and loss of institutional knowledge",
-            "Higher storage costs",
-            "Difficulty creating new records",
-            "Reduced administrative value"
+            "Penalties would apply once the grace period ended",
+            "Penalties applied immediately",
+            "There would be no penalties",
+            "The grace period was permanent"
           ],
-          "answer": "Legal exposure and loss of institutional knowledge",
+          "answer": "Penalties would apply once the grace period ended",
           "global_id": 1300047
         }
       ]
@@ -691,42 +691,42 @@
     {
       "id": 13016,
       "passageType": "A",
-      "passage": "The new permitting system was introduced to streamline applications that previously required multiple in-person visits. Under the system, applicants submit materials electronically and receive automated status updates. While most applicants reported faster processing, a minority without reliable internet access experienced delays because alternative submission methods were not initially well publicized. The agency has since expanded outreach to ensure all applicants are aware of available options.",
+      "passage": "An evaluation of a remote-work arrangement found that productivity remained stable for most roles, but collaboration on complex projects suffered when teams rarely met in person. The evaluation suggested a hybrid model in which routine work could be done remotely while collaborative work was scheduled for in-person days.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the primary goal of the new permitting system?",
+          "question": "What did the evaluation find about productivity under remote work?",
           "options": [
-            "To streamline applications that previously required multiple in-person visits",
-            "To reduce the number of applications received",
-            "To eliminate paper records entirely",
-            "To increase staffing in the permitting office"
+            "It remained stable for most roles",
+            "It declined sharply for all roles",
+            "It improved for all roles",
+            "It could not be measured"
           ],
-          "answer": "To streamline applications that previously required multiple in-person visits",
+          "answer": "It remained stable for most roles",
           "global_id": 1300048
         },
         {
           "qid": 2,
-          "question": "Why did some applicants experience delays?",
+          "question": "What suffered when teams rarely met in person?",
           "options": [
-            "They lacked reliable internet access and were unaware of alternative methods",
-            "The automated system was frequently offline",
-            "They submitted incomplete materials",
-            "The agency reduced its processing staff"
+            "Collaboration on complex projects",
+            "Individual routine tasks",
+            "Data security",
+            "Attendance"
           ],
-          "answer": "They lacked reliable internet access and were unaware of alternative methods",
+          "answer": "Collaboration on complex projects",
           "global_id": 1300049
         },
         {
           "qid": 3,
-          "question": "How did the agency respond to the problem described?",
+          "question": "What model did the evaluation suggest?",
           "options": [
-            "It expanded outreach about available submission options",
-            "It returned to the previous in-person system",
-            "It required all applicants to apply online",
-            "It discontinued automated status updates"
+            "A hybrid model with remote routine work and in-person collaboration",
+            "Fully remote work",
+            "Fully in-person work",
+            "Eliminating complex projects"
           ],
-          "answer": "It expanded outreach about available submission options",
+          "answer": "A hybrid model with remote routine work and in-person collaboration",
           "global_id": 1300050
         }
       ]
@@ -734,42 +734,42 @@
     {
       "id": 13017,
       "passageType": "B",
-      "passage": "A pilot program was launched to evaluate whether flexible scheduling would improve employee retention. Over six months, participating units reported lower turnover and modestly higher reported job satisfaction. However, supervisors noted that coordinating coverage during peak hours became more challenging. The evaluation concluded that flexible scheduling shows promise but requires careful planning to maintain adequate staffing during high-demand periods.",
+      "passage": "The training manual emphasizes that accurate documentation protects both the public and the agency. Records that clearly state what was done, when, and by whom allow decisions to be reviewed and, if necessary, corrected. The manual notes that vague or incomplete entries can make it impossible to reconstruct events later.",
       "questions": [
         {
           "qid": 1,
-          "question": "What was the pilot program designed to evaluate?",
+          "question": "What does the training manual say accurate documentation protects?",
           "options": [
-            "Whether flexible scheduling would improve employee retention",
-            "Whether employees preferred working peak hours",
-            "Whether turnover was caused by low pay",
-            "Whether supervisors needed additional training"
+            "Both the public and the agency",
+            "Only the agency",
+            "Only the public",
+            "Only supervisors"
           ],
-          "answer": "Whether flexible scheduling would improve employee retention",
+          "answer": "Both the public and the agency",
           "global_id": 1300051
         },
         {
           "qid": 2,
-          "question": "What challenge did supervisors identify?",
+          "question": "What do clear records allow?",
           "options": [
-            "Coordinating adequate coverage during peak hours",
-            "A sharp rise in employee turnover",
-            "Lower reported job satisfaction",
-            "Difficulty tracking employee hours"
+            "Decisions to be reviewed and, if necessary, corrected",
+            "Records to be deleted faster",
+            "Work to be skipped",
+            "Reviews to be avoided"
           ],
-          "answer": "Coordinating adequate coverage during peak hours",
+          "answer": "Decisions to be reviewed and, if necessary, corrected",
           "global_id": 1300052
         },
         {
           "qid": 3,
-          "question": "What overall conclusion did the evaluation reach?",
+          "question": "What problem do vague or incomplete entries cause?",
           "options": [
-            "Flexible scheduling shows promise but requires careful planning for staffing",
-            "Flexible scheduling should be adopted without changes",
-            "Flexible scheduling failed to improve retention",
-            "Flexible scheduling reduced job satisfaction"
+            "They can make it impossible to reconstruct events later",
+            "They speed up reviews",
+            "They reduce storage needs",
+            "They improve accuracy"
           ],
-          "answer": "Flexible scheduling shows promise but requires careful planning for staffing",
+          "answer": "They can make it impossible to reconstruct events later",
           "global_id": 1300053
         }
       ]
@@ -777,42 +777,42 @@
     {
       "id": 13018,
       "passageType": "A",
-      "passage": "Public agencies increasingly rely on data dashboards to communicate performance to stakeholders. When designed well, dashboards make complex information accessible at a glance and support timely decisions. Poorly designed dashboards, however, can mislead by emphasizing visually striking but unimportant metrics, or by omitting context that would change how figures are interpreted. The value of a dashboard therefore depends less on the volume of data displayed than on the relevance and clarity of what it presents.",
+      "passage": "A comparison of two outreach campaigns showed that the campaign using plain language reached a wider audience than the one using formal, technical wording. Although both campaigns conveyed the same information, the plain-language version generated more responses and fewer follow-up questions, suggesting that accessibility increased the campaign's effectiveness.",
       "questions": [
         {
           "qid": 1,
-          "question": "According to the passage, what determines the value of a dashboard?",
+          "question": "What did the comparison of the two campaigns show?",
           "options": [
-            "The relevance and clarity of what it presents",
-            "The total volume of data it displays",
-            "The number of stakeholders who view it",
-            "How visually striking its metrics appear"
+            "The plain-language campaign reached a wider audience",
+            "The technical campaign reached more people",
+            "Both reached the same audience",
+            "Neither campaign worked"
           ],
-          "answer": "The relevance and clarity of what it presents",
+          "answer": "The plain-language campaign reached a wider audience",
           "global_id": 1300054
         },
         {
           "qid": 2,
-          "question": "How can a poorly designed dashboard mislead?",
+          "question": "What did the plain-language version generate?",
           "options": [
-            "By emphasizing unimportant metrics or omitting needed context",
-            "By displaying too little data",
-            "By updating its figures too frequently",
-            "By limiting access to stakeholders"
+            "More responses and fewer follow-up questions",
+            "Fewer responses",
+            "More complaints",
+            "More follow-up questions"
           ],
-          "answer": "By emphasizing unimportant metrics or omitting needed context",
+          "answer": "More responses and fewer follow-up questions",
           "global_id": 1300055
         },
         {
           "qid": 3,
-          "question": "What benefit does a well-designed dashboard provide?",
+          "question": "What does the result suggest?",
           "options": [
-            "It makes complex information accessible and supports timely decisions",
-            "It guarantees decisions will be correct",
-            "It eliminates the need for stakeholder input",
-            "It increases the volume of data collected"
+            "Accessibility increased the campaign's effectiveness",
+            "Technical wording is always better",
+            "Information content did not matter",
+            "Outreach campaigns are ineffective"
           ],
-          "answer": "It makes complex information accessible and supports timely decisions",
+          "answer": "Accessibility increased the campaign's effectiveness",
           "global_id": 1300056
         }
       ]
@@ -820,43 +820,2059 @@
     {
       "id": 13019,
       "passageType": "B",
-      "passage": "The committee recommended phasing in the new policy rather than implementing it all at once. A phased approach, the report argued, would allow staff to adjust gradually, surface unforeseen problems on a small scale, and refine procedures before full deployment. Critics countered that a phased rollout could create confusion if different units operated under different rules simultaneously. The committee acknowledged this concern but maintained that the benefits of gradual learning outweighed the temporary inconsistency.",
+      "passage": "The agency adopted a tiered review process in which routine requests are approved by frontline staff while complex or high-value requests are escalated to supervisors. The change was intended to speed up the majority of decisions without sacrificing oversight where it mattered most. After implementation, average processing time fell while error rates on complex requests held steady.",
       "questions": [
         {
           "qid": 1,
-          "question": "What did the committee recommend?",
+          "question": "What did the tiered review process do with routine requests?",
           "options": [
-            "Phasing in the new policy rather than implementing it all at once",
-            "Abandoning the new policy",
-            "Implementing the policy immediately across all units",
-            "Delaying the policy indefinitely"
+            "Allowed frontline staff to approve them",
+            "Escalated them to supervisors",
+            "Rejected them automatically",
+            "Delayed them indefinitely"
           ],
-          "answer": "Phasing in the new policy rather than implementing it all at once",
+          "answer": "Allowed frontline staff to approve them",
           "global_id": 1300057
         },
         {
           "qid": 2,
-          "question": "What concern did critics raise about a phased rollout?",
+          "question": "What was the change intended to achieve?",
           "options": [
-            "It could cause confusion if units operated under different rules at the same time",
-            "It would be more expensive than full implementation",
-            "It would prevent staff from adjusting",
-            "It would surface too many problems at once"
+            "Faster decisions without sacrificing oversight where it mattered",
+            "Slower decisions overall",
+            "Less oversight on all requests",
+            "More escalations"
           ],
-          "answer": "It could cause confusion if units operated under different rules at the same time",
+          "answer": "Faster decisions without sacrificing oversight where it mattered",
           "global_id": 1300058
         },
         {
           "qid": 3,
-          "question": "How did the committee respond to the critics' concern?",
+          "question": "What happened after implementation?",
           "options": [
-            "It acknowledged the concern but favored the benefits of gradual learning",
-            "It abandoned the phased approach",
-            "It denied that confusion was possible",
-            "It recommended immediate full deployment"
+            "Average processing time fell while complex error rates held steady",
+            "Processing time increased",
+            "Error rates rose sharply",
+            "Nothing changed"
           ],
-          "answer": "It acknowledged the concern but favored the benefits of gradual learning",
+          "answer": "Average processing time fell while complex error rates held steady",
           "global_id": 1300059
+        }
+      ]
+    },
+    {
+      "id": 13020,
+      "passageType": "A",
+      "passage": "A bulletin reminded staff that confidentiality obligations apply even to information that seems trivial. Combining several small, seemingly harmless details, the bulletin explained, can sometimes reveal sensitive information about an individual. Staff were urged to share information only with those who need it for legitimate purposes.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the bulletin remind staff about confidentiality?",
+          "options": [
+            "It applies even to information that seems trivial",
+            "It applies only to obviously sensitive data",
+            "It no longer applies",
+            "It applies only to supervisors"
+          ],
+          "answer": "It applies even to information that seems trivial",
+          "global_id": 1300060
+        },
+        {
+          "qid": 2,
+          "question": "Why can small details be a concern?",
+          "options": [
+            "Combining them can reveal sensitive information about an individual",
+            "They are always public",
+            "They cannot be combined",
+            "They are never recorded"
+          ],
+          "answer": "Combining them can reveal sensitive information about an individual",
+          "global_id": 1300061
+        },
+        {
+          "qid": 3,
+          "question": "What were staff urged to do?",
+          "options": [
+            "Share information only with those who need it for legitimate purposes",
+            "Share information freely",
+            "Stop recording information",
+            "Combine all available details"
+          ],
+          "answer": "Share information only with those who need it for legitimate purposes",
+          "global_id": 1300062
+        }
+      ]
+    },
+    {
+      "id": 13021,
+      "passageType": "B",
+      "passage": "The procedure states that when a deadline cannot be met, staff should notify the requester as early as possible and provide a revised estimate. Early notice, the procedure explains, allows the requester to plan accordingly and demonstrates good faith, whereas silence followed by a missed deadline damages trust.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What should staff do when a deadline cannot be met?",
+          "options": [
+            "Notify the requester early and provide a revised estimate",
+            "Wait until the deadline passes",
+            "Cancel the request",
+            "Avoid contacting the requester"
+          ],
+          "answer": "Notify the requester early and provide a revised estimate",
+          "global_id": 1300063
+        },
+        {
+          "qid": 2,
+          "question": "What does early notice allow the requester to do?",
+          "options": [
+            "Plan accordingly",
+            "Cancel automatically",
+            "Receive a penalty",
+            "Skip the request"
+          ],
+          "answer": "Plan accordingly",
+          "global_id": 1300064
+        },
+        {
+          "qid": 3,
+          "question": "What does the procedure say silence followed by a missed deadline does?",
+          "options": [
+            "Damages trust",
+            "Builds confidence",
+            "Saves time",
+            "Improves accuracy"
+          ],
+          "answer": "Damages trust",
+          "global_id": 1300065
+        }
+      ]
+    },
+    {
+      "id": 13022,
+      "passageType": "A",
+      "passage": "A report on workplace safety found that most incidents resulted not from unknown hazards but from known hazards that were not consistently addressed. The report recommended regular inspections and a simple system for staff to report concerns, arguing that consistent attention to familiar risks would prevent more incidents than searching for rare new ones.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the safety report find about most incidents?",
+          "options": [
+            "They resulted from known hazards not consistently addressed",
+            "They resulted from unknown hazards",
+            "They were unavoidable",
+            "They were caused by inspections"
+          ],
+          "answer": "They resulted from known hazards not consistently addressed",
+          "global_id": 1300066
+        },
+        {
+          "qid": 2,
+          "question": "What did the report recommend?",
+          "options": [
+            "Regular inspections and a simple reporting system",
+            "Eliminating inspections",
+            "Ignoring familiar risks",
+            "Searching only for rare hazards"
+          ],
+          "answer": "Regular inspections and a simple reporting system",
+          "global_id": 1300067
+        },
+        {
+          "qid": 3,
+          "question": "What did the report argue would prevent more incidents?",
+          "options": [
+            "Consistent attention to familiar risks",
+            "Focusing only on rare new hazards",
+            "Reducing inspections",
+            "Removing reporting systems"
+          ],
+          "answer": "Consistent attention to familiar risks",
+          "global_id": 1300068
+        }
+      ]
+    },
+    {
+      "id": 13023,
+      "passageType": "B",
+      "passage": "The orientation packet explains that the agency's mission guides its priorities when resources are limited. When staff must choose among competing demands, the packet advises, alignment with the mission should be the primary consideration. Activities that do not advance the mission, however appealing, should yield to those that do.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What guides the agency's priorities when resources are limited?",
+          "options": [
+            "The agency's mission",
+            "Staff preferences",
+            "Available budget only",
+            "The newest projects"
+          ],
+          "answer": "The agency's mission",
+          "global_id": 1300069
+        },
+        {
+          "qid": 2,
+          "question": "What should be the primary consideration among competing demands?",
+          "options": [
+            "Alignment with the mission",
+            "Personal interest",
+            "Ease of completion",
+            "Visibility of the task"
+          ],
+          "answer": "Alignment with the mission",
+          "global_id": 1300070
+        },
+        {
+          "qid": 3,
+          "question": "What should appealing activities that do not advance the mission do?",
+          "options": [
+            "Yield to those that do advance the mission",
+            "Take priority",
+            "Be expanded",
+            "Replace the mission"
+          ],
+          "answer": "Yield to those that do advance the mission",
+          "global_id": 1300071
+        }
+      ]
+    },
+    {
+      "id": 13024,
+      "passageType": "A",
+      "passage": "An analysis of complaint data revealed that a small number of recurring issues accounted for most complaints. By identifying and resolving these root causes, the agency reduced total complaints substantially over the following year. The analysis emphasized that treating individual complaints without addressing underlying patterns produces only temporary relief.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the complaint analysis reveal?",
+          "options": [
+            "A few recurring issues accounted for most complaints",
+            "Complaints were evenly distributed",
+            "There were no recurring issues",
+            "Complaints could not be analyzed"
+          ],
+          "answer": "A few recurring issues accounted for most complaints",
+          "global_id": 1300072
+        },
+        {
+          "qid": 2,
+          "question": "What happened after the agency addressed root causes?",
+          "options": [
+            "Total complaints fell substantially over the following year",
+            "Complaints increased",
+            "Nothing changed",
+            "Complaints could no longer be tracked"
+          ],
+          "answer": "Total complaints fell substantially over the following year",
+          "global_id": 1300073
+        },
+        {
+          "qid": 3,
+          "question": "What does treating individual complaints without addressing patterns produce?",
+          "options": [
+            "Only temporary relief",
+            "A permanent solution",
+            "More root causes",
+            "Fewer complaints permanently"
+          ],
+          "answer": "Only temporary relief",
+          "global_id": 1300074
+        }
+      ]
+    },
+    {
+      "id": 13025,
+      "passageType": "B",
+      "passage": "The handbook notes that meetings are most productive when they have a clear purpose and a defined agenda distributed in advance. Participants can then prepare, and discussion can stay focused. Meetings called without a stated purpose, the handbook observes, tend to expand to fill the available time without producing decisions.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "When are meetings most productive, according to the handbook?",
+          "options": [
+            "When they have a clear purpose and an agenda distributed in advance",
+            "When they are unplanned",
+            "When they are as long as possible",
+            "When no agenda is set"
+          ],
+          "answer": "When they have a clear purpose and an agenda distributed in advance",
+          "global_id": 1300075
+        },
+        {
+          "qid": 2,
+          "question": "What does an advance agenda allow participants to do?",
+          "options": [
+            "Prepare and stay focused",
+            "Avoid the meeting",
+            "Extend the meeting",
+            "Skip preparation"
+          ],
+          "answer": "Prepare and stay focused",
+          "global_id": 1300076
+        },
+        {
+          "qid": 3,
+          "question": "What do meetings without a stated purpose tend to do?",
+          "options": [
+            "Expand to fill the available time without producing decisions",
+            "End early",
+            "Produce many decisions",
+            "Require no follow-up"
+          ],
+          "answer": "Expand to fill the available time without producing decisions",
+          "global_id": 1300077
+        }
+      ]
+    },
+    {
+      "id": 13026,
+      "passageType": "A",
+      "passage": "A review of public-facing forms concluded that excessive length discouraged completion. When the agency removed redundant fields and clarified instructions, completion rates rose and the number of forms returned for errors declined. The review recommended periodically reassessing forms to ensure each field still serves a clear purpose.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the review of forms conclude about excessive length?",
+          "options": [
+            "It discouraged completion",
+            "It improved accuracy",
+            "It had no effect",
+            "It reduced errors"
+          ],
+          "answer": "It discouraged completion",
+          "global_id": 1300078
+        },
+        {
+          "qid": 2,
+          "question": "What happened after redundant fields were removed and instructions clarified?",
+          "options": [
+            "Completion rates rose and error returns declined",
+            "Completion rates fell",
+            "Errors increased",
+            "Forms became longer"
+          ],
+          "answer": "Completion rates rose and error returns declined",
+          "global_id": 1300079
+        }
+      ]
+    },
+    {
+      "id": 13027,
+      "passageType": "B",
+      "passage": "The directive clarifies that staff should escalate decisions that fall outside their authority rather than guessing. Escalation, it explains, is not a sign of weakness but a safeguard that ensures decisions are made by those with the appropriate knowledge and responsibility. Guessing on matters beyond one's authority risks errors that are costly to reverse.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What should staff do with decisions outside their authority?",
+          "options": [
+            "Escalate them rather than guessing",
+            "Guess and proceed",
+            "Ignore them",
+            "Delay them indefinitely"
+          ],
+          "answer": "Escalate them rather than guessing",
+          "global_id": 1300080
+        },
+        {
+          "qid": 2,
+          "question": "How does the directive characterize escalation?",
+          "options": [
+            "As a safeguard, not a sign of weakness",
+            "As a failure",
+            "As unnecessary",
+            "As a last resort only"
+          ],
+          "answer": "As a safeguard, not a sign of weakness",
+          "global_id": 1300081
+        },
+        {
+          "qid": 3,
+          "question": "What does guessing on matters beyond one's authority risk?",
+          "options": [
+            "Errors that are costly to reverse",
+            "Faster decisions",
+            "Better outcomes",
+            "Reduced workload"
+          ],
+          "answer": "Errors that are costly to reverse",
+          "global_id": 1300082
+        }
+      ]
+    },
+    {
+      "id": 13028,
+      "passageType": "A",
+      "passage": "An assessment of a public information line found that callers were often transferred multiple times before reaching someone who could help. The agency introduced a brief screening step at the start of each call to route inquiries directly to the right unit. After the change, the average number of transfers per call dropped sharply.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What problem did the assessment find?",
+          "options": [
+            "Callers were often transferred multiple times before getting help",
+            "Calls were dropped immediately",
+            "No one answered the line",
+            "Calls were too short"
+          ],
+          "answer": "Callers were often transferred multiple times before getting help",
+          "global_id": 1300083
+        },
+        {
+          "qid": 2,
+          "question": "What did the agency introduce?",
+          "options": [
+            "A brief screening step to route calls to the right unit",
+            "More transfer options",
+            "A longer hold message",
+            "Fewer staff"
+          ],
+          "answer": "A brief screening step to route calls to the right unit",
+          "global_id": 1300084
+        },
+        {
+          "qid": 3,
+          "question": "What was the result of the change?",
+          "options": [
+            "The average number of transfers per call dropped sharply",
+            "Transfers increased",
+            "Call volume fell",
+            "Nothing changed"
+          ],
+          "answer": "The average number of transfers per call dropped sharply",
+          "global_id": 1300085
+        }
+      ]
+    },
+    {
+      "id": 13029,
+      "passageType": "B",
+      "passage": "The guidance states that when summarizing a lengthy document for decision-makers, the writer should lead with the conclusion and supporting recommendation, followed by the essential reasoning. Decision-makers, it notes, often lack time to read background material first and benefit from knowing the bottom line before the details.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "How should a writer summarize a lengthy document for decision-makers?",
+          "options": [
+            "Lead with the conclusion and recommendation, then the reasoning",
+            "Lead with all background details",
+            "Omit the conclusion",
+            "Present only the reasoning"
+          ],
+          "answer": "Lead with the conclusion and recommendation, then the reasoning",
+          "global_id": 1300086
+        },
+        {
+          "qid": 2,
+          "question": "Why is leading with the conclusion helpful?",
+          "options": [
+            "Decision-makers often lack time to read background first",
+            "Background is never useful",
+            "Conclusions are unimportant",
+            "Details should come first"
+          ],
+          "answer": "Decision-makers often lack time to read background first",
+          "global_id": 1300087
+        },
+        {
+          "qid": 3,
+          "question": "What follows the conclusion and recommendation?",
+          "options": [
+            "The essential reasoning",
+            "Unrelated material",
+            "Nothing",
+            "A second conclusion"
+          ],
+          "answer": "The essential reasoning",
+          "global_id": 1300088
+        }
+      ]
+    },
+    {
+      "id": 13030,
+      "passageType": "A",
+      "passage": "A pilot of automated appointment reminders reduced the rate of missed appointments. The reminders were sent by text and email a day in advance, and recipients could confirm or reschedule with a single response. Staff noted that the reduction in missed appointments freed time previously spent following up on no-shows.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the automated reminders reduce?",
+          "options": [
+            "The rate of missed appointments",
+            "The number of appointments offered",
+            "Staff workload before appointments",
+            "The need for scheduling"
+          ],
+          "answer": "The rate of missed appointments",
+          "global_id": 1300089
+        },
+        {
+          "qid": 2,
+          "question": "How could recipients respond to the reminders?",
+          "options": [
+            "Confirm or reschedule with a single response",
+            "Only by phone",
+            "By visiting in person",
+            "They could not respond"
+          ],
+          "answer": "Confirm or reschedule with a single response",
+          "global_id": 1300090
+        },
+        {
+          "qid": 3,
+          "question": "What benefit did staff note?",
+          "options": [
+            "Time previously spent following up on no-shows was freed",
+            "More no-shows occurred",
+            "Appointments took longer",
+            "Reminders increased workload"
+          ],
+          "answer": "Time previously spent following up on no-shows was freed",
+          "global_id": 1300091
+        }
+      ]
+    },
+    {
+      "id": 13031,
+      "passageType": "B",
+      "passage": "The report distinguishes between efficiency and effectiveness. Efficiency, it explains, concerns doing tasks with minimal waste, while effectiveness concerns doing the right tasks to achieve the intended results. A process can be highly efficient yet ineffective if it produces the wrong outcome quickly and cheaply.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "How does the report define efficiency?",
+          "options": [
+            "Doing tasks with minimal waste",
+            "Doing the right tasks",
+            "Achieving intended results",
+            "Avoiding all tasks"
+          ],
+          "answer": "Doing tasks with minimal waste",
+          "global_id": 1300092
+        },
+        {
+          "qid": 2,
+          "question": "How does the report define effectiveness?",
+          "options": [
+            "Doing the right tasks to achieve intended results",
+            "Doing tasks quickly",
+            "Reducing costs",
+            "Eliminating tasks"
+          ],
+          "answer": "Doing the right tasks to achieve intended results",
+          "global_id": 1300093
+        },
+        {
+          "qid": 3,
+          "question": "What example does the report give of efficiency without effectiveness?",
+          "options": [
+            "Producing the wrong outcome quickly and cheaply",
+            "Producing the right outcome slowly",
+            "Avoiding all outcomes",
+            "Achieving results at high cost"
+          ],
+          "answer": "Producing the wrong outcome quickly and cheaply",
+          "global_id": 1300094
+        }
+      ]
+    },
+    {
+      "id": 13032,
+      "passageType": "A",
+      "passage": "An update explained that the agency would begin accepting electronic signatures on certain documents. The change was expected to reduce processing delays caused by mailing paper forms back and forth. The update noted that not all documents would be eligible, and a list of qualifying forms would be maintained online.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What change did the update announce?",
+          "options": [
+            "The agency would begin accepting electronic signatures on certain documents",
+            "All paper forms were eliminated",
+            "Electronic signatures were banned",
+            "Mailing was made mandatory"
+          ],
+          "answer": "The agency would begin accepting electronic signatures on certain documents",
+          "global_id": 1300095
+        },
+        {
+          "qid": 2,
+          "question": "What delay was the change expected to reduce?",
+          "options": [
+            "Delays caused by mailing paper forms back and forth",
+            "Delays in staff hiring",
+            "Delays in budgeting",
+            "Delays in inspections"
+          ],
+          "answer": "Delays caused by mailing paper forms back and forth",
+          "global_id": 1300096
+        },
+        {
+          "qid": 3,
+          "question": "What did the update note about eligibility?",
+          "options": [
+            "Not all documents would be eligible, and a list would be maintained online",
+            "All documents were eligible",
+            "No documents were eligible",
+            "Eligibility changed daily"
+          ],
+          "answer": "Not all documents would be eligible, and a list would be maintained online",
+          "global_id": 1300097
+        }
+      ]
+    },
+    {
+      "id": 13033,
+      "passageType": "B",
+      "passage": "A study of decision-making found that providing too many options sometimes led people to delay or avoid choosing altogether. When the agency reduced the number of plan options it presented and added a brief comparison summary, more people completed their selection. The study concluded that helping people compare a manageable set of choices improved decision-making.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the study find about too many options?",
+          "options": [
+            "They sometimes led people to delay or avoid choosing",
+            "They always improved decisions",
+            "They had no effect",
+            "They reduced errors"
+          ],
+          "answer": "They sometimes led people to delay or avoid choosing",
+          "global_id": 1300098
+        },
+        {
+          "qid": 2,
+          "question": "What did the agency change?",
+          "options": [
+            "It reduced options and added a brief comparison summary",
+            "It added more options",
+            "It removed all summaries",
+            "It eliminated choices"
+          ],
+          "answer": "It reduced options and added a brief comparison summary",
+          "global_id": 1300099
+        },
+        {
+          "qid": 3,
+          "question": "What did the study conclude?",
+          "options": [
+            "Helping people compare a manageable set of choices improved decision-making",
+            "More options are always better",
+            "Comparisons confuse people",
+            "Choices should be removed"
+          ],
+          "answer": "Helping people compare a manageable set of choices improved decision-making",
+          "global_id": 1300100
+        }
+      ]
+    },
+    {
+      "id": 13034,
+      "passageType": "A",
+      "passage": "The policy explains that exceptions to standard procedures should be documented along with the reason for the exception. Documentation ensures that exceptions can be reviewed for consistency and that legitimate special cases are distinguished from improper deviations. Undocumented exceptions, the policy warns, make it difficult to tell whether rules are being applied fairly.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What should be documented along with exceptions to standard procedures?",
+          "options": [
+            "The reason for the exception",
+            "Only the date",
+            "Nothing",
+            "The staff member's opinion"
+          ],
+          "answer": "The reason for the exception",
+          "global_id": 1300101
+        },
+        {
+          "qid": 2,
+          "question": "What does documenting exceptions ensure?",
+          "options": [
+            "Exceptions can be reviewed for consistency and fairness",
+            "Exceptions become permanent",
+            "Procedures are eliminated",
+            "Rules are ignored"
+          ],
+          "answer": "Exceptions can be reviewed for consistency and fairness",
+          "global_id": 1300102
+        },
+        {
+          "qid": 3,
+          "question": "What does the policy warn about undocumented exceptions?",
+          "options": [
+            "They make it difficult to tell whether rules are applied fairly",
+            "They improve fairness",
+            "They speed up reviews",
+            "They reduce errors"
+          ],
+          "answer": "They make it difficult to tell whether rules are applied fairly",
+          "global_id": 1300103
+        }
+      ]
+    },
+    {
+      "id": 13035,
+      "passageType": "B",
+      "passage": "A communication outlined steps for responding to a service disruption. Staff were instructed first to confirm the scope of the disruption, then to inform affected parties with accurate information, and finally to provide updates until the issue was resolved. The communication stressed that acknowledging a problem promptly, even before a solution is found, maintains public trust.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What was the first step in responding to a service disruption?",
+          "options": [
+            "Confirm the scope of the disruption",
+            "Inform the public immediately without details",
+            "Wait for it to resolve",
+            "Assign blame"
+          ],
+          "answer": "Confirm the scope of the disruption",
+          "global_id": 1300104
+        },
+        {
+          "qid": 2,
+          "question": "What were staff instructed to do after confirming scope?",
+          "options": [
+            "Inform affected parties with accurate information",
+            "Take no action",
+            "Close the service",
+            "Delete records"
+          ],
+          "answer": "Inform affected parties with accurate information",
+          "global_id": 1300105
+        },
+        {
+          "qid": 3,
+          "question": "What does prompt acknowledgment of a problem maintain?",
+          "options": [
+            "Public trust",
+            "Higher costs",
+            "More disruptions",
+            "Longer delays"
+          ],
+          "answer": "Public trust",
+          "global_id": 1300106
+        }
+      ]
+    },
+    {
+      "id": 13036,
+      "passageType": "A",
+      "passage": "The article observed that well-organized information is easier to retain than the same information presented in a disorganized way. Grouping related items, using consistent headings, and ordering content logically all help readers form a mental structure. The article suggested that organization is a courtesy to the reader as much as a property of the text.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What is easier to retain, according to the article?",
+          "options": [
+            "Well-organized information",
+            "Disorganized information",
+            "Longer information",
+            "Information without headings"
+          ],
+          "answer": "Well-organized information",
+          "global_id": 1300107
+        },
+        {
+          "qid": 2,
+          "question": "What techniques help readers form a mental structure?",
+          "options": [
+            "Grouping related items, consistent headings, and logical order",
+            "Random ordering",
+            "Removing headings",
+            "Mixing unrelated topics"
+          ],
+          "answer": "Grouping related items, consistent headings, and logical order",
+          "global_id": 1300108
+        },
+        {
+          "qid": 3,
+          "question": "How does the article describe organization?",
+          "options": [
+            "As a courtesy to the reader as much as a property of the text",
+            "As unimportant",
+            "As the reader's responsibility",
+            "As purely decorative"
+          ],
+          "answer": "As a courtesy to the reader as much as a property of the text",
+          "global_id": 1300109
+        }
+      ]
+    },
+    {
+      "id": 13037,
+      "passageType": "B",
+      "passage": "A memo announced that the agency would consolidate several overlapping email distribution lists into a single, well-maintained list. The change was intended to ensure that important messages reached everyone who needed them without flooding inboxes with duplicates. The memo asked staff to report any contacts who should be added or removed.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the memo announce?",
+          "options": [
+            "Consolidating overlapping distribution lists into a single list",
+            "Eliminating all email lists",
+            "Creating more lists",
+            "Banning email"
+          ],
+          "answer": "Consolidating overlapping distribution lists into a single list",
+          "global_id": 1300110
+        },
+        {
+          "qid": 2,
+          "question": "What was the consolidation intended to ensure?",
+          "options": [
+            "Messages reached the right people without duplicate flooding",
+            "More duplicate messages",
+            "Fewer messages overall",
+            "No messages at all"
+          ],
+          "answer": "Messages reached the right people without duplicate flooding",
+          "global_id": 1300111
+        },
+        {
+          "qid": 3,
+          "question": "What did the memo ask staff to report?",
+          "options": [
+            "Contacts who should be added or removed",
+            "Their personal opinions",
+            "Unrelated complaints",
+            "Their email passwords"
+          ],
+          "answer": "Contacts who should be added or removed",
+          "global_id": 1300112
+        }
+      ]
+    },
+    {
+      "id": 13038,
+      "passageType": "A",
+      "passage": "The brief explained that a recommendation is more persuasive when it acknowledges the strongest objection and addresses it directly. Ignoring obvious counterarguments, the brief noted, can make a recommendation seem one-sided and leave decision-makers uncertain whether risks were considered.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What makes a recommendation more persuasive, according to the brief?",
+          "options": [
+            "Acknowledging the strongest objection and addressing it directly",
+            "Ignoring all objections",
+            "Making it longer",
+            "Avoiding any reasoning"
+          ],
+          "answer": "Acknowledging the strongest objection and addressing it directly",
+          "global_id": 1300113
+        },
+        {
+          "qid": 2,
+          "question": "What can ignoring obvious counterarguments do?",
+          "options": [
+            "Make a recommendation seem one-sided",
+            "Strengthen the recommendation",
+            "Shorten the document usefully",
+            "Eliminate risk"
+          ],
+          "answer": "Make a recommendation seem one-sided",
+          "global_id": 1300114
+        },
+        {
+          "qid": 3,
+          "question": "What uncertainty can a one-sided recommendation leave?",
+          "options": [
+            "Whether risks were considered",
+            "Who wrote it",
+            "When it is due",
+            "How long it is"
+          ],
+          "answer": "Whether risks were considered",
+          "global_id": 1300115
+        }
+      ]
+    },
+    {
+      "id": 13039,
+      "passageType": "B",
+      "passage": "An evaluation of a cross-training initiative found that teams with members trained in multiple roles handled absences and surges in demand more smoothly. Although cross-training required time away from regular duties initially, the evaluation concluded that the resilience it provided outweighed the short-term cost.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did cross-trained teams handle more smoothly?",
+          "options": [
+            "Absences and surges in demand",
+            "Routine paperwork only",
+            "Budget cuts",
+            "Office relocations"
+          ],
+          "answer": "Absences and surges in demand",
+          "global_id": 1300116
+        },
+        {
+          "qid": 2,
+          "question": "What was the initial cost of cross-training?",
+          "options": [
+            "Time away from regular duties",
+            "Reduced pay",
+            "Loss of staff",
+            "Increased absences"
+          ],
+          "answer": "Time away from regular duties",
+          "global_id": 1300117
+        },
+        {
+          "qid": 3,
+          "question": "What did the evaluation conclude?",
+          "options": [
+            "The resilience provided outweighed the short-term cost",
+            "The cost was not worth it",
+            "Cross-training reduced resilience",
+            "Cross-training should be avoided"
+          ],
+          "answer": "The resilience provided outweighed the short-term cost",
+          "global_id": 1300118
+        }
+      ]
+    },
+    {
+      "id": 13040,
+      "passageType": "A",
+      "passage": "The notice explained that the agency had updated its privacy practices and that a summary of the changes was available on its website. Members of the public were assured that the updates did not reduce existing protections and were intended mainly to clarify language. Questions could be directed to a dedicated contact listed in the notice.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the notice explain had been updated?",
+          "options": [
+            "The agency's privacy practices",
+            "The agency's hours",
+            "The agency's fees",
+            "The agency's location"
+          ],
+          "answer": "The agency's privacy practices",
+          "global_id": 1300119
+        },
+        {
+          "qid": 2,
+          "question": "What were members of the public assured about the updates?",
+          "options": [
+            "They did not reduce existing protections",
+            "They removed all protections",
+            "They were temporary",
+            "They increased fees"
+          ],
+          "answer": "They did not reduce existing protections",
+          "global_id": 1300120
+        },
+        {
+          "qid": 3,
+          "question": "Where could questions be directed?",
+          "options": [
+            "To a dedicated contact listed in the notice",
+            "Nowhere",
+            "To any staff member",
+            "To the public"
+          ],
+          "answer": "To a dedicated contact listed in the notice",
+          "global_id": 1300121
+        }
+      ]
+    },
+    {
+      "id": 13041,
+      "passageType": "B",
+      "passage": "A study found that employees were more likely to follow a new procedure when they understood the reason behind it. Procedures introduced with a clear rationale were adopted faster and with fewer errors than those introduced as rules to be obeyed without explanation. The study recommended pairing every significant procedural change with a brief explanation of its purpose.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "When were employees more likely to follow a new procedure?",
+          "options": [
+            "When they understood the reason behind it",
+            "When it was enforced strictly",
+            "When it was kept secret",
+            "When it was optional"
+          ],
+          "answer": "When they understood the reason behind it",
+          "global_id": 1300122
+        },
+        {
+          "qid": 2,
+          "question": "How were procedures with a clear rationale adopted?",
+          "options": [
+            "Faster and with fewer errors",
+            "Slower and with more errors",
+            "Without any difference",
+            "Only by supervisors"
+          ],
+          "answer": "Faster and with fewer errors",
+          "global_id": 1300123
+        },
+        {
+          "qid": 3,
+          "question": "What did the study recommend?",
+          "options": [
+            "Pairing significant procedural changes with a brief explanation of purpose",
+            "Removing all explanations",
+            "Enforcing rules more strictly",
+            "Making procedures optional"
+          ],
+          "answer": "Pairing significant procedural changes with a brief explanation of purpose",
+          "global_id": 1300124
+        }
+      ]
+    },
+    {
+      "id": 13042,
+      "passageType": "A",
+      "passage": "The report on customer feedback distinguished between satisfaction with the outcome and satisfaction with the process. Some individuals who did not receive the result they wanted nonetheless reported a positive experience because they felt heard and were treated respectfully. The report concluded that how a service is delivered influences perceptions independently of the outcome.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What two kinds of satisfaction did the report distinguish?",
+          "options": [
+            "Satisfaction with the outcome and with the process",
+            "Satisfaction with cost and speed",
+            "Satisfaction with staff and management",
+            "Satisfaction with forms and signs"
+          ],
+          "answer": "Satisfaction with the outcome and with the process",
+          "global_id": 1300125
+        },
+        {
+          "qid": 2,
+          "question": "Why did some who did not get their desired result still report a positive experience?",
+          "options": [
+            "They felt heard and were treated respectfully",
+            "They received compensation",
+            "They reapplied successfully",
+            "They were given the result later"
+          ],
+          "answer": "They felt heard and were treated respectfully",
+          "global_id": 1300126
+        },
+        {
+          "qid": 3,
+          "question": "What did the report conclude about service delivery?",
+          "options": [
+            "How a service is delivered influences perceptions independently of the outcome",
+            "Only outcomes matter",
+            "Process never matters",
+            "Respect reduces satisfaction"
+          ],
+          "answer": "How a service is delivered influences perceptions independently of the outcome",
+          "global_id": 1300127
+        }
+      ]
+    },
+    {
+      "id": 13043,
+      "passageType": "B",
+      "passage": "An internal guide warns against using ambiguous pronouns in official correspondence. When it is unclear which person or item a pronoun refers to, the reader may misinterpret the message. The guide recommends repeating the noun when clarity is at stake, even at the cost of some repetition.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What does the internal guide warn against?",
+          "options": [
+            "Using ambiguous pronouns in official correspondence",
+            "Using any pronouns",
+            "Repeating nouns",
+            "Writing long sentences"
+          ],
+          "answer": "Using ambiguous pronouns in official correspondence",
+          "global_id": 1300128
+        },
+        {
+          "qid": 2,
+          "question": "What can happen when a pronoun's reference is unclear?",
+          "options": [
+            "The reader may misinterpret the message",
+            "The message becomes shorter",
+            "The reader skips it",
+            "Clarity improves"
+          ],
+          "answer": "The reader may misinterpret the message",
+          "global_id": 1300129
+        },
+        {
+          "qid": 3,
+          "question": "What does the guide recommend when clarity is at stake?",
+          "options": [
+            "Repeating the noun even at the cost of some repetition",
+            "Removing the noun",
+            "Adding more pronouns",
+            "Shortening at all costs"
+          ],
+          "answer": "Repeating the noun even at the cost of some repetition",
+          "global_id": 1300130
+        }
+      ]
+    },
+    {
+      "id": 13044,
+      "passageType": "A",
+      "passage": "A summary of a new accessibility initiative explained that documents would be redesigned to work with screen readers and to meet contrast and font-size standards. The initiative aimed to ensure that information was usable by people with a range of disabilities. Staff were directed to a checklist for producing accessible documents.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the accessibility initiative involve?",
+          "options": [
+            "Redesigning documents to work with screen readers and meet contrast and font standards",
+            "Removing all images",
+            "Shortening documents",
+            "Eliminating digital documents"
+          ],
+          "answer": "Redesigning documents to work with screen readers and meet contrast and font standards",
+          "global_id": 1300131
+        },
+        {
+          "qid": 2,
+          "question": "What was the initiative's aim?",
+          "options": [
+            "To ensure information was usable by people with a range of disabilities",
+            "To reduce document length",
+            "To increase fonts only for staff",
+            "To limit access"
+          ],
+          "answer": "To ensure information was usable by people with a range of disabilities",
+          "global_id": 1300132
+        },
+        {
+          "qid": 3,
+          "question": "What were staff directed to?",
+          "options": [
+            "A checklist for producing accessible documents",
+            "A new font library only",
+            "A training video only",
+            "Nothing specific"
+          ],
+          "answer": "A checklist for producing accessible documents",
+          "global_id": 1300133
+        }
+      ]
+    },
+    {
+      "id": 13045,
+      "passageType": "B",
+      "passage": "The analysis noted that a backlog had grown not because of a single overload but because incoming work consistently exceeded processing capacity by a small margin each day. Small daily shortfalls, the analysis explained, accumulate over time. It recommended either a modest, sustained increase in capacity or a reduction in incoming work, rather than occasional crash efforts.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "Why did the backlog grow, according to the analysis?",
+          "options": [
+            "Incoming work consistently exceeded capacity by a small margin each day",
+            "A single overload occurred",
+            "Capacity was suddenly cut",
+            "Work stopped arriving"
+          ],
+          "answer": "Incoming work consistently exceeded capacity by a small margin each day",
+          "global_id": 1300134
+        },
+        {
+          "qid": 2,
+          "question": "What did the analysis say about small daily shortfalls?",
+          "options": [
+            "They accumulate over time",
+            "They cancel out",
+            "They are harmless",
+            "They resolve themselves"
+          ],
+          "answer": "They accumulate over time",
+          "global_id": 1300135
+        },
+        {
+          "qid": 3,
+          "question": "What did the analysis recommend?",
+          "options": [
+            "A modest sustained capacity increase or reduced incoming work",
+            "Occasional crash efforts",
+            "Ignoring the backlog",
+            "A one-time overtime push only"
+          ],
+          "answer": "A modest sustained capacity increase or reduced incoming work",
+          "global_id": 1300136
+        }
+      ]
+    },
+    {
+      "id": 13046,
+      "passageType": "A",
+      "passage": "A bulletin reminded staff that when correcting a published error, the correction should be as visible as the original. Burying a correction where few will see it, the bulletin noted, leaves the inaccurate information effectively uncorrected for most readers and can appear as an attempt to minimize the mistake.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "How visible should a correction be, according to the bulletin?",
+          "options": [
+            "As visible as the original error",
+            "Less visible than the original",
+            "Hidden entirely",
+            "Visible only to staff"
+          ],
+          "answer": "As visible as the original error",
+          "global_id": 1300137
+        },
+        {
+          "qid": 2,
+          "question": "What does burying a correction leave?",
+          "options": [
+            "The inaccurate information effectively uncorrected for most readers",
+            "A fully corrected record",
+            "No record at all",
+            "A shorter document"
+          ],
+          "answer": "The inaccurate information effectively uncorrected for most readers",
+          "global_id": 1300138
+        },
+        {
+          "qid": 3,
+          "question": "How can a buried correction appear?",
+          "options": [
+            "As an attempt to minimize the mistake",
+            "As a sign of transparency",
+            "As an improvement",
+            "As a routine update"
+          ],
+          "answer": "As an attempt to minimize the mistake",
+          "global_id": 1300139
+        }
+      ]
+    },
+    {
+      "id": 13047,
+      "passageType": "B",
+      "passage": "The guidance explains that active voice usually produces clearer sentences than passive voice because it states plainly who does what. Passive constructions can obscure responsibility, as in a sentence that reports an action without identifying who took it. The guidance allows passive voice when the actor is genuinely unknown or unimportant.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "Why does active voice usually produce clearer sentences?",
+          "options": [
+            "It states plainly who does what",
+            "It uses more words",
+            "It hides the actor",
+            "It is always shorter"
+          ],
+          "answer": "It states plainly who does what",
+          "global_id": 1300140
+        },
+        {
+          "qid": 2,
+          "question": "What can passive constructions obscure?",
+          "options": [
+            "Responsibility for an action",
+            "The date of an action",
+            "The location of an action",
+            "The cost of an action"
+          ],
+          "answer": "Responsibility for an action",
+          "global_id": 1300141
+        },
+        {
+          "qid": 3,
+          "question": "When does the guidance allow passive voice?",
+          "options": [
+            "When the actor is genuinely unknown or unimportant",
+            "Never",
+            "Always",
+            "Only in headings"
+          ],
+          "answer": "When the actor is genuinely unknown or unimportant",
+          "global_id": 1300142
+        }
+      ]
+    },
+    {
+      "id": 13048,
+      "passageType": "A",
+      "passage": "An evaluation of a self-service portal found that usage rose after the agency added clear instructions and an option to chat with staff when stuck. Before these additions, many users had abandoned the portal midway and called instead. The evaluation concluded that self-service tools succeed only when users can get help at the point of difficulty.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What happened to portal usage after the additions?",
+          "options": [
+            "It rose",
+            "It fell",
+            "It stayed the same",
+            "It could not be measured"
+          ],
+          "answer": "It rose",
+          "global_id": 1300143
+        },
+        {
+          "qid": 2,
+          "question": "What had many users done before the additions?",
+          "options": [
+            "Abandoned the portal midway and called instead",
+            "Completed all tasks easily",
+            "Avoided the portal entirely",
+            "Reported no problems"
+          ],
+          "answer": "Abandoned the portal midway and called instead",
+          "global_id": 1300144
+        },
+        {
+          "qid": 3,
+          "question": "What did the evaluation conclude about self-service tools?",
+          "options": [
+            "They succeed only when users can get help at the point of difficulty",
+            "They never work",
+            "They require no instructions",
+            "They should replace staff"
+          ],
+          "answer": "They succeed only when users can get help at the point of difficulty",
+          "global_id": 1300145
+        }
+      ]
+    },
+    {
+      "id": 13049,
+      "passageType": "B",
+      "passage": "The report explained that consistent terminology across documents reduces confusion. When the same concept is referred to by different names in different documents, readers may believe the documents describe different things. The report recommended maintaining a shared glossary and applying its terms uniformly.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What does consistent terminology across documents reduce?",
+          "options": [
+            "Confusion",
+            "Document length",
+            "The number of documents",
+            "Reader interest"
+          ],
+          "answer": "Confusion",
+          "global_id": 1300146
+        },
+        {
+          "qid": 2,
+          "question": "What may happen when one concept has different names in different documents?",
+          "options": [
+            "Readers may believe the documents describe different things",
+            "Readers ignore the documents",
+            "Documents become shorter",
+            "Terminology improves"
+          ],
+          "answer": "Readers may believe the documents describe different things",
+          "global_id": 1300147
+        }
+      ]
+    },
+    {
+      "id": 13050,
+      "passageType": "A",
+      "passage": "A notice described a phased reopening of a public facility. In the first phase, only essential services would resume, with capacity limits in place. Additional services and expanded hours would follow in later phases as conditions allowed. The notice emphasized that the schedule could be adjusted based on ongoing assessments.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What would resume in the first phase of reopening?",
+          "options": [
+            "Only essential services, with capacity limits",
+            "All services at once",
+            "No services",
+            "Expanded hours immediately"
+          ],
+          "answer": "Only essential services, with capacity limits",
+          "global_id": 1300148
+        },
+        {
+          "qid": 2,
+          "question": "What would follow in later phases?",
+          "options": [
+            "Additional services and expanded hours as conditions allowed",
+            "A permanent closure",
+            "Reduced services",
+            "Higher fees"
+          ],
+          "answer": "Additional services and expanded hours as conditions allowed",
+          "global_id": 1300149
+        },
+        {
+          "qid": 3,
+          "question": "What did the notice say about the schedule?",
+          "options": [
+            "It could be adjusted based on ongoing assessments",
+            "It was fixed permanently",
+            "It would not change",
+            "It was already complete"
+          ],
+          "answer": "It could be adjusted based on ongoing assessments",
+          "global_id": 1300150
+        }
+      ]
+    },
+    {
+      "id": 13051,
+      "passageType": "B",
+      "passage": "The training note explains that a good summary captures the main points without simply shortening every sentence. Effective summarizing requires judging which ideas are central and which are supporting detail, then expressing the central ideas concisely. Merely deleting words, the note warns, can omit key points while keeping minor ones.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What does a good summary capture?",
+          "options": [
+            "The main points without simply shortening every sentence",
+            "Every sentence equally",
+            "Only the first paragraph",
+            "Only supporting details"
+          ],
+          "answer": "The main points without simply shortening every sentence",
+          "global_id": 1300151
+        },
+        {
+          "qid": 2,
+          "question": "What does effective summarizing require?",
+          "options": [
+            "Judging which ideas are central and expressing them concisely",
+            "Deleting random words",
+            "Copying the original",
+            "Keeping all detail"
+          ],
+          "answer": "Judging which ideas are central and expressing them concisely",
+          "global_id": 1300152
+        },
+        {
+          "qid": 3,
+          "question": "What does merely deleting words risk?",
+          "options": [
+            "Omitting key points while keeping minor ones",
+            "Improving clarity",
+            "Capturing all main ideas",
+            "Lengthening the text"
+          ],
+          "answer": "Omitting key points while keeping minor ones",
+          "global_id": 1300153
+        }
+      ]
+    },
+    {
+      "id": 13052,
+      "passageType": "A",
+      "passage": "An assessment of interdepartmental projects found that those with a single clearly designated lead progressed more smoothly than those with shared, undefined leadership. Without a clear lead, decisions stalled as participants waited for someone else to act. The assessment recommended naming a responsible lead at the start of each project.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "Which projects progressed more smoothly?",
+          "options": [
+            "Those with a single clearly designated lead",
+            "Those with no participants",
+            "Those with shared, undefined leadership",
+            "Those with the most members"
+          ],
+          "answer": "Those with a single clearly designated lead",
+          "global_id": 1300154
+        },
+        {
+          "qid": 2,
+          "question": "What happened without a clear lead?",
+          "options": [
+            "Decisions stalled as participants waited for someone else to act",
+            "Decisions were made faster",
+            "Projects ended early",
+            "Leadership emerged automatically"
+          ],
+          "answer": "Decisions stalled as participants waited for someone else to act",
+          "global_id": 1300155
+        },
+        {
+          "qid": 3,
+          "question": "What did the assessment recommend?",
+          "options": [
+            "Naming a responsible lead at the start of each project",
+            "Removing all leads",
+            "Adding more participants",
+            "Avoiding interdepartmental projects"
+          ],
+          "answer": "Naming a responsible lead at the start of each project",
+          "global_id": 1300156
+        }
+      ]
+    },
+    {
+      "id": 13053,
+      "passageType": "B",
+      "passage": "The article observed that numbers presented without context can mislead. A figure such as a percentage increase means little without knowing the starting point, the time frame, and what is being compared. The article advised always pairing key figures with the context needed to interpret them correctly.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What can numbers presented without context do?",
+          "options": [
+            "Mislead",
+            "Always clarify",
+            "Replace explanation",
+            "Reduce errors"
+          ],
+          "answer": "Mislead",
+          "global_id": 1300157
+        },
+        {
+          "qid": 2,
+          "question": "What does a percentage increase require to be meaningful?",
+          "options": [
+            "The starting point, time frame, and what is being compared",
+            "Only the final number",
+            "Only the time frame",
+            "Nothing additional"
+          ],
+          "answer": "The starting point, time frame, and what is being compared",
+          "global_id": 1300158
+        },
+        {
+          "qid": 3,
+          "question": "What did the article advise?",
+          "options": [
+            "Always pairing key figures with the context needed to interpret them",
+            "Removing all figures",
+            "Presenting numbers alone",
+            "Avoiding comparisons"
+          ],
+          "answer": "Always pairing key figures with the context needed to interpret them",
+          "global_id": 1300159
+        }
+      ]
+    },
+    {
+      "id": 13054,
+      "passageType": "A",
+      "passage": "A memo set expectations for responding to written inquiries within a defined timeframe. It clarified that an initial acknowledgment, even if a full answer was not yet ready, counted as a timely response. The memo explained that prompt acknowledgment reassures the sender that the inquiry has been received and is being handled.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the memo set expectations for?",
+          "options": [
+            "Responding to written inquiries within a defined timeframe",
+            "Reducing the number of inquiries",
+            "Ending written inquiries",
+            "Lengthening response times"
+          ],
+          "answer": "Responding to written inquiries within a defined timeframe",
+          "global_id": 1300160
+        },
+        {
+          "qid": 2,
+          "question": "What counted as a timely response?",
+          "options": [
+            "An initial acknowledgment even without a full answer",
+            "Only a complete answer",
+            "No response",
+            "A delayed answer"
+          ],
+          "answer": "An initial acknowledgment even without a full answer",
+          "global_id": 1300161
+        },
+        {
+          "qid": 3,
+          "question": "What does prompt acknowledgment do?",
+          "options": [
+            "Reassures the sender the inquiry was received and is being handled",
+            "Ends the inquiry",
+            "Increases delays",
+            "Replaces a full answer permanently"
+          ],
+          "answer": "Reassures the sender the inquiry was received and is being handled",
+          "global_id": 1300162
+        }
+      ]
+    },
+    {
+      "id": 13055,
+      "passageType": "B",
+      "passage": "The report concluded that automation worked best when applied to repetitive, rule-based tasks, freeing staff to focus on judgment-intensive work. Attempts to automate tasks that required nuanced judgment, however, often produced errors and required extensive correction. The report advised matching the tool to the nature of the task.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "Where did automation work best, according to the report?",
+          "options": [
+            "On repetitive, rule-based tasks",
+            "On judgment-intensive tasks",
+            "On all tasks equally",
+            "On no tasks"
+          ],
+          "answer": "On repetitive, rule-based tasks",
+          "global_id": 1300163
+        },
+        {
+          "qid": 2,
+          "question": "What did automating judgment-intensive tasks often produce?",
+          "options": [
+            "Errors requiring extensive correction",
+            "Perfect results",
+            "Faster judgment",
+            "No effect"
+          ],
+          "answer": "Errors requiring extensive correction",
+          "global_id": 1300164
+        },
+        {
+          "qid": 3,
+          "question": "What did the report advise?",
+          "options": [
+            "Matching the tool to the nature of the task",
+            "Automating everything",
+            "Automating nothing",
+            "Replacing all staff"
+          ],
+          "answer": "Matching the tool to the nature of the task",
+          "global_id": 1300165
+        }
+      ]
+    },
+    {
+      "id": 13056,
+      "passageType": "A",
+      "passage": "An update on a knowledge-sharing platform explained that contributions had declined because staff were unsure whether their entries were accurate enough to post. The agency clarified that drafts and partial answers were welcome and would be reviewed collaboratively. After the clarification, the number of contributions rose.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "Why had contributions to the platform declined?",
+          "options": [
+            "Staff were unsure whether their entries were accurate enough",
+            "The platform was removed",
+            "Staff were too busy",
+            "Contributions were banned"
+          ],
+          "answer": "Staff were unsure whether their entries were accurate enough",
+          "global_id": 1300166
+        },
+        {
+          "qid": 2,
+          "question": "What did the agency clarify?",
+          "options": [
+            "Drafts and partial answers were welcome and would be reviewed collaboratively",
+            "Only perfect entries were allowed",
+            "Contributions were no longer needed",
+            "The platform was closing"
+          ],
+          "answer": "Drafts and partial answers were welcome and would be reviewed collaboratively",
+          "global_id": 1300167
+        },
+        {
+          "qid": 3,
+          "question": "What happened after the clarification?",
+          "options": [
+            "The number of contributions rose",
+            "Contributions stopped",
+            "Nothing changed",
+            "The platform was deleted"
+          ],
+          "answer": "The number of contributions rose",
+          "global_id": 1300168
+        }
+      ]
+    },
+    {
+      "id": 13057,
+      "passageType": "B",
+      "passage": "The guidance notes that headings and subheadings act as signposts that help readers navigate a document. Descriptive headings that reflect the content of each section allow readers to locate information quickly, whereas vague headings force readers to scan the full text. The guidance recommends making headings specific and informative.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What role do headings and subheadings play?",
+          "options": [
+            "They act as signposts that help readers navigate",
+            "They lengthen the document",
+            "They replace content",
+            "They confuse readers"
+          ],
+          "answer": "They act as signposts that help readers navigate",
+          "global_id": 1300169
+        },
+        {
+          "qid": 2,
+          "question": "What do descriptive headings allow readers to do?",
+          "options": [
+            "Locate information quickly",
+            "Skip the document",
+            "Ignore the content",
+            "Memorize the text"
+          ],
+          "answer": "Locate information quickly",
+          "global_id": 1300170
+        },
+        {
+          "qid": 3,
+          "question": "What does the guidance recommend for headings?",
+          "options": [
+            "Making them specific and informative",
+            "Making them vague",
+            "Removing them",
+            "Using only numbers"
+          ],
+          "answer": "Making them specific and informative",
+          "global_id": 1300171
+        }
+      ]
+    },
+    {
+      "id": 13058,
+      "passageType": "A",
+      "passage": "A review of escalation practices found that issues were sometimes escalated prematurely, before staff had gathered basic information, and other times escalated too late, after problems had grown. The review recommended clear criteria defining when an issue warrants escalation, so that judgment is guided rather than left entirely to individual discretion.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What two problems did the review find with escalation?",
+          "options": [
+            "Escalating prematurely and escalating too late",
+            "Escalating only on time",
+            "Never escalating",
+            "Escalating only complex issues"
+          ],
+          "answer": "Escalating prematurely and escalating too late",
+          "global_id": 1300172
+        },
+        {
+          "qid": 2,
+          "question": "What is the purpose of the recommended criteria?",
+          "options": [
+            "To guide judgment rather than leave it entirely to discretion",
+            "To prevent all escalation",
+            "To slow decisions",
+            "To remove staff judgment completely"
+          ],
+          "answer": "To guide judgment rather than leave it entirely to discretion",
+          "global_id": 1300173
+        }
+      ]
+    },
+    {
+      "id": 13059,
+      "passageType": "B",
+      "passage": "The notice explained that fees for certain services would change at the start of the fiscal year. To help the public prepare, the agency published the new fee schedule in advance and noted which services were affected. Services not listed would continue at their current rates.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What did the notice explain would change?",
+          "options": [
+            "Fees for certain services at the start of the fiscal year",
+            "All services would close",
+            "Hours of operation",
+            "The agency's location"
+          ],
+          "answer": "Fees for certain services at the start of the fiscal year",
+          "global_id": 1300174
+        },
+        {
+          "qid": 2,
+          "question": "How did the agency help the public prepare?",
+          "options": [
+            "It published the new fee schedule in advance",
+            "It raised fees without notice",
+            "It removed the fee schedule",
+            "It charged retroactively"
+          ],
+          "answer": "It published the new fee schedule in advance",
+          "global_id": 1300175
+        },
+        {
+          "qid": 3,
+          "question": "What would happen to services not listed?",
+          "options": [
+            "They would continue at their current rates",
+            "They would be discontinued",
+            "Their fees would also rise",
+            "They would become free"
+          ],
+          "answer": "They would continue at their current rates",
+          "global_id": 1300176
+        }
+      ]
+    },
+    {
+      "id": 13060,
+      "passageType": "A",
+      "passage": "A study of feedback delivery found that specific, actionable feedback led to greater improvement than general praise or criticism. Telling someone exactly what to change, the study noted, gives them a clear path forward, whereas vague comments leave them guessing. The study recommended that feedback identify both what was effective and what could be improved.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What kind of feedback led to greater improvement?",
+          "options": [
+            "Specific, actionable feedback",
+            "General praise",
+            "Vague criticism",
+            "No feedback"
+          ],
+          "answer": "Specific, actionable feedback",
+          "global_id": 1300177
+        },
+        {
+          "qid": 2,
+          "question": "What does telling someone exactly what to change provide?",
+          "options": [
+            "A clear path forward",
+            "More confusion",
+            "A reason to quit",
+            "Nothing useful"
+          ],
+          "answer": "A clear path forward",
+          "global_id": 1300178
+        },
+        {
+          "qid": 3,
+          "question": "What did the study recommend feedback identify?",
+          "options": [
+            "Both what was effective and what could be improved",
+            "Only failures",
+            "Only successes",
+            "Neither"
+          ],
+          "answer": "Both what was effective and what could be improved",
+          "global_id": 1300179
+        }
+      ]
+    },
+    {
+      "id": 13061,
+      "passageType": "B",
+      "passage": "The brief explained that a recommendation should clearly separate facts from assumptions. When assumptions are labeled as such, decision-makers can judge how much weight to give the recommendation and can revisit it if the assumptions later prove false. Presenting assumptions as established facts, the brief warned, can lead to poor decisions.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What should a recommendation clearly separate?",
+          "options": [
+            "Facts from assumptions",
+            "Costs from benefits",
+            "Authors from reviewers",
+            "Headings from text"
+          ],
+          "answer": "Facts from assumptions",
+          "global_id": 1300180
+        },
+        {
+          "qid": 2,
+          "question": "What can decision-makers do when assumptions are labeled?",
+          "options": [
+            "Judge how much weight to give the recommendation and revisit it if assumptions fail",
+            "Ignore the recommendation",
+            "Skip the facts",
+            "Avoid deciding"
+          ],
+          "answer": "Judge how much weight to give the recommendation and revisit it if assumptions fail",
+          "global_id": 1300181
+        },
+        {
+          "qid": 3,
+          "question": "What does presenting assumptions as facts risk?",
+          "options": [
+            "Poor decisions",
+            "Better decisions",
+            "Clearer writing",
+            "Faster reviews"
+          ],
+          "answer": "Poor decisions",
+          "global_id": 1300182
+        }
+      ]
+    },
+    {
+      "id": 13062,
+      "passageType": "A",
+      "passage": "An evaluation of a mentoring program found that mentees benefited most when meetings were regular and had a loose structure rather than being entirely unstructured or rigidly scripted. Regular contact built trust, while a loose structure ensured that sessions addressed the mentee's actual needs without becoming aimless.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "When did mentees benefit most?",
+          "options": [
+            "When meetings were regular and loosely structured",
+            "When meetings were rare",
+            "When meetings were rigidly scripted",
+            "When there were no meetings"
+          ],
+          "answer": "When meetings were regular and loosely structured",
+          "global_id": 1300183
+        },
+        {
+          "qid": 2,
+          "question": "What did regular contact build?",
+          "options": [
+            "Trust",
+            "Confusion",
+            "Distance",
+            "Rigidity"
+          ],
+          "answer": "Trust",
+          "global_id": 1300184
+        },
+        {
+          "qid": 3,
+          "question": "What did a loose structure ensure?",
+          "options": [
+            "Sessions addressed the mentee's actual needs without becoming aimless",
+            "Sessions were scripted",
+            "Sessions were skipped",
+            "Sessions had no purpose"
+          ],
+          "answer": "Sessions addressed the mentee's actual needs without becoming aimless",
+          "global_id": 1300185
+        }
+      ]
+    },
+    {
+      "id": 13063,
+      "passageType": "B",
+      "passage": "The report explained that a process map helps identify unnecessary steps by making the flow of work visible. Steps that add no value, duplicate effort, or create bottlenecks become apparent when the whole process is laid out. The report cautioned that mapping is only useful if the map reflects how work is actually done, not how it is supposed to be done.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "How does a process map help identify unnecessary steps?",
+          "options": [
+            "By making the flow of work visible",
+            "By hiding the process",
+            "By adding steps",
+            "By removing documentation"
+          ],
+          "answer": "By making the flow of work visible",
+          "global_id": 1300186
+        },
+        {
+          "qid": 2,
+          "question": "What becomes apparent when a process is laid out?",
+          "options": [
+            "Steps that add no value, duplicate effort, or create bottlenecks",
+            "Only the first step",
+            "Nothing useful",
+            "The cost of the process only"
+          ],
+          "answer": "Steps that add no value, duplicate effort, or create bottlenecks",
+          "global_id": 1300187
+        },
+        {
+          "qid": 3,
+          "question": "What caution did the report give about mapping?",
+          "options": [
+            "It is useful only if it reflects how work is actually done",
+            "It should reflect the ideal process",
+            "It is never useful",
+            "It should ignore real practice"
+          ],
+          "answer": "It is useful only if it reflects how work is actually done",
+          "global_id": 1300188
+        }
+      ]
+    },
+    {
+      "id": 13064,
+      "passageType": "A",
+      "passage": "The handbook advises that when an instruction could be read in more than one way, the writer should revise it rather than rely on the reader to infer the intended meaning. An instruction that is clear to its author may still be ambiguous to someone without the same background. Testing instructions on a person unfamiliar with the task, the handbook suggests, often reveals hidden ambiguities.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What does the handbook advise when an instruction could be read more than one way?",
+          "options": [
+            "Revise it rather than rely on the reader to infer the meaning",
+            "Leave it as is",
+            "Delete the instruction",
+            "Add more instructions"
+          ],
+          "answer": "Revise it rather than rely on the reader to infer the meaning",
+          "global_id": 1300189
+        },
+        {
+          "qid": 2,
+          "question": "Why might an instruction clear to its author still be ambiguous?",
+          "options": [
+            "The reader may lack the same background",
+            "The reader is careless",
+            "The instruction is too short",
+            "The author made an error"
+          ],
+          "answer": "The reader may lack the same background",
+          "global_id": 1300190
+        },
+        {
+          "qid": 3,
+          "question": "What does testing instructions on an unfamiliar person often reveal?",
+          "options": [
+            "Hidden ambiguities",
+            "Spelling errors only",
+            "Nothing useful",
+            "The author's intent"
+          ],
+          "answer": "Hidden ambiguities",
+          "global_id": 1300191
+        }
+      ]
+    },
+    {
+      "id": 13065,
+      "passageType": "B",
+      "passage": "A report on interagency communication found that misunderstandings often arose from differing assumptions rather than from disagreement about facts. When agencies made their assumptions explicit at the outset, the report noted, they resolved apparent conflicts more quickly. The report recommended beginning joint discussions by stating each party's assumptions.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What often caused misunderstandings between agencies?",
+          "options": [
+            "Differing assumptions rather than disagreement about facts",
+            "Disagreement about facts only",
+            "Lack of communication tools",
+            "Too many meetings"
+          ],
+          "answer": "Differing assumptions rather than disagreement about facts",
+          "global_id": 1300192
+        },
+        {
+          "qid": 2,
+          "question": "What helped agencies resolve apparent conflicts more quickly?",
+          "options": [
+            "Making their assumptions explicit at the outset",
+            "Avoiding discussion",
+            "Hiding their assumptions",
+            "Reducing contact"
+          ],
+          "answer": "Making their assumptions explicit at the outset",
+          "global_id": 1300193
+        }
+      ]
+    },
+    {
+      "id": 13066,
+      "passageType": "A",
+      "passage": "The guide explains that a chart should be chosen to match the type of comparison being made. A trend over time is best shown with a line, while parts of a whole are clearer as proportions. Choosing a chart type that does not fit the data, the guide warns, can obscure the very pattern the chart is meant to reveal.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What should the choice of chart match?",
+          "options": [
+            "The type of comparison being made",
+            "The writer's preference",
+            "The length of the report",
+            "The available colors"
+          ],
+          "answer": "The type of comparison being made",
+          "global_id": 1300194
+        },
+        {
+          "qid": 2,
+          "question": "How is a trend over time best shown?",
+          "options": [
+            "With a line",
+            "As proportions",
+            "As a single number",
+            "Without a chart"
+          ],
+          "answer": "With a line",
+          "global_id": 1300195
+        },
+        {
+          "qid": 3,
+          "question": "What can choosing an ill-fitting chart type do?",
+          "options": [
+            "Obscure the pattern the chart is meant to reveal",
+            "Always clarify the data",
+            "Reduce the data needed",
+            "Improve accuracy"
+          ],
+          "answer": "Obscure the pattern the chart is meant to reveal",
+          "global_id": 1300196
+        }
+      ]
+    },
+    {
+      "id": 13067,
+      "passageType": "B",
+      "passage": "An evaluation of a complaint-resolution process found that resolving complaints at the first point of contact, when possible, produced higher satisfaction and lower costs than routing every complaint through multiple levels. The evaluation recommended empowering frontline staff to resolve straightforward complaints directly, reserving escalation for genuinely complex cases.",
+      "questions": [
+        {
+          "qid": 1,
+          "question": "What produced higher satisfaction and lower costs?",
+          "options": [
+            "Resolving complaints at the first point of contact when possible",
+            "Routing every complaint through multiple levels",
+            "Ignoring complaints",
+            "Delaying resolution"
+          ],
+          "answer": "Resolving complaints at the first point of contact when possible",
+          "global_id": 1300197
+        },
+        {
+          "qid": 2,
+          "question": "What did the evaluation recommend for frontline staff?",
+          "options": [
+            "Empowering them to resolve straightforward complaints directly",
+            "Forbidding them from resolving complaints",
+            "Removing them",
+            "Escalating all complaints"
+          ],
+          "answer": "Empowering them to resolve straightforward complaints directly",
+          "global_id": 1300198
+        },
+        {
+          "qid": 3,
+          "question": "What should escalation be reserved for?",
+          "options": [
+            "Genuinely complex cases",
+            "All complaints",
+            "Routine cases",
+            "No cases"
+          ],
+          "answer": "Genuinely complex cases",
+          "global_id": 1300199
         }
       ]
     }

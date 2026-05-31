@@ -13,7 +13,7 @@
     },
     {
       "id": 12001,
-      "question": "A member of the public becomes angry while you are explaining a policy they disagree with. What is the best response?",
+      "question": "A member of the public becomes angry while you explain a policy they disagree with. What is the best response?",
       "options": [
         "Remain calm, listen to their concern, and explain the policy clearly and respectfully",
         "Tell them the policy is not your decision and end the conversation",
@@ -35,7 +35,7 @@
     },
     {
       "id": 12003,
-      "question": "Two coworkers on your team are in an ongoing disagreement that is slowing a shared project. You are a peer, not their supervisor. What is the most appropriate action?",
+      "question": "Two coworkers are in an ongoing disagreement slowing a shared project. You are a peer, not their supervisor. What is most appropriate?",
       "options": [
         "Encourage them to focus on the shared goal and offer to help find common ground",
         "Take sides with the coworker you agree with",
@@ -46,7 +46,7 @@
     },
     {
       "id": 12004,
-      "question": "You are assigned to work with a colleague whose communication style is much more direct than yours, and it sometimes feels blunt. What is the best approach?",
+      "question": "You are assigned to work with a colleague whose communication style is much more direct and sometimes feels blunt. What is the best approach?",
       "options": [
         "Recognize the difference in styles and focus on the substance of their input",
         "Avoid working with them whenever possible",
@@ -57,7 +57,7 @@
     },
     {
       "id": 12005,
-      "question": "A new employee on your team seems hesitant to ask questions and is making avoidable mistakes. What is the most helpful response?",
+      "question": "A new employee seems hesitant to ask questions and is making avoidable mistakes. What is the most helpful response?",
       "options": [
         "Proactively offer support and let them know questions are welcome",
         "Wait until they ask before offering any help",
@@ -101,7 +101,7 @@
     },
     {
       "id": 12009,
-      "question": "You disagree with a decision your team has made, but the group has reached consensus. What is the most appropriate action?",
+      "question": "You disagree with a decision your team reached by consensus. What is the most appropriate action?",
       "options": [
         "Voice your concern once clearly, then support the team's decision",
         "Continue to push your view until others change their minds",
@@ -112,7 +112,7 @@
     },
     {
       "id": 12010,
-      "question": "A member of the public is confused and frustrated because they were sent to the wrong office. What is the best response?",
+      "question": "A member of the public is frustrated because they were sent to the wrong office. What is the best response?",
       "options": [
         "Apologize for the inconvenience and clearly direct them to the correct place",
         "Tell them it was not your office's fault",
@@ -123,7 +123,7 @@
     },
     {
       "id": 12011,
-      "question": "Your supervisor assigns you a task with instructions that seem unclear. What should you do first?",
+      "question": "Your supervisor assigns a task with instructions that seem unclear. What should you do first?",
       "options": [
         "Ask clarifying questions before beginning the work",
         "Begin the task and hope your interpretation is correct",
@@ -134,7 +134,7 @@
     },
     {
       "id": 12012,
-      "question": "A coworker frequently vents to you about workplace problems, and it is affecting your focus. What is the most balanced response?",
+      "question": "A coworker frequently vents to you about workplace problems, affecting your focus. What is the most balanced response?",
       "options": [
         "Listen briefly but gently redirect toward your shared work responsibilities",
         "Tell them to stop bothering you",
@@ -167,7 +167,7 @@
     },
     {
       "id": 12015,
-      "question": "You and a coworker are assigned equal responsibility for a project, but they consistently miss agreed deadlines. What is the most effective first step?",
+      "question": "You and a coworker share equal responsibility for a project, but they consistently miss agreed deadlines. What is the most effective first step?",
       "options": [
         "Discuss the missed deadlines directly and agree on a workable plan",
         "Cover for them to keep the project on track",
@@ -178,7 +178,7 @@
     },
     {
       "id": 12016,
-      "question": "During a stressful project, tensions rise and a coworker snaps at you unfairly. What is the most professional response?",
+      "question": "During a stressful project, a coworker snaps at you unfairly. What is the most professional response?",
       "options": [
         "Stay composed and address the issue calmly once tensions ease",
         "Snap back to defend yourself",
@@ -200,7 +200,7 @@
     },
     {
       "id": 12018,
-      "question": "You are working with people from several departments who use different terminology for the same processes. What is the best approach?",
+      "question": "You work with people from several departments who use different terminology for the same processes. What is the best approach?",
       "options": [
         "Clarify terms early so everyone shares a common understanding",
         "Use your own department's terms and expect others to adapt",
@@ -211,7 +211,7 @@
     },
     {
       "id": 12019,
-      "question": "A coworker asks you to keep a work-related mistake of theirs confidential from the supervisor. What is the most appropriate response?",
+      "question": "A coworker asks you to keep a work-related mistake of theirs confidential from the supervisor. What is most appropriate?",
       "options": [
         "Encourage them to report it themselves and offer to help address it",
         "Agree to keep it secret to preserve the relationship",
@@ -222,7 +222,7 @@
     },
     {
       "id": 12020,
-      "question": "A long-time coworker resists a new procedure you have been asked to help implement. What is the most effective approach?",
+      "question": "A long-time coworker resists a new procedure you are helping implement. What is the most effective approach?",
       "options": [
         "Listen to their concerns and explain the benefits and reasons for the change",
         "Insist they comply because it is required",
@@ -244,7 +244,7 @@
     },
     {
       "id": 12022,
-      "question": "A member of the public is upset and raises their voice while you assist them. What should you prioritize?",
+      "question": "A member of the public raises their voice while you assist them. What should you prioritize?",
       "options": [
         "Listening actively and acknowledging their concern before responding",
         "Telling them to calm down before you help",
@@ -255,7 +255,7 @@
     },
     {
       "id": 12023,
-      "question": "Your team has a member who rarely speaks up in meetings but has valuable expertise. What is the best way to include them?",
+      "question": "Your team has a member who rarely speaks up but has valuable expertise. What is the best way to include them?",
       "options": [
         "Invite their input directly and create space for them to contribute",
         "Assume they would speak if they had something to say",
@@ -277,7 +277,7 @@
     },
     {
       "id": 12025,
-      "question": "A coworker consistently arrives late to meetings you both attend, delaying the group. As a peer, what is the most appropriate response?",
+      "question": "A coworker consistently arrives late to meetings you both attend, delaying the group. As a peer, what is most appropriate?",
       "options": [
         "Mention privately how the lateness affects the group and ask if you can help",
         "Start meetings without acknowledging them",
@@ -299,7 +299,7 @@
     },
     {
       "id": 12027,
-      "question": "A member of the public thanks you warmly and asks to speak to your supervisor to give positive feedback. What is the appropriate response?",
+      "question": "A member of the public thanks you warmly and asks to give positive feedback to your supervisor. What is appropriate?",
       "options": [
         "Thank them and provide the appropriate channel for their feedback",
         "Tell them it is not necessary",
@@ -310,7 +310,7 @@
     },
     {
       "id": 12028,
-      "question": "You are part of a group where one member dominates the conversation. What is the most constructive approach?",
+      "question": "In a group discussion one member dominates the conversation. What is the most constructive approach?",
       "options": [
         "Tactfully invite others to share their views as well",
         "Let them continue to avoid conflict",
@@ -332,773 +332,1873 @@
     },
     {
       "id": 12030,
-      "question": "A coworker repeatedly interrupts you during team meetings, making it hard to finish your points. What is the most effective first step? (Scenario 31)",
+      "question": "A coworker keeps borrowing shared equipment without returning it, disrupting others. What is the best first step?",
       "options": [
-        "Speak with the coworker privately and calmly explain how the interruptions affect you",
-        "Interrupt them back so they understand how it feels",
-        "Complain to your supervisor before talking to the coworker",
-        "Stop contributing in meetings to avoid the conflict"
+        "Speak with them directly about returning items so others can use them",
+        "Hide the equipment so they cannot take it",
+        "Report them to the supervisor right away",
+        "Take their equipment in return"
       ],
-      "answer": "Speak with the coworker privately and calmly explain how the interruptions affect you"
+      "answer": "Speak with them directly about returning items so others can use them"
     },
     {
       "id": 12031,
-      "question": "A member of the public becomes angry while you are explaining a policy they disagree with. What is the best response? (Scenario 32)",
+      "question": "You are leading a small group task as a peer and one member refuses to participate. What is most effective?",
       "options": [
-        "Remain calm, listen to their concern, and explain the policy clearly and respectfully",
-        "Tell them the policy is not your decision and end the conversation",
-        "Match their tone so they take you seriously",
-        "Refer them elsewhere immediately to avoid the discussion"
+        "Talk with them privately to understand the issue and re-engage them",
+        "Do their share yourself to keep things moving",
+        "Exclude them from the group's results",
+        "Announce their lack of participation to the group"
       ],
-      "answer": "Remain calm, listen to their concern, and explain the policy clearly and respectfully"
+      "answer": "Talk with them privately to understand the issue and re-engage them"
     },
     {
       "id": 12032,
-      "question": "Your supervisor gives you feedback you believe is based on incomplete information. What should you do? (Scenario 33)",
+      "question": "A member of the public submits a complaint about a coworker. How should you handle it?",
       "options": [
-        "Acknowledge the feedback and respectfully share the additional context",
-        "Disregard the feedback because it is inaccurate",
-        "Argue that your supervisor is wrong in front of the team",
-        "Say nothing and let the misunderstanding stand"
+        "Record the complaint accurately and route it through the proper process",
+        "Defend your coworker and dismiss the complaint",
+        "Tell the public member the coworker is difficult",
+        "Ignore it unless they follow up"
       ],
-      "answer": "Acknowledge the feedback and respectfully share the additional context"
+      "answer": "Record the complaint accurately and route it through the proper process"
     },
     {
       "id": 12033,
-      "question": "Two coworkers on your team are in an ongoing disagreement that is slowing a shared project. You are a peer, not their supervisor. What is the most appropriate action? (Scenario 34)",
+      "question": "Your supervisor publicly praises the team but credits another unit for work your team did. What is appropriate?",
       "options": [
-        "Encourage them to focus on the shared goal and offer to help find common ground",
-        "Take sides with the coworker you agree with",
-        "Ignore it since it is not your responsibility",
-        "Report both of them to management immediately"
+        "Mention your team's contribution to your supervisor privately and factually",
+        "Correct your supervisor in the meeting",
+        "Complain to the other unit",
+        "Say nothing and let the credit stand"
       ],
-      "answer": "Encourage them to focus on the shared goal and offer to help find common ground"
+      "answer": "Mention your team's contribution to your supervisor privately and factually"
     },
     {
       "id": 12034,
-      "question": "You are assigned to work with a colleague whose communication style is much more direct than yours, and it sometimes feels blunt. What is the best approach? (Scenario 35)",
+      "question": "A coworker often makes jokes that some colleagues find uncomfortable. As a peer, what is the best response?",
       "options": [
-        "Recognize the difference in styles and focus on the substance of their input",
-        "Avoid working with them whenever possible",
-        "Respond bluntly in return to set a boundary",
-        "Assume they dislike you and limit communication"
+        "Privately let them know the jokes are making others uncomfortable",
+        "Laugh along to keep the peace",
+        "Report them to HR without speaking to them first",
+        "Make jokes back to even things out"
       ],
-      "answer": "Recognize the difference in styles and focus on the substance of their input"
+      "answer": "Privately let them know the jokes are making others uncomfortable"
     },
     {
       "id": 12035,
-      "question": "A new employee on your team seems hesitant to ask questions and is making avoidable mistakes. What is the most helpful response? (Scenario 36)",
+      "question": "You must deliver disappointing news to a colleague about a project decision. What is the best approach?",
       "options": [
-        "Proactively offer support and let them know questions are welcome",
-        "Wait until they ask before offering any help",
-        "Point out the mistakes so they learn to be careful",
-        "Report the mistakes to the supervisor"
+        "Communicate the news clearly, honestly, and with empathy",
+        "Delay telling them as long as possible",
+        "Have someone else deliver the news",
+        "Soften it so much that the message is unclear"
       ],
-      "answer": "Proactively offer support and let them know questions are welcome"
+      "answer": "Communicate the news clearly, honestly, and with empathy"
     },
     {
       "id": 12036,
-      "question": "During a busy period, a coworker asks you to take on part of their workload, but you are already at capacity. What is the most professional response? (Scenario 37)",
+      "question": "A teammate frequently checks their phone during your one-on-one discussions. What is the most effective response?",
       "options": [
-        "Explain your current workload honestly and discuss priorities or alternatives",
-        "Take on the work to avoid seeming uncooperative",
-        "Refuse without explanation",
-        "Agree but do the work poorly to discourage future requests"
+        "Politely ask whether now is a good time to focus on the discussion",
+        "Stop scheduling discussions with them",
+        "Check your own phone in return",
+        "Report the behavior to the supervisor"
       ],
-      "answer": "Explain your current workload honestly and discuss priorities or alternatives"
+      "answer": "Politely ask whether now is a good time to focus on the discussion"
     },
     {
       "id": 12037,
-      "question": "You overhear a coworker sharing inaccurate information with a member of the public. What should you do? (Scenario 38)",
+      "question": "A member of the public does not speak much English and is struggling to communicate a request. What is the best approach?",
       "options": [
-        "Politely provide the correct information without embarrassing your coworker",
-        "Correct them loudly in front of the public so the record is clear",
-        "Say nothing to avoid conflict",
-        "Wait and tell the public member they were misinformed after the coworker leaves"
+        "Be patient, speak clearly, and use available translation resources",
+        "Ask them to return with someone who speaks English",
+        "Rush through to serve the next person",
+        "Guess at their request to save time"
       ],
-      "answer": "Politely provide the correct information without embarrassing your coworker"
+      "answer": "Be patient, speak clearly, and use available translation resources"
     },
     {
       "id": 12038,
-      "question": "A colleague takes credit for an idea you contributed during a group discussion. What is the most constructive response? (Scenario 39)",
+      "question": "You realize you gave a coworker incorrect information that affected their work. What should you do?",
       "options": [
-        "Calmly clarify your contribution at an appropriate moment",
-        "Confront them angrily in the meeting",
-        "Let it go and avoid sharing ideas in the future",
-        "Take credit for one of their ideas later"
+        "Promptly tell them, correct the information, and help fix any impact",
+        "Wait to see if it causes a problem before saying anything",
+        "Hope they discover the error themselves",
+        "Blame unclear instructions for the mistake"
       ],
-      "answer": "Calmly clarify your contribution at an appropriate moment"
+      "answer": "Promptly tell them, correct the information, and help fix any impact"
     },
     {
       "id": 12039,
-      "question": "You disagree with a decision your team has made, but the group has reached consensus. What is the most appropriate action? (Scenario 40)",
+      "question": "A colleague is visibly upset after receiving difficult personal news. What is the most appropriate response?",
       "options": [
-        "Voice your concern once clearly, then support the team's decision",
-        "Continue to push your view until others change their minds",
-        "Quietly undermine the decision in how you carry it out",
-        "Withdraw from the project"
+        "Offer brief, respectful support and give them space if needed",
+        "Tell them to keep personal issues out of work",
+        "Ask detailed questions about what happened",
+        "Ignore it to maintain professionalism"
       ],
-      "answer": "Voice your concern once clearly, then support the team's decision"
+      "answer": "Offer brief, respectful support and give them space if needed"
     },
     {
       "id": 12040,
-      "question": "A member of the public is confused and frustrated because they were sent to the wrong office. What is the best response? (Scenario 41)",
+      "question": "You are asked to collaborate with someone you have had past conflict with. What is the best approach?",
       "options": [
-        "Apologize for the inconvenience and clearly direct them to the correct place",
-        "Tell them it was not your office's fault",
-        "Send them back to where they came from",
-        "Explain the full organizational structure so they understand"
+        "Approach the collaboration professionally and focus on shared goals",
+        "Decline the collaboration",
+        "Bring up the past conflict to clear the air first",
+        "Limit communication to the minimum necessary"
       ],
-      "answer": "Apologize for the inconvenience and clearly direct them to the correct place"
+      "answer": "Approach the collaboration professionally and focus on shared goals"
     },
     {
       "id": 12041,
-      "question": "Your supervisor assigns you a task with instructions that seem unclear. What should you do first? (Scenario 42)",
+      "question": "A coworker frequently asks for your help but never reciprocates. As a peer, what is the most balanced response?",
       "options": [
-        "Ask clarifying questions before beginning the work",
-        "Begin the task and hope your interpretation is correct",
-        "Wait for your supervisor to follow up",
-        "Ask a coworker to interpret the instructions for you"
+        "Continue helping when reasonable but communicate your own limits",
+        "Stop helping them entirely",
+        "Help only if they help you first",
+        "Complain about them to other coworkers"
       ],
-      "answer": "Ask clarifying questions before beginning the work"
+      "answer": "Continue helping when reasonable but communicate your own limits"
     },
     {
       "id": 12042,
-      "question": "A coworker frequently vents to you about workplace problems, and it is affecting your focus. What is the most balanced response? (Scenario 43)",
+      "question": "During a meeting, two senior colleagues disagree sharply and look to you to break the tie. What is most appropriate?",
       "options": [
-        "Listen briefly but gently redirect toward your shared work responsibilities",
-        "Tell them to stop bothering you",
-        "Join in venting to build rapport",
-        "Avoid the coworker entirely"
+        "Offer your reasoned view based on the facts, not on personalities",
+        "Side with the more senior colleague",
+        "Avoid giving any opinion",
+        "Suggest postponing the decision indefinitely"
       ],
-      "answer": "Listen briefly but gently redirect toward your shared work responsibilities"
+      "answer": "Offer your reasoned view based on the facts, not on personalities"
     },
     {
       "id": 12043,
-      "question": "You notice a colleague is overwhelmed and falling behind, which may affect a shared deadline. What is the best approach? (Scenario 44)",
+      "question": "A member of the public is anxious about a deadline they may miss. What is the best response?",
       "options": [
-        "Offer specific help and discuss how to meet the deadline together",
-        "Report them to the supervisor for falling behind",
-        "Complete their work for them without telling them",
-        "Focus only on your portion and let the deadline slip"
+        "Calmly explain their options and any available accommodations",
+        "Tell them deadlines cannot be changed",
+        "Reassure them everything will be fine without checking",
+        "Refer them elsewhere to avoid the question"
       ],
-      "answer": "Offer specific help and discuss how to meet the deadline together"
+      "answer": "Calmly explain their options and any available accommodations"
     },
     {
       "id": 12044,
-      "question": "A member of the public makes a request that violates policy. How should you respond? (Scenario 45)",
+      "question": "You disagree with how a coworker is treating a member of the public. What is the most appropriate response?",
       "options": [
-        "Explain politely that the request cannot be accommodated and why",
-        "Make an exception to keep them satisfied",
-        "Tell them the rules are unfair but you must follow them",
-        "Refer them away without explanation"
+        "Address it privately with the coworker and, if needed, the supervisor",
+        "Intervene loudly in front of the public member",
+        "Ignore it as not your concern",
+        "Apologize to the public member for your coworker"
       ],
-      "answer": "Explain politely that the request cannot be accommodated and why"
+      "answer": "Address it privately with the coworker and, if needed, the supervisor"
     },
     {
       "id": 12045,
-      "question": "You and a coworker are assigned equal responsibility for a project, but they consistently miss agreed deadlines. What is the most effective first step? (Scenario 46)",
+      "question": "A teammate sends you work that does not meet the agreed standard. What is the best approach?",
       "options": [
-        "Discuss the missed deadlines directly and agree on a workable plan",
-        "Cover for them to keep the project on track",
-        "Escalate to the supervisor immediately",
-        "Reduce your own effort to match theirs"
+        "Give specific, constructive feedback and explain what is needed",
+        "Redo the work yourself without telling them",
+        "Accept it to avoid conflict",
+        "Tell others the work was poor"
       ],
-      "answer": "Discuss the missed deadlines directly and agree on a workable plan"
+      "answer": "Give specific, constructive feedback and explain what is needed"
     },
     {
       "id": 12046,
-      "question": "During a stressful project, tensions rise and a coworker snaps at you unfairly. What is the most professional response? (Scenario 47)",
+      "question": "You are new to a team and notice an established practice you think is inefficient. What is most appropriate?",
       "options": [
-        "Stay composed and address the issue calmly once tensions ease",
-        "Snap back to defend yourself",
-        "Report the incident immediately",
-        "Avoid the coworker for the rest of the project"
+        "Learn why the practice exists before suggesting changes",
+        "Immediately propose replacing it",
+        "Quietly do it your own way",
+        "Wait years before saying anything"
       ],
-      "answer": "Stay composed and address the issue calmly once tensions ease"
+      "answer": "Learn why the practice exists before suggesting changes"
     },
     {
       "id": 12047,
-      "question": "A supervisor asks for your honest opinion on a plan you think has serious flaws. What should you do? (Scenario 48)",
+      "question": "A colleague repeatedly cc's your supervisor on routine messages, which feels like oversight. What is the best response?",
       "options": [
-        "Share your concerns respectfully along with possible improvements",
-        "Praise the plan to avoid conflict",
-        "List every flaw without offering solutions",
-        "Say you have no opinion"
+        "Ask them privately about the reason and clarify expectations",
+        "Start cc'ing their supervisor in return",
+        "Report the behavior immediately",
+        "Stop responding to their emails"
       ],
-      "answer": "Share your concerns respectfully along with possible improvements"
+      "answer": "Ask them privately about the reason and clarify expectations"
     },
     {
       "id": 12048,
-      "question": "You are working with people from several departments who use different terminology for the same processes. What is the best approach? (Scenario 49)",
+      "question": "A member of the public becomes emotional and begins to cry while discussing their situation. What is the best response?",
       "options": [
-        "Clarify terms early so everyone shares a common understanding",
-        "Use your own department's terms and expect others to adapt",
-        "Avoid asking about terms to seem knowledgeable",
-        "Communicate only with your own department"
+        "Respond with patience and empathy while continuing to assist them",
+        "Tell them to compose themselves first",
+        "Call someone else to handle it",
+        "End the interaction to give them privacy"
       ],
-      "answer": "Clarify terms early so everyone shares a common understanding"
+      "answer": "Respond with patience and empathy while continuing to assist them"
     },
     {
       "id": 12049,
-      "question": "A coworker asks you to keep a work-related mistake of theirs confidential from the supervisor. What is the most appropriate response? (Scenario 50)",
+      "question": "Your team disagrees about how to divide an unpopular task. What is the most constructive approach?",
       "options": [
-        "Encourage them to report it themselves and offer to help address it",
-        "Agree to keep it secret to preserve the relationship",
-        "Report it to the supervisor without telling the coworker",
-        "Ignore the request and the mistake"
+        "Propose a fair method such as rotating or splitting the task",
+        "Insist someone else take it",
+        "Volunteer to do it all to end the debate",
+        "Refuse to participate in the discussion"
       ],
-      "answer": "Encourage them to report it themselves and offer to help address it"
+      "answer": "Propose a fair method such as rotating or splitting the task"
     },
     {
       "id": 12050,
-      "question": "A long-time coworker resists a new procedure you have been asked to help implement. What is the most effective approach? (Scenario 51)",
+      "question": "A coworker shares a confidential matter with you that they were not supposed to disclose. What should you do?",
       "options": [
-        "Listen to their concerns and explain the benefits and reasons for the change",
-        "Insist they comply because it is required",
-        "Implement it without involving them",
-        "Report their resistance to management"
+        "Avoid spreading it further and encourage them to follow proper channels",
+        "Share it with others who might find it useful",
+        "Use the information to your advantage",
+        "Confront them about violating confidentiality"
       ],
-      "answer": "Listen to their concerns and explain the benefits and reasons for the change"
+      "answer": "Avoid spreading it further and encourage them to follow proper channels"
     },
     {
       "id": 12051,
-      "question": "You receive an email from a colleague that you find rude in tone. What is the best response? (Scenario 52)",
+      "question": "You are assigned a mentor role for a new employee who seems resistant to guidance. What is the best approach?",
       "options": [
-        "Respond professionally and focus on resolving the underlying issue",
-        "Reply with an equally sharp tone",
-        "Forward it to others to show how rude it was",
-        "Ignore the email entirely"
+        "Build rapport and adapt your support to what they find helpful",
+        "Insist they follow your guidance exactly",
+        "Step back and let them figure it out alone",
+        "Report their resistance to the supervisor"
       ],
-      "answer": "Respond professionally and focus on resolving the underlying issue"
+      "answer": "Build rapport and adapt your support to what they find helpful"
     },
     {
       "id": 12052,
-      "question": "A member of the public is upset and raises their voice while you assist them. What should you prioritize? (Scenario 53)",
+      "question": "During a group project, one teammate dominates decisions without input from others. What is most appropriate?",
       "options": [
-        "Listening actively and acknowledging their concern before responding",
-        "Telling them to calm down before you help",
-        "Ending the interaction quickly",
-        "Explaining that their behavior is inappropriate"
+        "Encourage shared decision-making by inviting input from the whole group",
+        "Let them lead to avoid conflict",
+        "Form a separate group with the others",
+        "Challenge them publicly to assert yourself"
       ],
-      "answer": "Listening actively and acknowledging their concern before responding"
+      "answer": "Encourage shared decision-making by inviting input from the whole group"
     },
     {
       "id": 12053,
-      "question": "Your team has a member who rarely speaks up in meetings but has valuable expertise. What is the best way to include them? (Scenario 54)",
+      "question": "A member of the public insists on speaking only to a supervisor, but the issue is one you can resolve. What is the best response?",
       "options": [
-        "Invite their input directly and create space for them to contribute",
-        "Assume they would speak if they had something to say",
-        "Ask them to submit comments only in writing",
-        "Rely on the more vocal members instead"
+        "Explain that you can help and offer to escalate if they still wish",
+        "Refuse and send them to the supervisor immediately",
+        "Tell them the supervisor is unavailable",
+        "Handle it without acknowledging their request"
       ],
-      "answer": "Invite their input directly and create space for them to contribute"
+      "answer": "Explain that you can help and offer to escalate if they still wish"
     },
     {
       "id": 12054,
-      "question": "You and a colleague interpret a supervisor's instruction differently. What is the most effective step? (Scenario 55)",
+      "question": "You notice tension building between two teammates over email. What is the most constructive step?",
       "options": [
-        "Check with the supervisor together to confirm the intended approach",
-        "Each proceed with your own interpretation",
-        "Defer to whoever has more seniority",
-        "Delay the work until someone decides"
+        "Suggest a brief conversation to resolve the issue directly",
+        "Add more people to the email thread",
+        "Take the side you agree with",
+        "Forward the emails to the supervisor"
       ],
-      "answer": "Check with the supervisor together to confirm the intended approach"
+      "answer": "Suggest a brief conversation to resolve the issue directly"
     },
     {
       "id": 12055,
-      "question": "A coworker consistently arrives late to meetings you both attend, delaying the group. As a peer, what is the most appropriate response? (Scenario 56)",
+      "question": "A coworker gives you a compliment that you suspect is sarcastic. What is the most professional response?",
       "options": [
-        "Mention privately how the lateness affects the group and ask if you can help",
-        "Start meetings without acknowledging them",
-        "Report the lateness to the supervisor",
-        "Arrive late yourself in response"
+        "Respond graciously and focus on the work rather than the tone",
+        "Ask them if they meant it sarcastically",
+        "Return a sarcastic comment",
+        "Avoid them afterward"
       ],
-      "answer": "Mention privately how the lateness affects the group and ask if you can help"
+      "answer": "Respond graciously and focus on the work rather than the tone"
     },
     {
       "id": 12056,
-      "question": "During a collaborative project, a colleague proposes an approach you think is inefficient. What is the best response? (Scenario 57)",
+      "question": "Your supervisor asks you to relay a difficult message to the team. What is the best approach?",
       "options": [
-        "Explain your concerns and suggest an alternative for the group to consider",
-        "Agree to avoid disagreement",
-        "Implement your own approach quietly",
-        "Tell them their idea will not work"
+        "Deliver the message clearly and accurately while remaining approachable",
+        "Soften it so much the meaning is lost",
+        "Add your own complaints to the message",
+        "Decline to deliver it"
       ],
-      "answer": "Explain your concerns and suggest an alternative for the group to consider"
+      "answer": "Deliver the message clearly and accurately while remaining approachable"
     },
     {
       "id": 12057,
-      "question": "A member of the public thanks you warmly and asks to speak to your supervisor to give positive feedback. What is the appropriate response? (Scenario 58)",
+      "question": "A teammate frequently changes plans at the last minute, disrupting your work. What is most effective?",
       "options": [
-        "Thank them and provide the appropriate channel for their feedback",
-        "Tell them it is not necessary",
-        "Decline since it may seem self-promoting",
-        "Give them your supervisor's personal contact information"
+        "Discuss the impact and agree on clearer timelines together",
+        "Stop coordinating with them",
+        "Match their behavior with your own changes",
+        "Complain to others about the disruptions"
       ],
-      "answer": "Thank them and provide the appropriate channel for their feedback"
+      "answer": "Discuss the impact and agree on clearer timelines together"
     },
     {
       "id": 12058,
-      "question": "You are part of a group where one member dominates the conversation. What is the most constructive approach? (Scenario 59)",
+      "question": "A member of the public asks a question outside your area of responsibility. What is the best response?",
       "options": [
-        "Tactfully invite others to share their views as well",
-        "Let them continue to avoid conflict",
-        "Stop attending the meetings",
-        "Interrupt them to take over the discussion"
+        "Direct them to the right person or resource and offer what help you can",
+        "Tell them it is not your job",
+        "Guess at an answer to be helpful",
+        "Ignore the question"
       ],
-      "answer": "Tactfully invite others to share their views as well"
+      "answer": "Direct them to the right person or resource and offer what help you can"
     },
     {
       "id": 12059,
-      "question": "A colleague gives you constructive criticism about your work. What is the most professional response? (Scenario 60)",
+      "question": "You and a colleague are competing for the same opportunity. How should you treat the relationship?",
       "options": [
-        "Thank them, consider the feedback, and apply what is useful",
-        "Defend your work and dismiss the criticism",
-        "Avoid working with them afterward",
-        "Find criticism of their work in return"
+        "Remain professional, fair, and collaborative where appropriate",
+        "Undermine their chances when possible",
+        "Avoid all contact with them",
+        "Withdraw to avoid the awkwardness"
       ],
-      "answer": "Thank them, consider the feedback, and apply what is useful"
+      "answer": "Remain professional, fair, and collaborative where appropriate"
     },
     {
       "id": 12060,
-      "question": "A coworker repeatedly interrupts you during team meetings, making it hard to finish your points. What is the most effective first step? (Scenario 61)",
+      "question": "A teammate misunderstands a request and does the wrong task. What is the most constructive response?",
       "options": [
-        "Speak with the coworker privately and calmly explain how the interruptions affect you",
-        "Interrupt them back so they understand how it feels",
-        "Complain to your supervisor before talking to the coworker",
-        "Stop contributing in meetings to avoid the conflict"
+        "Clarify the request calmly and help redirect their effort",
+        "Criticize them for not listening",
+        "Do the correct task yourself without explanation",
+        "Report the error to the supervisor"
       ],
-      "answer": "Speak with the coworker privately and calmly explain how the interruptions affect you"
+      "answer": "Clarify the request calmly and help redirect their effort"
     },
     {
       "id": 12061,
-      "question": "A member of the public becomes angry while you are explaining a policy they disagree with. What is the best response? (Scenario 62)",
+      "question": "A member of the public is dissatisfied even after you fully resolve their issue. What is the best response?",
       "options": [
-        "Remain calm, listen to their concern, and explain the policy clearly and respectfully",
-        "Tell them the policy is not your decision and end the conversation",
-        "Match their tone so they take you seriously",
-        "Refer them elsewhere immediately to avoid the discussion"
+        "Remain courteous, confirm the resolution, and offer further assistance if needed",
+        "Tell them they should be satisfied",
+        "Apologize excessively to placate them",
+        "End the interaction abruptly"
       ],
-      "answer": "Remain calm, listen to their concern, and explain the policy clearly and respectfully"
+      "answer": "Remain courteous, confirm the resolution, and offer further assistance if needed"
     },
     {
       "id": 12062,
-      "question": "Your supervisor gives you feedback you believe is based on incomplete information. What should you do? (Scenario 63)",
+      "question": "You are part of a team where members rarely acknowledge each other's contributions. What is most constructive?",
       "options": [
-        "Acknowledge the feedback and respectfully share the additional context",
-        "Disregard the feedback because it is inaccurate",
-        "Argue that your supervisor is wrong in front of the team",
-        "Say nothing and let the misunderstanding stand"
+        "Recognize others' good work and model positive acknowledgment",
+        "Wait for others to start acknowledging contributions",
+        "Point out that no one gives credit",
+        "Keep your contributions to yourself"
       ],
-      "answer": "Acknowledge the feedback and respectfully share the additional context"
+      "answer": "Recognize others' good work and model positive acknowledgment"
     },
     {
       "id": 12063,
-      "question": "Two coworkers on your team are in an ongoing disagreement that is slowing a shared project. You are a peer, not their supervisor. What is the most appropriate action? (Scenario 64)",
+      "question": "A colleague consistently emails you outside work hours expecting immediate replies. What is the best approach?",
       "options": [
-        "Encourage them to focus on the shared goal and offer to help find common ground",
-        "Take sides with the coworker you agree with",
-        "Ignore it since it is not your responsibility",
-        "Report both of them to management immediately"
+        "Communicate your availability and agree on reasonable response expectations",
+        "Reply instantly to avoid seeming uncooperative",
+        "Ignore their messages entirely",
+        "Report them for contacting you after hours"
       ],
-      "answer": "Encourage them to focus on the shared goal and offer to help find common ground"
+      "answer": "Communicate your availability and agree on reasonable response expectations"
     },
     {
       "id": 12064,
-      "question": "You are assigned to work with a colleague whose communication style is much more direct than yours, and it sometimes feels blunt. What is the best approach? (Scenario 65)",
+      "question": "During onboarding you are paired with a coworker who seems annoyed at the extra duty. What is most appropriate?",
       "options": [
-        "Recognize the difference in styles and focus on the substance of their input",
-        "Avoid working with them whenever possible",
-        "Respond bluntly in return to set a boundary",
-        "Assume they dislike you and limit communication"
+        "Be respectful of their time and proactive in your learning",
+        "Demand they spend more time helping you",
+        "Avoid asking them anything",
+        "Complain to the supervisor about their attitude"
       ],
-      "answer": "Recognize the difference in styles and focus on the substance of their input"
+      "answer": "Be respectful of their time and proactive in your learning"
     },
     {
       "id": 12065,
-      "question": "A new employee on your team seems hesitant to ask questions and is making avoidable mistakes. What is the most helpful response? (Scenario 66)",
+      "question": "A member of the public provides feedback that a form is confusing. What is the best response?",
       "options": [
-        "Proactively offer support and let them know questions are welcome",
-        "Wait until they ask before offering any help",
-        "Point out the mistakes so they learn to be careful",
-        "Report the mistakes to the supervisor"
+        "Thank them, assist with the form, and pass the feedback to the right place",
+        "Tell them the form is fine",
+        "Blame the design on another department",
+        "Dismiss the feedback as uncommon"
       ],
-      "answer": "Proactively offer support and let them know questions are welcome"
+      "answer": "Thank them, assist with the form, and pass the feedback to the right place"
     },
     {
       "id": 12066,
-      "question": "During a busy period, a coworker asks you to take on part of their workload, but you are already at capacity. What is the most professional response? (Scenario 67)",
+      "question": "Your team must reach a decision quickly, but one member wants more time to deliberate. What is most constructive?",
       "options": [
-        "Explain your current workload honestly and discuss priorities or alternatives",
-        "Take on the work to avoid seeming uncooperative",
-        "Refuse without explanation",
-        "Agree but do the work poorly to discourage future requests"
+        "Balance the need for input with the deadline and find a reasonable compromise",
+        "Override their request and decide immediately",
+        "Delay the decision indefinitely",
+        "Let one person decide alone"
       ],
-      "answer": "Explain your current workload honestly and discuss priorities or alternatives"
+      "answer": "Balance the need for input with the deadline and find a reasonable compromise"
     },
     {
       "id": 12067,
-      "question": "You overhear a coworker sharing inaccurate information with a member of the public. What should you do? (Scenario 68)",
+      "question": "A coworker often speaks negatively about management to the team. What is the most professional response?",
       "options": [
-        "Politely provide the correct information without embarrassing your coworker",
-        "Correct them loudly in front of the public so the record is clear",
-        "Say nothing to avoid conflict",
-        "Wait and tell the public member they were misinformed after the coworker leaves"
+        "Avoid amplifying it and redirect toward constructive solutions",
+        "Join in to bond with the coworker",
+        "Report the coworker to management",
+        "Argue with them in front of the team"
       ],
-      "answer": "Politely provide the correct information without embarrassing your coworker"
+      "answer": "Avoid amplifying it and redirect toward constructive solutions"
     },
     {
       "id": 12068,
-      "question": "A colleague takes credit for an idea you contributed during a group discussion. What is the most constructive response? (Scenario 69)",
+      "question": "A teammate asks you to review their work before a deadline, but you spot major issues. What is the best approach?",
       "options": [
-        "Calmly clarify your contribution at an appropriate moment",
-        "Confront them angrily in the meeting",
-        "Let it go and avoid sharing ideas in the future",
-        "Take credit for one of their ideas later"
+        "Give honest, specific feedback in time for them to make corrections",
+        "Approve it to avoid hurting their feelings",
+        "Point out only minor issues",
+        "Tell them it is too late to change anything"
       ],
-      "answer": "Calmly clarify your contribution at an appropriate moment"
+      "answer": "Give honest, specific feedback in time for them to make corrections"
     },
     {
       "id": 12069,
-      "question": "You disagree with a decision your team has made, but the group has reached consensus. What is the most appropriate action? (Scenario 70)",
+      "question": "A member of the public is impatient and demands to skip ahead of others waiting. What is most appropriate?",
       "options": [
-        "Voice your concern once clearly, then support the team's decision",
-        "Continue to push your view until others change their minds",
-        "Quietly undermine the decision in how you carry it out",
-        "Withdraw from the project"
+        "Explain the process fairly and treat all members of the public equally",
+        "Let them skip ahead to avoid a scene",
+        "Tell them they are being unreasonable",
+        "Serve them quickly and ignore the others"
       ],
-      "answer": "Voice your concern once clearly, then support the team's decision"
+      "answer": "Explain the process fairly and treat all members of the public equally"
     },
     {
       "id": 12070,
-      "question": "A member of the public is confused and frustrated because they were sent to the wrong office. What is the best response? (Scenario 71)",
+      "question": "You disagree with a colleague's approach but they outrank you in experience. What is the best response?",
       "options": [
-        "Apologize for the inconvenience and clearly direct them to the correct place",
-        "Tell them it was not your office's fault",
-        "Send them back to where they came from",
-        "Explain the full organizational structure so they understand"
+        "Share your perspective respectfully and remain open to their reasoning",
+        "Defer entirely without sharing your view",
+        "Insist your approach is better",
+        "Go around them to a supervisor"
       ],
-      "answer": "Apologize for the inconvenience and clearly direct them to the correct place"
+      "answer": "Share your perspective respectfully and remain open to their reasoning"
     },
     {
       "id": 12071,
-      "question": "Your supervisor assigns you a task with instructions that seem unclear. What should you do first? (Scenario 72)",
+      "question": "A teammate seems to be excluding another colleague from group communications. What is most constructive?",
       "options": [
-        "Ask clarifying questions before beginning the work",
-        "Begin the task and hope your interpretation is correct",
-        "Wait for your supervisor to follow up",
-        "Ask a coworker to interpret the instructions for you"
+        "Ensure the excluded colleague is included and address it tactfully",
+        "Assume there is a good reason and stay out of it",
+        "Confront the teammate publicly",
+        "Exclude the teammate in return"
       ],
-      "answer": "Ask clarifying questions before beginning the work"
+      "answer": "Ensure the excluded colleague is included and address it tactfully"
     },
     {
       "id": 12072,
-      "question": "A coworker frequently vents to you about workplace problems, and it is affecting your focus. What is the most balanced response? (Scenario 73)",
+      "question": "A member of the public becomes confused by technical terms you used. What is the best response?",
       "options": [
-        "Listen briefly but gently redirect toward your shared work responsibilities",
-        "Tell them to stop bothering you",
-        "Join in venting to build rapport",
-        "Avoid the coworker entirely"
+        "Rephrase the information in plain, clear language",
+        "Repeat the same terms more slowly",
+        "Tell them to look it up later",
+        "Move on to the next topic"
       ],
-      "answer": "Listen briefly but gently redirect toward your shared work responsibilities"
+      "answer": "Rephrase the information in plain, clear language"
     },
     {
       "id": 12073,
-      "question": "You notice a colleague is overwhelmed and falling behind, which may affect a shared deadline. What is the best approach? (Scenario 74)",
+      "question": "You are assigned to a cross-functional team where members have competing priorities. What is most effective?",
       "options": [
-        "Offer specific help and discuss how to meet the deadline together",
-        "Report them to the supervisor for falling behind",
-        "Complete their work for them without telling them",
-        "Focus only on your portion and let the deadline slip"
+        "Work to align on shared objectives and acknowledge each group's needs",
+        "Push only your own group's priorities",
+        "Avoid engaging with the other groups",
+        "Let the most assertive group decide"
       ],
-      "answer": "Offer specific help and discuss how to meet the deadline together"
+      "answer": "Work to align on shared objectives and acknowledge each group's needs"
     },
     {
       "id": 12074,
-      "question": "A member of the public makes a request that violates policy. How should you respond? (Scenario 75)",
+      "question": "A coworker frequently takes credit in front of the supervisor for joint work. What is the best approach?",
       "options": [
-        "Explain politely that the request cannot be accommodated and why",
-        "Make an exception to keep them satisfied",
-        "Tell them the rules are unfair but you must follow them",
-        "Refer them away without explanation"
+        "Calmly ensure shared contributions are accurately represented",
+        "Stop collaborating with them",
+        "Take sole credit on the next project",
+        "Complain to other coworkers"
       ],
-      "answer": "Explain politely that the request cannot be accommodated and why"
+      "answer": "Calmly ensure shared contributions are accurately represented"
     },
     {
       "id": 12075,
-      "question": "You and a coworker are assigned equal responsibility for a project, but they consistently miss agreed deadlines. What is the most effective first step? (Scenario 76)",
+      "question": "A member of the public is frustrated by a delay outside your control. What is most appropriate?",
       "options": [
-        "Discuss the missed deadlines directly and agree on a workable plan",
-        "Cover for them to keep the project on track",
-        "Escalate to the supervisor immediately",
-        "Reduce your own effort to match theirs"
+        "Acknowledge their frustration and explain what you can and cannot do",
+        "Tell them it is not your problem",
+        "Promise a faster outcome you cannot guarantee",
+        "Avoid discussing the delay"
       ],
-      "answer": "Discuss the missed deadlines directly and agree on a workable plan"
+      "answer": "Acknowledge their frustration and explain what you can and cannot do"
     },
     {
       "id": 12076,
-      "question": "During a stressful project, tensions rise and a coworker snaps at you unfairly. What is the most professional response? (Scenario 77)",
+      "question": "You notice a teammate is struggling with a tool everyone is expected to use. What is the best response?",
       "options": [
-        "Stay composed and address the issue calmly once tensions ease",
-        "Snap back to defend yourself",
-        "Report the incident immediately",
-        "Avoid the coworker for the rest of the project"
+        "Offer to walk them through it or share helpful resources",
+        "Assume they will learn it eventually",
+        "Mention their difficulty to the supervisor",
+        "Do their tool-related tasks for them"
       ],
-      "answer": "Stay composed and address the issue calmly once tensions ease"
+      "answer": "Offer to walk them through it or share helpful resources"
     },
     {
       "id": 12077,
-      "question": "A supervisor asks for your honest opinion on a plan you think has serious flaws. What should you do? (Scenario 78)",
+      "question": "During a disagreement, a colleague raises their voice at you in front of others. What is most professional?",
       "options": [
-        "Share your concerns respectfully along with possible improvements",
-        "Praise the plan to avoid conflict",
-        "List every flaw without offering solutions",
-        "Say you have no opinion"
+        "Stay calm and suggest continuing the discussion privately",
+        "Raise your voice in return",
+        "Walk away without a word",
+        "Tell them they are being unprofessional in front of everyone"
       ],
-      "answer": "Share your concerns respectfully along with possible improvements"
+      "answer": "Stay calm and suggest continuing the discussion privately"
     },
     {
       "id": 12078,
-      "question": "You are working with people from several departments who use different terminology for the same processes. What is the best approach? (Scenario 79)",
+      "question": "A member of the public asks you to bend a rule just this once. What is the best response?",
       "options": [
-        "Clarify terms early so everyone shares a common understanding",
-        "Use your own department's terms and expect others to adapt",
-        "Avoid asking about terms to seem knowledgeable",
-        "Communicate only with your own department"
+        "Apply the rule consistently and explain it kindly",
+        "Bend the rule to be helpful",
+        "Tell them rules are pointless but required",
+        "Refer them away to avoid deciding"
       ],
-      "answer": "Clarify terms early so everyone shares a common understanding"
+      "answer": "Apply the rule consistently and explain it kindly"
     },
     {
       "id": 12079,
-      "question": "A coworker asks you to keep a work-related mistake of theirs confidential from the supervisor. What is the most appropriate response? (Scenario 80)",
+      "question": "Your team adopts a new tool and a coworker openly refuses to use it. What is most constructive?",
       "options": [
-        "Encourage them to report it themselves and offer to help address it",
-        "Agree to keep it secret to preserve the relationship",
-        "Report it to the supervisor without telling the coworker",
-        "Ignore the request and the mistake"
+        "Understand their concerns and help them see the benefits",
+        "Insist they comply or face consequences",
+        "Use the tool yourself and ignore them",
+        "Report their refusal immediately"
       ],
-      "answer": "Encourage them to report it themselves and offer to help address it"
+      "answer": "Understand their concerns and help them see the benefits"
     },
     {
       "id": 12080,
-      "question": "A long-time coworker resists a new procedure you have been asked to help implement. What is the most effective approach? (Scenario 81)",
+      "question": "A colleague apologizes for a mistake that affected your work. What is the best response?",
       "options": [
-        "Listen to their concerns and explain the benefits and reasons for the change",
-        "Insist they comply because it is required",
-        "Implement it without involving them",
-        "Report their resistance to management"
+        "Accept the apology graciously and focus on moving forward",
+        "Remind them how much trouble it caused",
+        "Dismiss the apology coldly",
+        "Bring it up repeatedly later"
       ],
-      "answer": "Listen to their concerns and explain the benefits and reasons for the change"
+      "answer": "Accept the apology graciously and focus on moving forward"
     },
     {
       "id": 12081,
-      "question": "You receive an email from a colleague that you find rude in tone. What is the best response? (Scenario 82)",
+      "question": "You are working with a contractor who is unfamiliar with your office's norms. What is most appropriate?",
       "options": [
-        "Respond professionally and focus on resolving the underlying issue",
-        "Reply with an equally sharp tone",
-        "Forward it to others to show how rude it was",
-        "Ignore the email entirely"
+        "Clearly explain expectations and answer their questions patiently",
+        "Assume they should already know the norms",
+        "Limit their involvement",
+        "Report norm violations rather than explaining"
       ],
-      "answer": "Respond professionally and focus on resolving the underlying issue"
+      "answer": "Clearly explain expectations and answer their questions patiently"
     },
     {
       "id": 12082,
-      "question": "A member of the public is upset and raises their voice while you assist them. What should you prioritize? (Scenario 83)",
+      "question": "A teammate consistently undervalues their own contributions in meetings. What is the best response?",
       "options": [
-        "Listening actively and acknowledging their concern before responding",
-        "Telling them to calm down before you help",
-        "Ending the interaction quickly",
-        "Explaining that their behavior is inappropriate"
+        "Affirm the value of their input and encourage them to share more",
+        "Agree that their contributions are minor",
+        "Speak for them in meetings",
+        "Ignore it as their issue"
       ],
-      "answer": "Listening actively and acknowledging their concern before responding"
+      "answer": "Affirm the value of their input and encourage them to share more"
     },
     {
       "id": 12083,
-      "question": "Your team has a member who rarely speaks up in meetings but has valuable expertise. What is the best way to include them? (Scenario 84)",
+      "question": "A member of the public gives you incomplete information needed to help them. What is most effective?",
       "options": [
-        "Invite their input directly and create space for them to contribute",
-        "Assume they would speak if they had something to say",
-        "Ask them to submit comments only in writing",
-        "Rely on the more vocal members instead"
+        "Ask clarifying questions to gather what you need to assist",
+        "Proceed with assumptions to save time",
+        "Tell them to come back when prepared",
+        "Refer them elsewhere"
       ],
-      "answer": "Invite their input directly and create space for them to contribute"
+      "answer": "Ask clarifying questions to gather what you need to assist"
     },
     {
       "id": 12084,
-      "question": "You and a colleague interpret a supervisor's instruction differently. What is the most effective step? (Scenario 85)",
+      "question": "Your supervisor changes a decision you had already communicated to others. What is most appropriate?",
       "options": [
-        "Check with the supervisor together to confirm the intended approach",
-        "Each proceed with your own interpretation",
-        "Defer to whoever has more seniority",
-        "Delay the work until someone decides"
+        "Clarify the new decision promptly and communicate it accurately",
+        "Refuse to relay the change",
+        "Blame the supervisor for the confusion",
+        "Keep telling people the old decision"
       ],
-      "answer": "Check with the supervisor together to confirm the intended approach"
+      "answer": "Clarify the new decision promptly and communicate it accurately"
     },
     {
       "id": 12085,
-      "question": "A coworker consistently arrives late to meetings you both attend, delaying the group. As a peer, what is the most appropriate response? (Scenario 86)",
+      "question": "A colleague is consistently negative about every new idea proposed. What is most constructive?",
       "options": [
-        "Mention privately how the lateness affects the group and ask if you can help",
-        "Start meetings without acknowledging them",
-        "Report the lateness to the supervisor",
-        "Arrive late yourself in response"
+        "Acknowledge valid concerns while encouraging constructive contributions",
+        "Stop proposing ideas around them",
+        "Exclude them from brainstorming",
+        "Tell them they are too negative"
       ],
-      "answer": "Mention privately how the lateness affects the group and ask if you can help"
+      "answer": "Acknowledge valid concerns while encouraging constructive contributions"
     },
     {
       "id": 12086,
-      "question": "During a collaborative project, a colleague proposes an approach you think is inefficient. What is the best response? (Scenario 87)",
+      "question": "A member of the public thanks you but mentions a coworker was unhelpful. What is most appropriate?",
       "options": [
-        "Explain your concerns and suggest an alternative for the group to consider",
-        "Agree to avoid disagreement",
-        "Implement your own approach quietly",
-        "Tell them their idea will not work"
+        "Thank them, address their need, and route the concern appropriately",
+        "Defend your coworker firmly",
+        "Agree that the coworker is unhelpful",
+        "Ignore the comment about the coworker"
       ],
-      "answer": "Explain your concerns and suggest an alternative for the group to consider"
+      "answer": "Thank them, address their need, and route the concern appropriately"
     },
     {
       "id": 12087,
-      "question": "A member of the public thanks you warmly and asks to speak to your supervisor to give positive feedback. What is the appropriate response? (Scenario 88)",
+      "question": "You are leading a peer discussion and emotions are running high. What is the best approach?",
       "options": [
-        "Thank them and provide the appropriate channel for their feedback",
-        "Tell them it is not necessary",
-        "Decline since it may seem self-promoting",
-        "Give them your supervisor's personal contact information"
+        "Acknowledge the emotions and refocus the group on facts and goals",
+        "Ignore the emotions and push forward",
+        "End the discussion until everyone calms down indefinitely",
+        "Take sides to settle it quickly"
       ],
-      "answer": "Thank them and provide the appropriate channel for their feedback"
+      "answer": "Acknowledge the emotions and refocus the group on facts and goals"
     },
     {
       "id": 12088,
-      "question": "You are part of a group where one member dominates the conversation. What is the most constructive approach? (Scenario 89)",
+      "question": "A teammate frequently interrupts others, including you, in group settings. As a peer, what is most effective?",
       "options": [
-        "Tactfully invite others to share their views as well",
-        "Let them continue to avoid conflict",
-        "Stop attending the meetings",
-        "Interrupt them to take over the discussion"
+        "Model good listening and gently note when others have not finished",
+        "Interrupt them to make a point",
+        "Stop speaking in group settings",
+        "Report them to the supervisor immediately"
       ],
-      "answer": "Tactfully invite others to share their views as well"
+      "answer": "Model good listening and gently note when others have not finished"
     },
     {
       "id": 12089,
-      "question": "A colleague gives you constructive criticism about your work. What is the most professional response? (Scenario 90)",
+      "question": "A member of the public submits the same request multiple times in frustration. What is most appropriate?",
       "options": [
-        "Thank them, consider the feedback, and apply what is useful",
-        "Defend your work and dismiss the criticism",
-        "Avoid working with them afterward",
-        "Find criticism of their work in return"
+        "Calmly confirm the request is being handled and explain the timeline",
+        "Tell them repeating it will not help",
+        "Ignore the duplicates",
+        "Process each submission separately"
       ],
-      "answer": "Thank them, consider the feedback, and apply what is useful"
+      "answer": "Calmly confirm the request is being handled and explain the timeline"
     },
     {
       "id": 12090,
-      "question": "A coworker repeatedly interrupts you during team meetings, making it hard to finish your points. What is the most effective first step? (Scenario 91)",
+      "question": "Your colleague's strong personality tends to overshadow quieter team members. What is most constructive?",
       "options": [
-        "Speak with the coworker privately and calmly explain how the interruptions affect you",
-        "Interrupt them back so they understand how it feels",
-        "Complain to your supervisor before talking to the coworker",
-        "Stop contributing in meetings to avoid the conflict"
+        "Create opportunities for quieter members to contribute",
+        "Let the dynamic continue",
+        "Tell the colleague to talk less",
+        "Speak only with the quieter members"
       ],
-      "answer": "Speak with the coworker privately and calmly explain how the interruptions affect you"
+      "answer": "Create opportunities for quieter members to contribute"
     },
     {
       "id": 12091,
-      "question": "A member of the public becomes angry while you are explaining a policy they disagree with. What is the best response? (Scenario 92)",
+      "question": "You realize a disagreement with a coworker was based on a simple misunderstanding. What is the best response?",
       "options": [
-        "Remain calm, listen to their concern, and explain the policy clearly and respectfully",
-        "Tell them the policy is not your decision and end the conversation",
-        "Match their tone so they take you seriously",
-        "Refer them elsewhere immediately to avoid the discussion"
+        "Acknowledge the misunderstanding and clear it up directly",
+        "Pretend the disagreement never happened",
+        "Wait for them to bring it up",
+        "Let it remain unresolved"
       ],
-      "answer": "Remain calm, listen to their concern, and explain the policy clearly and respectfully"
+      "answer": "Acknowledge the misunderstanding and clear it up directly"
     },
     {
       "id": 12092,
-      "question": "Your supervisor gives you feedback you believe is based on incomplete information. What should you do? (Scenario 93)",
+      "question": "A member of the public is polite but clearly does not understand your explanation. What is most effective?",
       "options": [
-        "Acknowledge the feedback and respectfully share the additional context",
-        "Disregard the feedback because it is inaccurate",
-        "Argue that your supervisor is wrong in front of the team",
-        "Say nothing and let the misunderstanding stand"
+        "Check their understanding and explain again in a different way",
+        "Assume they understood since they were polite",
+        "Hand them a document and move on",
+        "Repeat the explanation identically"
       ],
-      "answer": "Acknowledge the feedback and respectfully share the additional context"
+      "answer": "Check their understanding and explain again in a different way"
     },
     {
       "id": 12093,
-      "question": "Two coworkers on your team are in an ongoing disagreement that is slowing a shared project. You are a peer, not their supervisor. What is the most appropriate action? (Scenario 94)",
+      "question": "A teammate takes a different approach than agreed, but it works well. What is most appropriate?",
       "options": [
-        "Encourage them to focus on the shared goal and offer to help find common ground",
-        "Take sides with the coworker you agree with",
-        "Ignore it since it is not your responsibility",
-        "Report both of them to management immediately"
+        "Acknowledge the result and discuss aligning on the approach going forward",
+        "Criticize them for not following the plan",
+        "Ignore that they deviated",
+        "Insist they redo it the original way"
       ],
-      "answer": "Encourage them to focus on the shared goal and offer to help find common ground"
+      "answer": "Acknowledge the result and discuss aligning on the approach going forward"
     },
     {
       "id": 12094,
-      "question": "You are assigned to work with a colleague whose communication style is much more direct than yours, and it sometimes feels blunt. What is the best approach? (Scenario 95)",
+      "question": "During a tense meeting, you are asked your opinion but worry it will upset someone. What is the best response?",
       "options": [
-        "Recognize the difference in styles and focus on the substance of their input",
-        "Avoid working with them whenever possible",
-        "Respond bluntly in return to set a boundary",
-        "Assume they dislike you and limit communication"
+        "Share your honest view respectfully and constructively",
+        "Withhold your opinion to avoid upset",
+        "Agree with whoever seems most upset",
+        "Give a vague non-answer"
       ],
-      "answer": "Recognize the difference in styles and focus on the substance of their input"
+      "answer": "Share your honest view respectfully and constructively"
     },
     {
       "id": 12095,
-      "question": "A new employee on your team seems hesitant to ask questions and is making avoidable mistakes. What is the most helpful response? (Scenario 96)",
+      "question": "A coworker repeatedly forgets commitments they make to you. What is most effective?",
       "options": [
-        "Proactively offer support and let them know questions are welcome",
-        "Wait until they ask before offering any help",
-        "Point out the mistakes so they learn to be careful",
-        "Report the mistakes to the supervisor"
+        "Discuss the pattern and agree on a way to track shared commitments",
+        "Stop relying on them entirely",
+        "Remind them constantly with frustration",
+        "Report the forgetfulness to the supervisor"
       ],
-      "answer": "Proactively offer support and let them know questions are welcome"
+      "answer": "Discuss the pattern and agree on a way to track shared commitments"
     },
     {
       "id": 12096,
-      "question": "During a busy period, a coworker asks you to take on part of their workload, but you are already at capacity. What is the most professional response? (Scenario 97)",
+      "question": "A member of the public is grateful and offers you a small personal gift. What is most appropriate?",
       "options": [
-        "Explain your current workload honestly and discuss priorities or alternatives",
-        "Take on the work to avoid seeming uncooperative",
-        "Refuse without explanation",
-        "Agree but do the work poorly to discourage future requests"
+        "Politely decline and explain you are glad to help as part of your role",
+        "Accept it quietly",
+        "Accept it but ask them not to tell anyone",
+        "Take it and report it later"
       ],
-      "answer": "Explain your current workload honestly and discuss priorities or alternatives"
+      "answer": "Politely decline and explain you are glad to help as part of your role"
     },
     {
       "id": 12097,
-      "question": "You overhear a coworker sharing inaccurate information with a member of the public. What should you do? (Scenario 98)",
+      "question": "Your team is divided on an issue and looks to you to help them move forward. What is most constructive?",
       "options": [
-        "Politely provide the correct information without embarrassing your coworker",
-        "Correct them loudly in front of the public so the record is clear",
-        "Say nothing to avoid conflict",
-        "Wait and tell the public member they were misinformed after the coworker leaves"
+        "Summarize the points of agreement and guide toward a workable path",
+        "Pick a side to end the debate",
+        "Avoid getting involved",
+        "Suggest dropping the issue"
       ],
-      "answer": "Politely provide the correct information without embarrassing your coworker"
+      "answer": "Summarize the points of agreement and guide toward a workable path"
     },
     {
       "id": 12098,
-      "question": "A colleague takes credit for an idea you contributed during a group discussion. What is the most constructive response? (Scenario 99)",
+      "question": "A colleague gives you vague feedback like 'this could be better.' What is the best response?",
       "options": [
-        "Calmly clarify your contribution at an appropriate moment",
-        "Confront them angrily in the meeting",
-        "Let it go and avoid sharing ideas in the future",
-        "Take credit for one of their ideas later"
+        "Ask for specifics so you can understand and act on the feedback",
+        "Assume you know what they mean",
+        "Ignore it as unhelpful",
+        "Defend your work without asking questions"
       ],
-      "answer": "Calmly clarify your contribution at an appropriate moment"
+      "answer": "Ask for specifics so you can understand and act on the feedback"
     },
     {
       "id": 12099,
-      "question": "You disagree with a decision your team has made, but the group has reached consensus. What is the most appropriate action? (Scenario 100)",
+      "question": "A member of the public is upset that a service they used before is no longer offered. What is most appropriate?",
       "options": [
-        "Voice your concern once clearly, then support the team's decision",
-        "Continue to push your view until others change their minds",
-        "Quietly undermine the decision in how you carry it out",
-        "Withdraw from the project"
+        "Explain the change and help them find an alternative",
+        "Tell them there is nothing you can do",
+        "Suggest they complain to higher-ups",
+        "Avoid discussing the discontinued service"
       ],
-      "answer": "Voice your concern once clearly, then support the team's decision"
+      "answer": "Explain the change and help them find an alternative"
+    },
+    {
+      "id": 12100,
+      "question": "You notice a coworker consistently helps others but neglects their own deadlines. As a peer, what is most constructive?",
+      "options": [
+        "Encourage them to balance helping with their own responsibilities",
+        "Tell them to stop helping others",
+        "Take over their deadlines",
+        "Report the missed deadlines"
+      ],
+      "answer": "Encourage them to balance helping with their own responsibilities"
+    },
+    {
+      "id": 12101,
+      "question": "A teammate proposes taking credit jointly for work you did mostly alone. What is the best approach?",
+      "options": [
+        "Discuss a fair representation of contributions openly",
+        "Agree to avoid conflict",
+        "Refuse to share any credit",
+        "Take sole credit without discussion"
+      ],
+      "answer": "Discuss a fair representation of contributions openly"
+    },
+    {
+      "id": 12102,
+      "question": "A member of the public becomes argumentative about a factual matter where they are mistaken. What is most effective?",
+      "options": [
+        "Calmly provide accurate information and supporting details",
+        "Argue until they concede",
+        "Agree with them to end the dispute",
+        "Tell them they are wrong and move on"
+      ],
+      "answer": "Calmly provide accurate information and supporting details"
+    },
+    {
+      "id": 12103,
+      "question": "Your colleague seems discouraged after a project setback. What is the most supportive response?",
+      "options": [
+        "Acknowledge the setback and help refocus on next steps",
+        "Tell them setbacks are normal and move on",
+        "Point out what they did wrong",
+        "Avoid mentioning the project"
+      ],
+      "answer": "Acknowledge the setback and help refocus on next steps"
+    },
+    {
+      "id": 12104,
+      "question": "A coworker frequently speaks over you in shared client meetings. What is most appropriate?",
+      "options": [
+        "Discuss meeting roles beforehand so contributions are balanced",
+        "Speak louder to compete",
+        "Stop attending the meetings",
+        "Complain to the client"
+      ],
+      "answer": "Discuss meeting roles beforehand so contributions are balanced"
+    },
+    {
+      "id": 12105,
+      "question": "A member of the public asks for an update on a request that is still pending. What is the best response?",
+      "options": [
+        "Give an honest status update and a realistic timeframe",
+        "Tell them it will be done soon to reassure them",
+        "Say you have no information",
+        "Refer them elsewhere"
+      ],
+      "answer": "Give an honest status update and a realistic timeframe"
+    },
+    {
+      "id": 12106,
+      "question": "You and a colleague disagree on priorities for a shared task. What is most constructive?",
+      "options": [
+        "Discuss the reasoning behind each priority and agree on an order",
+        "Insist your priorities come first",
+        "Work on your priorities and ignore theirs",
+        "Escalate immediately to the supervisor"
+      ],
+      "answer": "Discuss the reasoning behind each priority and agree on an order"
+    },
+    {
+      "id": 12107,
+      "question": "A teammate is clearly anxious before presenting to a group. What is the most supportive response?",
+      "options": [
+        "Offer encouragement and practical help to prepare",
+        "Tell them not to be nervous",
+        "Take over the presentation",
+        "Point out everything that could go wrong"
+      ],
+      "answer": "Offer encouragement and practical help to prepare"
+    },
+    {
+      "id": 12108,
+      "question": "A member of the public makes an unreasonable demand but remains calm and polite. What is most appropriate?",
+      "options": [
+        "Politely explain why the demand cannot be met and offer alternatives",
+        "Agree to the demand to keep them calm",
+        "Tell them the demand is unreasonable",
+        "End the conversation quickly"
+      ],
+      "answer": "Politely explain why the demand cannot be met and offer alternatives"
+    },
+    {
+      "id": 12109,
+      "question": "You discover a coworker has been struggling silently with a heavy workload. What is most constructive?",
+      "options": [
+        "Offer support and encourage them to discuss workload with the supervisor",
+        "Tell them everyone is busy",
+        "Take on their work without asking",
+        "Report the workload issue without telling them"
+      ],
+      "answer": "Offer support and encourage them to discuss workload with the supervisor"
+    },
+    {
+      "id": 12110,
+      "question": "A colleague responds defensively whenever you offer suggestions. What is the best approach?",
+      "options": [
+        "Frame suggestions collaboratively and emphasize shared goals",
+        "Stop offering suggestions",
+        "Push your suggestions more forcefully",
+        "Only suggest changes through the supervisor"
+      ],
+      "answer": "Frame suggestions collaboratively and emphasize shared goals"
+    },
+    {
+      "id": 12111,
+      "question": "A member of the public is satisfied but mentions the wait was long. What is most appropriate?",
+      "options": [
+        "Acknowledge the wait, apologize for it, and note the feedback",
+        "Tell them waits are unavoidable",
+        "Ignore the comment",
+        "Blame staffing for the delay"
+      ],
+      "answer": "Acknowledge the wait, apologize for it, and note the feedback"
+    },
+    {
+      "id": 12112,
+      "question": "Your team's morale is low after a difficult period. As a peer, what is most constructive?",
+      "options": [
+        "Support colleagues and contribute to a positive, forward-looking tone",
+        "Wait for management to fix morale",
+        "Vent your own frustrations to the team",
+        "Keep to yourself until things improve"
+      ],
+      "answer": "Support colleagues and contribute to a positive, forward-looking tone"
+    },
+    {
+      "id": 12113,
+      "question": "A coworker asks for honest feedback but seems to want only praise. What is the best response?",
+      "options": [
+        "Give balanced, genuine feedback that is both supportive and useful",
+        "Give only praise to please them",
+        "Give only criticism to be honest",
+        "Decline to give feedback"
+      ],
+      "answer": "Give balanced, genuine feedback that is both supportive and useful"
+    },
+    {
+      "id": 12114,
+      "question": "A member of the public is hesitant to share information they think is embarrassing. What is most appropriate?",
+      "options": [
+        "Reassure them about confidentiality and explain why the information is needed",
+        "Pressure them to disclose quickly",
+        "Skip the information and proceed",
+        "Tell them others share more readily"
+      ],
+      "answer": "Reassure them about confidentiality and explain why the information is needed"
+    },
+    {
+      "id": 12115,
+      "question": "Two teammates keep redoing each other's work due to unclear ownership. What is most constructive?",
+      "options": [
+        "Help clarify roles and responsibilities to avoid overlap",
+        "Let them sort it out themselves",
+        "Take over both tasks",
+        "Report the inefficiency to the supervisor"
+      ],
+      "answer": "Help clarify roles and responsibilities to avoid overlap"
+    },
+    {
+      "id": 12116,
+      "question": "A colleague frequently apologizes excessively for minor things. What is the most supportive response?",
+      "options": [
+        "Reassure them and focus on their valuable contributions",
+        "Tell them to stop apologizing",
+        "Ignore the behavior",
+        "Point it out in front of others"
+      ],
+      "answer": "Reassure them and focus on their valuable contributions"
+    },
+    {
+      "id": 12117,
+      "question": "A member of the public misunderstands a deadline and arrives a day late. What is most appropriate?",
+      "options": [
+        "Explain the situation clearly and any options that may remain",
+        "Tell them they should have read more carefully",
+        "Make an exception against policy",
+        "Send them away without explanation"
+      ],
+      "answer": "Explain the situation clearly and any options that may remain"
+    },
+    {
+      "id": 12118,
+      "question": "Your colleague is reluctant to delegate and becomes overloaded. As a peer, what is most constructive?",
+      "options": [
+        "Offer to take on tasks and encourage shared responsibility",
+        "Let them stay overloaded",
+        "Take tasks without asking",
+        "Tell the supervisor they cannot delegate"
+      ],
+      "answer": "Offer to take on tasks and encourage shared responsibility"
+    },
+    {
+      "id": 12119,
+      "question": "A teammate gives feedback in a harsh tone but the content is valid. What is the best response?",
+      "options": [
+        "Focus on the useful content and address the tone separately if needed",
+        "Reject the feedback because of the tone",
+        "Respond with an equally harsh tone",
+        "Avoid them going forward"
+      ],
+      "answer": "Focus on the useful content and address the tone separately if needed"
+    },
+    {
+      "id": 12120,
+      "question": "A member of the public asks why a process takes so long. What is most appropriate?",
+      "options": [
+        "Explain the steps involved and the reasons behind them",
+        "Tell them it just does",
+        "Apologize without explaining",
+        "Suggest they take it up with management"
+      ],
+      "answer": "Explain the steps involved and the reasons behind them"
+    },
+    {
+      "id": 12121,
+      "question": "You are asked to give input on a peer's performance for a review. What is most appropriate?",
+      "options": [
+        "Provide fair, specific, and balanced observations",
+        "Give only positive comments",
+        "Focus only on weaknesses",
+        "Decline to participate"
+      ],
+      "answer": "Provide fair, specific, and balanced observations"
+    },
+    {
+      "id": 12122,
+      "question": "A colleague consistently arrives unprepared to your joint meetings. What is most effective?",
+      "options": [
+        "Agree on what each person will prepare in advance",
+        "Prepare everything yourself",
+        "Cancel the meetings",
+        "Complain to the supervisor"
+      ],
+      "answer": "Agree on what each person will prepare in advance"
+    },
+    {
+      "id": 12123,
+      "question": "A member of the public is courteous but is taking far longer than scheduled. What is most appropriate?",
+      "options": [
+        "Politely note time constraints while ensuring their key needs are met",
+        "Cut them off abruptly",
+        "Let the schedule fall behind",
+        "Rush them without explanation"
+      ],
+      "answer": "Politely note time constraints while ensuring their key needs are met"
+    },
+    {
+      "id": 12124,
+      "question": "Your teammate seems hurt by feedback you gave, though it was necessary. What is the best response?",
+      "options": [
+        "Acknowledge their feelings and reaffirm your supportive intent",
+        "Tell them feedback is just business",
+        "Avoid giving feedback in the future",
+        "Apologize for giving the feedback at all"
+      ],
+      "answer": "Acknowledge their feelings and reaffirm your supportive intent"
+    },
+    {
+      "id": 12125,
+      "question": "A colleague keeps relitigating a decision the team already made. What is most constructive?",
+      "options": [
+        "Acknowledge their view and refocus the team on moving forward",
+        "Argue the decision again each time",
+        "Ignore them completely",
+        "Report them for being difficult"
+      ],
+      "answer": "Acknowledge their view and refocus the team on moving forward"
+    },
+    {
+      "id": 12126,
+      "question": "A member of the public seems distrustful of the information you provide. What is the best response?",
+      "options": [
+        "Patiently provide accurate information and supporting references",
+        "Insist they trust you",
+        "Become defensive",
+        "Refer them elsewhere"
+      ],
+      "answer": "Patiently provide accurate information and supporting references"
+    },
+    {
+      "id": 12127,
+      "question": "You notice a teammate doing a task in a way that risks an error. What is most appropriate?",
+      "options": [
+        "Tactfully point out the risk and suggest a safer approach",
+        "Let them make the error",
+        "Take over the task",
+        "Report the risky method to the supervisor"
+      ],
+      "answer": "Tactfully point out the risk and suggest a safer approach"
+    },
+    {
+      "id": 12128,
+      "question": "A colleague frequently changes their mind, making coordination difficult. What is most effective?",
+      "options": [
+        "Confirm decisions in writing and revisit only when truly needed",
+        "Stop coordinating with them",
+        "Make decisions for them",
+        "Express frustration each time they change"
+      ],
+      "answer": "Confirm decisions in writing and revisit only when truly needed"
+    },
+    {
+      "id": 12129,
+      "question": "A member of the public requests something you suspect is not in their best interest. What is most appropriate?",
+      "options": [
+        "Provide accurate information so they can make an informed choice",
+        "Refuse the request outright",
+        "Decide for them",
+        "Process it without comment"
+      ],
+      "answer": "Provide accurate information so they can make an informed choice"
+    },
+    {
+      "id": 12130,
+      "question": "Your team includes someone who works very differently from everyone else. What is most constructive?",
+      "options": [
+        "Appreciate the diversity of approaches and find ways to integrate them",
+        "Pressure them to conform",
+        "Exclude them from key tasks",
+        "Work around them entirely"
+      ],
+      "answer": "Appreciate the diversity of approaches and find ways to integrate them"
+    },
+    {
+      "id": 12131,
+      "question": "A coworker repeatedly seeks reassurance about their work. As a peer, what is most supportive?",
+      "options": [
+        "Offer genuine encouragement and help build their confidence",
+        "Tell them to stop seeking reassurance",
+        "Provide constant reassurance without substance",
+        "Ignore their requests"
+      ],
+      "answer": "Offer genuine encouragement and help build their confidence"
+    },
+    {
+      "id": 12132,
+      "question": "A member of the public becomes upset when told they do not qualify for a service. What is most appropriate?",
+      "options": [
+        "Explain the criteria clearly and point to any alternatives",
+        "Tell them the rules are not your concern",
+        "Apologize repeatedly without information",
+        "End the conversation quickly"
+      ],
+      "answer": "Explain the criteria clearly and point to any alternatives"
+    },
+    {
+      "id": 12133,
+      "question": "You and a colleague have very different working hours, complicating coordination. What is most effective?",
+      "options": [
+        "Find overlapping times and use clear asynchronous updates",
+        "Insist they match your hours",
+        "Avoid working together",
+        "Coordinate only through the supervisor"
+      ],
+      "answer": "Find overlapping times and use clear asynchronous updates"
+    },
+    {
+      "id": 12134,
+      "question": "A teammate shares an idea that builds on yours without crediting you. What is the best approach?",
+      "options": [
+        "Acknowledge the shared development positively and note the connection",
+        "Demand credit immediately",
+        "Dismiss their addition",
+        "Stop sharing ideas"
+      ],
+      "answer": "Acknowledge the shared development positively and note the connection"
+    },
+    {
+      "id": 12135,
+      "question": "A member of the public is confused about which form to submit. What is most appropriate?",
+      "options": [
+        "Help identify the correct form and explain how to complete it",
+        "Hand them all the forms",
+        "Tell them to ask someone else",
+        "Guess and hope it is right"
+      ],
+      "answer": "Help identify the correct form and explain how to complete it"
+    },
+    {
+      "id": 12136,
+      "question": "Your colleague tends to dominate shared documents with their own edits. What is most constructive?",
+      "options": [
+        "Agree on an editing process that respects everyone's input",
+        "Stop contributing to shared documents",
+        "Revert their edits silently",
+        "Complain about them to the team"
+      ],
+      "answer": "Agree on an editing process that respects everyone's input"
+    },
+    {
+      "id": 12137,
+      "question": "A coworker is visibly frustrated with a recurring technical problem. What is the most supportive response?",
+      "options": [
+        "Offer to help troubleshoot or find the right support together",
+        "Tell them to be patient",
+        "Ignore the frustration",
+        "Suggest they should already know how to fix it"
+      ],
+      "answer": "Offer to help troubleshoot or find the right support together"
+    },
+    {
+      "id": 12138,
+      "question": "A member of the public gives feedback that contradicts your office's data. What is most appropriate?",
+      "options": [
+        "Listen respectfully, note the feedback, and verify the discrepancy",
+        "Tell them the data is correct",
+        "Dismiss their feedback",
+        "Agree with them without checking"
+      ],
+      "answer": "Listen respectfully, note the feedback, and verify the discrepancy"
+    },
+    {
+      "id": 12139,
+      "question": "You are working with a team that has a history of conflict you were not part of. What is most constructive?",
+      "options": [
+        "Stay neutral, build trust, and focus on the current work",
+        "Take sides based on what you have heard",
+        "Avoid engaging with the team",
+        "Bring up the old conflicts"
+      ],
+      "answer": "Stay neutral, build trust, and focus on the current work"
+    },
+    {
+      "id": 12140,
+      "question": "A colleague consistently downplays problems that need attention. What is most effective?",
+      "options": [
+        "Raise the issues constructively with facts and proposed solutions",
+        "Match their dismissiveness",
+        "Escalate every issue immediately",
+        "Stop pointing out problems"
+      ],
+      "answer": "Raise the issues constructively with facts and proposed solutions"
+    },
+    {
+      "id": 12141,
+      "question": "A member of the public is grateful and wants to write a thank-you note to your manager. What is appropriate?",
+      "options": [
+        "Provide the proper contact and thank them for the kind gesture",
+        "Tell them it is unnecessary",
+        "Ask them to mention you specifically",
+        "Decline on your manager's behalf"
+      ],
+      "answer": "Provide the proper contact and thank them for the kind gesture"
+    },
+    {
+      "id": 12142,
+      "question": "Your teammate frequently volunteers you for tasks without asking first. What is most appropriate?",
+      "options": [
+        "Discuss the pattern and ask to be consulted before being volunteered",
+        "Do the tasks resentfully",
+        "Refuse all such tasks",
+        "Volunteer them in return"
+      ],
+      "answer": "Discuss the pattern and ask to be consulted before being volunteered"
+    },
+    {
+      "id": 12143,
+      "question": "A colleague is excited about an idea you think has a flaw. What is the best response?",
+      "options": [
+        "Affirm their enthusiasm and raise the concern constructively",
+        "Crush the idea immediately",
+        "Stay silent about the flaw",
+        "Pretend to agree fully"
+      ],
+      "answer": "Affirm their enthusiasm and raise the concern constructively"
+    },
+    {
+      "id": 12144,
+      "question": "A member of the public repeatedly contacts you about an issue already escalated. What is most appropriate?",
+      "options": [
+        "Confirm it is being handled and explain who is now responsible",
+        "Tell them to stop contacting you",
+        "Re-explain everything each time",
+        "Ignore the repeated contacts"
+      ],
+      "answer": "Confirm it is being handled and explain who is now responsible"
+    },
+    {
+      "id": 12145,
+      "question": "Your team must give difficult feedback to a vendor. What is the best approach?",
+      "options": [
+        "Communicate the concerns clearly, professionally, and with specifics",
+        "Avoid raising the concerns",
+        "Be harsh to make the point",
+        "Have only one person vaguely complain"
+      ],
+      "answer": "Communicate the concerns clearly, professionally, and with specifics"
+    },
+    {
+      "id": 12146,
+      "question": "A colleague seems to take your professional disagreements personally. What is most constructive?",
+      "options": [
+        "Reinforce that disagreements are about ideas, not the person",
+        "Stop disagreeing with them",
+        "Avoid all difficult topics",
+        "Tell them to be less sensitive"
+      ],
+      "answer": "Reinforce that disagreements are about ideas, not the person"
+    },
+    {
+      "id": 12147,
+      "question": "A member of the public is overwhelmed by a complex process. What is most appropriate?",
+      "options": [
+        "Break the process into clear, manageable steps for them",
+        "Tell them it is complicated for everyone",
+        "Hand them instructions and move on",
+        "Complete it for them without explanation"
+      ],
+      "answer": "Break the process into clear, manageable steps for them"
+    },
+    {
+      "id": 12148,
+      "question": "You notice you and a coworker keep miscommunicating over chat. What is most effective?",
+      "options": [
+        "Switch to a quick call or meeting to clarify and rebuild understanding",
+        "Keep using chat and hope it improves",
+        "Stop communicating with them",
+        "Blame them for the confusion"
+      ],
+      "answer": "Switch to a quick call or meeting to clarify and rebuild understanding"
+    },
+    {
+      "id": 12149,
+      "question": "A teammate is reluctant to share their work until it is perfect, causing delays. What is most constructive?",
+      "options": [
+        "Encourage sharing drafts early to get feedback and stay on schedule",
+        "Tell them perfection is impossible",
+        "Set the deadline earlier without explanation",
+        "Do the work yourself"
+      ],
+      "answer": "Encourage sharing drafts early to get feedback and stay on schedule"
+    },
+    {
+      "id": 12150,
+      "question": "A member of the public asks a question you do not know the answer to. What is most appropriate?",
+      "options": [
+        "Acknowledge you are not certain and find the correct answer for them",
+        "Make up a plausible answer",
+        "Tell them to find out themselves",
+        "Give a vague non-answer"
+      ],
+      "answer": "Acknowledge you are not certain and find the correct answer for them"
+    },
+    {
+      "id": 12151,
+      "question": "Your colleague becomes territorial about shared responsibilities. What is most constructive?",
+      "options": [
+        "Clarify boundaries collaboratively while emphasizing shared goals",
+        "Give up your part of the work",
+        "Compete for control",
+        "Report them to the supervisor"
+      ],
+      "answer": "Clarify boundaries collaboratively while emphasizing shared goals"
+    },
+    {
+      "id": 12152,
+      "question": "A teammate frequently misses your shared deadlines but is otherwise excellent. What is most effective?",
+      "options": [
+        "Address the deadline issue specifically while recognizing their strengths",
+        "Focus only on the missed deadlines",
+        "Ignore the deadlines because they are talented",
+        "Replace them on the project"
+      ],
+      "answer": "Address the deadline issue specifically while recognizing their strengths"
+    },
+    {
+      "id": 12153,
+      "question": "A member of the public is satisfied but you notice they misunderstood a key point. What is most appropriate?",
+      "options": [
+        "Clarify the point so they leave with accurate information",
+        "Let them leave satisfied",
+        "Mention it only if they ask",
+        "Assume they will figure it out"
+      ],
+      "answer": "Clarify the point so they leave with accurate information"
+    },
+    {
+      "id": 12154,
+      "question": "You are asked to work closely with someone known for being difficult. What is the best approach?",
+      "options": [
+        "Approach them with an open mind and focus on professional collaboration",
+        "Assume the worst and stay guarded",
+        "Avoid the assignment",
+        "Document every interaction defensively"
+      ],
+      "answer": "Approach them with an open mind and focus on professional collaboration"
+    },
+    {
+      "id": 12155,
+      "question": "A colleague shares credit generously, even when you did most of the work. What is most appropriate?",
+      "options": [
+        "Appreciate their generosity and ensure contributions are fairly noted",
+        "Insist on taking all the credit",
+        "Stay silent about the imbalance",
+        "Downplay your own contribution entirely"
+      ],
+      "answer": "Appreciate their generosity and ensure contributions are fairly noted"
+    },
+    {
+      "id": 12156,
+      "question": "A member of the public is upset about a decision and asks who they can appeal to. What is most appropriate?",
+      "options": [
+        "Provide accurate information about the appeals process",
+        "Tell them appeals never succeed",
+        "Discourage them from appealing",
+        "Refuse to give the information"
+      ],
+      "answer": "Provide accurate information about the appeals process"
+    },
+    {
+      "id": 12157,
+      "question": "Your teammate frequently works through breaks and seems burned out. As a peer, what is most supportive?",
+      "options": [
+        "Express concern and encourage them to take needed breaks",
+        "Tell them to work less",
+        "Ignore it as their choice",
+        "Report them for overworking"
+      ],
+      "answer": "Express concern and encourage them to take needed breaks"
+    },
+    {
+      "id": 12158,
+      "question": "A colleague gives you a task with no deadline, then asks why it is not done. What is most appropriate?",
+      "options": [
+        "Clarify the expected timeline and agree on priorities going forward",
+        "Blame them for not setting a deadline",
+        "Drop everything to do it immediately",
+        "Ignore the request"
+      ],
+      "answer": "Clarify the expected timeline and agree on priorities going forward"
+    },
+    {
+      "id": 12159,
+      "question": "A member of the public becomes friendly and starts asking personal questions. What is most appropriate?",
+      "options": [
+        "Stay warm but redirect the conversation to their request professionally",
+        "Share personal details to be polite",
+        "Tell them the questions are inappropriate",
+        "End the interaction abruptly"
+      ],
+      "answer": "Stay warm but redirect the conversation to their request professionally"
+    },
+    {
+      "id": 12160,
+      "question": "Your team disagrees about who should present shared work to leadership. What is most constructive?",
+      "options": [
+        "Propose a fair approach such as co-presenting or rotating",
+        "Insist on presenting yourself",
+        "Let the most senior person decide alone",
+        "Avoid the presentation"
+      ],
+      "answer": "Propose a fair approach such as co-presenting or rotating"
+    },
+    {
+      "id": 12161,
+      "question": "A colleague consistently replies only to part of your messages. What is most effective?",
+      "options": [
+        "Summarize key points or number questions to make replies easier",
+        "Send more messages",
+        "Stop messaging them",
+        "Complain about incomplete replies"
+      ],
+      "answer": "Summarize key points or number questions to make replies easier"
+    },
+    {
+      "id": 12162,
+      "question": "A member of the public mistakenly believes you made an error. What is the best response?",
+      "options": [
+        "Calmly review the facts together and clarify what happened",
+        "Insist you did nothing wrong",
+        "Apologize for an error you did not make",
+        "Dismiss their concern"
+      ],
+      "answer": "Calmly review the facts together and clarify what happened"
+    },
+    {
+      "id": 12163,
+      "question": "Your teammate is anxious about a change in team structure. What is the most supportive response?",
+      "options": [
+        "Listen to their concerns and share what information you have",
+        "Tell them not to worry",
+        "Avoid the topic",
+        "Speculate about worst-case outcomes"
+      ],
+      "answer": "Listen to their concerns and share what information you have"
+    },
+    {
+      "id": 12164,
+      "question": "A colleague frequently cc's large groups on minor issues. What is most appropriate?",
+      "options": [
+        "Suggest more targeted communication to reduce unnecessary noise",
+        "Reply-all to everything in return",
+        "Ignore all group emails",
+        "Report the behavior"
+      ],
+      "answer": "Suggest more targeted communication to reduce unnecessary noise"
+    },
+    {
+      "id": 12165,
+      "question": "A member of the public asks you to advocate for them beyond your role. What is most appropriate?",
+      "options": [
+        "Explain your role honestly and direct them to appropriate advocacy resources",
+        "Promise to advocate for them",
+        "Refuse without explanation",
+        "Pretend to help"
+      ],
+      "answer": "Explain your role honestly and direct them to appropriate advocacy resources"
+    },
+    {
+      "id": 12166,
+      "question": "Your team has a recurring meeting that often runs over and loses focus. What is most constructive?",
+      "options": [
+        "Suggest a clear agenda and timekeeping to improve the meetings",
+        "Stop attending",
+        "Endure it silently",
+        "Complain about the meetings to others"
+      ],
+      "answer": "Suggest a clear agenda and timekeeping to improve the meetings"
+    },
+    {
+      "id": 12167,
+      "question": "A colleague misinterprets your tone in a written message as cold. What is the best response?",
+      "options": [
+        "Clarify your intent and adjust your communication style",
+        "Tell them they misread it",
+        "Stop writing to them",
+        "Become defensive"
+      ],
+      "answer": "Clarify your intent and adjust your communication style"
+    },
+    {
+      "id": 12168,
+      "question": "A member of the public is patient but clearly inconvenienced by a system outage. What is most appropriate?",
+      "options": [
+        "Apologize, explain the situation, and offer alternatives or a timeframe",
+        "Tell them outages happen",
+        "Pretend the system is working",
+        "Ask them to come back later without details"
+      ],
+      "answer": "Apologize, explain the situation, and offer alternatives or a timeframe"
+    },
+    {
+      "id": 12169,
+      "question": "You receive credit for a team effort in front of leadership. What is most appropriate?",
+      "options": [
+        "Acknowledge the team's contributions along with your own",
+        "Accept all the credit silently",
+        "Downplay the whole effort",
+        "Redirect all credit away from yourself"
+      ],
+      "answer": "Acknowledge the team's contributions along with your own"
+    },
+    {
+      "id": 12170,
+      "question": "A teammate frequently asks 'quick questions' that interrupt your focused work. What is most effective?",
+      "options": [
+        "Set up a regular time to address questions while protecting focus time",
+        "Stop helping them",
+        "Answer instantly every time",
+        "Tell them to figure it out alone"
+      ],
+      "answer": "Set up a regular time to address questions while protecting focus time"
+    },
+    {
+      "id": 12171,
+      "question": "A member of the public seems intimidated by the office environment. What is most appropriate?",
+      "options": [
+        "Be welcoming and reassuring to put them at ease",
+        "Proceed quickly to save time",
+        "Tell them there is nothing to worry about and move on",
+        "Ignore their discomfort"
+      ],
+      "answer": "Be welcoming and reassuring to put them at ease"
+    },
+    {
+      "id": 12172,
+      "question": "Your colleague proposes splitting a task in a way that gives you the harder half. What is most constructive?",
+      "options": [
+        "Discuss a fair division based on workload and skills",
+        "Accept it without comment",
+        "Refuse to split the task",
+        "Give them the harder half in return"
+      ],
+      "answer": "Discuss a fair division based on workload and skills"
+    },
+    {
+      "id": 12173,
+      "question": "A teammate becomes quiet and withdrawn after a disagreement with you. What is the best approach?",
+      "options": [
+        "Check in with them and work to repair the working relationship",
+        "Wait for them to get over it",
+        "Avoid them",
+        "Act as if nothing happened"
+      ],
+      "answer": "Check in with them and work to repair the working relationship"
+    },
+    {
+      "id": 12174,
+      "question": "A member of the public provides praise for a colleague who is not present. What is most appropriate?",
+      "options": [
+        "Thank them and ensure the praise reaches the colleague",
+        "Keep the praise to yourself",
+        "Take partial credit",
+        "Tell them to email it instead"
+      ],
+      "answer": "Thank them and ensure the praise reaches the colleague"
+    },
+    {
+      "id": 12175,
+      "question": "Your team is asked to adopt a process you personally dislike. What is most constructive?",
+      "options": [
+        "Give it a fair try and provide constructive feedback based on experience",
+        "Refuse to use it",
+        "Use it incorrectly to prove a point",
+        "Complain without trying it"
+      ],
+      "answer": "Give it a fair try and provide constructive feedback based on experience"
+    },
+    {
+      "id": 12176,
+      "question": "A colleague frequently speaks for the group without checking with members first. What is most appropriate?",
+      "options": [
+        "Encourage confirming the group's view before representing it",
+        "Let them continue",
+        "Contradict them publicly",
+        "Stop attending group discussions"
+      ],
+      "answer": "Encourage confirming the group's view before representing it"
+    },
+    {
+      "id": 12177,
+      "question": "A member of the public is calm but persistent about an exception you cannot grant. What is most appropriate?",
+      "options": [
+        "Respectfully hold the line and clearly explain the limits",
+        "Eventually grant the exception",
+        "Become curt to end the request",
+        "Refer them away repeatedly"
+      ],
+      "answer": "Respectfully hold the line and clearly explain the limits"
+    },
+    {
+      "id": 12178,
+      "question": "Your teammate's strong opinions sometimes shut down discussion. What is most constructive?",
+      "options": [
+        "Invite alternative views and frame discussion as collaborative",
+        "Avoid disagreeing with them",
+        "Let discussions end early",
+        "Argue forcefully against them"
+      ],
+      "answer": "Invite alternative views and frame discussion as collaborative"
+    },
+    {
+      "id": 12179,
+      "question": "A colleague asks you to review something far outside your expertise. What is most appropriate?",
+      "options": [
+        "Be honest about your limits and suggest a better reviewer",
+        "Review it superficially anyway",
+        "Decline without explanation",
+        "Pretend to be an expert"
+      ],
+      "answer": "Be honest about your limits and suggest a better reviewer"
+    },
+    {
+      "id": 12180,
+      "question": "A member of the public is upset that staff gave them conflicting information earlier. What is most appropriate?",
+      "options": [
+        "Apologize for the confusion and provide clear, correct information",
+        "Blame the other staff member",
+        "Insist the earlier information was correct",
+        "Avoid addressing the contradiction"
+      ],
+      "answer": "Apologize for the confusion and provide clear, correct information"
+    },
+    {
+      "id": 12181,
+      "question": "Your team is celebrating a success, but one member's contribution went unnoticed. What is most constructive?",
+      "options": [
+        "Highlight their contribution so it is recognized",
+        "Assume they do not mind",
+        "Let the oversight stand",
+        "Mention it only privately to them"
+      ],
+      "answer": "Highlight their contribution so it is recognized"
+    },
+    {
+      "id": 12182,
+      "question": "A colleague frequently reopens settled discussions in writing after meetings. What is most effective?",
+      "options": [
+        "Refer back to documented decisions and clarify the path forward",
+        "Re-debate each point",
+        "Ignore their messages",
+        "Escalate immediately"
+      ],
+      "answer": "Refer back to documented decisions and clarify the path forward"
+    },
+    {
+      "id": 12183,
+      "question": "A member of the public seems embarrassed about needing help with basic steps. What is most appropriate?",
+      "options": [
+        "Assist patiently and without judgment",
+        "Rush them through",
+        "Point out how simple it is",
+        "Hand them instructions and leave"
+      ],
+      "answer": "Assist patiently and without judgment"
+    },
+    {
+      "id": 12184,
+      "question": "Your teammate takes a comment you made as criticism when you meant it neutrally. What is the best response?",
+      "options": [
+        "Clarify your intent and check how they would prefer such input",
+        "Insist they overreacted",
+        "Stop giving any input",
+        "Apologize excessively and avoid the topic"
+      ],
+      "answer": "Clarify your intent and check how they would prefer such input"
+    },
+    {
+      "id": 12185,
+      "question": "A colleague consistently does excellent work but never speaks up about it. What is most constructive?",
+      "options": [
+        "Recognize their work and encourage them to share their successes",
+        "Take credit for their quiet work",
+        "Assume they prefer no recognition",
+        "Tell them to promote themselves more"
+      ],
+      "answer": "Recognize their work and encourage them to share their successes"
+    },
+    {
+      "id": 12186,
+      "question": "A member of the public asks for help that would require bending a safety rule. What is most appropriate?",
+      "options": [
+        "Explain the safety reason and offer a compliant alternative",
+        "Bend the rule to help them",
+        "Refuse abruptly",
+        "Tell them the rule is silly"
+      ],
+      "answer": "Explain the safety reason and offer a compliant alternative"
+    },
+    {
+      "id": 12187,
+      "question": "Your team is short-staffed and tensions are rising over workload. What is most constructive?",
+      "options": [
+        "Support fair workload sharing and raise staffing concerns appropriately",
+        "Focus only on your own tasks",
+        "Complain loudly about the shortage",
+        "Take on everything yourself"
+      ],
+      "answer": "Support fair workload sharing and raise staffing concerns appropriately"
+    },
+    {
+      "id": 12188,
+      "question": "A colleague gives you feedback you disagree with but cannot immediately refute. What is the best response?",
+      "options": [
+        "Thank them, reflect on it, and follow up after considering it",
+        "Reject it on the spot",
+        "Pretend to agree",
+        "Argue without having thought it through"
+      ],
+      "answer": "Thank them, reflect on it, and follow up after considering it"
+    },
+    {
+      "id": 12189,
+      "question": "A member of the public is frustrated that they must provide the same information again. What is most appropriate?",
+      "options": [
+        "Apologize for the inconvenience and explain why it is needed",
+        "Tell them rules are rules",
+        "Skip the requirement",
+        "Blame the system without explanation"
+      ],
+      "answer": "Apologize for the inconvenience and explain why it is needed"
+    },
+    {
+      "id": 12190,
+      "question": "Your teammate seems left out of an informal group within the team. What is most constructive?",
+      "options": [
+        "Make an effort to include them in conversations and activities",
+        "Assume they prefer being alone",
+        "Point out the exclusion publicly",
+        "Stay out of it entirely"
+      ],
+      "answer": "Make an effort to include them in conversations and activities"
+    },
+    {
+      "id": 12191,
+      "question": "A colleague keeps deferring decisions to you that they should make. What is most effective?",
+      "options": [
+        "Encourage and support them in making their own decisions",
+        "Make all the decisions for them",
+        "Refuse to help at all",
+        "Tell them they are incapable"
+      ],
+      "answer": "Encourage and support them in making their own decisions"
+    },
+    {
+      "id": 12192,
+      "question": "A member of the public is upset and starts to use mildly inappropriate language. What is most appropriate?",
+      "options": [
+        "Stay calm, set a respectful tone, and continue to assist them",
+        "Match their language",
+        "Refuse to help until they apologize",
+        "End the interaction immediately"
+      ],
+      "answer": "Stay calm, set a respectful tone, and continue to assist them"
+    },
+    {
+      "id": 12193,
+      "question": "Your team is asked to provide honest feedback on a leader's proposal. What is most constructive?",
+      "options": [
+        "Offer candid, respectful feedback focused on improving the proposal",
+        "Tell the leader only what they want to hear",
+        "Stay silent",
+        "Criticize harshly to seem rigorous"
+      ],
+      "answer": "Offer candid, respectful feedback focused on improving the proposal"
+    },
+    {
+      "id": 12194,
+      "question": "A colleague frequently second-guesses decisions after they are made. What is most effective?",
+      "options": [
+        "Encourage raising concerns during decision-making rather than after",
+        "Ignore their input",
+        "Re-decide each time",
+        "Exclude them from decisions"
+      ],
+      "answer": "Encourage raising concerns during decision-making rather than after"
+    },
+    {
+      "id": 12195,
+      "question": "A member of the public thanks you and asks how their feedback can help improve services. What is most appropriate?",
+      "options": [
+        "Explain the proper feedback channels and encourage their input",
+        "Tell them feedback rarely matters",
+        "Take the feedback informally and forget it",
+        "Discourage them from bothering"
+      ],
+      "answer": "Explain the proper feedback channels and encourage their input"
+    },
+    {
+      "id": 12196,
+      "question": "Your teammate is overwhelmed and snaps at you, then immediately looks regretful. What is the best response?",
+      "options": [
+        "Respond with understanding and offer to help with the workload",
+        "Snap back",
+        "Hold it against them",
+        "Report the outburst"
+      ],
+      "answer": "Respond with understanding and offer to help with the workload"
+    },
+    {
+      "id": 12197,
+      "question": "A colleague consistently brings solutions along with problems they raise. How should you respond over time?",
+      "options": [
+        "Recognize and encourage this constructive habit",
+        "Take their solutions without acknowledgment",
+        "Ignore the pattern",
+        "Tell them to just report problems"
+      ],
+      "answer": "Recognize and encourage this constructive habit"
+    },
+    {
+      "id": 12198,
+      "question": "A member of the public asks a sensitive question in a crowded area. What is most appropriate?",
+      "options": [
+        "Offer a more private setting to discuss it respectfully",
+        "Answer loudly to be efficient",
+        "Tell them it is not private",
+        "Refuse to discuss it"
+      ],
+      "answer": "Offer a more private setting to discuss it respectfully"
+    },
+    {
+      "id": 12199,
+      "question": "Your team disagrees on terminology in a shared document, causing edit conflicts. What is most constructive?",
+      "options": [
+        "Agree on a shared glossary or convention for the document",
+        "Use your own terms",
+        "Let everyone use different terms",
+        "Stop editing the document"
+      ],
+      "answer": "Agree on a shared glossary or convention for the document"
     }
   ]
 }
