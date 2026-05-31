@@ -1036,7 +1036,7 @@
       <div class="logo">🗽</div>
       <h1 class="title">NYS Civil Service Study Guide</h1>
       <p class="subtitle">
-        A unified study system for New York State ITS-3, ITS-4, MITS-1, MITS-2, and BSA-2 exams,
+        A unified study system for New York State ITS-3, ITS-4, MITS-1, MITS-2, BSA-2, and Architect 2 exams,
         featuring targeted practice questions and coverage of all core test competencies.
       </p>
     </header>
@@ -1080,6 +1080,7 @@
         <button class="filter-btn" data-exam="mits1">🏛️ Manager Information Technology Services 1 Exam</button>
         <button class="filter-btn" data-exam="mits2">🏛️ Manager Information Technology Services 2 Exam</button>
         <button class="filter-btn" data-exam="bsa2">📋 Business Systems Analyst 2 Exam</button>
+        <button class="filter-btn" data-exam="arch2">📐 Architect 2 Exam</button>
       </div>
 
       <!-- Parts Selection (Level 2) - Hidden by default -->
@@ -1368,7 +1369,9 @@
       part7: BASE_URL + "part7.json",
       part9: BASE_URL + "part9.json",
       part10: BASE_URL + "part10.json",
-      part11: BASE_URL + "part11.json"
+      part11: BASE_URL + "part11.json",
+      part12: BASE_URL + "part12.json",
+      part13: BASE_URL + "part13.json"
     };
 
     /* --------------------------------------------- */
@@ -1432,6 +1435,13 @@
         { part: 'part10', title: 'Part 10 – Project Management Fundamentals' },
         { part: 'part6', title: 'Part 6 – Preparing Written Material' },
         { part: 'part11', title: 'Part 11 – Facilitating Communications' }
+      ],
+      arch2: [
+        { part: 'part5', title: 'Part 5 – Analyzing & Evaluating Information' },
+        { part: 'part12', title: 'Part 12 – Working & Interacting with Others' },
+        { part: 'part13', title: 'Part 13 – Understanding & Interpreting Written Material' },
+        { part: 'part6', title: 'Part 6 – Preparing Reports & Official Documents' },
+        { part: 'part7', title: 'Part 7 – Supervision' }
       ]
     };
 
@@ -1542,7 +1552,8 @@
         its4: 'All ITS-4 Parts',
         mits1: 'All MITS-1 Parts',
         mits2: 'All MITS-2 Parts',
-        bsa2: 'All BSA-2 Parts'
+        bsa2: 'All BSA-2 Parts',
+        arch2: 'All Architect 2 Parts'
       };
 
       // Add "All Parts" option for the selected exam
@@ -2063,6 +2074,11 @@
         return parsePassageBasedQuestions(jsonData.preparing_reports_and_official_documents, partName);
       }
 
+      // Handle passage-based reading comprehension (Part 13)
+      if (jsonData.understanding_and_interpreting_written_material) {
+        return parsePassageBasedQuestions(jsonData.understanding_and_interpreting_written_material, partName);
+      }
+
       // Handle standard question formats
       const arr = jsonData.systems_analysis_and_design_questions ||
         jsonData.questions ||
@@ -2075,6 +2091,7 @@
         jsonData.business_analysis_babok_questions ||
         jsonData.project_management_fundamentals_questions ||
         jsonData.facilitating_communications_questions ||
+        jsonData.working_and_interacting_with_others ||
         jsonData;
 
       if (!Array.isArray(arr)) return [];
@@ -2543,7 +2560,9 @@ Thank you!
               'part7': 'Part 7 – Administrative Supervision',
               'part9': 'Part 9 – Business Analysis (BABOK)',
               'part10': 'Part 10 – Project Management Fundamentals',
-              'part11': 'Part 11 – Facilitating Communications'
+              'part11': 'Part 11 – Facilitating Communications',
+              'part12': 'Part 12 – Working & Interacting with Others',
+              'part13': 'Part 13 – Understanding & Interpreting Written Material'
             };
             filterLabel = partLabels[lastFilter] || lastFilter;
           }
@@ -2669,6 +2688,11 @@ Thank you!
         // BSA-2: Parts 9, 7, 10, 6, 11
         filteredQuestions = questionsDB.filter(q =>
           ['part9', 'part7', 'part10', 'part6', 'part11'].includes(q.part)
+        );
+      } else if (currentFilter === 'arch2') {
+        // Architect 2: Parts 5, 12, 13, 6, 7
+        filteredQuestions = questionsDB.filter(q =>
+          ['part5', 'part12', 'part13', 'part6', 'part7'].includes(q.part)
         );
       } else if (currentFilter.startsWith('part')) {
         filteredQuestions = questionsDB.filter(q => q.part === currentFilter);
@@ -2831,6 +2855,8 @@ Thank you!
           contextTitle = 'MITS-2 Progress';
         } else if (currentFilter === 'bsa2') {
           contextTitle = 'BSA-2 Progress';
+        } else if (currentFilter === 'arch2') {
+          contextTitle = 'Architect 2 Progress';
         } else if (currentFilter.startsWith('part')) {
           const partNames = {
             'part1': 'Part 1 Progress',
@@ -2843,7 +2869,9 @@ Thank you!
             'part7': 'Part 7 Progress',
             'part9': 'Part 9 Progress',
             'part10': 'Part 10 Progress',
-            'part11': 'Part 11 Progress'
+            'part11': 'Part 11 Progress',
+            'part12': 'Part 12 Progress',
+            'part13': 'Part 13 Progress'
           };
           contextTitle = partNames[currentFilter] || 'Your Progress';
         }
@@ -2896,6 +2924,8 @@ Thank you!
           resultsTitle = '🎉 MITS-2 Section Complete!';
         } else if (currentFilter === 'bsa2') {
           resultsTitle = '🎉 BSA-2 Section Complete!';
+        } else if (currentFilter === 'arch2') {
+          resultsTitle = '🎉 Architect 2 Section Complete!';
         } else if (currentFilter.startsWith('part')) {
           const partNames = {
             'part1': 'Part 1',
@@ -2908,7 +2938,9 @@ Thank you!
             'part7': 'Part 7',
             'part9': 'Part 9',
             'part10': 'Part 10',
-            'part11': 'Part 11'
+            'part11': 'Part 11',
+            'part12': 'Part 12',
+            'part13': 'Part 13'
           };
           const partName = partNames[currentFilter] || currentFilter;
           resultsTitle = `🎉 ${partName} Complete!`;
@@ -2971,7 +3003,9 @@ Thank you!
         'part7': 'Part 7',
         'part9': 'Part 9',
         'part10': 'Part 10',
-        'part11': 'Part 11'
+        'part11': 'Part 11',
+        'part12': 'Part 12',
+        'part13': 'Part 13'
       };
 
       const categoryName = categoryNames[category] || 'General';
