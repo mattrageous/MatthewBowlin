@@ -1,0 +1,2204 @@
+{
+  "program_planning_and_evaluation": [
+    {
+      "id": 14000,
+      "question": "What is the primary purpose of a needs assessment before designing a program?",
+      "options": [
+        "To identify the gap between current conditions and desired outcomes",
+        "To secure funding for the program",
+        "To evaluate staff performance",
+        "To publicize the program"
+      ],
+      "answer": "To identify the gap between current conditions and desired outcomes"
+    },
+    {
+      "id": 14001,
+      "question": "Which of the following best describes a program goal?",
+      "options": [
+        "A broad statement of the intended long-term result",
+        "A detailed schedule of activities",
+        "A list of required resources",
+        "A description of staff duties"
+      ],
+      "answer": "A broad statement of the intended long-term result"
+    },
+    {
+      "id": 14002,
+      "question": "How do objectives differ from goals in program planning?",
+      "options": [
+        "Objectives are specific and measurable steps toward broader goals",
+        "Objectives are more general than goals",
+        "Objectives describe the mission while goals describe tasks",
+        "Objectives are optional while goals are required"
+      ],
+      "answer": "Objectives are specific and measurable steps toward broader goals"
+    },
+    {
+      "id": 14003,
+      "question": "Why should objectives be measurable?",
+      "options": [
+        "So progress and success can be assessed objectively",
+        "So they sound more official",
+        "So they can be changed easily",
+        "So fewer staff are needed"
+      ],
+      "answer": "So progress and success can be assessed objectively"
+    },
+    {
+      "id": 14004,
+      "question": "What is the main purpose of a pilot program?",
+      "options": [
+        "To test a program on a small scale before full implementation",
+        "To replace evaluation of the full program",
+        "To reduce program funding",
+        "To train new supervisors"
+      ],
+      "answer": "To test a program on a small scale before full implementation"
+    },
+    {
+      "id": 14005,
+      "question": "What is a key advantage of piloting a new procedure before agency-wide rollout?",
+      "options": [
+        "Problems can be identified and corrected on a small scale",
+        "It guarantees the procedure will succeed",
+        "It eliminates the need for staff training",
+        "It shortens the planning process"
+      ],
+      "answer": "Problems can be identified and corrected on a small scale"
+    },
+    {
+      "id": 14006,
+      "question": "What is formative evaluation primarily used for?",
+      "options": [
+        "Improving a program while it is being developed or implemented",
+        "Judging a program only after it ends",
+        "Auditing program finances",
+        "Ranking staff performance"
+      ],
+      "answer": "Improving a program while it is being developed or implemented"
+    },
+    {
+      "id": 14007,
+      "question": "What is summative evaluation primarily used for?",
+      "options": [
+        "Assessing a program's overall effectiveness after implementation",
+        "Adjusting activities during implementation",
+        "Recruiting program participants",
+        "Designing the program's logo"
+      ],
+      "answer": "Assessing a program's overall effectiveness after implementation"
+    },
+    {
+      "id": 14008,
+      "question": "What does a process evaluation examine?",
+      "options": [
+        "Whether program activities are being delivered as intended",
+        "Only the program's final outcomes",
+        "The personal opinions of managers",
+        "The cost of office supplies"
+      ],
+      "answer": "Whether program activities are being delivered as intended"
+    },
+    {
+      "id": 14009,
+      "question": "What does an outcome evaluation examine?",
+      "options": [
+        "Whether the program produced its intended results",
+        "Whether staff enjoyed the program",
+        "How the program was advertised",
+        "How many meetings were held"
+      ],
+      "answer": "Whether the program produced its intended results"
+    },
+    {
+      "id": 14010,
+      "question": "Why is baseline data important in program evaluation?",
+      "options": [
+        "It provides a point of comparison for measuring change",
+        "It replaces the need for follow-up data",
+        "It guarantees program success",
+        "It reduces the cost of evaluation"
+      ],
+      "answer": "It provides a point of comparison for measuring change"
+    },
+    {
+      "id": 14011,
+      "question": "Which question does a cost-effectiveness analysis primarily address?",
+      "options": [
+        "Whether results are achieved at a reasonable cost relative to alternatives",
+        "Whether staff are satisfied",
+        "Whether the program is popular",
+        "Whether the program is legal"
+      ],
+      "answer": "Whether results are achieved at a reasonable cost relative to alternatives"
+    },
+    {
+      "id": 14012,
+      "question": "What is the first logical step in the planning process?",
+      "options": [
+        "Defining the problem or need the plan will address",
+        "Assigning staff to tasks",
+        "Purchasing equipment",
+        "Announcing the program"
+      ],
+      "answer": "Defining the problem or need the plan will address"
+    },
+    {
+      "id": 14013,
+      "question": "Why should stakeholders be involved in program planning?",
+      "options": [
+        "Their input improves the plan's relevance and acceptance",
+        "It transfers responsibility away from planners",
+        "It is required only for large programs",
+        "It speeds up planning by avoiding discussion"
+      ],
+      "answer": "Their input improves the plan's relevance and acceptance"
+    },
+    {
+      "id": 14014,
+      "question": "What is a performance indicator?",
+      "options": [
+        "A measurable value used to track progress toward an objective",
+        "A staff disciplinary record",
+        "A type of budget document",
+        "A list of program participants"
+      ],
+      "answer": "A measurable value used to track progress toward an objective"
+    },
+    {
+      "id": 14015,
+      "question": "What is the purpose of setting priorities among program activities?",
+      "options": [
+        "To direct limited resources to the most important activities",
+        "To eliminate all low-cost activities",
+        "To ensure every activity gets equal resources",
+        "To avoid making decisions"
+      ],
+      "answer": "To direct limited resources to the most important activities"
+    },
+    {
+      "id": 14016,
+      "question": "When implementing a new procedure, why is staff training important?",
+      "options": [
+        "It ensures staff understand and can correctly apply the procedure",
+        "It delays implementation",
+        "It replaces the need for written procedures",
+        "It reduces the number of staff needed"
+      ],
+      "answer": "It ensures staff understand and can correctly apply the procedure"
+    },
+    {
+      "id": 14017,
+      "question": "What is a common reason new programs fail during implementation?",
+      "options": [
+        "Inadequate planning for resources, training, or communication",
+        "Too much stakeholder involvement",
+        "Excessive evaluation",
+        "Having clearly defined objectives"
+      ],
+      "answer": "Inadequate planning for resources, training, or communication"
+    },
+    {
+      "id": 14018,
+      "question": "Why should a plan include a timeline?",
+      "options": [
+        "It sequences activities and allows progress to be monitored",
+        "It guarantees deadlines will be met",
+        "It replaces the need for objectives",
+        "It is required only for federal programs"
+      ],
+      "answer": "It sequences activities and allows progress to be monitored"
+    },
+    {
+      "id": 14019,
+      "question": "What is contingency planning?",
+      "options": [
+        "Preparing alternative courses of action in case problems arise",
+        "Planning to spend leftover funds",
+        "Scheduling staff vacations",
+        "Duplicating all program records"
+      ],
+      "answer": "Preparing alternative courses of action in case problems arise"
+    },
+    {
+      "id": 14020,
+      "question": "What role does monitoring play during program implementation?",
+      "options": [
+        "It tracks progress so problems can be detected and corrected early",
+        "It replaces final evaluation",
+        "It assigns blame for failures",
+        "It is needed only when problems occur"
+      ],
+      "answer": "It tracks progress so problems can be detected and corrected early"
+    },
+    {
+      "id": 14021,
+      "question": "Which best describes an evaluation criterion?",
+      "options": [
+        "A standard used to judge a program's performance",
+        "A rule for hiring staff",
+        "A type of funding source",
+        "A format for meeting minutes"
+      ],
+      "answer": "A standard used to judge a program's performance"
+    },
+    {
+      "id": 14022,
+      "question": "Why is it important to define evaluation criteria before a program begins?",
+      "options": [
+        "So data needed to judge success can be collected from the start",
+        "So the evaluation can be skipped later",
+        "So criteria can be adjusted to guarantee success",
+        "So staff can avoid documentation"
+      ],
+      "answer": "So data needed to judge success can be collected from the start"
+    },
+    {
+      "id": 14023,
+      "question": "What is the relationship between planning and evaluation?",
+      "options": [
+        "Evaluation results inform future planning in a continuous cycle",
+        "They are unrelated activities",
+        "Evaluation must always precede planning",
+        "Planning eliminates the need for evaluation"
+      ],
+      "answer": "Evaluation results inform future planning in a continuous cycle"
+    },
+    {
+      "id": 14024,
+      "question": "What does feasibility refer to in program planning?",
+      "options": [
+        "Whether a proposed program can realistically be carried out with available resources",
+        "Whether a program is popular with staff",
+        "Whether a program has a name",
+        "Whether a program has been done elsewhere"
+      ],
+      "answer": "Whether a proposed program can realistically be carried out with available resources"
+    },
+    {
+      "id": 14025,
+      "question": "A program achieved its objectives but at far higher cost than planned. What does this suggest?",
+      "options": [
+        "The program was effective but not efficient",
+        "The program was efficient but not effective",
+        "The program failed completely",
+        "The objectives were wrong"
+      ],
+      "answer": "The program was effective but not efficient"
+    },
+    {
+      "id": 14026,
+      "question": "What is the benefit of clearly assigning responsibility for each task in a plan?",
+      "options": [
+        "Accountability is established and tasks are less likely to be overlooked",
+        "Fewer staff are required",
+        "Tasks can be completed in any order",
+        "Evaluation becomes unnecessary"
+      ],
+      "answer": "Accountability is established and tasks are less likely to be overlooked"
+    },
+    {
+      "id": 14027,
+      "question": "Why should evaluation findings be reported even when results are disappointing?",
+      "options": [
+        "Accurate findings support learning and better future decisions",
+        "Negative findings can be hidden legally",
+        "Disappointing results end all programs",
+        "Reports are only for successful programs"
+      ],
+      "answer": "Accurate findings support learning and better future decisions"
+    },
+    {
+      "id": 14028,
+      "question": "What is the main purpose of a program budget in planning?",
+      "options": [
+        "To estimate and allocate the resources needed to carry out activities",
+        "To record staff attendance",
+        "To evaluate program outcomes",
+        "To communicate with the public"
+      ],
+      "answer": "To estimate and allocate the resources needed to carry out activities"
+    },
+    {
+      "id": 14029,
+      "question": "What is an input in a program logic model?",
+      "options": [
+        "A resource such as staff, funding, or facilities used by the program",
+        "A long-term community change",
+        "A completed service",
+        "A participant's opinion"
+      ],
+      "answer": "A resource such as staff, funding, or facilities used by the program"
+    },
+    {
+      "id": 14030,
+      "question": "What is an output in a program logic model?",
+      "options": [
+        "A direct product of program activities, such as services delivered",
+        "The funding received by the program",
+        "A long-term societal change",
+        "The program's mission statement"
+      ],
+      "answer": "A direct product of program activities, such as services delivered"
+    },
+    {
+      "id": 14031,
+      "question": "What is an outcome in a program logic model?",
+      "options": [
+        "A change or benefit resulting from the program",
+        "The number of staff employed",
+        "The program's office location",
+        "The amount of money spent"
+      ],
+      "answer": "A change or benefit resulting from the program"
+    },
+    {
+      "id": 14032,
+      "question": "Why might a program with high outputs still have poor outcomes?",
+      "options": [
+        "Delivering many services does not guarantee they produce the intended change",
+        "Outputs and outcomes are the same thing",
+        "High outputs always mean poor quality",
+        "Outcomes are impossible to measure"
+      ],
+      "answer": "Delivering many services does not guarantee they produce the intended change"
+    },
+    {
+      "id": 14033,
+      "question": "What does it mean to implement a procedure incrementally?",
+      "options": [
+        "To introduce it in stages rather than all at once",
+        "To cancel it gradually",
+        "To apply it only to management",
+        "To document it after the fact"
+      ],
+      "answer": "To introduce it in stages rather than all at once"
+    },
+    {
+      "id": 14034,
+      "question": "What is a key benefit of incremental implementation?",
+      "options": [
+        "Adjustments can be made based on early experience",
+        "It guarantees no resistance",
+        "It requires no planning",
+        "It hides problems from leadership"
+      ],
+      "answer": "Adjustments can be made based on early experience"
+    },
+    {
+      "id": 14035,
+      "question": "When evaluating a program, why is it important to consider unintended effects?",
+      "options": [
+        "Programs can produce significant consequences beyond their stated objectives",
+        "Only intended effects matter",
+        "Unintended effects are always positive",
+        "It reduces the amount of data needed"
+      ],
+      "answer": "Programs can produce significant consequences beyond their stated objectives"
+    },
+    {
+      "id": 14036,
+      "question": "What is the purpose of a status report during implementation?",
+      "options": [
+        "To keep decision-makers informed of progress, problems, and next steps",
+        "To replace the final evaluation",
+        "To document staff grievances",
+        "To advertise the program"
+      ],
+      "answer": "To keep decision-makers informed of progress, problems, and next steps"
+    },
+    {
+      "id": 14037,
+      "question": "Which is the best example of a measurable objective?",
+      "options": [
+        "Reduce average application processing time from ten days to five days within one year",
+        "Improve service generally",
+        "Make the office more efficient",
+        "Do better than last year"
+      ],
+      "answer": "Reduce average application processing time from ten days to five days within one year"
+    },
+    {
+      "id": 14038,
+      "question": "Why should a plan identify required resources early?",
+      "options": [
+        "Shortfalls can be addressed before they delay implementation",
+        "Resources cannot change after planning",
+        "It eliminates budget reviews",
+        "Resources are only needed at the end"
+      ],
+      "answer": "Shortfalls can be addressed before they delay implementation"
+    },
+    {
+      "id": 14039,
+      "question": "What is the purpose of comparing actual results to planned targets?",
+      "options": [
+        "To identify variances that may require corrective action",
+        "To reward staff automatically",
+        "To justify ending all monitoring",
+        "To reduce data collection"
+      ],
+      "answer": "To identify variances that may require corrective action"
+    },
+    {
+      "id": 14040,
+      "question": "A manager finds that a new program is behind schedule. What should be done first?",
+      "options": [
+        "Determine the causes of the delay before deciding on corrective action",
+        "Cancel the program immediately",
+        "Extend the schedule without analysis",
+        "Replace all program staff"
+      ],
+      "answer": "Determine the causes of the delay before deciding on corrective action"
+    },
+    {
+      "id": 14041,
+      "question": "What is the value of documenting lessons learned at the end of a program?",
+      "options": [
+        "Future programs can benefit from the experience gained",
+        "It satisfies curiosity only",
+        "It replaces evaluation reports",
+        "It is required only for failed programs"
+      ],
+      "answer": "Future programs can benefit from the experience gained"
+    },
+    {
+      "id": 14042,
+      "question": "Which factor is most important when selecting among alternative program designs?",
+      "options": [
+        "How well each alternative achieves objectives within available resources",
+        "Which alternative is newest",
+        "Which alternative is easiest to name",
+        "Which alternative requires the least explanation"
+      ],
+      "answer": "How well each alternative achieves objectives within available resources"
+    },
+    {
+      "id": 14043,
+      "question": "What does program efficiency measure?",
+      "options": [
+        "The relationship between resources used and outputs produced",
+        "Only the total money spent",
+        "Participant satisfaction alone",
+        "The number of objectives written"
+      ],
+      "answer": "The relationship between resources used and outputs produced"
+    },
+    {
+      "id": 14044,
+      "question": "Why is a clear statement of the problem important before proposing solutions?",
+      "options": [
+        "Solutions are only effective if they address the actual problem",
+        "Problems are more interesting than solutions",
+        "It delays the project usefully",
+        "It removes the need for data"
+      ],
+      "answer": "Solutions are only effective if they address the actual problem"
+    },
+    {
+      "id": 14045,
+      "question": "What is the role of data collection in program monitoring?",
+      "options": [
+        "It provides the factual basis for tracking progress and making decisions",
+        "It is done only if problems occur",
+        "It substitutes for planning",
+        "It is useful only for large programs"
+      ],
+      "answer": "It provides the factual basis for tracking progress and making decisions"
+    },
+    {
+      "id": 14046,
+      "question": "When new procedures are introduced, resistance from staff is best reduced by:",
+      "options": [
+        "Explaining the reasons for the change and involving staff in implementation",
+        "Announcing the change without discussion",
+        "Penalizing anyone who questions the change",
+        "Keeping the change secret as long as possible"
+      ],
+      "answer": "Explaining the reasons for the change and involving staff in implementation"
+    },
+    {
+      "id": 14047,
+      "question": "What is the primary reason to evaluate a program's effectiveness?",
+      "options": [
+        "To determine whether it achieves its intended results",
+        "To create paperwork",
+        "To reward the planning team",
+        "To satisfy curiosity about statistics"
+      ],
+      "answer": "To determine whether it achieves its intended results"
+    },
+    {
+      "id": 14048,
+      "question": "What is benchmarking in program management?",
+      "options": [
+        "Comparing performance against standards or similar programs",
+        "Setting the program budget",
+        "Scheduling staff shifts",
+        "Renaming program objectives"
+      ],
+      "answer": "Comparing performance against standards or similar programs"
+    },
+    {
+      "id": 14049,
+      "question": "Why should evaluation methods match the questions being asked?",
+      "options": [
+        "Different questions require different types of evidence",
+        "One method fits all evaluations",
+        "Methods are chosen for convenience only",
+        "Evaluation questions are unimportant"
+      ],
+      "answer": "Different questions require different types of evidence"
+    },
+    {
+      "id": 14050,
+      "question": "A program's objectives were achieved, but the target population was not reached. What does this indicate?",
+      "options": [
+        "The program may have served the wrong group despite meeting numeric targets",
+        "The program was fully successful",
+        "Objectives were too specific",
+        "Evaluation is unnecessary"
+      ],
+      "answer": "The program may have served the wrong group despite meeting numeric targets"
+    },
+    {
+      "id": 14051,
+      "question": "What is the purpose of interim milestones in a project timeline?",
+      "options": [
+        "They allow progress to be checked at defined points before the deadline",
+        "They replace the final deadline",
+        "They are decorative",
+        "They apply only to budgets"
+      ],
+      "answer": "They allow progress to be checked at defined points before the deadline"
+    },
+    {
+      "id": 14052,
+      "question": "What should be done when monitoring shows an activity is not working as intended?",
+      "options": [
+        "Analyze the cause and adjust the approach",
+        "Continue unchanged to preserve the plan",
+        "Stop all program activities",
+        "Hide the finding"
+      ],
+      "answer": "Analyze the cause and adjust the approach"
+    },
+    {
+      "id": 14053,
+      "question": "What is the main advantage of written implementation procedures?",
+      "options": [
+        "They promote consistent application by all staff",
+        "They replace supervision entirely",
+        "They prevent all errors",
+        "They reduce the need for objectives"
+      ],
+      "answer": "They promote consistent application by all staff"
+    },
+    {
+      "id": 14054,
+      "question": "Which best describes evaluation objectivity?",
+      "options": [
+        "Judging results based on evidence rather than personal preference",
+        "Choosing data that supports the desired conclusion",
+        "Avoiding all numeric data",
+        "Relying only on management opinion"
+      ],
+      "answer": "Judging results based on evidence rather than personal preference"
+    },
+    {
+      "id": 14055,
+      "question": "Why is it useful to state assumptions in a program plan?",
+      "options": [
+        "If assumptions prove false, the plan can be revisited with that understanding",
+        "Assumptions guarantee accuracy",
+        "Stating assumptions eliminates risk",
+        "Assumptions replace data"
+      ],
+      "answer": "If assumptions prove false, the plan can be revisited with that understanding"
+    },
+    {
+      "id": 14056,
+      "question": "What does 'span of program' feasibility depend on most directly?",
+      "options": [
+        "Available staff, funding, time, and organizational capacity",
+        "The program's title",
+        "The color of the report cover",
+        "The number of meetings held"
+      ],
+      "answer": "Available staff, funding, time, and organizational capacity"
+    },
+    {
+      "id": 14057,
+      "question": "What is the best use of evaluation findings that show partial success?",
+      "options": [
+        "Strengthen effective components and revise or replace weak ones",
+        "Discard the entire program",
+        "Ignore weaker components",
+        "Report only the successes"
+      ],
+      "answer": "Strengthen effective components and revise or replace weak ones"
+    },
+    {
+      "id": 14058,
+      "question": "Why should performance targets be realistic?",
+      "options": [
+        "Unrealistic targets can discourage staff and distort reporting",
+        "Targets should always be impossible to reach",
+        "Realistic targets eliminate the need to monitor",
+        "Targets have no effect on behavior"
+      ],
+      "answer": "Unrealistic targets can discourage staff and distort reporting"
+    },
+    {
+      "id": 14059,
+      "question": "What is the purpose of a work plan?",
+      "options": [
+        "To specify tasks, responsibilities, timelines, and resources for reaching objectives",
+        "To evaluate completed programs",
+        "To record complaints",
+        "To announce the program to the public"
+      ],
+      "answer": "To specify tasks, responsibilities, timelines, and resources for reaching objectives"
+    },
+    {
+      "id": 14060,
+      "question": "A new program requires cooperation from another unit. What planning step addresses this?",
+      "options": [
+        "Coordinating with the other unit early and defining shared responsibilities",
+        "Assuming cooperation will occur",
+        "Waiting until problems arise",
+        "Excluding the other unit from planning"
+      ],
+      "answer": "Coordinating with the other unit early and defining shared responsibilities"
+    },
+    {
+      "id": 14061,
+      "question": "What is the value of periodic progress reviews?",
+      "options": [
+        "They provide regular opportunities to correct course before small issues grow",
+        "They replace daily supervision",
+        "They occur only after completion",
+        "They are useful only for failing programs"
+      ],
+      "answer": "They provide regular opportunities to correct course before small issues grow"
+    },
+    {
+      "id": 14062,
+      "question": "How does clear communication support implementation of new procedures?",
+      "options": [
+        "Staff who understand what is expected are more likely to comply correctly",
+        "Communication delays implementation",
+        "It replaces the need for training",
+        "It only matters for management"
+      ],
+      "answer": "Staff who understand what is expected are more likely to comply correctly"
+    },
+    {
+      "id": 14063,
+      "question": "What is the difference between monitoring and evaluation?",
+      "options": [
+        "Monitoring tracks ongoing progress; evaluation judges merit or effectiveness",
+        "They are identical",
+        "Evaluation happens daily; monitoring happens once",
+        "Monitoring is only financial"
+      ],
+      "answer": "Monitoring tracks ongoing progress; evaluation judges merit or effectiveness"
+    },
+    {
+      "id": 14064,
+      "question": "Why is participant feedback useful in program evaluation?",
+      "options": [
+        "It provides direct evidence about how the program is experienced",
+        "It always confirms success",
+        "It replaces outcome data",
+        "It is collected only from staff"
+      ],
+      "answer": "It provides direct evidence about how the program is experienced"
+    },
+    {
+      "id": 14065,
+      "question": "What is the risk of evaluating a program too soon after implementation?",
+      "options": [
+        "Outcomes may not have had time to develop, understating effectiveness",
+        "Results will be too positive",
+        "Early evaluation is always better",
+        "There is no risk"
+      ],
+      "answer": "Outcomes may not have had time to develop, understating effectiveness"
+    },
+    {
+      "id": 14066,
+      "question": "What is the function of standards in maintaining program quality?",
+      "options": [
+        "They define acceptable performance against which work can be checked",
+        "They limit program funding",
+        "They apply only to new staff",
+        "They replace supervision"
+      ],
+      "answer": "They define acceptable performance against which work can be checked"
+    },
+    {
+      "id": 14067,
+      "question": "When resources are cut, what is the most rational planning response?",
+      "options": [
+        "Reassess priorities and adjust the scope of activities accordingly",
+        "Continue all activities at reduced quality",
+        "Stop planning entirely",
+        "Spend remaining funds quickly"
+      ],
+      "answer": "Reassess priorities and adjust the scope of activities accordingly"
+    },
+    {
+      "id": 14068,
+      "question": "What is the primary purpose of comparing program alternatives before selection?",
+      "options": [
+        "To choose the option most likely to achieve objectives efficiently",
+        "To delay the decision",
+        "To document that alternatives existed",
+        "To satisfy a formatting requirement"
+      ],
+      "answer": "To choose the option most likely to achieve objectives efficiently"
+    },
+    {
+      "id": 14069,
+      "question": "What does sustainability refer to in program planning?",
+      "options": [
+        "The ability of a program's benefits or operations to continue over time",
+        "The program's environmental policy only",
+        "The durability of office equipment",
+        "The length of planning meetings"
+      ],
+      "answer": "The ability of a program's benefits or operations to continue over time"
+    },
+    {
+      "id": 14070,
+      "question": "Which is a sign that program objectives may need revision?",
+      "options": [
+        "Conditions have changed so the objectives no longer address current needs",
+        "Objectives are being achieved",
+        "Staff understand the objectives",
+        "Data support the objectives"
+      ],
+      "answer": "Conditions have changed so the objectives no longer address current needs"
+    },
+    {
+      "id": 14071,
+      "question": "What is the benefit of involving those who will use a procedure in designing it?",
+      "options": [
+        "Their practical knowledge helps create workable procedures and builds acceptance",
+        "It slows the design process unnecessarily",
+        "It shifts blame if the procedure fails",
+        "It is only symbolic"
+      ],
+      "answer": "Their practical knowledge helps create workable procedures and builds acceptance"
+    },
+    {
+      "id": 14072,
+      "question": "What should an implementation schedule account for besides task durations?",
+      "options": [
+        "Dependencies among tasks and availability of resources",
+        "Only holidays",
+        "Only staff preferences",
+        "Nothing else"
+      ],
+      "answer": "Dependencies among tasks and availability of resources"
+    },
+    {
+      "id": 14073,
+      "question": "What is the purpose of defining a program's target population?",
+      "options": [
+        "To ensure services are designed for and reach the intended group",
+        "To limit evaluation",
+        "To increase paperwork",
+        "To exclude stakeholders"
+      ],
+      "answer": "To ensure services are designed for and reach the intended group"
+    },
+    {
+      "id": 14074,
+      "question": "A program shows different results across locations. What should evaluators do?",
+      "options": [
+        "Examine what factors differ across locations to explain the variation",
+        "Report only the best location",
+        "Average the results and ignore differences",
+        "Conclude the program is random"
+      ],
+      "answer": "Examine what factors differ across locations to explain the variation"
+    },
+    {
+      "id": 14075,
+      "question": "Why are clear definitions important when collecting program data?",
+      "options": [
+        "Consistent definitions make data comparable and meaningful",
+        "Definitions slow data entry",
+        "Data need no definitions",
+        "Definitions apply only to budgets"
+      ],
+      "answer": "Consistent definitions make data comparable and meaningful"
+    },
+    {
+      "id": 14076,
+      "question": "What is the main purpose of a program's mission or purpose statement?",
+      "options": [
+        "To provide overall direction that guides goals and activities",
+        "To list every task",
+        "To assign individual blame",
+        "To satisfy filing requirements"
+      ],
+      "answer": "To provide overall direction that guides goals and activities"
+    },
+    {
+      "id": 14077,
+      "question": "How can evaluation findings improve efficiency?",
+      "options": [
+        "By identifying activities that consume resources without adding results",
+        "By increasing spending everywhere",
+        "By eliminating all reporting",
+        "By avoiding any changes"
+      ],
+      "answer": "By identifying activities that consume resources without adding results"
+    },
+    {
+      "id": 14078,
+      "question": "What is the most appropriate response to evaluation findings that conflict with expectations?",
+      "options": [
+        "Examine the evidence carefully before drawing conclusions",
+        "Reject the findings automatically",
+        "Change the findings to match expectations",
+        "End all evaluations"
+      ],
+      "answer": "Examine the evidence carefully before drawing conclusions"
+    },
+    {
+      "id": 14079,
+      "question": "What does coordination among units during implementation prevent?",
+      "options": [
+        "Duplication of effort and conflicting actions",
+        "All disagreements",
+        "The need for communication",
+        "Program monitoring"
+      ],
+      "answer": "Duplication of effort and conflicting actions"
+    },
+    {
+      "id": 14080,
+      "question": "Which element should a corrective action plan include?",
+      "options": [
+        "Specific steps, responsible parties, and target dates for fixing the problem",
+        "Only a description of the problem",
+        "A list of past successes",
+        "General encouragement"
+      ],
+      "answer": "Specific steps, responsible parties, and target dates for fixing the problem"
+    },
+    {
+      "id": 14081,
+      "question": "Why might a phased rollout include a review point between phases?",
+      "options": [
+        "To decide whether to proceed, adjust, or halt based on results so far",
+        "To pause work indefinitely",
+        "To reassign all staff",
+        "To restart planning from zero"
+      ],
+      "answer": "To decide whether to proceed, adjust, or halt based on results so far"
+    },
+    {
+      "id": 14082,
+      "question": "What is the danger of measuring only what is easy to measure?",
+      "options": [
+        "Important results that are harder to measure may be neglected",
+        "Easy measures are always sufficient",
+        "Measurement becomes too accurate",
+        "Programs improve automatically"
+      ],
+      "answer": "Important results that are harder to measure may be neglected"
+    },
+    {
+      "id": 14083,
+      "question": "What is a reasonable first response when a new procedure produces unexpected errors?",
+      "options": [
+        "Investigate whether the cause is the procedure itself, training, or application",
+        "Abandon the procedure immediately",
+        "Blame individual staff",
+        "Ignore the errors"
+      ],
+      "answer": "Investigate whether the cause is the procedure itself, training, or application"
+    },
+    {
+      "id": 14084,
+      "question": "What is the purpose of establishing reporting requirements at program start?",
+      "options": [
+        "To ensure needed information flows regularly to those overseeing the program",
+        "To create work for staff",
+        "To limit communication",
+        "To replace supervision"
+      ],
+      "answer": "To ensure needed information flows regularly to those overseeing the program"
+    },
+    {
+      "id": 14085,
+      "question": "How does a clear chain of decision-making authority help implementation?",
+      "options": [
+        "Questions and problems can be resolved quickly by the right person",
+        "It prevents all problems",
+        "It removes the need for plans",
+        "It slows decisions safely"
+      ],
+      "answer": "Questions and problems can be resolved quickly by the right person"
+    },
+    {
+      "id": 14086,
+      "question": "What is meant by program scope?",
+      "options": [
+        "The boundaries of what the program will and will not do",
+        "The program's font size",
+        "The physical size of the office",
+        "The number of reports produced"
+      ],
+      "answer": "The boundaries of what the program will and will not do"
+    },
+    {
+      "id": 14087,
+      "question": "Why is scope control important during implementation?",
+      "options": [
+        "Uncontrolled expansion of activities can exhaust resources and delay objectives",
+        "Scope should always expand",
+        "Scope has no effect on resources",
+        "Control eliminates flexibility"
+      ],
+      "answer": "Uncontrolled expansion of activities can exhaust resources and delay objectives"
+    },
+    {
+      "id": 14088,
+      "question": "What is the role of evaluation in accountability?",
+      "options": [
+        "It provides evidence of what was accomplished with the resources provided",
+        "It shields programs from review",
+        "It replaces financial audits",
+        "It applies only to private organizations"
+      ],
+      "answer": "It provides evidence of what was accomplished with the resources provided"
+    },
+    {
+      "id": 14089,
+      "question": "A planner must choose between two effective options; one costs significantly less. What principle favors the cheaper option?",
+      "options": [
+        "Efficiency \u2014 achieving results with fewer resources",
+        "Popularity",
+        "Novelty",
+        "Tradition"
+      ],
+      "answer": "Efficiency \u2014 achieving results with fewer resources"
+    },
+    {
+      "id": 14090,
+      "question": "Why should evaluation reports distinguish findings from recommendations?",
+      "options": [
+        "Findings state what the evidence shows; recommendations state proposed actions",
+        "They are the same thing",
+        "Recommendations replace findings",
+        "Findings are optional"
+      ],
+      "answer": "Findings state what the evidence shows; recommendations state proposed actions"
+    },
+    {
+      "id": 14091,
+      "question": "Which practice supports objective interpretation of program data?",
+      "options": [
+        "Comparing results against pre-established criteria",
+        "Selecting favorable data only",
+        "Setting criteria after seeing results",
+        "Relying on impressions"
+      ],
+      "answer": "Comparing results against pre-established criteria"
+    },
+    {
+      "id": 14092,
+      "question": "What is the benefit of realistic scheduling over optimistic scheduling?",
+      "options": [
+        "Plans based on realistic estimates are more likely to be met and trusted",
+        "Optimism guarantees speed",
+        "Realistic schedules are always longer",
+        "Schedules do not matter"
+      ],
+      "answer": "Plans based on realistic estimates are more likely to be met and trusted"
+    },
+    {
+      "id": 14093,
+      "question": "When should evaluation planning begin?",
+      "options": [
+        "During program design, so needed data can be collected from the start",
+        "After the program ends",
+        "Only when problems occur",
+        "Never before implementation"
+      ],
+      "answer": "During program design, so needed data can be collected from the start"
+    },
+    {
+      "id": 14094,
+      "question": "What does it mean for program activities to be aligned with objectives?",
+      "options": [
+        "Each activity contributes logically to achieving the stated objectives",
+        "Activities occur at the same time",
+        "Activities are listed alphabetically",
+        "Objectives are hidden from staff"
+      ],
+      "answer": "Each activity contributes logically to achieving the stated objectives"
+    },
+    {
+      "id": 14095,
+      "question": "What is a key question in assessing program relevance?",
+      "options": [
+        "Does the program address a real and current need?",
+        "Is the program old?",
+        "Does the program have a slogan?",
+        "Is the staff large?"
+      ],
+      "answer": "Does the program address a real and current need?"
+    },
+    {
+      "id": 14096,
+      "question": "How can regular team meetings support implementation?",
+      "options": [
+        "They surface problems early and keep efforts coordinated",
+        "They replace all written plans",
+        "They slow progress deliberately",
+        "They are useful only at the end"
+      ],
+      "answer": "They surface problems early and keep efforts coordinated"
+    },
+    {
+      "id": 14097,
+      "question": "What is a control in the planning-organizing-controlling cycle?",
+      "options": [
+        "A mechanism for checking performance against plans and correcting deviations",
+        "A lock on office doors",
+        "A restriction on communication",
+        "A type of budget line"
+      ],
+      "answer": "A mechanism for checking performance against plans and correcting deviations"
+    },
+    {
+      "id": 14098,
+      "question": "Why is flexibility valuable in a program plan?",
+      "options": [
+        "Conditions change, and plans must adapt to remain effective",
+        "Flexibility means having no plan",
+        "Rigid plans are always better",
+        "Flexibility eliminates monitoring"
+      ],
+      "answer": "Conditions change, and plans must adapt to remain effective"
+    },
+    {
+      "id": 14099,
+      "question": "Which statement about evaluation timing is most accurate?",
+      "options": [
+        "Different evaluation types are appropriate at different program stages",
+        "All evaluation happens at the end",
+        "Evaluation should precede planning only",
+        "Timing is irrelevant"
+      ],
+      "answer": "Different evaluation types are appropriate at different program stages"
+    },
+    {
+      "id": 14100,
+      "question": "What is the purpose of documenting program procedures?",
+      "options": [
+        "To preserve consistent practice and support training and review",
+        "To increase secrecy",
+        "To replace staff judgment entirely",
+        "To satisfy no purpose"
+      ],
+      "answer": "To preserve consistent practice and support training and review"
+    },
+    {
+      "id": 14101,
+      "question": "A program's demand has doubled. What planning concern arises first?",
+      "options": [
+        "Whether current resources and capacity can meet the increased demand",
+        "Whether the program name should change",
+        "Whether to reduce hours",
+        "Whether to stop data collection"
+      ],
+      "answer": "Whether current resources and capacity can meet the increased demand"
+    },
+    {
+      "id": 14102,
+      "question": "Why should success criteria be agreed upon by key parties in advance?",
+      "options": [
+        "It prevents later disputes about whether the program succeeded",
+        "Criteria are best decided after results",
+        "Agreement is impossible",
+        "Criteria are only for funders"
+      ],
+      "answer": "It prevents later disputes about whether the program succeeded"
+    },
+    {
+      "id": 14103,
+      "question": "What is triangulation in evaluation?",
+      "options": [
+        "Using multiple sources or methods to strengthen confidence in findings",
+        "Dividing programs into three parts",
+        "A budgeting technique",
+        "A staffing pattern"
+      ],
+      "answer": "Using multiple sources or methods to strengthen confidence in findings"
+    },
+    {
+      "id": 14104,
+      "question": "How do clear milestones help manage a long project?",
+      "options": [
+        "They break the work into checkpoints where progress can be verified",
+        "They make the project longer",
+        "They replace the final goal",
+        "They apply only to budgets"
+      ],
+      "answer": "They break the work into checkpoints where progress can be verified"
+    },
+    {
+      "id": 14105,
+      "question": "What is the most useful characteristic of a progress measure?",
+      "options": [
+        "It reflects meaningful movement toward the objective",
+        "It is impressive-sounding",
+        "It changes constantly",
+        "It cannot be verified"
+      ],
+      "answer": "It reflects meaningful movement toward the objective"
+    },
+    {
+      "id": 14106,
+      "question": "What should happen to a plan after a major assumption proves false?",
+      "options": [
+        "The affected parts of the plan should be reviewed and revised",
+        "Nothing; plans never change",
+        "The entire program must end",
+        "The assumption should be restated"
+      ],
+      "answer": "The affected parts of the plan should be reviewed and revised"
+    },
+    {
+      "id": 14107,
+      "question": "Why is over-reliance on a single data source risky in evaluation?",
+      "options": [
+        "Errors or bias in that source can distort conclusions",
+        "Single sources are always accurate",
+        "Multiple sources are forbidden",
+        "Data sources never differ"
+      ],
+      "answer": "Errors or bias in that source can distort conclusions"
+    },
+    {
+      "id": 14108,
+      "question": "Which is an example of an efficiency measure?",
+      "options": [
+        "Cost per client served",
+        "Total number of objectives",
+        "Length of the mission statement",
+        "Number of planning meetings"
+      ],
+      "answer": "Cost per client served"
+    },
+    {
+      "id": 14109,
+      "question": "What is the purpose of an organizational readiness assessment before change?",
+      "options": [
+        "To determine whether staff, systems, and resources can support the change",
+        "To rank employees",
+        "To postpone change indefinitely",
+        "To publicize the change"
+      ],
+      "answer": "To determine whether staff, systems, and resources can support the change"
+    },
+    {
+      "id": 14110,
+      "question": "Which factor most supports successful adoption of a new program by staff?",
+      "options": [
+        "Understanding the purpose and receiving adequate training and support",
+        "Strict penalties alone",
+        "Minimal information",
+        "Frequent unexplained changes"
+      ],
+      "answer": "Understanding the purpose and receiving adequate training and support"
+    },
+    {
+      "id": 14111,
+      "question": "What is the main risk of skipping the planning phase?",
+      "options": [
+        "Efforts may be misdirected, wasting resources on the wrong activities",
+        "Work finishes too quickly",
+        "Staff become overqualified",
+        "Evaluation becomes easier"
+      ],
+      "answer": "Efforts may be misdirected, wasting resources on the wrong activities"
+    },
+    {
+      "id": 14112,
+      "question": "What does a gap analysis compare?",
+      "options": [
+        "Current performance or conditions with desired performance or conditions",
+        "Two unrelated programs",
+        "Staff salaries",
+        "Office locations"
+      ],
+      "answer": "Current performance or conditions with desired performance or conditions"
+    },
+    {
+      "id": 14113,
+      "question": "How should limited evaluation resources be focused?",
+      "options": [
+        "On the questions most important for decisions about the program",
+        "On the easiest questions",
+        "On questions with known answers",
+        "Evenly regardless of importance"
+      ],
+      "answer": "On the questions most important for decisions about the program"
+    },
+    {
+      "id": 14114,
+      "question": "What does it mean to operationalize an objective?",
+      "options": [
+        "To define it in concrete, measurable terms that guide action",
+        "To assign it to operations staff",
+        "To remove it from the plan",
+        "To classify it as confidential"
+      ],
+      "answer": "To define it in concrete, measurable terms that guide action"
+    },
+    {
+      "id": 14115,
+      "question": "Which describes a realistic approach to program risks?",
+      "options": [
+        "Identify likely risks and prepare responses proportional to their impact",
+        "Assume no risks will occur",
+        "Treat all risks as equally likely",
+        "Address risks only after they occur"
+      ],
+      "answer": "Identify likely risks and prepare responses proportional to their impact"
+    },
+    {
+      "id": 14116,
+      "question": "What is the value of comparing a program's results with a similar group not served by the program?",
+      "options": [
+        "It helps determine whether changes are attributable to the program",
+        "It doubles the program's cost",
+        "It guarantees positive findings",
+        "It replaces all other data"
+      ],
+      "answer": "It helps determine whether changes are attributable to the program"
+    },
+    {
+      "id": 14117,
+      "question": "Why should reporting formats be standardized across program sites?",
+      "options": [
+        "Standardization allows results to be combined and compared meaningfully",
+        "Standardization prevents all errors",
+        "Each site should report differently",
+        "Formats do not affect analysis"
+      ],
+      "answer": "Standardization allows results to be combined and compared meaningfully"
+    },
+    {
+      "id": 14118,
+      "question": "What is the primary function of a steering or oversight group for a major program?",
+      "options": [
+        "To provide direction, review progress, and resolve major issues",
+        "To perform daily clerical work",
+        "To replace program staff",
+        "To limit information flow"
+      ],
+      "answer": "To provide direction, review progress, and resolve major issues"
+    },
+    {
+      "id": 14119,
+      "question": "Which situation suggests a program should be modified rather than expanded?",
+      "options": [
+        "Evaluation shows weak results in its current form",
+        "Demand exceeds capacity",
+        "Funding has increased",
+        "Staff request growth"
+      ],
+      "answer": "Evaluation shows weak results in its current form"
+    },
+    {
+      "id": 14120,
+      "question": "What is the purpose of exit criteria for a pilot phase?",
+      "options": [
+        "To define what results justify moving to broader implementation",
+        "To decide staff departures",
+        "To end the program automatically",
+        "To limit evaluation"
+      ],
+      "answer": "To define what results justify moving to broader implementation"
+    },
+    {
+      "id": 14121,
+      "question": "How do written objectives support staff performance?",
+      "options": [
+        "They clarify what staff efforts should accomplish",
+        "They replace supervision",
+        "They restrict initiative harmfully",
+        "They serve only auditors"
+      ],
+      "answer": "They clarify what staff efforts should accomplish"
+    },
+    {
+      "id": 14122,
+      "question": "What does an evaluation design specify?",
+      "options": [
+        "What will be measured, how, when, and against what comparison",
+        "Only the report's format",
+        "The program's slogan",
+        "Staff vacation schedules"
+      ],
+      "answer": "What will be measured, how, when, and against what comparison"
+    },
+    {
+      "id": 14123,
+      "question": "A manager wants to know whether a training program changed job behavior. Which evidence is most relevant?",
+      "options": [
+        "Observations or measures of on-the-job performance after training",
+        "Attendance records alone",
+        "The trainer's enthusiasm",
+        "The training budget"
+      ],
+      "answer": "Observations or measures of on-the-job performance after training"
+    },
+    {
+      "id": 14124,
+      "question": "Why is it useful to rank problems by importance during planning?",
+      "options": [
+        "Resources can be directed to problems with the greatest impact",
+        "All problems are equal",
+        "Ranking eliminates small problems",
+        "Ranking replaces analysis"
+      ],
+      "answer": "Resources can be directed to problems with the greatest impact"
+    },
+    {
+      "id": 14125,
+      "question": "What does continuity planning ensure for an ongoing program?",
+      "options": [
+        "Essential operations can continue despite disruptions such as staff turnover",
+        "The program never changes",
+        "Only new activities occur",
+        "Records are discarded"
+      ],
+      "answer": "Essential operations can continue despite disruptions such as staff turnover"
+    },
+    {
+      "id": 14126,
+      "question": "What is the main advantage of setting interim targets for a multi-year objective?",
+      "options": [
+        "Progress can be assessed and adjusted annually rather than only at the end",
+        "Interim targets replace the final objective",
+        "They reduce accountability",
+        "They are required by all budgets"
+      ],
+      "answer": "Progress can be assessed and adjusted annually rather than only at the end"
+    },
+    {
+      "id": 14127,
+      "question": "Which best describes stakeholder analysis?",
+      "options": [
+        "Identifying who is affected by a program and understanding their interests",
+        "Counting program staff",
+        "Auditing stakeholder finances",
+        "Surveying only supporters"
+      ],
+      "answer": "Identifying who is affected by a program and understanding their interests"
+    },
+    {
+      "id": 14128,
+      "question": "What is the appropriate role of judgment in evaluation?",
+      "options": [
+        "Interpreting evidence within established criteria",
+        "Replacing evidence entirely",
+        "Avoiding all conclusions",
+        "Selecting favorable data"
+      ],
+      "answer": "Interpreting evidence within established criteria"
+    },
+    {
+      "id": 14129,
+      "question": "Why might an agency conduct a follow-up evaluation years after a program ends?",
+      "options": [
+        "To assess whether outcomes were sustained over time",
+        "To reopen the program automatically",
+        "To recover unspent funds",
+        "To retrain former staff"
+      ],
+      "answer": "To assess whether outcomes were sustained over time"
+    },
+    {
+      "id": 14130,
+      "question": "What is the risk of implementing a program before defining its objectives?",
+      "options": [
+        "There is no clear basis for guiding activities or judging success",
+        "Implementation becomes faster and better",
+        "Objectives emerge automatically",
+        "Evaluation becomes simpler"
+      ],
+      "answer": "There is no clear basis for guiding activities or judging success"
+    },
+    {
+      "id": 14131,
+      "question": "What does resource leveling address in planning?",
+      "options": [
+        "Scheduling work so resource demands stay within available capacity",
+        "Making all salaries equal",
+        "Reducing all budgets",
+        "Eliminating resources"
+      ],
+      "answer": "Scheduling work so resource demands stay within available capacity"
+    },
+    {
+      "id": 14132,
+      "question": "Which is the best indicator that a new procedure has been institutionalized?",
+      "options": [
+        "Staff follow it consistently as part of normal operations without special oversight",
+        "It appears in one memo",
+        "It was announced at a meeting",
+        "Its author remembers it"
+      ],
+      "answer": "Staff follow it consistently as part of normal operations without special oversight"
+    },
+    {
+      "id": 14133,
+      "question": "What is the purpose of a variance report?",
+      "options": [
+        "To show differences between planned and actual performance",
+        "To list staff grievances",
+        "To describe office layouts",
+        "To announce new programs"
+      ],
+      "answer": "To show differences between planned and actual performance"
+    },
+    {
+      "id": 14134,
+      "question": "Why should evaluation limitations be stated in reports?",
+      "options": [
+        "Readers can judge how much confidence to place in the findings",
+        "Limitations invalidate all findings",
+        "It fills space",
+        "It hides weaknesses"
+      ],
+      "answer": "Readers can judge how much confidence to place in the findings"
+    },
+    {
+      "id": 14135,
+      "question": "Which question does an impact evaluation attempt to answer?",
+      "options": [
+        "What difference did the program make compared with what would have happened without it?",
+        "How many meetings occurred?",
+        "Was the budget spent?",
+        "Did staff attend training?"
+      ],
+      "answer": "What difference did the program make compared with what would have happened without it?"
+    },
+    {
+      "id": 14136,
+      "question": "What is the value of a clearly defined decision point in a phased plan?",
+      "options": [
+        "Leadership can commit resources stage by stage based on demonstrated results",
+        "Decisions become unnecessary",
+        "All phases proceed automatically",
+        "It delays every phase"
+      ],
+      "answer": "Leadership can commit resources stage by stage based on demonstrated results"
+    },
+    {
+      "id": 14137,
+      "question": "What does it mean when a program is described as scalable?",
+      "options": [
+        "It can expand to serve more people without losing effectiveness",
+        "It uses a weighing scale",
+        "It cannot change size",
+        "It has multiple names"
+      ],
+      "answer": "It can expand to serve more people without losing effectiveness"
+    },
+    {
+      "id": 14138,
+      "question": "How does defining roles and responsibilities prevent implementation problems?",
+      "options": [
+        "It reduces confusion about who performs and decides what",
+        "It guarantees no absences",
+        "It removes the need for skills",
+        "It eliminates deadlines"
+      ],
+      "answer": "It reduces confusion about who performs and decides what"
+    },
+    {
+      "id": 14139,
+      "question": "What is the best basis for deciding whether to continue, modify, or end a program?",
+      "options": [
+        "Evidence about its effectiveness, efficiency, and continued relevance",
+        "The program's age alone",
+        "Tradition",
+        "The preference of the loudest advocate"
+      ],
+      "answer": "Evidence about its effectiveness, efficiency, and continued relevance"
+    },
+    {
+      "id": 14140,
+      "question": "Why should data collection burdens be kept reasonable?",
+      "options": [
+        "Excessive burden reduces data quality and takes time from services",
+        "More data is always better",
+        "Burden has no effect",
+        "Data collection should stop entirely"
+      ],
+      "answer": "Excessive burden reduces data quality and takes time from services"
+    },
+    {
+      "id": 14141,
+      "question": "What is the function of an implementation checklist?",
+      "options": [
+        "To verify that required steps are completed before and during rollout",
+        "To evaluate outcomes",
+        "To replace the project plan",
+        "To record complaints"
+      ],
+      "answer": "To verify that required steps are completed before and during rollout"
+    },
+    {
+      "id": 14142,
+      "question": "A proposed program duplicates services already offered elsewhere. What planning principle is violated?",
+      "options": [
+        "Coordination \u2014 resources should complement, not duplicate, existing services",
+        "Innovation",
+        "Measurement",
+        "Delegation"
+      ],
+      "answer": "Coordination \u2014 resources should complement, not duplicate, existing services"
+    },
+    {
+      "id": 14143,
+      "question": "What is the role of feedback loops in program management?",
+      "options": [
+        "Information about results is returned to decision-makers to guide adjustments",
+        "Feedback is collected but never used",
+        "They apply only to electronics",
+        "They replace planning"
+      ],
+      "answer": "Information about results is returned to decision-makers to guide adjustments"
+    },
+    {
+      "id": 14144,
+      "question": "Which best describes a SMART objective?",
+      "options": [
+        "Specific, measurable, achievable, relevant, and time-bound",
+        "Short, manageable, artistic, random, temporary",
+        "Strategic, monetary, annual, restricted, technical",
+        "Simple, minimal, abstract, rapid, tentative"
+      ],
+      "answer": "Specific, measurable, achievable, relevant, and time-bound"
+    },
+    {
+      "id": 14145,
+      "question": "Why is achievability an important quality of objectives?",
+      "options": [
+        "Objectives beyond available capacity set the program up for failure",
+        "Achievable objectives require no effort",
+        "Impossible objectives motivate best",
+        "Achievability cannot be judged"
+      ],
+      "answer": "Objectives beyond available capacity set the program up for failure"
+    },
+    {
+      "id": 14146,
+      "question": "What is a logic model used for?",
+      "options": [
+        "Showing how resources and activities are expected to lead to outcomes",
+        "Calculating salaries",
+        "Diagramming office space",
+        "Recording attendance"
+      ],
+      "answer": "Showing how resources and activities are expected to lead to outcomes"
+    },
+    {
+      "id": 14147,
+      "question": "What does 'time-bound' mean in objective setting?",
+      "options": [
+        "The objective specifies when it should be accomplished",
+        "The objective is timed with a stopwatch",
+        "The objective never expires",
+        "Deadlines are avoided"
+      ],
+      "answer": "The objective specifies when it should be accomplished"
+    },
+    {
+      "id": 14148,
+      "question": "Which activity belongs to the controlling function of management?",
+      "options": [
+        "Comparing results with plans and correcting significant deviations",
+        "Hiring new staff",
+        "Writing the mission statement",
+        "Hosting celebrations"
+      ],
+      "answer": "Comparing results with plans and correcting significant deviations"
+    },
+    {
+      "id": 14149,
+      "question": "What is the risk of setting too many priorities?",
+      "options": [
+        "Effort is spread so thin that nothing receives adequate attention",
+        "Work finishes faster",
+        "Staff become more focused",
+        "Resources multiply"
+      ],
+      "answer": "Effort is spread so thin that nothing receives adequate attention"
+    },
+    {
+      "id": 14150,
+      "question": "Why should program plans reference the resources actually authorized rather than hoped for?",
+      "options": [
+        "Plans based on unavailable resources cannot be executed reliably",
+        "Hope improves budgets",
+        "Authorized resources always grow",
+        "Plans should assume maximum funding"
+      ],
+      "answer": "Plans based on unavailable resources cannot be executed reliably"
+    },
+    {
+      "id": 14151,
+      "question": "What is the value of an after-action review following a major program event?",
+      "options": [
+        "It captures what worked and what did not while memories are fresh",
+        "It assigns punishments",
+        "It delays the next event",
+        "It replaces documentation"
+      ],
+      "answer": "It captures what worked and what did not while memories are fresh"
+    },
+    {
+      "id": 14152,
+      "question": "What is a reasonable interpretation when outputs are on target but outcomes lag?",
+      "options": [
+        "The activities may not be producing the intended change and should be examined",
+        "The program is fully successful",
+        "Outcomes will always lag forever",
+        "Outputs should be reduced"
+      ],
+      "answer": "The activities may not be producing the intended change and should be examined"
+    },
+    {
+      "id": 14153,
+      "question": "Which is a qualitative source of evaluation evidence?",
+      "options": [
+        "Interviews describing participants' experiences",
+        "Counts of services delivered",
+        "Cost figures",
+        "Processing times"
+      ],
+      "answer": "Interviews describing participants' experiences"
+    },
+    {
+      "id": 14154,
+      "question": "Which is a quantitative source of evaluation evidence?",
+      "options": [
+        "Numeric counts of services delivered per month",
+        "Open-ended interview narratives",
+        "General impressions",
+        "Unstructured observations"
+      ],
+      "answer": "Numeric counts of services delivered per month"
+    },
+    {
+      "id": 14155,
+      "question": "Why can combining qualitative and quantitative evidence strengthen an evaluation?",
+      "options": [
+        "Numbers show the extent of change while narratives explain how and why",
+        "Only one type is ever valid",
+        "Combining data confuses readers",
+        "Narratives replace numbers"
+      ],
+      "answer": "Numbers show the extent of change while narratives explain how and why"
+    },
+    {
+      "id": 14156,
+      "question": "What should a recommendation section of an evaluation report contain?",
+      "options": [
+        "Actionable suggestions that follow logically from the findings",
+        "Unrelated proposals",
+        "Only praise",
+        "A restatement of the budget"
+      ],
+      "answer": "Actionable suggestions that follow logically from the findings"
+    },
+    {
+      "id": 14157,
+      "question": "What is the purpose of defining data collection responsibilities?",
+      "options": [
+        "To ensure needed data are gathered consistently by accountable persons",
+        "To reduce data quality",
+        "To limit access to findings",
+        "To assign blame in advance"
+      ],
+      "answer": "To ensure needed data are gathered consistently by accountable persons"
+    },
+    {
+      "id": 14158,
+      "question": "A program plan includes activities with no connection to any objective. What should a reviewer conclude?",
+      "options": [
+        "Those activities may waste resources and should be justified or removed",
+        "All activities are automatically justified",
+        "Objectives should be deleted",
+        "More unrelated activities are needed"
+      ],
+      "answer": "Those activities may waste resources and should be justified or removed"
+    },
+    {
+      "id": 14159,
+      "question": "How do standard operating procedures support new-staff onboarding?",
+      "options": [
+        "They give new staff reliable guidance on how work is performed",
+        "They replace all training",
+        "They are read only by managers",
+        "They prevent questions"
+      ],
+      "answer": "They give new staff reliable guidance on how work is performed"
+    },
+    {
+      "id": 14160,
+      "question": "Why should evaluators guard against confirmation bias?",
+      "options": [
+        "Seeking only evidence that supports expectations distorts conclusions",
+        "Bias speeds analysis",
+        "Expectations are always correct",
+        "Bias affects only surveys"
+      ],
+      "answer": "Seeking only evidence that supports expectations distorts conclusions"
+    },
+    {
+      "id": 14161,
+      "question": "What is the purpose of a communication plan for a program rollout?",
+      "options": [
+        "To ensure the right information reaches the right audiences at the right time",
+        "To restrict all information",
+        "To advertise unrelated services",
+        "To replace training"
+      ],
+      "answer": "To ensure the right information reaches the right audiences at the right time"
+    },
+    {
+      "id": 14162,
+      "question": "What is a key feature of continuous improvement?",
+      "options": [
+        "Regularly using performance information to make incremental refinements",
+        "Changing everything at once",
+        "Avoiding measurement",
+        "Waiting for annual reviews only"
+      ],
+      "answer": "Regularly using performance information to make incremental refinements"
+    },
+    {
+      "id": 14163,
+      "question": "What does effectiveness measure?",
+      "options": [
+        "The degree to which intended results are achieved",
+        "The volume of resources used",
+        "The speed of spending",
+        "The size of the staff"
+      ],
+      "answer": "The degree to which intended results are achieved"
+    },
+    {
+      "id": 14164,
+      "question": "Which planning step logically follows setting objectives?",
+      "options": [
+        "Designing activities and allocating resources to achieve the objectives",
+        "Writing the final evaluation",
+        "Disbanding the planning team",
+        "Announcing results"
+      ],
+      "answer": "Designing activities and allocating resources to achieve the objectives"
+    },
+    {
+      "id": 14165,
+      "question": "Why should major program changes be documented?",
+      "options": [
+        "Later analysis can account for the changes when interpreting results",
+        "Documentation prevents any change",
+        "Changes are self-explanatory",
+        "Only budgets need records"
+      ],
+      "answer": "Later analysis can account for the changes when interpreting results"
+    },
+    {
+      "id": 14166,
+      "question": "What is a workload analysis used for in planning?",
+      "options": [
+        "Estimating staffing needed to handle expected volumes of work",
+        "Ranking employees for promotion",
+        "Setting office temperatures",
+        "Designing logos"
+      ],
+      "answer": "Estimating staffing needed to handle expected volumes of work"
+    },
+    {
+      "id": 14167,
+      "question": "A pilot succeeded in one office but conditions differ elsewhere. What is the prudent next step?",
+      "options": [
+        "Assess which conditions mattered and adapt the rollout accordingly",
+        "Assume identical results everywhere",
+        "Cancel the expansion",
+        "Repeat the same pilot indefinitely"
+      ],
+      "answer": "Assess which conditions mattered and adapt the rollout accordingly"
+    },
+    {
+      "id": 14168,
+      "question": "What is the primary purpose of periodic program reviews by management?",
+      "options": [
+        "To verify progress, address obstacles, and reallocate resources as needed",
+        "To satisfy curiosity",
+        "To reward attendance",
+        "To postpone decisions"
+      ],
+      "answer": "To verify progress, address obstacles, and reallocate resources as needed"
+    },
+    {
+      "id": 14169,
+      "question": "Which condition most supports valid before-and-after comparisons?",
+      "options": [
+        "Measuring the same indicators the same way at both points",
+        "Changing measures midstream",
+        "Using different populations",
+        "Recording only the after results"
+      ],
+      "answer": "Measuring the same indicators the same way at both points"
+    },
+    {
+      "id": 14170,
+      "question": "Why is it important to distinguish symptoms from underlying causes in problem analysis?",
+      "options": [
+        "Treating symptoms alone allows the underlying problem to persist",
+        "Symptoms are more important",
+        "Causes cannot be addressed",
+        "Analysis is unnecessary"
+      ],
+      "answer": "Treating symptoms alone allows the underlying problem to persist"
+    },
+    {
+      "id": 14171,
+      "question": "What is the benefit of expressing targets numerically where possible?",
+      "options": [
+        "Progress can be tracked precisely and objectively",
+        "Numbers impress readers",
+        "Numeric targets never change",
+        "Words are always misleading"
+      ],
+      "answer": "Progress can be tracked precisely and objectively"
+    },
+    {
+      "id": 14172,
+      "question": "What does program integrity refer to during implementation?",
+      "options": [
+        "Delivering the program as designed so results reflect the intended model",
+        "The honesty of participants only",
+        "The building's structural condition",
+        "The report's binding"
+      ],
+      "answer": "Delivering the program as designed so results reflect the intended model"
+    },
+    {
+      "id": 14173,
+      "question": "Why does poor fidelity to program design complicate evaluation?",
+      "options": [
+        "Weak results may reflect poor delivery rather than a flawed model",
+        "Fidelity has no effect",
+        "Evaluation becomes unnecessary",
+        "Strong results become impossible"
+      ],
+      "answer": "Weak results may reflect poor delivery rather than a flawed model"
+    },
+    {
+      "id": 14174,
+      "question": "What is the purpose of an issue log during implementation?",
+      "options": [
+        "To record problems, assignments, and resolution status",
+        "To criticize staff publicly",
+        "To replace status meetings",
+        "To archive old plans"
+      ],
+      "answer": "To record problems, assignments, and resolution status"
+    },
+    {
+      "id": 14175,
+      "question": "Which approach best supports realistic budget estimates?",
+      "options": [
+        "Basing estimates on actual costs of similar past activities",
+        "Guessing generously",
+        "Halving every estimate",
+        "Ignoring inflation"
+      ],
+      "answer": "Basing estimates on actual costs of similar past activities"
+    },
+    {
+      "id": 14176,
+      "question": "What is the primary value of program objectives to evaluators?",
+      "options": [
+        "They define what success looks like and what to measure",
+        "They limit the evaluation budget",
+        "They identify staff to interview",
+        "They format the report"
+      ],
+      "answer": "They define what success looks like and what to measure"
+    },
+    {
+      "id": 14177,
+      "question": "What does 'relevant' mean in the context of a SMART objective?",
+      "options": [
+        "The objective contributes meaningfully to the program's goals and mission",
+        "The objective is recent",
+        "The objective relates to any topic",
+        "The objective repeats the mission verbatim"
+      ],
+      "answer": "The objective contributes meaningfully to the program's goals and mission"
+    },
+    {
+      "id": 14178,
+      "question": "What is a program evaluation's audience most likely to need first?",
+      "options": [
+        "A clear summary of key findings and their implications",
+        "Every raw data table",
+        "The evaluator's biography",
+        "A list of all meetings held"
+      ],
+      "answer": "A clear summary of key findings and their implications"
+    },
+    {
+      "id": 14179,
+      "question": "Which practice improves the usefulness of monitoring data?",
+      "options": [
+        "Reviewing it regularly and acting on what it shows",
+        "Collecting it and filing it unread",
+        "Collecting it only once",
+        "Restricting access to it"
+      ],
+      "answer": "Reviewing it regularly and acting on what it shows"
+    },
+    {
+      "id": 14180,
+      "question": "What should determine the frequency of progress reporting?",
+      "options": [
+        "The pace of the work and the needs of decision-makers",
+        "A fixed universal rule",
+        "Staff preference alone",
+        "The length of the report template"
+      ],
+      "answer": "The pace of the work and the needs of decision-makers"
+    },
+    {
+      "id": 14181,
+      "question": "What is the danger of announcing results before verification?",
+      "options": [
+        "Errors may be publicized, damaging credibility and decisions",
+        "Verification is a formality",
+        "Early announcements are always accurate",
+        "There is no danger"
+      ],
+      "answer": "Errors may be publicized, damaging credibility and decisions"
+    },
+    {
+      "id": 14182,
+      "question": "A unit resists providing data needed for evaluation. What is the best initial approach?",
+      "options": [
+        "Explain the purpose and address the unit's concerns about the data's use",
+        "Demand compliance without explanation",
+        "Fabricate the missing data",
+        "Exclude the unit from findings silently"
+      ],
+      "answer": "Explain the purpose and address the unit's concerns about the data's use"
+    },
+    {
+      "id": 14183,
+      "question": "What is the central idea of results-based management?",
+      "options": [
+        "Decisions and resources are guided by evidence about outcomes achieved",
+        "Activities matter more than results",
+        "Budgets are set randomly",
+        "Reports replace results"
+      ],
+      "answer": "Decisions and resources are guided by evidence about outcomes achieved"
+    },
+    {
+      "id": 14184,
+      "question": "Why should a program's design consider how results will be sustained after initial funding?",
+      "options": [
+        "Benefits may end abruptly if continuation is not planned",
+        "Initial funding lasts forever",
+        "Sustainability is never a concern",
+        "Programs should always end quickly"
+      ],
+      "answer": "Benefits may end abruptly if continuation is not planned"
+    },
+    {
+      "id": 14185,
+      "question": "What is the value of comparing planned versus actual spending during implementation?",
+      "options": [
+        "Financial variances can signal problems needing management attention",
+        "Spending never varies",
+        "Comparisons replace audits",
+        "It is required only at year end"
+      ],
+      "answer": "Financial variances can signal problems needing management attention"
+    },
+    {
+      "id": 14186,
+      "question": "Which describes an appropriate use of client satisfaction data?",
+      "options": [
+        "As one source of evidence alongside outcome and process measures",
+        "As the sole measure of program success",
+        "As a replacement for objectives",
+        "As data to collect but ignore"
+      ],
+      "answer": "As one source of evidence alongside outcome and process measures"
+    },
+    {
+      "id": 14187,
+      "question": "What is the purpose of defining terms in an evaluation plan?",
+      "options": [
+        "To ensure everyone measures and interprets concepts the same way",
+        "To lengthen the document",
+        "To confuse readers",
+        "To restrict findings"
+      ],
+      "answer": "To ensure everyone measures and interprets concepts the same way"
+    },
+    {
+      "id": 14188,
+      "question": "A manager must implement a mandated change staff dislike. What planning step is most important?",
+      "options": [
+        "Planning communication and support to help staff transition successfully",
+        "Delaying indefinitely",
+        "Concealing the mandate",
+        "Blaming leadership"
+      ],
+      "answer": "Planning communication and support to help staff transition successfully"
+    },
+    {
+      "id": 14189,
+      "question": "What does the planning function of management primarily involve?",
+      "options": [
+        "Setting objectives and determining how to achieve them",
+        "Disciplining employees",
+        "Filing records",
+        "Conducting exit interviews"
+      ],
+      "answer": "Setting objectives and determining how to achieve them"
+    },
+    {
+      "id": 14190,
+      "question": "What does the organizing function of management primarily involve?",
+      "options": [
+        "Arranging people, tasks, and resources to carry out plans",
+        "Setting long-term goals only",
+        "Evaluating final outcomes",
+        "Writing public notices"
+      ],
+      "answer": "Arranging people, tasks, and resources to carry out plans"
+    },
+    {
+      "id": 14191,
+      "question": "Why should evaluation questions be limited in number?",
+      "options": [
+        "Focused questions allow deeper, more useful answers within resources",
+        "More questions always mean better evaluation",
+        "Questions are decorative",
+        "Limits prevent all learning"
+      ],
+      "answer": "Focused questions allow deeper, more useful answers within resources"
+    },
+    {
+      "id": 14192,
+      "question": "Which describes a baseline measurement?",
+      "options": [
+        "A measurement taken before the program begins or a change is made",
+        "The final measurement",
+        "An average of all measurements",
+        "A target value"
+      ],
+      "answer": "A measurement taken before the program begins or a change is made"
+    },
+    {
+      "id": 14193,
+      "question": "What does trend analysis of program data reveal?",
+      "options": [
+        "Direction of change over time, such as improvement or decline",
+        "Single-day results only",
+        "Staff opinions",
+        "Future results with certainty"
+      ],
+      "answer": "Direction of change over time, such as improvement or decline"
+    },
+    {
+      "id": 14194,
+      "question": "What is the appropriate response when two indicators give conflicting signals?",
+      "options": [
+        "Investigate why they differ before drawing conclusions",
+        "Report only the favorable indicator",
+        "Discard both indicators",
+        "Assume both are wrong"
+      ],
+      "answer": "Investigate why they differ before drawing conclusions"
+    },
+    {
+      "id": 14195,
+      "question": "Why is it helpful to pilot data collection instruments before full use?",
+      "options": [
+        "Confusing questions and errors can be fixed before affecting all data",
+        "Pilots waste time",
+        "Instruments never have flaws",
+        "Full use reveals nothing"
+      ],
+      "answer": "Confusing questions and errors can be fixed before affecting all data"
+    },
+    {
+      "id": 14196,
+      "question": "What is a practical benefit of setting a review date when adopting a new procedure?",
+      "options": [
+        "The procedure's performance will be formally reconsidered at a known time",
+        "Reviews become impossible",
+        "The procedure becomes permanent automatically",
+        "Staff forget the procedure"
+      ],
+      "answer": "The procedure's performance will be formally reconsidered at a known time"
+    },
+    {
+      "id": 14197,
+      "question": "What principle underlies allocating resources according to program priorities?",
+      "options": [
+        "Resources should go where they contribute most to important objectives",
+        "All units deserve identical amounts",
+        "Historical shares must never change",
+        "The newest program always gets the most"
+      ],
+      "answer": "Resources should go where they contribute most to important objectives"
+    },
+    {
+      "id": 14198,
+      "question": "Which is a warning sign that a plan's schedule is unrealistic?",
+      "options": [
+        "Tasks are consistently completed late from the very start",
+        "Milestones are being met",
+        "Staff report adequate time",
+        "Dependencies are documented"
+      ],
+      "answer": "Tasks are consistently completed late from the very start"
+    },
+    {
+      "id": 14199,
+      "question": "What is the purpose of defining a minimum acceptable performance level?",
+      "options": [
+        "To identify when results fall below what the agency can tolerate",
+        "To cap maximum performance",
+        "To discourage improvement",
+        "To replace targets"
+      ],
+      "answer": "To identify when results fall below what the agency can tolerate"
+    }
+  ]
+}
