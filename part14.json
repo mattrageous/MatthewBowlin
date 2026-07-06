@@ -57,14 +57,14 @@
     },
     {
       "id": 14005,
-      "question": "What is a key advantage of piloting a new procedure before agency-wide rollout?",
+      "question": "What distinguishes strategic planning from operational planning?",
       "options": [
-        "Problems can be identified and corrected on a small scale",
-        "It guarantees the procedure will succeed",
-        "It eliminates the need for staff training",
-        "It shortens the planning process"
+        "Strategic planning sets long-term direction, while operational planning details how day-to-day work will achieve it",
+        "Strategic planning covers daily tasks, while operational planning sets the mission",
+        "They are two names for the same activity",
+        "Operational planning is done only by outside consultants"
       ],
-      "answer": "Problems can be identified and corrected on a small scale"
+      "answer": "Strategic planning sets long-term direction, while operational planning details how day-to-day work will achieve it"
     },
     {
       "id": 14006,
@@ -376,14 +376,14 @@
     },
     {
       "id": 14034,
-      "question": "What is a key benefit of incremental implementation?",
+      "question": "Why are long-range plans generally less detailed than short-range plans?",
       "options": [
-        "Adjustments can be made based on early experience",
-        "It guarantees no resistance",
-        "It requires no planning",
-        "It hides problems from leadership"
+        "Uncertainty increases over time, so distant activities cannot be specified precisely",
+        "Long-range plans are less important",
+        "Detail is prohibited in long-range plans",
+        "Short-range plans have no deadlines"
       ],
-      "answer": "Adjustments can be made based on early experience"
+      "answer": "Uncertainty increases over time, so distant activities cannot be specified precisely"
     },
     {
       "id": 14035,
@@ -618,7 +618,7 @@
     },
     {
       "id": 14056,
-      "question": "What does 'span of program' feasibility depend on most directly?",
+      "question": "What does program feasibility depend on most directly?",
       "options": [
         "Available staff, funding, time, and organizational capacity",
         "The program's title",
@@ -1025,14 +1025,14 @@
     },
     {
       "id": 14093,
-      "question": "When should evaluation planning begin?",
+      "question": "What is the purpose of an evaluability assessment?",
       "options": [
-        "During program design, so needed data can be collected from the start",
-        "After the program ends",
-        "Only when problems occur",
-        "Never before implementation"
+        "To determine whether a program is ready and able to be meaningfully evaluated",
+        "To calculate the final program score",
+        "To rank evaluators by experience",
+        "To decide the program's budget"
       ],
-      "answer": "During program design, so needed data can be collected from the start"
+      "answer": "To determine whether a program is ready and able to be meaningfully evaluated"
     },
     {
       "id": 14094,
@@ -1102,14 +1102,14 @@
     },
     {
       "id": 14100,
-      "question": "What is the purpose of documenting program procedures?",
+      "question": "What is the central idea of management by objectives?",
       "options": [
-        "To preserve consistent practice and support training and review",
-        "To increase secrecy",
-        "To replace staff judgment entirely",
-        "To satisfy no purpose"
+        "Supervisors and staff jointly set measurable objectives and assess performance against them",
+        "Managers set objectives in secret",
+        "Objectives replace all supervision",
+        "Performance is judged on effort alone"
       ],
-      "answer": "To preserve consistent practice and support training and review"
+      "answer": "Supervisors and staff jointly set measurable objectives and assess performance against them"
     },
     {
       "id": 14101,
@@ -1146,14 +1146,14 @@
     },
     {
       "id": 14104,
-      "question": "How do clear milestones help manage a long project?",
+      "question": "What does a schedule chart that displays each task as a bar across a calendar primarily show?",
       "options": [
-        "They break the work into checkpoints where progress can be verified",
-        "They make the project longer",
-        "They replace the final goal",
-        "They apply only to budgets"
+        "When each activity starts and ends and how activities overlap in time",
+        "The cost of each activity",
+        "The names of program participants",
+        "The quality of completed work"
       ],
-      "answer": "They break the work into checkpoints where progress can be verified"
+      "answer": "When each activity starts and ends and how activities overlap in time"
     },
     {
       "id": 14105,
@@ -1212,14 +1212,14 @@
     },
     {
       "id": 14110,
-      "question": "Which factor most supports successful adoption of a new program by staff?",
+      "question": "When is a proxy indicator appropriately used?",
       "options": [
-        "Understanding the purpose and receiving adequate training and support",
-        "Strict penalties alone",
-        "Minimal information",
-        "Frequent unexplained changes"
+        "When the outcome of interest cannot be measured directly and a related measure must stand in for it",
+        "When direct measurement is easy and cheap",
+        "When no measurement is wanted",
+        "When results must be kept private"
       ],
-      "answer": "Understanding the purpose and receiving adequate training and support"
+      "answer": "When the outcome of interest cannot be measured directly and a related measure must stand in for it"
     },
     {
       "id": 14111,
@@ -1234,14 +1234,14 @@
     },
     {
       "id": 14112,
-      "question": "What does a gap analysis compare?",
+      "question": "What is the purpose of scanning internal capacities and external conditions before planning?",
       "options": [
-        "Current performance or conditions with desired performance or conditions",
-        "Two unrelated programs",
-        "Staff salaries",
-        "Office locations"
+        "To ground the plan in a realistic picture of strengths, weaknesses, and outside factors that affect success",
+        "To delay planning as long as possible",
+        "To copy another agency's plan",
+        "To eliminate the need for objectives"
       ],
-      "answer": "Current performance or conditions with desired performance or conditions"
+      "answer": "To ground the plan in a realistic picture of strengths, weaknesses, and outside factors that affect success"
     },
     {
       "id": 14113,
@@ -1465,14 +1465,14 @@
     },
     {
       "id": 14133,
-      "question": "What is the purpose of a variance report?",
+      "question": "What does economy refer to in assessing program operations?",
       "options": [
-        "To show differences between planned and actual performance",
-        "To list staff grievances",
-        "To describe office layouts",
-        "To announce new programs"
+        "Acquiring needed resources of appropriate quality at the lowest reasonable cost",
+        "Producing the greatest possible outputs",
+        "Achieving all program objectives",
+        "Spending the entire budget each year"
       ],
-      "answer": "To show differences between planned and actual performance"
+      "answer": "Acquiring needed resources of appropriate quality at the lowest reasonable cost"
     },
     {
       "id": 14134,
@@ -1850,14 +1850,14 @@
     },
     {
       "id": 14168,
-      "question": "What is the primary purpose of periodic program reviews by management?",
+      "question": "Why might an evaluation examine a representative sample of cases rather than every case?",
       "options": [
-        "To verify progress, address obstacles, and reallocate resources as needed",
-        "To satisfy curiosity",
-        "To reward attendance",
-        "To postpone decisions"
+        "A well-chosen sample can support sound conclusions at far lower cost and effort",
+        "Samples always give more accurate results than full counts",
+        "Examining every case is prohibited",
+        "Samples eliminate the need for analysis"
       ],
-      "answer": "To verify progress, address obstacles, and reallocate resources as needed"
+      "answer": "A well-chosen sample can support sound conclusions at far lower cost and effort"
     },
     {
       "id": 14169,
@@ -2026,14 +2026,14 @@
     },
     {
       "id": 14184,
-      "question": "Why should a program's design consider how results will be sustained after initial funding?",
+      "question": "Why must evaluators protect the confidentiality of participant information?",
       "options": [
-        "Benefits may end abruptly if continuation is not planned",
-        "Initial funding lasts forever",
-        "Sustainability is never a concern",
-        "Programs should always end quickly"
+        "To meet ethical and legal obligations and maintain the trust needed for honest participation",
+        "To make findings impossible to verify",
+        "To increase the report's length",
+        "Confidentiality applies only to financial data"
       ],
-      "answer": "Benefits may end abruptly if continuation is not planned"
+      "answer": "To meet ethical and legal obligations and maintain the trust needed for honest participation"
     },
     {
       "id": 14185,
@@ -2059,25 +2059,25 @@
     },
     {
       "id": 14187,
-      "question": "What is the purpose of defining terms in an evaluation plan?",
+      "question": "Why should evaluation results be communicated differently to different audiences?",
       "options": [
-        "To ensure everyone measures and interprets concepts the same way",
-        "To lengthen the document",
-        "To confuse readers",
-        "To restrict findings"
+        "Decision-makers, staff, and the public need different levels of detail and emphasis to use the findings",
+        "Each audience should receive different conclusions",
+        "Only one audience may see results",
+        "Communication format never matters"
       ],
-      "answer": "To ensure everyone measures and interprets concepts the same way"
+      "answer": "Decision-makers, staff, and the public need different levels of detail and emphasis to use the findings"
     },
     {
       "id": 14188,
-      "question": "A manager must implement a mandated change staff dislike. What planning step is most important?",
+      "question": "What is the purpose of forecasting future demand during program planning?",
       "options": [
-        "Planning communication and support to help staff transition successfully",
-        "Delaying indefinitely",
-        "Concealing the mandate",
-        "Blaming leadership"
+        "To size staffing, budgets, and capacity to the workload the program is likely to face",
+        "To guarantee demand will not change",
+        "To justify eliminating the program",
+        "To replace monitoring of actual demand"
       ],
-      "answer": "Planning communication and support to help staff transition successfully"
+      "answer": "To size staffing, budgets, and capacity to the workload the program is likely to face"
     },
     {
       "id": 14189,
@@ -2169,14 +2169,14 @@
     },
     {
       "id": 14197,
-      "question": "What principle underlies allocating resources according to program priorities?",
+      "question": "What is the core idea of requiring programs to periodically justify their activities rather than assuming continuation?",
       "options": [
-        "Resources should go where they contribute most to important objectives",
-        "All units deserve identical amounts",
-        "Historical shares must never change",
-        "The newest program always gets the most"
+        "Ongoing activities should demonstrate continued need and value to retain resources",
+        "All existing programs must end every year",
+        "New programs never require justification",
+        "Justification applies only to new staff"
       ],
-      "answer": "Resources should go where they contribute most to important objectives"
+      "answer": "Ongoing activities should demonstrate continued need and value to retain resources"
     },
     {
       "id": 14198,
