@@ -1,0 +1,10 @@
+Scenario,Bandwidth result,Horn result,Verdict,Interpretation
+Broad cosmic source + linear propagation effects,0.9997227923687568,Steady signal repeats unless propagation changes it,Rejected by bandwidth,"The time trace is easy to mimic, but adjacent channels remain almost equally bright."
+Intrinsically narrow cosmic transient + propagation effects,0.009440792600990785,Passes if it fades by >14.8 dB,Physically possible,"Exponential fading needs tau < 50.4 s, or switch-off during the ~105 s window."
+Steady narrow celestial source with strong scintillation,0.009440792600990785,Propagation can suppress the second horn,Possible but propagation-dependent,"In a toy fully developed scintillation model, the decorrelated limit gives a 3.17% chance of a >14.8 dB drop."
+3-30 MHz OTH signals through linear or low-order nonlinear path,,No 1420 MHz low-order product,Rejected,Second- and third-order positive products top out at 90 MHz.
+Very-high-order harmonic from a single OTH/HF carrier,0.009440792600990785,Still needs favorable coupling geometry,"Mathematically possible, physically strained",At least harmonic order 48 is required from 30 MHz.
+Two strong UHF tones create IM2/IM3 in nonlinear electronics,0.009440792600990785,Conditional on nonlinear stage and sidelobe coupling,Live instrumental-artifact pathway,Radiometer-corrected target is -148.8 dBm; IIP3=-10 dBm needs ~-56.3 dBm per tone.
+Symmetric terrestrial RFI in both horn paths,,Strongly cancelled by differencing,Strongly constrained,Near-equal horn coupling requires an enormous common signal to leave 30.5 sigma residual.
+Asymmetric sidelobe RFI,,Can favor one feed by many dB,Only weakly constrained by horn differencing,"With 10-20 dB power-coupling asymmetry, the stronger path need only be about 31-34 sigma."
+Continuous narrow celestial source without propagation modulation,0.009440792600990785,Predicts ~30.5 sigma again,Rejected only if steady and unmodulated,The one-horn result excludes persistence only when scintillation or other propagation fading is absent.

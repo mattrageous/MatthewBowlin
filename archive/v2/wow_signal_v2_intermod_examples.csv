@@ -1,0 +1,4 @@
+Product,f1_MHz,f2_MHz,output_MHz,frequency_error_Hz
+Second order: f1 + f2,700.0,720.726,1420.726,0.0
+Third order: 2f1 - f2,900.0,379.274,1420.726,0.0
+Third order: 2f2 - f1,179.274,800.0,1420.726,0.0

@@ -1,0 +1,131 @@
+WOW! SIGNAL COMBINED-EFFECTS SIMULATION — VERSION 3
+===================================================
+
+Corrections from version 2
+--------------------------
+1. Converts Big Ear's 30.5 post-detection sigma through the radiometer equation
+   instead of treating it as 30.5 times the instantaneous RF noise power.
+2. Adds strong interstellar-scintillation fading as an escape from the second-
+   horn expectation for a steady compact narrowband source.
+3. Replaces the fragile common-mode premise with an explicit sidelobe-coupling
+   asymmetry sweep.
+
+Radiometer-corrected spur target
+--------------------------------
+System temperature: 100.0 K
+Bandwidth: 10000 Hz
+Integration time: 10.0 s
+sqrt(B*tau): 316.228
+Radiometer sigma temperature: 0.3162 K
+30.5-sigma excess temperature: 9.645 K
+10 kHz RF thermal-noise power: -138.60 dBm
+Signal/RF-noise power ratio: 0.09645
+Signal relative to RF noise: -10.16 dB
+Corrected target spur power: -148.76 dBm
+
+Version 2 incorrectly used +14.84 dB and targeted
+-123.76 dBm. That was a factor-of-hundreds power error.
+
+At IIP3=-10.0 dBm:
+- v2 per-tone IM3 requirement: -47.92 dBm
+- corrected per-tone requirement: -56.25 dBm
+- correction: -8.33 dB
+
+At IIP2=20.0 dBm:
+- v2 per-tone IM2 requirement: -51.88 dBm
+- corrected per-tone requirement: -64.38 dBm
+- correction: -12.50 dB
+
+This materially strengthens the nonlinear-RFI pathway. The tones still need to
+be strong at the nonlinear stage, but not as extreme as version 2 claimed.
+
+Bandwidth and OTH result
+------------------------
+Broad 1 MHz source adjacent/peak ratio: 0.999723
+Narrow 5 kHz source adjacent/peak ratio: 0.009441
+
+Linear propagation still cannot compress broadband emission. Two 3-30 MHz OTH
+signals still top out at 90 MHz through ordinary
+third-order positive products, so that specific low-order route remains closed.
+
+One-horn result: intrinsic transient
+------------------------------------
+Horn separation: 172.37 s
+Required drop: 14.84 dB
+Maximum intrinsic exponential decay time: 50.43 s
+Available top-hat shutoff window: 104.90 s
+
+A short transient passes cleanly.
+
+One-horn result: steady source plus scintillation
+-------------------------------------------------
+A steady and unmodulated source would predict another 30.5-sigma
+response. That statement is not absolute once propagation fading is allowed.
+
+The toy fully developed scintillation model asks for a horn-to-horn intensity
+ratio below 0.03279. In the fully decorrelated limit, the
+probability is 3.17% per paired observation.
+For longer correlation times, the simulated probability falls as the two horn
+measurements become more alike.
+
+This does not establish that the Wow line of sight had the necessary scattering
+regime. It does show that 'steady source' is rejected only when it is also
+assumed to be unmodulated by propagation.
+
+Horn differencing and sidelobes
+-------------------------------
+Near-symmetric RFI is strongly cancelled. The required stronger-path levels are:
+ weaker_to_stronger_power_ratio  sidelobe_asymmetry_dB  required_stronger_horn_RFI_SNR
+                       0.999000               0.004345                    30500.000000
+                       0.990000               0.043648                     3050.000000
+                       0.500000               3.010300                       61.000000
+                       0.100000              10.000000                       33.888889
+                       0.031623              14.999997                       31.495991
+                       0.010000              20.000000                       30.808081
+                       0.001000              30.000000                       30.530531
+
+The table makes the premise visible. A 1% mismatch between nearly equal horn
+responses demands thousands of sigma. But 10-20 dB sidelobe power asymmetry
+requires only about 31-34 sigma in the stronger path. Therefore horn differencing
+strongly constrains symmetric RFI, while highly directional/asymmetric sidelobe
+entry is only weakly constrained.
+
+Gravity and motion
+------------------
+Static Earth/Sun/Moon potential scale: 15.013096 Hz
+Time-varying gravity upper bound over 72 s: 0.000006753 Hz
+Rotation/orbit drift scale over 72 s: 10.844759 Hz
+
+Static gravity is common-mode; differential gravity is microscopic.
+
+Version 3 verdict
+-----------------
+CLEAN PASS:
+An intrinsically narrow short-lived cosmic transient.
+
+LIVE CONDITIONAL:
+Two high-frequency tones producing an IM2/IM3 spur in nonlinear electronics.
+The corrected radiometer conversion makes this more permissive than v2.
+
+LIVE CONDITIONAL:
+A steady compact narrowband celestial source undergoing sufficiently deep
+interstellar scintillation between horn passages.
+
+STRONGLY CONSTRAINED, NOT GENERALLY EXCLUDED:
+Terrestrial RFI. Symmetric coupling cancels, but asymmetric sidelobe coupling
+can evade that protection.
+
+REJECTED:
+Broadband cosmic emission made narrow by linear combinations of gravity,
+ionosphere, Doppler, and overlapping terrestrial waves.
+
+REJECTED FOR ORDINARY LOW-ORDER PRODUCTS:
+Two 3-30 MHz OTH signals mixing directly to 1420.726 MHz.
+
+Limitations
+-----------
+This is still a mechanism-feasibility model, not a posterior probability. The
+scintillation calculation is deliberately generic; it does not reconstruct the
+actual scattering strength or decorrelation time toward the Wow coordinates.
+The RFI calculation lacks measured 1977 filter rejection, sidelobe maps,
+intercept points, local transmitter levels, and raw voltages.

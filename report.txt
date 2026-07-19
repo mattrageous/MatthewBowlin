@@ -1,0 +1,147 @@
+WOW! SIGNAL SIMULATION V5 — CAMPAIGN-BY-CAMPAIGN PERSISTENCE
+=============================================================
+
+Question
+--------
+Could a steady, angularly compact radio source have produced the original
+Wow! peak through strong scintillation and then remained hidden during the
+published follow-up observations?
+
+Model
+-----
+For saturated diffractive scintillation, instantaneous intensity is modeled as
+an exponential random variable with mean S.
+
+Original-event density:
+    f(I_wow | S) = exp(-I_wow/S) / S
+
+One independent follow-up state below threshold L:
+    P(miss | S) = 1 - exp(-L/S)
+
+For N independent states:
+    P(all misses | S) = P(miss | S)^N
+
+The calculation uses the conservative 54 Jy Wow estimate. It is repeated at
+212 Jy as a sensitivity check. A log-uniform prior is used only for the
+illustrative credible intervals; the headline suppression values are maximum
+likelihood ratios relative to fitting the original event alone.
+
+Campaign inputs
+---------------
+campaign_id                        date_label  total_hours  conservative_independent_states  channel_width_hz  threshold_jy  core_10khz_applicable                                confidence
+     BIGEAR                         1977-1984     3.560000                               89          10000.00      8.852459                   True         High for dates; modeled threshold
+       META                     1987 and 1989     8.000000                                2              0.05     10.800000                  False                                  Moderate
+    VLA1995                        1995-09-25     0.333333                                1           6100.00      0.044000                   True                                      High
+    VLA1996                        1996-05-07     0.716667                                1          12200.00      0.029600                   True                                      High
+     HOBART                         1998-1999    84.700000                                6           4880.00     18.000000                   True                                      High
+        ATA Multi-year, through at least 2016   100.000000                               34          12800.00      9.976000                   True High for totals; conservative state count
+     BL2022                        2022-05-21     1.000000                                2              2.79           NaN                  False         High for setup; threshold omitted
+
+Key 54 Jy results
+-----------------
+Big Ear plus the two VLA epochs:
+    best steady mean flux = 3.0314 Jy
+    maximum-likelihood suppression = 10^(
+        -12.0475
+    )
+
+Nominal-position chain through ATA:
+    best steady mean flux = 2.8129 Jy
+    maximum-likelihood suppression = 10^(
+        -12.5431
+    )
+
+Robust full-field chain using only Big Ear and ATA:
+    best steady mean flux = 2.9134 Jy
+    maximum-likelihood suppression = 10^(
+        -8.7339
+    )
+
+The robust chain deliberately discards the VLA and Hobart geometry advantage.
+It still suppresses a fixed-frequency steady scintillating source by roughly
+nine orders of magnitude at its own best-fitting mean flux.
+
+High-flux calibration stress test
+---------------------------------
+At 212 Jy, the nominal-position chain gives:
+    best steady mean flux = 7.9646 Jy
+    maximum-likelihood suppression = 10^(
+        -20.1422
+    )
+
+A brighter original event makes the steady-source explanation less compatible,
+not more.
+
+Why the VLA matters
+-------------------
+The conservative modeled VLA thresholds are 0.0440 Jy in 1995 and 0.0296 Jy
+in 1996, roughly 1,200-1,800 times below the conservative 54 Jy event.
+At the nominal positions, those two deep epochs dominate the test of a weak
+underlying source occasionally boosted by scintillation.
+
+Why ATA matters
+---------------
+ATA covered the full consistent-direction field, used a comparable 12.8 kHz
+channel width, and accumulated more than 100 hours. Since sessions were no
+longer than three hours, at least 34 sessions were required. Treating each
+whole session as only one independent scintillation state is intentionally
+conservative.
+
+Periodic alias caveat
+---------------------
+The Big Ear-only periodic test uses the published 90 visit dates and assumes
+the telescope sampled the source at the same local sidereal time. The fraction
+of periods from 1-48 hours producing zero predicted repeats is:
+
+ pulse_duration_s  survives_bigear_only
+            144.0              0.795817
+            288.0              0.590300
+
+These results show substantial periodic alias space for short pulses. The
+surviving phase intervals can be narrow but numerous; they are not evidence
+for periodicity. Dedicated tracking campaigns at other local sidereal times
+are valuable because they break this same-time sampling pattern.
+
+Constant frequency-drift caveat
+-------------------------------
+A toy monotonic chirp can leave each historical receiver band. In this simple
+model, the combined fixed-frequency constraint begins weakening above roughly
+0.0917806 Hz/s. This is not a normal steady spectral line: maintaining
+one-signed drift for years or decades is a different source hypothesis, and
+large drift also changes how each observing pipeline would integrate the line.
+
+Verdict
+-------
+EFFECTIVELY REJECTED, WITH EXPLICIT CONDITIONS:
+A continuously emitting, fixed-frequency, compact source whose only
+intermittency is ordinary strong scintillation, provided it lay in the
+published search region and retained a Wow-like frequency and bandwidth.
+
+STILL LIVE:
+An intrinsically one-time transient.
+A low-duty-cycle or stochastic repeater.
+A source that changed frequency substantially between campaigns.
+A source outside the partial fields of the earlier narrow-field campaigns,
+although ATA covered the full reconstructed field.
+A nonlinear instrumental or asymmetric-sidelobe artifact.
+
+NOT RESCUED:
+An extended or broadband source. Deep diffractive scintillation requires a
+compact emitter and does not repair the bandwidth failure.
+
+Limitations
+-----------
+1. The 5-sigma Big Ear follow-up threshold is a model assumption and is swept
+   indirectly through the supplied script constants.
+2. Independent scintillation states are counted conservatively by visit-day or
+   observing session, not by every integration.
+3. The VLA result applies most cleanly at the two nominal positions. The
+   Big Ear+ATA chain is reported separately to avoid overstating older spatial
+   coverage.
+4. META is only applicable to an ultra-narrow Doppler-corrected source and is
+   excluded from the 10 kHz natural-line chain.
+5. The frequency-drift module assumes a constant one-signed secular chirp and
+   does not reproduce every pipeline's drift-search response.
+6. A complete historical posterior would require raw observation start/stop
+   times, exact per-session thresholds, frequency masks, RFI excision masks,
+   and the full ATA session log.

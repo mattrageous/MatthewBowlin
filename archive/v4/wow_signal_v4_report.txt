@@ -1,0 +1,145 @@
+WOW! SIGNAL COMBINED-EFFECTS SIMULATION — VERSION 4
+===================================================
+
+What Version 4 adds
+-------------------
+Version 4 adds the missing persistence constraint. The second horn is only one
+follow-up opportunity; later re-observations are much more damaging to a steady
+source. This module uses 192 hours as a published aggregate benchmark for META,
+Hobart and ATA follow-up, but treats coverage and sensitivity as adjustable.
+
+Compactness gate
+----------------
+The one-horn scintillation probability from V3 is 3.175% in the fully
+decorrelated toy limit. That escape hatch is not generic. Deep scintillation is
+quenched when the source is extended compared with the relevant interference
+angle.
+
+At 1420.726 MHz, illustrative Fresnel angular scales are:
+
+ screen_distance_kpc  fresnel_angle_microarcsec
+                 0.1                  21.518655
+                 0.3                  12.423801
+                 1.0                   6.804796
+                 3.0                   3.928751
+                10.0                   2.151865
+
+These microarcsecond-scale values mean that deep scintillation is naturally
+associated with compact emitting regions. It does not rescue an extended
+broadband collision or ordinary diffuse thermal source.
+
+Steady compact source
+---------------------
+Assuming independent scintillation states with per-epoch miss probability
+p=0.031746:
+
+1 follow-up miss: 3.174603e-02
+2 follow-up misses: 1.007811e-03
+3 follow-up misses: 3.199399e-05
+5 follow-up misses: 3.224388e-08
+10 follow-up misses: 1.039667e-15
+
+Therefore a continuously emitting compact source is nearly rejected after only
+a few genuinely independent, adequately covered observations. Correlation can
+weaken this result, but years-separated campaigns should not automatically be
+treated as one scintillation state. The correlation plot is a stress test, not
+a fitted physical model.
+
+Duty-cycle model
+----------------
+Per effective epoch:
+
+P(detection) = duty_cycle × sky/frequency coverage × sensitivity
+               × drift coverage × scintillation detection probability
+
+The representative efficiency used in the heat map is:
+coverage=0.50,
+sensitivity=0.80,
+drift/frequency coverage=0.80,
+scintillation detection=0.9683.
+
+For 20 independent epochs and 50% coverage, the 95% upper duty-cycle bound is
+0.4490.
+
+The full duty-cycle limits are:
+
+ independent_epochs  coverage  sensitivity  frequency_drift_coverage  scintillation_detection_probability  duty_cycle_95pct_upper
+                  3      0.25          0.8                       0.8                             0.968254                1.000000
+                  3      0.50          0.8                       0.8                             0.968254                1.000000
+                  3      0.75          0.8                       0.8                             0.968254                1.000000
+                  3      1.00          0.8                       0.8                             0.968254                1.000000
+                  5      0.25          0.8                       0.8                             0.968254                1.000000
+                  5      0.50          0.8                       0.8                             0.968254                1.000000
+                  5      0.75          0.8                       0.8                             0.968254                0.969786
+                  5      1.00          0.8                       0.8                             0.968254                0.727340
+                 10      0.25          0.8                       0.8                             0.968254                1.000000
+                 10      0.50          0.8                       0.8                             0.968254                0.835478
+                 10      0.75          0.8                       0.8                             0.968254                0.556985
+                 10      1.00          0.8                       0.8                             0.968254                0.417739
+                 20      0.25          0.8                       0.8                             0.968254                0.897933
+                 20      0.50          0.8                       0.8                             0.968254                0.448966
+                 20      0.75          0.8                       0.8                             0.968254                0.299311
+                 20      1.00          0.8                       0.8                             0.968254                0.224483
+                 50      0.25          0.8                       0.8                             0.968254                0.375386
+                 50      0.50          0.8                       0.8                             0.968254                0.187693
+                 50      0.75          0.8                       0.8                             0.968254                0.125129
+                 50      1.00          0.8                       0.8                             0.968254                0.093847
+
+Poisson repeating-beacon benchmark
+----------------------------------
+For total follow-up exposure E, a simple Poisson model gives:
+
+P(zero detections) = exp(-repeat_rate × effective_exposure)
+
+This does not reproduce the full Big Ear observing-log likelihood analysis; it
+is a transparent sensitivity calculation.
+
+With 192 hours and 50% coverage, the 95% upper repeat-rate bound in this
+notional efficiency model is
+1.2086 events/day,
+corresponding to a mean interval longer than
+0.83 days.
+
+The full repeat-rate limits are:
+
+ followup_hours  coverage  sensitivity  frequency_drift_coverage  scintillation_detection_probability  effective_exposure_days  repeat_rate_95pct_upper_per_day  mean_interval_95pct_lower_days
+          192.0      0.25          0.8                       0.8                             0.968254                 1.239365                         2.417151                        0.413710
+          192.0      0.50          0.8                       0.8                             0.968254                 2.478730                         1.208575                        0.827420
+          192.0      0.75          0.8                       0.8                             0.968254                 3.718095                         0.805717                        1.241131
+          192.0      1.00          0.8                       0.8                             0.968254                 4.957460                         0.604288                        1.654841
+
+Version 4 verdict
+-----------------
+CLEAN PASS:
+An intrinsically narrow, one-time astrophysical transient. A maser-like
+hydrogen-line brightening is in this class.
+
+CLEAN LOGICAL PASS, WITHOUT AFFIRMATIVE EVIDENCE:
+A genuinely non-repeating artificial transmission.
+
+LIVE CONDITIONAL:
+A narrow intermittent source. Under conservative aggregate assumptions,
+non-detection does not by itself force an extremely low duty cycle.
+
+LIVE CONDITIONAL:
+Nonlinear receiver intermodulation from strong higher-frequency inputs,
+especially with asymmetric sidelobe coupling.
+
+NEARLY REJECTED:
+A continuously emitting compact source rescued only by scintillation. It can
+miss the second horn, but repeated independent non-detections rapidly destroy
+the hypothesis.
+
+REJECTED:
+An extended/broadband source invoking deep scintillation.
+
+REJECTED:
+Broadband emission compressed into one channel by linear gravity, ionosphere,
+Doppler, or ordinary radio-wave overlap.
+
+Limitations
+-----------
+The 192-hour benchmark is aggregated. Historical campaigns differed in exact
+coordinates, sensitivity, channel width, drift-rate coverage, and observing
+cadence. The duty-cycle and Poisson calculations therefore show dependence on
+explicit assumptions rather than claiming a single historical posterior.

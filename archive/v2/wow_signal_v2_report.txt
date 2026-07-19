@@ -1,0 +1,128 @@
+WOW! SIGNAL COMBINED-EFFECTS SIMULATION — VERSION 2
+===================================================
+
+What was added
+--------------
+1. Two-tone second- and third-order intermodulation products.
+2. A notional IIP2/IIP3 power threshold sweep.
+3. The 172.37-second dual-horn separation constraint.
+4. Transient fade/switch-off requirements for a one-horn detection.
+5. Differential-horn rejection of common-mode terrestrial RFI.
+6. Separation of static gravity from time-varying gravity.
+
+Temporal profile
+----------------
+Combined-effects correlation with 6EQUJ5: 0.995291
+RMSE: 1.120 SNR units
+
+This remains easy to reproduce and is not the decisive discriminator. A compact
+source crossing a fixed beam naturally gives a bell-shaped response.
+
+Bandwidth test
+--------------
+Broad 1 MHz source adjacent/peak channel ratio:
+0.999723
+
+Narrow 5 kHz source adjacent/peak channel ratio:
+0.009441
+
+Result: linear propagation still cannot compress a broadband source into one
+10 kHz channel. An intrinsically narrow source or a nonlinear electronic spur
+is still required.
+
+Gravity and motion
+------------------
+Static Earth/Sun/Moon potential-scale term: 15.013096 Hz
+Time-varying gravity upper bound over 72 s: 0.000006753 Hz
+Rotation/orbit drift scale over 72 s: 10.844759 Hz
+
+The static gravitational term is common to ordinary observations; it cannot
+create a one-time event. The differential gravity during the observation is
+microscopic.
+
+Two-tone intermodulation
+------------------------
+Notional system temperature: 100.0 K
+10 kHz thermal-noise power: -138.60 dBm
+30.5-sigma excess expressed as a power ratio: 14.84 dB
+Notional target spur level: -123.76 dBm
+
+With equal tones and a representative IIP3 of
+-10.0 dBm, the approximate per-tone input needed
+at the nonlinear stage is -47.92 dBm.
+
+With representative IIP2 of 20.0 dBm, the
+approximate equal-tone input needed for an IM2 sum product is
+-51.88 dBm per tone.
+
+These are very strong receiver-input levels, but they are not impossible for a
+nearby transmitter or severe front-end overload. The exact historical answer
+cannot be computed without Big Ear's measured 1977 intercept points, filters,
+and signal levels.
+
+Crucially, two 3-30 MHz OTH signals cannot reach 1420 MHz through ordinary
+second- or third-order mixing: their largest positive products are only
+60 MHz (second order) and
+90 MHz (third order). Low-order intermodulation
+becomes credible only for much higher-frequency out-of-band tones.
+
+Dual-horn test
+--------------
+Horn peak separation: 172.37 s
+Continuous-source prediction in the second horn:
+30.5 sigma
+Required fade between horn peaks: factor 30.5
+(14.84 dB)
+Maximum exponential decay constant for <1-sigma second detection:
+50.43 s
+
+For a top-hat transient that supplies the measured first-horn trace, the model
+finds a roughly 104.9-second interval after
+the last measured point in which it can switch off and remain below 1 sigma in
+the second horn. Therefore, the one-horn result does not reject a short natural
+transient. It strongly rejects a steady narrow celestial source.
+
+Common-mode terrestrial RFI
+----------------------------
+The horns were differenced. A terrestrial signal entering both similarly tends
+to cancel. To leave a 30.5-sigma residual:
+
+- 0.1% mismatch requires about 30500 sigma common mode.
+- 1% mismatch requires about 3050 sigma common mode.
+- 3% mismatch requires about 1017 sigma common mode.
+- 10% mismatch requires about 305 sigma common mode.
+
+This does not make RFI impossible. It means an RFI explanation needs a strong
+signal, directional/asymmetric coupling, nonlinear generation before the horn
+difference is formed, or some combination of those conditions.
+
+Updated verdict
+---------------
+PASS AS A MECHANISM:
+An intrinsically narrow, short-lived cosmic transient. Propagation can modulate
+it, and the transient can disappear before the second horn.
+
+CONDITIONAL:
+Two strong UHF or microwave signals generating an in-band IM2/IM3 product in a
+nonlinear receiver stage. This is a genuine missing mechanism from version 1,
+but it needs strong inputs, exact frequency geometry, and horn asymmetry.
+
+FAIL:
+A broadband cosmic collision signal being compressed into a narrow Wow-like
+line by gravity, ionosphere, Doppler, and ordinary linear interference.
+
+FAIL FOR LOW-ORDER MIXING:
+Two ordinary 3-30 MHz OTH radar signals creating 1420 MHz by second- or
+third-order intermodulation.
+
+FAIL IF STEADY:
+A persistent narrow celestial source. It should have appeared in the second
+horn 172.37 seconds later.
+
+Limitations
+-----------
+This remains a mechanism-feasibility model, not a probability estimate. It does
+not contain classified transmitter logs, exact local spectrum occupancy,
+measured Big Ear IIP2/IIP3 and filter responses, raw voltages, or a reconstructed
+1977 ionosphere. The notional absolute power calculation is therefore an order-
+of-magnitude stress test, not a historical measurement.

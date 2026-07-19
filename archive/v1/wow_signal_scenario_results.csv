@@ -1,0 +1,6 @@
+Scenario,Temporal correlation,Adjacent/peak channel power,Can match one 10 kHz channel?,Verdict,Interpretation
+Broad cosmic source + gravity + ionosphere + terrestrial RF (linear),0.9952907602902501,0.9997227923687568,No,Fails bandwidth test,"Can reproduce the 72-second beam-shaped rise/fall, but neighboring channels become almost equally bright."
+Narrow cosmic transient + same propagation effects,0.9952907602902501,0.009440792600990785,Yes,Physically possible,A signal already narrower than the receiver channel survives the path and can look Wow-like. The terrestrial RF is not needed.
+"3–30 MHz over-the-horizon signal, linear receiver",,,No,No frequency conversion,HF and 1420 MHz fields superpose; gravity and the ionosphere do not translate HF into L-band in a linear path.
+3–30 MHz OTH signal through receiver nonlinearity,,,Only with an extreme spur,"Mathematically possible, physically strained",Even the highest HF fundamental needs at least harmonic order 48; that is not an ordinary mixing product.
+Narrow UHF carrier harmonic + reflection/receiver spur,0.9936991296913646,0.009440792600990785,Conditionally,Possible RFI artifact with fine tuning,"A carrier near 710.363 MHz (2nd) or 473.575 MHz (3rd) can land in-band, but a sky-like beam trace and one-horn detection still require special geometry."

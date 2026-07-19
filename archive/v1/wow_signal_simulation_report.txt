@@ -1,0 +1,107 @@
+WOW! SIGNAL COMBINED-EFFECTS SIMULATION
+=======================================
+
+Target frequency used
+---------------------
+Revised archival estimate: 1420.726000 MHz
+Legacy estimate retained in code: 1420.455600 MHz
+Hydrogen rest frequency: 1420.405751768 MHz
+
+Temporal result
+---------------
+Gaussian fit to 6EQUJ5 correlation: 0.993699
+Combined beam + ionosphere + receiver + troposphere correlation:
+0.995291
+RMSE: 1.120 SNR units
+
+This confirms that amplitude disturbances can coexist with a Wow-like
+72-second drift-scan profile.
+
+Spectral result
+---------------
+For a 1 MHz-wide cosmic source, adjacent/peak channel power:
+0.999723
+
+For a 5 kHz-wide cosmic source, adjacent/peak channel power:
+0.009441
+
+A broadband source remains broadband. The modeled propagation effects do not
+squeeze it into one 10 kHz channel. A source already narrowband can remain
+confined to one channel.
+
+Gravity and motion
+------------------
+Combined local Earth/Sun/Moon potential-scale frequency term:
+15.013096 Hz
+
+Generous combined Earth rotation/orbit drift over 72 seconds:
+10.844759 Hz
+
+Both are far below a 10,000 Hz channel. Constant Earth motion can set a larger
+absolute Doppler offset, but it does not generate a new frequency or collapse
+bandwidth.
+
+Ionosphere
+----------
+Representative 10-TECU group delay:
+6.659838 ns
+
+Representative peak plasma frequency:
+8.980000 MHz
+
+Refractive-index departure scale:
+1.99757006e-05
+
+The ionosphere can refract, delay, phase-rotate, scintillate, and sometimes
+reflect lower-frequency signals. At 1420 MHz it does not normally convert an
+HF military signal into a new L-band carrier.
+
+Human-made frequency routes
+---------------------------
+Minimum harmonic order required to turn a 3-30 MHz OTH signal into the target:
+48
+
+Exact subharmonic at that order:
+29.598458 MHz
+
+More plausible low-order subharmonics:
+2nd harmonic fundamental: 710.363000 MHz
+3rd harmonic fundamental: 473.575333 MHz
+
+A nonlinear receiver, transmitter harmonic, or reflected narrow UHF carrier
+can create an in-band artifact. That is a real possible class of explanation,
+but it is not the Sun, Moon, Earth, and ionosphere blending an HF signal with a
+cosmic signal in free space.
+
+Solar alignment check
+---------------------
+Approximate Sun coordinates at the event time:
+RA 9.699 h, Dec 13.804 deg
+Approximate Sun-Wow angular separation: 145.475 deg
+
+That is nowhere near a solar gravitational-lensing alignment.
+
+Bottom line
+-----------
+1. Starting with an ordinary broadband cosmic source:
+   FAIL. Combined linear environmental effects do not make it Wow-like in
+   frequency, even though the time profile can look right.
+
+2. Starting with a naturally narrow cosmic transient:
+   PASS as a possibility. The combined effects can alter its amplitude and
+   exact observed frequency while preserving a Wow-like narrow line.
+
+3. Starting with terrestrial HF/OTH transmissions:
+   FAIL in a linear path. A receiver fault/nonlinearity would be required.
+
+4. Starting with a narrow UHF carrier near an exact low-order subharmonic:
+   CONDITIONAL. A harmonic or receiver spur can land near 1420 MHz, but the
+   celestial beam shape, reflection geometry, and one-horn timing require
+   additional fine tuning.
+
+Important limitation
+--------------------
+These are mechanism and magnitude tests, not posterior probabilities.
+The raw complex voltage, exact 1977 ionospheric state above the telescope,
+classified transmitter logs, and measured nonlinear transfer function of the
+receiver are not available in this model.
