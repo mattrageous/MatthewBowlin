@@ -11,7 +11,7 @@ The Wow! signal of 1977 August 15 remains unexplained: a 72-second, ~10 kHz-wide
 
 ## Method
 
-The model (Python; code and inputs at [REPO LINK]) implements independent mechanism-feasibility tests: (1) spectral response of broadband versus narrowband sources through Big Ear's 10 kHz channelization under linear propagation (gravitational, ionospheric, Doppler terms evaluated explicitly); (2) the dual-horn timing constraint (172.4 s separation) for intrinsic transients and for steady sources modulated by strong diffractive scintillation; (3) notional receiver intermodulation budgets converted through the radiometer equation; and (4) a campaign-by-campaign persistence likelihood over the published follow-ups: 89 Big Ear null revisit-days (Kipping & Gray 2022), META (Gray 1994), the VLA searches (Gray & Marvel 2001), Hobart (Gray & Ellingsen 2002), and the ATA campaign (Harp et al. 2020), with per-campaign thresholds, channel widths, and conservatively counted independent scintillation states tabulated with sources.
+The model (Python; code and inputs at https://github.com/mattrageous/MatthewBowlin/tree/main/wow-signal) implements independent mechanism-feasibility tests: (1) spectral response of broadband versus narrowband sources through Big Ear's 10 kHz channelization under linear propagation (gravitational, ionospheric, Doppler terms evaluated explicitly); (2) the dual-horn timing constraint (172.4 s separation) for intrinsic transients and for steady sources modulated by strong diffractive scintillation; (3) notional receiver intermodulation budgets converted through the radiometer equation; and (4) a campaign-by-campaign persistence likelihood over the published follow-ups: 89 Big Ear null revisit-days (Kipping & Gray 2022), META (Gray 1994), the VLA searches (Gray & Marvel 2001), Hobart (Gray & Ellingsen 2002), and the ATA campaign (Harp et al. 2020), with per-campaign thresholds, channel widths, and conservatively counted independent scintillation states tabulated with sources.
 
 ## Results
 
@@ -41,3 +41,6 @@ Rejected: broadband or extended emission narrowed by linear propagation; a stead
 - Méndez, A., et al. 2024, arXiv:2408.08513
 - Méndez, A., et al. 2025, arXiv:2508.10657
 
+---
+
+*Notes for submission: RNAAS limit is 1,000 words (body text above is ~700, leaving room for edits), one figure OR one table, no abstract. Verify each reference against ADS before submission — the journal/volume details above should be checked, particularly Kipping & Gray 2022 and Harp et al. 2020. Convert to AASTeX (rnaas style) for submission via the AAS journals portal.*
