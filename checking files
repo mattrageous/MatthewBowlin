@@ -1,32 +1,14 @@
-"""Combine Outlook MSG emails with agency PDFs and export activity dates.
 
-Setup:
-    python -m pip install pymupdf extract-msg reportlab openpyxl
-
-Edit SOURCE_ROOT and OUTPUT_ROOT below, then:
-    python merge_agency_messages.py
-
-Behavior:
-    * Each immediate child folder of SOURCE_ROOT is an agency. Nested folders are included.
-    * A single PDF in an agency receives all its MSG emails.
-    * An agency with multiple PDFs requires strong evidence or a manual CSV mapping.
-    * Files are saved beneath OUTPUT_ROOT with the same relative path and original PDF name.
-    * Original PDFs and MSGs are never changed.
-    * Activity_Dates.xlsx has an Activity Dates sheet (two columns) and audit sheets.
-
-Optional manual matches:
-    Add rows to OUTPUT_ROOT/manual_matches.csv (created on first run):
-    MSG File,PDF File
-    Agency A/Email 1.msg,Agency A/Report.pdf
-    Paths are relative to SOURCE_ROOT. Run again to apply these matches.
-"""
 
 from __future__ import annotations
 
 import csv
+import hashlib
+import json
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime
+from email.utils import parsedate_to_datetime
 from html import escape
 from pathlib import Path
 import re
@@ -56,7 +38,7 @@ except ImportError as exc:
 # CONFIGURATION: CHANGE THESE TWO PATHS
 # ============================================================
 SOURCE_ROOT = r"C:\Users\YourUsername\OneDrive - Organization\SharePoint Agency Files"
-OUTPUT_ROOT = r"C:\Temp\AgencyMergedPDFs"
+OUTPUT_ROOT = r"C:\Temp\AgencyMergedPDFs_Flat"
 
 # Fraction of first PDF page to search for the Activity Date.
 TOP_PORTION = 0.45
@@ -113,6 +95,85 @@ def parse_date(value: str) -> Optional[datetime]:
         except ValueError:
             pass
     return None
+
+
+
+def parse_message_date(value: str) -> Optional[datetime]:
+    """Return the calendar date from an Outlook MSG header for Excel."""
+    value = value.strip()
+    if not value:
+        return None
+    try:
+        parsed = parsedate_to_datetime(value)
+        return datetime(parsed.year, parsed.month, parsed.day)
+    except (TypeError, ValueError, IndexError, OverflowError):
+        pass
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return datetime(parsed.year, parsed.month, parsed.day)
+    except ValueError:
+        pass
+    for match in DATE_PATTERN.finditer(value):
+        date = parse_date(match.group(0))
+        if date is not None:
+            return date
+    return None
+
+
+def date_cell(ws, filename: str, activity_date: Optional[datetime]):
+    ws.append([filename, activity_date])
+    ws.cell(ws.max_row, 2).number_format = "mm/dd/yyyy"
+
+
+def reserve_name(candidate: str, reserved: set[str]) -> str:
+    """Claim a filename, case-insensitively, adding _2, _3 ... when needed."""
+    original = Path(candidate)
+    result = original.name
+    counter = 2
+    while result.casefold() in reserved:
+        result = f"{original.stem}_{counter}{original.suffix}"
+        counter += 1
+    reserved.add(result.casefold())
+    return result
+
+
+def safe_agency_suffix(agency: str) -> str:
+    """Clean folder labels for Windows output filenames."""
+    if agency == "(root)":
+        return "Root"
+    cleaned = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', agency).strip(' .')
+    return cleaned or "Agency"
+
+
+def allocate_flat_pdf_names(pdfs: list[PDFRecord]) -> tuple[dict[Path, str], set[str]]:
+    """Preserve original PDF names wherever possible; disambiguate collisions.
+
+    Unique original names reserve first so collision-renamed files can never
+    steal a filename that already belongs to an original source document.
+    """
+    from collections import Counter
+    counts = Counter(item.path.name.casefold() for item in pdfs)
+    assigned: dict[Path, str] = {}
+    reserved: set[str] = set()
+    for item in sorted(pdfs, key=lambda x: (counts[x.path.name.casefold()] > 1,
+                                           str(x.path).casefold())):
+        old_name = item.path.name
+        if counts[old_name.casefold()] == 1:
+            proposed = old_name
+        else:
+            proposed = f"{item.path.stem}_{safe_agency_suffix(item.agency)}{item.path.suffix}"
+        assigned[item.path] = reserve_name(proposed, reserved)
+    return assigned, reserved
+
+
+def standalone_email_target(msg_path: Path, source: Path, output: Path,
+                            reserved: set[str]) -> Path:
+    """Pick one FLAT PDF filename for an unmatched email, never colliding with originals."""
+    candidate = f"{msg_path.stem}.pdf"
+    if candidate.casefold() in reserved:
+        agency = safe_agency_suffix(agency_of(msg_path, source))
+        candidate = f"{msg_path.stem}_{agency}.pdf"
+    return output / reserve_name(candidate, reserved)
 
 
 def top_date_and_text(pdf_file: Path) -> tuple[Optional[datetime], str]:
@@ -214,16 +275,15 @@ class MSGRecord:
 
 
 def match_message(msg: MSGRecord, pdfs: list[PDFRecord], manual: dict[str, str],
-                  source: Path) -> tuple[Optional[PDFRecord], str, str]:
+                  source: Path, all_pdfs: dict[str, PDFRecord]) -> tuple[Optional[PDFRecord], str, str]:
     """Return chosen PDF, reason, and suggested filename. Never auto-match on date alone."""
     msg_rel = relpath(msg.path, source)
-    by_rel = {relpath(p.path, source).casefold(): p for p in pdfs}
     if msg_rel.casefold() in manual:
         requested = manual[msg_rel.casefold()]
-        selected = by_rel.get(requested.casefold())
+        selected = all_pdfs.get(requested.casefold())
         if not selected:
-            return None, f"Manual mapping missing PDF in this agency: {requested}", requested
-        return selected, "Manual mapping", ""
+            return None, f"Manual mapping points to missing/unreadable PDF: {requested}", requested
+        return selected, "Manual mapping (explicit)", ""
 
     if not pdfs:
         return None, "No PDF in this agency", ""
@@ -305,6 +365,50 @@ def message_to_pdf(message: dict[str, str], original: Path, font_name: str) -> b
     return stream.getvalue()
 
 
+def read_standalone_manifest(manifest_path: Path) -> dict[str, str]:
+    if not manifest_path.exists():
+        return {}
+    try:
+        data = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return {k: v for k, v in data.items()
+                    if isinstance(k, str) and isinstance(v, str)}
+    except (OSError, ValueError):
+        pass
+    return {}
+
+
+def update_standalone_manifest(output: Path, previous: dict[str, str],
+                               current: dict[str, str]) -> int:
+    """Delete only former exports whose bytes still match what we last generated."""
+    removed = 0
+    for rel, old_digest in previous.items():
+        if rel in current:
+            continue
+        old_path = Path(rel)
+        if old_path.is_absolute() or ".." in old_path.parts:
+            continue
+        candidate = output / old_path
+        if not candidate.is_file():
+            continue
+        try:
+            digest = hashlib.sha256(candidate.read_bytes()).hexdigest()
+            if digest == old_digest:
+                candidate.unlink()
+                removed += 1
+                print(f"[CLEANUP] Removed previously exported standalone email: {rel}")
+        except OSError:
+            continue
+    path = output / "standalone_msg_manifest.json"
+    temp = path.with_suffix(".json.partial")
+    try:
+        temp.write_text(json.dumps(current, indent=2, sort_keys=True), encoding="utf-8")
+        temp.replace(path)
+    finally:
+        temp.unlink(missing_ok=True)
+    return removed
+
+
 def load_manual_matches(file_path: Path, source: Path) -> dict[str, str]:
     if not file_path.exists():
         file_path.parent.mkdir(parents=True, exist_ok=True)
@@ -350,6 +454,7 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     mapping_file = output / "manual_matches.csv"
     mappings = load_manual_matches(mapping_file, source)
+    previous_standalones = read_standalone_manifest(output / "standalone_msg_manifest.json")
     font = select_font()
 
     pdf_paths = sorted((p for p in source.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf"),
@@ -377,24 +482,31 @@ def main():
             errors.append(("MSG", relpath(path, source), str(exc)))
 
     pdfs_by_agency = defaultdict(list)
+    valid_pdfs = {}
     for item in pdfs:
         if not item.read_error:
             pdfs_by_agency[item.agency].append(item)
+            valid_pdfs[relpath(item.path, source).casefold()] = item
 
     assignments = defaultdict(list)
     match_rows = []
     review_rows = []
+    unmatched_messages = []
     for msg in messages:
         msg_rel = relpath(msg.path, source)
         if msg.read_error:
             review_rows.append((msg.agency, msg_rel, "Unreadable MSG", ""))
             continue
-        pdf, reason, suggestion = match_message(msg, pdfs_by_agency[msg.agency], mappings, source)
+        pdf, reason, suggestion = match_message(
+            msg, pdfs_by_agency[msg.agency], mappings, source, valid_pdfs
+        )
         if pdf:
             assignments[pdf.path].append(msg)
             match_rows.append((msg.agency, msg_rel, relpath(pdf.path, source), reason))
         else:
+            # Keep an audit trail even though this email will also be exported to PDF.
             review_rows.append((msg.agency, msg_rel, reason, suggestion))
+            unmatched_messages.append((msg, reason))
 
     wb = Workbook()
     ws = wb.active
@@ -404,15 +516,17 @@ def main():
     audit.append(["Agency", "PDF File", "Merged MSG Count", "Output PDF", "Activity Date Status"])
     matched = wb.create_sheet("Matched Emails")
     matched.append(["Agency", "MSG File", "PDF File", "Reason"])
+    standalone = wb.create_sheet("Standalone Emails")
+    standalone.append(["Agency", "MSG File", "Output PDF", "Activity Date", "Reason"])
     needs = wb.create_sheet("Needs Review")
-    needs.append(["Agency", "MSG File", "Reason", "Possible PDF(s)"])
+    needs.append(["Agency", "MSG File", "Reason", "Possible PDF(s)", "Standalone PDF"])
     problem = wb.create_sheet("Errors")
     problem.append(["File Type", "File", "Error"])
 
+    flat_pdf_names, reserved_names = allocate_flat_pdf_names(pdfs)
     merged = copied = failed = 0
     for pdf in pdfs:
-        pdf_rel = pdf.path.relative_to(source)
-        target = output / pdf_rel
+        target = output / flat_pdf_names[pdf.path]
         status = "Found" if pdf.activity_date is not None else "Not found (possibly scanned)"
         if pdf.read_error:
             audit.append([pdf.agency, relpath(pdf.path, source), 0, "", "PDF could not be read"])
@@ -421,7 +535,6 @@ def main():
         if not emails and not COPY_UNMATCHED_PDFS:
             audit.append([pdf.agency, relpath(pdf.path, source), 0, "Not copied", status])
             continue
-        target.parent.mkdir(parents=True, exist_ok=True)
         # Write a separate output PDF so no SharePoint source is touched.
         try:
             with fitz.open(str(pdf.path)) as result:
@@ -439,8 +552,7 @@ def main():
                 merged += 1
             else:
                 copied += 1
-            ws.append([pdf.path.name, pdf.activity_date])
-            ws.cell(ws.max_row, 2).number_format = "mm/dd/yyyy"
+            date_cell(ws, target.name, pdf.activity_date)
             audit.append([pdf.agency, relpath(pdf.path, source), len(emails),
                           relpath(target, output), status])
             print(f"[OK] {relpath(target, output)}  ({len(emails)} email(s))")
@@ -450,28 +562,70 @@ def main():
             audit.append([pdf.agency, relpath(pdf.path, source), len(emails), "FAILED", status])
             print(f"[ERROR] {relpath(pdf.path, source)}: {exc}")
 
+    # Every readable MSG that could not be confidently matched becomes a
+    # standalone PDF. It remains in Needs Review for optional future mapping.
+    standalone_count = 0
+    new_standalones = {}
+    review_exports = {}
+    for msg, reason in unmatched_messages:
+        target = standalone_email_target(msg.path, source, output, reserved_names)
+        try:
+            email_bytes = message_to_pdf(msg.message, msg.path, font)
+            temp_target = target.with_name(target.name + ".partial")
+            try:
+                temp_target.write_bytes(email_bytes)
+                temp_target.replace(target)
+            finally:
+                temp_target.unlink(missing_ok=True)
+            new_standalones[relpath(target, output)] = hashlib.sha256(email_bytes).hexdigest()
+            review_exports[relpath(msg.path, source)] = relpath(target, output)
+            email_date = parse_message_date(msg.message.get("date", ""))
+            date_cell(ws, target.name, email_date)
+            standalone.append([
+                msg.agency, relpath(msg.path, source), relpath(target, output),
+                email_date, reason,
+            ])
+            standalone.cell(standalone.max_row, 4).number_format = "mm/dd/yyyy"
+            standalone_count += 1
+            print(f"[STANDALONE MSG] {relpath(target, output)}")
+        except Exception as exc:
+            failed += 1
+            errors.append(("MSG-TO-PDF", relpath(msg.path, source), str(exc)))
+            print(f"[ERROR MSG] {relpath(msg.path, source)}: {exc}")
+
     for row in match_rows:
         matched.append(list(row))
     for row in review_rows:
-        needs.append(list(row))
+        needs.append(list(row) + [review_exports.get(row[1], "")])
     for row in errors:
         problem.append(list(row))
     for sheet, sizes in ((ws, [60, 20]), (audit, [28, 74, 21, 76, 30]),
-                         (matched, [28, 78, 78, 54]), (needs, [28, 78, 58, 70]),
+                         (matched, [28, 78, 78, 54]),
+                         (standalone, [28, 78, 78, 20, 54]),
+                         (needs, [28, 78, 58, 70, 78]),
                          (problem, [18, 78, 85])):
         style_sheet(sheet, sizes)
 
     report = output / "Activity_Dates.xlsx"
     wb.save(report)
+    # Do not delete prior standalone exports if this run encountered conversion
+    # failures: preserving an old file is safer than discarding the only copy.
+    stale_removed = 0
+    if not any(kind == "MSG-TO-PDF" for kind, _, _ in errors):
+        stale_removed = update_standalone_manifest(output, previous_standalones, new_standalones)
+    else:
+        print("[NOTICE] Standalone cleanup skipped due to MSG conversion errors.")
     print("\n=== COMPLETE ===")
     print(f"PDFs with MSGs merged: {merged}")
     print(f"PDFs copied alone:      {copied}")
+    print(f"Standalone MSG PDFs:    {standalone_count}")
+    print(f"Old standalone removed: {stale_removed}")
     print(f"PDF merge failures:     {failed}")
-    print(f"MSGs needing review:    {len(review_rows)}")
+    print(f"MSGs optionally review: {len(review_rows)} (exported standalone)")
     print(f"Errors reported:        {len(errors)}")
     print(f"Excel report:           {report}")
     if review_rows:
-        print("For uncertain matches, see 'Needs Review' in Excel, then fill in "
+        print("To manually link standalone emails to PDFs, see 'Needs Review' in Excel, then fill in "
               f"{mapping_file.name} and rerun.")
 
 
