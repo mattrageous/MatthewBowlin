@@ -2,21 +2,19 @@
 
 from __future__ import annotations
 
-import csv
-import hashlib
-import json
-from collections import defaultdict
-from dataclasses import dataclass
+from collections import Counter, defaultdict
 from datetime import datetime
 from email.utils import parsedate_to_datetime
 from html import escape
+from html.parser import HTMLParser
+from io import BytesIO
+import hashlib
+import json
 from pathlib import Path
 import re
-import sys
-from typing import Optional
 
 try:
-    import fitz  # installed by pymupdf
+    import fitz  # PyMuPDF
     import extract_msg
     from openpyxl import Workbook
     from openpyxl.styles import Alignment, Font, PatternFill
@@ -26,28 +24,25 @@ try:
     from reportlab.lib.styles import ParagraphStyle
     from reportlab.pdfbase import pdfmetrics
     from reportlab.pdfbase.ttfonts import TTFont
-    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, HRFlowable
+    from reportlab.platypus import HRFlowable, Paragraph, SimpleDocTemplate, Spacer
 except ImportError as exc:
     raise SystemExit(
-        f"Missing Python dependency: {exc}.\n"
+        f"Required package is missing: {exc}\n"
         "Install with: python -m pip install pymupdf extract-msg reportlab openpyxl"
     )
 
-
 # ============================================================
-# CONFIGURATION: CHANGE THESE TWO PATHS
+# CONFIGURATION - EDIT THESE TWO PATHS
 # ============================================================
 SOURCE_ROOT = r"C:\Users\YourUsername\OneDrive - Organization\SharePoint Agency Files"
-OUTPUT_ROOT = r"C:\Temp\AgencyMergedPDFs_Flat"
+OUTPUT_ROOT = r"C:\Temp\AgencyCombinedPDFs_ByFolder"
 
-# Fraction of first PDF page to search for the Activity Date.
+# Search the upper 45% of the first page of source PDFs for the activity date.
 TOP_PORTION = 0.45
-
-# Set True to reproduce originals even when there is no matching MSG.
-COPY_UNMATCHED_PDFS = True
 # ============================================================
 
-
+EXCEL_SUFFIXES = {".xlsx", ".xls", ".xlsm", ".xlsb", ".xltx", ".xltm"}
+MANIFEST_FILE = "_generated_pdf_manifest.json"
 MONTH = (
     r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|"
     r"Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|"
@@ -59,19 +54,11 @@ DATE_PATTERN = re.compile(
     rf"\d{{1,2}}[./-]\d{{1,2}}[./-]\d{{2,4}}|"
     rf"{MONTH}\.?\s+\d{{1,2}}(?:st|nd|rd|th)?,?\s+\d{{4}}|"
     rf"\d{{1,2}}(?:st|nd|rd|th)?\s+{MONTH}\.?,?\s+\d{{4}}"
-    rf")(?!\w)",
-    re.I,
-)
-
-# Only explicit labeled IDs are safe for automatically linking when an agency has many PDFs.
-IDENTIFIER_PATTERN = re.compile(
-    r"\b(?:case|incident|complaint|matter|reference|ref|tracking|control|report|file)"
-    r"\s*(?:number|no\.?|#|id)?\s*[:#-]\s*([A-Z0-9][A-Z0-9/_-]{4,})\b",
-    re.I,
+    rf")(?!\w)", re.I
 )
 
 
-def parse_date(value: str) -> Optional[datetime]:
+def parse_date(value: str) -> datetime | None:
     value = value.strip()
     if re.fullmatch(r"\d{4}[./-]\d{1,2}[./-]\d{1,2}", value):
         y, m, d = re.split(r"[./-]", value)
@@ -82,10 +69,11 @@ def parse_date(value: str) -> Optional[datetime]:
     if re.fullmatch(r"\d{1,2}[./-]\d{1,2}[./-]\d{2,4}", value):
         m, d, y = re.split(r"[./-]", value)
         try:
-            return datetime.strptime(f"{m}/{d}/{y}", "%m/%d/%Y" if len(y) == 4 else "%m/%d/%y")
+            return datetime.strptime(
+                f"{m}/{d}/{y}", "%m/%d/%Y" if len(y) == 4 else "%m/%d/%y"
+            )
         except ValueError:
             return None
-
     value = re.sub(r"(?<=\d)(st|nd|rd|th)\b", "", value, flags=re.I)
     value = re.sub(r"\bSept\b", "Sep", value, flags=re.I)
     value = " ".join(re.sub(r"[.,]", " ", value).split())
@@ -97,113 +85,43 @@ def parse_date(value: str) -> Optional[datetime]:
     return None
 
 
-
-def parse_message_date(value: str) -> Optional[datetime]:
-    """Return the calendar date from an Outlook MSG header for Excel."""
-    value = value.strip()
-    if not value:
-        return None
-    try:
-        parsed = parsedate_to_datetime(value)
-        return datetime(parsed.year, parsed.month, parsed.day)
-    except (TypeError, ValueError, IndexError, OverflowError):
-        pass
-    try:
-        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-        return datetime(parsed.year, parsed.month, parsed.day)
-    except ValueError:
-        pass
-    for match in DATE_PATTERN.finditer(value):
-        date = parse_date(match.group(0))
-        if date is not None:
-            return date
+def pdf_top_date(page) -> datetime | None:
+    """Read visually top-to-bottom within the top portion of page 1."""
+    clip = fitz.Rect(page.rect.x0, page.rect.y0, page.rect.x1,
+                     page.rect.y0 + page.rect.height * TOP_PORTION)
+    data = page.get_text("dict", clip=clip)
+    lines = []
+    for block in data.get("blocks", []):
+        for line in block.get("lines", []):
+            content = "".join(span.get("text", "") for span in line.get("spans", []))
+            lines.append((line["bbox"][1], line["bbox"][0], content))
+    for _, _, text in sorted(lines):
+        for match in DATE_PATTERN.finditer(text):
+            parsed = parse_date(match.group(0))
+            if parsed:
+                return parsed
     return None
 
 
-def date_cell(ws, filename: str, activity_date: Optional[datetime]):
-    ws.append([filename, activity_date])
-    ws.cell(ws.max_row, 2).number_format = "mm/dd/yyyy"
-
-
-def reserve_name(candidate: str, reserved: set[str]) -> str:
-    """Claim a filename, case-insensitively, adding _2, _3 ... when needed."""
-    original = Path(candidate)
-    result = original.name
-    counter = 2
-    while result.casefold() in reserved:
-        result = f"{original.stem}_{counter}{original.suffix}"
-        counter += 1
-    reserved.add(result.casefold())
-    return result
-
-
-def safe_agency_suffix(agency: str) -> str:
-    """Clean folder labels for Windows output filenames."""
-    if agency == "(root)":
-        return "Root"
-    cleaned = re.sub(r'[<>:"/\\|?*\x00-\x1f]', '_', agency).strip(' .')
-    return cleaned or "Agency"
-
-
-def allocate_flat_pdf_names(pdfs: list[PDFRecord]) -> tuple[dict[Path, str], set[str]]:
-    """Preserve original PDF names wherever possible; disambiguate collisions.
-
-    Unique original names reserve first so collision-renamed files can never
-    steal a filename that already belongs to an original source document.
-    """
-    from collections import Counter
-    counts = Counter(item.path.name.casefold() for item in pdfs)
-    assigned: dict[Path, str] = {}
-    reserved: set[str] = set()
-    for item in sorted(pdfs, key=lambda x: (counts[x.path.name.casefold()] > 1,
-                                           str(x.path).casefold())):
-        old_name = item.path.name
-        if counts[old_name.casefold()] == 1:
-            proposed = old_name
-        else:
-            proposed = f"{item.path.stem}_{safe_agency_suffix(item.agency)}{item.path.suffix}"
-        assigned[item.path] = reserve_name(proposed, reserved)
-    return assigned, reserved
-
-
-def standalone_email_target(msg_path: Path, source: Path, output: Path,
-                            reserved: set[str]) -> Path:
-    """Pick one FLAT PDF filename for an unmatched email, never colliding with originals."""
-    candidate = f"{msg_path.stem}.pdf"
-    if candidate.casefold() in reserved:
-        agency = safe_agency_suffix(agency_of(msg_path, source))
-        candidate = f"{msg_path.stem}_{agency}.pdf"
-    return output / reserve_name(candidate, reserved)
-
-
-def top_date_and_text(pdf_file: Path) -> tuple[Optional[datetime], str]:
-    with fitz.open(str(pdf_file)) as pdf:
-        if pdf.needs_pass:
-            raise ValueError("PDF is encrypted/password-protected")
-        if not pdf.page_count:
-            return None, ""
-        page = pdf[0]
-        clip = fitz.Rect(page.rect.x0, page.rect.y0, page.rect.x1,
-                         page.rect.y0 + page.rect.height * TOP_PORTION)
-        data = page.get_text("dict", clip=clip)
-        lines = []
-        for block in data.get("blocks", []):
-            for line in block.get("lines", []):
-                txt = "".join(span.get("text", "") for span in line.get("spans", []))
-                lines.append((line["bbox"][1], line["bbox"][0], txt))
-
-        activity_date = None
-        for _, _, text in sorted(lines):
-            for result in DATE_PATTERN.finditer(text):
-                activity_date = parse_date(result.group(0))
-                if activity_date is not None:
-                    break
-            if activity_date is not None:
-                break
-
-        # First two pages are enough to inspect explicit identifiers when matching.
-        match_text = "\n".join(pdf[p].get_text() for p in range(min(2, pdf.page_count)))
-        return activity_date, match_text[:100_000]
+def message_date(value: str) -> datetime | None:
+    value = (value or "").strip()
+    if not value:
+        return None
+    try:
+        dt = parsedate_to_datetime(value)
+        return datetime(dt.year, dt.month, dt.day)
+    except (ValueError, TypeError, OverflowError, IndexError):
+        pass
+    try:
+        dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return datetime(dt.year, dt.month, dt.day)
+    except ValueError:
+        pass
+    for match in DATE_PATTERN.finditer(value):
+        parsed = parse_date(match.group(0))
+        if parsed:
+            return parsed
+    return None
 
 
 def as_text(value) -> str:
@@ -214,228 +132,160 @@ def as_text(value) -> str:
     return str(value)
 
 
+class _HTMLText(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+
+    def handle_data(self, data):
+        self.parts.append(data)
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"br", "p", "div", "li", "tr"}:
+            self.parts.append("\n")
+
+
 def read_message(path: Path) -> dict[str, str]:
     msg = extract_msg.Message(str(path))
     try:
-        subject = as_text(msg.subject)
-        sender = as_text(msg.sender)
-        recipient = as_text(msg.to)
-        sent_date = as_text(msg.date)
-        body = as_text(msg.body)
-        if not body.strip() and getattr(msg, "htmlBody", None):
-            # HTML only: fall back to a plain-text representation.
-            from html.parser import HTMLParser
-
-            class TextExtractor(HTMLParser):
-                def __init__(self):
-                    super().__init__()
-                    self.parts = []
-                def handle_data(self, data):
-                    self.parts.append(data)
-                def handle_starttag(self, tag, attrs):
-                    if tag in {"br", "p", "div", "li", "tr"}:
-                        self.parts.append("\n")
-            parser = TextExtractor()
+        result = {
+            "subject": as_text(msg.subject),
+            "sender": as_text(msg.sender),
+            "to": as_text(msg.to),
+            "date": as_text(msg.date),
+            "body": as_text(msg.body),
+        }
+        if not result["body"].strip() and getattr(msg, "htmlBody", None):
+            parser = _HTMLText()
             parser.feed(as_text(msg.htmlBody))
-            body = "".join(parser.parts)
-        return {"subject": subject, "sender": sender, "to": recipient,
-                "date": sent_date, "body": body}
+            result["body"] = "".join(parser.parts)
+        return result
     finally:
         msg.close()
 
 
-def agency_of(path: Path, source: Path) -> str:
-    rel = path.relative_to(source)
-    return rel.parts[0] if len(rel.parts) > 1 else "(root)"
-
-
-def relpath(path: Path, root: Path) -> str:
-    return path.relative_to(root).as_posix()
-
-
-def explicit_ids(text: str) -> set[str]:
-    return {m.group(1).upper().rstrip("-_/.") for m in IDENTIFIER_PATTERN.finditer(text)}
-
-
-@dataclass
-class PDFRecord:
-    path: Path
-    agency: str
-    activity_date: Optional[datetime]
-    body: str
-    read_error: str = ""
-
-
-@dataclass
-class MSGRecord:
-    path: Path
-    agency: str
-    message: Optional[dict[str, str]]
-    read_error: str = ""
-
-
-def match_message(msg: MSGRecord, pdfs: list[PDFRecord], manual: dict[str, str],
-                  source: Path, all_pdfs: dict[str, PDFRecord]) -> tuple[Optional[PDFRecord], str, str]:
-    """Return chosen PDF, reason, and suggested filename. Never auto-match on date alone."""
-    msg_rel = relpath(msg.path, source)
-    if msg_rel.casefold() in manual:
-        requested = manual[msg_rel.casefold()]
-        selected = all_pdfs.get(requested.casefold())
-        if not selected:
-            return None, f"Manual mapping points to missing/unreadable PDF: {requested}", requested
-        return selected, "Manual mapping (explicit)", ""
-
-    if not pdfs:
-        return None, "No PDF in this agency", ""
-    if len(pdfs) == 1:
-        return pdfs[0], "Only PDF in agency", ""
-
-    if not msg.message:
-        return None, "Message could not be read", ""
-
-    message_text = msg.message["subject"] + "\n" + msg.message["body"]
-    ids = explicit_ids(message_text)
-    strong = []
-    for pdf in pdfs:
-        pdf_ids = explicit_ids(pdf.body)
-        shared = ids & pdf_ids
-        if shared:
-            strong.append((pdf, "Matching labeled reference: " + ", ".join(sorted(shared)[:3])))
-
-    if len(strong) == 1:
-        return strong[0][0], strong[0][1], ""
-    if len(strong) > 1:
-        return None, "Same reference appears in multiple PDFs", "; ".join(p.path.name for p, _ in strong)
-
-    # If an email directly mentions a sufficiently distinctive PDF name,
-    # that is a strong indicator, provided just one PDF qualifies.
-    mentions = []
-    normalized_msg = re.sub(r"[^a-z0-9]+", "", message_text.casefold())
-    for pdf in pdfs:
-        stem_key = re.sub(r"[^a-z0-9]+", "", pdf.path.stem.casefold())
-        # Avoid matching generic filename stems such as "Report" or "Invoice".
-        if len(stem_key) >= 12 and stem_key in normalized_msg:
-            mentions.append(pdf)
-    if len(mentions) == 1:
-        return mentions[0], "Distinctive PDF filename mentioned in email", ""
-    if len(mentions) > 1:
-        return None, "Email mentions multiple PDF filenames", "; ".join(p.path.name for p in mentions)
-    return None, "Multiple PDFs; no reliable link found", ""
-
-
 def select_font() -> str:
-    for font_path in (
+    for path in (
         Path(r"C:\Windows\Fonts\arial.ttf"),
         Path(r"C:\Windows\Fonts\segoeui.ttf"),
         Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
     ):
-        if font_path.is_file():
-            pdfmetrics.registerFont(TTFont("EmailFont", str(font_path)))
-            return "EmailFont"
+        if path.is_file():
+            pdfmetrics.registerFont(TTFont("AgencyMsgFont", str(path)))
+            return "AgencyMsgFont"
     return "Helvetica"
 
 
-def message_to_pdf(message: dict[str, str], original: Path, font_name: str) -> bytes:
-    from io import BytesIO
-    stream = BytesIO()
-    doc = SimpleDocTemplate(stream, pagesize=letter, leftMargin=42, rightMargin=42,
-                            topMargin=46, bottomMargin=46, title=original.name)
-    header_style = ParagraphStyle("EmailHeading", fontName=font_name, fontSize=12,
-                                  leading=16, spaceAfter=10, textColor=colors.HexColor("#17365D"))
-    label_style = ParagraphStyle("EmailHeader", fontName=font_name, fontSize=9,
-                                 leading=13, spaceAfter=4, splitLongWords=1)
-    body_style = ParagraphStyle("EmailBody", fontName=font_name, fontSize=9,
-                                leading=13, spaceAfter=2, alignment=TA_LEFT,
-                                splitLongWords=1)
-    story = [Paragraph("Email: " + escape(original.name), header_style)]
-    for title, key in (("Subject", "subject"), ("From", "sender"),
+def msg_to_pdf_bytes(message: dict[str, str], path: Path, font: str) -> bytes:
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(buffer, pagesize=letter, leftMargin=42,
+                            rightMargin=42, topMargin=44, bottomMargin=44,
+                            title=path.name)
+    heading = ParagraphStyle("Heading", fontName=font, fontSize=12, leading=16,
+                             textColor=colors.HexColor("#17365D"), spaceAfter=9)
+    hdr = ParagraphStyle("Header", fontName=font, fontSize=9, leading=13,
+                         spaceAfter=4, splitLongWords=True)
+    text_style = ParagraphStyle("Body", fontName=font, fontSize=9, leading=13,
+                                alignment=TA_LEFT, splitLongWords=True)
+    story = [Paragraph("Outlook email: " + escape(path.name), heading)]
+    for label, key in (("Subject", "subject"), ("From", "sender"),
                        ("To", "to"), ("Date", "date")):
-        val = message.get(key, "").strip() or "(not provided)"
-        story.append(Paragraph(f"<b>{title}:</b> {escape(val)}", label_style))
-    story.extend([Spacer(1, 7), HRFlowable(width="100%", thickness=0.5,
-                                           color=colors.grey), Spacer(1, 9)])
-    body = message.get("body", "") or "(No readable email body)"
-    # Make each line a splittable paragraph so multi-page emails are supported.
-    for line in body.splitlines():
+        story.append(Paragraph(
+            f"<b>{label}:</b> {escape(message.get(key, '').strip() or '(not provided)')}", hdr
+        ))
+    story += [Spacer(1, 8), HRFlowable(width="100%", thickness=0.5,
+                                      color=colors.grey), Spacer(1, 9)]
+    for line in (message.get("body", "") or "(No readable email body)").splitlines():
         if not line.strip():
             story.append(Spacer(1, 6))
         else:
-            story.append(Paragraph(escape(line).replace("\t", "&nbsp; " ), body_style))
+            story.append(Paragraph(escape(line).replace("\t", "&nbsp; "), text_style))
     doc.build(story)
-    return stream.getvalue()
+    return buffer.getvalue()
 
 
-def read_standalone_manifest(manifest_path: Path) -> dict[str, str]:
-    if not manifest_path.exists():
+def group_name(path: Path, source: Path) -> str:
+    """Immediate child folder of the SharePoint root, even for nested documents."""
+    parts = path.relative_to(source).parts
+    return parts[0] if len(parts) > 1 else "(root)"
+
+
+def safe_basename(name: str) -> str:
+    if name == "(root)":
+        return "Root"
+    cleaned = re.sub(r'[<>:"/\\|?*\x00-\x1f]', "_", name).strip(" .")
+    return cleaned or "Folder"
+
+
+def preferred_output_name(group: str, pdfs: list[Path]) -> str:
+    # Keep the original PDF name wherever that is unambiguous.
+    if len(pdfs) == 1:
+        return pdfs[0].name
+    return safe_basename(group) + ".pdf"
+
+
+def allocate_names(groups: dict[str, dict[str, list[Path]]]) -> dict[str, str]:
+    preferred = {group: preferred_output_name(group, data["pdf"])
+                 for group, data in groups.items()}
+    counts = Counter(name.casefold() for name in preferred.values())
+    reserved = set()
+    assigned = {}
+    # Unique preferred originals get priority so collision-resolvers can't take them.
+    for group in sorted(groups, key=lambda g: (counts[preferred[g].casefold()] > 1, g.casefold())):
+        original = Path(preferred[group])
+        candidate = original.name
+        if candidate.casefold() in reserved or counts[candidate.casefold()] > 1:
+            candidate = f"{original.stem}_{safe_basename(group)}.pdf"
+        counter = 2
+        base = Path(candidate).stem
+        while candidate.casefold() in reserved:
+            candidate = f"{base}_{counter}.pdf"
+            counter += 1
+        assigned[group] = candidate
+        reserved.add(candidate.casefold())
+    return assigned
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for piece in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(piece)
+    return digest.hexdigest()
+
+
+def load_manifest(path: Path) -> dict[str, dict[str, str]]:
+    if not path.exists():
         return {}
     try:
-        data = json.loads(manifest_path.read_text(encoding="utf-8"))
-        if isinstance(data, dict):
-            return {k: v for k, v in data.items()
-                    if isinstance(k, str) and isinstance(v, str)}
-    except (OSError, ValueError):
-        pass
-    return {}
+        data = json.loads(path.read_text(encoding="utf-8"))
+        groups = data.get("groups", {})
+        return {key: value for key, value in groups.items()
+                if isinstance(key, str) and isinstance(value, dict)
+                and isinstance(value.get("filename"), str)
+                and isinstance(value.get("sha256"), str)}
+    except (OSError, ValueError, TypeError, AttributeError):
+        raise RuntimeError(f"Cannot read the output ownership manifest: {path}")
 
 
-def update_standalone_manifest(output: Path, previous: dict[str, str],
-                               current: dict[str, str]) -> int:
-    """Delete only former exports whose bytes still match what we last generated."""
-    removed = 0
-    for rel, old_digest in previous.items():
-        if rel in current:
-            continue
-        old_path = Path(rel)
-        if old_path.is_absolute() or ".." in old_path.parts:
-            continue
-        candidate = output / old_path
-        if not candidate.is_file():
-            continue
-        try:
-            digest = hashlib.sha256(candidate.read_bytes()).hexdigest()
-            if digest == old_digest:
-                candidate.unlink()
-                removed += 1
-                print(f"[CLEANUP] Removed previously exported standalone email: {rel}")
-        except OSError:
-            continue
-    path = output / "standalone_msg_manifest.json"
-    temp = path.with_suffix(".json.partial")
-    try:
-        temp.write_text(json.dumps(current, indent=2, sort_keys=True), encoding="utf-8")
-        temp.replace(path)
-    finally:
-        temp.unlink(missing_ok=True)
-    return removed
+def safe_to_replace(target: Path, prior: dict[str, dict[str, str]]) -> None:
+    if not target.exists():
+        return
+    if not target.is_file():
+        raise RuntimeError(f"Target is not a file: {target}")
+    previous_hashes = {
+        info["sha256"] for info in prior.values() if info["filename"].casefold() == target.name.casefold()
+    }
+    if not previous_hashes or sha256_file(target) not in previous_hashes:
+        raise RuntimeError(
+            f"Output already exists and is not an unchanged file generated by this script: {target.name}. "
+            "Choose a new empty OUTPUT_ROOT to protect existing files."
+        )
 
 
-def load_manual_matches(file_path: Path, source: Path) -> dict[str, str]:
-    if not file_path.exists():
-        file_path.parent.mkdir(parents=True, exist_ok=True)
-        with file_path.open("w", encoding="utf-8-sig", newline="") as file:
-            csv.writer(file).writerow(["MSG File", "PDF File"])
-        return {}
-
-    mappings = {}
-    with file_path.open("r", encoding="utf-8-sig", newline="") as file:
-        for item in csv.DictReader(file):
-            msg_path = (item.get("MSG File") or "").strip().replace("\\", "/")
-            pdf_path = (item.get("PDF File") or "").strip().replace("\\", "/")
-            if not msg_path or not pdf_path:
-                continue
-            # Require relative paths to ensure there are no cross-directory surprises.
-            for path_text in (msg_path, pdf_path):
-                parts = Path(path_text).parts
-                if Path(path_text).is_absolute() or ".." in parts or ":" in path_text:
-                    raise ValueError(f"Manual match path must be relative to SOURCE_ROOT: {path_text}")
-            mappings[msg_path.casefold()] = pdf_path
-    return mappings
-
-
-def style_sheet(ws, widths: list[int]):
-    fill = PatternFill("solid", fgColor="17365D")
+def style_sheet(ws, widths):
     for cell in ws[1]:
-        cell.fill = fill
+        cell.fill = PatternFill("solid", fgColor="17365D")
         cell.font = Font(bold=True, color="FFFFFF")
         cell.alignment = Alignment(horizontal="left")
     for idx, width in enumerate(widths, 1):
@@ -448,185 +298,172 @@ def main():
     source = Path(SOURCE_ROOT).expanduser().resolve()
     output = Path(OUTPUT_ROOT).expanduser().resolve()
     if not source.is_dir():
-        raise SystemExit(f"Source folder does not exist: {source}")
+        raise SystemExit(f"SOURCE_ROOT does not exist or is not a folder: {source}")
     if source == output or source in output.parents or output in source.parents:
-        raise SystemExit("For safety, OUTPUT_ROOT must be separate from SOURCE_ROOT (not inside it or above it).")
+        raise SystemExit("OUTPUT_ROOT must be separate from SharePoint SOURCE_ROOT, not inside/above it.")
     output.mkdir(parents=True, exist_ok=True)
-    mapping_file = output / "manual_matches.csv"
-    mappings = load_manual_matches(mapping_file, source)
-    previous_standalones = read_standalone_manifest(output / "standalone_msg_manifest.json")
+
+    groups: dict[str, dict[str, list[Path]]] = defaultdict(
+        lambda: {"pdf": [], "msg": [], "excel": []}
+    )
+    for path in sorted(source.rglob("*"), key=lambda p: str(p).casefold()):
+        if not path.is_file() or path.name.startswith("~$"):
+            continue
+        extension = path.suffix.casefold()
+        if extension not in {".pdf", ".msg"} | EXCEL_SUFFIXES:
+            continue
+        group = group_name(path, source)
+        if extension == ".pdf":
+            groups[group]["pdf"].append(path)
+        elif extension == ".msg":
+            groups[group]["msg"].append(path)
+        else:
+            groups[group]["excel"].append(path)
+
+    # Only create a PDF for a folder containing at least one PDF or MSG.
+    active = {g: data for g, data in groups.items() if data["pdf"] or data["msg"]}
+    names = allocate_names(active)
+    previous = load_manifest(output / MANIFEST_FILE)
+    produced: dict[str, dict[str, str]] = {}
+    failures = []
+    rows = []
+    audit_rows = []
+    excluded_rows = []
     font = select_font()
 
-    pdf_paths = sorted((p for p in source.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf"),
-                       key=lambda p: str(p).casefold())
-    msg_paths = sorted((p for p in source.rglob("*") if p.is_file() and p.suffix.lower() == ".msg"),
-                       key=lambda p: str(p).casefold())
-    print(f"Found {len(pdf_paths)} PDF(s), {len(msg_paths)} MSG(s).")
+    print(f"Found {len(active)} folder(s) with PDFs/MSGs. "
+          f"Input Excel files excluded: {sum(len(v['excel']) for v in groups.values())}.")
 
-    pdfs = []
-    errors = []
-    for path in pdf_paths:
+    # Collect skipped Excel files on an audit sheet; do not open or merge them.
+    for agency, data in sorted(groups.items(), key=lambda item: item[0].casefold()):
+        for path in data["excel"]:
+            excluded_rows.append([agency, path.relative_to(source).as_posix()])
+
+    for agency, data in sorted(active.items(), key=lambda item: item[0].casefold()):
+        pdfs = sorted(data["pdf"], key=lambda p: str(p).casefold())
+        messages = sorted(data["msg"], key=lambda p: str(p).casefold())
+        target = output / names[agency]
+        tmp = target.with_name(target.name + ".partial")
+        dates_from_pdfs = []
+        dates_from_msg = []
+        page_count = 0
         try:
-            date, text = top_date_and_text(path)
-            pdfs.append(PDFRecord(path, agency_of(path, source), date, text))
+            # Protect earlier output or user edits before starting a write.
+            safe_to_replace(target, previous)
+            with fitz.open() as combined:
+                # EVERY source PDF in the agency, including nested folders.
+                for pdf_path in pdfs:
+                    with fitz.open(str(pdf_path)) as original:
+                        if original.needs_pass:
+                            raise RuntimeError(f"Password protected PDF: {pdf_path}")
+                        if original.page_count == 0:
+                            raise RuntimeError(f"Empty PDF: {pdf_path}")
+                        if original.page_count and len(dates_from_pdfs) < len(pdfs):
+                            try:
+                                dates_from_pdfs.append(pdf_top_date(original[0]))
+                            except Exception:
+                                dates_from_pdfs.append(None)
+                        combined.insert_pdf(original)
+                        page_count += original.page_count
+                # EVERY MSG in this agency, regardless of message/file name.
+                for msg_path in messages:
+                    info = read_message(msg_path)
+                    dates_from_msg.append(message_date(info["date"]))
+                    rendered = msg_to_pdf_bytes(info, msg_path, font)
+                    with fitz.open(stream=rendered, filetype="pdf") as email_pdf:
+                        combined.insert_pdf(email_pdf)
+                        page_count += email_pdf.page_count
+                if combined.page_count == 0:
+                    raise RuntimeError("Nothing to combine")
+                # Write new file first; never edit the source PDF.
+                combined.save(str(tmp), garbage=3, deflate=True)
+            tmp.replace(target)
+            digest = sha256_file(target)
+            produced[agency] = {"filename": target.name, "sha256": digest}
+            activity = next((d for d in dates_from_pdfs if d), None)
+            source_of_date = "Source PDF (top of page 1)" if activity else ""
+            if not activity:
+                activity = next((d for d in dates_from_msg if d), None)
+                if activity:
+                    source_of_date = "MSG sent date"
+            if not activity:
+                source_of_date = "No readable date found"
+            rows.append([target.name, activity])
+            audit_rows.append([agency, target.name, len(pdfs), len(messages),
+                               len(data["excel"]), page_count, source_of_date, "OK"])
+            print(f"[OK] {agency}: {len(pdfs)} PDF + {len(messages)} MSG => "
+                  f"{target.name} ({page_count} pages; {len(data['excel'])} Excel ignored)")
         except Exception as exc:
-            pdfs.append(PDFRecord(path, agency_of(path, source), None, "", str(exc)))
-            errors.append(("PDF", relpath(path, source), str(exc)))
+            failures.append([agency, target.name, str(exc)])
+            audit_rows.append([agency, target.name, len(pdfs), len(messages),
+                               len(data["excel"]), "", "", "FAILED"])
+            print(f"[ERROR] {agency}: {exc}")
+        finally:
+            tmp.unlink(missing_ok=True)
 
-    messages = []
-    for path in msg_paths:
-        try:
-            messages.append(MSGRecord(path, agency_of(path, source), read_message(path)))
-        except Exception as exc:
-            messages.append(MSGRecord(path, agency_of(path, source), None, str(exc)))
-            errors.append(("MSG", relpath(path, source), str(exc)))
+    # If a folder failed this run, keep its prior manifest entry intact
+    # (and hence its last export) rather than losing the only earlier result.
+    for agency, details in previous.items():
+        if agency not in produced and any(row[0] == agency for row in failures):
+            produced[agency] = details
 
-    pdfs_by_agency = defaultdict(list)
-    valid_pdfs = {}
-    for item in pdfs:
-        if not item.read_error:
-            pdfs_by_agency[item.agency].append(item)
-            valid_pdfs[relpath(item.path, source).casefold()] = item
-
-    assignments = defaultdict(list)
-    match_rows = []
-    review_rows = []
-    unmatched_messages = []
-    for msg in messages:
-        msg_rel = relpath(msg.path, source)
-        if msg.read_error:
-            review_rows.append((msg.agency, msg_rel, "Unreadable MSG", ""))
+    # Remove *only* stale exports from previous runs of THIS script that
+    # still have their original generated hashes. Never touch user-edited PDFs.
+    for agency, details in previous.items():
+        old_name = details["filename"]
+        new = produced.get(agency)
+        if new and new["filename"].casefold() == old_name.casefold():
             continue
-        pdf, reason, suggestion = match_message(
-            msg, pdfs_by_agency[msg.agency], mappings, source, valid_pdfs
-        )
-        if pdf:
-            assignments[pdf.path].append(msg)
-            match_rows.append((msg.agency, msg_rel, relpath(pdf.path, source), reason))
-        else:
-            # Keep an audit trail even though this email will also be exported to PDF.
-            review_rows.append((msg.agency, msg_rel, reason, suggestion))
-            unmatched_messages.append((msg, reason))
+        if any(v["filename"].casefold() == old_name.casefold() for v in produced.values()):
+            continue
+        old_target = output / old_name
+        if old_target.is_file() and sha256_file(old_target) == details["sha256"]:
+            old_target.unlink()
+            print(f"[CLEANUP] Removed old script-generated output: {old_name}")
+
+    manifest_path = output / MANIFEST_FILE
+    manifest_tmp = output / (MANIFEST_FILE + ".partial")
+    manifest_tmp.write_text(json.dumps({"version": 4, "groups": produced},
+                                       indent=2, sort_keys=True), encoding="utf-8")
+    manifest_tmp.replace(manifest_path)
 
     wb = Workbook()
     ws = wb.active
     ws.title = "Activity Dates"
     ws.append(["File Name", "Activity Date"])
+    for filename, date in rows:
+        ws.append([filename, date])
+        ws.cell(ws.max_row, 2).number_format = "mm/dd/yyyy"
+
     audit = wb.create_sheet("Merge Audit")
-    audit.append(["Agency", "PDF File", "Merged MSG Count", "Output PDF", "Activity Date Status"])
-    matched = wb.create_sheet("Matched Emails")
-    matched.append(["Agency", "MSG File", "PDF File", "Reason"])
-    standalone = wb.create_sheet("Standalone Emails")
-    standalone.append(["Agency", "MSG File", "Output PDF", "Activity Date", "Reason"])
-    needs = wb.create_sheet("Needs Review")
-    needs.append(["Agency", "MSG File", "Reason", "Possible PDF(s)", "Standalone PDF"])
-    problem = wb.create_sheet("Errors")
-    problem.append(["File Type", "File", "Error"])
-
-    flat_pdf_names, reserved_names = allocate_flat_pdf_names(pdfs)
-    merged = copied = failed = 0
-    for pdf in pdfs:
-        target = output / flat_pdf_names[pdf.path]
-        status = "Found" if pdf.activity_date is not None else "Not found (possibly scanned)"
-        if pdf.read_error:
-            audit.append([pdf.agency, relpath(pdf.path, source), 0, "", "PDF could not be read"])
-            continue
-        emails = assignments[pdf.path]
-        if not emails and not COPY_UNMATCHED_PDFS:
-            audit.append([pdf.agency, relpath(pdf.path, source), 0, "Not copied", status])
-            continue
-        # Write a separate output PDF so no SharePoint source is touched.
-        try:
-            with fitz.open(str(pdf.path)) as result:
-                for email in emails:
-                    email_bytes = message_to_pdf(email.message, email.path, font)
-                    with fitz.open(stream=email_bytes, filetype="pdf") as email_pdf:
-                        result.insert_pdf(email_pdf)
-                temp_target = target.with_name(target.name + ".partial")
-                try:
-                    result.save(str(temp_target), garbage=3, deflate=True)
-                    temp_target.replace(target)
-                finally:
-                    temp_target.unlink(missing_ok=True)
-            if emails:
-                merged += 1
-            else:
-                copied += 1
-            date_cell(ws, target.name, pdf.activity_date)
-            audit.append([pdf.agency, relpath(pdf.path, source), len(emails),
-                          relpath(target, output), status])
-            print(f"[OK] {relpath(target, output)}  ({len(emails)} email(s))")
-        except Exception as exc:
-            failed += 1
-            errors.append(("MERGE", relpath(pdf.path, source), str(exc)))
-            audit.append([pdf.agency, relpath(pdf.path, source), len(emails), "FAILED", status])
-            print(f"[ERROR] {relpath(pdf.path, source)}: {exc}")
-
-    # Every readable MSG that could not be confidently matched becomes a
-    # standalone PDF. It remains in Needs Review for optional future mapping.
-    standalone_count = 0
-    new_standalones = {}
-    review_exports = {}
-    for msg, reason in unmatched_messages:
-        target = standalone_email_target(msg.path, source, output, reserved_names)
-        try:
-            email_bytes = message_to_pdf(msg.message, msg.path, font)
-            temp_target = target.with_name(target.name + ".partial")
-            try:
-                temp_target.write_bytes(email_bytes)
-                temp_target.replace(target)
-            finally:
-                temp_target.unlink(missing_ok=True)
-            new_standalones[relpath(target, output)] = hashlib.sha256(email_bytes).hexdigest()
-            review_exports[relpath(msg.path, source)] = relpath(target, output)
-            email_date = parse_message_date(msg.message.get("date", ""))
-            date_cell(ws, target.name, email_date)
-            standalone.append([
-                msg.agency, relpath(msg.path, source), relpath(target, output),
-                email_date, reason,
-            ])
-            standalone.cell(standalone.max_row, 4).number_format = "mm/dd/yyyy"
-            standalone_count += 1
-            print(f"[STANDALONE MSG] {relpath(target, output)}")
-        except Exception as exc:
-            failed += 1
-            errors.append(("MSG-TO-PDF", relpath(msg.path, source), str(exc)))
-            print(f"[ERROR MSG] {relpath(msg.path, source)}: {exc}")
-
-    for row in match_rows:
-        matched.append(list(row))
-    for row in review_rows:
-        needs.append(list(row) + [review_exports.get(row[1], "")])
-    for row in errors:
-        problem.append(list(row))
-    for sheet, sizes in ((ws, [60, 20]), (audit, [28, 74, 21, 76, 30]),
-                         (matched, [28, 78, 78, 54]),
-                         (standalone, [28, 78, 78, 20, 54]),
-                         (needs, [28, 78, 58, 70, 78]),
-                         (problem, [18, 78, 85])):
-        style_sheet(sheet, sizes)
-
+    audit.append(["Agency Folder", "Output PDF", "Input PDFs", "Input MSGs",
+                  "Excel Files Ignored", "Pages", "Activity Date Source", "Status"])
+    for row in audit_rows:
+        audit.append(row)
+    skipped = wb.create_sheet("Ignored Excel Files")
+    skipped.append(["Agency Folder", "Excel File Ignored"])
+    for row in excluded_rows:
+        skipped.append(row)
+    errors_ws = wb.create_sheet("Errors")
+    errors_ws.append(["Agency Folder", "Expected PDF", "Problem"])
+    for row in failures:
+        errors_ws.append(row)
+    for sheet, widths in (
+        (ws, [57, 22]), (audit, [36, 59, 16, 16, 22, 13, 35, 14]),
+        (skipped, [36, 86]), (errors_ws, [36, 58, 100])
+    ):
+        style_sheet(sheet, widths)
     report = output / "Activity_Dates.xlsx"
     wb.save(report)
-    # Do not delete prior standalone exports if this run encountered conversion
-    # failures: preserving an old file is safer than discarding the only copy.
-    stale_removed = 0
-    if not any(kind == "MSG-TO-PDF" for kind, _, _ in errors):
-        stale_removed = update_standalone_manifest(output, previous_standalones, new_standalones)
-    else:
-        print("[NOTICE] Standalone cleanup skipped due to MSG conversion errors.")
-    print("\n=== COMPLETE ===")
-    print(f"PDFs with MSGs merged: {merged}")
-    print(f"PDFs copied alone:      {copied}")
-    print(f"Standalone MSG PDFs:    {standalone_count}")
-    print(f"Old standalone removed: {stale_removed}")
-    print(f"PDF merge failures:     {failed}")
-    print(f"MSGs optionally review: {len(review_rows)} (exported standalone)")
-    print(f"Errors reported:        {len(errors)}")
-    print(f"Excel report:           {report}")
-    if review_rows:
-        print("To manually link standalone emails to PDFs, see 'Needs Review' in Excel, then fill in "
-              f"{mapping_file.name} and rerun.")
+
+    print("\n=== FINISHED ===")
+    print(f"Merged PDFs:     {len(rows)} (one per successful agency folder)")
+    print(f"Failed folders:  {len(failures)}")
+    print(f"Ignored Excel:   {len(excluded_rows)}")
+    print(f"Flat PDF folder: {output}")
+    print(f"Excel report:    {report}")
+    if failures:
+        print("Open the 'Errors' sheet in Activity_Dates.xlsx to review failures.")
 
 
 if __name__ == "__main__":
